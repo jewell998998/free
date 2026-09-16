@@ -184,7 +184,7 @@ SOFT_KEEP_SCORE = 82.0
 EXCLUDED_COUNTRIES = {
     "GB", "AE", "CY", "FI", "SE",
     "RO", "IT", "CH", "RU", "TR",
-    "IQ", "NO", "GR", "LV", "SC", "ES",
+    "IQ", "NO", "GR", "LV", "SC", "ES", "IE", "KZ", "NL",
 }
 
 # unknown 没有可靠网络类型情报，因此必须更严格。

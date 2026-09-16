@@ -5,15 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 47.85.188.30
-  port: 12004
+  server: 104.18.46.234
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 140.174.25.216
+  port: 30697
   udp: true
   type: vmess
-  uuid: 8b5552bd-4cc7-4cac-af08-81c21686fd4f
+  uuid: 3dfa46df-12f2-4dce-9ddc-5c923e99c695
   alterId: 0
   cipher: auto
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 172.64.154.8
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 172.64.32.108
   port: 8080
   udp: true
   type: vless
@@ -23,20 +34,9 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 104.18.34.14
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 04 R51 - xiaohe
-  server: 172.64.32.108
-  port: 8080
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 172.64.229.170
+  port: 2086
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -46,168 +46,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 79.141.172.154
-  port: 10453
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-  servername: www.google.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇺🇸 美国 (United States) 06 R47 - xiaohe
-  server: 108.162.198.178
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 172.64.53.55
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 08 ⚠R - xiaohe
-  server: 5.34.178.120
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
-    short-id: 55ab5559e3a6d10a
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 172.64.42.85
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 104.18.47.113
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 11 - xiaohe
-  server: 104.18.46.234
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 12 - xiaohe
-  server: 172.64.229.170
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 13 R47 - xiaohe
-  server: 162.159.43.187
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 14 - xiaohe
-  server: 162.159.43.187
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 15 - xiaohe
-  server: us-1.gsafevpnapi.com
-  port: 20270
-  udp: true
-  type: vless
-  uuid: f0eb9f67-ef76-40aa-a1e6-22a11d5a9379
-  tls: true
-  reality-opts:
-    public-key: 9I4kbgR2flpbRraCLQ-C0umbyQO26riRY3-GY-Tp9DE
-    short-id: e67d9a00676f15ac
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 16 - xiaohe
-  server: 172.64.229.170
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 17 - xiaohe
-  server: 104.18.46.46
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 18 - xiaohe
-  server: 172.64.42.85
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 19 - xiaohe
   server: 162.159.48.32
-  port: 8080
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -216,9 +56,9 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 20 R47 - xiaohe
-  server: 172.64.229.170
-  port: 2095
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 162.159.38.127
+  port: 2082
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -227,343 +67,8 @@ proxies:
     path: '/?ed=2560security=tls '
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 21 - xiaohe
-  server: 172.64.158.146
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 22 - xiaohe
-  server: 162.159.0.53
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 23 - xiaohe
-  server: 108.162.198.178
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 24 - xiaohe
-  server: 172.64.53.55
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 25 - xiaohe
-  server: 172.64.42.85
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 26 - xiaohe
-  server: 172.64.42.85
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 27 - xiaohe
-  server: 172.64.32.108
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 28 - xiaohe
-  server: 104.18.34.14
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 29 - xiaohe
-  server: 104.18.47.113
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 30 - xiaohe
-  server: 172.64.42.85
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 31 R47 - xiaohe
-  server: 104.18.39.218
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 32 - xiaohe
-  server: 162.159.0.169
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 33 - xiaohe
-  server: 162.159.48.32
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 34 - xiaohe
-  server: 172.64.154.8
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 35 - xiaohe
-  server: 172.64.32.103
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 36 - xiaohe
-  server: 172.64.229.170
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 37 - xiaohe
-  server: 172.64.52.6
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 38 - xiaohe
-  server: 172.64.154.8
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 39 - xiaohe
-  server: 172.64.53.55
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 40 - xiaohe
-  server: 162.159.0.169
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 41 - xiaohe
-  server: 172.64.229.2
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 42 - xiaohe
-  server: 104.18.34.14
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 43 - xiaohe
-  server: 162.159.38.127
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 44 - xiaohe
-  server: 172.64.52.6
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 45 - xiaohe
-  server: 104.18.47.113
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 46 R47 - xiaohe
-  server: kz3.zuoai.cf
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 47 - xiaohe
-  server: 15.204.97.216
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 48 - xiaohe
-  server: 162.159.24.131
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 49 - xiaohe
-  server: 162.159.0.53
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 50 - xiaohe
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
   server: 162.159.43.187
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 51 - xiaohe
-  server: 172.64.53.55
   port: 2095
   udp: true
   type: vless
@@ -573,73 +78,18 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 52 - xiaohe
-  server: 104.18.46.234
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 53 - xiaohe
-  server: 172.64.229.2
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 162.159.0.169
   port: 2086
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /?ed=2560security=tlssecurity=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 54 - xiaohe
-  server: 162.159.48.32
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 55 - xiaohe
-  server: 172.64.229.2
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 56 - xiaohe
-  server: 162.159.48.32
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 57 R47 - xiaohe
-  server: 162.159.24.131
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 58 - xiaohe
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
   server: 162.159.39.218
   port: 8880
   udp: true
@@ -650,34 +100,8 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 59 - xiaohe
-  server: 140.174.25.216
-  port: 30697
-  udp: true
-  type: vmess
-  uuid: 3dfa46df-12f2-4dce-9ddc-5c923e99c695
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 60 - xiaohe
-  server: 104.18.34.14
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 61 - xiaohe
-  server: 3.144.113.215
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸 美国 (United States) 62 - xiaohe
-  server: 172.64.53.55
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 162.159.0.53
   port: 8080
   udp: true
   type: vless
@@ -687,9 +111,9 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 63 - xiaohe
-  server: 172.64.154.8
-  port: 2086
+- name: 🇺🇸 美国 (United States) 11 - xiaohe
+  server: 172.64.42.85
+  port: 2052
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -698,9 +122,9 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 64 - xiaohe
-  server: 162.159.38.127
-  port: 2086
+- name: 🇺🇸 美国 (United States) 12 - xiaohe
+  server: 104.18.39.218
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -709,8 +133,19 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 65 - xiaohe
-  server: 172.64.158.146
+- name: 🇺🇸 美国 (United States) 13 - xiaohe
+  server: 162.159.39.218
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 14 - xiaohe
+  server: 172.64.32.103
   port: 80
   udp: true
   type: vless
@@ -720,8 +155,19 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 66 - xiaohe
-  server: 162.159.48.32
+- name: 🇺🇸 美国 (United States) 15 - xiaohe
+  server: 172.64.42.85
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 16 - xiaohe
+  server: 188.114.97.6
   port: 2052
   udp: true
   type: vless
@@ -730,187 +176,16 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 67 - xiaohe
-  server: 162.159.43.187
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 68 - xiaohe
-  server: 162.159.45.19
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 69 - xiaohe
-  server: 15.204.97.214
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 70 - xiaohe
-  server: 104.18.46.46
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 71 R44 - xiaohe
-  server: 15.204.97.206
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 72 R47 - xiaohe
-  server: 172.64.154.8
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 73 - xiaohe
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 17 - xiaohe
   server: 5.78.51.123
   port: 1080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 8tmnvX5zYuWGVIDP2jglZw
-- name: 🇺🇸 美国 (United States) 74 - xiaohe
-  server: 162.159.48.32
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 75 - xiaohe
+- name: 🇺🇸 美国 (United States) 18 - xiaohe
   server: 104.18.46.46
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 76 - xiaohe
-  server: 104.18.39.218
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 77 - xiaohe
-  server: 162.159.38.127
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 78 - xiaohe
-  server: 172.64.42.85
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 79 - xiaohe
-  server: 172.64.32.103
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 80 - xiaohe
-  server: 108.162.198.178
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 81 - xiaohe
-  server: 172.64.32.103
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 82 R60 - xiaohe
-  server: 15.204.97.197
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 83 - xiaohe
-  server: 162.159.45.19
   port: 80
   udp: true
   type: vless
@@ -920,36 +195,60 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 84 - xiaohe
-  server: 104.18.46.234
-  port: 8080
+- name: 🇺🇸 美国 (United States) 19 - xiaohe
+  server: 108.162.198.178
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /
+    path: '/?ed=2560security=tls '
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 85 R47 - xiaohe
-  server: 104.18.39.218
-  port: 2052
+- name: 🇺🇸 美国 (United States) 20 - xiaohe
+  server: 47.251.108.158
+  port: 443
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
+    short-id: 896f52ba2cfca903
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 21 - xiaohe
+  server: cf3.danfeng.eu.org
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  tls: true
+  servername: vip.868068.xyz
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /proxyip=us.xiabibi.cf
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 86 R44 - xiaohe
-  server: 15.204.247.206
-  port: 4444
+      Host: vip.868068.xyz
+- name: 🇺🇸 美国 (United States) 22 - xiaohe
+  server: cy2.zuoai.cf
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-- name: 🇺🇸 美国 (United States) 87 - xiaohe
+  type: vless
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  tls: true
+  servername: xi.tbv.ccwu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: 🇺🇸 美国 (United States) 23 - xiaohe
   server: 172.235.43.210
   port: 53957
   udp: true
@@ -961,77 +260,10 @@ proxies:
     public-key: XUHlbk5VH5z4E2wxZBhlpLZ33qevyQgqU7dheRDgoGQ
     short-id: 44e82fd7b97b14
   servername: www.nvidia.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 88 - xiaohe
-  server: 104.18.39.218
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 89 R51 - xiaohe
-  server: 172.64.32.103
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 90 - xiaohe
-  server: 104.18.47.113
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 91 - xiaohe
-  server: flax-spinel23895.my-vm.work
-  port: 8088
-  udp: true
-  type: vless
-  uuid: tmp_user
-  network: ws
-  ws-opts:
-    path: /api
-    headers:
-      Host: queuev4.vk.com
-- name: 🇺🇸 美国 (United States) 92 - xiaohe
-  server: 144.172.104.26
-  port: 443
-  udp: true
-  type: vless
-  uuid: 77da6e30-ad4e-11f1-94d5-525400d1d4f7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk
-  servername: www.nvidia.com
   client-fingerprint: safari
-- name: 🇺🇸 美国 (United States) 93 - xiaohe
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 94 - xiaohe
-  server: 162.159.43.187
-  port: 80
+- name: 🇺🇸 美国 (United States) 24 - xiaohe
+  server: 172.64.42.85
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -1040,43 +272,22 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 95 R71 - xiaohe
-  server: 45.149.172.74
-  port: 443
+- name: 🇺🇸 美国 (United States) 25 - xiaohe
+  server: 79.141.172.154
+  port: 10453
   udp: true
   type: vless
-  uuid: b2f2d18f-7a9d-411c-aa4e-5a20fe06defe
-  flow: xtls-rprx-vision
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   tls: true
   reality-opts:
-    public-key: U3L2Aed8YfC7Aw2sRv_DJDnbOXVP-XUiyxQe3_h7LT8
-    short-id: 626d38f0ea642e3b
-  servername: www.logitech.com
+    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+  servername: www.google.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 96 - xiaohe
-  server: 162.159.39.218
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 97 - xiaohe
-  server: 104.18.46.234
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 98 R50 - xiaohe
-  server: 15.204.97.198
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇺🇸 美国 (United States) 26 - xiaohe
+  server: 15.204.97.219
   port: 23576
   udp: true
   type: vless
@@ -1088,8 +299,44 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 99 - xiaohe
-  server: 162.159.0.169
+- name: 🇺🇸 美国 (United States) 27 - xiaohe
+  server: us-1.gsafevpnapi.com
+  port: 20270
+  udp: true
+  type: vless
+  uuid: f0eb9f67-ef76-40aa-a1e6-22a11d5a9379
+  tls: true
+  reality-opts:
+    public-key: 9I4kbgR2flpbRraCLQ-C0umbyQO26riRY3-GY-Tp9DE
+    short-id: e67d9a00676f15ac
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 28 - xiaohe
+  server: 172.235.38.85
+  port: 42942
+  udp: true
+  type: vless
+  uuid: bca46025-bf43-40c0-895b-054a6fbcfd32
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JmkfJoDWpAqt6gj4cbc4_cwItsdryMlV7joAGfNTKQU
+    short-id: a56d7d8da977f860
+  servername: www.tesla.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 29 - xiaohe
+  server: 104.21.70.21
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 30 - xiaohe
+  server: 162.159.43.187
   port: 2086
   udp: true
   type: vless
@@ -1099,8 +346,86 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 100 - xiaohe
-  server: 162.159.39.218
+- name: 🇺🇸 美国 (United States) 31 - xiaohe
+  server: 195.123.235.177
+  port: 443
+  udp: true
+  type: vless
+  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
+    short-id: c85d029f5e8eb393
+  servername: gateway.icloud.com
+  client-fingerprint: ''
+- name: 🇺🇸 美国 (United States) 32 - xiaohe
+  server: 172.64.42.85
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 33 - xiaohe
+  server: 15.204.97.214
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 34 - xiaohe
+  server: 108.162.198.178
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 35 - xiaohe
+  server: www.shopify.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: guanwang.awsno.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: 🇺🇸 美国 (United States) 36 - xiaohe
+  server: usa.superbuba.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+  tls: true
+  reality-opts:
+    public-key: 5en_SFrWntR3ZtxGn7_ZnnK5UW_Prh90rs-o8p7glw4
+    short-id: 9c2378562188c3cb
+  servername: usa.superbuba.top
+  client-fingerprint: ''
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇺🇸 美国 (United States) 37 - xiaohe
+  server: 172.64.53.55
   port: 80
   udp: true
   type: vless
@@ -1110,7 +435,107 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 101 - xiaohe
+- name: 🇺🇸 美国 (United States) 38 - xiaohe
+  server: 104.18.39.218
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 39 - xiaohe
+  server: 104.18.46.234
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 40 - xiaohe
+  server: 162.159.0.53
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 41 - xiaohe
+  server: 162.159.0.53
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 42 - xiaohe
+  server: 144.172.104.26
+  port: 443
+  udp: true
+  type: vless
+  uuid: 77da6e30-ad4e-11f1-94d5-525400d1d4f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk
+  servername: www.nvidia.com
+  client-fingerprint: safari
+- name: 🇺🇸 美国 (United States) 43 - xiaohe
+  server: 162.159.24.131
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 44 - xiaohe
+  server: 104.18.46.234
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 45 - xiaohe
+  server: 104.18.47.113
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 46 - xiaohe
+  server: 162.159.0.53
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 47 - xiaohe
   server: 150.241.102.181
   port: 443
   udp: true
@@ -1125,33 +550,8 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: speedtest-grpc
-- name: 🇺🇸 美国 (United States) 102 - xiaohe
-  server: 162.159.0.53
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 103 R47 - xiaohe
-  server: 139.64.235.23
-  port: 443
-  udp: true
-  type: vless
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  tls: true
-  servername: nb.lovecf.ggff.net
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 104 R62 - xiaohe
-  server: 15.204.97.195
+- name: 🇺🇸 美国 (United States) 48 - xiaohe
+  server: 15.204.97.216
   port: 23576
   udp: true
   type: vless
@@ -1163,19 +563,8 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 105 - xiaohe
-  server: 104.18.39.218
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 106 R47 - xiaohe
-  server: 91.209.253.119
+- name: 🇺🇸 美国 (United States) 49 - xiaohe
+  server: 139.64.235.36
   port: 443
   udp: true
   type: vless
@@ -1183,14 +572,13 @@ proxies:
   tls: true
   servername: nb.lovecf.ggff.net
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 107 - xiaohe
-  server: 162.159.39.218
+- name: 🇺🇸 美国 (United States) 50 R47 - xiaohe
+  server: 172.64.158.146
   port: 2095
   udp: true
   type: vless
@@ -1200,172 +588,8 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 108 - xiaohe
-  server: 172.64.229.2
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 109 R71 - xiaohe
-  server: 104.20.30.10
-  port: 443
-  udp: true
-  type: vless
-  uuid: 91d28760-ecf1-450b-9170-d310111a0e6d
-  tls: true
-  servername: us9.69lover.my
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/v2/63e9687fa53e441c/stream
-    headers:
-      Host: us9.69lover.my
-- name: 🇺🇸 美国 (United States) 110 - xiaohe
-  server: nexusmods.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 111 R47 - xiaohe
-  server: 139.64.235.174
-  port: 443
-  udp: true
-  type: vless
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  tls: true
-  servername: nb.lovecf.ggff.net
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 112 - xiaohe
-  server: 162.159.45.19
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 113 - xiaohe
-  server: 91.193.17.156
-  port: 9460
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-  servername: www.google.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇺🇸 美国 (United States) 114 - xiaohe
-  server: 139.64.235.210
-  port: 443
-  udp: true
-  type: vless
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  tls: true
-  servername: nb.lovecf.ggff.net
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 115 - xiaohe
-  server: 156.229.161.107
-  port: 10001
-  udp: true
-  type: vless
-  uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
-    short-id: fb2c6678
-  servername: www.icloud.com
-  client-fingerprint: edge
-- name: 🇺🇸 美国 (United States) 116 - xiaohe
+- name: 🇺🇸 美国 (United States) 51 R44 - xiaohe
   server: 162.159.38.127
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 117 R51 - xiaohe
-  server: 104.18.47.113
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 118 R43 - xiaohe
-  server: 15.204.97.209
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
-  client-fingerprint: random
-- name: 🇺🇸 美国 (United States) 119 - xiaohe
-  server: 80.91.65.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6dd13cd4-e378-4742-bef1-d8ac54083626
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: qSdvSbr8scEUh7pMy8edVRkjIn91fJpDRDVmZQTFMno
-    short-id: 16b80cabbd9c0ee6
-  servername: www.nvidia.com
-  client-fingerprint: ''
-- name: 🇺🇸 美国 (United States) 120 - xiaohe
-  server: 104.18.34.14
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 121 - xiaohe
-  server: 104.18.46.234
   port: 2082
   udp: true
   type: vless
@@ -1375,47 +599,20 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 122 - xiaohe
-  server: 15.204.97.219
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 123 - xiaohe
-  server: 45.91.138.179
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 36sTeaLdaAjQQxxzh492XihoPi2YxmttQyncmLuxYHE
-    short-id: 169fc2df88419465
-  servername: us05.shifor01.life
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 124 - xiaohe
-  server: 89.125.147.199
-  port: 443
-  udp: true
-  type: vless
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
-  tls: true
-  reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-    short-id: f6c7c139b9c938db
-  servername: maps.apple.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 125 - xiaohe
-  server: 172.64.52.6
+- name: 🇺🇸 美国 (United States) 52 R47 - xiaohe
+  server: 104.18.46.46
   port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 53 R47 - xiaohe
+  server: 172.64.154.8
+  port: 2082
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -1424,110 +621,151 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 126 - xiaohe
-  server: www.csgo.net
-  port: 2095
+- name: 🇺🇸 美国 (United States) 54 R47 - xiaohe
+  server: 162.159.0.53
+  port: 8880
   udp: true
   type: vless
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
-      Host: pornbitches.asshole.us.ci
-- name: 🇺🇸 美国 (United States) 127 - xiaohe
-  server: 47.251.108.158
-  port: 443
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 55 R47 - xiaohe
+  server: 172.64.42.85
+  port: 8080
   udp: true
   type: vless
-  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
-    short-id: 896f52ba2cfca903
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 128 - xiaohe
-  server: bright.bitgas.org
-  port: 443
-  udp: true
-  type: trojan
-  password: UQfj7bdfjibTjpUHfg72aew51S7fB32g
-  sni: bright.bitgas.org
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 129 - xiaohe
-  server: 162.35.96.15
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /vless-test
-- name: 🇺🇸 美国 (United States) 130 - xiaohe
-  server: 132.243.255.3
-  port: 9011
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 78235e7dc55e9ad1
-- name: 🇺🇸 美国 (United States) 131 - xiaohe
-  server: scz.clofidexa.ir
-  port: 4930
-  udp: true
-  type: vless
-  uuid: 89418511-64f9-4e74-ac6b-ffc1b828106f
-  tls: true
-  reality-opts:
-    public-key: 01qveLfH4r1DwOi4vfiW7hscWxJQys0s7b5uAegsF0M
-    short-id: 791f21508a32f6bd
-  servername: app.stiga.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 132 - xiaohe
-  server: cdn.snobvpn.online
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 56 R47 - xiaohe
+  server: 104.18.47.113
   port: 80
   udp: true
   type: vless
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /snob-ws
-- name: 🇺🇸 美国 (United States) 133 R47 - xiaohe
-  server: 104.18.42.54
-  port: 2096
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 57 R47 - xiaohe
+  server: 172.64.158.146
+  port: 2082
   udp: true
   type: vless
-  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 58 - xiaohe
+  server: 31.77.8.97
+  port: 110
+  udp: true
+  type: vmess
+  uuid: e8758bf0-c234-4809-89f7-25fd868316d0
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 59 R44 - xiaohe
+  server: 162.159.39.218
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 60 R47 - xiaohe
+  server: www.wto.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: b2593749-691c-428c-9481-14979cba3446
   tls: true
-  servername: vip.868068.xyz
+  servername: xi.tbv.ccwu.cc
   skip-cert-verify: false
-  client-fingerprint: random
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /proxyip=us.xiabibi.cf
     headers:
-      Host: vip.868068.xyz
-- name: 🇺🇸 美国 (United States) 134 - xiaohe
-  server: dog-us.kunlun01dns.com
-  port: 21011
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 135 - xiaohe
-  server: 50.7.197.204
-  port: 443
+      Host: xi.tbv.ccwu.cc
+- name: 🇺🇸 美国 (United States) 61 R47 - xiaohe
+  server: 172.64.53.55
+  port: 2086
   udp: true
   type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: hub.failspace.top
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 136 - xiaohe
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 62 R47 - xiaohe
+  server: 172.64.158.146
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 63 R51 - xiaohe
+  server: 104.18.34.14
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 64 R51 - xiaohe
+  server: 172.64.53.55
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 65 R51 - xiaohe
+  server: 172.64.32.108
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 66 R47 - xiaohe
+  server: 162.159.0.169
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 67 R47 - xiaohe
   server: cf9.danfeng.eu.org
   port: 2096
   udp: true
@@ -1542,82 +780,132 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: vip.868068.xyz
-- name: 🇺🇸 美国 (United States) 137 - xiaohe
-  server: 162.35.96.20
+- name: 🇺🇸 美国 (United States) 68 R47 - xiaohe
+  server: 139.64.235.77
   port: 443
   udp: true
   type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  flow: xtls-rprx-vision
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   tls: true
-  reality-opts:
-    public-key: pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo
-    short-id: 84be686ea1d16478
-  servername: sheetpeek.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 138 - xiaohe
-  server: 172.64.52.6
-  port: 2086
+  servername: nb.lovecf.ggff.net
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: 🇺🇸 美国 (United States) 69 R47 - xiaohe
+  server: 188.114.97.6
+  port: 8880
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: '/?ed=2560security=tls '
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 70 R51 - xiaohe
+  server: 104.18.34.14
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 139 - xiaohe
-  server: 141.101.122.147
+- name: 🇺🇸 美国 (United States) 71 - xiaohe
+  server: www.csgo.net
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pornbitches.asshole.us.ci
+- name: 🇺🇸 美国 (United States) 72 R43 - xiaohe
+  server: 15.204.97.209
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 73 R47 - xiaohe
+  server: 172.64.145.202
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  tls: true
+  servername: vip.868068.xyz
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: vip.868068.xyz
+- name: 🇺🇸 美国 (United States) 74 - xiaohe
+  server: 132.243.255.3
+  port: 9011
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 78235e7dc55e9ad1
+- name: 🇺🇸 美国 (United States) 75 R47 - xiaohe
+  server: 188.114.97.6
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 76 R47 - xiaohe
+  server: teddy.automizely.com
   port: 443
   udp: true
   type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  uuid: b2593749-691c-428c-9481-14979cba3446
   tls: true
-  servername: a.cwvps.eu.org
+  servername: xi.tbv.ccwu.cc
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /proxyip=us.xiabibi.cf
     headers:
-      Host: a.cwvps.eu.org
-- name: 🇺🇸 美国 (United States) 140 - xiaohe
-  server: 77.91.68.70
-  port: 55983
+      Host: xi.tbv.ccwu.cc
+- name: 🇺🇸 美国 (United States) 77 R50 - xiaohe
+  server: 15.204.97.198
+  port: 23576
   udp: true
   type: vless
-  uuid: f667a096-5231-4cfb-8759-92bb32473139
-  tls: true
-  reality-opts:
-    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
-    short-id: 0e
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 141 - xiaohe
-  server: 85.209.157.184
-  port: 443
-  udp: true
-  type: vless
-  uuid: 21710d7d-5e87-4655-bac2-36e9b655e3ee
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: YDYWOKQpoOkOPQ64PosSfJHAaLPuAZJ_jiB6Qj_iYnQ
-  servername: www.microsoft.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 142 - xiaohe
-  server: sql.popmintxo.cc
-  port: 443
+- name: 🇺🇸 美国 (United States) 78 R44 - xiaohe
+  server: 15.204.247.206
+  port: 4444
   udp: true
-  type: vless
-  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
-    short-id: b558b9305a0b
-  servername: www.microsoft.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
 proxy-groups:
 - name: PROXIES
   type: select
@@ -1626,23 +914,23 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 - xiaohe
   - 🇺🇸 美国 (United States) 02 - xiaohe
   - 🇺🇸 美国 (United States) 03 - xiaohe
-  - 🇺🇸 美国 (United States) 04 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 04 - xiaohe
   - 🇺🇸 美国 (United States) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 06 - xiaohe
   - 🇺🇸 美国 (United States) 07 - xiaohe
-  - 🇺🇸 美国 (United States) 08 ⚠R - xiaohe
+  - 🇺🇸 美国 (United States) 08 - xiaohe
   - 🇺🇸 美国 (United States) 09 - xiaohe
   - 🇺🇸 美国 (United States) 10 - xiaohe
   - 🇺🇸 美国 (United States) 11 - xiaohe
   - 🇺🇸 美国 (United States) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 13 - xiaohe
   - 🇺🇸 美国 (United States) 14 - xiaohe
   - 🇺🇸 美国 (United States) 15 - xiaohe
   - 🇺🇸 美国 (United States) 16 - xiaohe
   - 🇺🇸 美国 (United States) 17 - xiaohe
   - 🇺🇸 美国 (United States) 18 - xiaohe
   - 🇺🇸 美国 (United States) 19 - xiaohe
-  - 🇺🇸 美国 (United States) 20 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸 美国 (United States) 21 - xiaohe
   - 🇺🇸 美国 (United States) 22 - xiaohe
   - 🇺🇸 美国 (United States) 23 - xiaohe
@@ -1653,7 +941,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 28 - xiaohe
   - 🇺🇸 美国 (United States) 29 - xiaohe
   - 🇺🇸 美国 (United States) 30 - xiaohe
-  - 🇺🇸 美国 (United States) 31 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 31 - xiaohe
   - 🇺🇸 美国 (United States) 32 - xiaohe
   - 🇺🇸 美国 (United States) 33 - xiaohe
   - 🇺🇸 美国 (United States) 34 - xiaohe
@@ -1668,103 +956,39 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 43 - xiaohe
   - 🇺🇸 美国 (United States) 44 - xiaohe
   - 🇺🇸 美国 (United States) 45 - xiaohe
-  - 🇺🇸 美国 (United States) 46 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 46 - xiaohe
   - 🇺🇸 美国 (United States) 47 - xiaohe
   - 🇺🇸 美国 (United States) 48 - xiaohe
   - 🇺🇸 美国 (United States) 49 - xiaohe
-  - 🇺🇸 美国 (United States) 50 - xiaohe
-  - 🇺🇸 美国 (United States) 51 - xiaohe
-  - 🇺🇸 美国 (United States) 52 - xiaohe
-  - 🇺🇸 美国 (United States) 53 - xiaohe
-  - 🇺🇸 美国 (United States) 54 - xiaohe
-  - 🇺🇸 美国 (United States) 55 - xiaohe
-  - 🇺🇸 美国 (United States) 56 - xiaohe
+  - 🇺🇸 美国 (United States) 50 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 51 R44 - xiaohe
+  - 🇺🇸 美国 (United States) 52 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 53 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 54 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 55 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 56 R47 - xiaohe
   - 🇺🇸 美国 (United States) 57 R47 - xiaohe
   - 🇺🇸 美国 (United States) 58 - xiaohe
-  - 🇺🇸 美国 (United States) 59 - xiaohe
-  - 🇺🇸 美国 (United States) 60 - xiaohe
-  - 🇺🇸 美国 (United States) 61 - xiaohe
-  - 🇺🇸 美国 (United States) 62 - xiaohe
-  - 🇺🇸 美国 (United States) 63 - xiaohe
-  - 🇺🇸 美国 (United States) 64 - xiaohe
-  - 🇺🇸 美国 (United States) 65 - xiaohe
-  - 🇺🇸 美国 (United States) 66 - xiaohe
-  - 🇺🇸 美国 (United States) 67 - xiaohe
-  - 🇺🇸 美国 (United States) 68 - xiaohe
-  - 🇺🇸 美国 (United States) 69 - xiaohe
-  - 🇺🇸 美国 (United States) 70 - xiaohe
-  - 🇺🇸 美国 (United States) 71 R44 - xiaohe
-  - 🇺🇸 美国 (United States) 72 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 73 - xiaohe
+  - 🇺🇸 美国 (United States) 59 R44 - xiaohe
+  - 🇺🇸 美国 (United States) 60 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 61 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 62 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 63 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 64 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 65 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 66 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 67 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 68 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 69 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 70 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 71 - xiaohe
+  - 🇺🇸 美国 (United States) 72 R43 - xiaohe
+  - 🇺🇸 美国 (United States) 73 R47 - xiaohe
   - 🇺🇸 美国 (United States) 74 - xiaohe
-  - 🇺🇸 美国 (United States) 75 - xiaohe
-  - 🇺🇸 美国 (United States) 76 - xiaohe
-  - 🇺🇸 美国 (United States) 77 - xiaohe
-  - 🇺🇸 美国 (United States) 78 - xiaohe
-  - 🇺🇸 美国 (United States) 79 - xiaohe
-  - 🇺🇸 美国 (United States) 80 - xiaohe
-  - 🇺🇸 美国 (United States) 81 - xiaohe
-  - 🇺🇸 美国 (United States) 82 R60 - xiaohe
-  - 🇺🇸 美国 (United States) 83 - xiaohe
-  - 🇺🇸 美国 (United States) 84 - xiaohe
-  - 🇺🇸 美国 (United States) 85 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 86 R44 - xiaohe
-  - 🇺🇸 美国 (United States) 87 - xiaohe
-  - 🇺🇸 美国 (United States) 88 - xiaohe
-  - 🇺🇸 美国 (United States) 89 R51 - xiaohe
-  - 🇺🇸 美国 (United States) 90 - xiaohe
-  - 🇺🇸 美国 (United States) 91 - xiaohe
-  - 🇺🇸 美国 (United States) 92 - xiaohe
-  - 🇺🇸 美国 (United States) 93 - xiaohe
-  - 🇺🇸 美国 (United States) 94 - xiaohe
-  - 🇺🇸 美国 (United States) 95 R71 - xiaohe
-  - 🇺🇸 美国 (United States) 96 - xiaohe
-  - 🇺🇸 美国 (United States) 97 - xiaohe
-  - 🇺🇸 美国 (United States) 98 R50 - xiaohe
-  - 🇺🇸 美国 (United States) 99 - xiaohe
-  - 🇺🇸 美国 (United States) 100 - xiaohe
-  - 🇺🇸 美国 (United States) 101 - xiaohe
-  - 🇺🇸 美国 (United States) 102 - xiaohe
-  - 🇺🇸 美国 (United States) 103 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 104 R62 - xiaohe
-  - 🇺🇸 美国 (United States) 105 - xiaohe
-  - 🇺🇸 美国 (United States) 106 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 107 - xiaohe
-  - 🇺🇸 美国 (United States) 108 - xiaohe
-  - 🇺🇸 美国 (United States) 109 R71 - xiaohe
-  - 🇺🇸 美国 (United States) 110 - xiaohe
-  - 🇺🇸 美国 (United States) 111 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 112 - xiaohe
-  - 🇺🇸 美国 (United States) 113 - xiaohe
-  - 🇺🇸 美国 (United States) 114 - xiaohe
-  - 🇺🇸 美国 (United States) 115 - xiaohe
-  - 🇺🇸 美国 (United States) 116 - xiaohe
-  - 🇺🇸 美国 (United States) 117 R51 - xiaohe
-  - 🇺🇸 美国 (United States) 118 R43 - xiaohe
-  - 🇺🇸 美国 (United States) 119 - xiaohe
-  - 🇺🇸 美国 (United States) 120 - xiaohe
-  - 🇺🇸 美国 (United States) 121 - xiaohe
-  - 🇺🇸 美国 (United States) 122 - xiaohe
-  - 🇺🇸 美国 (United States) 123 - xiaohe
-  - 🇺🇸 美国 (United States) 124 - xiaohe
-  - 🇺🇸 美国 (United States) 125 - xiaohe
-  - 🇺🇸 美国 (United States) 126 - xiaohe
-  - 🇺🇸 美国 (United States) 127 - xiaohe
-  - 🇺🇸 美国 (United States) 128 - xiaohe
-  - 🇺🇸 美国 (United States) 129 - xiaohe
-  - 🇺🇸 美国 (United States) 130 - xiaohe
-  - 🇺🇸 美国 (United States) 131 - xiaohe
-  - 🇺🇸 美国 (United States) 132 - xiaohe
-  - 🇺🇸 美国 (United States) 133 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 134 - xiaohe
-  - 🇺🇸 美国 (United States) 135 - xiaohe
-  - 🇺🇸 美国 (United States) 136 - xiaohe
-  - 🇺🇸 美国 (United States) 137 - xiaohe
-  - 🇺🇸 美国 (United States) 138 - xiaohe
-  - 🇺🇸 美国 (United States) 139 - xiaohe
-  - 🇺🇸 美国 (United States) 140 - xiaohe
-  - 🇺🇸 美国 (United States) 141 - xiaohe
-  - 🇺🇸 美国 (United States) 142 - xiaohe
+  - 🇺🇸 美国 (United States) 75 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 76 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 77 R50 - xiaohe
+  - 🇺🇸 美国 (United States) 78 R44 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -1773,23 +997,23 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 - xiaohe
   - 🇺🇸 美国 (United States) 02 - xiaohe
   - 🇺🇸 美国 (United States) 03 - xiaohe
-  - 🇺🇸 美国 (United States) 04 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 04 - xiaohe
   - 🇺🇸 美国 (United States) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 06 - xiaohe
   - 🇺🇸 美国 (United States) 07 - xiaohe
-  - 🇺🇸 美国 (United States) 08 ⚠R - xiaohe
+  - 🇺🇸 美国 (United States) 08 - xiaohe
   - 🇺🇸 美国 (United States) 09 - xiaohe
   - 🇺🇸 美国 (United States) 10 - xiaohe
   - 🇺🇸 美国 (United States) 11 - xiaohe
   - 🇺🇸 美国 (United States) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 13 - xiaohe
   - 🇺🇸 美国 (United States) 14 - xiaohe
   - 🇺🇸 美国 (United States) 15 - xiaohe
   - 🇺🇸 美国 (United States) 16 - xiaohe
   - 🇺🇸 美国 (United States) 17 - xiaohe
   - 🇺🇸 美国 (United States) 18 - xiaohe
   - 🇺🇸 美国 (United States) 19 - xiaohe
-  - 🇺🇸 美国 (United States) 20 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸 美国 (United States) 21 - xiaohe
   - 🇺🇸 美国 (United States) 22 - xiaohe
   - 🇺🇸 美国 (United States) 23 - xiaohe
@@ -1800,7 +1024,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 28 - xiaohe
   - 🇺🇸 美国 (United States) 29 - xiaohe
   - 🇺🇸 美国 (United States) 30 - xiaohe
-  - 🇺🇸 美国 (United States) 31 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 31 - xiaohe
   - 🇺🇸 美国 (United States) 32 - xiaohe
   - 🇺🇸 美国 (United States) 33 - xiaohe
   - 🇺🇸 美国 (United States) 34 - xiaohe
@@ -1815,102 +1039,38 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 43 - xiaohe
   - 🇺🇸 美国 (United States) 44 - xiaohe
   - 🇺🇸 美国 (United States) 45 - xiaohe
-  - 🇺🇸 美国 (United States) 46 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 46 - xiaohe
   - 🇺🇸 美国 (United States) 47 - xiaohe
   - 🇺🇸 美国 (United States) 48 - xiaohe
   - 🇺🇸 美国 (United States) 49 - xiaohe
-  - 🇺🇸 美国 (United States) 50 - xiaohe
-  - 🇺🇸 美国 (United States) 51 - xiaohe
-  - 🇺🇸 美国 (United States) 52 - xiaohe
-  - 🇺🇸 美国 (United States) 53 - xiaohe
-  - 🇺🇸 美国 (United States) 54 - xiaohe
-  - 🇺🇸 美国 (United States) 55 - xiaohe
-  - 🇺🇸 美国 (United States) 56 - xiaohe
+  - 🇺🇸 美国 (United States) 50 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 51 R44 - xiaohe
+  - 🇺🇸 美国 (United States) 52 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 53 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 54 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 55 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 56 R47 - xiaohe
   - 🇺🇸 美国 (United States) 57 R47 - xiaohe
   - 🇺🇸 美国 (United States) 58 - xiaohe
-  - 🇺🇸 美国 (United States) 59 - xiaohe
-  - 🇺🇸 美国 (United States) 60 - xiaohe
-  - 🇺🇸 美国 (United States) 61 - xiaohe
-  - 🇺🇸 美国 (United States) 62 - xiaohe
-  - 🇺🇸 美国 (United States) 63 - xiaohe
-  - 🇺🇸 美国 (United States) 64 - xiaohe
-  - 🇺🇸 美国 (United States) 65 - xiaohe
-  - 🇺🇸 美国 (United States) 66 - xiaohe
-  - 🇺🇸 美国 (United States) 67 - xiaohe
-  - 🇺🇸 美国 (United States) 68 - xiaohe
-  - 🇺🇸 美国 (United States) 69 - xiaohe
-  - 🇺🇸 美国 (United States) 70 - xiaohe
-  - 🇺🇸 美国 (United States) 71 R44 - xiaohe
-  - 🇺🇸 美国 (United States) 72 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 73 - xiaohe
+  - 🇺🇸 美国 (United States) 59 R44 - xiaohe
+  - 🇺🇸 美国 (United States) 60 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 61 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 62 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 63 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 64 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 65 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 66 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 67 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 68 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 69 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 70 R51 - xiaohe
+  - 🇺🇸 美国 (United States) 71 - xiaohe
+  - 🇺🇸 美国 (United States) 72 R43 - xiaohe
+  - 🇺🇸 美国 (United States) 73 R47 - xiaohe
   - 🇺🇸 美国 (United States) 74 - xiaohe
-  - 🇺🇸 美国 (United States) 75 - xiaohe
-  - 🇺🇸 美国 (United States) 76 - xiaohe
-  - 🇺🇸 美国 (United States) 77 - xiaohe
-  - 🇺🇸 美国 (United States) 78 - xiaohe
-  - 🇺🇸 美国 (United States) 79 - xiaohe
-  - 🇺🇸 美国 (United States) 80 - xiaohe
-  - 🇺🇸 美国 (United States) 81 - xiaohe
-  - 🇺🇸 美国 (United States) 82 R60 - xiaohe
-  - 🇺🇸 美国 (United States) 83 - xiaohe
-  - 🇺🇸 美国 (United States) 84 - xiaohe
-  - 🇺🇸 美国 (United States) 85 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 86 R44 - xiaohe
-  - 🇺🇸 美国 (United States) 87 - xiaohe
-  - 🇺🇸 美国 (United States) 88 - xiaohe
-  - 🇺🇸 美国 (United States) 89 R51 - xiaohe
-  - 🇺🇸 美国 (United States) 90 - xiaohe
-  - 🇺🇸 美国 (United States) 91 - xiaohe
-  - 🇺🇸 美国 (United States) 92 - xiaohe
-  - 🇺🇸 美国 (United States) 93 - xiaohe
-  - 🇺🇸 美国 (United States) 94 - xiaohe
-  - 🇺🇸 美国 (United States) 95 R71 - xiaohe
-  - 🇺🇸 美国 (United States) 96 - xiaohe
-  - 🇺🇸 美国 (United States) 97 - xiaohe
-  - 🇺🇸 美国 (United States) 98 R50 - xiaohe
-  - 🇺🇸 美国 (United States) 99 - xiaohe
-  - 🇺🇸 美国 (United States) 100 - xiaohe
-  - 🇺🇸 美国 (United States) 101 - xiaohe
-  - 🇺🇸 美国 (United States) 102 - xiaohe
-  - 🇺🇸 美国 (United States) 103 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 104 R62 - xiaohe
-  - 🇺🇸 美国 (United States) 105 - xiaohe
-  - 🇺🇸 美国 (United States) 106 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 107 - xiaohe
-  - 🇺🇸 美国 (United States) 108 - xiaohe
-  - 🇺🇸 美国 (United States) 109 R71 - xiaohe
-  - 🇺🇸 美国 (United States) 110 - xiaohe
-  - 🇺🇸 美国 (United States) 111 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 112 - xiaohe
-  - 🇺🇸 美国 (United States) 113 - xiaohe
-  - 🇺🇸 美国 (United States) 114 - xiaohe
-  - 🇺🇸 美国 (United States) 115 - xiaohe
-  - 🇺🇸 美国 (United States) 116 - xiaohe
-  - 🇺🇸 美国 (United States) 117 R51 - xiaohe
-  - 🇺🇸 美国 (United States) 118 R43 - xiaohe
-  - 🇺🇸 美国 (United States) 119 - xiaohe
-  - 🇺🇸 美国 (United States) 120 - xiaohe
-  - 🇺🇸 美国 (United States) 121 - xiaohe
-  - 🇺🇸 美国 (United States) 122 - xiaohe
-  - 🇺🇸 美国 (United States) 123 - xiaohe
-  - 🇺🇸 美国 (United States) 124 - xiaohe
-  - 🇺🇸 美国 (United States) 125 - xiaohe
-  - 🇺🇸 美国 (United States) 126 - xiaohe
-  - 🇺🇸 美国 (United States) 127 - xiaohe
-  - 🇺🇸 美国 (United States) 128 - xiaohe
-  - 🇺🇸 美国 (United States) 129 - xiaohe
-  - 🇺🇸 美国 (United States) 130 - xiaohe
-  - 🇺🇸 美国 (United States) 131 - xiaohe
-  - 🇺🇸 美国 (United States) 132 - xiaohe
-  - 🇺🇸 美国 (United States) 133 R47 - xiaohe
-  - 🇺🇸 美国 (United States) 134 - xiaohe
-  - 🇺🇸 美国 (United States) 135 - xiaohe
-  - 🇺🇸 美国 (United States) 136 - xiaohe
-  - 🇺🇸 美国 (United States) 137 - xiaohe
-  - 🇺🇸 美国 (United States) 138 - xiaohe
-  - 🇺🇸 美国 (United States) 139 - xiaohe
-  - 🇺🇸 美国 (United States) 140 - xiaohe
-  - 🇺🇸 美国 (United States) 141 - xiaohe
-  - 🇺🇸 美国 (United States) 142 - xiaohe
+  - 🇺🇸 美国 (United States) 75 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 76 R47 - xiaohe
+  - 🇺🇸 美国 (United States) 77 R50 - xiaohe
+  - 🇺🇸 美国 (United States) 78 R44 - xiaohe
 rules:
 - MATCH,PROXIES

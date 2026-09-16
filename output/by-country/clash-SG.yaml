@@ -5,142 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  server: 194.87.10.92
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: n0Aq20NZ0D8jEp7q
-- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  server: sg-1.gsafevpnapi.com
-  port: 20270
+  server: 162.159.38.127
+  port: 2086
   udp: true
   type: vless
-  uuid: 257b0378-01c9-4ded-836d-f94df60bd19c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: q78tZmuaXQTsrrjZtjjRDtoni6tzN-HhXcAY-iT5zF0
-    short-id: fc13d6208ebbae16
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  server: 217.217.254.126
-  port: 2053
-  udp: true
-  type: vless
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-  tls: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 04 R53 - xiaohe
-  server: 91.193.58.198
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /free-server.techsonic.dev
+    path: /?ed=2560security=tls
     headers:
-      Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 05 R51 - xiaohe
-  server: 103.137.22.71
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /register?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 06 R53 - xiaohe
-  server: support.zoom.us
-  port: 80
-  udp: true
-  type: vless
-  uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081
-  network: ws
-  ws-opts:
-    path: /shalana
-    headers:
-      Host: shalana.xyz
-- name: 🇸🇬 新加坡 (Singapore) 07 R51 - xiaohe
-  server: support.zoom.us
-  port: 80
-  udp: true
-  type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: 🇸🇬 新加坡 (Singapore) 08 R53 - xiaohe
-  server: support.zoom.us
-  port: 80
-  udp: true
-  type: vless
-  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 09 R51 - xiaohe
-  server: 140.245.38.33
-  port: 2096
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /class/season?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 R53 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 R51 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 06 R53 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 07 R51 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 08 R53 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 09 R51 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 R53 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 R51 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 06 R53 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 07 R51 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 08 R53 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 09 R51 - xiaohe
 rules:
 - MATCH,PROXIES

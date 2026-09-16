@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - xiaohe
+  server: 151.101.56.7
+  port: 443
+  udp: true
+  type: trojan
+  password: MITIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: '@mehrosaboran'
+- name: 🇩🇪 德国 (Germany) 02 - xiaohe
+  server: 151.101.56.7
+  port: 443
+  udp: true
+  type: trojan
+  password: MITIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 03 - xiaohe
   server: 199.232.78.101
   port: 443
   udp: true
@@ -14,8 +36,30 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: '@bored_vpn'
-- name: 🇩🇪 德国 (Germany) 02 - xiaohe
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+- name: 🇩🇪 德国 (Germany) 04 - xiaohe
+  server: 167.82.76.7
+  port: 443
+  udp: true
+  type: trojan
+  password: MITIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: '@mehrosaboran'
+- name: 🇩🇪 德国 (Germany) 05 - xiaohe
+  server: 199.232.78.101
+  port: 443
+  udp: true
+  type: trojan
+  password: MITIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 06 - xiaohe
   server: 199.232.78.160
   port: 443
   udp: true
@@ -25,196 +69,36 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-- name: 🇩🇪 德国 (Germany) 03 - xiaohe
-  server: 159.195.192.169
-  port: 2054
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/des---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+- name: 🇩🇪 德国 (Germany) 07 - xiaohe
+  server: 151.101.56.7
+  port: 443
   udp: true
-  type: vless
-  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
-  tls: true
-  reality-opts:
-    public-key: mlJSEX5zJodpeofSicXnd0tlrgonVCGJ3M-qqWF4FSU
-  servername: www.ibm.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇩🇪 德国 (Germany) 04 - xiaohe
-  server: 31.184.244.219
-  port: 2053
+  type: trojan
+  password: MITIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 08 - xiaohe
+  server: 167.82.76.7
+  port: 443
   udp: true
-  type: vless
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
-  tls: true
-  reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 4881f8244d1b9021
-  servername: www.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇩🇪 德国 (Germany) 05 - xiaohe
-  server: 178.105.61.61
-  port: 2083
-  udp: true
-  type: vless
-  uuid: cb077bf2-70b7-457b-af42-27cdc3e0e544
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk
-    short-id: af04ff8094115e93
-  servername: 178.105.61.61
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 06 - xiaohe
+  type: trojan
+  password: MITIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+- name: 🇩🇪 德国 (Germany) 09 - xiaohe
   server: 63.180.204.141
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 07 R51 - xiaohe
-  server: 68.183.209.180
-  port: 80
-  udp: true
-  type: vmess
-  uuid: d5121154-ced6-460d-a9fd-5892027ab4a0
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /graphql
-- name: 🇩🇪 德国 (Germany) 08 - xiaohe
-  server: 212.16.92.112
-  port: 443
-  udp: true
-  type: vless
-  uuid: 32721515-985b-4773-9e70-5d2e1b88a060
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: jobinvest.ru
-  client-fingerprint: ''
-- name: 🇩🇪 德国 (Germany) 09 - xiaohe
-  server: new2.smart-cats.ru
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
-  tls: true
-  reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 4881f8244d1b9021
-  servername: www.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇩🇪 德国 (Germany) 10 - xiaohe
-  server: 212.16.92.121
-  port: 443
-  udp: true
-  type: vless
-  uuid: 32721515-985b-4773-9e70-5d2e1b88a060
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: jobinvest.ru
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 11 - xiaohe
-  server: 95.179.169.44
-  port: 53224
-  udp: true
-  type: vless
-  uuid: 5f00ca4e-3f26-473e-ad1c-414112abb0a3
-- name: 🇩🇪 德国 (Germany) 12 - xiaohe
-  server: 162.248.166.35
-  port: 443
-  udp: true
-  type: vless
-  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
-    short-id: c6dc8abb0235dc05
-  servername: www.caradisiac.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 13 - xiaohe
-  server: 77.110.104.238
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 937fbdad-d97b-4540-9136-de1886df866f
-  tls: true
-  reality-opts:
-    public-key: sHEHsya9ZbC34uBUOzAfAO8u2b3Ik71hp4AKMGLvZxw
-    short-id: facfeeb537603598
-  servername: www.tagesschau.de
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: pl199grpc
-- name: 🇩🇪 德国 (Germany) 14 - xiaohe
-  server: 77.110.101.97
-  port: 56834
-  udp: true
-  type: vless
-  uuid: daf65e17-1ed5-42be-a34d-20a156ddedbc
-- name: 🇩🇪 德国 (Germany) 15 - xiaohe
-  server: 212.16.92.122
-  port: 443
-  udp: true
-  type: vless
-  uuid: 32721515-985b-4773-9e70-5d2e1b88a060
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: jobinvest.ru
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 16 - xiaohe
-  server: 5.35.81.60
-  port: 4443
-  udp: true
-  type: vless
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-  tls: true
-  reality-opts:
-    public-key: nhvyI4KrKDUSgw9Fa63SDeNATaTsAu9bRZ4qaraydRM
-    short-id: e5f6a1b2
-  servername: maps.apple.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: snob-grpc-de
-- name: 🇩🇪 德国 (Germany) 17 - xiaohe
-  server: undef.network
-  port: 2052
-  udp: true
-  type: vless
-  uuid: c2e317b0-0847-4579-9b78-7b678634ffc4
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-- name: 🇩🇪 德国 (Germany) 18 - xiaohe
-  server: 178.162.252.123
-  port: 10000
-  udp: true
-  type: vless
-  uuid: 1b96549e-b6e4-4e19-9259-2ab1b10ce7f7
-  tls: true
-  reality-opts:
-    public-key: UOa0v_JpSPRPMO6ABMM7tIir-GclotOVfnbI2WqJGVE
-    short-id: 9791feaccc1ca4d8
-  servername: zoom.us
-  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -226,18 +110,9 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 04 - xiaohe
   - 🇩🇪 德国 (Germany) 05 - xiaohe
   - 🇩🇪 德国 (Germany) 06 - xiaohe
-  - 🇩🇪 德国 (Germany) 07 R51 - xiaohe
+  - 🇩🇪 德国 (Germany) 07 - xiaohe
   - 🇩🇪 德国 (Germany) 08 - xiaohe
   - 🇩🇪 德国 (Germany) 09 - xiaohe
-  - 🇩🇪 德国 (Germany) 10 - xiaohe
-  - 🇩🇪 德国 (Germany) 11 - xiaohe
-  - 🇩🇪 德国 (Germany) 12 - xiaohe
-  - 🇩🇪 德国 (Germany) 13 - xiaohe
-  - 🇩🇪 德国 (Germany) 14 - xiaohe
-  - 🇩🇪 德国 (Germany) 15 - xiaohe
-  - 🇩🇪 德国 (Germany) 16 - xiaohe
-  - 🇩🇪 德国 (Germany) 17 - xiaohe
-  - 🇩🇪 德国 (Germany) 18 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -249,17 +124,8 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 04 - xiaohe
   - 🇩🇪 德国 (Germany) 05 - xiaohe
   - 🇩🇪 德国 (Germany) 06 - xiaohe
-  - 🇩🇪 德国 (Germany) 07 R51 - xiaohe
+  - 🇩🇪 德国 (Germany) 07 - xiaohe
   - 🇩🇪 德国 (Germany) 08 - xiaohe
   - 🇩🇪 德国 (Germany) 09 - xiaohe
-  - 🇩🇪 德国 (Germany) 10 - xiaohe
-  - 🇩🇪 德国 (Germany) 11 - xiaohe
-  - 🇩🇪 德国 (Germany) 12 - xiaohe
-  - 🇩🇪 德国 (Germany) 13 - xiaohe
-  - 🇩🇪 德国 (Germany) 14 - xiaohe
-  - 🇩🇪 德国 (Germany) 15 - xiaohe
-  - 🇩🇪 德国 (Germany) 16 - xiaohe
-  - 🇩🇪 德国 (Germany) 17 - xiaohe
-  - 🇩🇪 德国 (Germany) 18 - xiaohe
 rules:
 - MATCH,PROXIES

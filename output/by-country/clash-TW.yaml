@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
+  server: 61.231.19.116
+  port: 50099
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   server: 35.201.230.136
   port: 443
   udp: true
@@ -17,45 +24,20 @@ proxies:
     short-id: 5e13a6d43d0644c9
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
-  server: 34.81.129.171
-  port: 34376
-  udp: true
-  type: vless
-  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
-    short-id: 8dbafb690450d8a9
-  servername: www.sony.com
-  client-fingerprint: chrome
 - name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  server: 35.201.163.218
-  port: 30837
+  server: r3mrcg00129437x.cybervena.com
+  port: 50099
   udp: true
-  type: vless
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  servername: www.sony.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
 - name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
-  server: 34.80.164.239
-  port: 21776
+  server: r3mrcg001287h3p.cybervena.com
+  port: 50099
   udp: true
-  type: vless
-  uuid: b0399730-1618-4727-8ddd-2baf94ab90d6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA
-    short-id: 79b6f82800c68925
-  servername: www.tesla.com
-  client-fingerprint: qq
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
 proxy-groups:
 - name: PROXIES
   type: select

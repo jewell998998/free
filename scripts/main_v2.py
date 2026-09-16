@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-免费节点自动测活订阅池 v2 — 全协议 · 高精度 · 低误杀
+免费节点自动测活订阅池 v3_speed_optimized — 全协议 · 高精度 · 低误杀
 ====================================================
 
 架构（三阶段流水线）:
@@ -103,9 +103,9 @@ PORT_KNOCK_TIMEOUT     = 1.5
 IP_ECHO_TIMEOUT        = 4.0
 SPEED_TEST_BYTES       = 1_000_000
 SPEED_TEST_BUDGET      = 3.5
-SPEED_MIN_BYTES_PER_S  = 70_000
+SPEED_MIN_BYTES_PER_S  = 150_000
 SPEED_IDLE_TIMEOUT     = 1.8
-MAX_ACCEPT_LATENCY_MS  = 2500
+MAX_ACCEPT_LATENCY_MS  = 1200
 REQUIRE_EXIT_IP        = True
 DROP_PORT_KNOCK_FAIL   = True
 DROP_INSECURE_TLS      = True
@@ -131,9 +131,70 @@ SPEED_TEST_URLS = [               # 测速端点多路 (实测部分节点商屏
     "https://cachefly.cachefly.net/10mb.test",
 ]
 TRACE_URL = "https://www.cloudflare.com/cdn-cgi/trace"      # warp=on 检测套壳节点
-MAX_WORKERS_TEST    = 64            # 同时 sing-box 实测节点数 (Azure 2C7G 实测 24→48 稳定; sing-box 单实例 < 30MB)
-MAX_WORKERS_FETCH   = 12
+MAX_WORKERS_TEST    = 64            # 总体并发节点数；通过批量 sing-box 实例降低进程启动开销
+MAX_WORKERS_FETCH   = 16            # 抓取并发略提高，减少慢源拖尾
 MAX_WORKERS_CLASSIFY = 48
+
+# ═══ V3.1 速度优化 ═══
+# 核心：一个 sing-box 实例承载多个节点，每个节点独立 SOCKS inbound + route rule。
+# 这样可把“每节点一次进程启动”变成“每 16 节点一次进程启动”，显著减少死节点的启动成本。
+SINGBOX_BATCH_SIZE = 16
+SINGBOX_BATCH_WORKERS = 4           # 16 × 4 = 64 个节点同时实测
+SINGBOX_START_TIMEOUT = 3.0
+SINGBOX_PORT_READY_TIMEOUT = 2.5
+SINGBOX_CHECK_CONFIG = False        # 跳过逐节点 check；run 本身会验证配置，避免每节点再启动一个 check 子进程
+
+# 对最终可接受节点没有放宽：MAX_ACCEPT_LATENCY_MS 仍是 1200ms。
+# 这里只缩短“明显死节点”的等待上限，减少长时间无意义等待。
+FAST_PROBE_TIMEOUT = 3.0
+FAST_RETRY_TIMEOUT = 1.2
+FAST_IP_ECHO_TIMEOUT = 2.5
+FAST_SPEED_BUDGET = 2.5
+
+FETCH_CONNECT_TIMEOUT = 5.0
+FETCH_READ_TIMEOUT = 15.0
+FETCH_RETRIES = 2
+FETCH_RETRY_BACKOFF = 1.0
+PREFILTER_BATCH_SIZE = 1024
+PREFILTER_DOH_FIRST = False          # GitHub Actions 海外 DNS 优先走系统 DNS，失败才回退 DoH
+
+# ═══ V3 性能控制 ═══
+# GitHub Actions 已提升到 120 分钟，因此 V3 默认不再使用程序内部硬截断。
+# 如未来遇到 CI 卡死/第三方服务异常，可取消下面两行注释作为紧急保险。
+TOTAL_RUNTIME_BUDGET_SECONDS = None
+LIVENESS_BUDGET_SECONDS = None
+# TOTAL_RUNTIME_BUDGET_SECONDS = 110 * 60
+# LIVENESS_BUDGET_SECONDS = 90 * 60
+LIVENESS_BATCH_SIZE = 256
+PROGRESS_EVERY = 100
+# 预检失败节点进入“救援模式”：不直接误杀，但使用更短的超时和测速预算。
+RESCUE_PROBE_TIMEOUT = 3.0
+RESCUE_RETRY_TIMEOUT = 1.5
+RESCUE_IP_TIMEOUT = 2.5
+RESCUE_SPEED_BUDGET = 1.5
+
+# ═══ V3 质量/国家策略 ═══
+# 目标而非硬性要求：尽量把最终出库池控制在约 100 个优质节点。
+TARGET_FINAL_NODES = 100
+SOFT_FINAL_MAX_NODES = 120
+# 当第 100 名仍达到这个质量分时，允许适当超过 100，避免为了数字硬砍优质节点。
+SOFT_KEEP_SCORE = 82.0
+
+# 明确排除国家/地区。最终以“出口 IP 国家”为准。
+EXCLUDED_COUNTRIES = {
+    "GB", "AE", "CY", "FI", "SE",
+    "RO", "IT", "CH", "RU", "TR",
+    "IQ", "NO", "GR", "LV", "SC", "ES",
+}
+
+# unknown 没有可靠网络类型情报，因此必须更严格。
+UNKNOWN_MAX_LATENCY_MS = 800
+UNKNOWN_MIN_SPEED_BPS = 250_000
+UNKNOWN_MAX_FRAUD_SCORE = 74
+
+PREFILTER_FAILED_RAW = set()
+RUN_START_MONOTONIC = 0.0
+STAGE_TIMES = {}
 
 # ip-api.com 免费批量: 15 req/min, 每 req ≤100 IP (仅 HTTP)
 IP_API_BATCH_URL = "http://ip-api.com/batch?fields=status,countryCode,isp,org,as,asname,reverse,mobile,proxy,hosting,query"
@@ -1048,35 +1109,45 @@ def extract_nodes_from_text(text: str) -> set:
 
 
 def fetch_raw_nodes() -> list:
+    """并发抓取全部订阅源；慢源单独失败，不拖死整个抓取阶段。"""
     nodes = set()
-    print("[*] 抓取全部订阅源 ...")
+    print(f"[*] 抓取全部订阅源 ... 共 {len(SOURCE_URLS)} 个源 | 并发 {MAX_WORKERS_FETCH}")
 
     def _fetch(url):
         last_err = None
-        # 重试 2 次 (网络抖动/GFW 间歇性重置; 退避 3s)
-        for attempt in range(3):
+        for attempt in range(FETCH_RETRIES):
             try:
-                r = http_get(url, timeout=30)
+                r = http_get(url, timeout=(FETCH_CONNECT_TIMEOUT, FETCH_READ_TIMEOUT))
                 if r.status_code == 200:
                     got = extract_nodes_from_text(r.text)
-                    return url, got, None
+                    return url, got, None, attempt + 1
                 last_err = f"HTTP {r.status_code}"
             except Exception as e:
-                last_err = str(e)[:70]
-            if attempt < 2:
-                time.sleep(3)
-        return url, set(), last_err
+                last_err = str(e).replace("\n", " ")[:100]
+            if attempt + 1 < FETCH_RETRIES:
+                time.sleep(FETCH_RETRY_BACKOFF)
+        return url, set(), last_err or "unknown error", FETCH_RETRIES
 
-    with ThreadPoolExecutor(MAX_WORKERS_FETCH) as ex:
-        futs = [ex.submit(_fetch, u) for u in SOURCE_URLS]
+    completed = 0
+    success = 0
+    failed = 0
+    with ThreadPoolExecutor(max_workers=min(MAX_WORKERS_FETCH, max(1, len(SOURCE_URLS)))) as ex:
+        futs = {ex.submit(_fetch, u): u for u in SOURCE_URLS}
         for f in as_completed(futs):
-            url, got, err = f.result()
+            completed += 1
+            try:
+                url, got, err, attempts = f.result()
+            except Exception as e:
+                url, got, err, attempts = futs[f], set(), str(e)[:100], FETCH_RETRIES
             if err:
-                print(f"[!] 拉取失败 {url} → {err}")
+                failed += 1
+                print(f"[!] 拉取失败 {url} → {err} | 重试 {attempts} 次 | 跳过该源，继续")
             else:
+                success += 1
                 print(f"[+] {url} → {len(got)} 节点")
             nodes.update(got)
-    print(f"[*] 初始抓取总量: {len(nodes)}")
+            print(f"[*] 抓取进度: {completed}/{len(SOURCE_URLS)} | 成功 {success} | 失败 {failed}")
+    print(f"[*] 初始抓取总量: {len(nodes)} | 成功源 {success}/{len(SOURCE_URLS)} | 失败源 {failed}")
     return list(nodes)
 
 
@@ -1088,29 +1159,39 @@ def fetch_raw_nodes() -> list:
 _DNS_CACHE = {}
 
 def resolve_host(host: str) -> str:
-    """DoH 解析（缓存）；失败再系统 DNS。"""
+    """优先系统 DNS，失败再 DoH；结果全局缓存。GitHub Actions 上系统 DNS 更快。"""
     if not host or is_ip_literal(host):
         return host or ""
     host = host.strip().lower()
     cached = _DNS_CACHE.get(host)
     if cached:
         return cached
-    try:
-        r = DIRECT_SESSION.get(
-            f"https://cloudflare-dns.com/dns-query?name={urllib.parse.quote(host)}&type=A",
-            headers={"Accept": "application/dns-json"}, timeout=3.0)
-        if r.status_code == 200:
-            for a in (r.json().get("Answer") or []):
-                if a.get("type") == 1 and a.get("data"):
-                    ip=a["data"]; _DNS_CACHE[host]=ip; return ip
-    except Exception:
-        pass
-    try:
-        ip=socket.getaddrinfo(host,None,socket.AF_INET,socket.SOCK_STREAM)[0][4][0]
-        _DNS_CACHE[host]=ip
-        return ip
-    except Exception:
+
+    def _system_dns():
+        try:
+            return socket.getaddrinfo(host, None, socket.AF_INET, socket.SOCK_STREAM)[0][4][0]
+        except Exception:
+            return ""
+
+    def _doh():
+        try:
+            r = DIRECT_SESSION.get(
+                f"https://cloudflare-dns.com/dns-query?name={urllib.parse.quote(host)}&type=A",
+                headers={"Accept": "application/dns-json"}, timeout=2.0)
+            if r.status_code == 200:
+                for a in (r.json().get("Answer") or []):
+                    if a.get("type") == 1 and a.get("data"):
+                        return a["data"]
+        except Exception:
+            pass
         return ""
+
+    ip = _doh() if PREFILTER_DOH_FIRST else _system_dns()
+    if not ip:
+        ip = _system_dns() if PREFILTER_DOH_FIRST else _doh()
+    if ip:
+        _DNS_CACHE[host] = ip
+    return ip
 
 
 def knock_port(server: str, port: int, protocol_type: str) -> bool:
@@ -1128,62 +1209,47 @@ def knock_port(server: str, port: int, protocol_type: str) -> bool:
 
 
 def prefilter_candidates(candidates: list) -> list:
-    """并行预检；DNS/TCP 明确失败直接淘汰，避免浪费 sing-box。"""
-    if not candidates: return []
-    print(f"[*] 端口/DNS 快速预检 (TCP {PORT_KNOCK_TIMEOUT}s): {len(candidates)} 候选 ...")
-    passed,failed=[],[]
-    def _knock(item):
-        raw,outbound,server,port,proto=item
-        return item,knock_port(server,port,proto)
-    workers=min(PREFILTER_WORKERS,max(8,len(candidates)))
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs=[ex.submit(_knock,it) for it in candidates]
-        for fut in as_completed(futs):
-            item,ok=fut.result()
-            (passed if ok else failed).append(item)
-    print(f"[+] 预检通过: {len(passed)} | DNS/TCP 不通: {len(failed)}")
-    return passed if DROP_PORT_KNOCK_FAIL else passed+failed
+    """V3.1 有界并发端口/DNS 预检。避免一次创建 3 万+ Future。
 
+    预检失败仍进入 rescue，保持原有低误杀原则。
+    """
+    global PREFILTER_FAILED_RAW
+    PREFILTER_FAILED_RAW = set()
+    if not candidates:
+        return []
 
-def knock_port(server: str, port: int, protocol_type: str) -> bool:
-    """TCP 直连预检 (DoH 解析防本地 DNS 污染); QUIC 类直接放行阶段B
-    注: 预检失败不淘汰 (本地大陆视角的假死 ≠ 节点死亡), 只影响排序;
-        生死由阶段B sing-box 全流程测活裁决 (Actions 海外视角)"""
-    if protocol_type in ("hysteria2", "tuic"):
-        # QUIC 无法轻量预检 UDP 端口连通性, 且本地 UDP 常被 QoS → 放行交阶段B
-        return True
-    try:
-        ip = resolve_host(server)
-        if not ip:
-            return False
-        with socket.create_connection((ip, port), timeout=PORT_KNOCK_TIMEOUT):
-            return True
-    except Exception:
-        return False
+    print(f"[*] V3 端口/DNS 快速预检 (TCP {PORT_KNOCK_TIMEOUT}s): {len(candidates)} 候选 ...")
+    passed, failed = [], []
+    workers = min(PREFILTER_WORKERS, max(8, len(candidates)))
+    completed = 0
 
+    for offset in range(0, len(candidates), PREFILTER_BATCH_SIZE):
+        batch = candidates[offset:offset + PREFILTER_BATCH_SIZE]
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            futs = {ex.submit(knock_port, item[2], item[3], item[4]): item for item in batch}
+            for fut in as_completed(futs):
+                item = futs[fut]
+                completed += 1
+                try:
+                    ok = fut.result()
+                except Exception:
+                    ok = False
+                if ok:
+                    passed.append(item)
+                else:
+                    failed.append(item)
+                    PREFILTER_FAILED_RAW.add(item[0])
+        if completed == len(candidates) or completed % 5000 < len(batch):
+            print(f"[*] 预检进度: {completed}/{len(candidates)} ({completed/len(candidates)*100:.1f}%) | 通过 {len(passed)} | 失败 {len(failed)}")
 
-def prefilter_candidates(candidates: list) -> list:
-    """端口预检: 通过者优先, 未通过者降级保留 (防止本地网络/GFW 视角误杀;
-    真正生死由阶段B sing-box 全流程测活裁决 — Actions 海外视角)"""
-    print(f"[*] 端口预检 (TCP {PORT_KNOCK_TIMEOUT}s): {len(candidates)} 候选 ...")
-    passed, deferred = [], []
-
-    def _knock(item):
-        raw, outbound, server, port, proto = item
-        return knock_port(server, port, proto)
-
-    with ThreadPoolExecutor(max_workers=64) as ex:
-        # ex.map 保序返回; 通过者优先, 未通过降级保留 (不淘汰, 防本地视角误杀)
-        for item, ok in zip(candidates, ex.map(_knock, candidates)):
-            (passed if ok else deferred).append(item)
-    print(f"[+] 预检通过: {len(passed)} | 预检未过(保留低优先级待全测): {len(deferred)}")
-    # 预检未过的仍进入全流程 (只是排在后面) — 交给 sing-box 真实裁决
-    return passed + deferred
+    print(f"[+] 预检通过: {len(passed)} | 预检失败: {len(failed)}")
+    print("[*] V3.1 策略: 预检通过优先完整测活；失败节点保留为短超时救援队列")
+    return passed + failed
 
 
 # ═══════════════════════════════════════════N═══════════════════════
 # 阶段 B: sing-box 真实测活
-# ═══════════════════════════════════════════N═══════════════════════
+# ════════════════════════════════════════════════════════════════════
 
 def _alloc_socks_port() -> int:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -1256,9 +1322,13 @@ def print_once(key: str, msg: str):
         print(msg)
 
 
-def test_single_node(item, keep_alive_check=True):
-    """单节点真实测活：先淘汰慢/死/无出口/高风险，再做测速。"""
+def test_single_node(item, keep_alive_check=True, rescue_mode=False):
+    """单节点真实测活。V3 对端口预检失败节点使用短超时救援模式。"""
     raw,outbound,server,port,proto=item
+    probe_timeout = RESCUE_PROBE_TIMEOUT if rescue_mode else PROBE_TIMEOUT
+    retry_timeout = RESCUE_RETRY_TIMEOUT if rescue_mode else PROBE_RETRY_TIMEOUT
+    ip_echo_timeout = RESCUE_IP_TIMEOUT if rescue_mode else IP_ECHO_TIMEOUT
+    speed_budget = RESCUE_SPEED_BUDGET if rescue_mode else SPEED_TEST_BUDGET
     socks_port=_alloc_socks_port()
     task_id=uuid.uuid4().hex[:10]
     cfg_path=os.path.join(RUNTIME_DIR,f"sb_{task_id}.json")
@@ -1284,7 +1354,7 @@ def test_single_node(item, keep_alive_check=True):
     try:
         try:
             chk=subprocess.run([exe,"check","-c",cfg_path],capture_output=True,text=True,encoding="utf-8",
-                              timeout=8,creationflags=creationflags)
+                              timeout=(4 if rescue_mode else 8),creationflags=creationflags)
             if chk.returncode!=0: return None
         except subprocess.TimeoutExpired:
             return None
@@ -1312,7 +1382,7 @@ def test_single_node(item, keep_alive_check=True):
             latency_ms=99999
             alive=False
             for i,url in enumerate(LIVENESS_URLS):
-                timeout=PROBE_TIMEOUT if i==0 else PROBE_RETRY_TIMEOUT
+                timeout=probe_timeout if i==0 else retry_timeout
                 t0=time.monotonic()
                 try:
                     r=PROBE_SESSION.get(url,proxies=proxies,timeout=timeout,
@@ -1330,7 +1400,7 @@ def test_single_node(item, keep_alive_check=True):
             exit_ip=exit_country=exit_asn=exit_asn_org=exit_isp=None
             for url in IP_ECHO_URLS:
                 try:
-                    r=PROBE_SESSION.get(url,proxies=proxies,timeout=IP_ECHO_TIMEOUT,
+                    r=PROBE_SESSION.get(url,proxies=proxies,timeout=ip_echo_timeout,
                                         allow_redirects=False,verify=True)
                     if r.status_code!=200: continue
                     j=r.json()
@@ -1364,7 +1434,7 @@ def test_single_node(item, keep_alive_check=True):
             mitm_risk=False
             try:
                 r=PROBE_SESSION.get("https://www.gstatic.com/generate_204",proxies=proxies,
-                                    timeout=PROBE_RETRY_TIMEOUT,verify=True,allow_redirects=False)
+                                    timeout=retry_timeout,verify=True,allow_redirects=False)
                 if r.status_code not in (204,200):
                     mitm_risk=r.status_code in (301,302,403,407,502,503) or bool(r.content)
             except requests.exceptions.SSLError:
@@ -1390,14 +1460,14 @@ def test_single_node(item, keep_alive_check=True):
                 last_chunk=t_speed
                 try:
                     with PROBE_SESSION.get(speed_url,proxies=proxies,
-                                            timeout=(3.0,SPEED_TEST_BUDGET),
+                                            timeout=(2.0,speed_budget),
                                             stream=True,allow_redirects=False) as r:
                         if r.status_code!=200: continue
                         for chunk in r.iter_content(chunk_size=65536):
                             now=time.monotonic()
                             if chunk:
                                 downloaded+=len(chunk); last_chunk=now
-                            if now-t_speed>=SPEED_TEST_BUDGET or now-last_chunk>=SPEED_IDLE_TIMEOUT:
+                            if now-t_speed>=speed_budget or now-last_chunk>=SPEED_IDLE_TIMEOUT:
                                 break
                     elapsed=max(time.monotonic()-t_speed,0.001)
                     if downloaded:
@@ -1427,27 +1497,398 @@ def test_single_node(item, keep_alive_check=True):
         except OSError: pass
 
 
+def _alloc_socks_ports(count: int) -> list:
+    ports = []
+    for _ in range(count):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.bind(("127.0.0.1", 0))
+            ports.append(s.getsockname()[1])
+    return ports
+
+
+def build_batch_test_config(items: list, socks_ports: list, chain_relay: dict = None) -> dict:
+    """一个 sing-box 实例承载多个节点：每个节点一个 SOCKS inbound + route rule。"""
+    outbounds = []
+    inbounds = []
+    rules = []
+
+    for idx, item in enumerate(items):
+        _, outbound, _, _, _ = item
+        node = dict(outbound)
+        node_tag = f"node-{idx}"
+        node["tag"] = node_tag
+
+        if chain_relay:
+            relay = dict(chain_relay)
+            relay["tag"] = f"chain-relay-{idx}"
+            relay.pop("detour", None)
+            outbounds.append(relay)
+            node["detour"] = relay["tag"]
+
+        outbounds.append(node)
+        in_tag = f"socks-{idx}"
+        inbounds.append({
+            "type": "socks",
+            "tag": in_tag,
+            "listen": "127.0.0.1",
+            "listen_port": int(socks_ports[idx]),
+            "sniff": False,
+        })
+        rules.append({"inbound": [in_tag], "action": "route", "outbound": node_tag})
+
+    outbounds.extend([
+        {"type": "direct", "tag": "direct"},
+        {"type": "block", "tag": "block"},
+    ])
+
+    # 与原单节点配置保持一致：没有命中 inbound 规则的流量走 direct。
+    # 本地调试时如果设置 FRONT_PROXY，则所有节点统一经此前置；GitHub Actions 默认为空。
+    front = os.environ.get("FRONT_PROXY", "").strip()
+    if front and not chain_relay:
+        m = re.match(r"^(socks5h?|http)://([^:]+):(\d+)$", front)
+        if m:
+            scheme, fhost, fport = m.groups()
+            ftype = "socks" if scheme.startswith("socks5") else "http"
+            front_out = {"type": ftype, "tag": "front-proxy", "server": fhost, "server_port": int(fport)}
+            if ftype == "socks":
+                front_out["version"] = "5"
+            outbounds.append(front_out)
+            # 给每个节点加同一个 detour，不改变节点本身配置。
+            node_tags = {ob.get("tag") for ob in outbounds if ob.get("tag", "").startswith("node-")}
+            for ob in outbounds:
+                if ob.get("tag") in node_tags:
+                    ob["detour"] = "front-proxy"
+            print_once("_FRONT_ENABLED_BATCH", f"[*] 前置代理已启用: {front} (批量 sing-box 模式)")
+
+    return {
+        "log": {"level": "warn"},
+        "inbounds": inbounds,
+        "outbounds": outbounds,
+        "route": {"rules": rules, "final": "direct"},
+    }
+
+
+def _probe_node_via_socks(item, socks_port: int, rescue_mode: bool = False):
+    """只负责网络探测；sing-box 生命周期由批处理器统一管理。"""
+    raw, outbound, server, port, proto = item
+    probe_timeout = FAST_PROBE_TIMEOUT if rescue_mode else min(PROBE_TIMEOUT, FAST_PROBE_TIMEOUT)
+    retry_timeout = FAST_RETRY_TIMEOUT if rescue_mode else min(PROBE_RETRY_TIMEOUT, FAST_RETRY_TIMEOUT)
+    ip_echo_timeout = FAST_IP_ECHO_TIMEOUT if rescue_mode else min(IP_ECHO_TIMEOUT, FAST_IP_ECHO_TIMEOUT)
+    speed_budget = FAST_SPEED_BUDGET if rescue_mode else min(SPEED_TEST_BUDGET, FAST_SPEED_BUDGET)
+
+    if DROP_INSECURE_TLS:
+        tls = outbound.get("tls") or {}
+        if tls.get("enabled") and tls.get("insecure"):
+            return None
+
+    proxies = {
+        "http": f"socks5h://127.0.0.1:{socks_port}",
+        "https": f"socks5h://127.0.0.1:{socks_port}",
+    }
+
+    # 1) 活性：3 个端点仍保留，但一旦命中 204/200 立即结束。
+    latency_ms = 99999
+    alive = False
+    for i, url in enumerate(LIVENESS_URLS):
+        timeout = probe_timeout if i == 0 else retry_timeout
+        t0 = time.monotonic()
+        try:
+            r = PROBE_SESSION.get(url, proxies=proxies, timeout=timeout,
+                                  allow_redirects=False, verify=True)
+            if r.status_code in (204, 200):
+                latency_ms = int((time.monotonic() - t0) * 1000)
+                alive = True
+                break
+        except requests.RequestException:
+            pass
+    if not alive or latency_ms > MAX_ACCEPT_LATENCY_MS:
+        return None
+
+    # 2) 出口 IP：保持原多源冗余，但单次超时缩短。
+    exit_ip = exit_country = exit_asn = exit_asn_org = exit_isp = None
+    for url in IP_ECHO_URLS:
+        try:
+            r = PROBE_SESSION.get(url, proxies=proxies, timeout=ip_echo_timeout,
+                                  allow_redirects=False, verify=True)
+            if r.status_code != 200:
+                continue
+            j = r.json()
+            ip = str(j.get("ip") or j.get("query") or j.get("your_ip") or "").strip()
+            try:
+                ipaddress.ip_address(ip)
+            except ValueError:
+                continue
+            exit_ip = ip
+            if url.startswith("https://api.ip.sb"):
+                exit_country = j.get("country_code")
+                exit_asn = j.get("asn")
+                exit_asn_org = j.get("asn_organization") or j.get("organization") or ""
+                exit_isp = j.get("isp") or j.get("organization") or ""
+            elif url.startswith("https://ipinfo.io"):
+                exit_country = (j.get("country") or "").upper() or None
+                org = j.get("org") or ""
+                mm = re.match(r"^AS(\d+)\s+(.*)", org)
+                if mm:
+                    exit_asn = int(mm.group(1))
+                    exit_asn_org = mm.group(2)
+                exit_isp = org
+            else:
+                exit_country = (j.get("countryCode") or "").upper() or None
+                exit_asn = j.get("as")
+                exit_asn_org = j.get("asname") or j.get("org") or ""
+                exit_isp = j.get("isp") or j.get("org") or ""
+            break
+        except (requests.RequestException, ValueError, json.JSONDecodeError):
+            continue
+
+    if REQUIRE_EXIT_IP and not exit_ip:
+        return None
+
+    # 3) TLS/证书风险。
+    mitm_risk = False
+    try:
+        r = PROBE_SESSION.get("https://www.gstatic.com/generate_204", proxies=proxies,
+                              timeout=retry_timeout, verify=True, allow_redirects=False)
+        if r.status_code not in (204, 200):
+            mitm_risk = r.status_code in (301, 302, 403, 407, 502, 503) or bool(r.content)
+    except requests.exceptions.SSLError:
+        mitm_risk = True
+    except requests.RequestException:
+        pass
+    if mitm_risk:
+        return None
+
+    # 4) WARP 检测：保留，但只使用一次短请求。
+    is_warp = False
+    try:
+        r = PROBE_SESSION.get(TRACE_URL, proxies=proxies, timeout=retry_timeout,
+                              verify=True, allow_redirects=False)
+        if r.status_code == 200 and re.search(r"^warp=on", r.text, re.M):
+            is_warp = True
+    except requests.RequestException:
+        pass
+
+    # 5) 快速测速：2.5s 总预算，仍要求 ≥150KB/s。
+    speed_bps = 0
+    for speed_url in SPEED_TEST_URLS:
+        downloaded = 0
+        t_speed = time.monotonic()
+        last_chunk = t_speed
+        try:
+            with PROBE_SESSION.get(speed_url, proxies=proxies, timeout=(1.5, speed_budget),
+                                    stream=True, allow_redirects=False) as r:
+                if r.status_code != 200:
+                    continue
+                for chunk in r.iter_content(chunk_size=65536):
+                    now = time.monotonic()
+                    if chunk:
+                        downloaded += len(chunk)
+                        last_chunk = now
+                    if now - t_speed >= speed_budget or now - last_chunk >= SPEED_IDLE_TIMEOUT:
+                        break
+            elapsed = max(time.monotonic() - t_speed, 0.001)
+            if downloaded:
+                speed_bps = int(downloaded / elapsed)
+                break
+        except requests.RequestException:
+            continue
+
+    if speed_bps < SPEED_MIN_BYTES_PER_S:
+        return None
+
+    return {
+        "raw": raw, "server": server, "port": port, "proto": proto, "outbound": outbound,
+        "alive": True, "latency_ms": latency_ms, "exit_ip": exit_ip,
+        "exit_country_online": exit_country, "exit_asn_online": exit_asn,
+        "exit_asn_org_online": (exit_asn_org or "")[:120],
+        "exit_isp_online": (exit_isp or "")[:120], "mitm_risk": False,
+        "is_warp": is_warp, "speed_bps": speed_bps, "is_stalled": False,
+    }
+
+
+def _test_node_batch(items: list):
+    """启动一个 sing-box，批量承载一组节点；返回成功结果列表。"""
+    if not items:
+        return []
+
+    socks_ports = _alloc_socks_ports(len(items))
+    chain_out = None
+    chain_json = os.environ.get("CHAIN_RELAY_OUT", "").strip()
+    if chain_json:
+        try:
+            chain_out = json.loads(chain_json)
+        except Exception:
+            chain_out = None
+
+    task_id = uuid.uuid4().hex[:10]
+    cfg_path = os.path.join(RUNTIME_DIR, f"sb_batch_{task_id}.json")
+    config = build_batch_test_config(items, socks_ports, chain_relay=chain_out)
+    creationflags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
+    exe = SINGBOX_BIN + (".exe" if os.name == "nt" else "")
+    proc = None
+
+    try:
+        with open(cfg_path, "w", encoding="utf-8") as f:
+            json.dump(config, f, separators=(",", ":"))
+
+        # 只做一次批量 config check；失败时直接放弃整批。
+        if SINGBOX_CHECK_CONFIG:
+            try:
+                chk = subprocess.run([exe, "check", "-c", cfg_path], capture_output=True, text=True,
+                                      encoding="utf-8", timeout=SINGBOX_START_TIMEOUT,
+                                      creationflags=creationflags)
+                if chk.returncode != 0:
+                    return []
+            except Exception:
+                return []
+
+        try:
+            proc = subprocess.Popen([exe, "run", "-c", cfg_path], stdout=subprocess.DEVNULL,
+                                    stderr=subprocess.DEVNULL, creationflags=creationflags)
+        except Exception:
+            return []
+
+        # 等待所有 SOCKS inbound 就绪；批量处理只等待一次进程。
+        deadline = time.monotonic() + SINGBOX_PORT_READY_TIMEOUT
+        pending = set(range(len(socks_ports)))
+        while pending and time.monotonic() < deadline:
+            if proc.poll() is not None:
+                return []
+            for idx in list(pending):
+                try:
+                    with socket.create_connection(("127.0.0.1", socks_ports[idx]), timeout=0.15):
+                        pending.discard(idx)
+                except OSError:
+                    pass
+            if pending:
+                time.sleep(0.03)
+
+        if pending:
+            # 极少数批次可能因某个特殊协议/字段导致整批 sing-box 无法正常启动。
+            # 这种情况下只对该小批次回退到原单节点实现，避免一次批量配置错误误杀整批节点。
+            print(f"[!] 批量 sing-box 未能让全部 SOCKS 入口就绪，回退逐节点测试: {len(items)}")
+            fallback_results = []
+            with ThreadPoolExecutor(max_workers=min(8, len(items))) as fallback_ex:
+                ff = {fallback_ex.submit(test_single_node, item, True, item[0] in PREFILTER_FAILED_RAW): item for item in items}
+                for fut in as_completed(ff):
+                    try:
+                        rr = fut.result()
+                    except Exception:
+                        rr = None
+                    if rr:
+                        fallback_results.append(rr)
+            return fallback_results
+
+        # 一个批次内的 HTTP 探测并发与总 sing-box 并发解耦。
+        probe_workers = min(len(items), 16)
+        results = []
+        with ThreadPoolExecutor(max_workers=probe_workers) as ex:
+            futs = {}
+            for idx, item in enumerate(items):
+                rescue = item[0] in PREFILTER_FAILED_RAW
+                futs[ex.submit(_probe_node_via_socks, item, socks_ports[idx], rescue)] = idx
+            for fut in as_completed(futs):
+                try:
+                    r = fut.result()
+                except Exception:
+                    r = None
+                if r:
+                    results.append(r)
+        return results
+    finally:
+        if proc and proc.poll() is None:
+            try:
+                proc.kill()
+            except Exception:
+                pass
+            try:
+                proc.wait(timeout=1.5)
+            except Exception:
+                pass
+        try:
+            if os.path.exists(cfg_path):
+                os.remove(cfg_path)
+        except OSError:
+            pass
+
+
 def run_liveness_test(candidates: list) -> list:
-    print(f"[*] sing-box 全协议真实测活: {len(candidates)} 节点 (并发 {MAX_WORKERS_TEST}) ...")
-    if not candidates: return []
-    results=[]; done_count=0
-    workers=min(MAX_WORKERS_TEST,max(8,len(candidates)))
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs={ex.submit(test_single_node,it):it for it in candidates}
-        for fut in as_completed(futs):
-            done_count+=1
-            try: r=fut.result()
-            except Exception: r=None
-            if r: results.append(r)
-            if done_count%40==0 or done_count==len(candidates):
-                print(f"[*] 测活进度: {done_count}/{len(candidates)}, 当前通过 {len(results)}")
-    print(f"[+] 测活完成: 可用 {len(results)} | 测活阶段淘汰 {len(candidates)-len(results)}")
+    """V3.1 批量 sing-box 测活：保持约 64 节点并发，但大幅减少进程启动次数。"""
+    if not candidates:
+        return []
+
+    total = len(candidates)
+    batch_size = max(1, SINGBOX_BATCH_SIZE)
+    batch_workers = max(1, min(SINGBOX_BATCH_WORKERS, max(1, (MAX_WORKERS_TEST + batch_size - 1) // batch_size)))
+    batches = [candidates[i:i + batch_size] for i in range(0, total, batch_size)]
+    results = []
+    done_nodes = 0
+    batch_no = 0
+    rescue_count = sum(1 for x in candidates if x[0] in PREFILTER_FAILED_RAW)
+    rescue_success = 0
+    started = time.monotonic()
+
+    budget = LIVENESS_BUDGET_SECONDS
+    deadline = started + budget if budget is not None else None
+    budget_text = "不限" if budget is None else f"{budget/60:.0f} 分钟"
+    print(f"[*] V3.1 批量 sing-box 测活: {total} 节点 | 每实例 {batch_size} 节点 | 批次并发 {batch_workers} | 约 {batch_size*batch_workers} 节点并发 | 预算 {budget_text}")
+    print(f"[*] sing-box check: {'开启' if SINGBOX_CHECK_CONFIG else '关闭（run 直接验证）'} | 快速探测超时 {FAST_PROBE_TIMEOUT}s/{FAST_RETRY_TIMEOUT}s | 测速预算 {FAST_SPEED_BUDGET}s")
+
+    # 批次并发：一次只维护少量 Future，避免 2~4 万 Future 占用内存。
+    next_idx = 0
+    active = {}
+    executor = ThreadPoolExecutor(max_workers=batch_workers)
+    try:
+        while next_idx < len(batches) and len(active) < batch_workers:
+            if deadline is not None and time.monotonic() >= deadline:
+                break
+            b = batches[next_idx]
+            batch_no += 1
+            active[executor.submit(_test_node_batch, b)] = len(b)
+            next_idx += 1
+
+        while active:
+            if deadline is not None and time.monotonic() >= deadline and next_idx >= len(batches):
+                pass
+            # 等任意一个批次完成
+            completed_fut = next(as_completed(active))
+            batch_len = active.pop(completed_fut)
+            try:
+                batch_results = completed_fut.result() or []
+            except Exception:
+                batch_results = []
+            done_nodes += batch_len
+            results.extend(batch_results)
+            rescue_success += sum(1 for r in batch_results if r.get("raw") in PREFILTER_FAILED_RAW)
+
+            elapsed = max(time.monotonic() - started, 0.001)
+            rate = done_nodes / elapsed * 60.0
+            print(f"[*] 测活进度: {done_nodes}/{total} ({done_nodes/total*100:.1f}%) | 当前通过 {len(results)} | {rate:.0f} 节点/min | 已完成批次 {total_done_batches(batches, next_idx, active)}")
+
+            while next_idx < len(batches) and len(active) < batch_workers:
+                if deadline is not None and time.monotonic() >= deadline:
+                    break
+                b = batches[next_idx]
+                active[executor.submit(_test_node_batch, b)] = len(b)
+                next_idx += 1
+
+            if deadline is not None and time.monotonic() >= deadline:
+                # 已提交的批次继续收尾；不再提交新的批次。
+                next_idx = len(batches)
+
+    finally:
+        executor.shutdown(wait=True)
+
+    skipped = total - done_nodes
+    print(f"[+] V3.1 测活完成/截止: 实测 {done_nodes}/{total} | 可用 {len(results)} | 淘汰 {done_nodes-len(results)} | 跳过 {skipped}")
+    print(f"[+] 救援模式: {rescue_count} 个 | 救援通过 {rescue_success}")
     return results
 
 
-# ═══════════════════════════════════════════N═══════════════════════
-# 阶段 B2: 家宽链式复测 (chain relay retest)
-# ════════════════════════════════════════════════════════════════════
+def total_done_batches(batches, next_idx, active) -> int:
+    """仅用于日志，返回已完成批次的大致数量。"""
+    return max(0, next_idx - len(active))
+
 
 def chain_retest(test_results: list) -> list:
     """家宽链式复测: 模拟用户 v2rayN 链式 (前置 → 家宽节点 → 目标)
@@ -2188,23 +2629,48 @@ def classify_and_export(test_results: list):
         safe_nodes=[n for n in safe_nodes if not n.get("_risk_drop")]
         print(f"[*] 极高风险节点 (fraud≥{SCAM_DROP_SCORE}) 剔除: {before_risk-len(safe_nodes)} 个")
 
-    # ── 去重 (同出口IP+端口 只留最快) ──
+    # ── 去重 (同出口IP+端口只留质量更高者) ──
     best_by_key = {}
     for n in safe_nodes:
         key = f"{n['exit_ip']}:{n['port']}" if n["exit_ip"] else f"{n['server']}:{n['port']}|{n['raw'][:64]}"
         cur = best_by_key.get(key)
-        if not cur or n["latency_ms"] < cur["latency_ms"]:
+        # 延迟只是第一层判断；测速更快、风险更低的节点优先。
+        if not cur:
             best_by_key[key] = n
+        else:
+            cur_score = (cur.get("speed_bps", 0), -cur.get("latency_ms", 999999), -max(cur.get("fraud_score", -1), 0))
+            new_score = (n.get("speed_bps", 0), -n.get("latency_ms", 999999), -max(n.get("fraud_score", -1), 0))
+            if new_score > cur_score:
+                best_by_key[key] = n
     unique_nodes = list(best_by_key.values())
     dup_dropped = len(safe_nodes) - len(unique_nodes)
     print(f"[*] 去重: {len(safe_nodes)} → {len(unique_nodes)} (剔除重复 {dup_dropped})")
 
-    # 去重: 出口IP+端口 唯一化, 家宽区严格防同IP刷屏
-    # ★ 链式复测 (chain_retest) 双跳失败的家宽候选 → 不进家宽专区 (降级普通)
-    chain_failed_raws = set()
-    for r in test_results:
-        if r.get("_chain_failed"):
-            chain_failed_raws.add(r.get("raw"))
+    # ── 国家硬排除：最终以真实出口 IP 国家为准 ──
+    before_country = len(unique_nodes)
+    unique_nodes = [n for n in unique_nodes if n.get("country", "OTHER") not in EXCLUDED_COUNTRIES]
+    country_dropped = before_country - len(unique_nodes)
+    if country_dropped:
+        print(f"[*] 国家硬排除: {country_dropped} 个 ({', '.join(sorted(EXCLUDED_COUNTRIES))})")
+
+    # ── unknown 严格门槛 ──
+    # unknown 缺乏可靠的 hosting/residential 判定，因此不能按普通节点宽松处理。
+    before_unknown = len(unique_nodes)
+    unknown_kept = []
+    for n in unique_nodes:
+        if n.get("net_type") != "unknown":
+            unknown_kept.append(n)
+            continue
+        fraud = n.get("fraud_score", -1)
+        if n.get("latency_ms", 999999) <= UNKNOWN_MAX_LATENCY_MS and n.get("speed_bps", 0) >= UNKNOWN_MIN_SPEED_BPS and (fraud < 0 or fraud <= UNKNOWN_MAX_FRAUD_SCORE):
+            unknown_kept.append(n)
+    unique_nodes = unknown_kept
+    unknown_dropped = before_unknown - len(unique_nodes)
+    if unknown_dropped:
+        print(f"[*] unknown 严格筛选: 剔除 {unknown_dropped} 个 (延迟≤{UNKNOWN_MAX_LATENCY_MS}ms / 速度≥{UNKNOWN_MIN_SPEED_BPS/1000:.0f}KB/s / fraud≤{UNKNOWN_MAX_FRAUD_SCORE})")
+
+    # ── 链式复测失败的家宽 → 降级普通区 ──
+    chain_failed_raws = {r.get("raw") for r in test_results if r.get("_chain_failed")}
     residential = []
     res_seen_ip = set()
     for n in unique_nodes:
@@ -2216,24 +2682,69 @@ def classify_and_export(test_results: list):
             if n["exit_ip"] and n["exit_ip"] not in res_seen_ip:
                 res_seen_ip.add(n["exit_ip"])
                 residential.append(n)
-    # fraud 分极高 (≥90) 的节点整体剔除 (任何区都不要)
-    before_total = len(unique_nodes)
-    unique_nodes = [n for n in unique_nodes if not (0 <= n.get("fraud_score", -1) >= 90)]
-    residential = [n for n in residential if not (0 <= n.get("fraud_score", -1) >= 90)]
-    if len(unique_nodes) < before_total:
-        print(f"[*] 极高危节点 (fraud≥90) 剔除: {before_total - len(unique_nodes)} 个")
 
     non_residential = [n for n in unique_nodes if n not in residential]
-    print(f"[*] 家宽/移动网络节点: {len(residential)} | 普通(机房/CDN): {len(non_residential)}")
 
-    # 排序: 家宽在前, 延迟升序
-    unique_nodes.sort(key=lambda x: (0 if x in residential else 1, x["latency_ms"]))
-    residential.sort(key=lambda x: x["latency_ms"])
-    non_residential.sort(key=lambda x: x["latency_ms"])
-    # ★ 链式复测双跳失败的家宽 → 降级普通区 (v2rayN 链式场景不可靠)
-    #    保留在总订阅/国家订阅里 (直连场景仍可用), 只是退出家宽专区
+    # ── 综合质量评分 ──
+    # 延迟 30 + 速度 35 + 网络类型 25 + 情报置信度 5 - fraud 风险 18。
+    # 住宅/移动只获得质量加分，不设住宅配额，不为了凑住宅数牺牲整体质量。
+    def quality_score(n):
+        latency = max(0.0, float(n.get("latency_ms", 999999)))
+        speed = max(0.0, float(n.get("speed_bps", 0)))
+        latency_score = max(0.0, min(30.0, 30.0 * (1.0 - latency / MAX_ACCEPT_LATENCY_MS)))
+        speed_score = max(0.0, min(35.0, speed / 500_000.0 * 35.0))
+        type_bonus = {"residential": 25.0, "mobile": 22.0, "datacenter": 10.0, "cdn": 2.0, "unknown": 0.0}.get(n.get("net_type"), 0.0)
+        confidence_bonus = max(0.0, min(5.0, float(n.get("confidence", 0)) / 20.0))
+        fraud = n.get("fraud_score", -1)
+        risk_penalty = min(18.0, max(0.0, float(fraud) * 0.18)) if fraud is not None and fraud >= 0 else 0.0
+        return latency_score + speed_score + type_bonus + confidence_bonus - risk_penalty
 
-    # 重建 outbound (测活阶段的 outbound 已验证可用); 剥离测试专用字段 (detour 等绝不入订阅)
+    for n in unique_nodes:
+        n["quality_score"] = round(quality_score(n), 2)
+
+    unique_nodes.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999), -x.get("speed_bps", 0)))
+
+    # ── 软目标：约 100，不做机械硬截断 ──
+    # 1) ≤100：全部保留。
+    # 2) 101~120：若第100名仍达到质量线，则允许全部保留。
+    # 3) >100 且第100名低于质量线：砍到100。
+    # 4) >120：无论如何最多保留120，防止池子再次膨胀。
+    if len(unique_nodes) > TARGET_FINAL_NODES:
+        hundred_score = unique_nodes[TARGET_FINAL_NODES - 1]["quality_score"]
+        before_cap = len(unique_nodes)
+        if len(unique_nodes) > SOFT_FINAL_MAX_NODES:
+            if hundred_score < SOFT_KEEP_SCORE:
+                unique_nodes = unique_nodes[:TARGET_FINAL_NODES]
+                print(f"[*] 目标压缩: {before_cap} → {len(unique_nodes)} (节点过多且第100名质量分 {hundred_score:.1f} < {SOFT_KEEP_SCORE:.1f})")
+            else:
+                unique_nodes = unique_nodes[:SOFT_FINAL_MAX_NODES]
+                print(f"[*] 软上限: {before_cap} → {len(unique_nodes)} (第100名质量分 {hundred_score:.1f} ≥ {SOFT_KEEP_SCORE:.1f}，允许优质超额但最多 {SOFT_FINAL_MAX_NODES})")
+        elif hundred_score < SOFT_KEEP_SCORE:
+            unique_nodes = unique_nodes[:TARGET_FINAL_NODES]
+            print(f"[*] 目标压缩: {before_cap} → {len(unique_nodes)} (第100名质量分 {hundred_score:.1f} < {SOFT_KEEP_SCORE:.1f})")
+        else:
+            print(f"[*] 软目标放宽: {before_cap} 个节点，第100名质量分 {hundred_score:.1f} ≥ {SOFT_KEEP_SCORE:.1f}，保留高质量超额节点")
+
+    # 重新构建 residential/non-residential，确保最终导出的集合严格一致。
+    residential = [n for n in unique_nodes if n["net_type"] in ("residential", "mobile") and n["confidence"] >= 60 and n.get("raw") not in chain_failed_raws]
+    res_seen_ip = set()
+    residential_final = []
+    for n in residential:
+        ip = n.get("exit_ip")
+        if ip and ip not in res_seen_ip:
+            res_seen_ip.add(ip)
+            residential_final.append(n)
+    residential = residential_final
+    non_residential = [n for n in unique_nodes if n not in residential]
+
+    # 最终排序：质量分优先；住宅/移动只作为同等质量下的次级优先。
+    unique_nodes.sort(key=lambda x: (-x["quality_score"], 0 if x in residential else 1, x.get("latency_ms", 999999)))
+    residential.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999)))
+    non_residential.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999)))
+
+    print(f"[*] 最终质量池: {len(unique_nodes)} | 家宽/移动 {len(residential)} | 普通 {len(non_residential)} | 最高分 {unique_nodes[0]['quality_score']:.1f} | 最低分 {unique_nodes[-1]['quality_score']:.1f}" if unique_nodes else "[*] 最终质量池: 0")
+
+    # 重建 outbound；剥离测试专用字段 (detour 等绝不入订阅)
     for n in unique_nodes:
         parsed = parse_node_uri(n["raw"])
         if parsed:
@@ -2531,18 +3042,23 @@ export default {{
 # ═══════════════════════════════════════════N═══════════════════════
 
 def main():
+    global RUN_START_MONOTONIC
     t_start = time.time()
-    print(f"==== 免费节点测活订阅池 v2 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
+    RUN_START_MONOTONIC = time.monotonic()
+    print(f"==== 免费节点测活订阅池 v3 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
     ensure_directories()
     setup_environment()
 
     # 1. 抓取
+    t_fetch = time.monotonic()
     raw_nodes = fetch_raw_nodes()
+    STAGE_TIMES["抓取订阅源"] = time.monotonic() - t_fetch
 
     # 2. 解析
+    t_parse = time.monotonic()
     candidates = []
     parse_fail = 0
-    for uri in raw_nodes:
+    for idx, uri in enumerate(raw_nodes, 1):
         parsed = parse_node_uri(uri)
         if not parsed:
             parse_fail += 1
@@ -2552,50 +3068,41 @@ def main():
         if BLACKLIST_NAME_HINTS.search(urllib.parse.unquote(uri.split("#", 1)[-1] if "#" in uri else "")):
             continue
         candidates.append((uri, outbound, server, port, proto))
+        if idx % 5000 == 0:
+            print(f"[*] 解析进度: {idx}/{len(raw_nodes)} | 成功 {len(candidates)} | 失败 {parse_fail}")
 
-    # 2.5 ★ 测前强去重 (凭据指纹去重: 同 凭据+目标+协议 只测一次)
-    # 注意：这里的去重仅用于减少测活次数。
-    # 严格出库模式下，重复 URI 不做“结果回填”，避免一个真实测活节点
-    # 被扩展成大量未独立验证的订阅节点。最终出库只允许本轮实际测过的节点。
-    #     key = (server, port, proto, 凭据指纹): 凭据不同 → 服务端校验结果可能不同, 不可合并
-    #     凭据指纹: uuid/password 各协议的核心身份字段 (vless uuid / vmess id+alterId /
-    #               trojan password / ss 2022密钥 / hy2 auth / tuic uuid+passwd / anytls password)
-    #     完全相同 = 同一节点被多源重复收录 (免费池常态, 30+ 份不同名字) → 只测一次
-    def cred_fingerprint(outbound: dict, proto: str) -> str:
-        try:
-            if proto == "vless":
-                return f"{outbound.get('uuid','')}"
-            if proto == "vmess":
-                return f"{outbound.get('uuid','') or outbound.get('user_id','')}"
-            if proto == "trojan":
-                return f"{outbound.get('password','')}"
-            if proto == "shadowsocks":
-                return f"{outbound.get('method','')}|{outbound.get('password','')}"
-            if proto == "hysteria2":
-                return f"{outbound.get('password','') or ''}|{outbound.get('server_ports','')}"
-            if proto == "tuic":
-                return f"{outbound.get('uuid','')}|{outbound.get('password','')}"
-            if proto == "anytls":
-                return f"{outbound.get('password','')}"
-            return json.dumps({k: v for k, v in outbound.items()
-                              if k in ("uuid", "password", "user_id", "method")}, sort_keys=True)
-        except Exception:
-            return ""  # 指纹失败 → 不合并 (宁慢不错)
+    STAGE_TIMES["节点解析"] = time.monotonic() - t_parse
 
-    seen_keys, deduped, dup_count = {}, [], 0
+    # 2.5 ★ 测前强去重：目标/凭据/传输/TLS/Reality 参数全部纳入指纹。
+    # 只在“真正等价”的节点之间合并，避免把同 server+credential 但不同 path/SNI/Reality
+    # 的节点错误合并。严格出库仍然只导出本轮实际测过的代表节点，不做结果回填。
+    def node_fingerprint(outbound: dict, proto: str) -> str:
+        keys = (
+            "uuid", "password", "user_id", "method", "server_ports", "server_port",
+            "tls", "transport", "transport_type", "network", "server_name", "serverName",
+            "service_name", "path", "host", "headers", "sni", "alpn", "fingerprint",
+            "public_key", "short_id", "short-id", "packet_encoding", "packet-encoding", "flow",
+            "obfs", "obfs_password", "obfs-password", "alter_id",
+        )
+        selected = {k: outbound.get(k) for k in keys if k in outbound}
+        selected["protocol"] = proto
+        return json.dumps(selected, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+
+    seen_keys = set()
+    deduped = []
+    dup_count = 0
     for item in candidates:
         uri, outbound, server, port, proto = item
-        key = (server.lower() if server else "", port, proto, cred_fingerprint(outbound, proto))
+        key = (server.lower() if server else "", port, node_fingerprint(outbound, proto))
         if key in seen_keys:
-            seen_keys[key].append(uri)  # 记录重复 URI, 测活后回填
             dup_count += 1
-        else:
-            seen_keys[key] = [uri]
-            deduped.append(item)
+            continue
+        seen_keys.add(key)
+        deduped.append(item)
     if dup_count:
-        print(f"[*] 测前去重(凭据指纹): {len(candidates)} → {len(deduped)} (剔除重复 {dup_count} — 仅减少测活，不回填出库)")
-    DEDUP_MAP = seen_keys  # 仅用于统计去重数量；严格模式不用于回填出库
+        print(f"[*] 测前强去重: {len(candidates)} → {len(deduped)} (剔除真正重复 {dup_count})")
     candidates = deduped
+    STAGE_TIMES["测前强去重"] = time.monotonic() - t_parse - STAGE_TIMES.get("节点解析", 0.0)
 
     proto_stat = {}
     for _, _, _, _, p in candidates:
@@ -2607,10 +3114,16 @@ def main():
         return
 
     # 3. 端口预检
+    t_pref = time.monotonic()
     candidates = prefilter_candidates(candidates)
+    STAGE_TIMES["TCP/DNS预检"] = time.monotonic() - t_pref
 
     # 4. 真实测活 (只测去重后的代表节点)
+    t_live = time.monotonic()
     test_results = run_liveness_test(candidates)
+    STAGE_TIMES["批量真实测活"] = time.monotonic() - t_live
+
+    DEDUP_MAP = {}  # V3 不做重复 URI 回填，严格只导出实际测活代表节点
 
     # 4.5 ★ 严格出库：禁止重复结果回填
     # 测前去重只是性能优化；重复 URI 不代表它们都经过了独立测活。
@@ -2624,9 +3137,15 @@ def main():
         if duplicate_uris:
             print(f"[*] 严格出库: 跳过 {duplicate_uris} 个重复 URI 回填，只导出本轮实际测活节点")
 
-    # 5. ★ 家宽链式复测: 用最快存活节点做前置双跳复测家宽候选
-    #    (模拟用户 v2rayN 链式场景, 双跳失败的家宽降级普通区 — 提高链式可用率)
-    test_results = chain_retest(test_results)
+    # V3 总预算保护：默认关闭；如手动启用 TOTAL_RUNTIME_BUDGET_SECONDS，
+    # 则在接近内部预算时跳过昂贵的链式复测。GitHub Actions 120 分钟为最终保险。
+    total_elapsed = time.monotonic() - RUN_START_MONOTONIC
+    if TOTAL_RUNTIME_BUDGET_SECONDS is not None and total_elapsed >= TOTAL_RUNTIME_BUDGET_SECONDS - 120:
+        print(f"[!] 已运行 {total_elapsed/60:.1f} 分钟，接近总预算；跳过链式家宽复测以避免超时")
+    else:
+        # 5. ★ 家宽链式复测: 用最快存活节点做前置双跳复测家宽候选
+        #    (模拟用户 v2rayN 链式场景, 双跳失败的家宽降级普通区 — 提高链式可用率)
+        test_results = chain_retest(test_results)
 
     # 6. 分类 + 导出 (无真活节点时保留上次 output, 不写空订阅覆盖线上数据)
     if not test_results:
@@ -2642,6 +3161,10 @@ def main():
 
     # 统计报告
     elapsed = time.time() - t_start
+    print("\n===== V3.1 性能阶段耗时 =====")
+    for _k, _v in STAGE_TIMES.items():
+        print(f"{_k:>16}: {_v:8.1f}s")
+    print(f"{'总计':>16}: {elapsed:8.1f}s ({elapsed/60:.1f}min)")
     print("\n===== 运行报告 =====")
     print(f"总耗时: {elapsed:.0f}s | 抓取 {len(raw_nodes)} → 解析成功 {len(candidates)} → 真活 {len(test_results)} → 去重后 {len(unique_nodes)} → 家宽 {len(residential)}")
     by_type = {}
@@ -2657,6 +3180,9 @@ def main():
         by_country[n["country"]] = by_country.get(n["country"], 0) + 1
     top_c = sorted(by_country.items(), key=lambda x: -x[1])[:10]
     print(f"国家 Top10: {top_c}")
+    if unique_nodes:
+        scores = [n.get("quality_score", 0) for n in unique_nodes]
+        print(f"质量分: 最高 {max(scores):.1f} | 最低 {min(scores):.1f} | 平均 {sum(scores)/len(scores):.1f} | 目标 {TARGET_FINAL_NODES} (软目标)")
 
 
 if __name__ == "__main__":

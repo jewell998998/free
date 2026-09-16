@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-免费节点自动测活订阅池 v3_speed_optimized — 全协议 · 高精度 · 低误杀
+免费节点自动测活订阅池 v3_telecom_optimize — 中国电信优选 · 高精度 · 高速版
 ====================================================
 
 架构（三阶段流水线）:
@@ -97,12 +97,12 @@ SINGBOX_BIN = os.path.join(RUNTIME_DIR, "sing-box")
 # ★ 分层超时: 首击宽 (12s 容慢节点), 重试窄 (4s 快速放弃死节点)
 #   依据 CI 实测: 25 分钟里 ~60% 时间烧在死节点 3×12s 满额重试上
 # ★ 性能/严格筛选参数：保持原三阶段结构，只把明显慢、死、危险节点更早淘汰
-PROBE_TIMEOUT          = 7.0
-PROBE_RETRY_TIMEOUT    = 2.5
-PORT_KNOCK_TIMEOUT     = 1.5
-IP_ECHO_TIMEOUT        = 4.0
+PROBE_TIMEOUT          = 4.5
+PROBE_RETRY_TIMEOUT    = 1.5
+PORT_KNOCK_TIMEOUT     = 1.2
+IP_ECHO_TIMEOUT        = 2.5
 SPEED_TEST_BYTES       = 1_000_000
-SPEED_TEST_BUDGET      = 3.5
+SPEED_TEST_BUDGET      = 2.2
 SPEED_MIN_BYTES_PER_S  = 150_000
 SPEED_IDLE_TIMEOUT     = 1.8
 MAX_ACCEPT_LATENCY_MS  = 1200
@@ -113,33 +113,32 @@ DROP_PROXY_EXIT        = True
 DROP_HOSTING_EXIT     = False
 SCAM_DROP_SCORE        = 90
 SCAM_DOWNGRADE_SCORE   = 75
-PREFILTER_WORKERS      = 128
+PREFILTER_WORKERS      = 256
 RISK_WORKERS_SCAM      = 12
 RISK_WORKERS_VERIFY    = 8
-IP_ECHO_URLS = [                    # 经代理获取出口 IP (多路冗余)
-    "https://api.ip.sb/geoip",                         # JSON: country_code/asn/isp
-    "https://ipinfo.io/json",                          # JSON: country/org
-    "http://ip-api.com/json/?fields=status,query,countryCode,isp,org,as",  # HTTP free
+IP_ECHO_URLS = [                    # 经代理获取出口 IP；第三方批量情报阶段再统一查询
+    "https://api.ip.sb/geoip",
+    "https://ipinfo.io/json",
 ]
-LIVENESS_URLS = [                    # 活性探测 URL (全部要求代理链路完整)
-    "https://www.gstatic.com/generate_204",       # 实测 204 OK
+LIVENESS_URLS = [                    # 中国电信视角下的代理链路快速探测
+    "https://www.gstatic.com/generate_204",
     "https://www.google.com/generate_204",
-    "http://connectivitycheck.gstatic.com/generate_204",
 ]
 SPEED_TEST_URLS = [               # 测速端点多路 (实测部分节点商屏蔽 speed.cloudflare.com)
     "https://speed.cloudflare.com/__down?bytes=" + str(SPEED_TEST_BYTES),
     "https://cachefly.cachefly.net/10mb.test",
 ]
-TRACE_URL = "https://www.cloudflare.com/cdn-cgi/trace"      # warp=on 检测套壳节点
-MAX_WORKERS_TEST    = 64            # 总体并发节点数；通过批量 sing-box 实例降低进程启动开销
+TRACE_URL = "https://www.cloudflare.com/cdn-cgi/trace"
+ENABLE_WARP_CHECK = False           # WARP 结果不参与当前电信优选，关闭额外一次请求以提速
+MAX_WORKERS_TEST    = 96            # 总体并发节点数；通过批量 sing-box 实例降低进程启动开销
 MAX_WORKERS_FETCH   = 16            # 抓取并发略提高，减少慢源拖尾
 MAX_WORKERS_CLASSIFY = 48
 
-# ═══ V3.1 速度优化 ═══
+# ═══ V3.2 速度优化 + 中国电信优选 ═══
 # 核心：一个 sing-box 实例承载多个节点，每个节点独立 SOCKS inbound + route rule。
 # 这样可把“每节点一次进程启动”变成“每 16 节点一次进程启动”，显著减少死节点的启动成本。
-SINGBOX_BATCH_SIZE = 16
-SINGBOX_BATCH_WORKERS = 4           # 16 × 4 = 64 个节点同时实测
+SINGBOX_BATCH_SIZE = 24
+SINGBOX_BATCH_WORKERS = 4           # 24 × 4 = 96 个节点同时实测
 SINGBOX_START_TIMEOUT = 3.0
 SINGBOX_PORT_READY_TIMEOUT = 2.5
 SINGBOX_CHECK_CONFIG = False        # 跳过逐节点 check；run 本身会验证配置，避免每节点再启动一个 check 子进程
@@ -147,16 +146,28 @@ SINGBOX_CHECK_CONFIG = False        # 跳过逐节点 check；run 本身会验�
 # 对最终可接受节点没有放宽：MAX_ACCEPT_LATENCY_MS 仍是 1200ms。
 # 这里只缩短“明显死节点”的等待上限，减少长时间无意义等待。
 FAST_PROBE_TIMEOUT = 3.0
-FAST_RETRY_TIMEOUT = 1.2
-FAST_IP_ECHO_TIMEOUT = 2.5
-FAST_SPEED_BUDGET = 2.5
+FAST_RETRY_TIMEOUT = 1.0
+FAST_IP_ECHO_TIMEOUT = 2.0
+FAST_SPEED_BUDGET = 2.0
 
 FETCH_CONNECT_TIMEOUT = 5.0
 FETCH_READ_TIMEOUT = 15.0
 FETCH_RETRIES = 2
 FETCH_RETRY_BACKOFF = 1.0
-PREFILTER_BATCH_SIZE = 1024
-PREFILTER_DOH_FIRST = False          # GitHub Actions 海外 DNS 优先走系统 DNS，失败才回退 DoH
+PREFILTER_BATCH_SIZE = 2048
+PREFILTER_DOH_FIRST = False          # 电信本地运行优先使用系统 DNS；失败再 DoH
+
+# ═══ 中国电信优选模式 ═══
+# 重要：真正的“中国电信优化”取决于程序运行机器的出口线路。
+# self-hosted runner 放在中国电信宽带上时，以下 TCP/延迟/测速数据才是电信视角。
+CHINA_TELECOM_MODE = True
+CHINA_TELECOM_REQUIRE_MATCH = False  # True=检测不到电信出口时直接停止；默认 False 仅警告
+CHINA_TELECOM_ASNS = {4134, 4809, 23764}
+CLIENT_NETWORK_CHECK_URL = "http://ip-api.com/json/?fields=status,query,countryCode,isp,org,as"
+
+# 电信线路优化不是给节点打“电信标签”，而是让所有实测指标都来自电信客户端。
+# 如果程序在中国电信 self-hosted runner 上运行，系统 DNS 也自然使用当地电信 DNS。
+# AS4134 是中国电信 ChinaNet；AS4809 是 CN2；AS23764 是中国电信国际 CTGNet。
 
 # ═══ V3 性能控制 ═══
 # GitHub Actions 已提升到 120 分钟，因此 V3 默认不再使用程序内部硬截断。
@@ -167,11 +178,6 @@ LIVENESS_BUDGET_SECONDS = None
 # LIVENESS_BUDGET_SECONDS = 90 * 60
 LIVENESS_BATCH_SIZE = 256
 PROGRESS_EVERY = 100
-# 预检失败节点进入“救援模式”：不直接误杀，但使用更短的超时和测速预算。
-RESCUE_PROBE_TIMEOUT = 3.0
-RESCUE_RETRY_TIMEOUT = 1.5
-RESCUE_IP_TIMEOUT = 2.5
-RESCUE_SPEED_BUDGET = 1.5
 
 # ═══ V3 质量/国家策略 ═══
 # 目标而非硬性要求：尽量把最终出库池控制在约 100 个优质节点。
@@ -184,7 +190,7 @@ SOFT_KEEP_SCORE = 82.0
 EXCLUDED_COUNTRIES = {
     "GB", "AE", "CY", "FI", "SE",
     "RO", "IT", "CH", "RU", "TR",
-    "IQ", "NO", "GR", "LV", "SC", "ES", "IE", "KZ", "NL",
+    "IQ", "NO", "GR", "LV", "SC", "ES",
 }
 
 # unknown 没有可靠网络类型情报，因此必须更严格。
@@ -192,7 +198,6 @@ UNKNOWN_MAX_LATENCY_MS = 800
 UNKNOWN_MIN_SPEED_BPS = 250_000
 UNKNOWN_MAX_FRAUD_SCORE = 74
 
-PREFILTER_FAILED_RAW = set()
 RUN_START_MONOTONIC = 0.0
 STAGE_TIMES = {}
 
@@ -1209,42 +1214,39 @@ def knock_port(server: str, port: int, protocol_type: str) -> bool:
 
 
 def prefilter_candidates(candidates: list) -> list:
-    """V3.1 有界并发端口/DNS 预检。避免一次创建 3 万+ Future。
+    """高速严格预检。失败节点直接淘汰，不再进入任何二次救援测试。
 
-    预检失败仍进入 rescue，保持原有低误杀原则。
+    这是本版本最重要的速度优化之一：
+    预检失败的节点不值得启动昂贵的 sing-box 全流程。
+    使用长期复用的线程池 + 2048 节点分批提交，避免 3 万+ Future 和反复创建线程池。
     """
-    global PREFILTER_FAILED_RAW
-    PREFILTER_FAILED_RAW = set()
     if not candidates:
         return []
 
-    print(f"[*] V3 端口/DNS 快速预检 (TCP {PORT_KNOCK_TIMEOUT}s): {len(candidates)} 候选 ...")
-    passed, failed = [], []
-    workers = min(PREFILTER_WORKERS, max(8, len(candidates)))
+    print(f"[*] V3.2 中国电信视角 TCP/DNS 快速预检: {len(candidates)} 候选 | workers={PREFILTER_WORKERS} | 超时={PORT_KNOCK_TIMEOUT}s ...")
+    passed = []
     completed = 0
+    workers = min(PREFILTER_WORKERS, max(16, len(candidates)))
 
-    for offset in range(0, len(candidates), PREFILTER_BATCH_SIZE):
-        batch = candidates[offset:offset + PREFILTER_BATCH_SIZE]
-        with ThreadPoolExecutor(max_workers=workers) as ex:
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for offset in range(0, len(candidates), PREFILTER_BATCH_SIZE):
+            batch = candidates[offset:offset + PREFILTER_BATCH_SIZE]
             futs = {ex.submit(knock_port, item[2], item[3], item[4]): item for item in batch}
             for fut in as_completed(futs):
                 item = futs[fut]
                 completed += 1
                 try:
-                    ok = fut.result()
+                    if fut.result():
+                        passed.append(item)
                 except Exception:
-                    ok = False
-                if ok:
-                    passed.append(item)
-                else:
-                    failed.append(item)
-                    PREFILTER_FAILED_RAW.add(item[0])
-        if completed == len(candidates) or completed % 5000 < len(batch):
-            print(f"[*] 预检进度: {completed}/{len(candidates)} ({completed/len(candidates)*100:.1f}%) | 通过 {len(passed)} | 失败 {len(failed)}")
+                    pass
 
-    print(f"[+] 预检通过: {len(passed)} | 预检失败: {len(failed)}")
-    print("[*] V3.1 策略: 预检通过优先完整测活；失败节点保留为短超时救援队列")
-    return passed + failed
+            if completed == len(candidates) or completed % 4096 < len(batch):
+                print(f"[*] 电信预检进度: {completed}/{len(candidates)} ({completed/len(candidates)*100:.1f}%) | 通过 {len(passed)}")
+
+    dropped = len(candidates) - len(passed)
+    print(f"[+] 电信预检完成: 通过 {len(passed)} | 直接淘汰 {dropped} | 不再执行救援测试")
+    return passed
 
 
 # ═══════════════════════════════════════════N═══════════════════════
@@ -1322,13 +1324,13 @@ def print_once(key: str, msg: str):
         print(msg)
 
 
-def test_single_node(item, keep_alive_check=True, rescue_mode=False):
-    """单节点真实测活。V3 对端口预检失败节点使用短超时救援模式。"""
+def test_single_node(item, keep_alive_check=True):
+    """单节点真实测活，仅用于批量配置异常时的小批次安全回退。"""
     raw,outbound,server,port,proto=item
-    probe_timeout = RESCUE_PROBE_TIMEOUT if rescue_mode else PROBE_TIMEOUT
-    retry_timeout = RESCUE_RETRY_TIMEOUT if rescue_mode else PROBE_RETRY_TIMEOUT
-    ip_echo_timeout = RESCUE_IP_TIMEOUT if rescue_mode else IP_ECHO_TIMEOUT
-    speed_budget = RESCUE_SPEED_BUDGET if rescue_mode else SPEED_TEST_BUDGET
+    probe_timeout = PROBE_TIMEOUT
+    retry_timeout = PROBE_RETRY_TIMEOUT
+    ip_echo_timeout = IP_ECHO_TIMEOUT
+    speed_budget = SPEED_TEST_BUDGET
     socks_port=_alloc_socks_port()
     task_id=uuid.uuid4().hex[:10]
     cfg_path=os.path.join(RUNTIME_DIR,f"sb_{task_id}.json")
@@ -1354,7 +1356,7 @@ def test_single_node(item, keep_alive_check=True, rescue_mode=False):
     try:
         try:
             chk=subprocess.run([exe,"check","-c",cfg_path],capture_output=True,text=True,encoding="utf-8",
-                              timeout=(4 if rescue_mode else 8),creationflags=creationflags)
+                              timeout=8,creationflags=creationflags)
             if chk.returncode!=0: return None
         except subprocess.TimeoutExpired:
             return None
@@ -1430,27 +1432,15 @@ def test_single_node(item, keep_alive_check=True, rescue_mode=False):
             if REQUIRE_EXIT_IP and not exit_ip:
                 return None
 
-            # 3) TLS/证书风险
-            mitm_risk=False
-            try:
-                r=PROBE_SESSION.get("https://www.gstatic.com/generate_204",proxies=proxies,
-                                    timeout=retry_timeout,verify=True,allow_redirects=False)
-                if r.status_code not in (204,200):
-                    mitm_risk=r.status_code in (301,302,403,407,502,503) or bool(r.content)
-            except requests.exceptions.SSLError:
-                mitm_risk=True
-            except requests.RequestException:
-                pass
-            if mitm_risk: return None
-
             is_warp=False
-            try:
-                r=PROBE_SESSION.get(TRACE_URL,proxies=proxies,timeout=PROBE_RETRY_TIMEOUT,
-                                    verify=True,allow_redirects=False)
-                if r.status_code==200 and re.search(r"^warp=on",r.text,re.M):
-                    is_warp=True
-            except requests.RequestException:
-                pass
+            if ENABLE_WARP_CHECK:
+                try:
+                    r=PROBE_SESSION.get(TRACE_URL,proxies=proxies,timeout=PROBE_RETRY_TIMEOUT,
+                                        verify=True,allow_redirects=False)
+                    if r.status_code==200 and re.search(r"^warp=on",r.text,re.M):
+                        is_warp=True
+                except requests.RequestException:
+                    pass
 
             # 4) 快速测速
             speed_bps=0
@@ -1568,13 +1558,13 @@ def build_batch_test_config(items: list, socks_ports: list, chain_relay: dict = 
     }
 
 
-def _probe_node_via_socks(item, socks_port: int, rescue_mode: bool = False):
+def _probe_node_via_socks(item, socks_port: int):
     """只负责网络探测；sing-box 生命周期由批处理器统一管理。"""
     raw, outbound, server, port, proto = item
-    probe_timeout = FAST_PROBE_TIMEOUT if rescue_mode else min(PROBE_TIMEOUT, FAST_PROBE_TIMEOUT)
-    retry_timeout = FAST_RETRY_TIMEOUT if rescue_mode else min(PROBE_RETRY_TIMEOUT, FAST_RETRY_TIMEOUT)
-    ip_echo_timeout = FAST_IP_ECHO_TIMEOUT if rescue_mode else min(IP_ECHO_TIMEOUT, FAST_IP_ECHO_TIMEOUT)
-    speed_budget = FAST_SPEED_BUDGET if rescue_mode else min(SPEED_TEST_BUDGET, FAST_SPEED_BUDGET)
+    probe_timeout = min(PROBE_TIMEOUT, FAST_PROBE_TIMEOUT)
+    retry_timeout = min(PROBE_RETRY_TIMEOUT, FAST_RETRY_TIMEOUT)
+    ip_echo_timeout = min(IP_ECHO_TIMEOUT, FAST_IP_ECHO_TIMEOUT)
+    speed_budget = min(SPEED_TEST_BUDGET, FAST_SPEED_BUDGET)
 
     if DROP_INSECURE_TLS:
         tls = outbound.get("tls") or {}
@@ -1644,29 +1634,16 @@ def _probe_node_via_socks(item, socks_port: int, rescue_mode: bool = False):
     if REQUIRE_EXIT_IP and not exit_ip:
         return None
 
-    # 3) TLS/证书风险。
-    mitm_risk = False
-    try:
-        r = PROBE_SESSION.get("https://www.gstatic.com/generate_204", proxies=proxies,
-                              timeout=retry_timeout, verify=True, allow_redirects=False)
-        if r.status_code not in (204, 200):
-            mitm_risk = r.status_code in (301, 302, 403, 407, 502, 503) or bool(r.content)
-    except requests.exceptions.SSLError:
-        mitm_risk = True
-    except requests.RequestException:
-        pass
-    if mitm_risk:
-        return None
-
     # 4) WARP 检测：保留，但只使用一次短请求。
     is_warp = False
-    try:
-        r = PROBE_SESSION.get(TRACE_URL, proxies=proxies, timeout=retry_timeout,
-                              verify=True, allow_redirects=False)
-        if r.status_code == 200 and re.search(r"^warp=on", r.text, re.M):
-            is_warp = True
-    except requests.RequestException:
-        pass
+    if ENABLE_WARP_CHECK:
+        try:
+            r = PROBE_SESSION.get(TRACE_URL, proxies=proxies, timeout=retry_timeout,
+                                  verify=True, allow_redirects=False)
+            if r.status_code == 200 and re.search(r"^warp=on", r.text, re.M):
+                is_warp = True
+        except requests.RequestException:
+            pass
 
     # 5) 快速测速：2.5s 总预算，仍要求 ≥150KB/s。
     speed_bps = 0
@@ -1769,7 +1746,7 @@ def _test_node_batch(items: list):
             print(f"[!] 批量 sing-box 未能让全部 SOCKS 入口就绪，回退逐节点测试: {len(items)}")
             fallback_results = []
             with ThreadPoolExecutor(max_workers=min(8, len(items))) as fallback_ex:
-                ff = {fallback_ex.submit(test_single_node, item, True, item[0] in PREFILTER_FAILED_RAW): item for item in items}
+                ff = {fallback_ex.submit(test_single_node, item, True): item for item in items}
                 for fut in as_completed(ff):
                     try:
                         rr = fut.result()
@@ -1785,8 +1762,7 @@ def _test_node_batch(items: list):
         with ThreadPoolExecutor(max_workers=probe_workers) as ex:
             futs = {}
             for idx, item in enumerate(items):
-                rescue = item[0] in PREFILTER_FAILED_RAW
-                futs[ex.submit(_probe_node_via_socks, item, socks_ports[idx], rescue)] = idx
+                futs[ex.submit(_probe_node_via_socks, item, socks_ports[idx])] = idx
             for fut in as_completed(futs):
                 try:
                     r = fut.result()
@@ -1813,7 +1789,7 @@ def _test_node_batch(items: list):
 
 
 def run_liveness_test(candidates: list) -> list:
-    """V3.1 批量 sing-box 测活：保持约 64 节点并发，但大幅减少进程启动次数。"""
+    """V3.2 批量 sing-box 测活：少量实例承载更多节点，减少进程启动开销。"""
     if not candidates:
         return []
 
@@ -1824,15 +1800,13 @@ def run_liveness_test(candidates: list) -> list:
     results = []
     done_nodes = 0
     batch_no = 0
-    rescue_count = sum(1 for x in candidates if x[0] in PREFILTER_FAILED_RAW)
-    rescue_success = 0
     started = time.monotonic()
 
     budget = LIVENESS_BUDGET_SECONDS
     deadline = started + budget if budget is not None else None
     budget_text = "不限" if budget is None else f"{budget/60:.0f} 分钟"
-    print(f"[*] V3.1 批量 sing-box 测活: {total} 节点 | 每实例 {batch_size} 节点 | 批次并发 {batch_workers} | 约 {batch_size*batch_workers} 节点并发 | 预算 {budget_text}")
-    print(f"[*] sing-box check: {'开启' if SINGBOX_CHECK_CONFIG else '关闭（run 直接验证）'} | 快速探测超时 {FAST_PROBE_TIMEOUT}s/{FAST_RETRY_TIMEOUT}s | 测速预算 {FAST_SPEED_BUDGET}s")
+    print(f"[*] V3.2 批量 sing-box 测活: {total} 节点 | 每实例 {batch_size} 节点 | 批次并发 {batch_workers} | 约 {batch_size*batch_workers} 节点并发 | 预算 {budget_text}")
+    print(f"[*] sing-box check: {'开启' if SINGBOX_CHECK_CONFIG else '关闭'} | 快速探测 {FAST_PROBE_TIMEOUT}s/{FAST_RETRY_TIMEOUT}s | 测速预算 {FAST_SPEED_BUDGET}s")
 
     # 批次并发：一次只维护少量 Future，避免 2~4 万 Future 占用内存。
     next_idx = 0
@@ -1859,7 +1833,6 @@ def run_liveness_test(candidates: list) -> list:
                 batch_results = []
             done_nodes += batch_len
             results.extend(batch_results)
-            rescue_success += sum(1 for r in batch_results if r.get("raw") in PREFILTER_FAILED_RAW)
 
             elapsed = max(time.monotonic() - started, 0.001)
             rate = done_nodes / elapsed * 60.0
@@ -1880,8 +1853,7 @@ def run_liveness_test(candidates: list) -> list:
         executor.shutdown(wait=True)
 
     skipped = total - done_nodes
-    print(f"[+] V3.1 测活完成/截止: 实测 {done_nodes}/{total} | 可用 {len(results)} | 淘汰 {done_nodes-len(results)} | 跳过 {skipped}")
-    print(f"[+] 救援模式: {rescue_count} 个 | 救援通过 {rescue_success}")
+    print(f"[+] V3.2 测活完成/截止: 实测 {done_nodes}/{total} | 可用 {len(results)} | 淘汰 {done_nodes-len(results)} | 跳过 {skipped}")
     return results
 
 
@@ -3037,6 +3009,32 @@ export default {{
     print(f"[+] README.md 更新完毕: 总节点 {total_count}, 家宽 {res_count}")
 
 
+def detect_client_network():
+    """检测运行本程序的机器当前公网 ASN/ISP，只用于确认是否真的处于中国电信视角。"""
+    if not CHINA_TELECOM_MODE:
+        return None
+    try:
+        r = requests.get(CLIENT_NETWORK_CHECK_URL, timeout=(3.0, 5.0), headers={"User-Agent": USER_AGENT})
+        if r.status_code != 200:
+            return None
+        j = r.json()
+        if j.get("status") != "success":
+            return None
+        asn = None
+        m = re.match(r"^AS?(\d+)", str(j.get("as") or ""), re.I)
+        if m:
+            asn = int(m.group(1))
+        return {
+            "ip": j.get("query"),
+            "country": j.get("countryCode"),
+            "isp": j.get("isp"),
+            "org": j.get("org"),
+            "asn": asn,
+        }
+    except Exception:
+        return None
+
+
 # ═══════════════════════════════════════════N═══════════════════════
 # 主流程
 # ═══════════════════════════════════════════N═══════════════════════
@@ -3045,9 +3043,21 @@ def main():
     global RUN_START_MONOTONIC
     t_start = time.time()
     RUN_START_MONOTONIC = time.monotonic()
-    print(f"==== 免费节点测活订阅池 v3 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
+    print(f"==== 免费节点测活订阅池 v3.2 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
     ensure_directories()
     setup_environment()
+
+    if CHINA_TELECOM_MODE:
+        profile = detect_client_network()
+        if profile:
+            is_ct = profile.get("asn") in CHINA_TELECOM_ASNS
+            label = "中国电信" if is_ct else "非中国电信"
+            print(f"[*] 客户端线路检测: {label} | ASN={profile.get('asn')} | ISP={profile.get('isp') or profile.get('org') or '-'} | IP={profile.get('ip') or '-'}")
+            if CHINA_TELECOM_REQUIRE_MATCH and not is_ct:
+                print("[!] CHINA_TELECOM_REQUIRE_MATCH=True 且当前出口不是中国电信，停止本次运行。")
+                return
+        else:
+            print("[!] 无法检测当前客户端运营商；继续运行，但请确认 self-hosted runner 确实位于中国电信网络。")
 
     # 1. 抓取
     t_fetch = time.monotonic()
@@ -3057,6 +3067,7 @@ def main():
     # 2. 解析
     t_parse = time.monotonic()
     candidates = []
+    parsed_total = 0
     parse_fail = 0
     for idx, uri in enumerate(raw_nodes, 1):
         parsed = parse_node_uri(uri)
@@ -3068,6 +3079,7 @@ def main():
         if BLACKLIST_NAME_HINTS.search(urllib.parse.unquote(uri.split("#", 1)[-1] if "#" in uri else "")):
             continue
         candidates.append((uri, outbound, server, port, proto))
+        parsed_total += 1
         if idx % 5000 == 0:
             print(f"[*] 解析进度: {idx}/{len(raw_nodes)} | 成功 {len(candidates)} | 失败 {parse_fail}")
 
@@ -3107,7 +3119,7 @@ def main():
     proto_stat = {}
     for _, _, _, _, p in candidates:
         proto_stat[p] = proto_stat.get(p, 0) + 1
-    print(f"[*] 解析成功(去重后): {len(candidates)} | 失败 {parse_fail} | 协议分布 {proto_stat}")
+    print(f"[*] 解析成功(去重后): {len(candidates)} | 解析成功原数 {parsed_total} | 失败 {parse_fail} | 协议分布 {proto_stat}")
 
     if not candidates:
         print("[!] 无可测节点 (订阅源全部失效?) — 保留上次 output, 不覆盖订阅文件")
@@ -3161,12 +3173,12 @@ def main():
 
     # 统计报告
     elapsed = time.time() - t_start
-    print("\n===== V3.1 性能阶段耗时 =====")
+    print("\n===== V3.2 中国电信优选 · 性能阶段耗时 =====")
     for _k, _v in STAGE_TIMES.items():
         print(f"{_k:>16}: {_v:8.1f}s")
     print(f"{'总计':>16}: {elapsed:8.1f}s ({elapsed/60:.1f}min)")
     print("\n===== 运行报告 =====")
-    print(f"总耗时: {elapsed:.0f}s | 抓取 {len(raw_nodes)} → 解析成功 {len(candidates)} → 真活 {len(test_results)} → 去重后 {len(unique_nodes)} → 家宽 {len(residential)}")
+    print(f"总耗时: {elapsed:.0f}s | 抓取 {len(raw_nodes)} → 解析成功 {parsed_total} → 预检后 {len(candidates)} → 真活 {len(test_results)} → 出库 {len(unique_nodes)} → 家宽 {len(residential)}")
     by_type = {}
     for n in unique_nodes:
         by_type[n["net_type"]] = by_type.get(n["net_type"], 0) + 1

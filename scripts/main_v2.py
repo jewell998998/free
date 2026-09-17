@@ -54,33 +54,36 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",      # 36926 节点
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vless_configs.txt",           # 21299 节点
-    "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt",                                       # 5544 节点
-    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",           # 3913 节点
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",                          # 2139 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",      # 36404 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vless_configs.txt",           # 20754 节点
+    "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt",                                       # 5333 节点
+    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",           # 3924 节点
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",                                       # 2000 节点
-    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",                                              # 1648 节点
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt", # 1558 节点
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",                             # 1541 节点
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",                             # 1703 节点
+    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",                                              # 1666 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt", # 1583 节点
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",                          # 1576 节点
     "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/top.txt",                                           # 1000 节点
-    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",                                 # 574 节点
-    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",                           # 504 节点
+    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",                                 # 591 节点
+    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",                           # 516 节点
     "https://node.freeclashnode.com/uploads/2026/09/1-20260915.txt",                                                # 280 节点
+    "https://node.freeclashnode.com/uploads/2026/09/0-20260917.txt",                                                # 277 节点
     "https://node.freeclashnode.com/uploads/2026/09/0-20260915.txt",                                                # 273 节点
     "https://node.freeclashnode.com/uploads/2026/09/0-20260914.txt",                                                # 271 节点
     "https://node.freeclashnode.com/uploads/2026/09/1-20260914.txt",                                                # 268 节点
-    "https://www.ermao.net/sub/v2ray/ermao.net",                                                                    # 253 节点
-    "https://wild-cloud-9893.heleimail.workers.dev",                                                                # 199 节点
-    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt",         # 199 节点
+    "https://node.freeclashnode.com/uploads/2026/09/1-20260917.txt",                                                # 261 节点
+    "https://www.ermao.net/sub/v2ray/ermao.net",                                                                    # 228 节点
+    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt",         # 198 节点
+    "https://wild-cloud-9893.heleimail.workers.dev",                                                                # 192 节点
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY.txt",                                    # 150 节点
     "https://open.heleimail.workers.dev/",                                                                          # 150 节点
-    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY.txt",                                    # 149 节点
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",                               # 100 节点
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",                                        # 100 节点
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",              # 70 节点
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",                    # 23 节点
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",              # 95 节点
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",                    # 22 节点
     "https://raw.githubusercontent.com/freefq/free/master/v2",                                                      # 15 节点
-    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",                # 3 节点
+    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",                # 15 节点
+    "https://nodesfree.github.io/v2raynode/subscribe/v2ray.txt",                                                    # 6 节点
 ]
 
 OUTPUT_DIR = "output"

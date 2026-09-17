@@ -6,29 +6,44 @@
     {
       "type": "shadowsocks",
       "tag": "🇫🇷 法国 (France) 01 - Jewell",
-      "server": "15.237.218.241",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 02 - Jewell",
-      "server": "13.38.76.125",
+      "server": "13.39.233.161",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
       "type": "vless",
+      "tag": "🇫🇷 法国 (France) 02 - Jewell",
+      "server": "15.224.71.221",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "trojan",
       "tag": "🇫🇷 法国 (France) 03 - Jewell",
-      "server": "143.246.209.46",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "server": "185.114.72.31",
+      "server_port": 2053,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
       "transport": {
         "type": "ws",
-        "path": "/vless-test"
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 04 - Jewell",
+      "server": "15.237.137.134",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
       "type": "selector",
@@ -37,7 +52,8 @@
         "auto",
         "🇫🇷 法国 (France) 01 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
-        "🇫🇷 法国 (France) 03 - Jewell"
+        "🇫🇷 法国 (France) 03 - Jewell",
+        "🇫🇷 法国 (France) 04 - Jewell"
       ]
     },
     {
@@ -46,7 +62,8 @@
       "outbounds": [
         "🇫🇷 法国 (France) 01 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
-        "🇫🇷 法国 (France) 03 - Jewell"
+        "🇫🇷 法国 (France) 03 - Jewell",
+        "🇫🇷 法国 (France) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

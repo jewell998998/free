@@ -5,47 +5,64 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 104.21.6.186
-  port: 8443
-  udp: true
-  type: vless
-  uuid: c07346da-5799-40c1-9d5a-5ea3ca3ac9e2
-  tls: true
-  servername: Zhclj7kx6Wq0LE6W-ONnWuEONK1HfTN4.iManbIeNG27.WorkERs.dEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/nOBmhwrWYZ5IucFYa?ed=2560
-    headers:
-      Host: zhclj7kx6wq0le6w-onnwueonk1hftn4.imanbieng27.workers.dev
-- name: 🇩🇪 德国 (Germany) 02 - Jewell
   server: 63.185.90.235
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: 18.199.98.219
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: 3.75.89.244
+  server: 63.180.252.123
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 130.61.34.121
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: zI0WUsK9Ct4x3vCtyfZPK++Ag2bohY8qoA0ElyeWKM0=
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
   server: 95.179.169.44
   port: 53224
   udp: true
   type: vless
   uuid: e4887910-bcfc-48f8-8cd4-abb592e181af
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
+  server: 144.31.168.59
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: aotocon.ggisopi.su
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 06 - Jewell
+  server: 82.47.186.18
+  port: 55597
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: o2rw2hICwu1blrr_gZAl2Q
+- name: 🇩🇪 德国 (Germany) 07 - Jewell
+  server: 185.255.179.11
+  port: 9443
+  udp: true
+  type: vless
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  tls: true
+  servername: hub-de-05.hanvpn.cc
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: de05-grpc-8e47a
 proxy-groups:
 - name: PROXIES
   type: select
@@ -56,6 +73,8 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
+  - 🇩🇪 德国 (Germany) 06 - Jewell
+  - 🇩🇪 德国 (Germany) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -66,5 +85,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
+  - 🇩🇪 德国 (Germany) 06 - Jewell
+  - 🇩🇪 德国 (Germany) 07 - Jewell
 rules:
 - MATCH,PROXIES

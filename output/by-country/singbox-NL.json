@@ -1,0 +1,78 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 01 - xiaohe",
+      "server": "162.159.153.4",
+      "server_port": 443,
+      "uuid": "f2a73750-3087-48ff-a763-1348c15dce68",
+      "tls": {
+        "enabled": true,
+        "server_name": "rAyAn-007.mAxImA.DpDnS.OrG",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "rAyAn-007.mAxImA.DpDnS.OrG"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 02 - xiaohe",
+      "server": "84.235.162.230",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "0W18BiN3HuF+EBBdvuLgTaot1VAiMBw5c4okk1zE48w="
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 03 - xiaohe",
+      "server": "158.101.216.158",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 04 - xiaohe",
+      "server": "152.70.60.129",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇳🇱 荷兰 (Netherlands) 01 - xiaohe",
+        "🇳🇱 荷兰 (Netherlands) 02 - xiaohe",
+        "🇳🇱 荷兰 (Netherlands) 03 - xiaohe",
+        "🇳🇱 荷兰 (Netherlands) 04 - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇳🇱 荷兰 (Netherlands) 01 - xiaohe",
+        "🇳🇱 荷兰 (Netherlands) 02 - xiaohe",
+        "🇳🇱 荷兰 (Netherlands) 03 - xiaohe",
+        "🇳🇱 荷兰 (Netherlands) 04 - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

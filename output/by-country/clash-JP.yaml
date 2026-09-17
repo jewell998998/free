@@ -5,26 +5,50 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
-  server: jp-2.gsafevpnapi.com
-  port: 31870
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 2bf192f1-7d86-43a3-88b3-8f72b7eb5ad9
-- name: 🇯🇵 日本 (Japan) 02 - xiaohe
-  server: 210.152.85.154
-  port: 19364
+  server: 128.241.25.11
+  port: 30021
   udp: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: 2a289186-9593-4e59-83e9-822efb2ab5d3
   tls: true
-  servername: cdn8848.776676.xyz
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /collect/user/products?ed=2560
+    path: /@Marisa_kristi
     headers:
-      Host: cdn8848.776676.xyz
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 02 - xiaohe
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 0e8371c0-0287-4805-a882-42a7b482a9de
+  tls: true
+  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+- name: 🇯🇵 日本 (Japan) 03 - xiaohe
+  server: 129.153.71.28
+  port: 28863
+  udp: true
+  type: vless
+  uuid: 02073765-76e0-46d0-9109-82ccb48d3c6f
+  tls: true
+  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +56,7 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - xiaohe
   - 🇯🇵 日本 (Japan) 02 - xiaohe
+  - 🇯🇵 日本 (Japan) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +64,6 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - xiaohe
   - 🇯🇵 日本 (Japan) 02 - xiaohe
+  - 🇯🇵 日本 (Japan) 03 - xiaohe
 rules:
 - MATCH,PROXIES

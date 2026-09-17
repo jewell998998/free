@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  server: 23.252.104.131
-  port: 54321
+- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  server: 82.198.246.233
+  port: 180
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Proxy2024
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,35 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 - xiaohe
-  server: 162.159.153.4
-  port: 443
-  udp: true
-  type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-- name: 🇳🇱 荷兰 (Netherlands) 02 - xiaohe
-  server: 84.235.162.230
+- name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  server: 158.101.193.0
   port: 45819
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: 0W18BiN3HuF+EBBdvuLgTaot1VAiMBw5c4okk1zE48w=
-- name: 🇳🇱 荷兰 (Netherlands) 03 - xiaohe
+  password: NhI8UUsxcCRH8PLCcp5/hOdrU5cJNByixTd0HsB15LE=
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   server: 158.101.216.158
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: 🇳🇱 荷兰 (Netherlands) 04 - xiaohe
-  server: 152.70.60.129
   port: 62145
   udp: true
   type: vless
@@ -42,18 +22,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 (Netherlands) 01 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 02 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 03 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 04 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 02 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 03 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 04 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
 rules:
 - MATCH,PROXIES

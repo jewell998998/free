@@ -1,0 +1,82 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+      "server": "9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev",
+      "server_port": 443,
+      "uuid": "cc08d2d0-8a7a-4469-81d2-c43704451271",
+      "tls": {
+        "enabled": true,
+        "server_name": "9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/6871nrbnl9WsdAiOUInt?ed=2560",
+        "headers": {
+          "Host": "9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "loading.uploado.ir",
+      "server_port": 2083,
+      "uuid": "6cc29a05-4828-4e48-a34a-20b7ada60e85",
+      "tls": {
+        "enabled": true,
+        "server_name": "testmiKOnIM.HyDrYmhmDamyN7.wOrKers.dEv",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/OAZko425kNFF0PpQ",
+        "headers": {
+          "Host": "testmikonim.hydrymhmdamyn7.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

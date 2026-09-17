@@ -1,0 +1,52 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  tls: true
+  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/6871nrbnl9WsdAiOUInt?ed=2560
+    headers:
+      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  server: loading.uploado.ir
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 6cc29a05-4828-4e48-a34a-20b7ada60e85
+  tls: true
+  servername: testmiKOnIM.HyDrYmhmDamyN7.wOrKers.dEv
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /OAZko425kNFF0PpQ
+    headers:
+      Host: testmikonim.hydrymhmdamyn7.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+rules:
+- MATCH,PROXIES

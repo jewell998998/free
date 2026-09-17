@@ -5,31 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 158.101.193.0
+  server: 92.5.201.63
   port: 45819
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: NhI8UUsxcCRH8PLCcp5/hOdrU5cJNByixTd0HsB15LE=
-- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: 158.101.216.158
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  password: BRt6sNhsE9LXtIG254qiJ2L3zBupc9Md4vuShjVabBY=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
 rules:
 - MATCH,PROXIES

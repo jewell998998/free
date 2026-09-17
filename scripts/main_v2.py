@@ -183,34 +183,54 @@ LIVENESS_BATCH_SIZE = 256
 PROGRESS_EVERY = 100
 
 # ═══ V3 质量/国家策略 ═══
+
 # 目标而非硬性要求：尽量把最终出库池控制在约 100 个优质节点。
 TARGET_FINAL_NODES = 100
 SOFT_FINAL_MAX_NODES = 120
-# 当第 100 名仍达到这个质量分时，允许适当超过 100，避免为了数字硬砍优质节点。
+
+# 当第 100 名仍达到这个质量分时，允许适当超过 100，
+# 避免为了数字硬砍优质节点。
 SOFT_KEEP_SCORE = 82.0
 
+
 # 明确排除国家/地区。最终以“出口 IP 国家”为准。
-EXCLUDED_COUNTRIES = {
-    "GB", "AE", "CY", "FI", "SE",
-    "RO", "IT", "CH", "RU", "TR",
-    "IQ", "NO", "GR", "LV", "SC", "ES",
-}
+# 留空表示不进行国家硬排除。
+EXCLUDED_COUNTRIES = set()
+
+# 如以后需要恢复国家硬排除，可改为：
+# EXCLUDED_COUNTRIES = {
+#     "GB", "AE", "CY", "FI", "SE",
+#     "RO", "IT", "CH", "RU", "TR",
+#     "IQ", "NO", "GR", "LV", "SC", "ES",
+# }
+
 
 # unknown 没有可靠网络类型情报，因此必须更严格。
 UNKNOWN_MAX_LATENCY_MS = 800
 UNKNOWN_MIN_SPEED_BPS = 250_000
 UNKNOWN_MAX_FRAUD_SCORE = 74
 
+
 RUN_START_MONOTONIC = 0.0
 STAGE_TIMES = {}
 
-# ip-api.com 免费批量: 15 req/min, 每 req ≤100 IP (仅 HTTP)
-IP_API_BATCH_URL = "http://ip-api.com/batch?fields=status,countryCode,isp,org,as,asname,reverse,mobile,proxy,hosting,query"
+
+# ip-api.com 免费批量查询
+# 每批最多 100 个 IP；请求间隔控制在约 4.2 秒。
+IP_API_BATCH_URL = (
+    "http://ip-api.com/batch?"
+    "fields=status,countryCode,isp,org,as,asname,reverse,"
+    "mobile,proxy,hosting,query"
+)
 IP_API_BATCH_SIZE = 100
-IP_API_BATCH_RPS_INTERVAL = 4.2     # 60/15s ≈ 每 4.2s 一批
+IP_API_BATCH_RPS_INTERVAL = 4.2
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/128.0.0.0 Safari/537.36"
+)
 # ══════════════════════════════════════════════════════════════════
 # 出口 IP 情报 (本地离线兜底)
 # ══════════════════════════════════════════════════════════════════

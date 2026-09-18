@@ -5,55 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 188.114.97.6
-  port: 8080
+  server: 130.61.40.61
+  port: 59924
   udp: true
-  type: vless
-  uuid: bd8c736e-cae1-43d7-b573-9672e6ca4989
-  network: ws
-  ws-opts:
-    path: /vl/zXLTmz3hE3szn64f?ed=2560
-    headers:
-      Host: l0n0qgkdttu061g57fhqzbet333s4t.ade-1004.workers.dev
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: rYYQVHYHRQ85q+A8qkzqg51BCs9HBK4Psg7VO/z6rMc=
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 172.67.132.19
+  server: 130.61.119.114
+  port: 59924
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: HCVjmCI84r15DaEC6s9RO3YZQEAC8l8VcQj541sTl7w=
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 165.232.39.158
   port: 443
   udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: VRE6R9qRbQI0t25TG.SRTB0M3hdbwr2cJZ8fjUr.WoRKeRS.dev
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/bDodLFtTQwCZ6EX3ffMYJ06j9EjLse4d?ed=2560
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: 130.61.119.117
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: QXDAqNvQJDUMd7I6mdmSnWxJHM09yjBC6Gf5xGFDkFg=
+    path: /m?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
 - name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 130.61.232.82
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: qcbhYjOYL+wy0N69cPyPDZMaCLix6L/5XD1HrCZlZiA=
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
-  server: 130.61.34.19
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: w1Wt/Qp3zw/Aydr+xqNt0hSLXwjmNXcmut+QIGRSDUY=
-- name: 🇩🇪 德国 (Germany) 06 - Jewell
-  server: 77.110.101.97
-  port: 56834
+  server: 108.165.32.16
+  port: 443
   udp: true
   type: vless
-  uuid: daf65e17-1ed5-42be-a34d-20a156ddedbc
-- name: 🇩🇪 德国 (Germany) 07 - Jewell
+  uuid: 6dff8e33-b201-4cbb-8f89-b9418702bff2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: IGIgHNW_hZRsP2DZqItH5wvFSr6H4rqpI9x-0IUCskU
+    short-id: ca3d
+  servername: www.logitech.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
   server: 2.26.51.75
   port: 443
   udp: true
@@ -76,8 +69,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
-  - 🇩🇪 德国 (Germany) 06 - Jewell
-  - 🇩🇪 德国 (Germany) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -88,7 +79,5 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
-  - 🇩🇪 德国 (Germany) 06 - Jewell
-  - 🇩🇪 德国 (Germany) 07 - Jewell
 rules:
 - MATCH,PROXIES

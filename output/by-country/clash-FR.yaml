@@ -5,36 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 13.39.233.161
+  server: 13.38.76.125
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 15.224.71.221
-  port: 22223
+  server: 13.37.81.71
+  port: 22224
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 15.237.137.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,8 +24,6 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -51,7 +31,5 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
 rules:
 - MATCH,PROXIES

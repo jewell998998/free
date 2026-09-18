@@ -5,39 +5,66 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 144.24.225.195
-  port: 61312
+  server: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
+  port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: +USQg0EtDGWako1JYfnp7wjswdFw/HSuX3kZwOsFxpU=
+  type: trojan
+  password: LcICDcp!jD9TFV$NbH
+  sni: dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/pg4wM48V9O859nmqsJg22EOFKN4S570y?ed=2560
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 129.151.91.115
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: b19419fa-8009-455b-b059-765e2856883a
+  tls: true
+  servername: akbarian34.j9z65ce2uyks.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/3Qe9Fv1V2cqEtXyBQApZYi
+    headers:
+      Host: akbarian34.j9z65ce2uyks.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 134.65.61.47
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: ktsunSg4AnlcqH3JiVv7JWSHpbDjDfTvldDgDpApNHw=
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  password: sDhEhHHvZ8tSUziGGDt1rQuh7bgTpUccfw5JnGsAvB4=
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 144.24.225.111
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk=
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 134.65.59.59
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 6b5USMvmAQHf9E0ZTvGyFGglLcCnmSW/LgLufsmrROE=
+- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  server: 129.151.75.102
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: my66u+JIEnQPAHXgaWDetuCsLnXPfyJPGAfDVMfKUtY=
+- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
   server: 129.151.92.18
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: 4YIk2BAV2AExvYDsQrw4ELlQJP/b4poEXjzFbSXwMao=
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  server: 31.76.7.154
-  port: 7443
-  udp: true
-  type: vless
-  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
-    short-id: d2061bb1
-  servername: ya.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,6 +74,9 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -56,5 +86,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
 rules:
 - MATCH,PROXIES

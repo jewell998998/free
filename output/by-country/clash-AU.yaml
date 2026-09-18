@@ -4,12 +4,12 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 94.249.187.46
-  port: 2086
+- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  server: 82.198.246.37
+  port: 180
   udp: true
   type: vmess
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
 proxy-groups:
@@ -17,12 +17,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,31 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 45.67.215.233
+  server: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
   port: 443
   udp: true
   type: vless
-  uuid: 20e295db-a6af-4006-bfd6-91453f169968
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
   tls: true
-  servername: 057.ElecTRocElLco-Cf-057.wOrKeRs.dEv
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 057.electrocellco-cf-057.workers.dev
+    path: /
 - name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: 172.67.182.52
+  server: 150.251.141.28
   port: 443
   udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: 6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/GaQvfFwT5sWgVxHig8YaXjtiuQPZNI?ed=2560
+  type: vless
+  uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: iKiBA7VUMrGy7J3puIr6rbsEj7FMtRazqQywedgGeCA
+  servername: nolan.shhflow.xyz
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

@@ -4,44 +4,117 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
-      "server": "dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev",
-      "server_port": 443,
-      "password": "LcICDcp!jD9TFV$NbH",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "server": "104.21.70.21",
+      "server_port": 8080,
+      "uuid": "33918b20-9e02-4dc6-8b30-79b2d4b2e0e6",
       "transport": {
         "type": "ws",
-        "path": "/tr/pg4wM48V9O859nmqsJg22EOFKN4S570y?ed=2560",
+        "path": "/eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0",
         "headers": {
-          "Host": "dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev"
+          "Host": "auto-scale-238b2b.infra-core-1630dd.workers.dev"
         }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "7201b2cd-0675-4c1a-9c76-07ca14ffcf08",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiTlZxbGYyajQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119",
+        "headers": {
+          "Host": "6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+      "server": "143.47.182.253",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+      "server": "84.235.176.206",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "I5lfbvkaESDwrx7KOnyw6ucfHEdwviDT3HekoYufSbE="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+      "server": "143.47.191.60",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "9BOOXAN/80Y2IXJXkG2hlG1Dax/3LDeewNBkdiJWeHs="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+      "server": "141.148.226.91",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "LkxTV14uMAWpwhot30E9kR4Fkhv6wWSFJsKVmxD4MoM="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+      "server": "134.98.157.78",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "T9M/apt4/lYP7rFT2aA3yoQbaNCshDkD55EJzXOTcPY="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+      "server": "193.123.37.114",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "4EYqq0Bsz1KdH9e3/AN4SZXxCyMO8uQ70iIBekWUGTI="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
+      "server": "84.235.176.15",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "0iRowl/XrJB2t5dpNveuaVVRBOOJ/HxzlmMcywDN1AU="
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 荷兰 (Netherlands) 01 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 09 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 荷兰 (Netherlands) 01 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 09 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

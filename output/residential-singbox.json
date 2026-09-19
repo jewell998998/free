@@ -4,18 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - Jewell",
-      "server": "ez-3e9698.ezaccess1ec1f0c.workers.dev",
-      "server_port": 443,
-      "password": "c0c17d1da2c2c9299d5094c8",
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - Jewell",
+      "server": "128.241.25.11",
+      "server_port": 30021,
+      "uuid": "795afc16-eac7-44b1-8f3e-29488d73cf3a",
       "tls": {
         "enabled": true,
-        "server_name": "ez-3e9698.ezaccess1ec1f0c.workers.dev",
+        "server_name": "2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -23,37 +20,46 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/eyJqdW5rIjoiMDdteWJvazY4azJ3MiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "path": "/@Marisa_kristi",
         "headers": {
-          "Host": "ez-3e9698.ezaccess1ec1f0c.workers.dev"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+          "Host": "2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev"
+        }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell",
-      "server": "36.224.185.173",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 02 (家宽) - Jewell",
+      "server": "188.130.207.30",
+      "server_port": 2053,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/m",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - Jewell",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell"
+        "🇯🇵 日本 (Japan) 01 (家宽) - Jewell",
+        "🇩🇪 德国 (Germany) 02 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - Jewell",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell"
+        "🇯🇵 日本 (Japan) 01 (家宽) - Jewell",
+        "🇩🇪 德国 (Germany) 02 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

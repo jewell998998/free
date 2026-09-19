@@ -19,33 +19,17 @@ proxies:
     path: /@Marisa_kristi
     headers:
       Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-- name: 🇩🇪 德国 (Germany) 02 (家宽) - Jewell
-  server: 188.130.207.30
-  port: 2053
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /m
-    headers:
-      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 (家宽) - Jewell
-  - 🇩🇪 德国 (Germany) 02 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01 (家宽) - Jewell
-  - 🇩🇪 德国 (Germany) 02 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

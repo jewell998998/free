@@ -4,28 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 104.21.8.63
+- name: 🇰🇬 KG 01 - Jewell
+  server: 104.24.30.89
   port: 443
   udp: true
-  type: trojan
-  password: 5855d6850594830f
-  sni: AkbARIan34.j9Z65Ce2uyks.WoRKeRS.DEV
+  type: vless
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/w2O3K3xXNYDKIxwOIw7?ed=2560
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇰🇬 KG 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇰🇬 KG 01 - Jewell
 rules:
 - MATCH,PROXIES

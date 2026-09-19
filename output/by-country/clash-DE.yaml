@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
+  server: 151.101.56.7
+  port: 443
+  udp: true
+  type: trojan
+  password: mitivpn
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
   server: 199.232.78.160
   port: 443
   udp: true
@@ -15,7 +26,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇩🇪 德国 (Germany) 02 - Jewell
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
   server: 199.232.78.101
   port: 443
   udp: true
@@ -25,18 +36,97 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: vless.herogoing.top
+    path: /
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: 3.71.182.230
   port: 443
   udp: true
-  type: trojan
-  password: bpb-trojan
-  sni: vless.herogoing.top
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
+  server: 63.185.90.235
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 06 - Jewell
+  server: 3.123.32.247
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 07 - Jewell
+  server: 195.201.9.235
+  port: 11342
+  udp: true
+  type: vless
+  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
+    short-id: 6f7b38bd9420c4b8
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 08 - Jewell
+  server: 91.98.44.116
+  port: 80
+  udp: true
+  type: vless
+  uuid: 39cd736f-d129-4e75-ac39-77f6cf233450
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: KDmlFjsZuxHYEHYtFZh-3sLmrkt_KmcxA-sG8twBqxM
+    short-id: d2549f367a3ed3cc
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 09 - Jewell
+  server: 165.232.39.158
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr?ed=2560
+    path: /m?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 10 - Jewell
+  server: 164.92.147.213
+  port: 2087
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /city/my?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 11 - Jewell
+  server: 88.99.161.169
+  port: 11342
+  udp: true
+  type: vless
+  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
+    short-id: 6f7b38bd9420c4b8
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +135,14 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
+  - 🇩🇪 德国 (Germany) 05 - Jewell
+  - 🇩🇪 德国 (Germany) 06 - Jewell
+  - 🇩🇪 德国 (Germany) 07 - Jewell
+  - 🇩🇪 德国 (Germany) 08 - Jewell
+  - 🇩🇪 德国 (Germany) 09 - Jewell
+  - 🇩🇪 德国 (Germany) 10 - Jewell
+  - 🇩🇪 德国 (Germany) 11 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,5 +151,13 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
+  - 🇩🇪 德国 (Germany) 05 - Jewell
+  - 🇩🇪 德国 (Germany) 06 - Jewell
+  - 🇩🇪 德国 (Germany) 07 - Jewell
+  - 🇩🇪 德国 (Germany) 08 - Jewell
+  - 🇩🇪 德国 (Germany) 09 - Jewell
+  - 🇩🇪 德国 (Germany) 10 - Jewell
+  - 🇩🇪 德国 (Germany) 11 - Jewell
 rules:
 - MATCH,PROXIES

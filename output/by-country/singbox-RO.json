@@ -4,14 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-      "server": "104.143.223.56",
-      "server_port": 2085,
-      "uuid": "b41bac9b-17f7-469f-9df0-05b09140081b",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+      "type": "hysteria2",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 01 - Jewell",
+      "server": "162.249.126.7",
+      "server_port": 8443,
+      "password": "9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z",
+      "tls": {
+        "enabled": true,
+        "server_name": "hopp-germany-new.ddnsguru.com",
+        "insecure": false
       }
     },
     {
@@ -19,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇷🇴 罗马尼亚 (Romania) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇷🇴 罗马尼亚 (Romania) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

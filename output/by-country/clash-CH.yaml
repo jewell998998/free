@@ -5,13 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 - Jewell
-  server: 94.249.187.46
-  port: 2086
+  server: 131.123.34.145
+  port: 8081
   udp: true
-  type: vmess
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
 proxy-groups:
 - name: PROXIES
   type: select

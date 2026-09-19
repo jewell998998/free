@@ -1,0 +1,78 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+      "server": "restless-base-fe24.alirezahabibi20009.workers.dev",
+      "server_port": 443,
+      "uuid": "4908acbe-485f-4e1c-bb11-5dd04b9f7e88",
+      "tls": {
+        "enabled": true,
+        "server_name": "restless-base-fe24.alirezahabibi20009.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "restless-base-fe24.alirezahabibi20009.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 02 - Jewell",
+      "server": "172.67.164.152",
+      "server_port": 443,
+      "uuid": "36a857e4-f3d4-43aa-8b90-d7da849da989",
+      "tls": {
+        "enabled": true,
+        "server_name": "002.Inc-ElectROcElL-001-002.WoRKERS.DEV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "002.inc-electrocell-001-002.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

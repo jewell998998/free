@@ -4,29 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-      "server": "104.143.223.56",
-      "server_port": 2085,
-      "uuid": "67671bce-990e-47fe-96c3-55a869800b00",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
+      "type": "shadowsocks",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
+      "server": "36.224.185.173",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

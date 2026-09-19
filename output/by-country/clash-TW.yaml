@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 84.235.176.206
-  port: 45819
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  server: R3MRCG00129437X.cybervena.com
+  port: 50099
   udp: true
   type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: I5lfbvkaESDwrx7KOnyw6ucfHEdwviDT3HekoYufSbE=
+  cipher: chacha20-ietf-poly1305
+  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,19 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 13.37.31.153
-  port: 22223
+  server: 52.47.98.1
+  port: 22224
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 13.37.31.153
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 13.36.169.164
+  server: 15.237.252.23
   port: 443
   udp: true
   type: ss
@@ -30,7 +24,6 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,6 +31,5 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
 rules:
 - MATCH,PROXIES

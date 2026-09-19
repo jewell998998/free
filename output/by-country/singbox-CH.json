@@ -4,32 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇧🇷 巴西 (Brazil) 01 - Jewell",
-      "server": "154.197.64.30",
-      "server_port": 8880,
-      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vms.lifetime36.workers.dev"
-        }
-      }
+      "type": "vmess",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+      "server": "94.249.187.46",
+      "server_port": 2086,
+      "uuid": "f6361af8-bb8f-4609-bf5d-3fc0f688f47b",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

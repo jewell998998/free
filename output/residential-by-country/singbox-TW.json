@@ -4,22 +4,19 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 01 (家宽) - Jewell",
-      "server": "188.130.207.30",
-      "server_port": 2053,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
+      "server": "dee2309db4944c248b6d4672c6641e25.oylfmxz.cn",
+      "server_port": 443,
+      "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
+        "server_name": "dee2309db4944c248b6d4672c6641e25.oylfmxz.cn",
         "insecure": false
       },
       "transport": {
-        "type": "ws",
-        "path": "/m",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
+        "type": "ws"
       }
     },
     {
@@ -27,14 +24,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 (家宽) - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 (家宽) - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

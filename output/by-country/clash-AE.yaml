@@ -5,35 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 162.159.153.4
-  port: 443
-  udp: true
-  type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  server: 104.143.223.82
+  server: 104.143.223.56
   port: 2085
   udp: true
   type: vless
-  uuid: 15295b3e-e233-4f3b-95d1-8860d40c75fe
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
-  server: 104.143.223.69
-  port: 2085
-  udp: true
-  type: vless
-  uuid: f68a9fd4-16c7-46d1-b17c-0a4b224cc00d
+  uuid: b41bac9b-17f7-469f-9df0-05b09140081b
   network: grpc
   grpc-opts:
     grpc-service-name: vless
@@ -43,15 +19,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 rules:
 - MATCH,PROXIES

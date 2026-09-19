@@ -5,32 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: www.speedtest.net
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 401d950d-4f5c-45c7-bf44-8b69acf35f6f
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZUV1OVVaQ2xSWiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 7x70yyvt7eqotx-iq9n3rjt1xn1jwkh9.asdfsafdsaf.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: 38d6b629-64c2-4c31-a10d-26eb3a2a053d
-  tls: true
-  servername: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/cxl8Wn1ylnsk63nJ0
-    headers:
-      Host: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 129.151.68.65
   port: 61312
   udp: true
@@ -43,15 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 rules:
 - MATCH,PROXIES

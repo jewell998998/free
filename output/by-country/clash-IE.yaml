@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
-  server: r3mrcg00129437x.cybervena.com
-  port: 50099
+- name: 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  server: 128.251.10.166
+  port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  password: fz0bBBPUiKFgPDvJ
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
 rules:
 - MATCH,PROXIES

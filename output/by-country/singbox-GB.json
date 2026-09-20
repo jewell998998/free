@@ -4,26 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "93fa8bdb-9cca-4a3e-8355-b7c12e4f595e",
-      "transport": {
-        "type": "ws",
-        "path": "/vl/yLWNcuUuw1jlJpkDhGy?ed=2560",
-        "headers": {
-          "Host": "fornewiran.ade-1000.workers.dev"
-        }
-      }
+      "server": "144.24.226.127",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "J7cXNcIXneBAD5a5hk6nXD68z5BcJtIMepdH646KjtI="
     },
     {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "134.65.58.197",
+      "server": "134.65.59.15",
       "server_port": 61312,
       "method": "2022-blake3-chacha20-poly1305",
-      "password": "aKfETv3FnRLG5JBPKBZLrjX42g1rwmCWW9kPwL4jskI="
+      "password": "r5ic6K6vlgFjNKuR9W7uPVRtSuzCYAjM78oW3RYK0bA="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+      "server": "134.65.62.82",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
+      "server": "129.151.86.235",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Vy4lRpLwy1/ZUJF58f+SpzYRBJCwQpwztiwtHcOtReI="
     },
     {
       "type": "selector",
@@ -31,7 +41,9 @@
       "outbounds": [
         "auto",
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
       ]
     },
     {
@@ -39,7 +51,9 @@
       "tag": "auto",
       "outbounds": [
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

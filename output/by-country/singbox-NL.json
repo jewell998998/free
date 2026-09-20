@@ -4,51 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
-      "server": "172.67.174.249",
-      "server_port": 443,
-      "uuid": "26b35808-f1e1-4b97-8c69-46796f058d8b",
-      "tls": {
-        "enabled": true,
-        "server_name": "ezaccess-project-9138d4.5f6on.workers.dev",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoicG9pMkt4TDY2TVNtRSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "ezaccess-project-9138d4.5f6on.workers.dev"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
+      "server": "143.47.179.231",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "kAoIHaeRoTe0gnOjRPghW5nXrZUcx+gSKXcRVk9/ToE="
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
-      "server": "172.67.173.89",
-      "server_port": 443,
-      "uuid": "ffa431ab-a59b-4092-a418-905fcb1e4d5f",
-      "tls": {
-        "enabled": true,
-        "server_name": "s0P42F8wwpdDE5tF7M4l6L.aB1X-Sn9O4y3N7oNdkRd.workeRS.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vl/rYScQPG1EEjxXdswdMEU2b3rM4?ed=2560",
-        "headers": {
-          "Host": "s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev"
-        }
-      }
+      "server": "141.148.234.37",
+      "server_port": 45819,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "EJZfJJpreInajdnfzw0HEza6o+tOGQpipfqP/3LzZmE="
     },
     {
       "type": "vless",
@@ -58,12 +27,25 @@
       "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
-      "server": "84.235.164.165",
-      "server_port": 45819,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "93htEGnZlnfVGqJUQDtzevAIYpYfkpGSMTmCaxLq3aU="
+      "server": "130.12.242.106",
+      "server_port": 443,
+      "uuid": "bc058e69-0444-4c7b-98da-bd67f0b143da",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8",
+          "short_id": "15affa0af66dfc79"
+        }
+      }
     },
     {
       "type": "selector",

@@ -4,26 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
-      "server": "r3mrcg00129437x.cybervena.com",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+      "type": "hysteria2",
+      "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
+      "server": "docs.fastline-labs.com",
+      "server_port": 443,
+      "password": "334f25ef-3fb7-44a0-8ab7-79527d613281",
+      "tls": {
+        "enabled": true,
+        "server_name": "docs.fastline-labs.com",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,22 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 188.114.97.8
+  server: 172.67.174.249
   port: 443
   udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: y9p34jPJMqjAZaYPF.pIiwdDIlXjcQEHR17aF22U7xK-yU.workers.DEv
+  type: vless
+  uuid: 26b35808-f1e1-4b97-8c69-46796f058d8b
+  tls: true
+  servername: ezaccess-project-9138d4.5f6on.workers.dev
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /tr/SniOCmVMzIWOA1FDZDeGODGx2lS1LV?ed=2560
+    path: /eyJqdW5rIjoicG9pMkt4TDY2TVNtRSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: ezaccess-project-9138d4.5f6on.workers.dev
 - name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: 158.101.194.120
+  server: 172.67.173.89
+  port: 443
+  udp: true
+  type: vless
+  uuid: ffa431ab-a59b-4092-a418-905fcb1e4d5f
+  tls: true
+  servername: s0P42F8wwpdDE5tF7M4l6L.aB1X-Sn9O4y3N7oNdkRd.workeRS.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/rYScQPG1EEjxXdswdMEU2b3rM4?ed=2560
+    headers:
+      Host: s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 152.70.56.174
   port: 62145
   udp: true
   type: vless
   uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 84.235.164.165
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 93htEGnZlnfVGqJUQDtzevAIYpYfkpGSMTmCaxLq3aU=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -28,6 +53,8 @@ proxy-groups:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -35,5 +62,7 @@ proxy-groups:
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
 rules:
 - MATCH,PROXIES

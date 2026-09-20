@@ -5,71 +5,57 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 13.36.169.164
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 15.237.210.147
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 15.237.180.114
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 13.37.141.178
-  port: 22222
+  server: 172.64.229.2
+  port: 2052
   udp: true
   type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 05 - Jewell
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇫🇷 法国 (France) 02 - Jewell
   server: 15.237.252.23
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 15.237.17.206
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 15.237.190.132
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: 15.237.180.114
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 05 - Jewell
+  server: 15.188.161.33
   port: 22222
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇫🇷 法国 (France) 06 - Jewell
+  server: 13.36.169.164
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇫🇷 法国 (France) 07 - Jewell
-  server: 13.37.141.178
-  port: 22224
+  server: 15.188.161.33
+  port: 22223
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 08 - Jewell
-  server: 195.58.140.146
-  port: 443
-  udp: true
-  type: vless
-  uuid: d7790b85-9659-4558-a405-e0ab57d32984
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI
-    short-id: dc927a04e8572c61
-  servername: d1-fr.cloud-cdn.xyz
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 09 - Jewell
-  server: 15.237.17.206
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 10 - Jewell
   server: 34.155.10.226
   port: 443
   udp: true
@@ -80,20 +66,7 @@ proxies:
     public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
     short-id: ae682368818bd6c5
   servername: www.cloudflare.com
-  client-fingerprint: ''
-- name: 🇫🇷 法国 (France) 11 - Jewell
-  server: 15.237.196.230
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 12 - Jewell
-  server: 15.237.17.206
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -107,10 +80,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 06 - Jewell
   - 🇫🇷 法国 (France) 07 - Jewell
   - 🇫🇷 法国 (France) 08 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 - Jewell
-  - 🇫🇷 法国 (France) 11 - Jewell
-  - 🇫🇷 法国 (France) 12 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -124,9 +93,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 06 - Jewell
   - 🇫🇷 法国 (France) 07 - Jewell
   - 🇫🇷 法国 (France) 08 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 - Jewell
-  - 🇫🇷 法国 (France) 11 - Jewell
-  - 🇫🇷 法国 (France) 12 - Jewell
 rules:
 - MATCH,PROXIES

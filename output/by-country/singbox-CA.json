@@ -4,15 +4,28 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "trojan",
       "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
-      "server": "docs.fastline-labs.com",
+      "server": "199.232.78.101",
       "server_port": 443,
-      "password": "334f25ef-3fb7-44a0-8ab7-79527d613281",
+      "password": "MiTIVPN",
       "tls": {
         "enabled": true,
-        "server_name": "docs.fastline-labs.com",
-        "insecure": false
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mitivpn---ss--s---mitivpn-11e.global.ssl.fastly.net"
+        }
       }
     },
     {

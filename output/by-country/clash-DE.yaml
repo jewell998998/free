@@ -5,108 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 199.232.78.101
+  server: 3.120.158.57
   port: 443
   udp: true
-  type: trojan
-  password: MiTIVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: vless.herogoing.top
-  port: 443
-  udp: true
-  type: trojan
-  password: bpb-trojan
-  sni: vless.herogoing.top
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: 199.232.78.101
-  port: 443
-  udp: true
-  type: trojan
-  password: MiTIVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
-- name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 104.21.6.186
-  port: 8443
+  server: 88.99.161.169
+  port: 11342
   udp: true
   type: vless
-  uuid: c07346da-5799-40c1-9d5a-5ea3ca3ac9e2
-  tls: true
-  servername: Zhclj7kx6Wq0LE6W-ONnWuEONK1HfTN4.iManbIeNG27.WorkERs.dEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/nOBmhwrWYZ5IucFYa?ed=2560
-    headers:
-      Host: zhclj7kx6wq0le6w-onnwueonk1hftn4.imanbieng27.workers.dev
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
-  server: 63.181.79.8
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 06 - Jewell
-  server: 104.21.6.186
-  port: 443
-  udp: true
-  type: vless
-  uuid: c07346da-5799-40c1-9d5a-5ea3ca3ac9e2
-  tls: true
-  servername: zHcLJ7Kx6wq0LE6w-ONNWUeonk1hfTn4.ImanbIenG27.WoRKers.DEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/x4H5rhMsHGnY0L8MlLT9HFspaKsh7?ed=2560
-    headers:
-      Host: zhclj7kx6wq0le6w-onnwueonk1hftn4.imanbieng27.workers.dev
-- name: 🇩🇪 德国 (Germany) 07 - Jewell
-  server: 3.71.182.230
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 08 - Jewell
-  server: 91.107.149.82
-  port: 40792
-  udp: true
-  type: vless
-  uuid: 9673cdb1-92e2-4f41-9fa5-3b7243462078
+  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: CkuULNczLmaVd-vabRfj3UpPd__M7BlrXivZ728Toyg
-    short-id: 546b264aac9b6fed
+    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
+    short-id: 6f7b38bd9420c4b8
   servername: amp-api-edge.apps.apple.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 09 - Jewell
-  server: 72.56.111.205
-  port: 1443
-  udp: true
-  type: vless
-  uuid: b0c51c20-1557-4f1f-9eaa-6e4c844a04ca
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ODyAfL7Ie0jmStqz0l2pTq9acdVcmK650m4r1b-R_lM
-    short-id: 1c343b1444c190
-  servername: www.google.com
-  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -114,13 +31,6 @@ proxy-groups:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
-  - 🇩🇪 德国 (Germany) 03 - Jewell
-  - 🇩🇪 德国 (Germany) 04 - Jewell
-  - 🇩🇪 德国 (Germany) 05 - Jewell
-  - 🇩🇪 德国 (Germany) 06 - Jewell
-  - 🇩🇪 德国 (Germany) 07 - Jewell
-  - 🇩🇪 德国 (Germany) 08 - Jewell
-  - 🇩🇪 德国 (Germany) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -128,12 +38,5 @@ proxy-groups:
   proxies:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
-  - 🇩🇪 德国 (Germany) 03 - Jewell
-  - 🇩🇪 德国 (Germany) 04 - Jewell
-  - 🇩🇪 德国 (Germany) 05 - Jewell
-  - 🇩🇪 德国 (Germany) 06 - Jewell
-  - 🇩🇪 德国 (Germany) 07 - Jewell
-  - 🇩🇪 德国 (Germany) 08 - Jewell
-  - 🇩🇪 德国 (Germany) 09 - Jewell
 rules:
 - MATCH,PROXIES

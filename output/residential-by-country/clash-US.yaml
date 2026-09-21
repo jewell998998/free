@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 104.17.247.68
-  port: 443
+- name: 🇺🇸 美国 (United States) 01 (家宽) - Jewell
+  server: 104.18.32.47
+  port: 8443
   udp: true
   type: vless
-  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  uuid: 4ff70740-8c80-48ae-985f-2afe4924e908
   tls: true
-  servername: khoda.ak-khoda.workers.dev
+  servername: pubb.clnahanpnln.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /sync
     headers:
-      Host: khoda.ak-khoda.workers.dev
+      Host: pubb.clnahanpnln.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇺🇸 美国 (United States) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇺🇸 美国 (United States) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

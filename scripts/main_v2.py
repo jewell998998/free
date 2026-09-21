@@ -2839,45 +2839,88 @@ def classify_and_export(test_results: list):
 
     non_residential = [n for n in unique_nodes if n not in residential]
 
-    # ── 综合质量评分 ──
-    # 延迟 30 + 速度 35 + 网络类型 25 + 情报置信度 5 - fraud 风险 18。
-    # 住宅/移动只获得质量加分，不设住宅配额，不为了凑住宅数牺牲整体质量。
+    # ── 中国电信优选评分 ──
+    # 只改变“最终排序/筛选”的评分逻辑，不改变前面的抓取、解析、测活、
+    # 去重、国家筛选、风险筛选及节点导出逻辑。
+    #
+    # 中国电信评分重点：
+    #   延迟 50 分 + 下载速度 40 分 + 情报可靠性 10 分 - 风险惩罚
+    #
+    # 不再给 residential/mobile/datacenter/cdn 额外质量分。
+    # 原因：节点类型并不能直接代表中国电信访问质量；
+    # 对中国电信用户而言，实际测得的延迟和吞吐更直接。
+    #
+    # 注意：这里的“电信评分”是评分模型，而不是伪造中国电信测速环境。
+    # 若程序运行在中国电信线路上，所得延迟/速度才是真正的中国电信实测数据。
     def quality_score(n):
         latency = max(0.0, float(n.get("latency_ms", 999999)))
         speed = max(0.0, float(n.get("speed_bps", 0)))
-        latency_score = max(0.0, min(30.0, 30.0 * (1.0 - latency / MAX_ACCEPT_LATENCY_MS)))
-        speed_score = max(0.0, min(35.0, speed / 500_000.0 * 35.0))
-        type_bonus = {"residential": 25.0, "mobile": 22.0, "datacenter": 10.0, "cdn": 2.0, "unknown": 0.0}.get(n.get("net_type"), 0.0)
-        confidence_bonus = max(0.0, min(5.0, float(n.get("confidence", 0)) / 20.0))
+        confidence = max(0.0, min(100.0, float(n.get("confidence", 0))))
         fraud = n.get("fraud_score", -1)
-        risk_penalty = min(18.0, max(0.0, float(fraud) * 0.18)) if fraud is not None and fraud >= 0 else 0.0
-        return latency_score + speed_score + type_bonus + confidence_bonus - risk_penalty
+
+        # ① 延迟：50 分
+        # ≤50ms 接近满分；600ms 及以上为 0 分。
+        latency_score = max(
+            0.0,
+            min(50.0, 50.0 * (1.0 - latency / 600.0))
+        )
+
+        # 对高延迟节点进一步惩罚，避免“速度快但延迟很高”的节点挤进前排。
+        if latency > 300:
+            latency_score *= 0.85
+        if latency > 500:
+            latency_score *= 0.70
+
+        # ② 下载速度：40 分
+        # 2 MB/s 以上获得满分；低于 150 KB/s 的节点前面的测活流程通常已经淘汰。
+        speed_score = max(
+            0.0,
+            min(40.0, 40.0 * min(1.0, speed / 2_000_000.0))
+        )
+
+        # ③ 情报可靠性：10 分
+        # confidence 越高，节点出口 IP/网络属性等情报越完整。
+        confidence_score = confidence / 10.0
+
+        # ④ 风险惩罚
+        # fraud 越高扣分越多；>=90 的节点前面已经会被淘汰，
+        # 因此这里主要用于拉开中低风险节点之间的差距。
+        risk_penalty = 0.0
+        if fraud is not None and fraud >= 0:
+            risk_penalty = min(12.0, max(0.0, float(fraud) * 0.12))
+
+        return latency_score + speed_score + confidence_score - risk_penalty
 
     for n in unique_nodes:
         n["quality_score"] = round(quality_score(n), 2)
 
-    unique_nodes.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999), -x.get("speed_bps", 0)))
+    # ── 中国电信评分排序 ──
+    # 第一优先级：综合电信评分
+    # 第二优先级：实际延迟更低
+    # 第三优先级：实际下载速度更高
+    unique_nodes.sort(
+        key=lambda x: (
+            -x["quality_score"],
+            x.get("latency_ms", 999999),
+            -x.get("speed_bps", 0)
+        )
+    )
 
-    # ── 软目标：约 100，不做机械硬截断 ──
-    # 1) ≤100：全部保留。
-    # 2) 101~120：若第100名仍达到质量线，则允许全部保留。
-    # 3) >100 且第100名低于质量线：砍到100。
-    # 4) >120：无论如何最多保留120，防止池子再次膨胀。
+    # ── 最终只输出 Top 100 ──
+    # 不再使用原来的“软目标 100~120”逻辑。
+    # 前面所有筛选完成后，按中国电信评分排序，直接取前 100 个。
+    before_cap = len(unique_nodes)
     if len(unique_nodes) > TARGET_FINAL_NODES:
-        hundred_score = unique_nodes[TARGET_FINAL_NODES - 1]["quality_score"]
-        before_cap = len(unique_nodes)
-        if len(unique_nodes) > SOFT_FINAL_MAX_NODES:
-            if hundred_score < SOFT_KEEP_SCORE:
-                unique_nodes = unique_nodes[:TARGET_FINAL_NODES]
-                print(f"[*] 目标压缩: {before_cap} → {len(unique_nodes)} (节点过多且第100名质量分 {hundred_score:.1f} < {SOFT_KEEP_SCORE:.1f})")
-            else:
-                unique_nodes = unique_nodes[:SOFT_FINAL_MAX_NODES]
-                print(f"[*] 软上限: {before_cap} → {len(unique_nodes)} (第100名质量分 {hundred_score:.1f} ≥ {SOFT_KEEP_SCORE:.1f}，允许优质超额但最多 {SOFT_FINAL_MAX_NODES})")
-        elif hundred_score < SOFT_KEEP_SCORE:
-            unique_nodes = unique_nodes[:TARGET_FINAL_NODES]
-            print(f"[*] 目标压缩: {before_cap} → {len(unique_nodes)} (第100名质量分 {hundred_score:.1f} < {SOFT_KEEP_SCORE:.1f})")
-        else:
-            print(f"[*] 软目标放宽: {before_cap} 个节点，第100名质量分 {hundred_score:.1f} ≥ {SOFT_KEEP_SCORE:.1f}，保留高质量超额节点")
+        unique_nodes = unique_nodes[:TARGET_FINAL_NODES]
+        print(
+            f"[*] 中国电信 Top100: {before_cap} → {len(unique_nodes)} "
+            f"(按延迟/速度/稳定情报综合评分)"
+        )
+    else:
+        print(
+            f"[*] 中国电信 Top100: 候选 {before_cap}，"
+            f"实际可用节点不足100，全部保留"
+        )
 
     # 重新构建 residential/non-residential，确保最终导出的集合严格一致。
     residential = [n for n in unique_nodes if n["net_type"] in ("residential", "mobile") and n["confidence"] >= 60 and n.get("raw") not in chain_failed_raws]
@@ -2891,10 +2934,10 @@ def classify_and_export(test_results: list):
     residential = residential_final
     non_residential = [n for n in unique_nodes if n not in residential]
 
-    # 最终排序：质量分优先；住宅/移动只作为同等质量下的次级优先。
-    unique_nodes.sort(key=lambda x: (-x["quality_score"], 0 if x in residential else 1, x.get("latency_ms", 999999)))
-    residential.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999)))
-    non_residential.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999)))
+    # 最终排序：严格按照中国电信评分；同分时延迟优先、速度其次。
+    unique_nodes.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999), -x.get("speed_bps", 0)))
+    residential.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999), -x.get("speed_bps", 0)))
+    non_residential.sort(key=lambda x: (-x["quality_score"], x.get("latency_ms", 999999), -x.get("speed_bps", 0)))
 
     print(f"[*] 最终质量池: {len(unique_nodes)} | 家宽/移动 {len(residential)} | 普通 {len(non_residential)} | 最高分 {unique_nodes[0]['quality_score']:.1f} | 最低分 {unique_nodes[-1]['quality_score']:.1f}" if unique_nodes else "[*] 最终质量池: 0")
 

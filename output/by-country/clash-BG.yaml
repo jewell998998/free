@@ -4,26 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 104.143.223.56
-  port: 2085
+- name: 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
+  server: 131.123.41.18
+  port: 8081
   udp: true
   type: vless
-  uuid: 9912a5ca-3ee1-45ac-b182-46fec2610ee0
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
 rules:
 - MATCH,PROXIES

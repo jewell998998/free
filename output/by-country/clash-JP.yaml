@@ -5,155 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 206.251.53.91
-  port: 8443
+  server: 129.153.71.28
+  port: 28863
   udp: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: 3e956106-7f92-4cbf-bf77-715d3890fa84
   tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 108.160.136.71
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /doc/products/view?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 104.238.148.149
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /about?ed=2560
+    path: /@Marisa_kristi
     headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: 85.121.50.16
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /friends/go.php?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 104.156.238.23
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /bt/image/categories
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: 64.176.60.226
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /documents
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 07 - Jewell
-  server: 92.113.124.253
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /redirect.html/list/episode?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 08 - Jewell
-  server: 103.115.18.54
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /episode/files?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 09 R41 - Jewell
-  server: 45.32.57.118
-  port: 4433
-  udp: true
-  type: vmess
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-  alterId: 0
-  cipher: auto
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
-  - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
-  - 🇯🇵 日本 (Japan) 08 - Jewell
-  - 🇯🇵 日本 (Japan) 09 R41 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
-  - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
-  - 🇯🇵 日本 (Japan) 08 - Jewell
-  - 🇯🇵 日本 (Japan) 09 R41 - Jewell
 rules:
 - MATCH,PROXIES

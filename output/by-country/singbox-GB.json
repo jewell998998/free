@@ -4,20 +4,56 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "129.151.77.36",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "JAIIG6N6KLuM33ZbMh0jk1fVcDM3qTVfUoXhQr6tiYM="
+      "server": "104.21.22.180",
+      "server_port": 443,
+      "uuid": "33918b20-9e02-4dc6-8b30-79b2d4b2e0e6",
+      "tls": {
+        "enabled": true,
+        "server_name": "auto-scale-238b2b.infra-core-1630dd.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0",
+        "headers": {
+          "Host": "auto-scale-238b2b.infra-core-1630dd.workers.dev"
+        }
+      }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "134.65.62.82",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw="
+      "server": "104.21.39.30",
+      "server_port": 443,
+      "uuid": "7201b2cd-0675-4c1a-9c76-07ca14ffcf08",
+      "tls": {
+        "enabled": true,
+        "server_name": "6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoicHV2Z0VMNllZQmtoZEMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119",
+        "headers": {
+          "Host": "6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev"
+        }
+      }
     },
     {
       "type": "selector",

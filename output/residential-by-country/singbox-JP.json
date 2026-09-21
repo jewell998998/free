@@ -4,18 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
-      "server": "199.232.78.101",
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - Jewell",
+      "server": "162.159.228.255",
       "server_port": 443,
-      "password": "MiTIVPN",
+      "uuid": "b135a1e0-ebdb-4d46-b3fa-bd1e78580244",
       "tls": {
         "enabled": true,
-        "server_name": "ssl.fastly.com",
+        "server_name": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -23,8 +20,9 @@
       },
       "transport": {
         "type": "ws",
+        "path": "/@Marisa_kristi",
         "headers": {
-          "Host": "mitivpn---ss--s---mitivpn-11e.global.ssl.fastly.net"
+          "Host": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev"
         }
       }
     },
@@ -33,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 - Jewell"
+        "🇯🇵 日本 (Japan) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 - Jewell"
+        "🇯🇵 日本 (Japan) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

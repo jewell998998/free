@@ -5,19 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 129.151.77.36
-  port: 61312
+  server: 104.21.22.180
+  port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: JAIIG6N6KLuM33ZbMh0jk1fVcDM3qTVfUoXhQr6tiYM=
+  type: vless
+  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
+  tls: true
+  servername: auto-scale-238b2b.infra-core-1630dd.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
+    headers:
+      Host: auto-scale-238b2b.infra-core-1630dd.workers.dev
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 134.65.62.82
-  port: 61312
+  server: 104.21.39.30
+  port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw=
+  type: vless
+  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
+  tls: true
+  servername: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicHV2Z0VMNllZQmtoZEMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
+    headers:
+      Host: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select

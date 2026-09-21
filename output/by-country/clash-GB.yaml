@@ -1,0 +1,27 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 129.151.87.175
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: Bi1Qf5DBkEKpJDa8QA8LCm4rE+MZUBBUWfbYSWjv3bk=
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+rules:
+- MATCH,PROXIES

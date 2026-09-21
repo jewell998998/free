@@ -4,26 +4,52 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 01 R56 - Jewell",
-      "server": "185.164.175.81",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "type": "vmess",
+      "tag": "🇮🇹 意大利 (Italy) 01 - Jewell",
+      "server": "89.41.172.106",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇹 意大利 (Italy) 02 - Jewell",
+      "server": "31.77.154.14",
+      "server_port": 8443,
+      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
+      "tls": {
+        "enabled": true,
+        "server_name": "swscan.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3O__mdy-whzI07V-QEyR6GQnag1FNwtHijDxt2_jkDQ",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇹 意大利 (Italy) 01 R56 - Jewell"
+        "🇮🇹 意大利 (Italy) 01 - Jewell",
+        "🇮🇹 意大利 (Italy) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇹 意大利 (Italy) 01 R56 - Jewell"
+        "🇮🇹 意大利 (Italy) 01 - Jewell",
+        "🇮🇹 意大利 (Italy) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

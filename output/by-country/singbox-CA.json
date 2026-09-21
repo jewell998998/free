@@ -5,31 +5,41 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "tag": "🇨🇦 加拿大 (Canada) 01 R54 - Jewell",
       "server": "188.114.97.6",
-      "server_port": 2052,
+      "server_port": 2086,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/?ed=2560",
         "headers": {
           "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 02 R56 - Jewell",
+      "server": "142.4.216.225",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mrs2e9a"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 R54 - Jewell",
+        "🇨🇦 加拿大 (Canada) 02 R56 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 R54 - Jewell",
+        "🇨🇦 加拿大 (Canada) 02 R56 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

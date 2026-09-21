@@ -5,37 +5,49 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 134.255.227.145
-  port: 25809
+  server: 151.101.56.7
+  port: 443
   udp: true
-  type: vless
-  uuid: 5535c74b-3c4c-4de3-a70e-f25c7946e52a
-  tls: true
-  servername: gang.gayvibe.dpdns.org
+  type: trojan
+  password: MiTIVPN
+  sni: ssl.fastly.com
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 130.61.229.22
-  port: 59924
+  server: 199.232.78.101
+  port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: wXzmFw7CAbcKLPRBcOReRJ7KiCYB5H0VRqDc2r6AZVU=
+  type: trojan
+  password: MiTIVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
 - name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: 144.31.167.77
+  server: 185.255.179.11
+  port: 9443
+  udp: true
+  type: vless
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  tls: true
+  servername: hub-de-05.hanvpn.cc
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: de05-grpc-8e47a
+- name: 🇩🇪 德国 (Germany) 04 R50 - Jewell
+  server: 57.129.96.67
   port: 443
   udp: true
   type: vless
-  uuid: 190342ef-5555-4dd6-9d3e-529ce1bd1513
+  uuid: nasnet
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: 6YFaX1wQaOAxYxehqj8d4zcSeHutarC_9VCBWeUGGG0
-    short-id: 261afb322a
-  servername: www.sony.com
+  servername: nasnet-571299667-direct.mbghalibaf.com
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -45,6 +57,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 R50 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,5 +66,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 R50 - Jewell
 rules:
 - MATCH,PROXIES

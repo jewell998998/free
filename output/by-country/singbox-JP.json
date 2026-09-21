@@ -5,13 +5,16 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 01 - Jewell",
-      "server": "131.123.41.18",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/vless-test"
+        "path": "/?ed=2560security=tls",
+        "headers": {
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
+        }
       }
     },
     {
@@ -19,14 +22,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 保加利亚 (Bulgaria) 01 - Jewell"
+        "🇯🇵 日本 (Japan) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 保加利亚 (Bulgaria) 01 - Jewell"
+        "🇯🇵 日本 (Japan) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,20 +5,88 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 158.178.156.109
+  server: 104.18.47.113
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: 162.159.48.32
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 141.148.235.225
   port: 45819
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: k6zZ4UsgSK21sxEcneDfxRTXIuEe70PMH8tIGo5r59M=
-- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  password: +LvN6lfwn6hGbY4OnlZqzMIHRYhDK0TQFw8dXPxYJrI=
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 172.64.229.2
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: 176.222.53.236
+  port: 8445
+  udp: true
+  type: vless
+  uuid: e5d73666-1ac5-49fc-8e4d-5c8cad769588
+  tls: true
+  reality-opts:
+    public-key: _UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8
+    short-id: 6ba85179e30d4fc2
+  servername: hetzner.com
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Google
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   server: 152.70.49.160
   port: 45819
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: yj6VqkxO2Y6tTUCc/N2TF94a5YR02l5+jm3uE3u8ipo=
-- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  server: 141.148.225.103
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8RRsprK4nxB5VqKlMGFdXJerGo79K5bKdz4uF4crI8E=
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  server: 158.178.156.109
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: k6zZ4UsgSK21sxEcneDfxRTXIuEe70PMH8tIGo5r59M=
+- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  server: 23.137.249.110
+  port: 20365
+  udp: true
+  type: vless
+  uuid: 1a524663-4a74-4aad-b530-8618a540d857
+- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
   server: 130.12.242.106
   port: 443
   udp: true
@@ -31,15 +99,30 @@ proxies:
     short-id: 15affa0af66dfc79
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: 45.150.110.11
-  port: 8081
+- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  server: 8.47.69.0
+  port: 443
   udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /vless-test
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 12 - Jewell
+  server: 87.199.205.28
+  port: 443
+  udp: true
+  type: vless
+  uuid: 501a2da5-cb22-4a3f-915e-e3b821d1d62d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
+    short-id: ef1d3554c652a436
+  servername: vkvd754.okcdn.ru
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,6 +132,14 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,5 +149,13 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
 rules:
 - MATCH,PROXIES

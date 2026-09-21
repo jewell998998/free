@@ -5,94 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 199.232.78.160
-  port: 443
+  server: 134.255.227.145
+  port: 25809
   udp: true
-  type: trojan
-  password: MiTIVPN
-  sni: ssl.fastly.com
+  type: vless
+  uuid: 5535c74b-3c4c-4de3-a70e-f25c7946e52a
+  tls: true
+  servername: gang.gayvibe.dpdns.org
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/des---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    path: /
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 151.101.56.7
-  port: 443
-  udp: true
-  type: trojan
-  password: MiTIVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: 130.61.83.227
+  server: 130.61.229.22
   port: 59924
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: r0wobeAeafo7jTihelLSR2OBQpYXd5k0CtpAPHaZWew=
-- name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 151.101.56.7
-  port: 443
-  udp: true
-  type: trojan
-  password: MiTIVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/D-e2@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
-- name: 🇩🇪 德国 (Germany) 05 R44 - Jewell
-  server: 199.232.78.101
-  port: 443
-  udp: true
-  type: trojan
-  password: MiTIVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 06 - Jewell
-  server: 88.99.161.169
-  port: 11342
-  udp: true
-  type: vless
-  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
-    short-id: 6f7b38bd9420c4b8
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 07 - Jewell
-  server: 108.165.32.16
+  password: wXzmFw7CAbcKLPRBcOReRJ7KiCYB5H0VRqDc2r6AZVU=
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 144.31.167.77
   port: 443
   udp: true
   type: vless
-  uuid: 6dff8e33-b201-4cbb-8f89-b9418702bff2
+  uuid: 190342ef-5555-4dd6-9d3e-529ce1bd1513
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: IGIgHNW_hZRsP2DZqItH5wvFSr6H4rqpI9x-0IUCskU
-    short-id: ca3d
-  servername: www.logitech.com
-  client-fingerprint: ''
-- name: 🇩🇪 德国 (Germany) 08 - Jewell
-  server: 195.201.9.235
-  port: 11342
-  udp: true
-  type: vless
-  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
-    short-id: 6f7b38bd9420c4b8
-  servername: amp-api-edge.apps.apple.com
+    public-key: 6YFaX1wQaOAxYxehqj8d4zcSeHutarC_9VCBWeUGGG0
+    short-id: 261afb322a
+  servername: www.sony.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -102,11 +45,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
-  - 🇩🇪 德国 (Germany) 04 - Jewell
-  - 🇩🇪 德国 (Germany) 05 R44 - Jewell
-  - 🇩🇪 德国 (Germany) 06 - Jewell
-  - 🇩🇪 德国 (Germany) 07 - Jewell
-  - 🇩🇪 德国 (Germany) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -115,10 +53,5 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
-  - 🇩🇪 德国 (Germany) 04 - Jewell
-  - 🇩🇪 德国 (Germany) 05 R44 - Jewell
-  - 🇩🇪 德国 (Germany) 06 - Jewell
-  - 🇩🇪 德国 (Germany) 07 - Jewell
-  - 🇩🇪 德国 (Germany) 08 - Jewell
 rules:
 - MATCH,PROXIES

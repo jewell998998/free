@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 87.58.148.70
-  port: 443
+- name: 🇮🇹 意大利 (Italy) 01 R56 - Jewell
+  server: 185.164.175.81
+  port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: rg0g3xp9rk9nk9o0
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 01 R56 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 01 R56 - Jewell
 rules:
 - MATCH,PROXIES

@@ -54,7 +54,7 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 
-```python
+
 SOURCE_URLS = [
     # ============================================================
     # 10000+ 节点
@@ -301,7 +301,6 @@ SOURCE_URLS = [
     # 63
     "https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt",
 ]
-```
 
 
 OUTPUT_DIR = "output"

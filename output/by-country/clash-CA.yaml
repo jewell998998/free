@@ -1,0 +1,51 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 104.21.8.201
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 1d54a125-8f1e-46bb-9a23-0ecf4ac92db8
+  tls: true
+  servername: cdn-ca.skyvora.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fqg7aacd8s
+    headers:
+      Host: cdn-ca.skyvora.app
+- name: 🇨🇦 加拿大 (Canada) 02 R57 - Jewell
+  server: mygptagent.org
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: mygptagent.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇦 加拿大 (Canada) 01 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R57 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇦 加拿大 (Canada) 01 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R57 - Jewell
+rules:
+- MATCH,PROXIES

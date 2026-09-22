@@ -1,0 +1,49 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+      "server": "129.151.72.134",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "JDuG6erD7ug3QCtbLAZ2KCJaOhCmxAXL5C8bFxSsMBw="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "134.65.63.177",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "jdZdoYpsqIpPgrDVFr+pv1F3aOjy8fLvQeWcKaW3Cg0="
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

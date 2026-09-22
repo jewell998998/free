@@ -4,9 +4,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 104.18.46.234
-  port: 2095
+- name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  server: 104.18.34.14
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -20,12 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 01 - Jewell
 rules:
 - MATCH,PROXIES

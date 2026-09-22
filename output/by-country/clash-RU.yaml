@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 172.67.158.158
+- name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  server: www.speedtest.net
   port: 443
   udp: true
   type: vless
-  uuid: 7fc7f295-b80e-4235-bb17-61e3ddc0744a
+  uuid: d9224de0-fcff-4534-bfcb-1d7bdb1453e8
   tls: true
-  servername: 4zgcCBcB10PQYIbnWMM4nvznJ4.rOyAEhmAn5.WorKers.dev
+  servername: blacknet0.blacknet89.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/AV21Gwm6013FI8fP?ed=2560
+    path: /eyJqdW5rIjoiaEZzc0lFSmlmbHdNUWYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
     headers:
-      Host: 4zgccbcb10pqyibnwmm4nvznj4.royaehman5.workers.dev
+      Host: blacknet0.blacknet89.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
 rules:
 - MATCH,PROXIES

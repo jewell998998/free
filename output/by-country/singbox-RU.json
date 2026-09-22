@@ -5,26 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 01 - Jewell",
-      "server": "es.cache-4d8a.com",
+      "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+      "server": "www.speedtest.net",
       "server_port": 443,
-      "uuid": "ddf09ad0-02dc-485b-9048-1038de5bebf0",
+      "uuid": "d9224de0-fcff-4534-bfcb-1d7bdb1453e8",
       "tls": {
         "enabled": true,
-        "server_name": "es.cache-4d8a.com",
+        "server_name": "blacknet0.blacknet89.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "S6t9-gOX2mxWKNGvGSJ8NxDdlJy78d4gN2-wv2d0hFw",
-          "short_id": "8319913f2e5f5711"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiaEZzc0lFSmlmbHdNUWYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119",
+        "headers": {
+          "Host": "blacknet0.blacknet89.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
@@ -32,14 +33,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

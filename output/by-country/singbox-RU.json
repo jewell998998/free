@@ -5,8 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - Jewell",
-      "server": "162.159.0.53",
+      "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+      "server": "104.18.46.234",
+      "server_port": 8080,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560security=tls",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+      "server": "172.64.229.170",
       "server_port": 2052,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
@@ -22,14 +36,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

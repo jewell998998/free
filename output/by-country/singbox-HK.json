@@ -4,30 +4,21 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "tuic",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "108.162.198.178",
-      "server_port": 2095,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-      "server": "162.159.39.218",
-      "server_port": 2086,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
+      "server": "1fd0c4d5-tk7400-tlbcwm-1rfon.pccw3.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "aed1cc24-351d-11ef-ba52-f23c9164ca5d",
+      "password": "aed1cc24-351d-11ef-ba52-f23c9164ca5d",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
@@ -35,16 +26,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

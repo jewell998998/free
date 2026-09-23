@@ -4,33 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: q2-phbest7v2a8iuowpr.g0xigfh41wwnv39y-b3rzmht.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: 709b1cf4-a386-4cbf-bcf4-46f03c4788a8
-  tls: true
-  servername: Q2-phBEst7V2a8IuOWPR.G0XigfH41WwnV39y-b3rZmhT.woRkERS.dEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/haJDS41sDx9Tuof7VR?ed=2560
-    headers:
-      Host: q2-phbest7v2a8iuowpr.g0xigfh41wwnv39y-b3rzmht.workers.dev
-- name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 151.101.56.7
-  port: 443
-  udp: true
-  type: trojan
-  password: MITIVpN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
+- name: 🇩🇪 德国 (Germany) 01 R51 - Jewell
   server: 199.232.78.101
   port: 443
   udp: true
@@ -41,21 +15,55 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: 199.232.78.160
+  port: 443
+  udp: true
+  type: trojan
+  password: MITIVpN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/des---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: api.ohbah.com
+  port: 25287
+  udp: true
+  type: hysteria2
+  password: telegram-ID-conf0088
+  sni: api.ohbah.com
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: telegram-ID-conf0088
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: 151.101.56.7
+  port: 443
+  udp: true
+  type: trojan
+  password: MITIVpN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 - Jewell
+  - 🇩🇪 德国 (Germany) 01 R51 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 - Jewell
+  - 🇩🇪 德国 (Germany) 01 R51 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
 rules:
 - MATCH,PROXIES

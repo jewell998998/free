@@ -5,40 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 108.162.198.178
-  port: 2095
+  server: 1fd0c4d5-tk7400-tlbcwm-1rfon.pccw3.hyhuawei.com
+  port: 443
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 162.159.39.218
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: tuic
+  uuid: aed1cc24-351d-11ef-ba52-f23c9164ca5d
+  password: aed1cc24-351d-11ef-ba52-f23c9164ca5d
+  sni: 1fd0c4d5-tk7400-tlbcwm-1rfon.pccw3.hyhuawei.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 rules:
 - MATCH,PROXIES

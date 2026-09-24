@@ -1,0 +1,66 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  server: 23.137.249.110
+  port: 20365
+  udp: true
+  type: vless
+  uuid: 1a524663-4a74-4aad-b530-8618a540d857
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: 92.5.231.246
+  port: 62145
+  udp: true
+  type: vless
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 152.70.59.131
+  port: 62145
+  udp: true
+  type: vless
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 151.243.173.119
+  port: 33736
+  udp: true
+  type: vmess
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: 132.243.166.247
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+rules:
+- MATCH,PROXIES

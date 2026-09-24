@@ -4,14 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 01 - Jewell",
-      "server": "153.76.185.150",
-      "server_port": 3090,
-      "uuid": "163130a7-42d6-40bf-9574-3d9eff14dcb2",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+      "type": "hysteria2",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 01 - Jewell",
+      "server": "77.74.123.98",
+      "server_port": 8443,
+      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
+      "tls": {
+        "enabled": true,
+        "server_name": "grape-test-italy.dynuddns.net",
+        "insecure": false
       }
     },
     {
@@ -19,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - Jewell"
+        "🇷🇴 罗马尼亚 (Romania) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - Jewell"
+        "🇷🇴 罗马尼亚 (Romania) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

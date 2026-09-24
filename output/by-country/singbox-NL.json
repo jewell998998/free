@@ -1,0 +1,83 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+      "server": "23.137.249.110",
+      "server_port": 20365,
+      "uuid": "1a524663-4a74-4aad-b530-8618a540d857"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+      "server": "92.5.231.246",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+      "server": "152.70.59.131",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+      "server": "151.243.173.119",
+      "server_port": 33736,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+      "server": "132.243.166.247",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-test"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

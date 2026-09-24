@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 129.151.83.115
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 7+83lYmtkC1TL9F5THnzEGaaF24mquCQgoT+DqJDrlE=
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
   server: 35.234.143.34
   port: 443
   udp: true
@@ -15,18 +22,20 @@ proxies:
     public-key: bx1ylgNlSmg4i-abKzPcSHGMlIE6gdf66Ysjv25ZrE4
     short-id: 1b580f160d965b01
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,16 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: cctvhikvision.center
-  port: 2052
+  server: 130.61.114.98
+  port: 59924
   udp: true
-  type: vless
-  uuid: b1a8d1eb-dfb2-4dd3-afe6-cd0fff8177df
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: PISvrx4EJiuuPiMKlSP6CUw8hpr1QPctt+5SNKtL0us=
 proxy-groups:
 - name: PROXIES
   type: select

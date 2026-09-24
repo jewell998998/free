@@ -4,60 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 01 R57 - Jewell",
-      "server": "108.162.198.178",
-      "server_port": 8880,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 02 - Jewell",
-      "server": "104.21.94.230",
-      "server_port": 443,
-      "uuid": "de78c0b1-c5c8-412a-bd92-430d1f2e2642",
-      "tls": {
-        "enabled": true,
-        "server_name": "FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/NmrU9ImDG7jA7oFEem",
-        "headers": {
-          "Host": "frosty-pond-7436.shhabbyat914.workers.dev"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+      "server": "158.178.229.235",
+      "server_port": 56927,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "4nphreJpAUpxvkVQmO2l37kEup8qRu7pcSYU0JbJLVM="
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇬 新加坡 (Singapore) 01 R57 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 02 - Jewell"
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇬 新加坡 (Singapore) 01 R57 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 02 - Jewell"
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

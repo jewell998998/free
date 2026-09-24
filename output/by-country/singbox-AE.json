@@ -4,26 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 德国 (Germany) 01 - Jewell",
-      "server": "130.61.114.98",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "PISvrx4EJiuuPiMKlSP6CUw8hpr1QPctt+5SNKtL0us="
+      "type": "hysteria2",
+      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+      "server": "85.204.107.174",
+      "server_port": 8080,
+      "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
+      "tls": {
+        "enabled": true,
+        "server_name": "hopp-romania-new.roxa.org",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

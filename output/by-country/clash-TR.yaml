@@ -4,12 +4,12 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 - Jewell
-  server: 153.76.185.148
-  port: 3090
+- name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  server: 185.87.24.170
+  port: 2085
   udp: true
   type: vless
-  uuid: 1552d599-a036-4389-a5c0-bf14dfaddc1a
+  uuid: 131b4772-9597-4c02-8323-6c7be3d7736d
   network: grpc
   grpc-opts:
     grpc-service-name: vless
@@ -18,12 +18,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,23 +4,19 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R56 - Jewell",
-      "server": "142.4.216.225",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "mrs2e9a"
-    },
-    {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
-      "server": "104.21.8.201",
+      "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
+      "server": "172.67.130.159",
       "server_port": 2096,
       "uuid": "1d54a125-8f1e-46bb-9a23-0ecf4ac92db8",
       "tls": {
         "enabled": true,
         "server_name": "cdn-ca.skyvora.app",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
@@ -35,16 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R56 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R56 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,29 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-      "server": "185.87.24.170",
-      "server_port": 2085,
-      "uuid": "131b4772-9597-4c02-8323-6c7be3d7736d",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
+      "type": "shadowsocks",
+      "tag": "🇮🇹 意大利 (Italy) 01 - Jewell",
+      "server": "185.164.175.81",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 - Jewell"
+        "🇮🇹 意大利 (Italy) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 - Jewell"
+        "🇮🇹 意大利 (Italy) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

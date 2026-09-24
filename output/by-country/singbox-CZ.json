@@ -5,16 +5,13 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 01 - Jewell",
-      "server": "cctvhikvision.center",
-      "server_port": 2052,
-      "uuid": "b1a8d1eb-dfb2-4dd3-afe6-cd0fff8177df",
+      "tag": "🇨🇿 捷克 (Czech) 01 - Jewell",
+      "server": "153.76.185.150",
+      "server_port": 3090,
+      "uuid": "163130a7-42d6-40bf-9574-3d9eff14dcb2",
       "transport": {
-        "type": "ws",
-        "path": "/@BlueKnight_net--@BlueKnight_net",
-        "headers": {
-          "Host": "uwu.blueknightnet.qzz.io"
-        }
+        "type": "grpc",
+        "service_name": "vless"
       }
     },
     {
@@ -22,14 +19,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 - Jewell"
+        "🇨🇿 捷克 (Czech) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 - Jewell"
+        "🇨🇿 捷克 (Czech) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  server: 51.20.86.152
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
   server: 16.170.221.224
   port: 443
   udp: true
@@ -17,11 +24,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
 rules:
 - MATCH,PROXIES

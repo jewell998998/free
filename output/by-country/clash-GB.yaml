@@ -5,44 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 188.114.96.8
+  server: 35.234.143.34
   port: 443
   udp: true
   type: vless
-  uuid: eb24c3b4-7936-45e2-a253-e54fd1955a7f
+  uuid: 9743b4f9-24c3-4e53-8b03-c3b5cd9b71b2
   tls: true
-  servername: c0yR9J09Y2l9G0td8wA5.2wHbrirHJgSlM43zJcqeI.WoRkERS.dEv
-  skip-cert-verify: false
+  reality-opts:
+    public-key: bx1ylgNlSmg4i-abKzPcSHGMlIE6gdf66Ysjv25ZrE4
+    short-id: 1b580f160d965b01
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/Sltu36eJc3zvD9Npaxsj2vJ?ed=2560
-    headers:
-      Host: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 104.17.147.22
-  port: 80
-  udp: true
-  type: vless
-  uuid: 63f1ef69-92fd-427a-b3e4-98ffddf81ac6
-  network: ws
-  ws-opts:
-    path: /nPKoVRUdyuRZ6jpY/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbSxwcm94eWlwLmNtbGl1c3Nzcy5uZXQsbmltYS5uc2NsLmlyLHR1cmsucmFkaWNhbGl6YXRpb24uaXI=
-    headers:
-      Host: young-rice-749e.heliy78750.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
 rules:
 - MATCH,PROXIES

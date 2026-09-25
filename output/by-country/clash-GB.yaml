@@ -5,46 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 172.66.47.44
+  server: 188.114.96.8
   port: 443
   udp: true
-  type: trojan
-  password: TsX0XJKMa2h$CbKr0k
-  sni: iDB8onmvBnTuyt5T7T6CejfW8vlRb.PagES.DeV
+  type: vless
+  uuid: eb24c3b4-7936-45e2-a253-e54fd1955a7f
+  tls: true
+  servername: c0yR9J09Y2l9G0td8wA5.2wHbrirHJgSlM43zJcqeI.WoRkERS.dEv
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/60XnEWrAQkStT4oTTwmkao9a4sc
+    path: /vl/Sltu36eJc3zvD9Npaxsj2vJ?ed=2560
+    headers:
+      Host: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 172.64.155.209
-  port: 443
+  server: 104.17.147.22
+  port: 80
   udp: true
   type: vless
-  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
-  tls: true
-  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 63f1ef69-92fd-427a-b3e4-98ffddf81ac6
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /nPKoVRUdyuRZ6jpY/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbSxwcm94eWlwLmNtbGl1c3Nzcy5uZXQsbmltYS5uc2NsLmlyLHR1cmsucmFkaWNhbGl6YXRpb24uaXI=
     headers:
-      Host: ancient-heart-60c5.dpccgizieb.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 188.114.97.8
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d4d2d3f3-9dec-4e8f-8daf-145ecac96e66
-  tls: true
-  servername: cRIMSON-LeAf-7E45.hzhdUuEBFjDCB.workERs.DEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiODgwQ1AwWDV0MnFTRWE1cCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: crimson-leaf-7e45.hzhduuebfjdcb.workers.dev
+      Host: young-rice-749e.heliy78750.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 rules:
 - MATCH,PROXIES

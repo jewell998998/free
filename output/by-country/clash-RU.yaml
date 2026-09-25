@@ -5,31 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 188.114.96.8
-  port: 443
+  server: 162.159.39.218
+  port: 2052
   udp: true
   type: vless
-  uuid: eb24c3b4-7936-45e2-a253-e54fd1955a7f
-  tls: true
-  servername: c0yR9J09Y2l9G0td8wA5.2wHbrirHJgSlM43zJcqeI.WoRkERS.dEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /vl/Sltu36eJc3zvD9Npaxsj2vJ?ed=2560
+    path: /?ed=2560security=tls
     headers:
-      Host: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 104.18.47.113
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 rules:
 - MATCH,PROXIES

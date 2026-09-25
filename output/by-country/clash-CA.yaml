@@ -1,0 +1,45 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇦 加拿大 (Canada) 01 R56 - Jewell
+  server: 142.4.216.225
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇨🇦 加拿大 (Canada) 02 R57 - Jewell
+  server: mygptagent.org
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: mygptagent.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: mygptagent.org
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇦 加拿大 (Canada) 01 R56 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R57 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇦 加拿大 (Canada) 01 R56 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R57 - Jewell
+rules:
+- MATCH,PROXIES

@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  server: 188.114.96.8
+  port: 443
+  udp: true
+  type: vless
+  uuid: eb24c3b4-7936-45e2-a253-e54fd1955a7f
+  tls: true
+  servername: c0yR9J09Y2l9G0td8wA5.2wHbrirHJgSlM43zJcqeI.WoRkERS.dEv
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/Sltu36eJc3zvD9Npaxsj2vJ?ed=2560
+    headers:
+      Host: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+rules:
+- MATCH,PROXIES

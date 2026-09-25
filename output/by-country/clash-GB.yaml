@@ -5,24 +5,46 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 129.151.83.115
-  port: 61312
+  server: 172.66.47.44
+  port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 7+83lYmtkC1TL9F5THnzEGaaF24mquCQgoT+DqJDrlE=
+  type: trojan
+  password: TsX0XJKMa2h$CbKr0k
+  sni: iDB8onmvBnTuyt5T7T6CejfW8vlRb.PagES.DeV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/60XnEWrAQkStT4oTTwmkao9a4sc
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 35.234.143.34
+  server: 172.64.155.209
   port: 443
   udp: true
   type: vless
-  uuid: 9743b4f9-24c3-4e53-8b03-c3b5cd9b71b2
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
   tls: true
-  reality-opts:
-    public-key: bx1ylgNlSmg4i-abKzPcSHGMlIE6gdf66Ysjv25ZrE4
-    short-id: 1b580f160d965b01
-  servername: www.cloudflare.com
-  client-fingerprint: ''
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 188.114.97.8
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d4d2d3f3-9dec-4e8f-8daf-145ecac96e66
+  tls: true
+  servername: cRIMSON-LeAf-7E45.hzhdUuEBFjDCB.workERs.DEv
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiODgwQ1AwWDV0MnFTRWE1cCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: crimson-leaf-7e45.hzhduuebfjdcb.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -30,6 +52,7 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -37,5 +60,6 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 rules:
 - MATCH,PROXIES

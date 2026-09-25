@@ -4,30 +4,74 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "trojan",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "129.151.83.115",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "7+83lYmtkC1TL9F5THnzEGaaF24mquCQgoT+DqJDrlE="
+      "server": "172.66.47.44",
+      "server_port": 443,
+      "password": "TsX0XJKMa2h$CbKr0k",
+      "tls": {
+        "enabled": true,
+        "server_name": "iDB8onmvBnTuyt5T7T6CejfW8vlRb.PagES.DeV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/60XnEWrAQkStT4oTTwmkao9a4sc",
+        "headers": {
+          "Host": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "35.234.143.34",
+      "server": "172.64.155.209",
       "server_port": 443,
-      "uuid": "9743b4f9-24c3-4e53-8b03-c3b5cd9b71b2",
+      "uuid": "11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0",
+        "headers": {
+          "Host": "ancient-heart-60c5.dpccgizieb.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+      "server": "188.114.97.8",
+      "server_port": 8443,
+      "uuid": "d4d2d3f3-9dec-4e8f-8daf-145ecac96e66",
+      "tls": {
+        "enabled": true,
+        "server_name": "cRIMSON-LeAf-7E45.hzhdUuEBFjDCB.workERs.DEv",
+        "insecure": false,
+        "utls": {
           "enabled": true,
-          "public_key": "bx1ylgNlSmg4i-abKzPcSHGMlIE6gdf66Ysjv25ZrE4",
-          "short_id": "1b580f160d965b01"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiODgwQ1AwWDV0MnFTRWE1cCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "crimson-leaf-7e45.hzhduuebfjdcb.workers.dev"
         }
       }
     },
@@ -37,7 +81,8 @@
       "outbounds": [
         "auto",
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell"
       ]
     },
     {
@@ -45,7 +90,8 @@
       "tag": "auto",
       "outbounds": [
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

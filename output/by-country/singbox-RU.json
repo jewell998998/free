@@ -5,22 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
-      "server": "158.247.247.189",
+      "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+      "server": "188.114.96.8",
       "server_port": 443,
-      "uuid": "7822d0d3-20be-4619-848d-db930d8be3ba",
-      "flow": "xtls-rprx-vision",
+      "uuid": "eb24c3b4-7936-45e2-a253-e54fd1955a7f",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "c0yR9J09Y2l9G0td8wA5.2wHbrirHJgSlM43zJcqeI.WoRkERS.dEv",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "CWokiwI-GcRo_7_2uvPvObAzykEMJm97yl6hj2c4ZB4",
-          "short_id": "b68f94a9d5a1a016"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/Sltu36eJc3zvD9Npaxsj2vJ?ed=2560",
+        "headers": {
+          "Host": "c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev"
         }
       }
     },
@@ -29,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: se1.chromevpn.cc
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  server: 217.60.182.79
   port: 443
   udp: true
   type: hysteria2
-  password: 02bd8b5a-170b-4a79-8e68-9cec710272c7
-  sni: se1.chromevpn.cc
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  sni: cabinet.wwwinternetvideo.click
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
 rules:
 - MATCH,PROXIES

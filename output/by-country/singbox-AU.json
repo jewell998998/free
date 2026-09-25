@@ -4,30 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "se1.chromevpn.cc",
-      "server_port": 443,
-      "password": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
-      "tls": {
-        "enabled": true,
-        "server_name": "se1.chromevpn.cc",
-        "insecure": false
-      }
+      "type": "vmess",
+      "tag": "🇦🇺 澳大利亚 (Australia) 01 - Jewell",
+      "server": "82.198.246.97",
+      "server_port": 180,
+      "uuid": "d13fc2f5-3e05-4795-81eb-44143a09e552",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell"
+        "🇦🇺 澳大利亚 (Australia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell"
+        "🇦🇺 澳大利亚 (Australia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

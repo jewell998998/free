@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 51.20.122.188
-  port: 443
+- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  server: 82.198.246.97
+  port: 180
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,29 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "104.21.90.36",
+      "server": "se1.chromevpn.cc",
       "server_port": 443,
-      "uuid": "4908acbe-485f-4e1c-bb11-5dd04b9f7e88",
+      "password": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
       "tls": {
         "enabled": true,
-        "server_name": "restless-base-fe24.alirezahabibi20009.workers.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "restless-base-fe24.alirezahabibi20009.workers.dev"
-        }
+        "server_name": "se1.chromevpn.cc",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "fi2.chromevpn.cc",
+      "server_port": 443,
+      "password": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi2.chromevpn.cc",
+        "insecure": false
       }
     },
     {
@@ -34,14 +32,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

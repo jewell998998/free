@@ -1,0 +1,145 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: 3.112.72.143
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 18.179.111.96
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 54.199.248.166
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 18.183.215.124
+  port: 28573
+  udp: true
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: 43.133.11.187
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
+    short-id: 913e9b95fbc71278
+  servername: cloudflare.com
+  client-fingerprint: ios
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  server: 141.11.138.132
+  port: 443
+  udp: true
+  type: vless
+  uuid: b47cc98c-54f4-4ab2-acb9-b493a04ccc6b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Kb511WMVMJe1nImN8kCi9PdPQSGu3aZCrffMOvzv43A
+    short-id: f9ca9286d0ff8920
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 07 - Jewell
+  server: 38.207.130.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
+    short-id: 6d962e8d8a0dce
+  servername: amazon.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 08 - Jewell
+  server: open.w2m.ink
+  port: 443
+  udp: true
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.w2m.ink
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 09 - Jewell
+  server: 103.137.215.122
+  port: 443
+  udp: true
+  type: vless
+  uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c
+    short-id: 2223411c2ad9c55f
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 10 - Jewell
+  server: 141.11.138.132
+  port: 443
+  udp: true
+  type: vless
+  uuid: b47cc98c-54f4-4ab2-acb9-b493a04ccc6b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Kb511WMVMJe1nImN8kCi9PdPQSGu3aZCrffMOvzv43A
+    short-id: f9ca9286d0ff8920
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
+  - 🇯🇵 日本 (Japan) 07 - Jewell
+  - 🇯🇵 日本 (Japan) 08 - Jewell
+  - 🇯🇵 日本 (Japan) 09 - Jewell
+  - 🇯🇵 日本 (Japan) 10 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
+  - 🇯🇵 日本 (Japan) 07 - Jewell
+  - 🇯🇵 日本 (Japan) 08 - Jewell
+  - 🇯🇵 日本 (Japan) 09 - Jewell
+  - 🇯🇵 日本 (Japan) 10 - Jewell
+rules:
+- MATCH,PROXIES

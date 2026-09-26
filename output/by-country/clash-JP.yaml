@@ -5,107 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 18.179.111.96
-  port: 443
+  server: 128.241.25.11
+  port: 30021
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 18.181.145.202
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 18.181.165.254
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: 147.78.242.19
-  port: 81
-  udp: true
-  type: vmess
-  uuid: 357b37cc-d0d2-47ef-aa1a-0a668447999e
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 96e2e8fa-f7e6-466c-bd21-689d29c7ccb2
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 18.183.215.124
-  port: 28573
-  udp: true
-  type: vless
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  servername: www.sony.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: 34.84.126.188
-  port: 443
-  udp: true
-  type: vless
-  uuid: 51a43b75-c84b-46eb-885e-c24e7819cd0b
-  tls: true
-  reality-opts:
-    public-key: qMPnrSiXgWvw2ETefb46OfJKnYpfX6HfyGdWpWWxtVI
-    short-id: 780152c21e234b5a
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 07 - Jewell
-  server: 13.115.71.198
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇯🇵 日本 (Japan) 08 - Jewell
-  server: jumpernode.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
-    short-id: 6d962e8d8a0dce
-  servername: amazon.com
-  client-fingerprint: qq
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
-  - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
-  - 🇯🇵 日本 (Japan) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
-  - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
-  - 🇯🇵 日本 (Japan) 08 - Jewell
 rules:
 - MATCH,PROXIES

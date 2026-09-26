@@ -1,0 +1,78 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇩🇪 德国 (Germany) 01 - Jewell
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: 30f67sbq8jjwmt7gytfc14.0m68-qz3hqyfnlar6n3iq.workers.dev
+  port: 443
+  udp: true
+  type: trojan
+  password: Telegram_healer_config
+  sni: 30F67SBQ8jJWMT7gytfc14.0m68-qZ3hqYFNlaR6n3Iq.WorKerS.Dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/MBHDTiG2ZHfgBBj9iEpRFkse0tafJ?ed=2560
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: restless-base-fe24.alirezahabibi20009.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4908acbe-485f-4e1c-bb11-5dd04b9f7e88
+  tls: true
+  servername: restless-base-fe24.alirezahabibi20009.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: restless-base-fe24.alirezahabibi20009.workers.dev
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: 104.21.91.50
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3e43ffd1-3f7b-45b0-a955-c249010c7ebc
+  tls: true
+  servername: Open-39.AVL-a47261.WorKErS.DeV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/9Vd7GxzImsNPSKUT9uIK0uYIARIV?ed=2560
+    headers:
+      Host: open-39.avl-a47261.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇩🇪 德国 (Germany) 01 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇩🇪 德国 (Germany) 01 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
+rules:
+- MATCH,PROXIES

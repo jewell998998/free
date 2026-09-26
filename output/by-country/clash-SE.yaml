@@ -5,57 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 51.20.143.248
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 13.51.242.39
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 51.20.72.15
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
   server: 13.49.76.55
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  server: 13.60.213.145
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 06 - Jewell
-  server: 191.44.114.66
-  port: 443
-  udp: true
-  type: vless
-  uuid: 718b9643-20e3-4f9e-9f8d-87ce6801d55e
-  tls: true
-  reality-opts:
-    public-key: uE1WBdW9se1rQnx8Vh-a1jjaehzK-iUmCVrPui5KU3g
-    short-id: 53499a662395
-  servername: ai.android
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇸🇪 瑞典 (Sweden) 07 - Jewell
-  server: 16.170.221.224
   port: 443
   udp: true
   type: ss
@@ -67,23 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 06 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 06 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 07 - Jewell
 rules:
 - MATCH,PROXIES

@@ -94,14 +94,14 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",        # 3933
     "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/iran.txt",                    # 3000
     "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/protocols/trojan.txt", # 2823
-    "https://raw.githubusercontent.com/Argh94/Proxy-List/refs/heads/main/All_Config.txt",                         # 2542
+    "https://raw.githubusercontent.com/Argh94/Proxy-List/refs/heads/main/All_Config.txt",                         # 2475
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",                       # 2286
     "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt",                    # 2000
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",                                    # 2000
     "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/protocols/vless.txt",  # 1951
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",                  # 1841
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",           # 1841
     "https://735754647.github.io/Free-Nodes/v2ray.txt",                                                          # 1806
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",                  # 1798
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",           # 1798
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",              # 1632
     "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/patt/all.txt",         # 1552
     # ============================================================
@@ -130,17 +130,15 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector_Py/refs/heads/main/sub/Mix/mix.txt",             # 294
     "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt", # 277
     "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt",                   # 263
-    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",      # 262
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",      # 254
     # ============================================================
     # 100 - 250 节点
     # ============================================================
     "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt", # 246
     "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",                                           # 230
-    "https://wild-cloud-9893.heleimail.workers.dev",                                                             # 218
     "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt",      # 198
     "https://www.ermao.net/sub/v2ray/ermao.net",                                                                 # 170
     "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY.txt",                                 # 150
-    "https://open.heleimail.workers.dev/",                                                                       # 150
     "https://www.xrayvip.com/free.txt",                                                                           # 118
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",                                     # 100
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",                            # 100
@@ -156,7 +154,6 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/freefq/free/master/v2",                                                   # 15
     "https://nodesfree.github.io/v2raynode/subscribe/v2ray.txt",                                                 # 6
 ]
-
 
 
 OUTPUT_DIR = "output"

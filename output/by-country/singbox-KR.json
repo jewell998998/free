@@ -5,28 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
-      "server": "netra-85a0ca.shoameni19.workers.dev",
-      "server_port": 443,
-      "uuid": "20836693-ea23-4f40-a1e7-48a6da897917",
+      "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
+      "server": "kr2-r.link-t7.com",
+      "server_port": 10047,
+      "uuid": "58C828CD-3EBA-46F9-B297-16003D7A6E68",
       "tls": {
         "enabled": true,
-        "server_name": "netra-85a0ca.shoameni19.workers.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "s0.awsstatic.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE",
+          "short_id": "686c0ef0"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/vl/bluTTbb7MO8rvX1COEYH4WW4qzbr2aui?ed=2560 ",
-        "headers": {
-          "Host": "netra-85a0ca.shoameni19.workers.dev"
-        }
+        "type": "grpc",
+        "service_name": "update"
       }
     },
     {
@@ -34,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇬 新加坡 (Singapore) 01 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇬 新加坡 (Singapore) 01 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

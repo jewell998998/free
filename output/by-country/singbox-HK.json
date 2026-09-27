@@ -4,22 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R57 - Jewell",
-      "server": "mygptagent.org",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "mygptagent.org",
-        "insecure": false
-      },
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+      "server": "172.64.229.2",
+      "server_port": 2086,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/linkvws",
+        "path": "/?ed=2560security=tls",
         "headers": {
-          "Host": "mygptagent.org"
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
       }
     },
@@ -28,14 +22,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R57 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R57 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

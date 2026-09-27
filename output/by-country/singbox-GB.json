@@ -4,90 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "hysteria2",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "199.232.78.188",
+      "server": "se1.chromevpn.cc",
       "server_port": 443,
-      "password": "MiTiVPN",
+      "password": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
       "tls": {
         "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "mitivpn---gb--s---mitivpn-1.global.ssl.fastly.net"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "144.24.227.214",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "ngEu2MRJXDGlSxpTvPyLdOG64A9jtECl4AR1uHXP2So="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-      "server": "144.24.224.133",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "/Y28XsDfiP+fi4Refwdekr6F67d7EgGeA7F2lP+T31o="
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-      "server": "176.123.162.100",
-      "server_port": 9880,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
-      "server": "31.76.7.154",
-      "server_port": 7443,
-      "uuid": "d7cad038-0c3f-4cce-8f8a-36464aaf66c0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ",
-          "short_id": "d2061bb1"
-        }
+        "server_name": "se1.chromevpn.cc",
+        "insecure": false
       }
     },
     {
@@ -95,22 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 05 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 05 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,28 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  server: 94.183.170.65
-  port: 8081
+- name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  server: 172.64.229.2
+  port: 2086
   udp: true
   type: vless
-  uuid: e60bc99b-6630-4799-af84-f90ebdc643b6
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /ws/generate
+    path: /?ed=2560security=tls
     headers:
-      Host: hys2.arkonsoft.top
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
 rules:
 - MATCH,PROXIES

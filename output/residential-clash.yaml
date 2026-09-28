@@ -4,9 +4,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 172.64.229.2
-  port: 2086
+- name: 🇺🇸 美国 (United States) 01 (家宽) - Jewell
+  server: 172.64.52.6
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -20,12 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇺🇸 美国 (United States) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇺🇸 美国 (United States) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

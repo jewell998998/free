@@ -5,61 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 104.18.32.47
+  server: 104.21.87.130
   port: 443
   udp: true
-  type: vless
-  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
-  tls: true
-  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  type: trojan
+  password: Telegram_healer_config
+  sni: z6y-daOX0hyhDtdy.r720kPByx2l3i406.wOrKErS.DEv
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-    headers:
-      Host: ancient-heart-60c5.dpccgizieb.workers.dev
-- name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  type: vless
-  uuid: 20e295db-a6af-4006-bfd6-91453f169968
-  tls: true
-  servername: 057.ElecTRocElLco-Cf-057.wOrKeRs.dEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 057.electrocellco-cf-057.workers.dev
-- name: 🇩🇪 德国 (Germany) 03 R50 - Jewell
-  server: 104.17.148.22
-  port: 8080
-  udp: true
-  type: vless
-  uuid: c44542db-493d-45dd-ad0e-4479f56e70d8
-  network: ws
-  ws-opts:
-    path: /vl/2HQNmb5VoOwqKpXPz60zvv8yQeQAS48?ed=2560
-    headers:
-      Host: zhph1zsu3ass0yd2jjmcdpynmbv.pesareshah975.workers.dev
+    path: /tr/UOAg5ubCk87OTaiIAxc0O?ed=2560
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 - Jewell
-  - 🇩🇪 德国 (Germany) 02 - Jewell
-  - 🇩🇪 德国 (Germany) 03 R50 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇩🇪 德国 (Germany) 01 - Jewell
-  - 🇩🇪 德国 (Germany) 02 - Jewell
-  - 🇩🇪 德国 (Germany) 03 R50 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,8 +4,8 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - Jewell
-  server: 188.114.97.6
+- name: 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
+  server: 104.21.70.21
   port: 8080
   udp: true
   type: vless
@@ -20,12 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - Jewell
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - Jewell
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
 rules:
 - MATCH,PROXIES

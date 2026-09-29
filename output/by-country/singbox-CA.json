@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 01 ⚠R - Jewell",
-      "server": "198.57.27.190",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
+      "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
       "server": "34.95.28.161",
       "server_port": 443,
       "uuid": "448b76ac-c636-4303-bec1-0b2c22afee0c",
@@ -32,20 +24,57 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 02 R56 - Jewell",
+      "server": "142.4.216.225",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mrs2e9a"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇨🇦 加拿大 (Canada) 03 ⚠R - Jewell",
+      "server": "198.57.27.190",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇨🇦 加拿大 (Canada) 04 R57 - Jewell",
+      "server": "mygptagent.org",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "mygptagent.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 ⚠R - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell",
+        "🇨🇦 加拿大 (Canada) 02 R56 - Jewell",
+        "🇨🇦 加拿大 (Canada) 03 ⚠R - Jewell",
+        "🇨🇦 加拿大 (Canada) 04 R57 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 ⚠R - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell",
+        "🇨🇦 加拿大 (Canada) 02 R56 - Jewell",
+        "🇨🇦 加拿大 (Canada) 03 ⚠R - Jewell",
+        "🇨🇦 加拿大 (Canada) 04 R57 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

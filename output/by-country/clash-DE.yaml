@@ -5,35 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 188.114.97.6
+  server: 199.232.78.170
   port: 443
   udp: true
-  type: vless
-  uuid: 20e295db-a6af-4006-bfd6-91453f169968
-  tls: true
-  servername: 057.ElecTRocElLco-Cf-057.wOrKeRs.dEv
+  type: trojan
+  password: mitivpn
+  sni: ssl.fastly.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 057.electrocellco-cf-057.workers.dev
+    path: '@mehrosabiran'
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 104.21.39.30
+  server: port2.axiomed.ir
   port: 443
   udp: true
   type: vless
-  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
+  uuid: d443c411-85e4-4e0e-8251-2294d7e7ae0b
   tls: true
-  servername: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
+  servername: JwD9bmigRp5s8PqHAYvpR6DJ6Ol.fORNewIRaN-1014.wOrkErS.Dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoicHV2Z0VMNllZQmtoZEMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
+    path: /vl/II2kyrr06FWkCZfkFs?ed=2560
     headers:
-      Host: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
+      Host: jwd9bmigrp5s8pqhayvpr6dj6ol.fornewiran-1014.workers.dev
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 199.232.78.170
+  port: 443
+  udp: true
+  type: trojan
+  password: mitivpn
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,6 +48,7 @@ proxy-groups:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,5 +56,6 @@ proxy-groups:
   proxies:
   - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
 rules:
 - MATCH,PROXIES

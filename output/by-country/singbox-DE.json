@@ -4,37 +4,14 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇩🇪 德国 (Germany) 01 - Jewell",
-      "server": "188.114.97.6",
+      "server": "199.232.78.170",
       "server_port": 443,
-      "uuid": "20e295db-a6af-4006-bfd6-91453f169968",
+      "password": "mitivpn",
       "tls": {
         "enabled": true,
-        "server_name": "057.ElecTRocElLco-Cf-057.wOrKeRs.dEv",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "057.electrocellco-cf-057.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 02 - Jewell",
-      "server": "104.21.39.30",
-      "server_port": 443,
-      "uuid": "7201b2cd-0675-4c1a-9c76-07ca14ffcf08",
-      "tls": {
-        "enabled": true,
-        "server_name": "6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev",
+        "server_name": "ssl.fastly.com",
         "insecure": false,
         "alpn": [
           "http/1.1"
@@ -46,9 +23,53 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/eyJqdW5rIjoicHV2Z0VMNllZQmtoZEMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119",
+        "path": "@mehrosabiran",
         "headers": {
-          "Host": "6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev"
+          "Host": "mitivpn---de--s---mitivpn-11.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 02 - Jewell",
+      "server": "port2.axiomed.ir",
+      "server_port": 443,
+      "uuid": "d443c411-85e4-4e0e-8251-2294d7e7ae0b",
+      "tls": {
+        "enabled": true,
+        "server_name": "JwD9bmigRp5s8PqHAYvpR6DJ6Ol.fORNewIRaN-1014.wOrkErS.Dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/II2kyrr06FWkCZfkFs?ed=2560",
+        "headers": {
+          "Host": "jwd9bmigrp5s8pqhayvpr6dj6ol.fornewiran-1014.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 03 - Jewell",
+      "server": "199.232.78.170",
+      "server_port": 443,
+      "password": "mitivpn",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mitivpn---de--s---mitivpn-11.global.ssl.fastly.net"
         }
       }
     },
@@ -58,7 +79,8 @@
       "outbounds": [
         "auto",
         "🇩🇪 德国 (Germany) 01 - Jewell",
-        "🇩🇪 德国 (Germany) 02 - Jewell"
+        "🇩🇪 德国 (Germany) 02 - Jewell",
+        "🇩🇪 德国 (Germany) 03 - Jewell"
       ]
     },
     {
@@ -66,7 +88,8 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇪 德国 (Germany) 01 - Jewell",
-        "🇩🇪 德国 (Germany) 02 - Jewell"
+        "🇩🇪 德国 (Germany) 02 - Jewell",
+        "🇩🇪 德国 (Germany) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

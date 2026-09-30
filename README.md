@@ -10,9 +10,9 @@
 
 | 客户端 / 格式类型 | 节点总数 | 免翻 CDN 订阅直链 (国内直连) | 官方原生 Raw 直链 (开启代理) |
 | :--- | :---: | :--- | :--- |
-| 🚀 **Clash (YAML 格式)** | `100` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/clash.yaml?v=1790708592) | [官方 Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/clash.yaml?v=1790708592) |
-| ⚡ **V2RayN (Base64 格式)** | `100` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/v2ray.txt?v=1790708592) | [官方 Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/v2ray.txt?v=1790708592) |
-| 📦 **sing-box (JSON 格式)** | `100` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/singbox.json?v=1790708592) | [官方 Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/singbox.json?v=1790708592) |
+| 🚀 **Clash (YAML 格式)** | `100` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/clash.yaml?v=1790730110) | [官方 Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/clash.yaml?v=1790730110) |
+| ⚡ **V2RayN (Base64 格式)** | `100` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/v2ray.txt?v=1790730110) | [官方 Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/v2ray.txt?v=1790730110) |
+| 📦 **sing-box (JSON 格式)** | `100` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/singbox.json?v=1790730110) | [官方 Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/singbox.json?v=1790730110) |
 
 ---
 
@@ -22,7 +22,7 @@
 
 | 家宽地区 | 节点数 | V2RayN 专属订阅 | Clash 专属订阅 | sing-box 专属订阅 |
 | :--- | :---: | :---: | :---: | :---: |
-| 暂无可用节点 | 0 | - | - | - |
+| 🇨🇦 加拿大 (Canada) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/residential-by-country/CA.txt?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/residential-by-country/CA.txt?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/residential-by-country/clash-CA.yaml?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/residential-by-country/clash-CA.yaml?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/residential-by-country/singbox-CA.json?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/residential-by-country/singbox-CA.json?v=1790730110) |
 
 ---
 
@@ -30,8 +30,9 @@
 
 | 地区/国家 | 节点数 | V2RayN 专属订阅 | Clash 专属订阅 | sing-box 专属订阅 |
 | :--- | :---: | :---: | :---: | :---: |
-| 🇺🇸 美国 (United States) | 99 | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/US.txt?v=1790708592) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/US.txt?v=1790708592) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/clash-US.yaml?v=1790708592) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/clash-US.yaml?v=1790708592) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/singbox-US.json?v=1790708592) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/singbox-US.json?v=1790708592) |
-| 🇨🇦 加拿大 (Canada) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/CA.txt?v=1790708592) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/CA.txt?v=1790708592) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/clash-CA.yaml?v=1790708592) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/clash-CA.yaml?v=1790708592) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/singbox-CA.json?v=1790708592) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/singbox-CA.json?v=1790708592) |
+| 🇺🇸 美国 (United States) | 92 | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/US.txt?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/US.txt?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/clash-US.yaml?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/clash-US.yaml?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/singbox-US.json?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/singbox-US.json?v=1790730110) |
+| 🇩🇪 德国 (Germany) | 5 | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/DE.txt?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/DE.txt?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/clash-DE.yaml?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/clash-DE.yaml?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/singbox-DE.json?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/singbox-DE.json?v=1790730110) |
+| 🇨🇦 加拿大 (Canada) | 2 | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/CA.txt?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/CA.txt?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/clash-CA.yaml?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/clash-CA.yaml?v=1790730110) | [CDN 直链](https://cdn.jsdelivr.net/gh/jewell998998/free@main/output/by-country/singbox-CA.json?v=1790730110) · [Raw 直链](https://raw.githubusercontent.com/jewell998998/free/main/output/by-country/singbox-CA.json?v=1790730110) |
 
 ---
 

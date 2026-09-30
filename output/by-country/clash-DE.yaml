@@ -1,0 +1,95 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇩🇪 德国 (Germany) 01 R50 - Jewell
+  server: 104.17.147.22
+  port: 8080
+  udp: true
+  type: vless
+  uuid: c44542db-493d-45dd-ad0e-4479f56e70d8
+  network: ws
+  ws-opts:
+    path: /vl/2HQNmb5VoOwqKpXPz60zvv8yQeQAS48?ed=2560
+    headers:
+      Host: zhph1zsu3ass0yd2jjmcdpynmbv.pesareshah975.workers.dev
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
+  port: 443
+  udp: true
+  type: trojan
+  password: LcICDcp!jD9TFV$NbH
+  sni: dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/pg4wM48V9O859nmqsJg22EOFKN4S570y?ed=2560
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 104.21.70.223
+  port: 443
+  udp: true
+  type: vless
+  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  tls: true
+  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/ERYN0G44hia16zhR
+    headers:
+      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: soskeynets-base-fe24.alirezahabibi20009.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4908acbe-485f-4e1c-bb11-5dd04b9f7e88
+  tls: true
+  servername: restless-base-fe24.alirezahabibi20009.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: restless-base-fe24.alirezahabibi20009.workers.dev
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
+  server: 172.67.164.152
+  port: 443
+  udp: true
+  type: vless
+  uuid: 36a857e4-f3d4-43aa-8b90-d7da849da989
+  tls: true
+  servername: 002.inc-electrocell-001-002.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: 002.inc-electrocell-001-002.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇩🇪 德国 (Germany) 01 R50 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
+  - 🇩🇪 德国 (Germany) 05 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇩🇪 德国 (Germany) 01 R50 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
+  - 🇩🇪 德国 (Germany) 04 - Jewell
+  - 🇩🇪 德国 (Germany) 05 - Jewell
+rules:
+- MATCH,PROXIES

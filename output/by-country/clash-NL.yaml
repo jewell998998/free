@@ -1,0 +1,48 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  server: 188.114.97.6
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 934f2038-17f8-4ec5-9204-8381e19fc6e3
+  tls: true
+  servername: TIGHT-busH-0Bb4.BSHXYyXhDJdGGb.wOrkERS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVXFEMlhKZVY4dzNoTUtpZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: TIGHT-busH-0Bb4.BSHXYyXhDJdGGb.wOrkERS.DEV
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: 172.67.191.121
+  port: 443
+  udp: true
+  type: trojan
+  password: Telegram_healer_config
+  sni: 47hr9isj-655383snd63hjap38q6t.k-f3vpqaltfsxbtaxe.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/V2VWNDZAAEIdXVjOCkLfJnefnR5Pum?ed=2560
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+rules:
+- MATCH,PROXIES

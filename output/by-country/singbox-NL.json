@@ -1,0 +1,80 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+      "server": "188.114.97.6",
+      "server_port": 2053,
+      "uuid": "934f2038-17f8-4ec5-9204-8381e19fc6e3",
+      "tls": {
+        "enabled": true,
+        "server_name": "TIGHT-busH-0Bb4.BSHXYyXhDJdGGb.wOrkERS.DEV",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiVXFEMlhKZVY4dzNoTUtpZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "TIGHT-busH-0Bb4.BSHXYyXhDJdGGb.wOrkERS.DEV"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+      "server": "172.67.191.121",
+      "server_port": 443,
+      "password": "Telegram_healer_config",
+      "tls": {
+        "enabled": true,
+        "server_name": "47hr9isj-655383snd63hjap38q6t.k-f3vpqaltfsxbtaxe.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/V2VWNDZAAEIdXVjOCkLfJnefnR5Pum?ed=2560",
+        "headers": {
+          "Host": "47hr9isj-655383snd63hjap38q6t.k-f3vpqaltfsxbtaxe.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

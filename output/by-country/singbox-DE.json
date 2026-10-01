@@ -1,0 +1,97 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 01 - Jewell",
+      "server": "172.64.153.235",
+      "server_port": 8443,
+      "uuid": "656bb400-3b7a-47e3-94b0-0362f3865072",
+      "tls": {
+        "enabled": true,
+        "server_name": "socks5.revil-time3.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/socks5://128.140.46.169:13482",
+        "headers": {
+          "Host": "socks5.revil-time3.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 02 - Jewell",
+      "server": "soskeynets-base-fe24.alirezahabibi20009.workers.dev",
+      "server_port": 443,
+      "uuid": "4908acbe-485f-4e1c-bb11-5dd04b9f7e88",
+      "tls": {
+        "enabled": true,
+        "server_name": "restless-base-fe24.alirezahabibi20009.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "restless-base-fe24.alirezahabibi20009.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 03 - Jewell",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "63f1ef69-92fd-427a-b3e4-98ffddf81ac6",
+      "transport": {
+        "type": "ws",
+        "path": "/nPKoVRUdyuRZ6jpY/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbSxwcm94eWlwLmNtbGl1c3Nzcy5uZXQsbmltYS5uc2NsLmlyLHR1cmsucmFkaWNhbGl6YXRpb24uaXI=",
+        "headers": {
+          "Host": "young-rice-749e.heliy78750.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇩🇪 德国 (Germany) 01 - Jewell",
+        "🇩🇪 德国 (Germany) 02 - Jewell",
+        "🇩🇪 德国 (Germany) 03 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇩🇪 德国 (Germany) 01 - Jewell",
+        "🇩🇪 德国 (Germany) 02 - Jewell",
+        "🇩🇪 德国 (Germany) 03 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

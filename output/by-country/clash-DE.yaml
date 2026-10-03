@@ -5,44 +5,60 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 104.18.32.47
-  port: 443
+  server: 172.67.208.235
+  port: 2096
   udp: true
   type: vless
-  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
   tls: true
-  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  servername: courses.mftplus.qzz.io
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: ancient-heart-60c5.dpccgizieb.workers.dev
-- name: 🇩🇪 德国 (Germany) 02 R67 - Jewell
-  server: 104.17.147.22
+      Host: courses.mftplus.qzz.io
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: 188.114.97.6
   port: 443
   udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+  type: vless
+  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
+  tls: true
+  servername: auto-scale-238b2b.infra-core-1630dd.workers.dev
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /tr/mPZ7O1CUbIBPGNPZQ2HeV?ed=2560
+    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
+    headers:
+      Host: auto-scale-238b2b.infra-core-1630dd.workers.dev
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 104.25.194.196
+  port: 2086
+  udp: true
+  type: vless
+  uuid: e3c7c198-2b02-42c2-b78f-22dfc078219c
+  network: ws
+  ws-opts:
+    path: /vl/3k4QnDlh2r3IPLPNFGLAeMJ5df?ed=2560
+    headers:
+      Host: uj-kn9gcgkzl0wmmy5wrkmalvhzdw62z.soltannatlos.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 - Jewell
-  - 🇩🇪 德国 (Germany) 02 R67 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇩🇪 德国 (Germany) 01 - Jewell
-  - 🇩🇪 德国 (Germany) 02 R67 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
+  - 🇩🇪 德国 (Germany) 03 - Jewell
 rules:
 - MATCH,PROXIES

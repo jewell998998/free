@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R50 - Jewell
-  server: 138.197.141.58
-  port: 8080
+- name: 🇨🇦 加拿大 (Canada) 01 R70 - Jewell
+  server: 198.57.27.190
+  port: 22324
   udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R50 - Jewell
+  - 🇨🇦 加拿大 (Canada) 01 R70 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R50 - Jewell
+  - 🇨🇦 加拿大 (Canada) 01 R70 - Jewell
 rules:
 - MATCH,PROXIES

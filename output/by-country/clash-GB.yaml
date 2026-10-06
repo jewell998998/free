@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01 - Jewell
-  server: 8.6.112.9
+- name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 172.67.131.125
   port: 443
   udp: true
   type: vless
-  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
   tls: true
-  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
     headers:
-      Host: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
 rules:
 - MATCH,PROXIES

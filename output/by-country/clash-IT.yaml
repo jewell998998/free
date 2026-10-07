@@ -4,17 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  server: 46.28.67.55
+- name: 🇮🇹 意大利 (Italy) 01 - Jewell
+  server: 82.118.16.187
   port: 443
   udp: true
   type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  uuid: dc2259c4-388e-4285-ba18-df619b6672b6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
+    public-key: R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU
+    short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: random
 proxy-groups:
@@ -22,12 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 01 - Jewell
 rules:
 - MATCH,PROXIES

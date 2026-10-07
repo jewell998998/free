@@ -4,18 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇮🇪 爱尔兰 (Ireland) 01 - Jewell",
-      "server": "sacred-anemone.rooster465.autos",
+      "type": "vless",
+      "tag": "🇮🇹 意大利 (Italy) 01 - Jewell",
+      "server": "82.118.16.187",
       "server_port": 443,
-      "password": "UX82473651",
+      "uuid": "dc2259c4-388e-4285-ba18-df619b6672b6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sacred-anemone.rooster465.autos",
-        "insecure": false,
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU",
+          "short_id": "cd6065902eea7a02"
         }
       }
     },
@@ -24,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇪 爱尔兰 (Ireland) 01 - Jewell"
+        "🇮🇹 意大利 (Italy) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇪 爱尔兰 (Ireland) 01 - Jewell"
+        "🇮🇹 意大利 (Italy) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

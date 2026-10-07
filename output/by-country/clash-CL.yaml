@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01 - Jewell
+  server: platform117.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform117
+- name: 🇨🇱 智利 (Chile) 02 - Jewell
   server: platform113.golnamakcert.top
   port: 80
   udp: true
@@ -13,17 +22,8 @@ proxies:
   network: ws
   ws-opts:
     path: /platform113
-- name: 🇨🇱 智利 (Chile) 02 - Jewell
-  server: 64.176.24.232
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform108
     headers:
-      Host: platform108.halalkhor.info
+      Host: platform113.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select

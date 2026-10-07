@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 35.181.55.52
-  port: 443
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  server: catnet-tw.kunlun04dns.com
+  port: 28034
   udp: true
   type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  cipher: aes-128-gcm
+  password: b61ca706-e2e9-4f6b-bd1e-0f0534a2fc41
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
 rules:
 - MATCH,PROXIES

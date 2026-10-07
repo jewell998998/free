@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 35.181.55.52
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  server: p141.panda001.net
+  port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: amazonskr05
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,20 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 63.177.230.112
+  server: 3.75.231.76
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 18.159.149.158
+  server: 3.67.197.81
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 63.185.114.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: 18.159.149.158
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
   server: 104.194.159.237
   port: 8443
   udp: true
@@ -30,21 +44,21 @@ proxies:
     public-key: L5cKU_oSpJsGd3ffemej3Wy7V6KzqjIUC2T5jaCyPys
     short-id: 1aec480577a542ee
   servername: github.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 212.100.171.154
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 06 - Jewell
+  server: nl32.mech-pro.online
   port: 443
   udp: true
   type: vless
-  uuid: a5ce10af-5e95-4eb3-ab87-bf4f95cb059b
+  uuid: 6c84bdcd-2070-424b-a5ee-a26783d2a0e9
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 8u8r2iWMt8Isz2ZNRbn3g4cfldhcePRB-1hxGYLTnSg
-    short-id: aa6582cf25e243ce
-  servername: www.google.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+  servername: nl32.mech-pro.online
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 07 - Jewell
   server: 2.27.69.117
   port: 443
   udp: true
@@ -57,20 +71,7 @@ proxies:
     short-id: 123c2bff
   servername: addons.mozilla.org
   client-fingerprint: randomized
-- name: 🇩🇪 德国 (Germany) 06 - Jewell
-  server: 2.27.35.74
-  port: 443
-  udp: true
-  type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zAmNLsLPizp96b55zNe2kJ3zXBdpuNY0olnRaOpluks
-    short-id: 34e797af
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 07 - Jewell
+- name: 🇩🇪 德国 (Germany) 08 - Jewell
   server: 2.27.35.55
   port: 443
   udp: true
@@ -82,63 +83,20 @@ proxies:
     public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
     short-id: e696e744
   servername: addons.mozilla.org
-  client-fingerprint: random
-- name: 🇩🇪 德国 (Germany) 08 - Jewell
-  server: 85.121.124.65
-  port: 8443
-  udp: true
-  type: vless
-  uuid: f49d04d6-aaa7-4013-b323-bc35b78230db
-  tls: true
-  servername: s4ws.ragingbull.de5.net
-  skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wsrb7k2m
-    headers:
-      Host: s4ws.ragingbull.de5.net
 - name: 🇩🇪 德国 (Germany) 09 - Jewell
-  server: 188.114.96.3
+  server: 212.100.171.154
   port: 443
   udp: true
   type: vless
-  uuid: f49d04d6-aaa7-4013-b323-bc35b78230db
+  uuid: a5ce10af-5e95-4eb3-ab87-bf4f95cb059b
+  flow: xtls-rprx-vision
   tls: true
-  servername: s4ws.ragingbull.de5.net
-  skip-cert-verify: false
+  reality-opts:
+    public-key: 8u8r2iWMt8Isz2ZNRbn3g4cfldhcePRB-1hxGYLTnSg
+    short-id: aa6582cf25e243ce
+  servername: www.google.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wsrb7k2m
-    headers:
-      Host: s4ws.ragingbull.de5.net
-- name: 🇩🇪 德国 (Germany) 10 - Jewell
-  server: 31.77.168.35
-  port: 443
-  udp: true
-  type: trojan
-  password: MDYVt6HgSqB7d537GPQXjk6Rk0E4RxWo
-  sni: d3-de2.cloud-cdn.xyz
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ajv
-- name: 🇩🇪 德国 (Germany) 11 - Jewell
-  server: shop.neexbyte.ir
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 8bb52771-052e-40b5-ab53-c6e151ad2290
-  tls: true
-  servername: shop.neexbyte.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shop.neexbyte.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -153,8 +111,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07 - Jewell
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
-  - 🇩🇪 德国 (Germany) 10 - Jewell
-  - 🇩🇪 德国 (Germany) 11 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -169,7 +125,5 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07 - Jewell
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
-  - 🇩🇪 德国 (Germany) 10 - Jewell
-  - 🇩🇪 德国 (Germany) 11 - Jewell
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,65 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "95.85.253.241",
+      "server_port": 2083,
+      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.253.241",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "95.85.253.241",
+      "server_port": 2087,
+      "uuid": "ee0a38e3-d148-48ac-ba99-5133446c2377",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.253.241",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+      "server": "62.60.159.81",
+      "server_port": 2053,
+      "uuid": "fc00adfb-232a-46ce-8b93-0c70e516aa8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw",
+          "short_id": "d0ea1847066af5a6"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpce5bb9e71"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+      "server": "13.143.174.97",
+      "server_port": 2083,
+      "uuid": "cfae6477-e8ad-4114-8efd-a7c3e5d8a05b",
+      "tls": {
+        "enabled": true,
+        "server_name": "13.143.174.97",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+      "server": "13.143.174.97",
+      "server_port": 2087,
+      "uuid": "cfae6477-e8ad-4114-8efd-a7c3e5d8a05b",
+      "tls": {
+        "enabled": true,
+        "server_name": "13.143.174.97",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+      "server": "13.143.174.97",
+      "server_port": 8443,
+      "uuid": "cfae6477-e8ad-4114-8efd-a7c3e5d8a05b",
+      "tls": {
+        "enabled": true,
+        "server_name": "13.143.174.97",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 05 - Jewell",
+      "server": "13.143.174.97",
+      "server_port": 2053,
+      "uuid": "cfae6477-e8ad-4114-8efd-a7c3e5d8a05b",
+      "tls": {
+        "enabled": true,
+        "server_name": "13.143.174.97",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-cdn1-vless",
+        "headers": {
+          "Host": "se.fastmirror-labs.xyz"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 05 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 05 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

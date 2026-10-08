@@ -1,0 +1,185 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
+      "server": "158.101.148.79",
+      "server_port": 443,
+      "password": "my_super_password_123",
+      "tls": {
+        "enabled": true,
+        "server_name": "open.2ml.bid",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "server": "vp3.yysyy.online",
+      "server_port": 443,
+      "password": "96ab5cd282733fd4c312a61f972f330a",
+      "tls": {
+        "enabled": true,
+        "server_name": "vp3.yysyy.online",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "server": "winning-marten.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "winning-marten.rooster465.autos",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
+      "server": "concrete-aardvark.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "concrete-aardvark.rooster465.autos",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
+      "server": "153.121.36.102",
+      "server_port": 443,
+      "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "short_id": "1a"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 06 - Jewell",
+      "server": "142.91.106.31",
+      "server_port": 43000,
+      "uuid": "f8681dba-d368-4bab-a3c2-a8dc712ba368",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "142.91.106.31",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "onJvbzSx_vZUyycafvPuhsiSQsr9tw4zotyVMSWCvm4",
+          "short_id": "8d66106f"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 日本 (Japan) 07 - Jewell",
+      "server": "dynamic-imp.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "dynamic-imp.rooster465.autos",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 日本 (Japan) 08 - Jewell",
+      "server": "176.34.5.100",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "assuring-skink.rooster465.autos",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 日本 (Japan) 09 - Jewell",
+      "server": "organic-caribou.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "organic-caribou.rooster465.autos",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇯🇵 日本 (Japan) 01 - Jewell",
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell",
+        "🇯🇵 日本 (Japan) 06 - Jewell",
+        "🇯🇵 日本 (Japan) 07 - Jewell",
+        "🇯🇵 日本 (Japan) 08 - Jewell",
+        "🇯🇵 日本 (Japan) 09 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇯🇵 日本 (Japan) 01 - Jewell",
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell",
+        "🇯🇵 日本 (Japan) 06 - Jewell",
+        "🇯🇵 日本 (Japan) 07 - Jewell",
+        "🇯🇵 日本 (Japan) 08 - Jewell",
+        "🇯🇵 日本 (Japan) 09 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

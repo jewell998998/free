@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: english.povrak.ir
+  port: 34204
+  udp: true
+  type: vmess
+  uuid: f004547b-58ec-4536-9608-0d68982ea904
+  alterId: 0
+  cipher: auto
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
   server: 23.81.34.204
   port: 443
   udp: true
@@ -17,19 +25,6 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 02 R69 - Jewell
-  server: gb.srv.dvzh.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: d30f9d846a7c8cba
-  servername: gb.srv.dvzh.net
-  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 95.85.224.51
   port: 443
@@ -49,7 +44,7 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 R69 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 - name: AUTO
   type: url-test
@@ -57,7 +52,7 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 R69 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 rules:
 - MATCH,PROXIES

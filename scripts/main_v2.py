@@ -55,129 +55,104 @@ except ImportError as e:
 
 
 SOURCE_URLS = [
-    # ============================================================
     # 60000+ 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/all.txt",
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/all.txt",  # 62212 节点
 
-    # ============================================================
-    # 30000+ 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vless_configs.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vless.txt",
+    # 30000 - 59999 节点
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vless.txt",  # 30824 节点
 
-    # ============================================================
-    # 10000+ 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/vless",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/trojan.txt",
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vmess_configs.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vmess.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/trojan.txt",
+    # 10000 - 29999 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/all_extracted_configs.txt",  # 17329 节点
+    "https://raw.githubusercontent.com/mheidari98/.proxy/main/vless",  # 10948 节点
 
-    # ============================================================
-    # 9000 - 10000 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_001.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_003.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_007.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_008.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_010.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_011.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_013.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/tcp-pass/batch_014.txt",
-    "https://raw.githubusercontent.com/yitong2333/proxy-minging/refs/heads/main/v2ray.txt",
+    # 5000 - 9999 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_011.txt",  # 9999 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_007.txt",  # 9993 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_008.txt",  # 9986 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_010.txt",  # 9986 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_001.txt",  # 9985 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_003.txt",  # 9985 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_013.txt",  # 9946 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/tcp-pass/batch_014.txt",  # 9867 节点
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/trojan.txt",  # 9723 节点
+    "https://raw.githubusercontent.com/yitong2333/proxy-minging/main/v2ray.txt",  # 9617 节点
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vmess.txt",  # 8568 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/vless_configs.txt",  # 8043 节点
+    "https://raw.githubusercontent.com/sakha1370/OpenRay/main/output/all_valid_proxies.txt",  # 6680 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt",  # 5874 节点
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt",  # 5763 节点
+    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",  # 5415 节点
 
-    # ============================================================
-    # 7000 - 9000 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/all_valid_proxies.txt",
+    # 2000 - 4999 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/vmess_configs.txt",  # 4905 节点
+    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",  # 3928 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/protocols/trojan.txt",  # 3071 节点
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/iran.txt",  # 3000 节点
+    "https://raw.githubusercontent.com/Argh94/Proxy-List/main/All_Config.txt",  # 2530 节点
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",  # 2380 节点
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt",  # 2000 节点
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",  # 2000 节点
 
-    # ============================================================
-    # 5000 - 7000 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/all_configs.txt",
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+    # 1000 - 1999 节点
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",  # 1754 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/protocols/vless.txt",  # 1476 节点
+    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/mix",  # 1193 节点
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS.txt",  # 1152 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/patt/all.txt",  # 1074 节点
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",  # 1058 节点
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",  # 1058 节点
+    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/top.txt",  # 1000 节点
 
-    # ============================================================
-    # 2000 - 5000 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/Argh94/Proxy-List/refs/heads/main/All_Config.txt",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt",
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/protocols/trojan.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/protocols/vless.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/iran.txt",
-    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",
+    # 500 - 999 节点
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt",  # 797 节点
+    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub7.txt",  # 730 节点
+    "https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/main/output/base64/mix-uri",  # 657 节点
+    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub6.txt",  # 648 节点
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/configs.txt",  # 634 节点
+    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",  # 616 节点
+    "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub10.txt",  # 600 节点
+    "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub7.txt",  # 600 节点
+    "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub6.txt",  # 600 节点
+    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",  # 566 节点
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/protocols/vmess.txt",  # 552 节点
+    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",  # 542 节点
+    "https://www.ermao.net/sub/v2ray/ermao.net",  # 522 节点
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt",  # 505 节点
 
-    # ============================================================
-    # 1500 - 2000 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/configs.txt",
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
-    "https://735754647.github.io/Free-Nodes/v2ray.txt",
+    # 100 - 499 节点
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",  # 473 节点
+    "https://raw.githubusercontent.com/miladtahanian/Config-Collector/main/mixed_iran.txt",  # 466 节点
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/V2Ray-Config-By-EbraSha.txt",  # 447 节点
+    "https://raw.githubusercontent.com/10Dream/sub-mod/main/sub/normal/10ium-telegram-configs-collector-trojan",  # 431 节点
+    "https://raw.githubusercontent.com/CidVpn/cid-vpn-config/main/general.txt",  # 357 节点
+    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/verified.txt",  # 329 节点
+    "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/mix",  # 313 节点
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt",  # 308 节点
+    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector_Py/main/sub/Mix/mix.txt",  # 302 节点
+    "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/main/category/vless.txt",  # 296 节点
+    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Original-Configs.txt",  # 277 节点
+    "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/main/Config/vless.txt",  # 263 节点
+    "https://raw.githubusercontent.com/amir-reza-bijandi/v2ray-configs/main/configs.txt",  # 253 节点
+    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt",  # 198 节点
+    "https://raw.githubusercontent.com/free18/v2ray/main/v.txt",  # 168 节点
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY.txt",  # 146 节点
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",  # 100 节点
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",  # 100 节点
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/mini.txt",  # 100 节点
 
-    # ============================================================
-    # 1000 - 1500 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/patt/all.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/protocols/vmess.txt",
-    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
-    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/top.txt",
-
-    # ============================================================
-    # 500 - 1000 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub7.txt",
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub6.txt",
-    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
-    "https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/main/output/base64/mix-uri",
-    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
-    "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub10.txt",
-    "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub7.txt",
-    "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub6.txt",
-
-    # ============================================================
-    # 300 - 500 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/miladtahanian/Config-Collector/refs/heads/main/mixed_iran.txt",
-    "https://raw.githubusercontent.com/CidVpn/cid-vpn-config/refs/heads/main/general.txt",
-    "https://raw.githubusercontent.com/10Dream/sub-mod/main/sub/normal/10ium-telegram-configs-collector-trojan",
-    "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/mix",
-    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector_Py/refs/heads/main/sub/Mix/mix.txt",
-    "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt",
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt",
-    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
-    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
-    "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt",
-
-    # ============================================================
-    # 100 - 300 节点
-    # ============================================================
-    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt",
-    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
-    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/mini.txt",
-    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
-    "https://www.ermao.net/sub/v2ray/ermao.net",
-    "https://www.xrayvip.com/free.txt",
-
-    # ============================================================
-    # 50 以下节点
-    # ============================================================
-    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-    "https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt",
-    "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://nodesfree.github.io/v2raynode/subscribe/v2ray.txt",
+    # 1 - 99 节点
+    "https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt",  # 75 节点
+    "https://www.xrayvip.com/free.txt",  # 68 节点
+    "https://735754647.github.io/Free-Nodes/v2ray.txt",  # 55 节点
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",  # 41 节点
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",  # 25 节点
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",  # 16 节点
+    "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/clashmeta.txt",  # 16 节点
+    "https://raw.githubusercontent.com/freefq/free/master/v2",  # 15 节点
+    "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodev2ray.txt",  # 13 节点
+    "https://nodesfree.github.io/v2raynode/subscribe/v2ray.txt",  # 6 节点
+    "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",  # 4 节点
+    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/master/ConfigSub_list.txt",  # 3 节点
 ]
 
 

@@ -19,70 +19,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 13.143.174.97
-  port: 2083
-  udp: true
-  type: vless
-  uuid: cfae6477-e8ad-4114-8efd-a7c3e5d8a05b
-  tls: true
-  servername: 13.143.174.97
-  skip-cert-verify: false
-  client-fingerprint: random
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 13.143.174.97
-  port: 2087
-  udp: true
-  type: vless
-  uuid: cfae6477-e8ad-4114-8efd-a7c3e5d8a05b
-  tls: true
-  servername: 13.143.174.97
-  skip-cert-verify: false
-  client-fingerprint: random
-- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  server: 13.143.174.97
-  port: 8443
-  udp: true
-  type: vless
-  uuid: cfae6477-e8ad-4114-8efd-a7c3e5d8a05b
-  tls: true
-  servername: 13.143.174.97
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  server: 13.143.174.97
-  port: 2053
-  udp: true
-  type: vless
-  uuid: cfae6477-e8ad-4114-8efd-a7c3e5d8a05b
-  tls: true
-  servername: 13.143.174.97
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /ws-cdn1-vless
-    headers:
-      Host: se.fastmirror-labs.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
 rules:
 - MATCH,PROXIES

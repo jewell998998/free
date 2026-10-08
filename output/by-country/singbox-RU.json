@@ -4,30 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
-      "server": "158.101.148.79",
-      "server_port": 443,
-      "password": "my_super_password_123",
-      "tls": {
-        "enabled": true,
-        "server_name": "open.2ml.bid",
-        "insecure": false
-      }
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+      "server": "176.32.39.52",
+      "server_port": 20880,
+      "method": "aes-256-gcm",
+      "password": "8ad9d72a5571df86"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

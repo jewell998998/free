@@ -5,18 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 193.238.154.5
+  server: 138.124.62.158
   port: 443
   udp: true
   type: vless
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
+  flow: xtls-rprx-vision
   tls: true
-  servername: assets-es.pleiades.codes
-  skip-cert-verify: false
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: 15bcc0a77c3cacdf
+  servername: es-root.sworkingvpn.com
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
 - name: 🇪🇸 西班牙 (Spain) 02 - Jewell
   server: 46.28.71.247
   port: 443

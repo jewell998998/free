@@ -5,27 +5,61 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: support.zoom.us
-  port: 80
+  server: 63.141.128.22
+  port: 443
   udp: true
   type: vless
-  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
+  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
+  tls: true
+  servername: misty-tooth-78ca.fobogah414-e7b.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /free-server.techsonic.dev
+    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: free-server.techsonic.dev
+      Host: misty-tooth-78ca.fobogah414-e7b.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 188.114.96.3
+  port: 443
+  udp: true
+  type: trojan
+  password: pjg&JybcgFsca,+gQMa
+  sni: 022XW1dMCzG0C6165Pcla6.tOMBORn69.WOrkErS.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/TXGYPKAmg2T9agqYRDFm?ed=2560
+- name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
+  server: netra-85a0ca.shoameni19.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
+  tls: true
+  servername: netra-85a0ca.shoameni19.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: '/vl/bluTTbb7MO8rvX1COEYH4WW4qzbr2aui '
+    headers:
+      Host: netra-85a0ca.shoameni19.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
 rules:
 - MATCH,PROXIES

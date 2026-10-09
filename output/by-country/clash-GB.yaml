@@ -5,73 +5,45 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 188.114.96.9
+  server: 104.194.143.86
   port: 443
   udp: true
   type: vless
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  uuid: ea6156d1-3738-4c12-a6b6-46fc03276f2a
+  flow: xtls-rprx-vision
   tls: true
-  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome
-    headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  reality-opts:
+    public-key: 3vgqsFm1j-00-_jN25zuuty59lk7yn5YFMIfL5LwwRw
+    short-id: 2bd6a47090adc591
+  servername: suffolkprimarycare.uk
+  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 104.25.0.1
-  port: 2053
+  server: 31.76.115.238
+  port: 8443
   udp: true
   type: vless
-  uuid: dce8ca0a-ed26-45c9-9962-38888c19a0ad
+  uuid: 8ff3db5a-5f41-4f25-a8a4-7fbf00f1c319
+  flow: xtls-rprx-vision
   tls: true
-  servername: still-scene-fda3.devtahair.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSDNSSGYxT05LU2VEbyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjYyLjYwLjIxNy4yMzAiXX0=
-    headers:
-      Host: still-scene-fda3.devtahair.workers.dev
+  reality-opts:
+    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+    short-id: d2061bb1
+  servername: ya.ru
+  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  server: 95.85.224.51
   port: 443
   udp: true
   type: vless
-  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  flow: xtls-rprx-vision
   tls: true
-  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vl/6871nrbnl9WsdAiOUInt
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  servername: max.ru
+  client-fingerprint: qq
 - name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  server: 104.21.70.21
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 893096ae-ed76-4440-bc34-f77c4872540f
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieE1zSFhYR2hkcHZGUHI3cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: masterserver1-vsh.kalleh.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  server: 104.21.31.137
-  port: 443
-  udp: true
-  type: vless
-  uuid: 59c70620-d2f3-4255-9d6f-f4c5103d64ce
-  tls: true
-  servername: 59fssIBE-SDDrRs3qW83QQZz0H1NT-o.q7qwsxItB6BYi5nMTa4naAlz.woRkErs.deV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/FpYFoMlg8sRpgV7SSaOaRYa3fagqGu?ed
-    headers:
-      Host: 59fssibe-sddrrs3qw83qqzz0h1nt-o.q7qwsxitb6byi5nmta4naalz.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
   server: 23.81.34.204
   port: 443
   udp: true
@@ -83,7 +55,7 @@ proxies:
     public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -93,8 +65,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,7 +74,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
 rules:
 - MATCH,PROXIES

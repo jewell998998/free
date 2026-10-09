@@ -5,47 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 172.67.167.77
-  port: 443
-  udp: true
-  type: vless
-  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
-  tls: true
-  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/6871nrbnl9WsdAiOUInt
-    headers:
-      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 104.21.70.21
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 20e295db-a6af-4006-bfd6-91453f169968
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 057.electrocellco-cf-057.workers.dev
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 51.44.86.16
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 04 - Jewell
   server: 52.47.99.71
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 35.180.23.68
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 51.44.86.16
   port: 443
   udp: true
   type: ss
@@ -58,9 +25,6 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,8 +32,5 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
 rules:
 - MATCH,PROXIES

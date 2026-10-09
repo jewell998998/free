@@ -5,72 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 188.114.97.6
-  port: 8080
+  server: 172.67.182.245
+  port: 443
   udp: true
   type: vless
-  uuid: 893096ae-ed76-4440-bc34-f77c4872540f
+  uuid: 96e341a7-3077-4613-b482-41bd9c90cc4d
+  tls: true
+  servername: eZaCCesS-proJEcT-4C7950.Ez-dC9bBB.WorKErs.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoieE1zSFhYR2hkcHZGUHI3cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /eyJqdW5rIjoiN2w4dDlRNVV5NkZ5NU1aeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     headers:
-      Host: maSterserVeR1-VSH.KaLlEH.WORkERs.DEV
+      Host: ezaccess-project-4c7950.ez-dc9bbb.workers.dev
 - name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: 188.114.96.7
+  server: 188.114.97.6
   port: 443
   udp: true
   type: vless
-  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  uuid: 20e295db-a6af-4006-bfd6-91453f169968
   tls: true
-  servername: o94yv7lIF0-AnXiSd9EFeHVVS7mxn6Bh.z-ULe-IKA-d-e-Ne-k-E.WORKERs.DEv
+  servername: 057.ElecTRocElLco-Cf-057.wOrKeRs.dEv
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /dbJqwUHWfrXV0Z3Q?ed=2560
+    path: /eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
+      Host: 057.electrocellco-cf-057.workers.dev
 - name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  server: medium.com
+  server: nl-hy-test.tcp-reset-club.net
   port: 443
   udp: true
-  type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  type: hysteria2
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  sni: tcp-reset-club.net
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: 172.67.130.122
-  port: 443
-  udp: true
-  type: trojan
-  password: oZft$iBcsjAPqdbE2CK
-  sni: cD0fTGj4R79QU6F7NL0LDwptXV.S2gZVUgNC7ARq-nZwdWaVaz.wOrKeRs.DEv
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/2UlYHhEJ1n2XXBDiew4AzFd9?ed=2560
-- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  server: 188.114.97.7
-  port: 443
-  udp: true
-  type: vless
-  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
-  tls: true
-  servername: o94Yv7LIF0-aNXISd9eFehvvS7mxn6bH.Z-ULe-iKa-d-e-ne-K-e.wORkeRs.Dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /7J5lLqtBnJg9WjVT?ed
-    headers:
-      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -79,8 +49,6 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,7 +57,5 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
 rules:
 - MATCH,PROXIES

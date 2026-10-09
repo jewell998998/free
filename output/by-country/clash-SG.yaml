@@ -5,31 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: 104.21.84.62
-  port: 443
-  udp: true
-  type: trojan
-  password: pjg&JybcgFsca,+gQMa
-  sni: 022xW1dMCzG0c6165PCla6.TOMBorn69.woRKERS.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/9Krhh8DnN4WBkbQFAyN09f7V7ivKQ?ed=2560
-- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  server: 104.21.70.223
-  port: 443
+  server: 188.114.97.8
+  port: 8443
   udp: true
   type: vless
-  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  uuid: 9c63fd59-f9ee-446e-97ec-0bf2de21ed7b
   tls: true
-  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  servername: dry-glitter-ef10.gfryubcdryujvrth.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/ERYN0G44hia16zhR
+    path: /eyJqdW5rIjoiVVhGU1pOZ1oxaTFUUldyVCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+      Host: dry-glitter-ef10.gfryubcdryujvrth.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
+  tls: true
+  servername: bpB-01c11365.HJdBcvDbKV.WORKErS.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select

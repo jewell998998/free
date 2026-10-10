@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 奥地利 (Austria) 01 - Jewell
-  server: 5.254.51.109
-  port: 9443
+- name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: 144.31.212.253
+  port: 443
   udp: true
   type: hysteria2
-  password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
-  sni: keyhop-voxility-at.dynuddns.com
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 奥地利 (Austria) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 01 - Jewell
 rules:
 - MATCH,PROXIES

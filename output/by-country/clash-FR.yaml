@@ -5,8 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
+  server: 104.16.72.50
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 02 - Jewell
   server: 185.114.72.31
   port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 45.87.41.18
+  port: 443
   udp: true
   type: trojan
   password: humanity
@@ -21,11 +43,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇫🇷 法国 (France) 02 - Jewell
+  - 🇫🇷 法国 (France) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇫🇷 法国 (France) 02 - Jewell
+  - 🇫🇷 法国 (France) 03 - Jewell
 rules:
 - MATCH,PROXIES

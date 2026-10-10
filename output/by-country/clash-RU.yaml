@@ -5,31 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: www.speedtest.net
+  server: 104.21.70.21
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 8f53fce2-6c17-4e37-9ae9-d969fd85117c
+  network: ws
+  ws-opts:
+    path: /vl/Wp4FqWLcoYNYXCovu4?ed=2560
+    headers:
+      Host: api-hub-c9a393.alimirzai539-484.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 104.21.77.12
   port: 443
   udp: true
   type: vless
-  uuid: b19419fa-8009-455b-b059-765e2856883a
+  uuid: 26168a04-a91c-48fc-b8d0-3ba5a4e719c4
   tls: true
-  servername: akbarian34.j9z65ce2uyks.workers.dev
+  servername: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/3Qe9Fv1V2cqEtXyBQApZYi
+    path: /vl/17NBgz64AfwQ4Dd6qdNR?ed=2560
     headers:
-      Host: akbarian34.j9z65ce2uyks.workers.dev
+      Host: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 rules:
 - MATCH,PROXIES

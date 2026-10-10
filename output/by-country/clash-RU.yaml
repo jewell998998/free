@@ -5,31 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 104.21.70.21
-  port: 8080
+  server: 194.87.196.107
+  port: 40440
   udp: true
-  type: vless
-  uuid: 8f53fce2-6c17-4e37-9ae9-d969fd85117c
-  network: ws
-  ws-opts:
-    path: /vl/Wp4FqWLcoYNYXCovu4?ed=2560
-    headers:
-      Host: api-hub-c9a393.alimirzai539-484.workers.dev
+  type: ss
+  cipher: aes-256-gcm
+  password: 4938e975724d0ed1
 - name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 104.21.77.12
+  server: edge.cloudtechone.org
   port: 443
   udp: true
   type: vless
-  uuid: 26168a04-a91c-48fc-b8d0-3ba5a4e719c4
+  uuid: 5036de9b-1a18-40e2-97f6-9cbb4a4753e4
+  flow: xtls-rprx-vision
   tls: true
-  servername: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/17NBgz64AfwQ4Dd6qdNR?ed=2560
-    headers:
-      Host: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
+  reality-opts:
+    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
+    short-id: f93c9d5127e622e4
+  servername: edge.cloudtechone.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

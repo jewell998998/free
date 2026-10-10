@@ -5,60 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: 104.21.70.21
-  port: 8080
+  server: 104.17.189.184
+  port: 2096
   udp: true
   type: vless
-  uuid: d8c14c5c-a80a-4f6f-a5fb-52071849c443
+  uuid: da30a28c-5c01-4c93-8da8-c8d39d58bfb9
+  tls: true
+  servername: hk.yindu.cc.cd
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiZTFWRGJFS0NUd2F2NkRmIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==
+    path: /
     headers:
-      Host: cgxgqcheiamna-jks01fidlsnqojwf-s.aliama.workers.dev
+      Host: hk.yindu.cc.cd
 - name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  server: 104.17.148.22
-  port: 443
+  server: 104.17.189.184
+  port: 2096
   udp: true
   type: vless
-  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
+  uuid: da30a28c-5c01-4c93-8da8-c8d39d58bfb9
   tls: true
-  servername: bpB-01c11365.HJdBcvDbKV.WORKErS.dEV
+  servername: hk.yindu.cc.cd
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /?ed=2048
     headers:
-      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
-- name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  server: 188.114.96.3
-  port: 443
-  udp: true
-  type: vless
-  uuid: 893096ae-ed76-4440-bc34-f77c4872540f
-  tls: true
-  servername: maSterserVeR1-VSH.KaLlEH.WORkERs.DEV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieE1zSFhYR2hkcHZGUHI3cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: maSterserVeR1-VSH.KaLlEH.WORkERs.DEV
-- name: 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  type: vless
-  uuid: 41750e18-7143-49a3-bdac-4edcb3c8b8f3
-  tls: true
-  servername: h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/ml3Epzqnzr8r2cTPtolbD5lTi1GWsZOP?ed=2560
-    headers:
-      Host: h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev
+      Host: hk.yindu.cc.cd
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,8 +40,6 @@ proxy-groups:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -75,7 +47,5 @@ proxy-groups:
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
 rules:
 - MATCH,PROXIES

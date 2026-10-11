@@ -5,31 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: www.speedtest.net
+  server: 188.114.98.112
+  port: 80
+  udp: true
+  type: vless
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  network: ws
+  ws-opts:
+    path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560
+    headers:
+      Host: elenaaaaaaaaaa.cloudns.pro.
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 109.176.239.123
   port: 443
   udp: true
   type: vless
-  uuid: fae09ec8-642b-4750-a019-27a97cd967fd
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
   tls: true
-  servername: ez-3e9698.ezaccess1ec1f0c.workers.dev
+  servername: notls.lukongtou.eu.org
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoib0FkbVU0Vm5ITkQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
+    path: /Telegram-WangCai2🇨🇳
     headers:
-      Host: ez-3e9698.ezaccess1ec1f0c.workers.dev
-- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  server: 104.21.70.21
+      Host: notls.lukongtou.eu.org
+- name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
+  server: cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev
   port: 8080
   udp: true
   type: vless
-  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
+  uuid: 1460bcd2-4268-4576-914e-184ce8ea9b88
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /vl/NoQqWT0rCHq66ZyJsfqvYWDSGPLp?ed=2560
     headers:
-      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
+      Host: cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +48,7 @@ proxy-groups:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +56,6 @@ proxy-groups:
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,46 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "pl2-bkjbu.vpvr4ib84nuv6hdkt.ru",
+      "server_port": 3231,
+      "password": "43212c32-01f2-4356-b216-67dc1c178262",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl2-bkjbu.vpvr4ib84nuv6hdkt.ru",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇵🇱 波兰 (Poland) 01 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇵🇱 波兰 (Poland) 01 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

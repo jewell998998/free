@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: pl2-bkjbu.vpvr4ib84nuv6hdkt.ru
+  port: 3231
+  udp: true
+  type: hysteria2
+  password: 43212c32-01f2-4356-b216-67dc1c178262
+  sni: pl2-bkjbu.vpvr4ib84nuv6hdkt.ru
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
+rules:
+- MATCH,PROXIES

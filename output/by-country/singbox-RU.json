@@ -6,16 +6,13 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-      "server": "104.21.22.180",
+      "server": "172.66.47.132",
       "server_port": 443,
-      "uuid": "33918b20-9e02-4dc6-8b30-79b2d4b2e0e6",
+      "uuid": "b2f2f9f2-1864-48ea-839b-22815faff1f1",
       "tls": {
         "enabled": true,
-        "server_name": "auto-scale-238b2b.infra-core-1630dd.workers.dev",
+        "server_name": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -23,9 +20,23 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0",
+        "path": "/",
         "headers": {
-          "Host": "auto-scale-238b2b.infra-core-1630dd.workers.dev"
+          "Host": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+      "server": "104.21.70.21",
+      "server_port": 8080,
+      "uuid": "93fa8bdb-9cca-4a3e-8355-b7c12e4f595e",
+      "transport": {
+        "type": "ws",
+        "path": "/vl/yLWNcuUuw1jlJpkDhGy?ed=2560",
+        "headers": {
+          "Host": "fornewiran.ade-1000.workers.dev"
         }
       }
     },
@@ -34,14 +45,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

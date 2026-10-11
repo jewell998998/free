@@ -5,31 +5,127 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 104.21.8.63
+  server: 63.141.128.22
   port: 443
   udp: true
   type: vless
-  uuid: b19419fa-8009-455b-b059-765e2856883a
+  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
   tls: true
-  servername: akbarian34.j9z65ce2uyks.workers.dev
+  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/Q5xRgb8wfW3RTYFIfDA16PzboJrjLuZ9
+    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: akbarian34.j9z65ce2uyks.workers.dev
+      Host: misty-tooth-78ca.fobogah414-e7b.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: 104.21.39.30
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
+  tls: true
+  servername: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicHV2Z0VMNllZQmtoZEMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
+    headers:
+      Host: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 188.114.96.8
+  port: 443
+  udp: true
+  type: vless
+  uuid: eb24c3b4-7936-45e2-a253-e54fd1955a7f
+  tls: true
+  servername: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/Sltu36eJc3zvD9Npaxsj2vJ?ed=2560
+    headers:
+      Host: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: 52.157.100.252
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: y7KeRTzmH0vXT2kp
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  server: 185.115.34.209
+  port: 8444
+  udp: true
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  servername: github.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  server: 185.212.171.202
+  port: 18670
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 59ded1591b0b45f0b1e9361334c0f7d9
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  server: 37.49.229.6
+  port: 8443
+  udp: true
+  type: vless
+  uuid: c6db98c5-9959-425e-9340-300779fc4e4b
+  tls: true
+  servername: n3.vimeostream.online
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: nl3grpc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
 rules:
 - MATCH,PROXIES

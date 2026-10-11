@@ -1,0 +1,77 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+      "server": "www.speedtest.net",
+      "server_port": 443,
+      "uuid": "fae09ec8-642b-4750-a019-27a97cd967fd",
+      "tls": {
+        "enabled": true,
+        "server_name": "ez-3e9698.ezaccess1ec1f0c.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoib0FkbVU0Vm5ITkQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119",
+        "headers": {
+          "Host": "ez-3e9698.ezaccess1ec1f0c.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 02 - Jewell",
+      "server": "104.21.70.21",
+      "server_port": 8080,
+      "uuid": "2db92da9-8ffb-491b-81d6-6e8d50876020",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "bpb-01c11365.hjdbcvdbkv.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

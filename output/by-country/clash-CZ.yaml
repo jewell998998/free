@@ -4,12 +4,12 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇰 斯洛伐克 (Slovakia) 01 - Jewell
-  server: 80.243.228.10
-  port: 2085
+- name: 🇨🇿 捷克 (Czech) 01 - Jewell
+  server: 153.76.185.161
+  port: 3090
   udp: true
   type: vless
-  uuid: a1954a64-25b7-4eb9-9d24-7938ae028c06
+  uuid: 2e065d01-2ac9-48d7-bc4f-c1e3e6ef3de4
   network: grpc
   grpc-opts:
     grpc-service-name: vless
@@ -18,12 +18,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇸🇰 斯洛伐克 (Slovakia) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇰 斯洛伐克 (Slovakia) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
 rules:
 - MATCH,PROXIES

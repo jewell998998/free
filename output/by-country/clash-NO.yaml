@@ -1,0 +1,27 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇳🇴 挪威 (Norway) 01 - Jewell
+  server: ruot.ayucloudservices.nl
+  port: 22074
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: c2fe9024-d253-401a-b868-97421f6eb9e0
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇳🇴 挪威 (Norway) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇳🇴 挪威 (Norway) 01 - Jewell
+rules:
+- MATCH,PROXIES

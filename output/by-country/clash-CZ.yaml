@@ -5,14 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - Jewell
-  server: 153.76.185.161
-  port: 3090
+  server: soskeynets-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  port: 443
   udp: true
   type: vless
-  uuid: 2e065d01-2ac9-48d7-bc4f-c1e3e6ef3de4
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  tls: true
+  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/ERYN0G44hia16zhR
+    headers:
+      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select

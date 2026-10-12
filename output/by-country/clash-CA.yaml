@@ -5,26 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 64.74.163.69
-  port: 18766
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 4efe1af272e7292139b889f6a63ee071
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 15.175.220.220
+  server: 15.223.120.64
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
+- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
+  server: 35.183.81.9
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
+  server: ca225.vpnbook.com
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
+- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
+  server: 15.175.220.220
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +47,8 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +57,7 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 rules:
 - MATCH,PROXIES

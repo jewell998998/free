@@ -6,12 +6,29 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - Jewell",
-      "server": "153.76.185.161",
-      "server_port": 3090,
-      "uuid": "2e065d01-2ac9-48d7-bc4f-c1e3e6ef3de4",
+      "server": "soskeynets-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
+      "server_port": 443,
+      "uuid": "527451fe-ee1f-4e6f-94ca-808f055f7c9b",
+      "tls": {
+        "enabled": true,
+        "server_name": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+        "type": "ws",
+        "path": "/vl/ERYN0G44hia16zhR",
+        "headers": {
+          "Host": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {

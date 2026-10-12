@@ -12,47 +12,35 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 18.135.29.85
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 23.81.34.204
-  port: 443
+  server: 104.26.0.1
+  port: 2053
   udp: true
   type: vless
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
-  flow: xtls-rprx-vision
+  uuid: dce8ca0a-ed26-45c9-9962-38888c19a0ad
   tls: true
-  reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  servername: speed.cloudflare.com
-  client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
-  server: 51.38.71.147
-  port: 8443
-  udp: true
-  type: vless
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  tls: true
-  servername: node-uk.connectsuite.org
+  servername: still-scene-fda3.devtahair.workers.dev
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  server: 23.81.36.148
-  port: 1222
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSDNSSGYxT05LU2VEbyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjYyLjYwLjIxNy4yMzAiXX0=
+    headers:
+      Host: still-scene-fda3.devtahair.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 172.67.131.125
+  port: 443
   udp: true
   type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
   tls: true
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  servername: www.forvo.com
-  client-fingerprint: firefox
+  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/zInkY7qcXuM6P1AZTQ?ed
+    headers:
+      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -61,8 +49,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,7 +57,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,64 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 1460bcd2-4268-4576-914e-184ce8ea9b88
-  tls: true
-  servername: cd0ftGj4R79qu6F7Nl0LDWpTXV.s2GzVUgnc7ARQ-NzwDwavAZ.WoRkErS.deV
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /vl/XoQxWB3tRFHWTgSeKdPyj9ofu4bJYW?ed=2560
-    headers:
-      Host: cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: fee1da7e-a258-4456-8e5e-8ecf6518ed12
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiemxGMEFDU1VDRyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-    headers:
-      Host: ez-82c7e7.abobaba.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 13.40.25.145
+  server: 13.135.199.253
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  server: c0yr9j09y2l9g0td8wa5.2whbrirhjgslm43zjcqei.workers.dev
-  port: 443
-  udp: true
-  type: trojan
-  password: -wb.oDfOeHifTGMVEf
-  sni: c0YR9J09y2l9G0Td8WA5.2whBRirhjgsLm43ZJcqei.WoRKers.DEv
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/CRGrZTTVLMALBJkE4?ed=2560
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  server: 188.114.97.6
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  server: lagad17.api3-max.ru
   port: 443
   udp: true
   type: vless
-  uuid: 41750e18-7143-49a3-bdac-4edcb3c8b8f3
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
   tls: true
-  servername: h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev
+  servername: lagad17.api3-max.ru
   skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: laga16.api3-max.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: laga16.api3-max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 23.81.34.204
+  port: 443
+  udp: true
+  type: vless
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+    short-id: b19b017d6f453873
+  servername: speed.cloudflare.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/ml3Epzqnzr8r2cTPtolbD5lTi1GWsZOP?ed=2560
-    headers:
-      Host: h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,7 +55,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,6 +64,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 rules:
 - MATCH,PROXIES

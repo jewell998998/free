@@ -5,25 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 13.135.199.253
+  server: 13.135.102.116
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: lagad17.api3-max.ru
+  server: 18.135.29.85
   port: 443
   udp: true
-  type: vless
-  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
-  flow: xtls-rprx-vision
-  tls: true
-  servername: lagad17.api3-max.ru
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: laga16.api3-max.ru
+  server: 13.40.25.145
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 45.141.118.213
   port: 443
   udp: true
   type: vless
@@ -33,19 +36,6 @@ proxies:
   servername: laga16.api3-max.ru
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  server: 23.81.34.204
-  port: 443
-  udp: true
-  type: vless
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  servername: speed.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

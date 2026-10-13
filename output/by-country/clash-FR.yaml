@@ -5,8 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 5.253.189.238
+  server: 140.248.186.45
   port: 443
+  udp: true
+  type: vless
+  uuid: XpnTeam-2
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 02 R43 - Jewell
+  server: 193.70.85.96
+  port: 443
+  udp: true
+  type: vless
+  uuid: 58756a39-0472-5f8a-89e3-a80fa94af59e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 7q4eiwcseu-193708596-direct.rahbarii.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 185.114.72.31
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -21,11 +47,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇫🇷 法国 (France) 02 R43 - Jewell
+  - 🇫🇷 法国 (France) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇫🇷 法国 (France) 02 R43 - Jewell
+  - 🇫🇷 法国 (France) 03 - Jewell
 rules:
 - MATCH,PROXIES

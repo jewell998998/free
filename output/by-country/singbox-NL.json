@@ -4,18 +4,43 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
-      "server": "5er0m2i2ens2ulpg7sjd45ugqs.87fcvt2k11501yno2txm6yw-mipj2kr.workers.dev",
+      "server": "c3.nastuh.link",
       "server_port": 443,
-      "password": "Telegram_healer_config",
+      "method": "chacha20-ietf-poly1305",
+      "password": "y7KeRTzmH0vXT2kp"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+      "server": "185.212.171.202",
+      "server_port": 18670,
+      "method": "aes-128-gcm",
+      "password": "59ded1591b0b45f0b1e9361334c0f7d9"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+      "server": "109.235.49.234",
+      "server_port": 443,
+      "password": "529f1911-04d5-4427-94b9-c851fd459a27",
       "tls": {
         "enabled": true,
-        "server_name": "5Er0m2I2eNS2ULPg7Sjd45UGQs.87FCVt2K11501YnO2txm6yw-MiPJ2KR.worKERs.dEV",
+        "server_name": "tcp-reset-club.net",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+      "server": "188.114.97.8",
+      "server_port": 8443,
+      "uuid": "9c63fd59-f9ee-446e-97ec-0bf2de21ed7b",
+      "tls": {
+        "enabled": true,
+        "server_name": "dry-glitter-ef10.gfryubcdryujvrth.workers.dev",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -23,7 +48,34 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/tr/VCf8OF27gyXfyS3GNQ1ejyY7sy4?ed=2560"
+        "path": "/eyJqdW5rIjoiVVhGU1pOZ1oxaTFUUldyVCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "dry-glitter-ef10.gfryubcdryujvrth.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+      "server": "nl-1-6.unturned-rust-dead.lol",
+      "server_port": 443,
+      "uuid": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl-1-6.unturned-rust-dead.lol",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "nl-grpc"
       }
     },
     {
@@ -31,14 +83,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 荷兰 (Netherlands) 01 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 荷兰 (Netherlands) 01 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

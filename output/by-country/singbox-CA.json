@@ -6,18 +6,31 @@
     {
       "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
-      "server": "35.183.67.225",
+      "server": "3.96.202.28",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 02 R60 - Jewell",
-      "server": "ca225.vpnbook.com",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e5c65ph"
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
+      "server": "51.79.31.36",
+      "server_port": 31146,
+      "uuid": "f0466557-2fd5-442e-94cb-12c6b764155e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "play-fe.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE",
+          "short_id": "cf4e6f8338"
+        }
+      }
     },
     {
       "type": "selector",
@@ -25,7 +38,7 @@
       "outbounds": [
         "auto",
         "🇨🇦 加拿大 (Canada) 01 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 R60 - Jewell"
+        "🇨🇦 加拿大 (Canada) 02 - Jewell"
       ]
     },
     {
@@ -33,7 +46,7 @@
       "tag": "auto",
       "outbounds": [
         "🇨🇦 加拿大 (Canada) 01 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 R60 - Jewell"
+        "🇨🇦 加拿大 (Canada) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

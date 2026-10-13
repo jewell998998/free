@@ -5,32 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 35.183.67.225
+  server: 3.96.202.28
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 02 R60 - Jewell
-  server: ca225.vpnbook.com
-  port: 443
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
+  server: 51.79.31.36
+  port: 31146
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
+  type: vless
+  uuid: f0466557-2fd5-442e-94cb-12c6b764155e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE
+    short-id: cf4e6f8338
+  servername: play-fe.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R60 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R60 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 rules:
 - MATCH,PROXIES

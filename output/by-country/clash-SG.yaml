@@ -5,29 +5,76 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: joint-ewe.rooster465.autos
+  server: 104.17.147.22
   port: 443
   udp: true
-  type: trojan
-  password: UX82473651
-  sni: joint-ewe.rooster465.autos
+  type: vless
+  uuid: b19419fa-8009-455b-b059-765e2856883a
+  tls: true
+  servername: AkbaRiAN34.J9z65CE2UYKs.wORKERS.DEV
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/3Qe9Fv1V2cqEtXyBQApZYi?ed=2560
+    headers:
+      Host: akbarian34.j9z65ce2uyks.workers.dev
 - name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  server: intense-wildcat.rooster465.autos
-  port: 443
+  server: 172.67.130.187
+  port: 2053
   udp: true
-  type: trojan
-  password: UX82473651
-  sni: intense-wildcat.rooster465.autos
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  tls: true
+  servername: fans.liverpool.qzz.io
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZXlpMnFWRURmWkp5ZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: fans.liverpool.qzz.io
 - name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  server: simple-molly.rooster465.autos
-  port: 443
+  server: 104.17.189.184
+  port: 2096
   udp: true
-  type: trojan
-  password: UX82473651
-  sni: simple-molly.rooster465.autos
+  type: vless
+  uuid: da30a28c-5c01-4c93-8da8-c8d39d58bfb9
+  tls: true
+  servername: hk.yindu.cc.cd
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk.yindu.cc.cd
+- name: 🇸🇬 新加坡 (Singapore) 04 - Jewell
+  server: 104.17.189.184
+  port: 2096
+  udp: true
+  type: vless
+  uuid: da30a28c-5c01-4c93-8da8-c8d39d58bfb9
+  tls: true
+  servername: hk.yindu.cc.cd
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: hk.yindu.cc.cd
+- name: 🇸🇬 新加坡 (Singapore) 05 - Jewell
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: d9abc6e3-83bf-4c28-ae68-72465e2abe39
+  network: ws
+  ws-opts:
+    path: /vl/xQhNe7rLrdM0emZlaW5LMsNwcoIgnT?ed=2560
+    headers:
+      Host: ikt-kkc25f27k-3tehr8mc.ade-1007.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +83,8 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +93,7 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 - Jewell
 rules:
 - MATCH,PROXIES

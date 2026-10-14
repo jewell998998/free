@@ -4,30 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01 R41 - Jewell
-  server: arcturus.yokkastars.com
-  port: 40443
+- name: 🇮🇶 IQ 01 - Jewell
+  server: 104.21.94.230
+  port: 443
   udp: true
   type: vless
-  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
-  flow: xtls-rprx-vision
+  uuid: de78c0b1-c5c8-412a-bd92-430d1f2e2642
   tls: true
-  reality-opts:
-    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
-    short-id: db46e2946fc466fd
-  servername: deepl.com
+  servername: FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /NmrU9ImDG7jA7oFEem
+    headers:
+      Host: frosty-pond-7436.shhabbyat914.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01 R41 - Jewell
+  - 🇮🇶 IQ 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01 R41 - Jewell
+  - 🇮🇶 IQ 01 - Jewell
 rules:
 - MATCH,PROXIES

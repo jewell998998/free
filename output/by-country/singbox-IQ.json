@@ -5,22 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇶 IQ 01 R41 - Jewell",
-      "server": "arcturus.yokkastars.com",
-      "server_port": 40443,
-      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇮🇶 IQ 01 - Jewell",
+      "server": "104.21.94.230",
+      "server_port": 443,
+      "uuid": "de78c0b1-c5c8-412a-bd92-430d1f2e2642",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
+        "server_name": "FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
-          "short_id": "db46e2946fc466fd"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/NmrU9ImDG7jA7oFEem",
+        "headers": {
+          "Host": "frosty-pond-7436.shhabbyat914.workers.dev"
         }
       }
     },
@@ -29,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 R41 - Jewell"
+        "🇮🇶 IQ 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 R41 - Jewell"
+        "🇮🇶 IQ 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,86 +4,39 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
-      "server": "3.96.192.203",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
-      "server": "3.96.202.28",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 03 - Jewell",
-      "server": "15.223.120.64",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 04 - Jewell",
-      "server": "3.99.191.16",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 05 - Jewell",
-      "server": "16.52.153.34",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 06 - Jewell",
-      "server": "35.183.67.225",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 07 - Jewell",
-      "server": "15.175.220.220",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "server": "51.79.31.36",
+      "server_port": 31146,
+      "uuid": "f0466557-2fd5-442e-94cb-12c6b764155e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "play-fe.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE",
+          "short_id": "cf4e6f8338"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell",
-        "🇨🇦 加拿大 (Canada) 03 - Jewell",
-        "🇨🇦 加拿大 (Canada) 04 - Jewell",
-        "🇨🇦 加拿大 (Canada) 05 - Jewell",
-        "🇨🇦 加拿大 (Canada) 06 - Jewell",
-        "🇨🇦 加拿大 (Canada) 07 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell",
-        "🇨🇦 加拿大 (Canada) 03 - Jewell",
-        "🇨🇦 加拿大 (Canada) 04 - Jewell",
-        "🇨🇦 加拿大 (Canada) 05 - Jewell",
-        "🇨🇦 加拿大 (Canada) 06 - Jewell",
-        "🇨🇦 加拿大 (Canada) 07 - Jewell"
+        "🇨🇦 加拿大 (Canada) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

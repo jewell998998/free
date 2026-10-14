@@ -4,21 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
-      "server": "tw8.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
+      "type": "vless",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01 - Jewell",
+      "server": "45.158.185.172",
+      "server_port": 443,
+      "uuid": "49e4b91a-bd15-4e54-9b51-41a3380afb51",
       "tls": {
         "enabled": true,
-        "server_name": "tw8.dexlos.com",
+        "server_name": "z5n1.vpnpolar.online",
         "insecure": false,
         "alpn": [
-          "h3"
+          "http/1.1"
         ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/beeline",
+        "headers": {
+          "Host": "z5n1.vpnpolar.online"
+        }
       }
     },
     {
@@ -26,14 +30,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
+        "🇺🇦 乌克兰 (Ukraine) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
+        "🇺🇦 乌克兰 (Ukraine) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

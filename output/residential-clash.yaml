@@ -4,40 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
-  server: tw8.dexlos.com
-  port: 8080
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  server: 0d3705e9-ba7e-4851-bc32-0719a1866d1b.d9fa5a0f-9b07-4fca-9dd6-8ac47d83c708.byteprivatelink.com
+  port: 443
   udp: true
-  type: tuic
-  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  sni: tw8.dexlos.com
-  skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: native
-  alpn:
-  - h3
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - Jewell
-  server: dog-hk.kunlun01dns.com
-  port: 21021
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 66d0b230-3b09-421d-be15-ad2e27a90c00
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2xX937-HagNcXTIFb6QB8BZPAnbqhKdDN6HH55Xkf3Y
+    short-id: 51c9068f
+  servername: live.douyin.com
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

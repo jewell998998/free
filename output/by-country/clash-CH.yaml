@@ -4,30 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 R41 - Jewell
-  server: 45.90.59.15
-  port: 443
+- name: 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  server: 138.124.96.88
+  port: 41826
   udp: true
   type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-  flow: xtls-rprx-vision
+  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
   tls: true
-  reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: 19253fae84102271
-  servername: www.cloudflare.com
+  servername: sweden.homyak.app
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 R41 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 R41 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
 rules:
 - MATCH,PROXIES

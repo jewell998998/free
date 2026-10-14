@@ -4,46 +4,39 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
-      "server": "tw8.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
+      "server": "0d3705e9-ba7e-4851-bc32-0719a1866d1b.d9fa5a0f-9b07-4fca-9dd6-8ac47d83c708.byteprivatelink.com",
+      "server_port": 443,
+      "uuid": "66d0b230-3b09-421d-be15-ad2e27a90c00",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tw8.dexlos.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "live.douyin.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "2xX937-HagNcXTIFb6QB8BZPAnbqhKdDN6HH55Xkf3Y",
+          "short_id": "51c9068f"
+        }
       }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - Jewell",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21021,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

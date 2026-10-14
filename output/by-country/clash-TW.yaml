@@ -5,32 +5,54 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
-  server: fujrdt.d6f54hd1j.cc
-  port: 443
+  server: tw5.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw5.dexlos.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+  server: dog-tw.kunlun01dns.com
+  port: 21035
   udp: true
   type: vmess
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
-  tls: true
-  servername: fujrdt.d6f54hd1j.cc
+- name: 🇹🇼 中国台湾 (Taiwan) 03 - Jewell
+  server: tw8.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw8.dexlos.com
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fujrdt.d6f54hd1j.cc
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 03 - Jewell
 rules:
 - MATCH,PROXIES

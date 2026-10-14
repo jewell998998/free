@@ -5,6 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
+  server: 31.56.18.67
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 0be0a2bf-aa20-4e52-aa5a-3d59d56b1582
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RAsD3YMZiEtRBEQ6hNpsyfVE9ro1M4H2AQ-CKbBjJGU
+    short-id: 7878a3f029e04e23
+  servername: dege.underground.company
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: 178.17.57.33
+  port: 8444
+  udp: true
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  servername: github.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
   server: 179.61.145.245
   port: 443
   udp: true
@@ -17,30 +45,6 @@ proxies:
     short-id: 4be4110078ebed4a
   servername: de2.srv.vbuste.ru
   client-fingerprint: randomized
-- name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: gerall-1.povrak.ir
-  port: 50407
-  udp: true
-  type: vmess
-  uuid: cdfcb2be-db05-4f55-b6fc-6bf46199acd7
-  alterId: 0
-  cipher: auto
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: hgky2opr5Fr3nKjG.v.3dns.vip
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 545a503ba94849b38105e6a0fbc493e8
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: hgky2opr5Fr3nKjG.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: hgky2opr5Fr3nKjG.v.3dns.vip
 - name: 🇩🇪 德国 (Germany) 04 - Jewell
   server: 2.27.69.128
   port: 443
@@ -53,37 +57,8 @@ proxies:
     public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
     short-id: e696e744
   servername: addons.mozilla.org
-  client-fingerprint: ''
+  client-fingerprint: firefox
 - name: 🇩🇪 德国 (Germany) 05 - Jewell
-  server: sino.bestsellers1.site
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  tls: true
-  servername: sino.bestsellers1.site
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 06 - Jewell
-  server: 9FvMZovqvgV9O0xM.v.3dns.vip
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 10d6665f-10c9-4f03-9b83-ba45968f748d
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: 9FvMZovqvgV9O0xM.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 9FvMZovqvgV9O0xM.v.3dns.vip
-- name: 🇩🇪 德国 (Germany) 07 - Jewell
   server: 2.27.69.117
   port: 443
   udp: true
@@ -95,39 +70,35 @@ proxies:
     public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
     short-id: 123c2bff
   servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 08 - Jewell
-  server: CZE2OsD7QJH7t7ez.v.3dns.vip
+  client-fingerprint: random
+- name: 🇩🇪 德国 (Germany) 06 - Jewell
+  server: 46.28.69.123
   port: 443
   udp: true
-  type: vmess
-  uuid: 545a503ba94849b38105e6a0fbc493e8
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: b945f9aa-1b45-4912-aa7e-248509472bad
+  flow: xtls-rprx-vision
   tls: true
-  servername: CZE2OsD7QJH7t7ez.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: CZE2OsD7QJH7t7ez.v.3dns.vip
-- name: 🇩🇪 德国 (Germany) 09 - Jewell
-  server: 178.104.248.34
-  port: 2087
+  reality-opts:
+    public-key: 7KnJYp2-sE3o35mnbSZzX3fNg-ns9n8xyNfkRSHCD3E
+    short-id: 238e23c5150f02e4
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 07 - Jewell
+  server: 217.60.245.79
+  port: 2083
   udp: true
   type: vless
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  uuid: 0be0a2bf-aa20-4e52-aa5a-3d59d56b1582
+  flow: xtls-rprx-vision
   tls: true
-  servername: tuyiuoyuthgfdbf.localip.ir
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /hokm
-    headers:
-      Host: tuyiuoyuthgfdbf.localip.ir
-- name: 🇩🇪 德国 (Germany) 10 - Jewell
-  server: hoert1rert.localip.ir
+  reality-opts:
+    public-key: 2Myl1Tpd_ohpwZ1yzIWsz7CwqdUH12b0wIh7HLvhnyE
+    short-id: 17928540d08ad70f
+  servername: ge-2.underground.company
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 08 - Jewell
+  server: 46.225.46.136
   port: 2087
   udp: true
   type: vless
@@ -141,23 +112,29 @@ proxies:
     path: /hokm
     headers:
       Host: hoert1rert.localip.ir
-- name: 🇩🇪 德国 (Germany) 11 - Jewell
-  server: 189.24.82.195
+- name: 🇩🇪 德国 (Germany) 09 - Jewell
+  server: 9WEXvuEOsTlJWUrS.v.3dns.vip
   port: 443
   udp: true
-  type: vless
-  uuid: bf7ca7a3-a028-488e-b9f1-34e467d6d897
+  type: vmess
+  uuid: 545a503ba94849b38105e6a0fbc493e8
+  alterId: 0
+  cipher: auto
   tls: true
-  reality-opts:
-    public-key: oXHb-GX9ExLRs-CcFwllm6zp99jpx7yAdxrvAV1sZ18
-    short-id: 3eaacc9b
-  servername: itunes.apple.com
-  client-fingerprint: ''
+  servername: 9WEXvuEOsTlJWUrS.v.3dns.vip
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws
+    path: /ws-vmess
     headers:
-      Host: itunes.apple.com
+      Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
+- name: 🇩🇪 德国 (Germany) 10 R47 - Jewell
+  server: 57.129.113.16
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
 proxy-groups:
 - name: PROXIES
   type: select
@@ -172,8 +149,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07 - Jewell
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
-  - 🇩🇪 德国 (Germany) 10 - Jewell
-  - 🇩🇪 德国 (Germany) 11 - Jewell
+  - 🇩🇪 德国 (Germany) 10 R47 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -188,7 +164,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07 - Jewell
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
-  - 🇩🇪 德国 (Germany) 10 - Jewell
-  - 🇩🇪 德国 (Germany) 11 - Jewell
+  - 🇩🇪 德国 (Germany) 10 R47 - Jewell
 rules:
 - MATCH,PROXIES

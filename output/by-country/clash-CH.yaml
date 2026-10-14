@@ -5,31 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 - Jewell
-  server: 138.124.96.88
-  port: 41826
+  server: 138.124.38.65
+  port: 2083
   udp: true
   type: vless
-  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
+  uuid: 0be0a2bf-aa20-4e52-aa5a-3d59d56b1582
+  flow: xtls-rprx-vision
   tls: true
-  servername: sweden.homyak.app
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: ''
+  reality-opts:
+    public-key: z6S5mw-BVxPv2cm2XvV05MDWGODAL_3trl_vK63HzUE
+    short-id: 146ef2a26338adad
+  servername: gewair.underground.company
+  client-fingerprint: firefox
+- name: 🇨🇭 瑞士 (Switzerland) 02 R41 - Jewell
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 R41 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 R41 - Jewell
 rules:
 - MATCH,PROXIES

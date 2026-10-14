@@ -5,23 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-      "server": "0d3705e9-ba7e-4851-bc32-0719a1866d1b.d9fa5a0f-9b07-4fca-9dd6-8ac47d83c708.byteprivatelink.com",
-      "server_port": 443,
-      "uuid": "66d0b230-3b09-421d-be15-ad2e27a90c00",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇩🇰 丹麦 (Denmark) 01 - Jewell",
+      "server": "193.233.253.180",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
       "tls": {
         "enabled": true,
-        "server_name": "live.douyin.com",
+        "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "2xX937-HagNcXTIFb6QB8BZPAnbqhKdDN6HH55Xkf3Y",
-          "short_id": "51c9068f"
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
       }
     },
     {
@@ -29,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell"
+        "🇩🇰 丹麦 (Denmark) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell"
+        "🇩🇰 丹麦 (Denmark) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

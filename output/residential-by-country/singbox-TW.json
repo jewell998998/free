@@ -5,7 +5,25 @@
   "outbounds": [
     {
       "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 - Jewell",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
+      "server": "tw4.dexlos.com",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw4.dexlos.com",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell",
       "server": "tw5.dexlos.com",
       "server_port": 8080,
       "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
@@ -22,48 +40,20 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 - Jewell",
-      "server": "dog-tw.kunlun01dns.com",
-      "server_port": 21035,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
-    },
-    {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - Jewell",
-      "server": "tw8.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw8.dexlos.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell",
-        "🇹🇼 中国台湾 (Taiwan) 02 - Jewell",
-        "🇹🇼 中国台湾 (Taiwan) 03 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell",
-        "🇹🇼 中国台湾 (Taiwan) 02 - Jewell",
-        "🇹🇼 中国台湾 (Taiwan) 03 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

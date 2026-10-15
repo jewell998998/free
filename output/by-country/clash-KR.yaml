@@ -5,6 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
+  server: main-fawn.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: main-fawn.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
+  server: central-jawfish.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: central-jawfish.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
+  server: 34.22.111.30
+  port: 443
+  udp: true
+  type: vless
+  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+  tls: true
+  reality-opts:
+    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
+    short-id: 8685f8b4d9f4f51e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 04 - Jewell
   server: 141.164.43.178
   port: 443
   udp: true
@@ -17,7 +45,7 @@ proxies:
     short-id: ca193e889d958f81
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
+- name: 🇰🇷 韩国 (South Korea) 05 - Jewell
   server: 3.34.131.153
   port: 443
   udp: true
@@ -25,29 +53,13 @@ proxies:
   password: UX82473651
   sni: pretty-rat.rooster465.autos
   skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
-  server: 3.34.192.47
+- name: 🇰🇷 韩国 (South Korea) 06 - Jewell
+  server: optimum-snapper.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: central-jawfish.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 04 - Jewell
-  server: 3.36.50.213
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: pure-kodiak.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 05 - Jewell
-  server: 3.35.207.188
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: main-fawn.rooster465.autos
+  sni: optimum-snapper.rooster465.autos
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -59,6 +71,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03 - Jewell
   - 🇰🇷 韩国 (South Korea) 04 - Jewell
   - 🇰🇷 韩国 (South Korea) 05 - Jewell
+  - 🇰🇷 韩国 (South Korea) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -69,5 +82,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03 - Jewell
   - 🇰🇷 韩国 (South Korea) 04 - Jewell
   - 🇰🇷 韩国 (South Korea) 05 - Jewell
+  - 🇰🇷 韩国 (South Korea) 06 - Jewell
 rules:
 - MATCH,PROXIES

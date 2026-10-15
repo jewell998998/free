@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 13.40.23.138
+  server: 13.40.23.129
   port: 443
   udp: true
   type: ss
@@ -18,13 +18,6 @@ proxies:
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 13.40.23.129
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,7 +25,6 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -40,6 +32,5 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 109.235.49.234
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   server: 95.140.147.245
   port: 443
   udp: true
@@ -20,14 +12,15 @@ proxies:
   password: 9yOIR2_QAChKs26rYaiX_aoNnOALd0aU
   sni: nl1server.rabstvo.shop
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  server: 51.124.214.122
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: nl-hy-test.tcp-reset-club.net
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  type: hysteria2
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  sni: tcp-reset-club.net
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   server: sw.golangwikito.cfd
   port: 443
   udp: true
@@ -39,20 +32,8 @@ proxies:
     public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
     short-id: a1037b25dcef6aa7
   servername: sw.golangwikito.cfd
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  server: 94.183.206.121
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4f51ca84-43ea-4087-b8a2-938e0ccbe27a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: mDDDyruO33nuqcTS7pZOjd9oOpDHUf0aEv2TQ1DFGV4
-  servername: google.com
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  client-fingerprint: ''
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
   server: 162.35.242.252
   port: 443
   udp: true
@@ -63,21 +44,33 @@ proxies:
     public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
     short-id: 82c2b7d5e70ff000
   servername: nl.aksay.pro
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
-  server: 2.27.71.53
-  port: 443
+  client-fingerprint: random
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: 185.115.34.209
+  port: 8444
   udp: true
   type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
   tls: true
   reality-opts:
-    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
-    short-id: f3c023cc
-  servername: addons.mozilla.org
-  client-fingerprint: randomized
-- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  servername: github.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  server: viaduct.proxy.rlwy.net
+  port: 20231
+  udp: true
+  type: vless
+  uuid: 2dc4a365-8176-4e39-97fd-21c8b3a2b286
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: ''
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   server: mog.keyblack.site
   port: 8444
   udp: true
@@ -89,30 +82,21 @@ proxies:
     public-key: DQGwrxOgoiyBDrbdFUofP88FGtxHDA2duzNXKkyxaig
     short-id: 6ba85179e30d4fc2
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: ''
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  server: 2.27.71.48
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: FTB4bvTP-3JAbScj_vvkIOPFGjtN2TaNTUfeY-Ew8EU
+    short-id: 4d767145
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
-  server: 153.92.127.26
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.volumeroot.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   server: 130.12.242.106
   port: 443
   udp: true
@@ -124,7 +108,31 @@ proxies:
     public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
     short-id: 15affa0af66dfc79
   servername: deepl.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  server: 2.27.39.233
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
+    short-id: f3c023cc
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  server: 144.31.205.106
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 - name: 🇳🇱 荷兰 (Netherlands) 12 - Jewell
   server: 217.60.67.123
   port: 443
@@ -137,8 +145,19 @@ proxies:
     public-key: vSa3rWZfq5OftXO2RSgggbTOxbHlWGTLpP8bNDki3wk
     short-id: adcbde41b1cf27ba
   servername: nl1.aiage.work
-  client-fingerprint: ''
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 13 - Jewell
+  server: 46.62.230.149
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 14 - Jewell
   server: 45.150.33.33
   port: 443
   udp: true
@@ -150,7 +169,7 @@ proxies:
     public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
     short-id: eba1498e012ef580
   servername: amazon.de
-  client-fingerprint: chrome
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
@@ -169,6 +188,7 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 13 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 14 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -187,5 +207,6 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 13 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 14 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: se1.h1cloud.net
-  port: 26128
-  udp: true
-  type: vless
-  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
-  tls: true
-  reality-opts:
-    public-key: sACiHit5lNtPRK_eFP6jT8dMPUZ4kQRsfPj_LL5p7Uk
-    short-id: 13ac4d3bdadf1ea1
-  servername: www.icloud.com
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: df50147201bf
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -30,7 +15,7 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
@@ -40,13 +25,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
 rules:
 - MATCH,PROXIES

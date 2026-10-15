@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R44 - Jewell
-  server: 185.233.187.188
-  port: 2087
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - Jewell
+  server: fi1server.rabstvo.shop
+  port: 443
   udp: true
   type: hysteria2
-  password: d0589fb6-420b-4078-a72a-66d270a25fd9
-  sni: fireedge.eaglors.com
+  password: 9yOIR2_QAChKs26rYaiX_aoNnOALd0aU
+  sni: fi1server.rabstvo.shop
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44 - Jewell
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44 - Jewell
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,31 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: pl140.vpnbook.com
+  server: 199.232.78.160
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: pl134.vpnbook.com
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 45.87.41.18
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
+  type: vless
+  uuid: XpnTeam-7
+  tls: true
+  servername: ssl.fastly.com
   skip-cert-verify: false
+  client-fingerprint: safari
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 04 - Jewell
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 02 - Jewell
   server: 185.114.72.31
   port: 2053
   udp: true
@@ -40,19 +30,8 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 213.1.145.50
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 172.64.152.23
   port: 443
   udp: true
   type: trojan
@@ -70,9 +49,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,8 +57,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
 rules:
 - MATCH,PROXIES

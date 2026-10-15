@@ -5,53 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 54.36.174.140
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 199.232.130.246
-  port: 443
+  server: 172.67.130.187
+  port: 2083
   udp: true
   type: vless
-  uuid: XpnTeam-6
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
   tls: true
-  servername: default.ssl.fastly.net
+  servername: fans.liverpool.qzz.io
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /eyJqdW5rIjoiY0Y0cENQUmxsNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+      Host: fans.liverpool.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
 rules:
 - MATCH,PROXIES

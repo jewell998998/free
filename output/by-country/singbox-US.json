@@ -4,31 +4,148 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇺🇸 美国 (United States) 01 - Jewell",
-      "server": "64.74.163.67",
-      "server_port": 18764,
-      "method": "aes-128-gcm",
-      "password": "4efe1af272e7292139b889f6a63ee071"
+      "server": "104.20.47.114",
+      "server_port": 8443,
+      "uuid": "767b6340-96dc-4aa0-8013-a8af7513d920",
+      "tls": {
+        "enabled": true,
+        "server_name": "c7dabe95.proxy-978.pages.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "c7dabe95.proxy-978.pages.dev"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 02 - Jewell",
-      "server": "3.20.126.177",
-      "server_port": 10101,
-      "uuid": "VPNSaint"
+      "server": "104.26.5.60",
+      "server_port": 2053,
+      "uuid": "767b6340-96dc-4aa0-8013-a8af7513d920",
+      "tls": {
+        "enabled": true,
+        "server_name": "c7dabe95.proxy-978.pages.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "c7dabe95.proxy-978.pages.dev"
+        }
+      }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇺🇸 美国 (United States) 03 - Jewell",
-      "server": "64.74.163.69",
-      "server_port": 18766,
-      "method": "aes-128-gcm",
-      "password": "4efe1af272e7292139b889f6a63ee071"
+      "server": "136.175.179.94",
+      "server_port": 8444,
+      "uuid": "eae4af7f-0a0c-4af9-8f5f-b7dd403e59d5"
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 04 - Jewell",
+      "server": "172.67.75.52",
+      "server_port": 2083,
+      "uuid": "767b6340-96dc-4aa0-8013-a8af7513d920",
+      "tls": {
+        "enabled": true,
+        "server_name": "c7dabe95.proxy-978.pages.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "c7dabe95.proxy-978.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 05 - Jewell",
+      "server": "195.123.240.65",
+      "server_port": 443,
+      "uuid": "ce18d0eb-5c71-41f9-96e5-1632e22456e4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE",
+          "short_id": "19296c9f1bf9c7b1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 06 - Jewell",
+      "server": "188.114.97.3",
+      "server_port": 2083,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "newwk1.f1w.de5.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "newwk1.f1w.de5.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 07 - Jewell",
+      "server": "172.66.44.211",
+      "server_port": 2083,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "wk1.f1w.de5.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "wk1.f1w.de5.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 08 - Jewell",
       "server": "195.211.98.43",
       "server_port": 443,
       "uuid": "1b4b11d5-4c2d-4533-9a55-636757cdee94",
@@ -38,7 +155,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -49,14 +166,567 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 05 - Jewell",
-      "server": "104.207.132.12",
-      "server_port": 30016,
-      "uuid": "a5d27003-ad4e-4854-8d26-6c5089155a22"
+      "tag": "🇺🇸 美国 (United States) 09 - Jewell",
+      "server": "45.32.69.110",
+      "server_port": 443,
+      "uuid": "1572b9c5-d741-46eb-b4a2-a5d23958dfbe",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY",
+          "short_id": "c5cde18f"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 10 - Jewell",
+      "server": "45.63.53.81",
+      "server_port": 443,
+      "uuid": "c512dcbd-1847-40a2-9c99-989c8bfe4717",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0",
+          "short_id": "f436f707"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 11 - Jewell",
+      "server": "172.64.145.202",
+      "server_port": 2083,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "newwk1.f1w.de5.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "newwk1.f1w.de5.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 12 - Jewell",
+      "server": "104.24.30.89",
+      "server_port": 443,
+      "uuid": "aebe5a70-0ca3-46ce-8208-8b5bab1346ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "rayan-007.nastaran.dpdns.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "rayan-007.nastaran.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 13 - Jewell",
+      "server": "brazil.com",
+      "server_port": 2083,
+      "uuid": "767b6340-96dc-4aa0-8013-a8af7513d920",
+      "tls": {
+        "enabled": true,
+        "server_name": "c7dabe95.proxy-978.pages.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "c7dabe95.proxy-978.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 14 - Jewell",
+      "server": "162.159.153.217",
+      "server_port": 443,
+      "uuid": "1e922b22-d169-4461-89c1-07e09ff2617c",
+      "tls": {
+        "enabled": true,
+        "server_name": "vlesss.xttd.eu.org",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=proxyip.fxxk.dedyn.io",
+        "headers": {
+          "Host": "vlesss.xttd.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 15 - Jewell",
+      "server": "104.17.100.185",
+      "server_port": 443,
+      "uuid": "1e922b22-d169-4461-89c1-07e09ff2617c",
+      "tls": {
+        "enabled": true,
+        "server_name": "vlesss.xttd.eu.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "vlesss.xttd.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 16 - Jewell",
+      "server": "154.44.0.40",
+      "server_port": 18319,
+      "uuid": "4dc796cb-5617-42e0-8003-187afd83fa13",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "JO-5AKvbFUlZieDWC8oIVsUzUhFNvG7dt8o3MkN7IT8",
+          "short_id": "57d6e1335cc506b9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 17 - Jewell",
+      "server": "mybb.com",
+      "server_port": 443,
+      "uuid": "aebe5a70-0ca3-46ce-8208-8b5bab1346ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "rAyAn-007.nAsTaRaN.DpDnS.OrG",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "//chanl--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy?ed=2560",
+        "headers": {
+          "Host": "rayan-007.nastaran.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 18 - Jewell",
+      "server": "vu1us4xuhv387.87544899.xyz",
+      "server_port": 443,
+      "uuid": "fb26530b-c9ca-4bb2-b726-6cddfa3afe66",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "7jzzCQ4KAUmRpX0Kota4NWk4FEv2XPB1HQNxHZy0OUo",
+          "short_id": "ada5a37d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 19 R44 - Jewell",
+      "server": "213.165.50.45",
+      "server_port": 9443,
+      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "usa.edgeses.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
+          "short_id": "649ab61e575fdbc9"
+        }
+      }
     },
     {
       "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 06 - Jewell",
+      "tag": "🇺🇸 美国 (United States) 20 - Jewell",
+      "server": "cf.0sm.com",
+      "server_port": 443,
+      "uuid": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "vmess.lbw666.dpdns.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "vmess.lbw666.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 21 - Jewell",
+      "server": "789156.xyz",
+      "server_port": 443,
+      "uuid": "5f11c240-89df-494c-9c81-8b619023bb58",
+      "tls": {
+        "enabled": true,
+        "server_name": "789156.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048fp=chrome",
+        "headers": {
+          "Host": "789156.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 22 - Jewell",
+      "server": "ld.235231.xyz",
+      "server_port": 443,
+      "uuid": "65d3f9b3-d289-4a8e-9c87-90bba156de30",
+      "tls": {
+        "enabled": true,
+        "server_name": "ld.235231.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "ld.235231.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 23 R44 - Jewell",
+      "server": "213.165.50.44",
+      "server_port": 9443,
+      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "usa.edgeses.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
+          "short_id": "649ab61e575fdbc9"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 24 - Jewell",
+      "server": "198.98.53.130",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "eDfN7SODQceIOmIAbtJJtK"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 25 - Jewell",
+      "server": "188.42.145.123",
+      "server_port": 443,
+      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
+      "tls": {
+        "enabled": true,
+        "server_name": "notls.lukongtou.eu.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-WangCai2🇨🇳",
+        "headers": {
+          "Host": "notls.lukongtou.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 26 - Jewell",
+      "server": "15.204.97.219",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 27 R44 - Jewell",
+      "server": "95.181.173.68",
+      "server_port": 9443,
+      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "usa.edgeses.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
+          "short_id": "649ab61e575fdbc9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 28 R44 - Jewell",
+      "server": "193.233.202.250",
+      "server_port": 9443,
+      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "usa.edgeses.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
+          "short_id": "649ab61e575fdbc9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 29 - Jewell",
+      "server": "162.159.153.194",
+      "server_port": 443,
+      "uuid": "1e922b22-d169-4461-89c1-07e09ff2617c",
+      "tls": {
+        "enabled": true,
+        "server_name": "vlesss.xttd.eu.org",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=proxyip.fxxk.dedyn.io",
+        "headers": {
+          "Host": "vlesss.xttd.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 30 - Jewell",
+      "server": "198.23.169.170",
+      "server_port": 443,
+      "uuid": "64c05afc-ce81-4ba0-b697-afa04da1427e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "download-porter.hoyoverse.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FOl1qibUWpTggolWp30DD7VQ9_xKHZPEPVQs0sQs3gI",
+          "short_id": "2128e27b"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 31 - Jewell",
+      "server": "212.104.141.173",
+      "server_port": 443,
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "freeus.aiage.work",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0",
+          "short_id": "ccaf7283610c6fa8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 32 R50 - Jewell",
+      "server": "15.204.97.214",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 33 R44 - Jewell",
+      "server": "193.233.130.119",
+      "server_port": 10443,
+      "uuid": "16f78e38-8df9-4658-93e8-e49feababf5b"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 34 - Jewell",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "efe19c5a-0ea1-4666-8a4c-4a33f4670775",
+      "tls": {
+        "enabled": true,
+        "server_name": "luminouspetal.cyou",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/raccoonwsvless",
+        "headers": {
+          "Host": "luminouspetal.cyou"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 35 - Jewell",
       "server": "cf.0sm.com",
       "server_port": 80,
       "uuid": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
@@ -71,7 +741,520 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 07 - Jewell",
+      "tag": "🇺🇸 美国 (United States) 36 - Jewell",
+      "server": "139.64.235.123",
+      "server_port": 443,
+      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
+      "tls": {
+        "enabled": true,
+        "server_name": "notls.lukongtou.eu.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-WangCai2",
+        "headers": {
+          "Host": "notls.lukongtou.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 37 R65 - Jewell",
+      "server": "15.204.97.198",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 38 R50 - Jewell",
+      "server": "789156.xyz",
+      "server_port": 443,
+      "uuid": "5f11c240-89df-494c-9c81-8b619023bb58",
+      "tls": {
+        "enabled": true,
+        "server_name": "789156.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 39 ⚠R - Jewell",
+      "server": "15.204.97.206",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 40 - Jewell",
+      "server": "us16-4.998998.best",
+      "server_port": 443,
+      "uuid": "5504eaa8-1395-402f-8e0e-75ecd762e627",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "server1.9966338.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/efrsdioy98wert",
+        "headers": {
+          "Host": "server1.9966338.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 41 R44 - Jewell",
+      "server": "193.233.130.119",
+      "server_port": 14430,
+      "uuid": "16f78e38-8df9-4658-93e8-e49feababf5b",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "193.233.130.119"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 42 - Jewell",
+      "server": "188.114.96.9",
+      "server_port": 443,
+      "uuid": "2e305ebe-f6e6-4689-b32f-cd04ab5ff541",
+      "tls": {
+        "enabled": true,
+        "server_name": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj",
+        "headers": {
+          "Host": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 43 - Jewell",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "93fa8bdb-9cca-4a3e-8355-b7c12e4f595e",
+      "transport": {
+        "type": "ws",
+        "path": "/vl/yLWNcuUuw1jlJpkDhGy?ed=2560",
+        "headers": {
+          "Host": "fornewiran.ade-1000.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 44 - Jewell",
+      "server": "node8.liudonghoe.com",
+      "server_port": 443,
+      "uuid": "47050e4e-965d-41ca-976d-73c1f11e6905",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "node8.liudonghoe.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hoe8",
+        "headers": {
+          "Host": "node8.liudonghoe.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 45 ⚠R - Jewell",
+      "server": "15.204.97.195",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 46 - Jewell",
+      "server": "172.67.187.87",
+      "server_port": 443,
+      "password": "Telegram_healer_config",
+      "tls": {
+        "enabled": true,
+        "server_name": "bKtF381b04NcHTXkN8TidEzQgF.TCNTH9s31mg1j4TNxLAD62O1s2o.wOrKErS.DEV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/JIPAVWGHbaGJWIcEUAFGZIxrVCPW?ed=2560",
+        "headers": {
+          "Host": "bktf381b04nchtxkn8tidezqgf.tcnth9s31mg1j4tnxlad62o1s2o.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 47 - Jewell",
+      "server": "154.12.38.159",
+      "server_port": 443,
+      "uuid": "12c465bd-11a3-4fd8-8aa9-19b20a883b9e",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iv4XmZKQUC4KEuMaWZxDmjJOlGEnS3rRw-Nk8h93zUU",
+          "short_id": "f61a3a8f"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 48 - Jewell",
+      "server": "188.114.98.112",
+      "server_port": 80,
+      "uuid": "0991a0c4-0ee5-4213-af89-7ad589f853f3",
+      "transport": {
+        "type": "ws",
+        "path": "/ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560",
+        "headers": {
+          "Host": "elenaaaaaaaaaa.cloudns.pro."
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 49 R67 - Jewell",
+      "server": "15.204.97.197",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 50 - Jewell",
+      "server": "131.143.180.110",
+      "server_port": 443,
+      "uuid": "0dfaf133-be36-436a-bdad-a7b53ae58b30",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw",
+          "short_id": "62169cb853fb7503"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 51 - Jewell",
+      "server": "185.207.197.123",
+      "server_port": 443,
+      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
+      "tls": {
+        "enabled": true,
+        "server_name": "notls.lukongtou.eu.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-WangCai2🇨🇳",
+        "headers": {
+          "Host": "notls.lukongtou.eu.org"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 52 - Jewell",
+      "server": "208.83.236.249",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "-pQdOh0P4N0O5c2rOtkMRdHFZt9Fi3LB"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 53 - Jewell",
+      "server": "www.shopify.com",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 54 - Jewell",
+      "server": "154.12.38.202",
+      "server_port": 443,
+      "uuid": "2a9ab69b-26e7-44d0-a325-e5056d849900",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM",
+          "short_id": "c31176b6"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 55 - Jewell",
+      "server": "us1-1.998998.best",
+      "server_port": 443,
+      "uuid": "5504eaa8-1395-402f-8e0e-75ecd762e627",
+      "tls": {
+        "enabled": true,
+        "server_name": "server5.9966338.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/drsukitgreiusweqa9otrh983",
+        "headers": {
+          "Host": "server5.9966338.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 56 - Jewell",
+      "server": "vu2us97h.87544899.xyz",
+      "server_port": 443,
+      "uuid": "fb26530b-c9ca-4bb2-b726-6cddfa3afe66",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kCYu5PbOfpqpetoFkUV0weDpxdeCN0UWRcL6mZtf6xc",
+          "short_id": "58f26f1ff75e9031"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 57 ⚠R - Jewell",
+      "server": "38.45.66.187",
+      "server_port": 12288,
+      "uuid": "ae6672dd-ff20-453f-ed98-47a078bd0cbc",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 58 R61 - Jewell",
+      "server": "us5-1.998998.best",
+      "server_port": 443,
+      "uuid": "5504eaa8-1395-402f-8e0e-75ecd762e627",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "server4.9966338.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/androirfdsreoightrjh",
+        "headers": {
+          "Host": "server4.9966338.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 59 - Jewell",
+      "server": "136.67.16.72",
+      "server_port": 443,
+      "uuid": "9d0395c0-016f-453e-b0be-fc66f1ee1d80",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "aGm3egxU7SVqVw-oxqXbJ0u4ctldnmTjwaDh4Mao2EE",
+          "short_id": "bd4aa541e5306ba2"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 60 - Jewell",
+      "server": "viaduct.proxy.rlwy.net",
+      "server_port": 33736,
+      "uuid": "8372e630-7899-4eb2-82d5-cbed4598b1cb",
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 61 - Jewell",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46",
+      "tls": {
+        "enabled": true,
+        "server_name": "a.cwvps.eu.org",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "a.cwvps.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 62 - Jewell",
       "server": "vodiwalkerpanel-production-919e.up.railway.app",
       "server_port": 443,
       "uuid": "996aca7b-2382-4c9a-a753-bf7753d65441",
@@ -97,540 +1280,29 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 08 R44 - Jewell",
-      "server": "213.165.50.45",
-      "server_port": 9443,
-      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇺🇸 美国 (United States) 63 - Jewell",
+      "server": "fu.baiproxy.us.ci",
+      "server_port": 2087,
+      "uuid": "55d9ec38-1b8a-454b-981a-6acfe8f56d8c",
       "tls": {
         "enabled": true,
-        "server_name": "usa.edgeses.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
-          "short_id": "649ab61e575fdbc9"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - Jewell",
-      "server": "freeus.aiage.work",
-      "server_port": 443,
-      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "freeus.aiage.work",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0",
-          "short_id": "ccaf7283610c6fa8"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 10 R44 - Jewell",
-      "server": "213.165.50.44",
-      "server_port": 9443,
-      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "usa.edgeses.org",
+        "server_name": "fu.baiproxy.us.ci",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
-          "short_id": "649ab61e575fdbc9"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 11 - Jewell",
-      "server": "154.64.239.22",
-      "server_port": 26421,
-      "uuid": "9fa732d6-dcd6-47bb-c255-094bad71765d",
-      "security": "auto"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 12 - Jewell",
-      "server": "45.32.69.110",
-      "server_port": 443,
-      "uuid": "1572b9c5-d741-46eb-b4a2-a5d23958dfbe",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY",
-          "short_id": "c5cde18f"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
+        "path": "/",
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 13 - Jewell",
-      "server": "131.143.180.110",
-      "server_port": 443,
-      "uuid": "0dfaf133-be36-436a-bdad-a7b53ae58b30",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.microsoft.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw",
-          "short_id": "62169cb853fb7503"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 14 - Jewell",
-      "server": "15.204.97.219",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 15 - Jewell",
-      "server": "198.98.53.130",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "eDfN7SODQceIOmIAbtJJtK"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 16 - Jewell",
-      "server": "144.202.126.147",
-      "server_port": 443,
-      "uuid": "45d51389-0c38-4843-8ae8-cffb94e97a72",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo",
-          "short_id": "77c4230d"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 17 - Jewell",
-      "server": "195.123.240.65",
-      "server_port": 443,
-      "uuid": "ce18d0eb-5c71-41f9-96e5-1632e22456e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE",
-          "short_id": "19296c9f1bf9c7b1"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 18 - Jewell",
-      "server": "23.94.251.190",
-      "server_port": 443,
-      "uuid": "4a54f9e1-1cb0-4873-8f35-38bcf1650966",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "H-jO-7NT8LAkA9o8SOpFC-GeEqk-Jhpesmx5jJ_3n14",
-          "short_id": "312d6625929ec3df"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 19 - Jewell",
-      "server": "154.29.145.196",
-      "server_port": 443,
-      "uuid": "62fdae06-6692-4b79-8f34-470784e55fd6",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0",
-          "short_id": "33b15a3e"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 20 - Jewell",
-      "server": "44.248.233.99",
-      "server_port": 443,
-      "uuid": "37615d66-5467-44a3-bc23-f2c3bef7f761",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "aws.amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM",
-          "short_id": "21270a66"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 21 - Jewell",
-      "server": "154.12.38.159",
-      "server_port": 443,
-      "uuid": "12c465bd-11a3-4fd8-8aa9-19b20a883b9e",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "iv4XmZKQUC4KEuMaWZxDmjJOlGEnS3rRw-Nk8h93zUU",
-          "short_id": "f61a3a8f"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 22 R50 - Jewell",
-      "server": "15.204.97.214",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 23 - Jewell",
-      "server": "154.12.38.202",
-      "server_port": 443,
-      "uuid": "2a9ab69b-26e7-44d0-a325-e5056d849900",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM",
-          "short_id": "c31176b6"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 24 R67 - Jewell",
-      "server": "15.204.97.197",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 25 R44 - Jewell",
-      "server": "193.233.202.250",
-      "server_port": 9443,
-      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "usa.edgeses.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g",
-          "short_id": "649ab61e575fdbc9"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 26 - Jewell",
-      "server": "154.9.241.170",
-      "server_port": 443,
-      "uuid": "30b98a28-ed4e-46eb-8548-54c25f4db53c",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "_E8d7s7B7xYfZImOkKmESW6MJDxwKxnsscu56jhE2EM",
-          "short_id": "3fb4e08c"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 27 ⚠R - Jewell",
-      "server": "15.204.97.195",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 28 R65 - Jewell",
-      "server": "15.204.97.198",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": "01"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 29 - Jewell",
-      "server": "zorusx861.233874.xyz",
-      "server_port": 8888,
-      "uuid": "2b3e3a7b-5c74-45af-a9f6-e55edf1e9cf5",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "5CVqzPWvXM--BuEusVLOiliEsriCQn2otWxk4Ihvnxs",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 30 ⚠R - Jewell",
-      "server": "15.204.97.206",
-      "server_port": 23576,
-      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuck.rkn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 31 - Jewell",
-      "server": "qcloudge1.exitvpn.shop",
-      "server_port": 20270,
-      "password": "f83ce3c4-07d9-4895-bd14-cb74abbcab37",
-      "tls": {
-        "enabled": true,
-        "server_name": "qcloudge1.exitvpn.shop",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 32 - Jewell",
-      "server": "finkawwwbroy5.qcloud.surf",
-      "server_port": 20326,
-      "password": "4ad3dbf5-2005-4d96-b56c-a0ca9905cab6",
-      "tls": {
-        "enabled": true,
-        "server_name": "finkawwwbroy5.qcloud.surf",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 33 - Jewell",
-      "server": "0FN8ne0VXwJLjT6E.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "1d84e480-8fd2-4fae-96de-e46fe36ffe86",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "0FN8ne0VXwJLjT6E.v.3dns.vip",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "Host": "0FN8ne0VXwJLjT6E.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 34 - Jewell",
+      "tag": "🇺🇸 美国 (United States) 64 - Jewell",
       "server": "136.107.170.196",
       "server_port": 443,
       "uuid": "d6d58f01-b5ce-4d47-bce0-b8a806155852",
@@ -639,73 +1311,12 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
           "public_key": "L1S0DpFtHPBeyENZUvJPcrFZIct6kcHUPxuzNaGXIFY",
           "short_id": "4c69c4b51c580d60"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 35 - Jewell",
-      "server": "guanwang.awsno.com",
-      "server_port": 443,
-      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "guanwang.awsno.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/hls/cctv5phd.m3u8",
-        "headers": {
-          "Host": "guanwang.awsno.com"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 36 R41 - Jewell",
-      "server": "Dv9bYFLawYZl3oU9.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "a263bd66-828f-45ee-9197-ffc801ab019c",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "Dv9bYFLawYZl3oU9.v.3dns.vip",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "Host": "Dv9bYFLawYZl3oU9.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 37 R73 - Jewell",
-      "server": "95.111.212.241",
-      "server_port": 443,
-      "uuid": "924fe46b-b6e0-479e-ae7f-a3661680e706",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "BSTnEthBXhb_UyuWpLBDxg82-C-wcpU2_kOD5ohS12g",
-          "short_id": "3a697adb4c58d495"
         }
       }
     },
@@ -721,9 +1332,9 @@
         "🇺🇸 美国 (United States) 05 - Jewell",
         "🇺🇸 美国 (United States) 06 - Jewell",
         "🇺🇸 美国 (United States) 07 - Jewell",
-        "🇺🇸 美国 (United States) 08 R44 - Jewell",
+        "🇺🇸 美国 (United States) 08 - Jewell",
         "🇺🇸 美国 (United States) 09 - Jewell",
-        "🇺🇸 美国 (United States) 10 R44 - Jewell",
+        "🇺🇸 美国 (United States) 10 - Jewell",
         "🇺🇸 美国 (United States) 11 - Jewell",
         "🇺🇸 美国 (United States) 12 - Jewell",
         "🇺🇸 美国 (United States) 13 - Jewell",
@@ -732,25 +1343,52 @@
         "🇺🇸 美国 (United States) 16 - Jewell",
         "🇺🇸 美国 (United States) 17 - Jewell",
         "🇺🇸 美国 (United States) 18 - Jewell",
-        "🇺🇸 美国 (United States) 19 - Jewell",
+        "🇺🇸 美国 (United States) 19 R44 - Jewell",
         "🇺🇸 美国 (United States) 20 - Jewell",
         "🇺🇸 美国 (United States) 21 - Jewell",
-        "🇺🇸 美国 (United States) 22 R50 - Jewell",
-        "🇺🇸 美国 (United States) 23 - Jewell",
-        "🇺🇸 美国 (United States) 24 R67 - Jewell",
-        "🇺🇸 美国 (United States) 25 R44 - Jewell",
+        "🇺🇸 美国 (United States) 22 - Jewell",
+        "🇺🇸 美国 (United States) 23 R44 - Jewell",
+        "🇺🇸 美国 (United States) 24 - Jewell",
+        "🇺🇸 美国 (United States) 25 - Jewell",
         "🇺🇸 美国 (United States) 26 - Jewell",
-        "🇺🇸 美国 (United States) 27 ⚠R - Jewell",
-        "🇺🇸 美国 (United States) 28 R65 - Jewell",
+        "🇺🇸 美国 (United States) 27 R44 - Jewell",
+        "🇺🇸 美国 (United States) 28 R44 - Jewell",
         "🇺🇸 美国 (United States) 29 - Jewell",
-        "🇺🇸 美国 (United States) 30 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 30 - Jewell",
         "🇺🇸 美国 (United States) 31 - Jewell",
-        "🇺🇸 美国 (United States) 32 - Jewell",
-        "🇺🇸 美国 (United States) 33 - Jewell",
+        "🇺🇸 美国 (United States) 32 R50 - Jewell",
+        "🇺🇸 美国 (United States) 33 R44 - Jewell",
         "🇺🇸 美国 (United States) 34 - Jewell",
         "🇺🇸 美国 (United States) 35 - Jewell",
-        "🇺🇸 美国 (United States) 36 R41 - Jewell",
-        "🇺🇸 美国 (United States) 37 R73 - Jewell"
+        "🇺🇸 美国 (United States) 36 - Jewell",
+        "🇺🇸 美国 (United States) 37 R65 - Jewell",
+        "🇺🇸 美国 (United States) 38 R50 - Jewell",
+        "🇺🇸 美国 (United States) 39 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 40 - Jewell",
+        "🇺🇸 美国 (United States) 41 R44 - Jewell",
+        "🇺🇸 美国 (United States) 42 - Jewell",
+        "🇺🇸 美国 (United States) 43 - Jewell",
+        "🇺🇸 美国 (United States) 44 - Jewell",
+        "🇺🇸 美国 (United States) 45 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 46 - Jewell",
+        "🇺🇸 美国 (United States) 47 - Jewell",
+        "🇺🇸 美国 (United States) 48 - Jewell",
+        "🇺🇸 美国 (United States) 49 R67 - Jewell",
+        "🇺🇸 美国 (United States) 50 - Jewell",
+        "🇺🇸 美国 (United States) 51 - Jewell",
+        "🇺🇸 美国 (United States) 52 - Jewell",
+        "🇺🇸 美国 (United States) 53 - Jewell",
+        "🇺🇸 美国 (United States) 54 - Jewell",
+        "🇺🇸 美国 (United States) 55 - Jewell",
+        "🇺🇸 美国 (United States) 56 - Jewell",
+        "🇺🇸 美国 (United States) 57 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 58 R61 - Jewell",
+        "🇺🇸 美国 (United States) 59 - Jewell",
+        "🇺🇸 美国 (United States) 60 - Jewell",
+        "🇺🇸 美国 (United States) 61 - Jewell",
+        "🇺🇸 美国 (United States) 62 - Jewell",
+        "🇺🇸 美国 (United States) 63 - Jewell",
+        "🇺🇸 美国 (United States) 64 - Jewell"
       ]
     },
     {
@@ -764,9 +1402,9 @@
         "🇺🇸 美国 (United States) 05 - Jewell",
         "🇺🇸 美国 (United States) 06 - Jewell",
         "🇺🇸 美国 (United States) 07 - Jewell",
-        "🇺🇸 美国 (United States) 08 R44 - Jewell",
+        "🇺🇸 美国 (United States) 08 - Jewell",
         "🇺🇸 美国 (United States) 09 - Jewell",
-        "🇺🇸 美国 (United States) 10 R44 - Jewell",
+        "🇺🇸 美国 (United States) 10 - Jewell",
         "🇺🇸 美国 (United States) 11 - Jewell",
         "🇺🇸 美国 (United States) 12 - Jewell",
         "🇺🇸 美国 (United States) 13 - Jewell",
@@ -775,25 +1413,52 @@
         "🇺🇸 美国 (United States) 16 - Jewell",
         "🇺🇸 美国 (United States) 17 - Jewell",
         "🇺🇸 美国 (United States) 18 - Jewell",
-        "🇺🇸 美国 (United States) 19 - Jewell",
+        "🇺🇸 美国 (United States) 19 R44 - Jewell",
         "🇺🇸 美国 (United States) 20 - Jewell",
         "🇺🇸 美国 (United States) 21 - Jewell",
-        "🇺🇸 美国 (United States) 22 R50 - Jewell",
-        "🇺🇸 美国 (United States) 23 - Jewell",
-        "🇺🇸 美国 (United States) 24 R67 - Jewell",
-        "🇺🇸 美国 (United States) 25 R44 - Jewell",
+        "🇺🇸 美国 (United States) 22 - Jewell",
+        "🇺🇸 美国 (United States) 23 R44 - Jewell",
+        "🇺🇸 美国 (United States) 24 - Jewell",
+        "🇺🇸 美国 (United States) 25 - Jewell",
         "🇺🇸 美国 (United States) 26 - Jewell",
-        "🇺🇸 美国 (United States) 27 ⚠R - Jewell",
-        "🇺🇸 美国 (United States) 28 R65 - Jewell",
+        "🇺🇸 美国 (United States) 27 R44 - Jewell",
+        "🇺🇸 美国 (United States) 28 R44 - Jewell",
         "🇺🇸 美国 (United States) 29 - Jewell",
-        "🇺🇸 美国 (United States) 30 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 30 - Jewell",
         "🇺🇸 美国 (United States) 31 - Jewell",
-        "🇺🇸 美国 (United States) 32 - Jewell",
-        "🇺🇸 美国 (United States) 33 - Jewell",
+        "🇺🇸 美国 (United States) 32 R50 - Jewell",
+        "🇺🇸 美国 (United States) 33 R44 - Jewell",
         "🇺🇸 美国 (United States) 34 - Jewell",
         "🇺🇸 美国 (United States) 35 - Jewell",
-        "🇺🇸 美国 (United States) 36 R41 - Jewell",
-        "🇺🇸 美国 (United States) 37 R73 - Jewell"
+        "🇺🇸 美国 (United States) 36 - Jewell",
+        "🇺🇸 美国 (United States) 37 R65 - Jewell",
+        "🇺🇸 美国 (United States) 38 R50 - Jewell",
+        "🇺🇸 美国 (United States) 39 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 40 - Jewell",
+        "🇺🇸 美国 (United States) 41 R44 - Jewell",
+        "🇺🇸 美国 (United States) 42 - Jewell",
+        "🇺🇸 美国 (United States) 43 - Jewell",
+        "🇺🇸 美国 (United States) 44 - Jewell",
+        "🇺🇸 美国 (United States) 45 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 46 - Jewell",
+        "🇺🇸 美国 (United States) 47 - Jewell",
+        "🇺🇸 美国 (United States) 48 - Jewell",
+        "🇺🇸 美国 (United States) 49 R67 - Jewell",
+        "🇺🇸 美国 (United States) 50 - Jewell",
+        "🇺🇸 美国 (United States) 51 - Jewell",
+        "🇺🇸 美国 (United States) 52 - Jewell",
+        "🇺🇸 美国 (United States) 53 - Jewell",
+        "🇺🇸 美国 (United States) 54 - Jewell",
+        "🇺🇸 美国 (United States) 55 - Jewell",
+        "🇺🇸 美国 (United States) 56 - Jewell",
+        "🇺🇸 美国 (United States) 57 ⚠R - Jewell",
+        "🇺🇸 美国 (United States) 58 R61 - Jewell",
+        "🇺🇸 美国 (United States) 59 - Jewell",
+        "🇺🇸 美国 (United States) 60 - Jewell",
+        "🇺🇸 美国 (United States) 61 - Jewell",
+        "🇺🇸 美国 (United States) 62 - Jewell",
+        "🇺🇸 美国 (United States) 63 - Jewell",
+        "🇺🇸 美国 (United States) 64 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

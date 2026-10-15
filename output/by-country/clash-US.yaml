@@ -5,26 +5,100 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - Jewell
-  server: 64.74.163.67
-  port: 18764
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 4efe1af272e7292139b889f6a63ee071
-- name: 🇺🇸 美国 (United States) 02 - Jewell
-  server: 3.20.126.177
-  port: 10101
+  server: 104.20.47.114
+  port: 8443
   udp: true
   type: vless
-  uuid: VPNSaint
-- name: 🇺🇸 美国 (United States) 03 - Jewell
-  server: 64.74.163.69
-  port: 18766
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 02 - Jewell
+  server: 104.26.5.60
+  port: 2053
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 4efe1af272e7292139b889f6a63ee071
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 03 - Jewell
+  server: 136.175.179.94
+  port: 8444
+  udp: true
+  type: vless
+  uuid: eae4af7f-0a0c-4af9-8f5f-b7dd403e59d5
 - name: 🇺🇸 美国 (United States) 04 - Jewell
+  server: 172.67.75.52
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 05 - Jewell
+  server: 195.123.240.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+    short-id: 19296c9f1bf9c7b1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 06 - Jewell
+  server: 188.114.97.3
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: newwk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: newwk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 07 - Jewell
+  server: 172.66.44.211
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: wk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 08 - Jewell
   server: 195.211.98.43
   port: 443
   udp: true
@@ -36,42 +110,158 @@ proxies:
     public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
     short-id: 9c56fddf237e8eaf
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 05 - Jewell
-  server: 104.207.132.12
-  port: 30016
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 09 - Jewell
+  server: 45.32.69.110
+  port: 443
   udp: true
   type: vless
-  uuid: a5d27003-ad4e-4854-8d26-6c5089155a22
-- name: 🇺🇸 美国 (United States) 06 - Jewell
-  server: cf.0sm.com
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
+  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
+  tls: true
+  reality-opts:
+    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
+    short-id: c5cde18f
+  servername: itunes.apple.com
+  client-fingerprint: ''
   network: ws
   ws-opts:
     path: /ws
     headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇺🇸 美国 (United States) 07 - Jewell
-  server: vodiwalkerpanel-production-919e.up.railway.app
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 10 - Jewell
+  server: 45.63.53.81
   port: 443
   udp: true
   type: vless
-  uuid: 996aca7b-2382-4c9a-a753-bf7753d65441
+  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
   tls: true
-  servername: vodiwalkerpanel-production-919e.up.railway.app
+  reality-opts:
+    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
+    short-id: f436f707
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 11 - Jewell
+  server: 172.64.145.202
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: newwk1.f1w.de5.net
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws/996aca7b-2382-4c9a-a753-bf7753d65441
+    path: /
     headers:
-      Host: vodiwalkerpanel-production-919e.up.railway.app
-- name: 🇺🇸 美国 (United States) 08 R44 - Jewell
+      Host: newwk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 12 - Jewell
+  server: 104.24.30.89
+  port: 443
+  udp: true
+  type: vless
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rayan-007.nastaran.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 13 - Jewell
+  server: brazil.com
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 14 - Jewell
+  server: 162.159.153.217
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
+  tls: true
+  servername: vlesss.xttd.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=proxyip.fxxk.dedyn.io
+    headers:
+      Host: vlesss.xttd.eu.org
+- name: 🇺🇸 美国 (United States) 15 - Jewell
+  server: 104.17.100.185
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
+  tls: true
+  servername: vlesss.xttd.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vlesss.xttd.eu.org
+- name: 🇺🇸 美国 (United States) 16 - Jewell
+  server: 154.44.0.40
+  port: 18319
+  udp: true
+  type: vless
+  uuid: 4dc796cb-5617-42e0-8003-187afd83fa13
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JO-5AKvbFUlZieDWC8oIVsUzUhFNvG7dt8o3MkN7IT8
+    short-id: 57d6e1335cc506b9
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 17 - Jewell
+  server: mybb.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: //chanl--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy--Telegram--feri-v2ray-proxy?ed=2560
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 18 - Jewell
+  server: vu1us4xuhv387.87544899.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: fb26530b-c9ca-4bb2-b726-6cddfa3afe66
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7jzzCQ4KAUmRpX0Kota4NWk4FEv2XPB1HQNxHZy0OUo
+    short-id: ada5a37d
+  servername: maps.apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 19 R44 - Jewell
   server: 213.165.50.45
   port: 9443
   udp: true
@@ -84,20 +274,53 @@ proxies:
     short-id: 649ab61e575fdbc9
   servername: usa.edgeses.org
   client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 09 - Jewell
-  server: freeus.aiage.work
+- name: 🇺🇸 美国 (United States) 20 - Jewell
+  server: cf.0sm.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇺🇸 美国 (United States) 21 - Jewell
+  server: 789156.xyz
   port: 443
   udp: true
   type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
+  uuid: 5f11c240-89df-494c-9c81-8b619023bb58
   tls: true
-  reality-opts:
-    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
-    short-id: ccaf7283610c6fa8
-  servername: freeus.aiage.work
-  client-fingerprint: qq
-- name: 🇺🇸 美国 (United States) 10 R44 - Jewell
+  servername: 789156.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2048fp=chrome
+    headers:
+      Host: 789156.xyz
+- name: 🇺🇸 美国 (United States) 22 - Jewell
+  server: ld.235231.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
+  tls: true
+  servername: ld.235231.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ld.235231.xyz
+- name: 🇺🇸 美国 (United States) 23 R44 - Jewell
   server: 213.165.50.44
   port: 9443
   udp: true
@@ -109,46 +332,30 @@ proxies:
     public-key: ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g
     short-id: 649ab61e575fdbc9
   servername: usa.edgeses.org
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 11 - Jewell
-  server: 154.64.239.22
-  port: 26421
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 24 - Jewell
+  server: 198.98.53.130
+  port: 443
   udp: true
-  type: vmess
-  uuid: 9fa732d6-dcd6-47bb-c255-094bad71765d
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 12 - Jewell
-  server: 45.32.69.110
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
+- name: 🇺🇸 美国 (United States) 25 - Jewell
+  server: 188.42.145.123
   port: 443
   udp: true
   type: vless
-  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
   tls: true
-  reality-opts:
-    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
-    short-id: c5cde18f
-  servername: itunes.apple.com
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /Telegram-WangCai2🇨🇳
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 13 - Jewell
-  server: 131.143.180.110
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0dfaf133-be36-436a-bdad-a7b53ae58b30
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw
-    short-id: 62169cb853fb7503
-  servername: learn.microsoft.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 14 - Jewell
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 26 - Jewell
   server: 15.204.97.219
   port: 23576
   udp: true
@@ -160,87 +367,266 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 15 - Jewell
-  server: 198.98.53.130
-  port: 443
+- name: 🇺🇸 美国 (United States) 27 R44 - Jewell
+  server: 95.181.173.68
+  port: 9443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国 (United States) 16 - Jewell
-  server: 144.202.126.147
+  type: vless
+  uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g
+    short-id: 649ab61e575fdbc9
+  servername: usa.edgeses.org
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 28 R44 - Jewell
+  server: 193.233.202.250
+  port: 9443
+  udp: true
+  type: vless
+  uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g
+    short-id: 649ab61e575fdbc9
+  servername: usa.edgeses.org
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 29 - Jewell
+  server: 162.159.153.194
   port: 443
   udp: true
   type: vless
-  uuid: 45d51389-0c38-4843-8ae8-cffb94e97a72
+  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
+  tls: true
+  servername: vlesss.xttd.eu.org
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /proxyip=proxyip.fxxk.dedyn.io
+    headers:
+      Host: vlesss.xttd.eu.org
+- name: 🇺🇸 美国 (United States) 30 - Jewell
+  server: 198.23.169.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo
-    short-id: 77c4230d
-  servername: itunes.apple.com
+    public-key: FOl1qibUWpTggolWp30DD7VQ9_xKHZPEPVQs0sQs3gI
+    short-id: 2128e27b
+  servername: download-porter.hoyoverse.com
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 31 - Jewell
+  server: 212.104.141.173
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
+  servername: freeus.aiage.work
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 32 R50 - Jewell
+  server: 15.204.97.214
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
   client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 33 R44 - Jewell
+  server: 193.233.130.119
+  port: 10443
+  udp: true
+  type: vless
+  uuid: 16f78e38-8df9-4658-93e8-e49feababf5b
+- name: 🇺🇸 美国 (United States) 34 - Jewell
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775
+  tls: true
+  servername: luminouspetal.cyou
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /raccoonwsvless
+    headers:
+      Host: luminouspetal.cyou
+- name: 🇺🇸 美国 (United States) 35 - Jewell
+  server: cf.0sm.com
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
     path: /ws
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 17 - Jewell
-  server: 195.123.240.65
+      Host: vmess.lbw666.dpdns.org
+- name: 🇺🇸 美国 (United States) 36 - Jewell
+  server: 139.64.235.123
   port: 443
   udp: true
   type: vless
-  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  flow: xtls-rprx-vision
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
   tls: true
-  reality-opts:
-    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
-    short-id: 19296c9f1bf9c7b1
-  servername: www.cloudflare.com
-  client-fingerprint: qq
-- name: 🇺🇸 美国 (United States) 18 - Jewell
-  server: 23.94.251.190
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4a54f9e1-1cb0-4873-8f35-38bcf1650966
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: H-jO-7NT8LAkA9o8SOpFC-GeEqk-Jhpesmx5jJ_3n14
-    short-id: 312d6625929ec3df
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 19 - Jewell
-  server: 154.29.145.196
-  port: 443
-  udp: true
-  type: vless
-  uuid: 62fdae06-6692-4b79-8f34-470784e55fd6
-  tls: true
-  reality-opts:
-    public-key: h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0
-    short-id: 33b15a3e
-  servername: itunes.apple.com
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /Telegram-WangCai2
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 20 - Jewell
-  server: 44.248.233.99
-  port: 443
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 37 R65 - Jewell
+  server: 15.204.97.198
+  port: 23576
   udp: true
   type: vless
-  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
-    short-id: 21270a66
-  servername: aws.amazon.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 21 - Jewell
+- name: 🇺🇸 美国 (United States) 38 R50 - Jewell
+  server: 789156.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5f11c240-89df-494c-9c81-8b619023bb58
+  tls: true
+  servername: 789156.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 39 ⚠R - Jewell
+  server: 15.204.97.206
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 40 - Jewell
+  server: us16-4.998998.best
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server1.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /efrsdioy98wert
+    headers:
+      Host: server1.9966338.xyz
+- name: 🇺🇸 美国 (United States) 41 R44 - Jewell
+  server: 193.233.130.119
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 16f78e38-8df9-4658-93e8-e49feababf5b
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 193.233.130.119
+- name: 🇺🇸 美国 (United States) 42 - Jewell
+  server: 188.114.96.9
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  tls: true
+  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: 🇺🇸 美国 (United States) 43 - Jewell
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
+- name: 🇺🇸 美国 (United States) 44 - Jewell
+  server: node8.liudonghoe.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: node8.liudonghoe.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /hoe8
+    headers:
+      Host: node8.liudonghoe.com
+- name: 🇺🇸 美国 (United States) 45 ⚠R - Jewell
+  server: 15.204.97.195
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 46 - Jewell
+  server: 172.67.187.87
+  port: 443
+  udp: true
+  type: trojan
+  password: Telegram_healer_config
+  sni: bKtF381b04NcHTXkN8TidEzQgF.TCNTH9s31mg1j4TNxLAD62O1s2o.wOrKErS.DEV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/JIPAVWGHbaGJWIcEUAFGZIxrVCPW?ed=2560
+- name: 🇺🇸 美国 (United States) 47 - Jewell
   server: 154.12.38.159
   port: 443
   udp: true
@@ -255,36 +641,20 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
-- name: 🇺🇸 美国 (United States) 22 R50 - Jewell
-  server: 15.204.97.214
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 23 - Jewell
-  server: 154.12.38.202
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2a9ab69b-26e7-44d0-a325-e5056d849900
-  tls: true
-  reality-opts:
-    public-key: iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM
-    short-id: c31176b6
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 24 R67 - Jewell
+- name: 🇺🇸 美国 (United States) 48 - Jewell
+  server: 188.114.98.112
+  port: 80
+  udp: true
+  type: vless
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  network: ws
+  ws-opts:
+    path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560
+    headers:
+      Host: elenaaaaaaaaaa.cloudns.pro.
+- name: 🇺🇸 美国 (United States) 49 R67 - Jewell
   server: 15.204.97.197
   port: 23576
   udp: true
@@ -296,130 +666,43 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 25 R44 - Jewell
-  server: 193.233.202.250
-  port: 9443
-  udp: true
-  type: vless
-  uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ELJzJkc4SiCeCn6OF-8V9oeoJqXcD1y9WUntP3It53g
-    short-id: 649ab61e575fdbc9
-  servername: usa.edgeses.org
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 26 - Jewell
-  server: 154.9.241.170
+- name: 🇺🇸 美国 (United States) 50 - Jewell
+  server: 131.143.180.110
   port: 443
   udp: true
   type: vless
-  uuid: 30b98a28-ed4e-46eb-8548-54c25f4db53c
+  uuid: 0dfaf133-be36-436a-bdad-a7b53ae58b30
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: _E8d7s7B7xYfZImOkKmESW6MJDxwKxnsscu56jhE2EM
-    short-id: 3fb4e08c
-  servername: itunes.apple.com
+    public-key: ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw
+    short-id: 62169cb853fb7503
+  servername: learn.microsoft.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 51 - Jewell
+  server: 185.207.197.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /Telegram-WangCai2🇨🇳
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 27 ⚠R - Jewell
-  server: 15.204.97.195
-  port: 23576
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 52 - Jewell
+  server: 208.83.236.249
+  port: 1080
   udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
-  client-fingerprint: random
-- name: 🇺🇸 美国 (United States) 28 R65 - Jewell
-  server: 15.204.97.198
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 29 - Jewell
-  server: zorusx861.233874.xyz
-  port: 8888
-  udp: true
-  type: vless
-  uuid: 2b3e3a7b-5c74-45af-a9f6-e55edf1e9cf5
-  tls: true
-  reality-opts:
-    public-key: 5CVqzPWvXM--BuEusVLOiliEsriCQn2otWxk4Ihvnxs
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 30 ⚠R - Jewell
-  server: 15.204.97.206
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
-  client-fingerprint: random
-- name: 🇺🇸 美国 (United States) 31 - Jewell
-  server: qcloudge1.exitvpn.shop
-  port: 20270
-  udp: true
-  type: hysteria2
-  password: f83ce3c4-07d9-4895-bd14-cb74abbcab37
-  sni: qcloudge1.exitvpn.shop
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 32 - Jewell
-  server: finkawwwbroy5.qcloud.surf
-  port: 20326
-  udp: true
-  type: hysteria2
-  password: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
-  sni: finkawwwbroy5.qcloud.surf
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 33 - Jewell
-  server: 0FN8ne0VXwJLjT6E.v.3dns.vip
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: 0FN8ne0VXwJLjT6E.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 0FN8ne0VXwJLjT6E.v.3dns.vip
-- name: 🇺🇸 美国 (United States) 34 - Jewell
-  server: 136.107.170.196
-  port: 443
-  udp: true
-  type: vless
-  uuid: d6d58f01-b5ce-4d47-bce0-b8a806155852
-  tls: true
-  reality-opts:
-    public-key: L1S0DpFtHPBeyENZUvJPcrFZIct6kcHUPxuzNaGXIFY
-    short-id: 4c69c4b51c580d60
-  servername: www.cloudflare.com
-  client-fingerprint: qq
-- name: 🇺🇸 美国 (United States) 35 - Jewell
-  server: guanwang.awsno.com
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: -pQdOh0P4N0O5c2rOtkMRdHFZt9Fi3LB
+- name: 🇺🇸 美国 (United States) 53 - Jewell
+  server: www.shopify.com
   port: 443
   udp: true
   type: vmess
@@ -434,35 +717,156 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: 🇺🇸 美国 (United States) 36 R41 - Jewell
-  server: Dv9bYFLawYZl3oU9.v.3dns.vip
-  port: 443
-  udp: true
-  type: vmess
-  uuid: a263bd66-828f-45ee-9197-ffc801ab019c
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: Dv9bYFLawYZl3oU9.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: Dv9bYFLawYZl3oU9.v.3dns.vip
-- name: 🇺🇸 美国 (United States) 37 R73 - Jewell
-  server: 95.111.212.241
+- name: 🇺🇸 美国 (United States) 54 - Jewell
+  server: 154.12.38.202
   port: 443
   udp: true
   type: vless
-  uuid: 924fe46b-b6e0-479e-ae7f-a3661680e706
+  uuid: 2a9ab69b-26e7-44d0-a325-e5056d849900
+  tls: true
+  reality-opts:
+    public-key: iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM
+    short-id: c31176b6
+  servername: itunes.apple.com
+  client-fingerprint: ''
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 55 - Jewell
+  server: us1-1.998998.best
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  tls: true
+  servername: server5.9966338.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /drsukitgreiusweqa9otrh983
+    headers:
+      Host: server5.9966338.xyz
+- name: 🇺🇸 美国 (United States) 56 - Jewell
+  server: vu2us97h.87544899.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: fb26530b-c9ca-4bb2-b726-6cddfa3afe66
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: BSTnEthBXhb_UyuWpLBDxg82-C-wcpU2_kOD5ohS12g
-    short-id: 3a697adb4c58d495
-  servername: www.samsung.com
-  client-fingerprint: random
+    public-key: kCYu5PbOfpqpetoFkUV0weDpxdeCN0UWRcL6mZtf6xc
+    short-id: 58f26f1ff75e9031
+  servername: maps.apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 57 ⚠R - Jewell
+  server: 38.45.66.187
+  port: 12288
+  udp: true
+  type: vmess
+  uuid: ae6672dd-ff20-453f-ed98-47a078bd0cbc
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 58 R61 - Jewell
+  server: us5-1.998998.best
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server4.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /androirfdsreoightrjh
+    headers:
+      Host: server4.9966338.xyz
+- name: 🇺🇸 美国 (United States) 59 - Jewell
+  server: 136.67.16.72
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9d0395c0-016f-453e-b0be-fc66f1ee1d80
+  tls: true
+  reality-opts:
+    public-key: aGm3egxU7SVqVw-oxqXbJ0u4ctldnmTjwaDh4Mao2EE
+    short-id: bd4aa541e5306ba2
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 60 - Jewell
+  server: viaduct.proxy.rlwy.net
+  port: 33736
+  udp: true
+  type: vless
+  uuid: 8372e630-7899-4eb2-82d5-cbed4598b1cb
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: ''
+- name: 🇺🇸 美国 (United States) 61 - Jewell
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  tls: true
+  servername: a.cwvps.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: 🇺🇸 美国 (United States) 62 - Jewell
+  server: vodiwalkerpanel-production-919e.up.railway.app
+  port: 443
+  udp: true
+  type: vless
+  uuid: 996aca7b-2382-4c9a-a753-bf7753d65441
+  tls: true
+  servername: vodiwalkerpanel-production-919e.up.railway.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/996aca7b-2382-4c9a-a753-bf7753d65441
+    headers:
+      Host: vodiwalkerpanel-production-919e.up.railway.app
+- name: 🇺🇸 美国 (United States) 63 - Jewell
+  server: fu.baiproxy.us.ci
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  tls: true
+  servername: fu.baiproxy.us.ci
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 64 - Jewell
+  server: 136.107.170.196
+  port: 443
+  udp: true
+  type: vless
+  uuid: d6d58f01-b5ce-4d47-bce0-b8a806155852
+  tls: true
+  reality-opts:
+    public-key: L1S0DpFtHPBeyENZUvJPcrFZIct6kcHUPxuzNaGXIFY
+    short-id: 4c69c4b51c580d60
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -475,9 +879,9 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 05 - Jewell
   - 🇺🇸 美国 (United States) 06 - Jewell
   - 🇺🇸 美国 (United States) 07 - Jewell
-  - 🇺🇸 美国 (United States) 08 R44 - Jewell
+  - 🇺🇸 美国 (United States) 08 - Jewell
   - 🇺🇸 美国 (United States) 09 - Jewell
-  - 🇺🇸 美国 (United States) 10 R44 - Jewell
+  - 🇺🇸 美国 (United States) 10 - Jewell
   - 🇺🇸 美国 (United States) 11 - Jewell
   - 🇺🇸 美国 (United States) 12 - Jewell
   - 🇺🇸 美国 (United States) 13 - Jewell
@@ -486,25 +890,52 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 16 - Jewell
   - 🇺🇸 美国 (United States) 17 - Jewell
   - 🇺🇸 美国 (United States) 18 - Jewell
-  - 🇺🇸 美国 (United States) 19 - Jewell
+  - 🇺🇸 美国 (United States) 19 R44 - Jewell
   - 🇺🇸 美国 (United States) 20 - Jewell
   - 🇺🇸 美国 (United States) 21 - Jewell
-  - 🇺🇸 美国 (United States) 22 R50 - Jewell
-  - 🇺🇸 美国 (United States) 23 - Jewell
-  - 🇺🇸 美国 (United States) 24 R67 - Jewell
-  - 🇺🇸 美国 (United States) 25 R44 - Jewell
+  - 🇺🇸 美国 (United States) 22 - Jewell
+  - 🇺🇸 美国 (United States) 23 R44 - Jewell
+  - 🇺🇸 美国 (United States) 24 - Jewell
+  - 🇺🇸 美国 (United States) 25 - Jewell
   - 🇺🇸 美国 (United States) 26 - Jewell
-  - 🇺🇸 美国 (United States) 27 ⚠R - Jewell
-  - 🇺🇸 美国 (United States) 28 R65 - Jewell
+  - 🇺🇸 美国 (United States) 27 R44 - Jewell
+  - 🇺🇸 美国 (United States) 28 R44 - Jewell
   - 🇺🇸 美国 (United States) 29 - Jewell
-  - 🇺🇸 美国 (United States) 30 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 30 - Jewell
   - 🇺🇸 美国 (United States) 31 - Jewell
-  - 🇺🇸 美国 (United States) 32 - Jewell
-  - 🇺🇸 美国 (United States) 33 - Jewell
+  - 🇺🇸 美国 (United States) 32 R50 - Jewell
+  - 🇺🇸 美国 (United States) 33 R44 - Jewell
   - 🇺🇸 美国 (United States) 34 - Jewell
   - 🇺🇸 美国 (United States) 35 - Jewell
-  - 🇺🇸 美国 (United States) 36 R41 - Jewell
-  - 🇺🇸 美国 (United States) 37 R73 - Jewell
+  - 🇺🇸 美国 (United States) 36 - Jewell
+  - 🇺🇸 美国 (United States) 37 R65 - Jewell
+  - 🇺🇸 美国 (United States) 38 R50 - Jewell
+  - 🇺🇸 美国 (United States) 39 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 40 - Jewell
+  - 🇺🇸 美国 (United States) 41 R44 - Jewell
+  - 🇺🇸 美国 (United States) 42 - Jewell
+  - 🇺🇸 美国 (United States) 43 - Jewell
+  - 🇺🇸 美国 (United States) 44 - Jewell
+  - 🇺🇸 美国 (United States) 45 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 46 - Jewell
+  - 🇺🇸 美国 (United States) 47 - Jewell
+  - 🇺🇸 美国 (United States) 48 - Jewell
+  - 🇺🇸 美国 (United States) 49 R67 - Jewell
+  - 🇺🇸 美国 (United States) 50 - Jewell
+  - 🇺🇸 美国 (United States) 51 - Jewell
+  - 🇺🇸 美国 (United States) 52 - Jewell
+  - 🇺🇸 美国 (United States) 53 - Jewell
+  - 🇺🇸 美国 (United States) 54 - Jewell
+  - 🇺🇸 美国 (United States) 55 - Jewell
+  - 🇺🇸 美国 (United States) 56 - Jewell
+  - 🇺🇸 美国 (United States) 57 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 58 R61 - Jewell
+  - 🇺🇸 美国 (United States) 59 - Jewell
+  - 🇺🇸 美国 (United States) 60 - Jewell
+  - 🇺🇸 美国 (United States) 61 - Jewell
+  - 🇺🇸 美国 (United States) 62 - Jewell
+  - 🇺🇸 美国 (United States) 63 - Jewell
+  - 🇺🇸 美国 (United States) 64 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -517,9 +948,9 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 05 - Jewell
   - 🇺🇸 美国 (United States) 06 - Jewell
   - 🇺🇸 美国 (United States) 07 - Jewell
-  - 🇺🇸 美国 (United States) 08 R44 - Jewell
+  - 🇺🇸 美国 (United States) 08 - Jewell
   - 🇺🇸 美国 (United States) 09 - Jewell
-  - 🇺🇸 美国 (United States) 10 R44 - Jewell
+  - 🇺🇸 美国 (United States) 10 - Jewell
   - 🇺🇸 美国 (United States) 11 - Jewell
   - 🇺🇸 美国 (United States) 12 - Jewell
   - 🇺🇸 美国 (United States) 13 - Jewell
@@ -528,24 +959,51 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 16 - Jewell
   - 🇺🇸 美国 (United States) 17 - Jewell
   - 🇺🇸 美国 (United States) 18 - Jewell
-  - 🇺🇸 美国 (United States) 19 - Jewell
+  - 🇺🇸 美国 (United States) 19 R44 - Jewell
   - 🇺🇸 美国 (United States) 20 - Jewell
   - 🇺🇸 美国 (United States) 21 - Jewell
-  - 🇺🇸 美国 (United States) 22 R50 - Jewell
-  - 🇺🇸 美国 (United States) 23 - Jewell
-  - 🇺🇸 美国 (United States) 24 R67 - Jewell
-  - 🇺🇸 美国 (United States) 25 R44 - Jewell
+  - 🇺🇸 美国 (United States) 22 - Jewell
+  - 🇺🇸 美国 (United States) 23 R44 - Jewell
+  - 🇺🇸 美国 (United States) 24 - Jewell
+  - 🇺🇸 美国 (United States) 25 - Jewell
   - 🇺🇸 美国 (United States) 26 - Jewell
-  - 🇺🇸 美国 (United States) 27 ⚠R - Jewell
-  - 🇺🇸 美国 (United States) 28 R65 - Jewell
+  - 🇺🇸 美国 (United States) 27 R44 - Jewell
+  - 🇺🇸 美国 (United States) 28 R44 - Jewell
   - 🇺🇸 美国 (United States) 29 - Jewell
-  - 🇺🇸 美国 (United States) 30 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 30 - Jewell
   - 🇺🇸 美国 (United States) 31 - Jewell
-  - 🇺🇸 美国 (United States) 32 - Jewell
-  - 🇺🇸 美国 (United States) 33 - Jewell
+  - 🇺🇸 美国 (United States) 32 R50 - Jewell
+  - 🇺🇸 美国 (United States) 33 R44 - Jewell
   - 🇺🇸 美国 (United States) 34 - Jewell
   - 🇺🇸 美国 (United States) 35 - Jewell
-  - 🇺🇸 美国 (United States) 36 R41 - Jewell
-  - 🇺🇸 美国 (United States) 37 R73 - Jewell
+  - 🇺🇸 美国 (United States) 36 - Jewell
+  - 🇺🇸 美国 (United States) 37 R65 - Jewell
+  - 🇺🇸 美国 (United States) 38 R50 - Jewell
+  - 🇺🇸 美国 (United States) 39 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 40 - Jewell
+  - 🇺🇸 美国 (United States) 41 R44 - Jewell
+  - 🇺🇸 美国 (United States) 42 - Jewell
+  - 🇺🇸 美国 (United States) 43 - Jewell
+  - 🇺🇸 美国 (United States) 44 - Jewell
+  - 🇺🇸 美国 (United States) 45 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 46 - Jewell
+  - 🇺🇸 美国 (United States) 47 - Jewell
+  - 🇺🇸 美国 (United States) 48 - Jewell
+  - 🇺🇸 美国 (United States) 49 R67 - Jewell
+  - 🇺🇸 美国 (United States) 50 - Jewell
+  - 🇺🇸 美国 (United States) 51 - Jewell
+  - 🇺🇸 美国 (United States) 52 - Jewell
+  - 🇺🇸 美国 (United States) 53 - Jewell
+  - 🇺🇸 美国 (United States) 54 - Jewell
+  - 🇺🇸 美国 (United States) 55 - Jewell
+  - 🇺🇸 美国 (United States) 56 - Jewell
+  - 🇺🇸 美国 (United States) 57 ⚠R - Jewell
+  - 🇺🇸 美国 (United States) 58 R61 - Jewell
+  - 🇺🇸 美国 (United States) 59 - Jewell
+  - 🇺🇸 美国 (United States) 60 - Jewell
+  - 🇺🇸 美国 (United States) 61 - Jewell
+  - 🇺🇸 美国 (United States) 62 - Jewell
+  - 🇺🇸 美国 (United States) 63 - Jewell
+  - 🇺🇸 美国 (United States) 64 - Jewell
 rules:
 - MATCH,PROXIES

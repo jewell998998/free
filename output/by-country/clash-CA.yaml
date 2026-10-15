@@ -5,24 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 138.197.141.58
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 51.79.31.36
-  port: 31146
+  server: can1.ragnarok-it.xyz
+  port: 8449
   udp: true
   type: vless
-  uuid: f0466557-2fd5-442e-94cb-12c6b764155e
+  uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE
-    short-id: cf4e6f8338
-  servername: play-fe.googleapis.com
+    public-key: l_qSSfZDQDjpodjZ80CiFCyXY6xssS0IHWxu6n_HN3c
+    short-id: dee4ffbdbe515f0d
+  servername: amd.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -30,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,115 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+      "server": "144.31.230.27",
+      "server_port": 21223,
+      "password": "6656cc0a-5908-4d04-a436-64f5843c0c7a",
+      "tls": {
+        "enabled": true,
+        "server_name": "sweedenqfds777.qcloud.surf",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+      "server": "se3.h1cloud.net",
+      "server_port": 25643,
+      "uuid": "83383473-0d62-4089-ac4d-d7ecb413504a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.boutique-hotel1108.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NBKdM5Q5Tiue7YkxEldtShCCHi1GJ0WKCizyhPXQTy4",
+          "short_id": "20672f0333e23e84"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+      "server": "se3.h1cloud.net",
+      "server_port": 25119,
+      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4",
+          "short_id": "10f517"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+      "server": "62.60.159.81",
+      "server_port": 2053,
+      "uuid": "fc00adfb-232a-46ce-8b93-0c70e516aa8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw",
+          "short_id": "d0ea1847066af5a6"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpce5bb9e71"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

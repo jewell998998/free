@@ -1,0 +1,108 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+      "server": "13.40.23.129",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "nl2.oh-node.com",
+      "server_port": 443,
+      "uuid": "7cfd34ae-edad-4cc5-9d6f-066f7add7829",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.philips.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Ncb78PVwvwU2tB1eiOlJd0ZCG2CbqG7-dPIHztlq2yM",
+          "short_id": "69cc4c0d5e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+      "server": "uk2.oh-node.com",
+      "server_port": 443,
+      "uuid": "7cfd34ae-edad-4cc5-9d6f-066f7add7829",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bp.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "QdYs12kmf0mAXNOEPgMpLN5dbZUlgvRK2zCqynOmqBk",
+          "short_id": "20"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
+      "server": "193.188.21.253",
+      "server_port": 10444,
+      "uuid": "57f7772d-f5d6-4d8f-992d-5fa5e0d6da55",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "video.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

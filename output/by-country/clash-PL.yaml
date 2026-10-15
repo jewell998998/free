@@ -1,0 +1,89 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: pl.golangwikito.cfd
+  port: 443
+  udp: true
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg
+    short-id: f8b695e5c59d028c
+  servername: pl.golangwikito.cfd
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: pl4.h1cloud.net
+  port: 25080
+  udp: true
+  type: vless
+  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
+  tls: true
+  reality-opts:
+    public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
+    short-id: 103d1dc5ed8eaf4c
+  servername: www.ceneo.pl
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: pl9.aiage.work
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl9.aiage.work
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: 144.31.101.196
+  port: 33891
+  udp: true
+  type: vless
+  uuid: 1c794e75-bcd4-4a65-9f69-ed0a10f33d60
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HXXIkFRPeRpluXJ7SOoUGf9EOq4Lw-oJpvg1W0UPbEw
+    short-id: 5bd7b68ca4c04443
+  servername: browser.yandex.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 05 - Jewell
+  server: 177.1.192.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5ac49a12-f275-44b4-b11d-26505f3f268e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JNr60Nnq_sdeAz5jd25bxNDx_c9CeYLu7DRbQH3P5xk
+    short-id: 85766a81
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
+rules:
+- MATCH,PROXIES

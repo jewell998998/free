@@ -5,39 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: vp3.yysyy.online
+  server: jp.tronsg.com
   port: 443
   udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
+  type: trojan
+  password: Trojan@82164024
+  sni: jp.tronsg.com
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 43.167.232.174
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0fd46529-707f-4d33-899b-598f5f4acffa
-  tls: true
-  reality-opts:
-    public-key: hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI
-    short-id: b51e057820d3e14c
-  servername: www.microsoft.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: funagfrdfs.alixxplay.com
-  port: 56656
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: QFM3jTzb5n-E9L2cfFo6GHqioGmIkjmG60l8wXA4IXc
-    short-id: aae6d935
-  servername: cdn-dynmedia-1.microsoft.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
   server: 142.91.108.25
   port: 443
   udp: true
@@ -49,16 +24,15 @@ proxies:
     public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
     short-id: ea36c03d86f91287
   servername: jp3.nztvpn.com
-  client-fingerprint: qq
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 108.61.186.37
-  port: 443
+  client-fingerprint: edge
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: ruot.ayucloudservices.nl
+  port: 40018
   udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: jp.tronsg.com
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  type: ss
+  cipher: aes-128-gcm
+  password: c855b71e-f3c2-442a-9429-0844eb4346c5
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
   server: jp5.998998.best
   port: 443
   udp: true
@@ -74,6 +48,32 @@ proxies:
     path: /ieusrdgfhteuirgfiuws
     headers:
       Host: server11.9966338.xyz
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: t5.qifei.app
+  port: 443
+  udp: true
+  type: vless
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  servername: s3.ap-east-1.amazonaws.com
+  client-fingerprint: random
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  server: 39.109.110.80
+  port: 27916
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: 6772eb2b7a
+  servername: cdn-dynmedia-1.microsoft.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

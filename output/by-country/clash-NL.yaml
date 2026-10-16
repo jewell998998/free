@@ -5,21 +5,65 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 51.124.214.122
+  server: 2.59.183.167
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
+  type: vless
+  uuid: 301d514e-4aa0-47b0-ba44-a0cb891cd52f
+  tls: true
+  reality-opts:
+    public-key: OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4
+    short-id: a1b2c3d4
+  servername: www.samsung.com
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: nl-hy-test.tcp-reset-club.net
+  server: 162.35.242.252
   port: 443
   udp: true
-  type: hysteria2
-  password: dd50a499-7e43-4589-8490-f3b9c2451473
-  sni: tcp-reset-club.net
-  skip-cert-verify: false
+  type: vless
+  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
+  tls: true
+  reality-opts:
+    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
+    short-id: 82c2b7d5e70ff000
+  servername: nl.aksay.pro
+  client-fingerprint: random
 - name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 188.114.97.7
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: wWw.Volumeroot.cOm.
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 2.27.39.233
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
+    short-id: f3c023cc
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   server: sw.golangwikito.cfd
   port: 443
   udp: true
@@ -31,42 +75,7 @@ proxies:
     public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
     short-id: a1037b25dcef6aa7
   servername: sw.golangwikito.cfd
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: 51.15.16.68
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 7d0fd363-16d2-43ce-9d6d-ed2c15d2cb7c
-  tls: true
-  reality-opts:
-    public-key: Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc
-    short-id: 3c99c85cbb6b3b44
-  servername: www.apple.com
-  client-fingerprint: random
-- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  server: 162.35.242.252
-  port: 443
-  udp: true
-  type: vless
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
-  tls: true
-  reality-opts:
-    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
-    short-id: 82c2b7d5e70ff000
-  servername: nl.aksay.pro
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
-  server: 8.47.69.0
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  client-fingerprint: edge
 - name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   server: mog.keyblack.site
   port: 8444
@@ -79,46 +88,46 @@ proxies:
     public-key: DQGwrxOgoiyBDrbdFUofP88FGtxHDA2duzNXKkyxaig
     short-id: 6ba85179e30d4fc2
   servername: www.cloudflare.com
-  client-fingerprint: ''
+  client-fingerprint: firefox
 - name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  server: 2.27.39.233
+  server: 130.12.242.106
   port: 443
   udp: true
   type: vless
-  uuid: e60a2499-c5bf-4ad6-86b0-8af0bd3c0bbf
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
-    short-id: f3c023cc
-  servername: addons.mozilla.org
-  client-fingerprint: randomized
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  servername: deepl.com
+  client-fingerprint: firefox
 - name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
-  server: 172.67.184.45
+  server: 45.150.33.33
   port: 443
   udp: true
   type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
   tls: true
-  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-  skip-cert-verify: false
+  reality-opts:
+    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
+    short-id: eba1498e012ef580
+  servername: amazon.de
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
 - name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
-  server: 188.42.145.180
+  server: nl1.aiage.work
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: wWw.Volumeroot.cOm.
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: vSa3rWZfq5OftXO2RSgggbTOxbHlWGTLpP8bNDki3wk
+    short-id: adcbde41b1cf27ba
+  servername: nl1.aiage.work
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select

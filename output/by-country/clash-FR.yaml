@@ -5,42 +5,54 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 104.21.70.21
+  server: 104.19.64.105
   port: 443
   udp: true
-  type: vless
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
-  tls: true
-  servername: fornewiran.ade-1000.workers.dev
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
-    headers:
-      Host: fornewiran.ade-1000.workers.dev
+    path: /assignment
 - name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 37.148.203.124
-  port: 12238
+  server: 54.36.174.134
+  port: 443
   udp: true
   type: ss
-  cipher: aes-128-gcm
-  password: 6163d9d532e40f417dd8ebb5f9716495
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
 - name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 199.232.78.170
+  server: 54.36.174.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: 46.226.166.208
+  port: 14430
+  udp: true
+  type: vless
+  uuid: af827fd0-6381-426f-bc5e-dcd9a7baeaac
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇫🇷 法国 (France) 05 R43 - Jewell
+  server: skycitybox-bidarbash.sbs
   port: 443
   udp: true
   type: vless
-  uuid: XpnTeam-10
+  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
   tls: true
-  servername: ssl.fastly.com
+  servername: skycitybox-bidarbash.sbs
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /zoodi
     headers:
-      Host: Appxdn.global.ssl.fastly.net
+      Host: skycitybox-bidarbash.sbs
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,6 +61,8 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 R43 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,5 +71,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 R43 - Jewell
 rules:
 - MATCH,PROXIES

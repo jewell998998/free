@@ -11,17 +11,75 @@ proxies:
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 02 R70 - Jewell
+  server: 195.72.166.251
+  port: 443
+  udp: true
+  type: vless
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
+    short-id: 25349b36802f
+  servername: www.lloydsbankinggroup.com
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 213.176.92.168
+  port: 14430
+  udp: true
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 31.76.62.32
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8e66d40e-6f62-4243-a7d8-ebe83e4c2e77
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: C4kK4uxh9a5ym0-JmcaTwkUwkB0FTRjSAIlHLTKRHlo
+    short-id: 84341e3e
+  servername: lv-rix-1.koolb.org
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 R70 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 R70 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 rules:
 - MATCH,PROXIES

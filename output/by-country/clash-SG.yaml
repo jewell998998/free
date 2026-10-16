@@ -5,32 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: eu3.998998.best
+  server: 188.114.96.9
   port: 443
   udp: true
-  type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
   tls: true
-  servername: server40.9966338.xyz
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /aiaiai
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome
     headers:
-      Host: server40.9966338.xyz
+      Host: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 128.241.25.72
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 2de9ca99-e8c7-4af3-91db-184e2d7969e1
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
 rules:
 - MATCH,PROXIES

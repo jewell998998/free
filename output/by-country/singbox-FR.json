@@ -4,56 +4,62 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇫🇷 法国 (France) 01 - Jewell",
-      "server": "104.16.72.2",
+      "server": "104.21.70.21",
       "server_port": 443,
-      "password": "humanity",
+      "uuid": "93fa8bdb-9cca-4a3e-8355-b7c12e4f595e",
       "tls": {
         "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false
+        "server_name": "fornewiran.ade-1000.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/assignment",
+        "path": "/vl/yLWNcuUuw1jlJpkDhGy?ed=2560",
         "headers": {
-          "Host": "www.calmlunch.com"
+          "Host": "fornewiran.ade-1000.workers.dev"
         }
       }
     },
     {
       "type": "shadowsocks",
       "tag": "🇫🇷 法国 (France) 02 - Jewell",
-      "server": "pl134.vpnbook.com",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e5c65ph"
+      "server": "37.148.203.124",
+      "server_port": 12238,
+      "method": "aes-128-gcm",
+      "password": "6163d9d532e40f417dd8ebb5f9716495"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇫🇷 法国 (France) 03 - Jewell",
-      "server": "54.36.174.140",
+      "server": "199.232.78.170",
       "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e5c65ph"
-    },
-    {
-      "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 04 - Jewell",
-      "server": "213.1.145.50",
-      "server_port": 443,
-      "password": "humanity",
+      "uuid": "XpnTeam-10",
       "tls": {
         "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/assignment",
+        "path": "/",
         "headers": {
-          "Host": "www.calmlunch.com"
+          "Host": "Appxdn.global.ssl.fastly.net"
         }
       }
     },
@@ -64,8 +70,7 @@
         "auto",
         "🇫🇷 法国 (France) 01 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
-        "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 - Jewell"
+        "🇫🇷 法国 (France) 03 - Jewell"
       ]
     },
     {
@@ -74,8 +79,7 @@
       "outbounds": [
         "🇫🇷 法国 (France) 01 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
-        "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 - Jewell"
+        "🇫🇷 法国 (France) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

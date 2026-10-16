@@ -4,21 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
-      "server": "tw5.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - Jewell",
+      "server": "172.66.44.211",
+      "server_port": 2083,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
         "enabled": true,
-        "server_name": "tw5.dexlos.com",
+        "server_name": "wk1.f1w.de5.net",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "wk1.f1w.de5.net"
+        }
       }
     },
     {
@@ -26,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
+        "🇺🇸 美国 (United States) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
+        "🇺🇸 美国 (United States) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

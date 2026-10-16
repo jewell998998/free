@@ -5,41 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 104.16.72.2
+  server: 104.21.70.21
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
+  type: vless
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  tls: true
+  servername: fornewiran.ade-1000.workers.dev
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
+    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
 - name: 🇫🇷 法国 (France) 02 - Jewell
-  server: pl134.vpnbook.com
-  port: 443
+  server: 37.148.203.124
+  port: 12238
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
+  cipher: aes-128-gcm
+  password: 6163d9d532e40f417dd8ebb5f9716495
 - name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 54.36.174.140
+  server: 199.232.78.170
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 213.1.145.50
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
+  type: vless
+  uuid: XpnTeam-10
+  tls: true
+  servername: ssl.fastly.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select
@@ -48,7 +49,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,6 +57,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
 rules:
 - MATCH,PROXIES

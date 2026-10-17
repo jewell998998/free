@@ -4,50 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 01 - Jewell",
-      "server": "37.148.203.124",
-      "server_port": 12238,
-      "method": "aes-128-gcm",
-      "password": "6163d9d532e40f417dd8ebb5f9716495"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 02 R41 - Jewell",
-      "server": "54.36.174.140",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e5c65ph"
-    },
-    {
-      "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 03 - Jewell",
-      "server": "188.114.98.0",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 04 - Jewell",
+      "tag": "🇫🇷 法国 (France) 01 - Jewell",
       "server": "138.124.70.41",
       "server_port": 14430,
       "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
@@ -58,32 +16,13 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 05 R43 - Jewell",
-      "server": "skycitybox-bidarbash.sbs",
+      "tag": "🇫🇷 法国 (France) 02 - Jewell",
+      "server": "199.232.78.160",
       "server_port": 443,
-      "uuid": "2bdcf0ac-f84e-471f-98dc-a1807acab1cb",
+      "uuid": "XpnTeam-17",
       "tls": {
         "enabled": true,
-        "server_name": "skycitybox-bidarbash.sbs",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/zoodi",
-        "headers": {
-          "Host": "skycitybox-bidarbash.sbs"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 06 R43 - Jewell",
-      "server": "skycitybox-bidarbash.sbs",
-      "server_port": 443,
-      "uuid": "2bdcf0ac-f84e-471f-98dc-a1807acab1cb",
-      "tls": {
-        "enabled": true,
-        "server_name": "skycitybox-bidarbash.sbs",
+        "server_name": "ssl.fastly.com",
         "insecure": false,
         "alpn": [
           "http/1.1"
@@ -95,25 +34,22 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/zoodi",
+        "path": "/",
         "headers": {
-          "Host": "skycitybox-bidarbash.sbs"
+          "Host": "Appxdn.global.ssl.fastly.net"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 07 - Jewell",
-      "server": "212.227.144.37",
-      "server_port": 8443,
+      "tag": "🇫🇷 法国 (France) 03 - Jewell",
+      "server": "185.114.72.31",
+      "server_port": 2053,
       "password": "humanity",
       "tls": {
         "enabled": true,
         "server_name": "www.calmlunch.com",
-        "insecure": false,
-        "alpn": [
-          "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
-        ]
+        "insecure": false
       },
       "transport": {
         "type": "ws",
@@ -124,17 +60,22 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 04 R41 - Jewell",
+      "server": "54.36.174.140",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e5c65ph"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇷 法国 (France) 01 - Jewell",
-        "🇫🇷 法国 (France) 02 R41 - Jewell",
+        "🇫🇷 法国 (France) 02 - Jewell",
         "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 - Jewell",
-        "🇫🇷 法国 (France) 05 R43 - Jewell",
-        "🇫🇷 法国 (France) 06 R43 - Jewell",
-        "🇫🇷 法国 (France) 07 - Jewell"
+        "🇫🇷 法国 (France) 04 R41 - Jewell"
       ]
     },
     {
@@ -142,12 +83,9 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇷 法国 (France) 01 - Jewell",
-        "🇫🇷 法国 (France) 02 R41 - Jewell",
+        "🇫🇷 法国 (France) 02 - Jewell",
         "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 - Jewell",
-        "🇫🇷 法国 (France) 05 R43 - Jewell",
-        "🇫🇷 法国 (France) 06 R43 - Jewell",
-        "🇫🇷 法国 (France) 07 - Jewell"
+        "🇫🇷 法国 (France) 04 R41 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

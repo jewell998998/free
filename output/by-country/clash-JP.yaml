@@ -5,15 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 45.32.10.7
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 160.16.139.182
+  server: t14.qifei.app
   port: 443
   udp: true
   type: vless
@@ -25,7 +17,7 @@ proxies:
     short-id: 1a
   servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: 43.167.232.174
   port: 443
   udp: true
@@ -44,7 +36,6 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +43,5 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
 rules:
 - MATCH,PROXIES

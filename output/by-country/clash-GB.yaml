@@ -5,27 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 104.21.70.21
+  server: 31.59.217.164
   port: 443
   udp: true
   type: vless
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
+  flow: xtls-rprx-vision
   tls: true
-  servername: fornewiran.ade-1000.workers.dev
-  skip-cert-verify: false
+  reality-opts:
+    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
+    short-id: 1625a2a79d01328f
+  servername: www.adobe.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
-    headers:
-      Host: fornewiran.ade-1000.workers.dev
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 138.124.90.177
-  port: 10443
-  udp: true
-  type: vless
-  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 138.124.125.193
   port: 10444
   udp: true
@@ -37,7 +29,20 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
-  client-fingerprint: ''
+  client-fingerprint: safari
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select

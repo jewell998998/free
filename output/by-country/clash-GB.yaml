@@ -5,32 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 104.25.5.52
-  port: 443
+  server: reaza.localip.ir
   udp: true
+  port: 443
   type: vless
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  uuid: ed6c724c-435f-4f83-a781-f57579af320b
   tls: true
-  servername: FORnEwIRAn.ADE-1000.worKeRS.dev
+  servername: gbi.els1v0u3t31v.info
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    path: /9d9fdbc18c834cffab4276811501fbae
     headers:
-      Host: fornewiran.ade-1000.workers.dev
+      Host: gbi.els1v0u3t31v.info
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 31.59.217.164
-  port: 443
+  server: 213.176.92.168
   udp: true
+  port: 14430
   type: vless
-  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 193.188.21.253
+  udp: true
+  port: 10444
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
-    short-id: 1625a2a79d01328f
-  servername: www.adobe.com
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
   client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
@@ -39,6 +47,7 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +55,6 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
 rules:
 - MATCH,PROXIES

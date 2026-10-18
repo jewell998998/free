@@ -5,31 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
-  server: 35.177.104.48
-  port: 22222
+  server: 13.135.33.165
   udp: true
+  port: 22223
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
-  server: 13.135.17.74
-  port: 22224
+  server: 3.11.104.202
   udp: true
+  port: 22224
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
-  server: 18.171.245.198
-  port: 443
+  server: 3.11.104.202
   udp: true
-  type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
-    path: /
-- name: 🇮🇪 爱尔兰 (Ireland) 04 - Jewell
-  server: 13.135.17.74
-  port: 22223
-  udp: true
+  port: 22222
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 proxy-groups:
@@ -40,7 +30,6 @@ proxy-groups:
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
   - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
   - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
-  - 🇮🇪 爱尔兰 (Ireland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +38,5 @@ proxy-groups:
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
   - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
   - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
-  - 🇮🇪 爱尔兰 (Ireland) 04 - Jewell
 rules:
 - MATCH,PROXIES

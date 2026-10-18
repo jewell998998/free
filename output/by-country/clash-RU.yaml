@@ -5,6 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  server: 172.67.130.187
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  tls: true
+  servername: FaNs.livErpoOl.qZZ.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZXlpMnFWRURmWkp5ZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: fans.liverpool.qzz.io
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 188.114.96.9
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  tls: true
+  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   server: 77.90.61.135
   port: 443
   udp: true
@@ -15,14 +45,7 @@ proxies:
     public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
     short-id: ce1dc482
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 89.104.69.128
-  port: 36468
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RWVIbU1SRU4wZUw4RjhNeERESGJJdmt2dGFldWdBNWdhcWJuaEM1U1hDejRzVUZnYk1PQmpkdlU0U1dWWkswcQ==
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -30,6 +53,7 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -37,5 +61,6 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
 rules:
 - MATCH,PROXIES

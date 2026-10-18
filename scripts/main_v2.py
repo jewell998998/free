@@ -2207,11 +2207,22 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 # 节点 → 各客户端配置转换
 # ═══════════════════════════════════════════N═══════════════════════
 
+
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
-    proxy = {"name": name, "server": server, "port": port, "udp": True}
+    server = node.get("server")
+    port = node.get("server_port")
+
+    # 兼容 Hysteria2 端口跳跃节点：这类节点可能只有 server_ports，
+    # 没有固定的 server_port。
+    if not server:
+        return None
+
+    proxy = {"name": name, "server": server, "udp": True}
+    if port is not None:
+        proxy["port"] = port
+
 
     if t == "vless":
         proxy["type"] = "vless"

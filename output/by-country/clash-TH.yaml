@@ -4,12 +4,12 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell
-  server: zfd-hkv2.kunlun01dns.com
+- name: 🇹🇭 泰国 (Thailand) 01 - Jewell
+  server: 119.46.51.45
   udp: true
-  port: 16112
+  port: 37515
   type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
   alterId: 0
   cipher: auto
 proxy-groups:
@@ -17,12 +17,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 rules:
 - MATCH,PROXIES

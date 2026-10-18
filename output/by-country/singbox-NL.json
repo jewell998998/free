@@ -4,20 +4,61 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
-      "server": "nl-hy-test.tcp-reset-club.net",
-      "server_port": 443,
-      "password": "529f1911-04d5-4427-94b9-c851fd459a27",
+      "server": "51.15.16.68",
+      "server_port": 2053,
+      "uuid": "7d0fd363-16d2-43ce-9d6d-ed2c15d2cb7c",
       "tls": {
         "enabled": true,
-        "server_name": "nl-hy-test.tcp-reset-club.net",
-        "insecure": false
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc",
+          "short_id": "3c99c85cbb6b3b44"
+        }
       }
     },
     {
       "type": "vless",
       "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
+      "server": "217.60.35.146",
+      "server_port": 443,
+      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sw.golangwikito.cfd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg",
+          "short_id": "a1037b25dcef6aa7"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+      "server": "nl-hy-test.tcp-reset-club.net",
+      "server_port": 443,
+      "password": "dd50a499-7e43-4589-8490-f3b9c2451473",
+      "tls": {
+        "enabled": true,
+        "server_name": "tcp-reset-club.net",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
       "server": "2.27.39.233",
       "server_port": 443,
       "uuid": "df53b6c2-8005-475c-9eb9-74e1be785dc8",
@@ -27,7 +68,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -38,7 +79,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+      "tag": "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
       "server": "2.27.71.48",
       "server_port": 443,
       "uuid": "df53b6c2-8005-475c-9eb9-74e1be785dc8",
@@ -59,14 +100,124 @@
     },
     {
       "type": "trojan",
-      "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
-      "server": "8.47.69.0",
+      "tag": "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+      "server": "139.28.240.24",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.pleadcourt.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+      "server": "mkoshjs-production.up.railway.app",
+      "server_port": 443,
+      "uuid": "38d39186-3235-f8a4-86e3-b50fc6e4b308",
+      "tls": {
+        "enabled": true,
+        "server_name": "mkoshjs-production.up.railway.app",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws/38d39186-3235-f8a4-86e3-b50fc6e4b308",
+        "headers": {
+          "Host": "mkoshjs-production.up.railway.app"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+      "server": "31.57.190.40",
       "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,
         "server_name": "www.pleadcourt.org",
         "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
+      "server": "45.150.33.33",
+      "server_port": 443,
+      "uuid": "eec2f6a7-c10f-43b0-b133-61f9bf9bbc27",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "amazon.de",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ",
+          "short_id": "eba1498e012ef580"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇱 荷兰 (Netherlands) 10 - Jewell",
+      "server": "188.114.97.3",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.pleadcourt.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇱 荷兰 (Netherlands) 11 - Jewell",
+      "server": "188.42.145.180",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.volumeroot.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -76,7 +227,7 @@
         "type": "ws",
         "path": "/assignment",
         "headers": {
-          "Host": "www.pleadcourt.org"
+          "Host": "www.volumeroot.com"
         }
       }
     },
@@ -88,7 +239,14 @@
         "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 04 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 10 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 11 - Jewell"
       ]
     },
     {
@@ -98,7 +256,14 @@
         "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 04 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 10 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 11 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

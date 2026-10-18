@@ -6,30 +6,14 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "77.42.73.93",
-      "server_port": 8080,
-      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
+      "server": "45.144.234.157",
+      "server_port": 14430,
+      "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
       "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "mci.amir12.ir",
-      "server_port": 2112,
-      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ",
-          "short_id": "125ba3"
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "45.144.234.157"
         }
       }
     },
@@ -38,16 +22,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 - Jewell"
+        "🇫🇮 芬兰 (Finland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 - Jewell"
+        "🇫🇮 芬兰 (Finland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

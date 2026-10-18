@@ -5,32 +5,65 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 51.44.197.117
-  udp: true
-  port: 22222
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 02 - Jewell
   server: 37.148.203.124
   udp: true
   port: 12238
   type: ss
   cipher: aes-128-gcm
   password: 6163d9d532e40f417dd8ebb5f9716495
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 51.44.146.230
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 138.124.70.41
   udp: true
-  port: 22224
+  port: 14430
   type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 04 R46 - Jewell
-  server: 57.131.168.202
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 161.97.160.224
   udp: true
-  port: 57160
-  type: vmess
-  uuid: fdc80741-a32b-4890-a6a1-5ea8b3e60ab1
-  alterId: 0
-  cipher: auto
+  port: 443
+  type: vless
+  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
+    short-id: e6
+  servername: passport.yandex.ru
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 04 R43 - Jewell
+  server: redcloudport-bidarbash.sbs
+  udp: true
+  port: 443
+  type: vless
+  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
+  tls: true
+  servername: redcloudport-bidarbash.sbs
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /zoodi
+    headers:
+      Host: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 05 R43 - Jewell
+  server: redcloudport-bidarbash.sbs
+  udp: true
+  port: 443
+  type: vless
+  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
+  tls: true
+  servername: redcloudport-bidarbash.sbs
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /zoodi
+    headers:
+      Host: redcloudport-bidarbash.sbs
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,7 +72,8 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 R46 - Jewell
+  - 🇫🇷 法国 (France) 04 R43 - Jewell
+  - 🇫🇷 法国 (France) 05 R43 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,6 +82,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 R46 - Jewell
+  - 🇫🇷 法国 (France) 04 R43 - Jewell
+  - 🇫🇷 法国 (France) 05 R43 - Jewell
 rules:
 - MATCH,PROXIES

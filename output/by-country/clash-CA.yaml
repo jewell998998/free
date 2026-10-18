@@ -5,42 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 155.138.138.2
+  server: ca.tronsg.com
   udp: true
   port: 443
   type: trojan
   password: Trojan@82164024
   sni: ca.tronsg.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 200.181.82.91
+- name: 🇨🇦 加拿大 (Canada) 02 R52 - Jewell
+  server: milo.rubinaz.xyz
   udp: true
-  port: 20013
-  type: ss
-  cipher: aes-256-gcm
-  password: 0dad9116-eb88-47b6-98dd-67c9ed43afa6
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 200.181.82.92
-  udp: true
-  port: 20031
-  type: ss
-  cipher: aes-256-gcm
-  password: 0dad9116-eb88-47b6-98dd-67c9ed43afa6
+  port: 8080
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R52 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R52 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,39 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 77.42.73.93
+  server: 45.144.234.157
   udp: true
-  port: 8080
+  port: 14430
   type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   network: ws
   ws-opts:
-    path: /
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: mci.amir12.ir
-  udp: true
-  port: 2112
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  reality-opts:
-    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
-    short-id: 125ba3
-  servername: play.google.com
-  client-fingerprint: chrome
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
-  - 🇫🇮 芬兰 (Finland) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
-  - 🇫🇮 芬兰 (Finland) 02 - Jewell
 rules:
 - MATCH,PROXIES

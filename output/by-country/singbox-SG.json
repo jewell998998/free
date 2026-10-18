@@ -1,0 +1,92 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+      "server": "129.150.59.74",
+      "server_port": 14384,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA="
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 02 - Jewell",
+      "server": "funagfrdfs.alixxplay.com",
+      "server_port": 46105,
+      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.sg",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik",
+          "short_id": "28f5c1f8f98a"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 03 R51 - Jewell",
+      "server": "68.183.227.45",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 04 R51 - Jewell",
+      "server": "68.183.227.4",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 05 R51 - Jewell",
+      "server": "128.199.172.224",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 02 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 03 R51 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 04 R51 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 05 R51 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇸🇬 新加坡 (Singapore) 01 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 02 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 03 R51 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 04 R51 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 05 R51 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

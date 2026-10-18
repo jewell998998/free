@@ -4,15 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 01 - Jewell",
-      "server": "51.44.197.117",
-      "server_port": 22222,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 02 - Jewell",
+      "tag": "🇫🇷 法国 (France) 01 - Jewell",
       "server": "37.148.203.124",
       "server_port": 12238,
       "method": "aes-128-gcm",
@@ -20,18 +13,83 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 03 - Jewell",
-      "server": "51.44.146.230",
-      "server_port": 22224,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "tag": "🇫🇷 法国 (France) 02 - Jewell",
+      "server": "138.124.70.41",
+      "server_port": 14430,
+      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "138.124.70.41"
+        }
+      }
     },
     {
-      "type": "vmess",
-      "tag": "🇫🇷 法国 (France) 04 R46 - Jewell",
-      "server": "57.131.168.202",
-      "server_port": 57160,
-      "uuid": "fdc80741-a32b-4890-a6a1-5ea8b3e60ab1",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 03 - Jewell",
+      "server": "161.97.160.224",
+      "server_port": 443,
+      "uuid": "b81b4d1b-7f20-48f1-82dc-d24bef898cab",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "passport.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0",
+          "short_id": "e6"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 04 R43 - Jewell",
+      "server": "redcloudport-bidarbash.sbs",
+      "server_port": 443,
+      "uuid": "2bdcf0ac-f84e-471f-98dc-a1807acab1cb",
+      "tls": {
+        "enabled": true,
+        "server_name": "redcloudport-bidarbash.sbs",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/zoodi",
+        "headers": {
+          "Host": "redcloudport-bidarbash.sbs"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 05 R43 - Jewell",
+      "server": "redcloudport-bidarbash.sbs",
+      "server_port": 443,
+      "uuid": "2bdcf0ac-f84e-471f-98dc-a1807acab1cb",
+      "tls": {
+        "enabled": true,
+        "server_name": "redcloudport-bidarbash.sbs",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/zoodi",
+        "headers": {
+          "Host": "redcloudport-bidarbash.sbs"
+        }
+      }
     },
     {
       "type": "selector",
@@ -41,7 +99,8 @@
         "🇫🇷 法国 (France) 01 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
         "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 R46 - Jewell"
+        "🇫🇷 法国 (France) 04 R43 - Jewell",
+        "🇫🇷 法国 (France) 05 R43 - Jewell"
       ]
     },
     {
@@ -51,7 +110,8 @@
         "🇫🇷 法国 (France) 01 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
         "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 R46 - Jewell"
+        "🇫🇷 法国 (France) 04 R43 - Jewell",
+        "🇫🇷 法国 (France) 05 R43 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

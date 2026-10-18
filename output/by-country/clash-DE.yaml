@@ -5,6 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
+  server: 178.17.57.33
+  udp: true
+  port: 8444
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  servername: github.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
+  server: 91.107.169.224
+  udp: true
+  port: 80
+  type: vmess
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 31.70.111.146
+  udp: true
+  port: 443
+  type: vless
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
+  servername: www.apple.com
+  client-fingerprint: random
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
   server: sino.bestsellers1.site
   udp: true
   port: 2083
@@ -16,7 +53,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇩🇪 德国 (Germany) 02 - Jewell
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
   server: 2.27.69.117
   udp: true
   port: 443
@@ -28,9 +65,9 @@ proxies:
     public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
     short-id: 123c2bff
   servername: addons.mozilla.org
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: sino.bestsellers1.site
+  client-fingerprint: randomized
+- name: 🇩🇪 德国 (Germany) 06 - Jewell
+  server: 91.107.247.173
   udp: true
   port: 2083
   type: vless
@@ -38,11 +75,14 @@ proxies:
   tls: true
   servername: sino.bestsellers1.site
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
-- name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 2.27.69.128
+    headers:
+      Host: sino.bestsellers1.site
+- name: 🇩🇪 德国 (Germany) 07 - Jewell
+  server: 2.27.35.55
   udp: true
   port: 443
   type: vless
@@ -53,9 +93,22 @@ proxies:
     public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
     short-id: e696e744
   servername: addons.mozilla.org
-  client-fingerprint: ''
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
-  server: 46.225.46.136
+  client-fingerprint: randomized
+- name: 🇩🇪 德国 (Germany) 08 - Jewell
+  server: de-d21e56c13c.shamanapp.online
+  udp: true
+  port: 33744
+  type: vmess
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /ShamanVMESS2026
+    headers:
+      Host: de-d21e56c13c.shamanapp.online
+- name: 🇩🇪 德国 (Germany) 09 - Jewell
+  server: hoert1rert.localip.ir
   udp: true
   port: 2087
   type: vless
@@ -63,12 +116,54 @@ proxies:
   tls: true
   servername: hoert1rert.localip.ir
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /hokm
     headers:
       Host: hoert1rert.localip.ir
+- name: 🇩🇪 德国 (Germany) 10 - Jewell
+  server: 189.24.82.195
+  udp: true
+  port: 443
+  type: vless
+  uuid: bf7ca7a3-a028-488e-b9f1-34e467d6d897
+  tls: true
+  reality-opts:
+    public-key: oXHb-GX9ExLRs-CcFwllm6zp99jpx7yAdxrvAV1sZ18
+    short-id: 3eaacc9b
+  servername: itunes.apple.com
+  client-fingerprint: ''
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇩🇪 德国 (Germany) 11 ⚠R - Jewell
+  server: 46.28.69.123
+  udp: true
+  port: 443
+  type: vless
+  uuid: b945f9aa-1b45-4912-aa7e-248509472bad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7KnJYp2-sE3o35mnbSZzX3fNg-ns9n8xyNfkRSHCD3E
+    short-id: 238e23c5150f02e4
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 12 - Jewell
+  server: 77.110.105.122
+  udp: true
+  port: 443
+  type: vless
+  uuid: 019fbe0f-2d9f-4b89-9f81-e1e36129892a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
+    short-id: 226509f017e4c36d
+  servername: co-de.speedtec.ru
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -79,6 +174,13 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
+  - 🇩🇪 德国 (Germany) 06 - Jewell
+  - 🇩🇪 德国 (Germany) 07 - Jewell
+  - 🇩🇪 德国 (Germany) 08 - Jewell
+  - 🇩🇪 德国 (Germany) 09 - Jewell
+  - 🇩🇪 德国 (Germany) 10 - Jewell
+  - 🇩🇪 德国 (Germany) 11 ⚠R - Jewell
+  - 🇩🇪 德国 (Germany) 12 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,5 +191,12 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
+  - 🇩🇪 德国 (Germany) 06 - Jewell
+  - 🇩🇪 德国 (Germany) 07 - Jewell
+  - 🇩🇪 德国 (Germany) 08 - Jewell
+  - 🇩🇪 德国 (Germany) 09 - Jewell
+  - 🇩🇪 德国 (Germany) 10 - Jewell
+  - 🇩🇪 德国 (Germany) 11 ⚠R - Jewell
+  - 🇩🇪 德国 (Germany) 12 - Jewell
 rules:
 - MATCH,PROXIES

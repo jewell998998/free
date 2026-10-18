@@ -262,8 +262,8 @@ PROGRESS_EVERY = 100
 # ═══ V3 质量/国家策略 ═══
 
 # 目标而非硬性要求：尽量把最终出库池控制在约 100 个优质节点。
-TARGET_FINAL_NODES = 1000
-SOFT_FINAL_MAX_NODES = 1200
+TARGET_FINAL_NODES = 200
+SOFT_FINAL_MAX_NODES = 220
 
 # 当第 100 名仍达到这个质量分时，允许适当超过 100，
 # 避免为了数字硬砍优质节点。

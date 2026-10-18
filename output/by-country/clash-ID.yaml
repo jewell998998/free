@@ -4,17 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 R48 - Jewell
-  server: 45.90.59.15
+- name: 🇮🇩 印尼 (Indonesia) 01 - Jewell
+  server: 103.172.197.3
   udp: true
-  port: 443
+  port: 16006
   type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: 19253fae84102271
+    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
   servername: www.cloudflare.com
   client-fingerprint: firefox
 proxy-groups:
@@ -22,12 +21,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 R48 - Jewell
+  - 🇮🇩 印尼 (Indonesia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 R48 - Jewell
+  - 🇮🇩 印尼 (Indonesia) 01 - Jewell
 rules:
 - MATCH,PROXIES

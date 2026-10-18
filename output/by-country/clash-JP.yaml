@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: 45.32.10.7
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: 43.167.232.174
   udp: true
   port: 443
@@ -15,8 +23,8 @@ proxies:
     public-key: hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI
     short-id: b51e057820d3e14c
   servername: www.microsoft.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: 108.61.186.37
   udp: true
   port: 443
@@ -24,6 +32,57 @@ proxies:
   password: Trojan@82164024
   sni: jp.tronsg.com
   skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: jp2.2149555.xyz
+  udp: true
+  port: 443
+  type: vless
+  uuid: f4e0bc7b-b58f-41c8-a858-3836337facdf
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: TYc78nIrek2q0MpFxzdEw7aKN2sUUO-oF_VRlX5zezM
+    short-id: 28f369c9
+  servername: www.icloud.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: platform117.golnamakcert.top
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform117
+    headers:
+      Host: platform117.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  server: 130.94.67.50
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform113
+    headers:
+      Host: platform113.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 07 - Jewell
+  server: jp5.998998.best
+  udp: true
+  port: 443
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server11.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ieusrdgfhteuirgfiuws
+    headers:
+      Host: server11.9966338.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +90,11 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
+  - 🇯🇵 日本 (Japan) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +102,10 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
+  - 🇯🇵 日本 (Japan) 07 - Jewell
 rules:
 - MATCH,PROXIES

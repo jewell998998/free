@@ -4,8 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
+      "server": "45.32.10.7",
+      "server_port": 443,
+      "password": "96ab5cd282733fd4c312a61f972f330a",
+      "tls": {
+        "enabled": true,
+        "server_name": "vp3.yysyy.online",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
       "server": "43.167.232.174",
       "server_port": 443,
       "uuid": "0fd46529-707f-4d33-899b-598f5f4acffa",
@@ -14,7 +26,7 @@
         "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,7 +37,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
       "server": "108.61.186.37",
       "server_port": 443,
       "password": "Trojan@82164024",
@@ -36,12 +48,86 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
+      "server": "jp2.2149555.xyz",
+      "server_port": 443,
+      "uuid": "f4e0bc7b-b58f-41c8-a858-3836337facdf",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TYc78nIrek2q0MpFxzdEw7aKN2sUUO-oF_VRlX5zezM",
+          "short_id": "28f369c9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
+      "server": "platform117.golnamakcert.top",
+      "server_port": 80,
+      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
+      "transport": {
+        "type": "ws",
+        "path": "/platform117",
+        "headers": {
+          "Host": "platform117.halalkhor.info"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 06 - Jewell",
+      "server": "130.94.67.50",
+      "server_port": 80,
+      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
+      "transport": {
+        "type": "ws",
+        "path": "/platform113",
+        "headers": {
+          "Host": "platform113.halalkhor.info"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇯🇵 日本 (Japan) 07 - Jewell",
+      "server": "jp5.998998.best",
+      "server_port": 443,
+      "uuid": "5504eaa8-1395-402f-8e0e-75ecd762e627",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "server11.9966338.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ieusrdgfhteuirgfiuws",
+        "headers": {
+          "Host": "server11.9966338.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell",
+        "🇯🇵 日本 (Japan) 06 - Jewell",
+        "🇯🇵 日本 (Japan) 07 - Jewell"
       ]
     },
     {
@@ -49,7 +135,12 @@
       "tag": "auto",
       "outbounds": [
         "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell",
+        "🇯🇵 日本 (Japan) 06 - Jewell",
+        "🇯🇵 日本 (Japan) 07 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

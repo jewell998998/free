@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  server: 104.171.134.165
+  udp: true
+  port: 443
+  type: vless
+  uuid: 355a9948-c284-4669-bd57-43fcdc8dd71e
+  tls: true
+  reality-opts:
+    public-key: H0iW-vqJSN6Q2KYuT1v9-ThYh3lNb-MnHVpuvqPnGDY
+    short-id: 413ebf956c2d8102
+  servername: yt-ru.convertvideo123.online
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ru-split-test
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   server: 77.90.61.135
   udp: true
   port: 443
@@ -15,18 +30,20 @@ proxies:
     public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
     short-id: ce1dc482
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 rules:
 - MATCH,PROXIES

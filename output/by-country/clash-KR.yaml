@@ -1,0 +1,60 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇰🇷 韩国 (South Korea) 01 - Jewell
+  server: 43.202.48.94
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
+  server: 47.80.19.173
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
+    short-id: 3c4041d3
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
+  server: 64.176.231.183
+  udp: true
+  port: 443
+  type: vless
+  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
+    short-id: ca193e889d958f81
+  servername: www.apple.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇰🇷 韩国 (South Korea) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇰🇷 韩国 (South Korea) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 - Jewell
+rules:
+- MATCH,PROXIES

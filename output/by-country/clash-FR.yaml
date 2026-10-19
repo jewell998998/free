@@ -11,57 +11,7 @@ proxies:
   type: ss
   cipher: aes-128-gcm
   password: 6163d9d532e40f417dd8ebb5f9716495
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 199.232.78.170
-  udp: true
-  port: 443
-  type: vless
-  uuid: XpnTeam-21
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 5.253.189.238
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 161.97.160.224
-  udp: true
-  port: 443
-  type: vless
-  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
-    short-id: e6
-  servername: passport.yandex.ru
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 185.114.72.31
-  udp: true
-  port: 2053
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06 R43 - Jewell
+- name: 🇫🇷 法国 (France) 02 R43 - Jewell
   server: 188.114.98.0
   udp: true
   port: 443
@@ -76,27 +26,57 @@ proxies:
     path: /zoodi
     headers:
       Host: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 03 R43 - Jewell
+  server: 172.67.171.33
+  udp: true
+  port: 443
+  type: vless
+  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
+  tls: true
+  servername: redcloudport-bidarbash.sbs
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /zoodi
+    headers:
+      Host: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: 138.124.70.41
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇫🇷 法国 (France) 05 - Jewell
+  server: ftest-1.povrak.ir
+  udp: true
+  port: 47014
+  type: vmess
+  uuid: d4aa69e8-2739-42b3-9cd4-af1e4fb04ad5
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 02 R43 - Jewell
+  - 🇫🇷 法国 (France) 03 R43 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 R43 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 02 R43 - Jewell
+  - 🇫🇷 法国 (France) 03 R43 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 R43 - Jewell
 rules:
 - MATCH,PROXIES

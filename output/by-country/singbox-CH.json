@@ -5,7 +5,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R48 - Jewell",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+      "server": "138.124.38.65",
+      "server_port": 2083,
+      "uuid": "0be0a2bf-aa20-4e52-aa5a-3d59d56b1582",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gewair.underground.company",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "z6S5mw-BVxPv2cm2XvV05MDWGODAL_3trl_vK63HzUE",
+          "short_id": "146ef2a26338adad"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 R48 - Jewell",
       "server": "45.90.59.15",
       "server_port": 443,
       "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
@@ -15,7 +36,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -29,14 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R48 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 R48 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R48 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 R48 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

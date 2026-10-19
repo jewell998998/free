@@ -5,38 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 173.245.49.30
+  server: 212.134.252.249
   udp: true
-  port: 8880
+  port: 15407
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime36.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: uk-d9ca48498a.shamanapp.online
-  udp: true
-  port: 443
-  type: hysteria2
-  password: b3a11068-1a7e-4643-85de-7c82cce46943
-  sni: uk-d9ca48498a.shamanapp.online
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 191.44.108.31
-  udp: true
-  port: 443
-  type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  uuid: b2332eff-b231-4c10-8552-5dfad84f5521
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
-    short-id: 3ba10d9ce34380c9
-  servername: www.google.com
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+    public-key: qO5TgVOZ6xTBvxe9_1mByF5yx4ViCuGPsDaJRvAUTBE
+    short-id: 48ebac29ede6e8f3
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
   server: 31.59.217.164
   udp: true
   port: 443
@@ -49,16 +30,7 @@ proxies:
     short-id: 1625a2a79d01328f
   servername: www.adobe.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  server: 213.176.92.168
-  udp: true
-  port: 14430
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 193.188.21.253
   udp: true
   port: 14430
@@ -67,7 +39,14 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 98.98.142.161
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
   server: 138.124.125.193
   udp: true
   port: 10444
@@ -80,6 +59,28 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
   client-fingerprint: random
+- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  server: 213.176.92.168
+  udp: true
+  port: 14430
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  server: 144.48.11.97
+  udp: true
+  port: 43000
+  type: vless
+  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
+    short-id: 725e6ea0
+  servername: 144.48.11.97
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

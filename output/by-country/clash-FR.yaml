@@ -5,27 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 37.148.203.124
+  server: 138.124.70.41
   udp: true
-  port: 12238
-  type: ss
-  cipher: aes-128-gcm
-  password: 6163d9d532e40f417dd8ebb5f9716495
-- name: 🇫🇷 法国 (France) 02 R43 - Jewell
-  server: 188.114.98.0
-  udp: true
-  port: 443
+  port: 14430
   type: vless
-  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
-  tls: true
-  servername: redcloudport-bidarbash.sbs
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   network: ws
   ws-opts:
-    path: /zoodi
+    path: /vless
     headers:
-      Host: redcloudport-bidarbash.sbs
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 91.245.225.79
+  udp: true
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷 法国 (France) 03 R43 - Jewell
   server: 172.67.171.33
   udp: true
@@ -41,42 +41,21 @@ proxies:
     path: /zoodi
     headers:
       Host: redcloudport-bidarbash.sbs
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 138.124.70.41
-  udp: true
-  port: 14430
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: ftest-1.povrak.ir
-  udp: true
-  port: 47014
-  type: vmess
-  uuid: d4aa69e8-2739-42b3-9cd4-af1e4fb04ad5
-  alterId: 0
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 R43 - Jewell
+  - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 R43 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 R43 - Jewell
+  - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 R43 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
 rules:
 - MATCH,PROXIES

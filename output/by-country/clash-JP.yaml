@@ -5,54 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 45.32.10.7
+  server: 130.94.65.201
   udp: true
-  port: 443
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform115
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 43.167.232.174
-  udp: true
-  port: 443
-  type: vless
-  uuid: 0fd46529-707f-4d33-899b-598f5f4acffa
-  tls: true
-  reality-opts:
-    public-key: hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI
-    short-id: b51e057820d3e14c
-  servername: www.microsoft.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 108.61.186.37
-  udp: true
-  port: 443
-  type: trojan
-  password: Trojan@82164024
-  sni: jp.tronsg.com
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: platform101.golnamakcert.top
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 130.94.67.180
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform117
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
   server: 142.91.108.25
   udp: true
   port: 443
@@ -64,41 +25,8 @@ proxies:
     public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
     short-id: ea36c03d86f91287
   servername: jp3.nztvpn.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 07 - Jewell
-  server: platform107.golnamakcert.top
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform107
-- name: 🇯🇵 日本 (Japan) 08 - Jewell
-  server: platform113.golnamakcert.top
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: '[''platform113.halalkhor.info'']'
-- name: 🇯🇵 日本 (Japan) 09 - Jewell
-  server: 39.109.110.80
-  udp: true
-  port: 27916
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
-    short-id: 6772eb2b7a
-  servername: cdn-dynmedia-1.microsoft.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 10 - Jewell
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: 130.94.67.40
   udp: true
   port: 80
@@ -109,40 +37,7 @@ proxies:
     path: /platform118
     headers:
       Host: platform118.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 11 - Jewell
-  server: platform115.golnamakcert.top
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform115
-    headers:
-      Host: '[''platform115.halalkhor.info'']'
-- name: 🇯🇵 日本 (Japan) 12 - Jewell
-  server: platform108.golnamakcert.top
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform108
-    headers:
-      Host: platform108.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 13 - Jewell
-  server: platform103.golnamakcert.top
-  udp: true
-  port: 80
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform103
-    headers:
-      Host: platform103.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 14 - Jewell
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
   server: platform102.golnamakcert.top
   udp: true
   port: 80
@@ -153,6 +48,72 @@ proxies:
     path: /platform102
     headers:
       Host: platform102.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: 18.183.215.124
+  udp: true
+  port: 28573
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: qq
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  server: platform108.golnamakcert.top
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform108
+    headers:
+      Host: platform108.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 07 - Jewell
+  server: platform103.golnamakcert.top
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform103
+    headers:
+      Host: platform103.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 08 - Jewell
+  server: platform113.golnamakcert.top
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform113
+- name: 🇯🇵 日本 (Japan) 09 - Jewell
+  server: platform106.golnamakcert.top
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform106
+    headers:
+      Host: platform106.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 10 - Jewell
+  server: platform107.golnamakcert.top
+  udp: true
+  port: 80
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform107
+    headers:
+      Host: platform107.golnamakcert.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -168,10 +129,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 08 - Jewell
   - 🇯🇵 日本 (Japan) 09 - Jewell
   - 🇯🇵 日本 (Japan) 10 - Jewell
-  - 🇯🇵 日本 (Japan) 11 - Jewell
-  - 🇯🇵 日本 (Japan) 12 - Jewell
-  - 🇯🇵 日本 (Japan) 13 - Jewell
-  - 🇯🇵 日本 (Japan) 14 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -187,9 +144,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 08 - Jewell
   - 🇯🇵 日本 (Japan) 09 - Jewell
   - 🇯🇵 日本 (Japan) 10 - Jewell
-  - 🇯🇵 日本 (Japan) 11 - Jewell
-  - 🇯🇵 日本 (Japan) 12 - Jewell
-  - 🇯🇵 日本 (Japan) 13 - Jewell
-  - 🇯🇵 日本 (Japan) 14 - Jewell
 rules:
 - MATCH,PROXIES

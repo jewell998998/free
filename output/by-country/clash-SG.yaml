@@ -4,115 +4,56 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: 162.128.44.254
+- name: 🇸🇬 新加坡 (Singapore) 01 R54 - Jewell
+  server: 156.231.112.160
   udp: true
-  port: 36000
+  port: 443
   type: vless
-  uuid: b2332eff-b231-4c10-8552-5dfad84f5521
-  flow: xtls-rprx-vision
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
   tls: true
-  reality-opts:
-    public-key: X_RnxIw_MpC_qCMcsgM3CDcPx2y6LGVl7UMms0IxOkI
-    short-id: 8cd87cd0dcc86b9f
-  servername: www.apple.com
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 02 R51 - Jewell
-  server: 128.199.172.224
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: u.srilankangrill.online
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 67.159.52.81
   udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 03 R51 - Jewell
-  server: 68.183.227.4
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  server: 129.150.59.74
-  udp: true
-  port: 14384
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA=
-- name: 🇸🇬 新加坡 (Singapore) 05 - Jewell
-  server: 54.169.200.246
-  udp: true
-  port: 41688
+  port: 443
   type: vless
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+  uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
-  servername: www.intel.com
-  client-fingerprint: qq
-- name: 🇸🇬 新加坡 (Singapore) 06 R51 - Jewell
-  server: 68.183.227.45
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 07 - Jewell
-  server: 147.93.173.45
-  udp: true
-  port: 10444
-  type: vless
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
+    public-key: -YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs
+    short-id: feedbacc
+  servername: sg.fasti.win
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 08 R56 - Jewell
-  server: 128.1.186.73
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 09 - Jewell
-  server: 54.251.9.130
-  udp: true
-  port: 24146
-  type: vless
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
-  servername: www.intel.com
-  client-fingerprint: firefox
-- name: 🇸🇬 新加坡 (Singapore) 10 R56 - Jewell
+- name: 🇸🇬 新加坡 (Singapore) 03 R56 - Jewell
   server: 128.1.186.132
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 11 R44 - Jewell
-  server: 139.162.27.96
+- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  server: 128.199.172.224
   udp: true
-  port: 2096
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 12 R55 - Jewell
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  server: 68.183.227.236
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 06 R43 - Jewell
   server: 139.162.27.96
   udp: true
   port: 2096
@@ -127,39 +68,40 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
+- name: 🇸🇬 新加坡 (Singapore) 07 R54 - Jewell
+  server: 170.114.45.6
+  udp: true
+  port: 80
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: u.srilankangrill.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R51 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 R51 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R51 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 R56 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 10 R56 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 11 R44 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 12 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 01 R54 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R43 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R54 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R51 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 R51 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R51 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 R56 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 10 R56 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 11 R44 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 12 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 01 R54 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R43 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R54 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,16 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 130.162.134.218
-  udp: true
-  type: hysteria2
-  password: C0DD7bgChaltqnh/T2az6ijM
-  sni: rmgyvpn.rest
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: C0DD7bgChaltqnh/T2az6ijM
-  ports: 20000-30000
-- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
   server: 64.176.231.183
   udp: true
   port: 443
@@ -26,20 +16,18 @@ proxies:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
     short-id: ca193e889d958f81
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
 rules:
 - MATCH,PROXIES

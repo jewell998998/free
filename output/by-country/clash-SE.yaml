@@ -13,22 +13,52 @@ proxies:
   tls: true
   reality-opts:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
+    short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: random
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  server: se.ataloqe.com
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 7710373d-abbb-4d6e-88cc-12702fb70aee
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SCdM-SIhOQOCMN0Mq1tomLtD4jwYTB3Wk7ByeApjcgU
+    short-id: 9f3a7c2d4e1b8a6c
+  servername: se.ataloqe.com
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  server: se1.h1cloud.net
+  udp: true
+  port: 26100
+  type: vless
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+  tls: true
+  reality-opts:
+    public-key: 1uuvuG2Jl_o6yoVvOYm3hEboArh2Znu7zCy4Tqj36TI
+    short-id: 8045087bda646f1b
+  servername: www.icloud.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 rules:
 - MATCH,PROXIES

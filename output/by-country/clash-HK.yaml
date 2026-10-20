@@ -5,18 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: bg1.spacevpn.space
+  server: yg1.ygkkk.dpdns.org
   udp: true
   port: 443
-  type: vless
-  uuid: 2e34af79-e5dc-ae2a-3393-65479f695282
-  flow: xtls-rprx-vision
+  type: vmess
+  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  alterId: 0
+  cipher: auto
   tls: true
-  reality-opts:
-    public-key: _u-Nv9dyWbkoAkklJAYQaixa60hmhbn6kZcUNhrdqW8
-    short-id: d498984fe96ad0ab
-  servername: bg1.spacevpn.space
-  client-fingerprint: chrome
+  servername: jmp1.907737.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+    headers:
+      Host: jmp1.907737.xyz
 proxy-groups:
 - name: PROXIES
   type: select

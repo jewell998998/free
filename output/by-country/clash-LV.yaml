@@ -5,20 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
-  server: 185.220.223.24
+  server: 195.123.208.32
   udp: true
   port: 443
   type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg
-    short-id: 3c6afdc4124d0560
-  servername: lv.aiage.work
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
+  servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
-  server: lv.aiage.work
+  server: 185.220.223.25
   udp: true
   port: 443
   type: vless
@@ -31,31 +31,18 @@ proxies:
   servername: lv.aiage.work
   client-fingerprint: firefox
 - name: 🇱🇻 拉脱维亚 (Latvia) 03 - Jewell
-  server: 195.123.208.32
+  server: lv.aiage.work
   udp: true
   port: 443
   type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
-    short-id: 757b9e1ef18e60f0
-  servername: gateway.icloud.com
+    public-key: ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg
+    short-id: 3c6afdc4124d0560
+  servername: lv.aiage.work
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 04 - Jewell
-  server: 195.123.208.32
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
-    short-id: 757b9e1ef18e60f0
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,7 +51,6 @@ proxy-groups:
   - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
   - 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
   - 🇱🇻 拉脱维亚 (Latvia) 03 - Jewell
-  - 🇱🇻 拉脱维亚 (Latvia) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -73,6 +59,5 @@ proxy-groups:
   - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
   - 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
   - 🇱🇻 拉脱维亚 (Latvia) 03 - Jewell
-  - 🇱🇻 拉脱维亚 (Latvia) 04 - Jewell
 rules:
 - MATCH,PROXIES

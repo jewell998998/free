@@ -4,17 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 46.28.71.247
+- name: 🇬🇷 希腊 (Greece) 01 - Jewell
+  server: 85.90.197.220
   udp: true
   port: 443
   type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
+    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
+    short-id: 94acb54627612d43
   servername: www.cloudflare.com
   client-fingerprint: ''
 proxy-groups:
@@ -22,12 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇬🇷 希腊 (Greece) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇬🇷 希腊 (Greece) 01 - Jewell
 rules:
 - MATCH,PROXIES

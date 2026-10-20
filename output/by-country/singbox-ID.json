@@ -1,0 +1,51 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "🇮🇩 印尼 (Indonesia) 01 - Jewell",
+      "server": "TnmXPIFVwfvyFZvf.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "a791985f-a4f9-410e-b2fa-8aca1e2424e1",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "TnmXPIFVwfvyFZvf.v.3dns.vip",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "Host": "TnmXPIFVwfvyFZvf.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇩 印尼 (Indonesia) 01 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇩 印尼 (Indonesia) 01 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

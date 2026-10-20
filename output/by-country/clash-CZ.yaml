@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 - Jewell
+- name: 🇨🇿 捷克 (Czech) 01 R44 - Jewell
   server: 195.123.245.241
   udp: true
   port: 443
@@ -22,12 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 R44 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 R44 - Jewell
 rules:
 - MATCH,PROXIES

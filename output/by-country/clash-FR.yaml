@@ -5,37 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 172.66.44.124
+  server: vpnfastsoper.co99.win
   udp: true
   port: 8443
   type: vless
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  tls: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  skip-cert-verify: false
-  client-fingerprint: randomized
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  uuid: 8571cb82-5941-4841-9613-63beffa96480
 - name: 🇫🇷 法国 (France) 02 - Jewell
-  server: courses.mftplus.qzz.io
+  server: vpnfastsoper.co99.win
   udp: true
-  port: 2096
+  port: 443
   type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  tls: true
-  servername: courses.mftplus.qzz.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: courses.mftplus.qzz.io
+  uuid: 8571cb82-5941-4841-9613-63beffa96480
 - name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 104.19.229.21
+  server: vpnfastsoper.co99.win
+  udp: true
+  port: 1080
+  type: vless
+  uuid: 8571cb82-5941-4841-9613-63beffa96480
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: 141.101.115.104
   udp: true
   port: 443
   type: trojan
@@ -45,7 +33,7 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 04 - Jewell
+- name: 🇫🇷 法国 (France) 05 - Jewell
   server: 138.124.70.41
   udp: true
   port: 14430
@@ -54,29 +42,9 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 45.87.41.18
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 91.245.225.79
-  udp: true
-  port: 2053
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07 R43 - Jewell
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 06 R43 - Jewell
   server: redcloudport-bidarbash.sbs
   udp: true
   port: 443
@@ -85,12 +53,26 @@ proxies:
   tls: true
   servername: redcloudport-bidarbash.sbs
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /zoodi
     headers:
       Host: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 07 R43 - Jewell
+  server: speedtest.org
+  udp: true
+  port: 8443
+  type: vless
+  uuid: c3571d81-38bd-44a8-9b75-5af8a125fc42
+  tls: true
+  servername: pbsjv.megalionzone-vexina.sbs
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /bala
+    headers:
+      Host: pbsjv.megalionzone-vexina.sbs
 - name: 🇫🇷 法国 (France) 08 R43 - Jewell
   server: 188.114.98.0
   udp: true
@@ -106,28 +88,6 @@ proxies:
     path: /zoodi
     headers:
       Host: redcloudport-bidarbash.sbs
-- name: 🇫🇷 法国 (France) 09 - Jewell
-  server: 185.255.179.166
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 10 - Jewell
-  server: 185.114.72.31
-  udp: true
-  port: 2053
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -138,11 +98,9 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 06 R43 - Jewell
   - 🇫🇷 法国 (France) 07 R43 - Jewell
   - 🇫🇷 法国 (France) 08 R43 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -153,10 +111,8 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 06 R43 - Jewell
   - 🇫🇷 法国 (France) 07 R43 - Jewell
   - 🇫🇷 法国 (France) 08 R43 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 - Jewell
 rules:
 - MATCH,PROXIES

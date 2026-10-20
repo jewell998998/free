@@ -4,29 +4,9 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
-      "server": "seoul01.zgjok.com",
-      "server_port": 443,
-      "uuid": "182f1650-ca13-480c-b0b4-1ca44ed0504e",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "seoul01.zgjok.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/henis01",
-        "headers": {
-          "Host": "seoul01.zgjok.com"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 02 - Jewell",
-      "server": "64.176.231.183",
+      "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
+      "server": "158.247.199.164",
       "server_port": 443,
       "uuid": "583cc910-b57c-4dd0-a4a7-cea51a30b032",
       "flow": "xtls-rprx-vision",
@@ -35,7 +15,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -49,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 - Jewell",
-        "🇰🇷 韩国 (South Korea) 02 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 - Jewell",
-        "🇰🇷 韩国 (South Korea) 02 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

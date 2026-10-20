@@ -5,35 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: vpnfastsoper.co99.win
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 8571cb82-5941-4841-9613-63beffa96480
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: vpnfastsoper.co99.win
-  udp: true
-  port: 443
-  type: vless
-  uuid: 8571cb82-5941-4841-9613-63beffa96480
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: vpnfastsoper.co99.win
-  udp: true
-  port: 1080
-  type: vless
-  uuid: 8571cb82-5941-4841-9613-63beffa96480
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 141.101.115.104
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 05 - Jewell
   server: 138.124.70.41
   udp: true
   port: 14430
@@ -42,23 +13,32 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 06 R43 - Jewell
-  server: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 91.245.225.79
   udp: true
-  port: 443
-  type: vless
-  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
-  tls: true
-  servername: redcloudport-bidarbash.sbs
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /zoodi
+    path: /assignment
+- name: 🇫🇷 法国 (France) 03 R43 - Jewell
+  server: speedtest.org
+  udp: true
+  port: 8443
+  type: vless
+  uuid: c3571d81-38bd-44a8-9b75-5af8a125fc42
+  tls: true
+  servername: pbsjv.megalionzone-vexina.sbs
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /bala
     headers:
-      Host: redcloudport-bidarbash.sbs
-- name: 🇫🇷 法国 (France) 07 R43 - Jewell
+      Host: pbsjv.megalionzone-vexina.sbs
+- name: 🇫🇷 法国 (France) 04 R43 - Jewell
   server: speedtest.org
   udp: true
   port: 8443
@@ -73,8 +53,8 @@ proxies:
     path: /bala
     headers:
       Host: pbsjv.megalionzone-vexina.sbs
-- name: 🇫🇷 法国 (France) 08 R43 - Jewell
-  server: 188.114.98.0
+- name: 🇫🇷 法国 (France) 05 R43 - Jewell
+  server: 172.67.171.33
   udp: true
   port: 443
   type: vless
@@ -88,6 +68,32 @@ proxies:
     path: /zoodi
     headers:
       Host: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 06 R43 - Jewell
+  server: 104.21.47.118
+  udp: true
+  port: 443
+  type: vless
+  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
+  tls: true
+  servername: redcloudport-bidarbash.sbs
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /zoodi
+    headers:
+      Host: redcloudport-bidarbash.sbs
+- name: 🇫🇷 法国 (France) 07 - Jewell
+  server: 104.16.72.50
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -95,12 +101,11 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 03 R43 - Jewell
+  - 🇫🇷 法国 (France) 04 R43 - Jewell
+  - 🇫🇷 法国 (France) 05 R43 - Jewell
   - 🇫🇷 法国 (France) 06 R43 - Jewell
-  - 🇫🇷 法国 (France) 07 R43 - Jewell
-  - 🇫🇷 法国 (France) 08 R43 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -108,11 +113,10 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 03 R43 - Jewell
+  - 🇫🇷 法国 (France) 04 R43 - Jewell
+  - 🇫🇷 法国 (France) 05 R43 - Jewell
   - 🇫🇷 法国 (France) 06 R43 - Jewell
-  - 🇫🇷 法国 (France) 07 R43 - Jewell
-  - 🇫🇷 法国 (France) 08 R43 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
 rules:
 - MATCH,PROXIES

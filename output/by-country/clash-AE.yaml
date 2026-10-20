@@ -16,23 +16,8 @@ proxies:
     public-key: uYU7UXkfNB-BEfjyrCUtRcN2JfFdlFWfMHCeX7bz4Qc
     short-id: e022bfea
   servername: addons.mozilla.org
-  client-fingerprint: randomized
+  client-fingerprint: random
 - name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  server: 31.59.210.37
-  udp: true
-  port: 443
-  type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
-    short-id: 6dbf4931096f9890
-  servername: www.yandex.ru
-  client-fingerprint: ''
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
   server: 185.253.116.33
   udp: true
   port: 14430
@@ -43,7 +28,7 @@ proxies:
     path: /vless
     headers:
       Host: 185.253.116.33
-- name: 🇦🇪 阿联酋 (UAE) 04 - Jewell
+- name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
   server: 31.59.210.32
   udp: true
   port: 443
@@ -58,18 +43,18 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 05 - Jewell
-  server: 31.59.210.26
+- name: 🇦🇪 阿联酋 (UAE) 04 - Jewell
+  server: 31.59.210.37
   udp: true
-  port: 2088
+  port: 443
   type: vless
   uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
   tls: true
   reality-opts:
-    public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg
-    short-id: b1ad165f903c62fe
+    public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
+    short-id: 6dbf4931096f9890
   servername: www.yandex.ru
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
@@ -82,7 +67,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
   - 🇦🇪 阿联酋 (UAE) 03 - Jewell
   - 🇦🇪 阿联酋 (UAE) 04 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,6 +76,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
   - 🇦🇪 阿联酋 (UAE) 03 - Jewell
   - 🇦🇪 阿联酋 (UAE) 04 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 05 - Jewell
 rules:
 - MATCH,PROXIES

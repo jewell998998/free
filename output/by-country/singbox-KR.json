@@ -15,7 +15,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +25,38 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 02 - Jewell",
+      "server": "130.162.134.218",
+      "password": "C0DD7bgChaltqnh/T2az6ijM",
+      "tls": {
+        "enabled": true,
+        "server_name": "rmgyvpn.rest",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "C0DD7bgChaltqnh/T2az6ijM"
+      },
+      "server_ports": [
+        "20000:30000"
+      ]
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell",
+        "🇰🇷 韩国 (South Korea) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell",
+        "🇰🇷 韩国 (South Korea) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

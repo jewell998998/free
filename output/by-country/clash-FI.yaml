@@ -13,20 +13,9 @@ proxies:
   sni: fi.67chat.ru
   skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 45.144.234.157
+  server: 144.31.34.146
   udp: true
-  port: 14430
-  type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 188.114.98.0
-  udp: true
-  port: 443
+  port: 2096
   type: vless
   uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
   tls: true
@@ -45,7 +34,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,6 +41,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 rules:
 - MATCH,PROXIES

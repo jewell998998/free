@@ -4,21 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 01 R50 - Jewell",
-      "server": "lv1.dedushka.top",
+      "type": "vless",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - Jewell",
+      "server": "195.123.213.28",
       "server_port": 443,
-      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
+      "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lv1.dedushka.top",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo",
+          "short_id": "5c256336e3b673fa"
         }
       }
     },
@@ -44,20 +46,34 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 03 R50 - Jewell",
+      "server": "lv1.dedushka.top",
+      "server_port": 443,
+      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
+      "tls": {
+        "enabled": true,
+        "server_name": "lv1.dedushka.top",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 拉脱维亚 (Latvia) 01 R50 - Jewell",
-        "🇱🇻 拉脱维亚 (Latvia) 02 - Jewell"
+        "🇱🇻 拉脱维亚 (Latvia) 01 - Jewell",
+        "🇱🇻 拉脱维亚 (Latvia) 02 - Jewell",
+        "🇱🇻 拉脱维亚 (Latvia) 03 R50 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 拉脱维亚 (Latvia) 01 R50 - Jewell",
-        "🇱🇻 拉脱维亚 (Latvia) 02 - Jewell"
+        "🇱🇻 拉脱维亚 (Latvia) 01 - Jewell",
+        "🇱🇻 拉脱维亚 (Latvia) 02 - Jewell",
+        "🇱🇻 拉脱维亚 (Latvia) 03 R50 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

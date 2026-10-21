@@ -26,24 +26,11 @@ proxies:
   servername: browser.yandex.com
   client-fingerprint: random
 - name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: edge10.cyrionflare.com
+  server: site.teslamotor.site
   udp: true
-  port: 2052
+  port: 20001
   type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇵🇱 波兰 (Poland) 04 R43 - Jewell
-  server: 54.37.131.126
-  udp: true
-  port: 80
-  type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +39,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 R43 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,6 +47,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 R43 - Jewell
 rules:
 - MATCH,PROXIES

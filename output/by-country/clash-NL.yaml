@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: b2n.ir
+  server: 188.114.98.0
   udp: true
   port: 443
   type: trojan
@@ -14,7 +14,7 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    path: /
 - name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   server: 188.114.98.0
   udp: true
@@ -25,9 +25,9 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/--@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
 - name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  server: 188.114.97.6
+  server: 188.114.98.0
   udp: true
   port: 443
   type: trojan
@@ -38,81 +38,49 @@ proxies:
   ws-opts:
     path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
 - name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: 2.59.183.167
+  server: 188.114.98.0
   udp: true
   port: 443
-  type: vless
-  uuid: 301d514e-4aa0-47b0-ba44-a0cb891cd52f
-  tls: true
-  reality-opts:
-    public-key: OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4
-  servername: www.samsung.com
-  client-fingerprint: ''
+  type: trojan
+  password: mitivpn
+  sni: de.mitivpn.in.net
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  server: 109.235.49.234
+  server: b2n.ir
+  udp: true
+  port: 443
+  type: trojan
+  password: mitivpn
+  sni: de.mitivpn.in.net
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  server: nl-hy-test.tcp-reset-club.net
   udp: true
   port: 443
   type: hysteria2
   password: dd50a499-7e43-4589-8490-f3b9c2451473
   sni: tcp-reset-club.net
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   server: 2.27.39.233
   udp: true
   port: 443
   type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  uuid: e60a2499-c5bf-4ad6-86b0-8af0bd3c0bbf
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
     short-id: f3c023cc
   servername: addons.mozilla.org
-  client-fingerprint: randomized
-- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
-  server: sakura.proxy.rlwy.net
-  udp: true
-  port: 31992
-  type: vless
-  uuid: ad9a39c7-00ca-4ba5-b232-1e9bd9aee957
-- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  server: 109.120.150.245
-  udp: true
-  port: 2053
-  type: vless
-  uuid: b1097a54-29de-4014-962c-c835d96e8409
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: iywsgYk8P1mWMu9xBjwpJQnBNGSH43RKSaaRVVv75S0
-    short-id: c342eb1745bbaefd
-  servername: www.rutube.ru
-  client-fingerprint: safari
-- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
-  server: 130.12.242.106
-  udp: true
-  port: 443
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
-  server: www.pleadcourt.org
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
   server: 2.27.71.48
   udp: true
   port: 443
@@ -125,19 +93,47 @@ proxies:
     short-id: 4d767145
   servername: addons.mozilla.org
   client-fingerprint: random
-- name: 🇳🇱 荷兰 (Netherlands) 12 - Jewell
-  server: 57.128.183.108
+- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  server: 109.120.150.245
+  udp: true
+  port: 2053
+  type: vless
+  uuid: b1097a54-29de-4014-962c-c835d96e8409
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: iywsgYk8P1mWMu9xBjwpJQnBNGSH43RKSaaRVVv75S0
+    short-id: c342eb1745bbaefd
+  servername: www.rutube.ru
+  client-fingerprint: ''
+- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  server: 130.12.242.106
   udp: true
   port: 443
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 13 R50 - Jewell
-  server: 138.68.131.253
+  type: vless
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  servername: deepl.com
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  server: 45.150.33.33
+  udp: true
+  port: 443
+  type: vless
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
+    short-id: eba1498e012ef580
+  servername: amazon.de
+  client-fingerprint: ios
+- name: 🇳🇱 荷兰 (Netherlands) 12 - Jewell
+  server: 94.158.219.126
   udp: true
   port: 443
   type: trojan
@@ -164,7 +160,6 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 13 R50 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -182,6 +177,5 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 13 R50 - Jewell
 rules:
 - MATCH,PROXIES

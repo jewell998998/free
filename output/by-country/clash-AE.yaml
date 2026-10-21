@@ -4,24 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
-  server: 49.254.204.133
+- name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  server: 185.253.116.33
   udp: true
-  port: 1774
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
+  port: 14430
+  type: vless
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  network: ws
+  ws-opts:
+    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
 rules:
 - MATCH,PROXIES

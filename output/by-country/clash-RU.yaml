@@ -15,28 +15,18 @@ proxies:
     public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
     short-id: ce1dc482
   servername: www.cloudflare.com
-  client-fingerprint: ''
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: alb1337.zaebalsanoproxyklinus.lol
-  udp: true
-  port: 28152
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: alb1337.zaebalsanoproxyklinus.lol
-  skip-cert-verify: false
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
 rules:
 - MATCH,PROXIES

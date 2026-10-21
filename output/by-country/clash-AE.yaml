@@ -5,63 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 31.59.210.37
+  server: 162.159.153.4
   udp: true
   port: 443
   type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
   tls: true
-  reality-opts:
-    public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
-    short-id: 6dbf4931096f9890
-  servername: www.yandex.ru
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  skip-cert-verify: false
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
 - name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  server: 31.59.210.26
+  server: 185.253.116.33
   udp: true
-  port: 2088
+  port: 14430
   type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg
-    short-id: b1ad165f903c62fe
-  servername: www.yandex.ru
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 185.253.116.33
 - name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
-  server: 31.59.210.32
+  server: 185.253.116.46
   udp: true
   port: 443
   type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA
-    short-id: 7ec4374ffc6308fd
-  servername: www.yandex.ru
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 04 - Jewell
-  server: 157.228.155.184
-  udp: true
-  port: 443
-  type: vless
-  uuid: c39f95b5-64b5-4f7a-a93d-fa9e9cf24de8
+  uuid: CQ9D5NqEbxPfdg
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: uYU7UXkfNB-BEfjyrCUtRcN2JfFdlFWfMHCeX7bz4Qc
-    short-id: e022bfea
-  servername: addons.mozilla.org
-  client-fingerprint: randomized
+    public-key: RQ4Z91En99W1IloruReNIuqeIY1PHfrd-Unv7XL--jU
+    short-id: 11a7579d
+  servername: www.heise.de
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -70,7 +51,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
   - 🇦🇪 阿联酋 (UAE) 03 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,6 +59,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
   - 🇦🇪 阿联酋 (UAE) 03 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 04 - Jewell
 rules:
 - MATCH,PROXIES

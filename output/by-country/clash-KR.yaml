@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 49.254.204.133
-  udp: true
-  port: 1774
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
-- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
   server: 64.176.231.183
   udp: true
   port: 443
@@ -24,6 +17,27 @@ proxies:
     short-id: ca193e889d958f81
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
+  server: 183.109.131.75
+  udp: true
+  port: 20086
+  type: vmess
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
+  server: 130.162.134.218
+  udp: true
+  type: hysteria2
+  password: C0DD7bgChaltqnh/T2az6ijM
+  sni: rmgyvpn.rest
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: C0DD7bgChaltqnh/T2az6ijM
+  ports: 20000-30000
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +45,7 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +53,6 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 rules:
 - MATCH,PROXIES

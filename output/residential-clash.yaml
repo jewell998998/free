@@ -1,0 +1,41 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell
+  server: zfd-hkv1.kunlun01dns.com
+  udp: true
+  port: 16114
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell
+  server: hinet1.2yly.com
+  udp: true
+  port: 24215
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - Jewell
+rules:
+- MATCH,PROXIES

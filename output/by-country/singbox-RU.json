@@ -14,7 +14,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -24,18 +24,54 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+      "server": "176.32.33.254",
+      "server_port": 18443,
+      "method": "aes-256-gcm",
+      "password": "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
+      "server": "0f5857g.msk1.h1clayd.click",
+      "server_port": 443,
+      "uuid": "3acb386b-fdd7-4bc9-911f-159fdcd834ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "0f5857g.msk1.h1clayd.click",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_UKyZZvF2cvo6qev4VY-QoOyzqE8cGT3hciD0g--sD8",
+          "short_id": "07e197719352d606"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "fb78f1bc0355"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

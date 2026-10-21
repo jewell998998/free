@@ -5,20 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 154.83.86.85
+  server: dog-hk.kunlun01dns.com
   udp: true
-  port: 9443
+  port: 21019
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 45.39.198.205
+  udp: true
+  port: 8443
   type: vless
-  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
+  uuid: 4a3d18d7-dfbe-4077-986a-6b145e417568
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  servername: www.amazon.com
+    public-key: pOOWxG69IvNxQyZUtd4QDK0KEtFHVsjC-m5-zcsi5Do
+    short-id: c5b8bed4faee8363
+  servername: gateway.icloud.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 2b9hwy8ocx7q74nm.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: yg1.ygkkk.dpdns.org
+  udp: true
+  port: 443
+  type: vmess
+  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: jmp1.907737.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+    headers:
+      Host: jmp1.907737.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: 8.217.254.88
   udp: true
   port: 443
   type: vmess
@@ -31,22 +55,21 @@ proxies:
   network: ws
   ws-opts:
     path: /ws-vmess
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: i2psm3knof5qjjix.v.3dns.vip
-  udp: true
-  port: 443
-  type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: i2psm3knof5qjjix.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
     headers:
-      Host: I2PSm3Knof5qjjix.v.3dns.vip
+      Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  server: 45.207.157.8
+  udp: true
+  port: 9443
+  type: vless
+  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +78,8 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,5 +88,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
 rules:
 - MATCH,PROXIES

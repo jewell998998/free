@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: fn1s.sublinkplas.ir
+  udp: true
+  port: 53731
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QoYjvkIZ7-bMIYfVI9IzRXUx5A1o3kj7
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 2.29.101.158
   udp: true
   port: 443
@@ -25,11 +32,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 - Jewell
 rules:
 - MATCH,PROXIES

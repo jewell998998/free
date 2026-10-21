@@ -12,17 +12,25 @@ proxies:
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl1.dedushka.top
   skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: edge10.cyrionflare.com
+  udp: true
+  port: 2052
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
 rules:
 - MATCH,PROXIES

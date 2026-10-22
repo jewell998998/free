@@ -5,32 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 82.118.22.161
-  udp: true
-  port: 443
-  type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
-    short-id: fa3ea655619a3e78
-  servername: www.cloudflare.com
-  client-fingerprint: ''
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: pl1.dedushka.top
+  server: 31.133.0.182
   udp: true
   port: 443
   type: trojan
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl1.dedushka.top
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: site.teslamotor.site
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 78.17.171.137
   udp: true
-  port: 20001
-  type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  port: 443
+  type: trojan
+  password: u93yPGuY2zgIsisJZKS2QzJzg
+  sni: 2.HI-L.IM
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -38,7 +27,6 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
-  - 🇵🇱 波兰 (Poland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,6 +34,5 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
-  - 🇵🇱 波兰 (Poland) 03 - Jewell
 rules:
 - MATCH,PROXIES

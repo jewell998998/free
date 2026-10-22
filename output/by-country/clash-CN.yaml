@@ -5,6 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇳 CN 01 - Jewell
+  server: vpn.cintaku.qzz.io
+  udp: true
+  port: 443
+  type: vless
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+  tls: true
+  servername: vpn.cintaku.qzz.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vlessws
+    headers:
+      Host: vpn.cintaku.qzz.io
+- name: 🇨🇳 CN 02 - Jewell
+  server: vpn.cintaku.qzz.io
+  udp: true
+  port: 443
+  type: vless
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+  tls: true
+  servername: vpn.cintaku.qzz.io
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vlessws
+    headers:
+      Host: vpn.cintaku.qzz.io
+- name: 🇨🇳 CN 03 - Jewell
   server: 188.114.98.0
   udp: true
   port: 443
@@ -25,11 +54,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇳 CN 01 - Jewell
+  - 🇨🇳 CN 02 - Jewell
+  - 🇨🇳 CN 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇳 CN 01 - Jewell
+  - 🇨🇳 CN 02 - Jewell
+  - 🇨🇳 CN 03 - Jewell
 rules:
 - MATCH,PROXIES

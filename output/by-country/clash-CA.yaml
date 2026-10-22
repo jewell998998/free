@@ -4,23 +4,43 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R51 - Jewell
-  server: milo.rubinaz.xyz
+- name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 103.106.229.37
   udp: true
-  port: 8080
+  port: 21004
   type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
+  server: 510.150333.xyz
+  udp: true
+  port: 21004
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: 4e0418d648f86141
+  servername: www.cloudflare.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R51 - Jewell
+  - 🇨🇦 加拿大 (Canada) 01 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R51 - Jewell
+  - 🇨🇦 加拿大 (Canada) 01 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 rules:
 - MATCH,PROXIES

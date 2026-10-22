@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  server: it1.dedushka.top
+  udp: true
+  port: 443
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: it1.dedushka.top
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
   server: 46.28.67.55
   udp: true
   port: 443
@@ -16,18 +24,6 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
-  server: 152.237.230.30
-  udp: true
-  port: 443
-  type: vless
-  uuid: e3026ffb-cde6-4cfe-b4b7-f76d5264e969
-  tls: true
-  reality-opts:
-    public-key: 9Wh7M-tz9D_1WBaQhz2wIJian960Ffcx66NH8HAidDI
-    short-id: 61a0eb582ed4f2b5
-  servername: play.google.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES

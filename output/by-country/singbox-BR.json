@@ -4,22 +4,19 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇨🇿 捷克 (Czech) 01 R46 - Jewell",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "password": "mitivpn",
+      "type": "hysteria2",
+      "tag": "🇧🇷 巴西 (Brazil) 01 - Jewell",
+      "server": "147.15.108.14",
+      "server_port": 20000,
+      "password": "CyG0RFxMjzs41uQD4OLuHQ==",
       "tls": {
         "enabled": true,
-        "server_name": "de.mitivpn.in.net",
+        "server_name": "rmgyvpn.rest",
         "insecure": false
       },
-      "transport": {
-        "type": "ws",
-        "path": "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET",
-        "headers": {
-          "Host": "de.mitivpn.in.net"
-        }
+      "obfs": {
+        "type": "salamander",
+        "password": "CyG0RFxMjzs41uQD4OLuHQ=="
       }
     },
     {
@@ -27,14 +24,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 R46 - Jewell"
+        "🇧🇷 巴西 (Brazil) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 R46 - Jewell"
+        "🇧🇷 巴西 (Brazil) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,29 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 51.49.126.162
+- name: 🇪🇸 西班牙 (Spain) 01 R55 - Jewell
+  server: 5.22.212.81
   udp: true
-  port: 443
+  port: 8080
   type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
+  uuid: 7f36e606-3eb9-4b60-b783-8d8806818286
+  network: ws
+  ws-opts:
     path: /
 - name: 🇪🇸 西班牙 (Spain) 02 - Jewell
-  server: 45.198.54.249
-  udp: true
-  port: 443
-  type: vless
-  uuid: 8d4c35bd-d04a-43fe-8390-47133ab90dbf
-  tls: true
-  reality-opts:
-    public-key: rHCPMrwRVCwxdwv4YOCso7zlYTPoX8w7x1f5Yqv2bGM
-    short-id: b73ab21227d33c1e
-  servername: 6a4a06t.es3.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
   server: 46.28.71.247
   udp: true
   port: 443
@@ -44,16 +31,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇪🇸 西班牙 (Spain) 01 R55 - Jewell
   - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇪🇸 西班牙 (Spain) 01 R55 - Jewell
   - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
 rules:
 - MATCH,PROXIES

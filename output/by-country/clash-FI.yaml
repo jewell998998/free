@@ -5,27 +5,52 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: 65.109.209.239
+  udp: true
+  port: 33477
+  type: vless
+  uuid: 0a9dfb0b-4fe1-40fe-b74c-0367e666ca96
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 65.109.209.239
+  udp: true
+  port: 16911
+  type: vmess
+  uuid: 0a9dfb0b-4fe1-40fe-b74c-0367e666ca96
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: fn1s.sublinkplas.ir
   udp: true
   port: 53731
   type: ss
   cipher: chacha20-ietf-poly1305
   password: QoYjvkIZ7-bMIYfVI9IzRXUx5A1o3kj7
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 2.29.101.158
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: finland02.azotvpn.xyz
   udp: true
-  port: 443
+  port: 8443
   type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  uuid: 5a96c1fc-f167-44b9-9020-8f6867537d14
   tls: true
   reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: chrome
+    public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
+    short-id: 07f508fe5d2355d3
+  servername: finland02.azotvpn.xyz
+  client-fingerprint: random
   network: grpc
   grpc-opts:
-    grpc-service-name: 0adb9638509b
+    grpc-service-name: ''
+- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+  server: 45.144.234.157
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +58,9 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -40,5 +68,8 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 rules:
 - MATCH,PROXIES

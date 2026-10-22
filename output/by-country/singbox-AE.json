@@ -4,15 +4,14 @@
   },
   "outbounds": [
     {
-      "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 - Jewell",
-      "server": "svip.skycon808.com",
-      "server_port": 47531,
-      "password": "87c6ad7b-e450-44a8-8088-bc2234d43de1",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw15.swiftrelay.cc",
-        "insecure": false
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+      "server": "185.253.116.33",
+      "server_port": 14430,
+      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
+      "transport": {
+        "type": "ws",
+        "path": "/vless"
       }
     },
     {
@@ -20,14 +19,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

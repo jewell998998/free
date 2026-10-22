@@ -4,7 +4,22 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 R44 - Jewell
+- name: 🇨🇿 捷克 (Czech) 01 - Jewell
+  server: 172.66.44.124
+  udp: true
+  port: 443
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: 🇨🇿 捷克 (Czech) 02 R44 - Jewell
   server: 195.123.245.241
   udp: true
   port: 443
@@ -16,18 +31,20 @@ proxies:
     public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
     short-id: 23d0950d60bc0d5b
   servername: gateway.icloud.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 R44 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 R44 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 R44 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 R44 - Jewell
 rules:
 - MATCH,PROXIES

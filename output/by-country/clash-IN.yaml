@@ -5,42 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - Jewell
-  server: 165.99.222.161
+  server: 13.140.56.100
   udp: true
-  port: 443
+  port: 14430
   type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SC6AnZ_BlvDruiGFpDRno9b1V3wMmq9gjB-KEHHUlE4
-  servername: in1.vkusnews.com
-  client-fingerprint: chrome
-- name: 🇮🇳 印度 (India) 02 - Jewell
-  server: in.smrtai.top
-  udp: true
-  port: 443
-  type: vless
-  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
-  tls: true
-  reality-opts:
-    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
-    short-id: 6bdc8320
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  network: ws
+  ws-opts:
+    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01 - Jewell
-  - 🇮🇳 印度 (India) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01 - Jewell
-  - 🇮🇳 印度 (India) 02 - Jewell
 rules:
 - MATCH,PROXIES

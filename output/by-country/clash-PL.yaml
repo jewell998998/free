@@ -12,27 +12,17 @@ proxies:
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl1.dedushka.top
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 78.17.171.137
-  udp: true
-  port: 443
-  type: trojan
-  password: u93yPGuY2zgIsisJZKS2QzJzg
-  sni: 2.HI-L.IM
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
 rules:
 - MATCH,PROXIES

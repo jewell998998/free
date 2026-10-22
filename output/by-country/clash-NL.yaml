@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: b2n.ir
+  server: 188.114.97.6
   udp: true
   port: 443
   type: trojan
@@ -15,34 +15,59 @@ proxies:
   network: ws
   ws-opts:
     path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-- name: 🇳🇱 荷兰 (Netherlands) 02 R55 - Jewell
-  server: 94.237.46.104
-  udp: true
-  port: 443
-  type: vless
-  uuid: dac47070-c136-49f3-8ed2-32b68e710ea3
-- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   server: nl-hy-test.tcp-reset-club.net
   udp: true
   port: 443
   type: hysteria2
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
   sni: nl-hy-test.tcp-reset-club.net
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: nl-2a972c8052.shamanapp.online
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 193.200.78.228
   udp: true
-  port: 33736
-  type: vmess
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  alterId: 0
-  cipher: auto
+  port: 443
+  type: vless
+  uuid: 095ed44e-b2f9-4f61-ba77-2142583578d8
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mk-nl4.silalink.sbs
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 109.120.150.245
+  udp: true
+  port: 8443
+  type: vless
+  uuid: b1097a54-29de-4014-962c-c835d96e8409
+  tls: true
+  reality-opts:
+    public-key: jMBABUVbMNQbil2pkU_bYTFoGKAM6NaTTjCqtme_0CA
+    short-id: 60e1354574cf8cd8
+  servername: www.rutube.ru
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: api.v1.Sync
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: dns2.m3hrzd.ir
+  udp: true
+  port: 8044
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: m4sc5EnK5mKG5iesVtmRiTgjDLJWabey
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  server: 188.114.98.0
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /vmess-ws
-    headers:
-      Host: nl-2a972c8052.shamanapp.online
-- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   server: 109.120.150.245
   udp: true
   port: 2053
@@ -54,9 +79,9 @@ proxies:
     public-key: iywsgYk8P1mWMu9xBjwpJQnBNGSH43RKSaaRVVv75S0
     short-id: c342eb1745bbaefd
   servername: www.rutube.ru
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
-  server: 144.31.205.106
+  client-fingerprint: ''
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  server: 139.28.240.24
   udp: true
   port: 443
   type: trojan
@@ -66,57 +91,70 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
-  server: 130.12.242.106
+- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  server: 192.145.30.27
   udp: true
   port: 443
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: ''
-- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  server: 45.150.33.33
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  server: 31.57.190.40
   udp: true
   port: 443
-  type: vless
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
-    short-id: eba1498e012ef580
-  servername: amazon.de
-  client-fingerprint: edge
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  server: 46.62.230.149
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 02 R55 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 02 R55 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
 rules:
 - MATCH,PROXIES

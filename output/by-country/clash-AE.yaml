@@ -13,17 +13,34 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+    headers:
+      Host: 185.253.116.33
+- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  server: 151.241.166.159
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7ab86f1f-871e-4de6-9dae-7addf6dc976c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: tPhBRGpTbyaPFF3W0wpqncSrdNsV5I-eyM3S9CZoeCQ
+    short-id: 9a26e586f8cadc07
+  servername: pl-hsts.zloygo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 rules:
 - MATCH,PROXIES

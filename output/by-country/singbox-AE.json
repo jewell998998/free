@@ -11,7 +11,31 @@
       "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
       "transport": {
         "type": "ws",
-        "path": "/vless"
+        "path": "/vless",
+        "headers": {
+          "Host": "185.253.116.33"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - Jewell",
+      "server": "151.241.166.159",
+      "server_port": 443,
+      "uuid": "7ab86f1f-871e-4de6-9dae-7addf6dc976c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl-hsts.zloygo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tPhBRGpTbyaPFF3W0wpqncSrdNsV5I-eyM3S9CZoeCQ",
+          "short_id": "9a26e586f8cadc07"
+        }
       }
     },
     {
@@ -19,14 +43,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

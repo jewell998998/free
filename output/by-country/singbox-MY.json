@@ -1,0 +1,52 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 01 ⚠R - Jewell",
+      "server": "my2.frnhk.xyz",
+      "server_port": 443,
+      "uuid": "6006c9a2-c0a2-4cda-80f2-405b0d790fc8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.waseda.jp",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SPtkbd9O6y-rdGoR2CLzW1IFr6WMlqt2lM9wU-VURig",
+          "short_id": "6b7a8c9d"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇲🇾 马来西亚 (Malaysia) 01 ⚠R - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇲🇾 马来西亚 (Malaysia) 01 ⚠R - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

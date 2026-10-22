@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 - Jewell
+- name: 🇨🇿 捷克 (Czech) 01 R46 - Jewell
   server: 188.114.97.6
   udp: true
   port: 443
@@ -14,18 +14,18 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 R46 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 R46 - Jewell
 rules:
 - MATCH,PROXIES

@@ -11,13 +11,7 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 R51 - Jewell
-  server: 212.74.39.214
-  udp: true
-  port: 8080
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 50.7.245.205
   udp: true
   port: 2093
@@ -36,15 +30,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R51 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R51 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
 rules:
 - MATCH,PROXIES

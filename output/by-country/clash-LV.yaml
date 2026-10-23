@@ -12,17 +12,32 @@ proxies:
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: lv1.dedushka.top
   skip-cert-verify: false
+- name: 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
+  server: 195.123.208.32
+  udp: true
+  port: 443
+  type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
+  servername: gateway.icloud.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01 R50 - Jewell
+  - 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01 R50 - Jewell
+  - 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,41 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
+  server: netx.smrtai.top
+  udp: true
+  port: 443
+  type: vless
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  tls: true
+  reality-opts:
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+    short-id: d8b58872
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇦 乌克兰 (Ukraine) 02 - Jewell
+  server: staging.lastilhame.monster
+  udp: true
+  port: 49917
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
+  - 🇺🇦 乌克兰 (Ukraine) 02 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
+  - 🇺🇦 乌克兰 (Ukraine) 02 - Jewell
+rules:
+- MATCH,PROXIES

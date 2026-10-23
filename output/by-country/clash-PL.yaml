@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: pl1.dedushka.top
+  udp: true
+  port: 443
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: pl1.dedushka.top
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 82.118.22.161
   udp: true
   port: 443
@@ -17,14 +25,6 @@ proxies:
     short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 31.133.0.182
-  udp: true
-  port: 443
-  type: trojan
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: pl1.dedushka.top
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select

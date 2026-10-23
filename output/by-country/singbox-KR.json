@@ -4,12 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
-      "server": "p141.panda001.net",
-      "server_port": 4652,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
+      "server": "130.162.134.218",
+      "password": "C0DD7bgChaltqnh/T2az6ijM",
+      "tls": {
+        "enabled": true,
+        "server_name": "rmgyvpn.rest",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "C0DD7bgChaltqnh/T2az6ijM"
+      },
+      "server_ports": [
+        "20000:30000"
+      ]
     },
     {
       "type": "selector",

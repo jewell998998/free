@@ -5,32 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
-  server: 13.134.125.31
+  server: 18.135.2.178
+  udp: true
+  port: 22224
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  server: 18.135.33.244
+  udp: true
+  port: 22224
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
+  server: 18.135.2.178
   udp: true
   port: 22222
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 02 R63 - Jewell
-  server: ie1.dedushka.top
-  udp: true
-  port: 443
-  type: trojan
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: ie1.dedushka.top
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
-  - 🇮🇪 爱尔兰 (Ireland) 02 R63 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
-  - 🇮🇪 爱尔兰 (Ireland) 02 R63 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
 rules:
 - MATCH,PROXIES

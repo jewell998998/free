@@ -5,13 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 2.26.3.75
+  server: 45.144.234.157
   udp: true
-  port: 443
-  type: hysteria2
-  password: d5530551-5e9a-4ac5-8539-cee87e38d9e2
-  sni: fi.67chat.ru
-  skip-cert-verify: false
+  port: 14430
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 144.31.34.146
   udp: true
@@ -28,6 +31,18 @@ proxies:
     headers:
       Host: fi1.merky.one
 - name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: areal1.greewebservices.ir
+  udp: true
+  port: 2425
+  type: vless
+  uuid: 2582857a-632b-4c4e-9b67-96213cbaf58c
+  tls: true
+  reality-opts:
+    public-key: MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: 8.6.112.0
   udp: true
   port: 443
@@ -36,12 +51,27 @@ proxies:
   tls: true
   servername: fi1.merky.one
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /mky-ws-4f19c8a7
     headers:
       Host: fi1.merky.one
+- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+  server: finland02.azotvpn.xyz
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 5a96c1fc-f167-44b9-9020-8f6867537d14
+  tls: true
+  reality-opts:
+    public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
+    short-id: 07f508fe5d2355d3
+  servername: finland02.azotvpn.xyz
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,6 +80,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,5 +90,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 rules:
 - MATCH,PROXIES

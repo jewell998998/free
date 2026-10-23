@@ -5,11 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
+  server: 138.124.70.41
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇫🇷 法国 (France) 02 - Jewell
   server: 140.248.186.45
   udp: true
   port: 443
   type: vless
-  uuid: XpnTeam-36
+  uuid: XpnTeam-40
   tls: true
   servername: ssl.fastly.com
   skip-cert-verify: false
@@ -19,8 +28,8 @@ proxies:
     path: /
     headers:
       Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 5.253.189.238
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 85.31.102.163
   udp: true
   port: 443
   type: trojan
@@ -30,7 +39,7 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 03 - Jewell
+- name: 🇫🇷 法国 (France) 04 - Jewell
   server: 89.150.34.41
   udp: true
   port: 2053
@@ -41,8 +50,30 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 185.220.100.168
+- name: 🇫🇷 法国 (France) 05 - Jewell
+  server: 212.227.144.37
+  udp: true
+  port: 8443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 06 - Jewell
+  server: 91.245.225.79
+  udp: true
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 07 - Jewell
+  server: 155.103.71.142
   udp: true
   port: 443
   type: trojan
@@ -52,8 +83,8 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 155.103.71.142
+- name: 🇫🇷 法国 (France) 08 - Jewell
+  server: 185.220.100.168
   udp: true
   port: 443
   type: trojan
@@ -73,6 +104,9 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,5 +117,8 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
 rules:
 - MATCH,PROXIES

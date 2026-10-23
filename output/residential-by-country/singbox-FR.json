@@ -5,22 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R44 - Jewell",
-      "server": "45.90.59.15",
+      "tag": "🇫🇷 法国 (France) 01 (家宽) - Jewell",
+      "server": "178.104.70.11",
       "server_port": 443,
-      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
-      "flow": "xtls-rprx-vision",
+      "uuid": "64726966-0000-4000-8000-740000000000",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "parsa-panel-dy55x.railway1385-2a46.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY",
-          "short_id": "19253fae84102271"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "parsa-panel-dy55x.railway1385-2a46.workers.dev"
         }
       }
     },
@@ -29,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R44 - Jewell"
+        "🇫🇷 法国 (France) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R44 - Jewell"
+        "🇫🇷 法国 (France) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

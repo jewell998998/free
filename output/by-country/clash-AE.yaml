@@ -15,17 +15,29 @@ proxies:
     path: /vless
     headers:
       Host: 185.253.116.33
+- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  server: fastiland.beautishine.ir
+  udp: true
+  port: 43232
+  type: vless
+  uuid: 0ceacfa0-6228-4e78-80e4-e5e29c924718
+  tls: true
+  servername: fastiland.beautishine.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 rules:
 - MATCH,PROXIES

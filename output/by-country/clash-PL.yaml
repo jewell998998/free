@@ -5,7 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: pl1.dedushka.top
+  server: 82.118.22.161
+  udp: true
+  port: 443
+  type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 31.133.0.182
   udp: true
   port: 443
   type: trojan
@@ -18,11 +31,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
 rules:
 - MATCH,PROXIES

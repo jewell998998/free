@@ -16,15 +16,8 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
-  client-fingerprint: ''
-- name: 🇪🇸 西班牙 (Spain) 02 R52 - Jewell
-  server: 108.181.71.5
-  udp: true
-  port: 15995
-  type: ss
-  cipher: aes-128-gcm
-  password: 882dd5b0e0f2cf05bb5de75f59bbe953
-- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
   server: 193.238.154.78
   udp: true
   port: 443
@@ -36,22 +29,20 @@ proxies:
     public-key: 4eE3K8Eac-ELze-LwRyJolqmhPqgCVqwQM1DKu6i0Ts
     short-id: e93d46ee3735069e
   servername: gateway.icloud.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 R52 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
+  - 🇪🇸 西班牙 (Spain) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 R52 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
+  - 🇪🇸 西班牙 (Spain) 02 - Jewell
 rules:
 - MATCH,PROXIES

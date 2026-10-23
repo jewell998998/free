@@ -18,18 +18,40 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - Jewell",
+      "server": "fastiland.beautishine.ir",
+      "server_port": 43232,
+      "uuid": "0ceacfa0-6228-4e78-80e4-e5e29c924718",
+      "tls": {
+        "enabled": true,
+        "server_name": "fastiland.beautishine.ir",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

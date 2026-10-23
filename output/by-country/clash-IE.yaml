@@ -10,17 +10,27 @@ proxies:
   port: 22222
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 02 R63 - Jewell
+  server: ie1.dedushka.top
+  udp: true
+  port: 443
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: ie1.dedushka.top
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 02 R63 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 02 R63 - Jewell
 rules:
 - MATCH,PROXIES

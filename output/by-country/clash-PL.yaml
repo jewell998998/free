@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 193.238.154.78
+- name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: 82.118.22.161
   udp: true
   port: 443
   type: vless
-  uuid: 897d47f8-4dd5-42a1-bcd0-bef19caff55a
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 4eE3K8Eac-ELze-LwRyJolqmhPqgCVqwQM1DKu6i0Ts
-    short-id: e93d46ee3735069e
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
 rules:
 - MATCH,PROXIES

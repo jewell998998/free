@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇨 塞舌尔 (Seychelles) 01 - Jewell
+  server: ui108.pacemakere.com
+  udp: true
+  port: 20008
+  type: trojan
+  password: 6ab93ec68bd94b76
+  sni: ui108.pacemakere.com
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇨 塞舌尔 (Seychelles) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇨 塞舌尔 (Seychelles) 01 - Jewell
+rules:
+- MATCH,PROXIES

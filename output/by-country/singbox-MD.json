@@ -4,8 +4,34 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+      "server": "104.20.31.136",
+      "server_port": 443,
+      "password": "mitivpn",
+      "tls": {
+        "enabled": true,
+        "server_name": "de.mitivpn.in.net",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "headers": {
+          "Host": "de.mitivpn.in.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell",
       "server": "5.252.179.15",
       "server_port": 443,
       "uuid": "0ab273e4-cea6-41d0-bbab-41071d2fc455",
@@ -15,7 +41,7 @@
         "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -29,14 +55,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell"
+        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+        "🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell"
+        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+        "🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

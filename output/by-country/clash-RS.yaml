@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
-  server: 195.123.208.32
+- name: 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
+  server: 185.105.108.176
   udp: true
   port: 443
   type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
-    short-id: 757b9e1ef18e60f0
-  servername: gateway.icloud.com
+    public-key: U9O1sbuPwoTowF3Ka7CIgUZlRjokulxSwsYohEGCLA8
+    short-id: 0d87fec579
+  servername: www.google.co.uk
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
 rules:
 - MATCH,PROXIES

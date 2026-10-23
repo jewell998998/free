@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 2.26.106.232
+  server: finland02.azotvpn.xyz
   udp: true
   port: 8443
   type: vless
@@ -15,21 +15,23 @@ proxies:
     public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
     short-id: 07f508fe5d2355d3
   servername: finland02.azotvpn.xyz
-  client-fingerprint: random
+  client-fingerprint: ''
   network: grpc
   grpc-opts:
     grpc-service-name: ''
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 45.144.234.157
+  server: 1.bmi.ir.asopardaz.ir
   udp: true
-  port: 14430
+  port: 443
   type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
+  uuid: ce71b8c2-54a4-4dd0-b780-a4521b16f2ff
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
+    short-id: e915
+  servername: timeline.www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

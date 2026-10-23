@@ -4,17 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
-      "server": "129.150.59.74",
-      "server_port": 14384,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA="
+      "server": "67.159.52.81",
+      "server_port": 443,
+      "uuid": "a16bd0e2-ff2e-4e4c-a955-0c684255a065",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sg.fasti.win",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs",
+          "short_id": "feedbacc"
+        }
+      }
     },
     {
       "type": "shadowsocks",
       "tag": "🇸🇬 新加坡 (Singapore) 02 R52 - Jewell",
-      "server": "68.183.235.122",
+      "server": "68.183.227.45",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
@@ -22,10 +35,96 @@
     {
       "type": "shadowsocks",
       "tag": "🇸🇬 新加坡 (Singapore) 03 R52 - Jewell",
+      "server": "68.183.227.236",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 04 R52 - Jewell",
+      "server": "128.199.172.224",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 05 R52 - Jewell",
       "server": "68.183.235.240",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 06 R52 - Jewell",
+      "server": "68.183.235.122",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 07 R44 - Jewell",
+      "server": "5.34.177.164",
+      "server_port": 443,
+      "uuid": "ca678d26-5435-4d13-b378-06c4c3b070ff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA",
+          "short_id": "b2efed6d157e7bb0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 08 - Jewell",
+      "server": "54.169.200.246",
+      "server_port": 41688,
+      "uuid": "49c0aac1-5e05-4f04-b624-248fc59e03c4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk",
+          "short_id": "7f342137c20387"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇸🇬 新加坡 (Singapore) 09 - Jewell",
+      "server": "nomino.11hi8itbaf.workers.dev",
+      "server_port": 443,
+      "uuid": "a9f4de8b-68f1-44b6-b6a2-1db60940503a",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "nomino.11hi8itbaf.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wjofHsQtEuEywxEq.v.3dns.vip/ws-vmess",
+        "headers": {
+          "Host": "nomino.11hi8itbaf.workers.dev"
+        }
+      }
     },
     {
       "type": "selector",
@@ -34,7 +133,13 @@
         "auto",
         "🇸🇬 新加坡 (Singapore) 01 - Jewell",
         "🇸🇬 新加坡 (Singapore) 02 R52 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 03 R52 - Jewell"
+        "🇸🇬 新加坡 (Singapore) 03 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 04 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 05 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 06 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 07 R44 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 08 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 09 - Jewell"
       ]
     },
     {
@@ -43,7 +148,13 @@
       "outbounds": [
         "🇸🇬 新加坡 (Singapore) 01 - Jewell",
         "🇸🇬 新加坡 (Singapore) 02 R52 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 03 R52 - Jewell"
+        "🇸🇬 新加坡 (Singapore) 03 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 04 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 05 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 06 R52 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 07 R44 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 08 - Jewell",
+        "🇸🇬 新加坡 (Singapore) 09 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

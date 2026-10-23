@@ -4,15 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 R58 - Jewell
-  server: 185.176.204.18
+- name: 🇩🇪 德国 (Germany) 01 - Jewell
+  server: 3.126.253.1
   udp: true
-  port: 19999
+  port: 443
   type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 02 - Jewell
-  server: 177.3.222.100
+  server: 64.188.66.181
   udp: true
   port: 443
   type: vless
@@ -23,40 +23,43 @@ proxies:
     public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
     short-id: 2c9a2790ad5900b2
   servername: ge-s-1.pythonmakemigreat.wiki
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: 🇩🇪 德国 (Germany) 03 - Jewell
-  server: 91.107.169.224
-  udp: true
-  port: 80
-  type: vmess
-  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-- name: 🇩🇪 德国 (Germany) 04 - Jewell
-  server: 104.21.93.52
-  udp: true
-  port: 2052
-  type: vless
-  uuid: e3fb01b6-69b4-41d7-babf-696d992de194
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
-  server: 82.118.19.153
+  server: nl-central.v8x2b.lol
   udp: true
   port: 443
   type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  flow: xtls-rprx-vision
+  uuid: 846cedee-2a52-0002-a0b9-11850ead6a8b
   tls: true
   reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
+    public-key: q3UXFUE5yYxNE4ugLUnYdpc9WRtR-sjsDTrKsiqzDHE
+  servername: nl-central.v8x2b.lol
+  client-fingerprint: ios
+- name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: mci.amir12.ir
+  udp: true
+  port: 2112
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
+  servername: play.google.com
   client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
+  server: 91.107.188.129
+  udp: true
+  port: 2083
+  type: vless
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  tls: true
+  servername: site.check-looks.space
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇩🇪 德国 (Germany) 06 - Jewell
   server: sino.bestsellers1.site
   udp: true
@@ -71,17 +74,17 @@ proxies:
   ws-opts:
     path: /
 - name: 🇩🇪 德国 (Germany) 07 - Jewell
-  server: 91.107.188.129
+  server: mci1.amir12.ir
   udp: true
-  port: 2083
+  port: 1222
   type: vless
-  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
   tls: true
-  servername: site.check-looks.space
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  servername: play.google.com
+  client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 08 - Jewell
   server: 31.70.111.146
   udp: true
@@ -94,8 +97,32 @@ proxies:
     public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
     short-id: d7de3a6ff4018957
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 09 - Jewell
+  server: freesocks.work
+  udp: true
+  port: 2052
+  type: vless
+  uuid: e3fb01b6-69b4-41d7-babf-696d992de194
+  network: ws
+  ws-opts:
+    path: /@BlueKnight_net--@BlueKnight_net
+    headers:
+      Host: uwu.blueknightnet.qzz.io
+- name: 🇩🇪 德国 (Germany) 10 - Jewell
+  server: 188.225.27.229
+  udp: true
+  port: 443
+  type: vless
+  uuid: 66dc1927-8528-4f1e-bb74-5a9c7aa8ea8c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
+    short-id: 88d9dc52ef39c8bd
+  servername: bridge.rkitman.ru
+  client-fingerprint: safari
+- name: 🇩🇪 德国 (Germany) 11 - Jewell
   server: 31.76.15.24
   udp: true
   port: 443
@@ -107,13 +134,13 @@ proxies:
     public-key: YM1SjW-RyGtPYs_SgjtfaIxJpw2m-TZ8qnNFxkDxHV0
     short-id: a5543a67f52ea8ab
   servername: www.apple.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 R58 - Jewell
+  - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
@@ -122,12 +149,14 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07 - Jewell
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
+  - 🇩🇪 德国 (Germany) 10 - Jewell
+  - 🇩🇪 德国 (Germany) 11 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 R58 - Jewell
+  - 🇩🇪 德国 (Germany) 01 - Jewell
   - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
@@ -136,5 +165,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07 - Jewell
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
+  - 🇩🇪 德国 (Germany) 10 - Jewell
+  - 🇩🇪 德国 (Germany) 11 - Jewell
 rules:
 - MATCH,PROXIES

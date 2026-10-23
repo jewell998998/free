@@ -14,7 +14,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,
@@ -34,7 +34,7 @@
         "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -48,21 +48,12 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
-      "server": "176.32.33.153",
-      "server_port": 18443,
-      "method": "aes-256-gcm",
-      "password": "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
       ]
     },
     {
@@ -70,8 +61,7 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

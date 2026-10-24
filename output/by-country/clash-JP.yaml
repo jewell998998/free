@@ -13,19 +13,6 @@ proxies:
   sni: vp3.yysyy.online
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 142.91.108.25
-  udp: true
-  port: 443
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-  servername: jp3.nztvpn.com
-  client-fingerprint: edge
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: 45.76.98.127
   udp: true
   port: 443
@@ -40,6 +27,19 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 142.91.108.25
+  udp: true
+  port: 443
+  type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
+    short-id: ea36c03d86f91287
+  servername: jp3.nztvpn.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

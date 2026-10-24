@@ -5,41 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 109.235.49.234
+  server: 50.7.41.118
+  udp: true
+  port: 17001
+  type: ss
+  cipher: aes-256-gcm
+  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+- name: 🇳🇱 荷兰 (Netherlands) 02 R55 - Jewell
+  server: 94.237.46.104
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7ed223bc-bc94-4fdb-a6df-c83acdf452fc
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: nl-hy-test.tcp-reset-club.net
   udp: true
   port: 443
   type: hysteria2
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  sni: nl-hy-test.tcp-reset-club.net
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: 109.120.150.245
-  udp: true
-  port: 2053
-  type: vless
-  uuid: b1097a54-29de-4014-962c-c835d96e8409
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: iywsgYk8P1mWMu9xBjwpJQnBNGSH43RKSaaRVVv75S0
-    short-id: c342eb1745bbaefd
-  servername: www.rutube.ru
-  client-fingerprint: safari
-- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  server: 130.12.242.106
-  udp: true
-  port: 443
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: random
 - name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: 77.239.121.232
+  server: 104.27.203.207
   udp: true
   port: 443
   type: trojan
@@ -50,7 +37,20 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  server: 46.62.204.134
+  server: vd2.outlinevpn.cc
+  udp: true
+  port: 12213
+  type: vless
+  uuid: 7c464358-6c89-4623-bd20-7c7bcd51bc55
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: kTKM-s7XF0s878Ydmq1KeZFiGT6k1Bw_rLE79s1l1jI
+    short-id: 6a29a03b21
+  servername: music.yandex.ru
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  server: 188.226.181.61
   udp: true
   port: 443
   type: trojan
@@ -60,38 +60,66 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
-  server: 188.114.98.0
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  server: 188.225.27.229
   udp: true
   port: 443
-  type: trojan
-  password: humanity
-  sni: www.trusteeforward.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  type: vless
+  uuid: 66dc1927-8528-4f1e-bb74-5a9c7aa8ea8c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
+    short-id: 88d9dc52ef39c8bd
+  servername: bridge.rkitman.ru
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  server: 45.150.33.33
+  udp: true
+  port: 443
+  type: vless
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
+    short-id: eba1498e012ef580
+  servername: amazon.de
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  server: dns2.m3hrzd.ir
+  udp: true
+  port: 8044
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eLXzVwBgkN77aIof2pEhaYmpATVZVIlh
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 R55 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 02 R55 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  server: 185.98.63.8
+  udp: true
+  port: 443
+  type: vless
+  uuid: 0b6a937e-5b0e-49ca-b31e-f03f290e97cf
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 185.98.63.6
   udp: true
   port: 8443
@@ -16,17 +28,34 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 03 - Jewell
+  server: trend.eidoslab.link
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: p7X0vRL9R-23Ey-MZZZj7FY0g87nQq0Jzc01DwuryRk
+    short-id: 7597c5df264bcc10
+  servername: trend.eidoslab.link
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 03 - Jewell
 rules:
 - MATCH,PROXIES

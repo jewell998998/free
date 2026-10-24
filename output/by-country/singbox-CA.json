@@ -4,9 +4,17 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
-      "server": "38.145.220.58",
+      "server": "138.197.141.58",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
+      "server": "50.7.245.204",
       "server_port": 2093,
       "uuid": "0b418782-e023-447e-ba99-e66b84ff118d",
       "flow": "xtls-rprx-vision",
@@ -15,7 +23,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,28 +33,12 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
-      "server": "138.197.141.58",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 03 R51 - Jewell",
-      "server": "milo.rubinaz.xyz",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇨🇦 加拿大 (Canada) 01 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell",
-        "🇨🇦 加拿大 (Canada) 03 R51 - Jewell"
+        "🇨🇦 加拿大 (Canada) 02 - Jewell"
       ]
     },
     {
@@ -54,8 +46,7 @@
       "tag": "auto",
       "outbounds": [
         "🇨🇦 加拿大 (Canada) 01 - Jewell",
-        "🇨🇦 加拿大 (Canada) 02 - Jewell",
-        "🇨🇦 加拿大 (Canada) 03 R51 - Jewell"
+        "🇨🇦 加拿大 (Canada) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

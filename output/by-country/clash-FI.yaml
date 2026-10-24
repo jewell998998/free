@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 185.119.81.7
-  udp: true
-  port: 443
-  type: vless
-  uuid: 2f5cfa10-43e5-4912-800d-557308a26a29
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9BUlinkTIxNgD2Em4KShtEbXOjBKvz2mDwT1VqoeR1k
-    short-id: 80c4e0bda641d6c9
-  servername: ht689zw45oor.cloudydigital.net
-  client-fingerprint: ios
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: hw3.divarkhaghazi.com.
   udp: true
   port: 465
@@ -26,26 +13,12 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: finp2g.yandex-api.store
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 78559873-84ef-4cab-a0b2-46d4cd20de4a
-  tls: true
-  servername: finp2g.yandex-api.store
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /assets
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 45.144.234.157
   udp: true
   port: 14430
@@ -54,8 +27,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,8 +34,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -72,7 +41,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 rules:
 - MATCH,PROXIES

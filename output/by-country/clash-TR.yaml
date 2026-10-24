@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 185.98.63.8
-  udp: true
-  port: 443
-  type: vless
-  uuid: 0b6a937e-5b0e-49ca-b31e-f03f290e97cf
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 185.98.63.6
   udp: true
   port: 8443
@@ -28,7 +16,32 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  server: 45.151.71.152
+  udp: true
+  port: 443
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: abuse.ozon.ru
+  client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 03 - Jewell
+  server: 194.93.63.195
+  udp: true
+  port: 443
+  type: vless
+  uuid: 2f5cfa10-43e5-4912-800d-557308a26a29
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xwk6v2Cia-x2zdam-mTeqb5V0iH-FXBOW2h5Pm0HpXM
+    short-id: 4118d00d2a61b755
+  servername: 6wysmlgy3go6.cloudydigital.net
+  client-fingerprint: ios
+- name: 🇹🇷 土耳其 (Turkey) 04 - Jewell
   server: trend.eidoslab.link
   udp: true
   port: 443
@@ -40,7 +53,7 @@ proxies:
     public-key: p7X0vRL9R-23Ey-MZZZj7FY0g87nQq0Jzc01DwuryRk
     short-id: 7597c5df264bcc10
   servername: trend.eidoslab.link
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,6 +62,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
   - 🇹🇷 土耳其 (Turkey) 03 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,5 +71,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
   - 🇹🇷 土耳其 (Turkey) 03 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 04 - Jewell
 rules:
 - MATCH,PROXIES

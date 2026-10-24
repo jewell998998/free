@@ -17,7 +17,19 @@ proxies:
   servername: apple.com
   client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 193.223.104.120
+  server: 193.160.140.112
+  udp: true
+  port: 443
+  type: vless
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 193.160.140.119
   udp: true
   port: 443
   type: vless
@@ -28,8 +40,8 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 147.45.47.104
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: 147.45.47.86
   udp: true
   port: 443
   type: vless
@@ -39,8 +51,8 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
-  client-fingerprint: safari
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   server: 147.45.47.83
   udp: true
   port: 443
@@ -51,31 +63,19 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
-  client-fingerprint: ''
-- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 45.151.71.147
-  udp: true
-  port: 443
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: abuse.ozon.ru
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  server: 45.151.71.147
+  server: 193.160.140.118
   udp: true
   port: 443
   type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: abuse.ozon.ru
-  client-fingerprint: ''
+  servername: ozon.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

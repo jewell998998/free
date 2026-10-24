@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell
-  server: 104.20.31.136
-  udp: true
-  port: 443
-  type: trojan
-  password: mitivpn
-  sni: de.mitivpn.in.net
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-- name: 🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell
   server: 5.252.179.15
   udp: true
   port: 443
@@ -27,20 +16,18 @@ proxies:
     public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
     short-id: 296f27de82dad7ff
   servername: www.bing.com
-  client-fingerprint: random
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell
-  - 🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell
-  - 🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell
 rules:
 - MATCH,PROXIES

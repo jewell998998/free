@@ -16,7 +16,7 @@ proxies:
     public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
     short-id: 8a9725533854a7e8
   servername: www.apple.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 138.197.141.58
   udp: true
@@ -24,42 +24,6 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 103.106.229.37
-  udp: true
-  port: 21004
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: 2df2bd9d8366cef1
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
-  server: 511.150333.xyz
-  udp: true
-  port: 21002
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: 3ab8d93dd9b1a5be
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
-  server: 511.150333.xyz
-  udp: true
-  port: 21003
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: bab49aa4c2a88d27
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,9 +31,6 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 - Jewell
-  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -77,8 +38,5 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 - Jewell
-  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,19 +4,18 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell",
-      "server": "ui108.pacemakere.com",
-      "server_port": 20008,
-      "password": "6ab93ec68bd94b76",
+      "type": "hysteria2",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+      "server": "sweden.luxes.network",
+      "server_port": 2053,
+      "password": "78559873-84ef-4cab-a0b2-46d4cd20de4a",
       "tls": {
         "enabled": true,
-        "server_name": "ui108.pacemakere.com",
+        "server_name": "sweden.luxes.network",
         "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
@@ -24,14 +23,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 - Jewell
-  server: 195.123.245.241
+- name: 🇮🇱 以色列 (Israel) 01 - Jewell
+  server: es.srv.dvzh.net
   udp: true
   port: 443
   type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  uuid: 9ab3a362-1518-496d-b08d-eced45cec936
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
-    short-id: 23d0950d60bc0d5b
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
+    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
+    short-id: e0ccc8c2f487d913
+  servername: es.srv.dvzh.net
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 rules:
 - MATCH,PROXIES

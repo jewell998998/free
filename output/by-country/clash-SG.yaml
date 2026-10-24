@@ -5,122 +5,61 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: 67.159.52.81
+  server: 104.26.0.1
   udp: true
   port: 443
   type: vless
-  uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065
-  flow: xtls-rprx-vision
+  uuid: e56059f1-5a1a-4d0a-a2d0-58ecb4eb2f3f
   tls: true
-  reality-opts:
-    public-key: -YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs
-    short-id: feedbacc
-  servername: sg.fasti.win
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
-  server: 68.183.227.45
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
-  server: 68.183.227.236
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  server: 128.199.172.224
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
-  server: 68.183.235.240
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  server: 68.183.235.122
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 07 R44 - Jewell
-  server: 5.34.177.164
-  udp: true
-  port: 443
-  type: vless
-  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
-    short-id: b2efed6d157e7bb0
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 08 - Jewell
-  server: 54.169.200.246
-  udp: true
-  port: 41688
-  type: vless
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
-  servername: www.intel.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 09 - Jewell
-  server: nomino.11hi8itbaf.workers.dev
-  udp: true
-  port: 443
-  type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: nomino.11hi8itbaf.workers.dev
+  servername: ezaccess-project-f62c30.pages.dev
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /wjofHsQtEuEywxEq.v.3dns.vip/ws-vmess
+    path: /eyJqdW5rIjoiZWlPODVjTnhnaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: nomino.11hi8itbaf.workers.dev
+      Host: ezaccess-project-f62c30.pages.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: funagfrdfs.alixxplay.com
+  udp: true
+  port: 46105
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik
+    short-id: 28f5c1f8f98a
+  servername: www.lamer.com.sg
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
+  server: 134.185.81.5
+  udp: true
+  port: 47881
+  type: vless
+  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
+    short-id: 38d72071
+  servername: www.tesla.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R44 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R44 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 - Jewell
 rules:
 - MATCH,PROXIES

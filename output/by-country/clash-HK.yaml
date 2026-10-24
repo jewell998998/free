@@ -18,14 +18,6 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: zfd-hkv1.kunlun01dns.com
-  udp: true
-  port: 16113
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   server: 151.242.85.236
   udp: true
   port: 443
@@ -38,14 +30,19 @@ proxies:
     short-id: 9b6fa4047c24629f
   servername: addons.mozilla.org
   client-fingerprint: safari
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  server: svip.skycon808.com
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 165.154.63.139
   udp: true
-  port: 24318
-  type: anytls
-  password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
-  sni: hk08.jdddyy01.cc
-  skip-cert-verify: false
+  port: 443
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  servername: www.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,7 +51,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,6 +59,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 rules:
 - MATCH,PROXIES

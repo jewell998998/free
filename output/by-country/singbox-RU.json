@@ -6,30 +6,55 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-      "server": "77.90.61.135",
+      "server": "193.223.104.124",
       "server_port": 443,
-      "uuid": "8815925b-c7b8-4f94-9c24-9dc864f63a29",
+      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ozon.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg",
-          "short_id": "ce1dc482"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         }
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
-      "server": "195.58.49.34",
+      "server": "193.233.253.180",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
+      "server": "176.32.33.153",
       "server_port": 18443,
       "method": "aes-256-gcm",
-      "password": "Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE"
+      "password": "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
     },
     {
       "type": "selector",
@@ -37,7 +62,8 @@
       "outbounds": [
         "auto",
         "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
       ]
     },
     {
@@ -45,7 +71,8 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 02 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

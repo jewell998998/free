@@ -16,8 +16,16 @@ proxies:
     public-key: pOOWxG69IvNxQyZUtd4QDK0KEtFHVsjC-m5-zcsi5Do
     short-id: c5b8bed4faee8363
   servername: gateway.icloud.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: dog-hk.kunlun01dns.com
+  udp: true
+  port: 21021
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   server: 151.242.85.236
   udp: true
   port: 443
@@ -30,19 +38,6 @@ proxies:
     short-id: 9b6fa4047c24629f
   servername: addons.mozilla.org
   client-fingerprint: safari
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: 165.154.63.139
-  udp: true
-  port: 443
-  type: vless
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
-    short-id: ca4aedd4
-  servername: www.amazon.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

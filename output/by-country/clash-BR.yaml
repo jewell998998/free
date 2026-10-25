@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
-  server: staging.lastilhame.monster
+- name: 🇧🇷 巴西 (Brazil) 01 - Jewell
+  server: 78.111.102.80
   udp: true
-  port: 49917
+  port: 2083
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+  password: banJ58KfDF21KoMFZ5TXmg
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
+  - 🇧🇷 巴西 (Brazil) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
+  - 🇧🇷 巴西 (Brazil) 01 - Jewell
 rules:
 - MATCH,PROXIES

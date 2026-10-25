@@ -4,26 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 185.253.116.33
+- name: 🇻🇳 越南 (Vietnam) 01 - Jewell
+  server: 150.95.109.109
   udp: true
-  port: 14430
+  port: 2086
   type: vless
-  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
-  network: ws
-  ws-opts:
-    path: /vless
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇻🇳 越南 (Vietnam) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇻🇳 越南 (Vietnam) 01 - Jewell
 rules:
 - MATCH,PROXIES

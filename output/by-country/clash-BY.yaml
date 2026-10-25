@@ -13,6 +13,8 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+    headers:
+      Host: 178.172.227.124
 - name: 🇧🇾 白俄罗斯 (Belarus) 02 - Jewell
   server: 178.172.227.228
   udp: true
@@ -25,17 +27,8 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
-  client-fingerprint: qq
+  client-fingerprint: edge
 - name: 🇧🇾 白俄罗斯 (Belarus) 03 - Jewell
-  server: 178.172.227.228
-  udp: true
-  port: 14430
-  type: vless
-  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇧🇾 白俄罗斯 (Belarus) 04 - Jewell
   server: 178.172.227.124
   udp: true
   port: 10444
@@ -48,7 +41,7 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
   client-fingerprint: safari
-- name: 🇧🇾 白俄罗斯 (Belarus) 05 - Jewell
+- name: 🇧🇾 白俄罗斯 (Belarus) 04 - Jewell
   server: 95.128.71.79
   udp: true
   port: 10444
@@ -60,8 +53,8 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
-  client-fingerprint: safari
-- name: 🇧🇾 白俄罗斯 (Belarus) 06 - Jewell
+  client-fingerprint: chrome
+- name: 🇧🇾 白俄罗斯 (Belarus) 05 - Jewell
   server: 95.128.71.79
   udp: true
   port: 14430
@@ -82,7 +75,6 @@ proxy-groups:
   - 🇧🇾 白俄罗斯 (Belarus) 03 - Jewell
   - 🇧🇾 白俄罗斯 (Belarus) 04 - Jewell
   - 🇧🇾 白俄罗斯 (Belarus) 05 - Jewell
-  - 🇧🇾 白俄罗斯 (Belarus) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,6 +85,5 @@ proxy-groups:
   - 🇧🇾 白俄罗斯 (Belarus) 03 - Jewell
   - 🇧🇾 白俄罗斯 (Belarus) 04 - Jewell
   - 🇧🇾 白俄罗斯 (Belarus) 05 - Jewell
-  - 🇧🇾 白俄罗斯 (Belarus) 06 - Jewell
 rules:
 - MATCH,PROXIES

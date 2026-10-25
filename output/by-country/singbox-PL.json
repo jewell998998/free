@@ -6,23 +6,68 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
-      "server": "site.teslamotor.site",
-      "server_port": 20001,
-      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+      "server": "5.22.221.127",
+      "server_port": 443,
+      "uuid": "44dfa3a7-f648-4587-819b-e653c0823f28"
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 R40 - Jewell",
-      "server": "77.232.135.141",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "82.118.22.161",
+      "server_port": 443,
+      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
+          "short_id": "fa3ea655619a3e78"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
+      "server": "2.26.6.1",
+      "server_port": 2087,
+      "uuid": "b9fdc03f-389b-4cda-9be4-155b623bee15",
+      "tls": {
+        "enabled": true,
+        "server_name": "2.26.6.1",
+        "insecure": false
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
+      "server": "46.62.147.53",
+      "server_port": 147,
+      "method": "chacha20-ietf-poly1305",
+      "password": "5uDrCF_iLoxCiRkKku6f7A"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
+      "server": "ru1.radiolumens.uk",
       "server_port": 8445,
       "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
         "server_name": "ru1.radiolumens.uk",
         "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -31,12 +76,36 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 06 - Jewell",
+      "server": "bak.subaru-volga.com",
+      "server_port": 443,
+      "uuid": "6db6b948-655f-4f68-a9e7-865050e05b31",
+      "tls": {
+        "enabled": true,
+        "server_name": "bak.subaru-volga.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "HGQg7VrNlEhfOEjLR1LNeBZaVJg-J1f4DhxqOp-orjA",
+          "short_id": "6fda"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇵🇱 波兰 (Poland) 01 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 R40 - Jewell"
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell",
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 06 - Jewell"
       ]
     },
     {
@@ -44,7 +113,11 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 波兰 (Poland) 01 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 R40 - Jewell"
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell",
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 06 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

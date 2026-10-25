@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - Jewell
-  server: 64.188.66.181
+  server: 177.3.222.100
   udp: true
   port: 443
   type: vless
@@ -16,15 +16,8 @@ proxies:
     public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
     short-id: 2c9a2790ad5900b2
   servername: ge-s-1.pythonmakemigreat.wiki
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 02 R58 - Jewell
-  server: 185.176.204.18
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 02 - Jewell
   server: 191.217.216.24
   udp: true
   port: 443
@@ -34,8 +27,33 @@ proxies:
   reality-opts:
     public-key: q3UXFUE5yYxNE4ugLUnYdpc9WRtR-sjsDTrKsiqzDHE
   servername: nl-central.v8x2b.lol
-  client-fingerprint: safari
+  client-fingerprint: edge
+- name: 🇩🇪 德国 (Germany) 03 - Jewell
+  server: 144.31.215.196
+  udp: true
+  port: 443
+  type: vless
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jwLEnDwGROadL1ax-SrVC50sE5slaP7TbGQtBxkcTws
+    short-id: 8c9ab0f7b293f9ef
+  servername: c2.qwyak.ru
+  client-fingerprint: firefox
 - name: 🇩🇪 德国 (Germany) 04 - Jewell
+  server: 91.107.188.129
+  udp: true
+  port: 2083
+  type: vless
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  tls: true
+  servername: site.check-looks.space
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 05 - Jewell
   server: 91.107.247.173
   udp: true
   port: 2083
@@ -44,25 +62,11 @@ proxies:
   tls: true
   servername: sino.bestsellers1.site
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sino.bestsellers1.site
-- name: 🇩🇪 德国 (Germany) 05 - Jewell
-  server: gr1.originmesh.online
-  udp: true
-  port: 443
-  type: vless
-  uuid: 35da102e-536b-4103-9632-58c7c4c6303b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: eCJwHto6UMfRpXErgAoIdvM13jTHrWqgBbIoj3apKkY
-    short-id: eecfe76af97a6132
-  servername: gr1.originmesh.online
-  client-fingerprint: edge
 - name: 🇩🇪 德国 (Germany) 06 - Jewell
   server: 31.70.111.146
   udp: true
@@ -75,103 +79,66 @@ proxies:
     public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
     short-id: d7de3a6ff4018957
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: 🇩🇪 德国 (Germany) 07 - Jewell
-  server: dearv.moon-night.ir
+  server: 91.107.169.224
   udp: true
-  port: 443
+  port: 80
+  type: vmess
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+- name: 🇩🇪 德国 (Germany) 08 - Jewell
+  server: mci.amir12.ir
+  udp: true
+  port: 2112
   type: vless
-  uuid: bdb68a1c-7983-4a00-84af-011e3d0d25d1
-  flow: xtls-rprx-vision
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
   tls: true
   reality-opts:
-    public-key: dMBDL7ry94pavIxYmzimeyaCqor6fUNb0v3dzHif9xY
-    short-id: e64e9f5eefbffc15
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
   servername: play.google.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 08 - Jewell
-  server: 91.107.188.129
+- name: 🇩🇪 德国 (Germany) 09 - Jewell
+  server: 140.225.208.50
   udp: true
   port: 2083
   type: vless
-  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
   tls: true
-  servername: site.check-looks.space
+  servername: speedtestmark.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: random
   network: ws
   ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 09 - Jewell
-  server: fly.lumexa.ir
-  udp: true
-  port: 443
-  type: vless
-  uuid: 756c8a9d-ff97-41f3-90b8-50f29acaba1f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0E-OTXVHsukKvwgwynrI49nTaT5m6rxdaFPg4D_UszI
-    short-id: 9cc0
-  servername: dynu.com
-  client-fingerprint: firefox
+    path: /vless-ws
 - name: 🇩🇪 德国 (Germany) 10 - Jewell
-  server: 82.118.19.153
+  server: 201.51.8.163
   udp: true
   port: 443
   type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 11 R56 - Jewell
-  server: 198.202.146.51.sslip.io
+    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
+  servername: atk.vkusnews.com
+  client-fingerprint: qq
+- name: 🇩🇪 德国 (Germany) 11 - Jewell
+  server: 5.129.222.115
   udp: true
   port: 443
   type: vless
-  uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: B5DMtKe8wjH_WeM8M8IEuKwPqJ6-Ku98JH_LifwehEY
-    short-id: 6fe2994a0e208408
-  servername: 198.202.146.51.sslip.io
+    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
+  servername: ad7.vkusnews.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 12 R46 - Jewell
-  server: www.gptcloudai.com
-  udp: true
-  port: 443
-  type: vmess
-  uuid: e70a5b70-f63c-4450-af8b-94990cdf80c0
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: www.gptcloudai.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.gptcloudai.com
-- name: 🇩🇪 德国 (Germany) 13 R46 - Jewell
-  server: 104.17.70.206
-  udp: true
-  port: 8443
-  type: vless
-  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
-  tls: true
-  servername: free.sahanwickramasinghe.me
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free.sahanwickramasinghe.me
-- name: 🇩🇪 德国 (Germany) 14 - Jewell
+- name: 🇩🇪 德国 (Germany) 12 - Jewell
   server: 31.76.15.24
   udp: true
   port: 443
@@ -184,64 +151,41 @@ proxies:
     short-id: a5543a67f52ea8ab
   servername: www.apple.com
   client-fingerprint: ''
-- name: 🇩🇪 德国 (Germany) 15 - Jewell
-  server: 5.129.222.115
+- name: 🇩🇪 德国 (Germany) 13 R56 - Jewell
+  server: 198.202.146.51
   udp: true
   port: 443
   type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-  servername: ad7.vkusnews.com
-  client-fingerprint: qq
-- name: 🇩🇪 德国 (Germany) 16 - Jewell
-  server: 201.51.8.163
-  udp: true
-  port: 443
-  type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-  servername: atk.vkusnews.com
+    public-key: B5DMtKe8wjH_WeM8M8IEuKwPqJ6-Ku98JH_LifwehEY
+    short-id: 6fe2994a0e208408
+  servername: 198.202.146.51.sslip.io
   client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 17 R46 - Jewell
-  server: free.sahanwickramasinghe.me
+- name: 🇩🇪 德国 (Germany) 14 R46 - Jewell
+  server: 51.75.67.209
   udp: true
-  port: 80
+  port: 8443
   type: vless
-  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  tls: true
+  servername: free.sahanwickramasinghe.me
+  skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
-- name: 🇩🇪 德国 (Germany) 18 - Jewell
-  server: 172.64.229.129
-  udp: true
-  port: 2052
-  type: vless
-  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
-  network: ws
-  ws-opts:
-    path: /rain1226
     headers:
-      Host: eu02.123450908.xyz
-- name: 🇩🇪 德国 (Germany) 19 R46 - Jewell
-  server: 57.129.113.16
-  udp: true
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
+      Host: free.sahanwickramasinghe.me
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 - Jewell
-  - 🇩🇪 德国 (Germany) 02 R58 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
@@ -250,22 +194,17 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
   - 🇩🇪 德国 (Germany) 10 - Jewell
-  - 🇩🇪 德国 (Germany) 11 R56 - Jewell
-  - 🇩🇪 德国 (Germany) 12 R46 - Jewell
-  - 🇩🇪 德国 (Germany) 13 R46 - Jewell
-  - 🇩🇪 德国 (Germany) 14 - Jewell
-  - 🇩🇪 德国 (Germany) 15 - Jewell
-  - 🇩🇪 德国 (Germany) 16 - Jewell
-  - 🇩🇪 德国 (Germany) 17 R46 - Jewell
-  - 🇩🇪 德国 (Germany) 18 - Jewell
-  - 🇩🇪 德国 (Germany) 19 R46 - Jewell
+  - 🇩🇪 德国 (Germany) 11 - Jewell
+  - 🇩🇪 德国 (Germany) 12 - Jewell
+  - 🇩🇪 德国 (Germany) 13 R56 - Jewell
+  - 🇩🇪 德国 (Germany) 14 R46 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇩🇪 德国 (Germany) 01 - Jewell
-  - 🇩🇪 德国 (Germany) 02 R58 - Jewell
+  - 🇩🇪 德国 (Germany) 02 - Jewell
   - 🇩🇪 德国 (Germany) 03 - Jewell
   - 🇩🇪 德国 (Germany) 04 - Jewell
   - 🇩🇪 德国 (Germany) 05 - Jewell
@@ -274,14 +213,9 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 08 - Jewell
   - 🇩🇪 德国 (Germany) 09 - Jewell
   - 🇩🇪 德国 (Germany) 10 - Jewell
-  - 🇩🇪 德国 (Germany) 11 R56 - Jewell
-  - 🇩🇪 德国 (Germany) 12 R46 - Jewell
-  - 🇩🇪 德国 (Germany) 13 R46 - Jewell
-  - 🇩🇪 德国 (Germany) 14 - Jewell
-  - 🇩🇪 德国 (Germany) 15 - Jewell
-  - 🇩🇪 德国 (Germany) 16 - Jewell
-  - 🇩🇪 德国 (Germany) 17 R46 - Jewell
-  - 🇩🇪 德国 (Germany) 18 - Jewell
-  - 🇩🇪 德国 (Germany) 19 R46 - Jewell
+  - 🇩🇪 德国 (Germany) 11 - Jewell
+  - 🇩🇪 德国 (Germany) 12 - Jewell
+  - 🇩🇪 德国 (Germany) 13 R56 - Jewell
+  - 🇩🇪 德国 (Germany) 14 R46 - Jewell
 rules:
 - MATCH,PROXIES

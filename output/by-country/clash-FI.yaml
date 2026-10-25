@@ -19,16 +19,19 @@ proxies:
     headers:
       Host: hw3.divarkhaghazi.com.
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 45.144.234.157
+  server: ss.90909.club
   udp: true
-  port: 14430
+  port: 2096
   type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
+  uuid: eeb96fef-4476-4ab0-915e-32e8f014c3b2
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: id.vk.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
 - name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: finlandlanzarotte.live
   udp: true

@@ -5,24 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇳 CN 01 - Jewell",
-      "server": "vpn.cintaku.qzz.io",
+      "tag": "🇷🇸 塞尔维亚 (Serbia) 01 - Jewell",
+      "server": "185.105.108.176",
       "server_port": 443,
-      "uuid": "fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349",
+      "uuid": "689a62e4-37e7-41de-9e6a-f2a56368c9e2",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vpn.cintaku.qzz.io",
-        "insecure": false,
+        "server_name": "www.google.co.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vlessws",
-        "headers": {
-          "Host": "vpn.cintaku.qzz.io"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "U9O1sbuPwoTowF3Ka7CIgUZlRjokulxSwsYohEGCLA8",
+          "short_id": "0d87fec579"
         }
       }
     },
@@ -31,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇳 CN 01 - Jewell"
+        "🇷🇸 塞尔维亚 (Serbia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇳 CN 01 - Jewell"
+        "🇷🇸 塞尔维亚 (Serbia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

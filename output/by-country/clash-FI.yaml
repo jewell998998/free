@@ -5,6 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: 78.17.209.100
+  udp: true
+  port: 443
+  type: vless
+  uuid: c5cf36f5-50e9-405b-adb4-b40fdf0d4619
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6DLiz4O1GkMzUveVx_6Wr_e99QxAgZZ6BonblaRVPFI
+    short-id: ba80654a85a4634c
+  servername: fin-skl-1.movietop24.site
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 177.3.214.156
+  udp: true
+  port: 443
+  type: vless
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6lZ5dkQN2sH9tYca374W4N1n9eCanD_F2FfghcksKSo
+  servername: finlandlanzarotte.live
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: swself2.yandex-api.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HXFe_cPryw01zqXchAFjZciDAS4UJg1-xScx6vjgjjY
+    short-id: 7f2e9c4b1a8d6e25
+  servername: swself2.yandex-api.com
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: hw3.divarkhaghazi.com.
   udp: true
   port: 465
@@ -13,12 +51,25 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+  server: 2.27.203.251
+  udp: true
+  port: 443
+  type: vless
+  uuid: 1ef7d97f-3aa5-4fe6-8521-84cf4794bf7a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QYdQmsVvUj4jwo9gH20nJA5x015gaAL0nGipORe6ZmY
+  servername: edge-fi2.lovely.my
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06 - Jewell
   server: 45.144.234.157
   udp: true
   port: 14430
@@ -34,6 +85,10 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
+  - 🇫🇮 芬兰 (Finland) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +96,9 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
+  - 🇫🇮 芬兰 (Finland) 06 - Jewell
 rules:
 - MATCH,PROXIES

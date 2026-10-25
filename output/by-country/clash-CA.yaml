@@ -5,25 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 155.138.138.2
+  udp: true
+  port: 443
+  type: trojan
+  password: Trojan@82164024
+  sni: ca.tronsg.com
+  skip-cert-verify: false
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 138.197.141.58
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 50.7.245.204
+- name: 🇨🇦 加拿大 (Canada) 03 R51 - Jewell
+  server: milo.rubinaz.xyz
   udp: true
-  port: 2093
+  port: 8080
   type: vless
-  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
-    short-id: 8a9725533854a7e8
-  servername: www.apple.com
-  client-fingerprint: chrome
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +32,7 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R51 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +40,6 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R51 - Jewell
 rules:
 - MATCH,PROXIES

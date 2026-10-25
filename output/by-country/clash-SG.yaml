@@ -5,92 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: sg2-8sb.6121999.dpdns.org
+  server: 154.31.112.237
   udp: true
-  port: 33738
-  type: tuic
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  password: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  sni: sg2-8sb.6121999.dpdns.org
-  skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: bbr
-  alpn:
-  - h3
-- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  server: 5.34.177.164
-  udp: true
-  port: 443
+  port: 26418
   type: vless
-  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
-  flow: xtls-rprx-vision
+  uuid: f4e6e867-9380-4087-b223-8890ee4b00fc
   tls: true
-  reality-opts:
-    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
-    short-id: b2efed6d157e7bb0
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  server: 43.156.89.197
-  udp: true
-  port: 61000
-  type: vless
-  uuid: f5b93de5-b756-4f87-bb1c-7e5b622688fa
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: FivAz9qw86uYacvLo5qIMnw9gQ9uKT9KIdGzhxROTSE
-    short-id: 63dac514fdfdd11c
-  servername: www.amd.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  server: sg.fasti.win
-  udp: true
-  port: 443
-  type: vless
-  uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs
-    short-id: feedbacc
-  servername: sg.fasti.win
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 05 R54 - Jewell
-  server: 172.237.88.103
-  udp: true
-  port: 443
-  type: vless
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
-    short-id: 5a42dbd7e26a0415
-  servername: zoom.us
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
-  server: 128.1.186.132
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 07 R54 - Jewell
-  server: 139.162.27.96
-  udp: true
-  port: 2096
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
+  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /free-server.techsonic.dev
+    path: /@Marisa_kristi
     headers:
-      Host: free-server.techsonic.dev
+      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 154.31.112.237
+  udp: true
+  port: 26418
+  type: vless
+  uuid: 9e53ce49-fb61-45c3-a3c1-bd8df1f9749f
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 03 - Jewell
+  server: 129.150.59.74
+  udp: true
+  port: 14384
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -99,10 +49,6 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R54 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R54 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -111,9 +57,5 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R54 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R54 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,24 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 巴西 (Brazil) 01 - Jewell
-  server: 78.111.102.80
+- name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  server: edge10.cyrionflare.com
   udp: true
-  port: 2083
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: banJ58KfDF21KoMFZ5TXmg
+  port: 2052
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 巴西 (Brazil) 01 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 巴西 (Brazil) 01 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
 rules:
 - MATCH,PROXIES

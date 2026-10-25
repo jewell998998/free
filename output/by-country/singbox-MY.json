@@ -5,22 +5,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell",
-      "server": "179.255.176.28",
-      "server_port": 8443,
-      "uuid": "69da3674-4941-468b-96f0-c17cf5b0a047",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 01 - Jewell",
+      "server": "111.90.143.184",
+      "server_port": 61111,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
       "tls": {
         "enabled": true,
-        "server_name": "fra.yandex-api.store",
-        "insecure": false,
+        "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jT5prLDhvJ86zZVz5pDX907oQbeZ0Hyb_VcDSiJxQQU",
+          "short_id": "1378f725da558887"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/assets"
+        "type": "grpc"
       }
     },
     {
@@ -28,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell"
+        "🇲🇾 马来西亚 (Malaysia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell"
+        "🇲🇾 马来西亚 (Malaysia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

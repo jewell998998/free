@@ -5,26 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 98.98.142.161
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 191.44.108.31
-  udp: true
-  port: 443
-  type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
-    short-id: 3ba10d9ce34380c9
-  servername: www.google.com
-  client-fingerprint: ''
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: gb2.murainternet.network
   udp: true
   port: 443
@@ -37,7 +17,84 @@ proxies:
     short-id: fc36b4a584871aa5
   servername: gb2.murainternet.network
   client-fingerprint: ''
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R - Jewell
+  server: 51.89.228.166
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 03 ⚠R - Jewell
+  server: 147.45.47.78
+  udp: true
+  port: 443
+  type: vless
+  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ai.ozon.ru
+  client-fingerprint: qq
+- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
+  server: 147.45.47.78
+  udp: true
+  port: 443
+  type: vless
+  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ai.ozon.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 191.44.108.31
+  udp: true
+  port: 443
+  type: vless
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
+    short-id: 3ba10d9ce34380c9
+  servername: www.google.com
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 06 R47 - Jewell
+  server: 98.98.207.163
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  server: 213.176.92.168
+  udp: true
+  port: 14430
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇬🇧 英国 (United Kingdom) 08 ⚠R - Jewell
+  server: 45.151.71.158
+  udp: true
+  port: 443
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ai.ozon.ru
+  client-fingerprint: ''
+- name: 🇬🇧 英国 (United Kingdom) 09 - Jewell
   server: 213.176.92.168
   udp: true
   port: 10444
@@ -50,7 +107,7 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: video.yandex.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 10 - Jewell
   server: 193.188.21.253
   udp: true
   port: 10444
@@ -62,8 +119,21 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   servername: video.yandex.ru
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 11 - Jewell
+  server: 57.128.164.21
+  udp: true
+  port: 80
+  type: vmess
+  uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+- name: 🇬🇧 英国 (United Kingdom) 12 - Jewell
   server: 193.163.203.170
   udp: true
   port: 443
@@ -75,21 +145,8 @@ proxies:
     public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
     short-id: b28db60d77c50b4f
   servername: yandex.ru
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 07 ⚠R - Jewell
-  server: connect.hondamotor.site
-  udp: true
-  port: 10002
-  type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-- name: 🇬🇧 英国 (United Kingdom) 08 R47 - Jewell
-  server: 98.98.207.163
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 09 - Jewell
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 13 - Jewell
   server: 144.48.11.97
   udp: true
   port: 43000
@@ -108,27 +165,35 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
   - 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 07 ⚠R - Jewell
-  - 🇬🇧 英国 (United Kingdom) 08 R47 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 R47 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 08 ⚠R - Jewell
   - 🇬🇧 英国 (United Kingdom) 09 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 10 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 11 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 12 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 13 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
   - 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 07 ⚠R - Jewell
-  - 🇬🇧 英国 (United Kingdom) 08 R47 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 R47 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 08 ⚠R - Jewell
   - 🇬🇧 英国 (United Kingdom) 09 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 10 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 11 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 12 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 13 - Jewell
 rules:
 - MATCH,PROXIES

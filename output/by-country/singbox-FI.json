@@ -4,21 +4,9 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "2.26.3.75",
-      "server_port": 443,
-      "password": "d5530551-5e9a-4ac5-8539-cee87e38d9e2",
-      "tls": {
-        "enabled": true,
-        "server_name": "fi.67chat.ru",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "hw3.divarkhaghazi.com.",
+      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
+      "server": "hw3.divarkhaghazi.com",
       "server_port": 465,
       "uuid": "924e20da-fcad-4e7e-8113-c62d27a0d01e",
       "tls": {
@@ -31,6 +19,20 @@
         "path": "/",
         "headers": {
           "Host": "hw3.divarkhaghazi.com."
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
+      "server": "45.144.234.157",
+      "server_port": 14430,
+      "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "45.144.234.157"
         }
       }
     },
@@ -56,50 +58,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 04 - Jewell",
-      "server": "78.17.209.100",
-      "server_port": 443,
-      "uuid": "c5cf36f5-50e9-405b-adb4-b40fdf0d4619",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fin-skl-1.movietop24.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6DLiz4O1GkMzUveVx_6Wr_e99QxAgZZ6BonblaRVPFI",
-          "short_id": "ba80654a85a4634c"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 05 - Jewell",
-      "server": "45.144.234.157",
-      "server_port": 14430,
-      "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "45.144.234.157"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
         "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell",
-        "🇫🇮 芬兰 (Finland) 04 - Jewell",
-        "🇫🇮 芬兰 (Finland) 05 - Jewell"
+        "🇫🇮 芬兰 (Finland) 03 - Jewell"
       ]
     },
     {
@@ -108,9 +73,7 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
         "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell",
-        "🇫🇮 芬兰 (Finland) 04 - Jewell",
-        "🇫🇮 芬兰 (Finland) 05 - Jewell"
+        "🇫🇮 芬兰 (Finland) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

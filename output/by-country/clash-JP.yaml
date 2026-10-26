@@ -5,23 +5,77 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: vp3.yysyy.online
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: 191.223.221.53
   udp: true
   port: 8388
   type: ss
   cipher: aes-256-gcm
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 103.27.133.17
+  udp: true
+  port: 41438
+  type: vless
+  uuid: f12d0220-e1de-4232-bcef-7e5a12f05062
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: w_X-vOLSkQ0Cv4sMRU7j9lq-WVX_rZqYkTcgDkIgUF8
+    short-id: 1fbda82b6856a6d3
+  servername: jp15.static-s3.org
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 45.76.98.127
+  udp: true
+  port: 443
+  type: vless
+  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
+  tls: true
+  reality-opts:
+    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
+    short-id: 49fa0dad
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: v6.hdacd.com
+  udp: true
+  port: 30806
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
 rules:
 - MATCH,PROXIES

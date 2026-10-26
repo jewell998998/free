@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇹 葡萄牙 (Portugal) 01 - Jewell
-  server: pt1.accessboy.com
+- name: 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
+  server: 185.105.108.176
   udp: true
   port: 443
   type: vless
-  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4
-    short-id: 1c5869a95671bcb0
-  servername: pt1.accessboy.com
+    public-key: U9O1sbuPwoTowF3Ka7CIgUZlRjokulxSwsYohEGCLA8
+    short-id: 0d87fec579
+  servername: www.google.co.uk
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇹 葡萄牙 (Portugal) 01 - Jewell
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇹 葡萄牙 (Portugal) 01 - Jewell
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,17 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  server: 46.28.67.55
+- name: 🇮🇳 印度 (India) 01 - Jewell
+  server: in.smrtai.top
   udp: true
   port: 443
   type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  flow: xtls-rprx-vision
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
   tls: true
   reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+    short-id: 6bdc8320
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
@@ -22,12 +21,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇮🇳 印度 (India) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇮🇳 印度 (India) 01 - Jewell
 rules:
 - MATCH,PROXIES

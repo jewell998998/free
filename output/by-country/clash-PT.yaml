@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇰 MK 01 - Jewell
-  server: 89.185.82.151
+- name: 🇵🇹 葡萄牙 (Portugal) 01 - Jewell
+  server: pt1.accessboy.com
   udp: true
-  port: 10443
+  port: 443
   type: vless
-  uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
+  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: XNfikFybWtjJjWU7-QBGrr-D9YUW0uSK_sR7mDDUmRU
-    short-id: 6ba85179
-  servername: stackoverflow.com
+    public-key: 1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4
+    short-id: 1c5869a95671bcb0
+  servername: pt1.accessboy.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇰 MK 01 - Jewell
+  - 🇵🇹 葡萄牙 (Portugal) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇰 MK 01 - Jewell
+  - 🇵🇹 葡萄牙 (Portugal) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  server: 147.78.1.73
+  udp: true
+  port: 443
+  type: vless
+  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4
+    short-id: 1c5869a95671bcb0
+  servername: mx1.accessboy.com
+  client-fingerprint: firefox
+- name: 🇲🇽 墨西哥 (Mexico) 02 - Jewell
   server: mx001.zestapp778.com
   udp: true
   port: 19167
@@ -19,11 +32,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  - 🇲🇽 墨西哥 (Mexico) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  - 🇲🇽 墨西哥 (Mexico) 02 - Jewell
 rules:
 - MATCH,PROXIES

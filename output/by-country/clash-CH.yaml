@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR 01 - Jewell
-  server: 198.16.113.219
+- name: 🇨🇭 瑞士 (Switzerland) 01 R59 - Jewell
+  server: 45.90.59.15
   udp: true
-  port: 8443
+  port: 443
   type: vless
-  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
-  servername: www.apple.com
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇷 IR 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 R59 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇷 IR 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 R59 - Jewell
 rules:
 - MATCH,PROXIES

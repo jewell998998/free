@@ -5,58 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: pl3.pad-sservice.lat
+  server: pl.song69.fun
   udp: true
-  port: 8443
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: pl3.pad-sservice.lat
+  port: 20270
+  type: hysteria2
+  password: dd56bf58-4c37-42e1-9e75-4b6c67939ffd
+  sni: pl1.song69.fun
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /PL3W
-    headers:
-      Host: pl3.pad-service.com
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: pl2.pad-sservice.lat
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: pl2.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /PL2W
-    headers:
-      Host: pl2.pad-service.com
-- name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: site.teslamotor.site
-  udp: true
-  port: 20001
-  type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-- name: 🇵🇱 波兰 (Poland) 04 - Jewell
-  server: 201.10.91.68
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: pl1.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /PL1W
-    headers:
-      Host: pl1.pad-service.com
-- name: 🇵🇱 波兰 (Poland) 05 R40 - Jewell
-  server: ru1.radiolumens.uk
+- name: 🇵🇱 波兰 (Poland) 02 R40 - Jewell
+  server: 77.232.135.141
   udp: true
   port: 8445
   type: vless
@@ -64,41 +21,38 @@ proxies:
   tls: true
   servername: ru1.radiolumens.uk
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 06 - Jewell
-  server: 2.26.6.1
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: site.teslamotor.site
   udp: true
-  port: 2087
+  port: 20001
   type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  tls: true
-  servername: 2.26.6.1
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: edge10.cyrionflare.com
+  udp: true
+  port: 2052
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 R40 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
   - 🇵🇱 波兰 (Poland) 04 - Jewell
-  - 🇵🇱 波兰 (Poland) 05 R40 - Jewell
-  - 🇵🇱 波兰 (Poland) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 R40 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
   - 🇵🇱 波兰 (Poland) 04 - Jewell
-  - 🇵🇱 波兰 (Poland) 05 R40 - Jewell
-  - 🇵🇱 波兰 (Poland) 06 - Jewell
 rules:
 - MATCH,PROXIES

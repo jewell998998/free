@@ -5,37 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 143.246.211.163
-  udp: true
-  port: 443
-  type: hysteria2
-  password: b3d079ff-b775-4ffe-bac9-41228b08b15b
-  sni: fr.gorobsub.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 188.114.97.6
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 03 ⚠R - Jewell
-  server: 54.37.5.203
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 04 ⚠R - Jewell
   server: 51.77.108.218
   udp: true
   port: 8443
@@ -46,36 +15,39 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 05 ⚠R - Jewell
-  server: 54.37.2.245
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 143.246.211.163
   udp: true
-  port: 8443
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 138.124.70.41
+  port: 443
+  type: hysteria2
+  password: b3d079ff-b775-4ffe-bac9-41228b08b15b
+  sni: fr.gorobsub.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 03 R40 - Jewell
+  server: 54.36.174.134
   udp: true
-  port: 14430
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  port: 443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: www.calmlunch.com
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 07 - Jewell
-  server: 199.232.78.160
+    path: /assignment
+- name: 🇫🇷 法国 (France) 05 - Jewell
+  server: 199.232.78.170
   udp: true
   port: 443
   type: vless
-  uuid: XpnTeam-51
+  uuid: XpnTeam-52
   tls: true
   servername: ssl.fastly.com
   skip-cert-verify: false
@@ -85,13 +57,45 @@ proxies:
     path: /
     headers:
       Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 08 R40 - Jewell
-  server: pl140.vpnbook.com
+- name: 🇫🇷 法国 (France) 06 - Jewell
+  server: 51.158.36.16
   udp: true
   port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
+  type: vless
+  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4
+    short-id: 1c5869a95671bcb0
+  servername: fr1.accessboy.com
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 07 - Jewell
+  server: 193.160.140.154
+  udp: true
+  port: 443
+  type: vless
+  uuid: 54d1afe5-f5aa-47e6-a02f-6c41a6f886b3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: gb.ozon.ru
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 08 R42 - Jewell
+  server: www.windowssearchtools.com
+  udp: true
+  port: 443
+  type: vmess
+  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.windowssearchtools.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
 - name: 🇫🇷 法国 (France) 09 ⚠R - Jewell
   server: www.ubuntuupdates.com
   udp: true
@@ -108,23 +112,7 @@ proxies:
     path: /truth
     headers:
       Host: www.ubuntuupdates.com
-- name: 🇫🇷 法国 (France) 10 R43 - Jewell
-  server: www.windowssearchtools.com
-  udp: true
-  port: 443
-  type: vmess
-  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: www.windowssearchtools.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.windowssearchtools.com
-- name: 🇫🇷 法国 (France) 11 - Jewell
+- name: 🇫🇷 法国 (France) 10 - Jewell
   server: 213.152.165.200
   udp: true
   port: 2092
@@ -137,51 +125,6 @@ proxies:
     short-id: 716b7eba38125f3a
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 12 - Jewell
-  server: 89.150.34.41
-  udp: true
-  port: 2053
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 13 - Jewell
-  server: ai.smrtai.top
-  udp: true
-  port: 443
-  type: vless
-  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
-  tls: true
-  reality-opts:
-    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
-    short-id: 086bf957
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 14 - Jewell
-  server: 185.255.179.166
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 15 - Jewell
-  server: 155.103.71.142
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -189,19 +132,14 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 04 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 05 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 03 R40 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
   - 🇫🇷 法国 (France) 06 - Jewell
   - 🇫🇷 法国 (France) 07 - Jewell
-  - 🇫🇷 法国 (France) 08 R40 - Jewell
+  - 🇫🇷 法国 (France) 08 R42 - Jewell
   - 🇫🇷 法国 (France) 09 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 10 R43 - Jewell
-  - 🇫🇷 法国 (France) 11 - Jewell
-  - 🇫🇷 法国 (France) 12 - Jewell
-  - 🇫🇷 法国 (France) 13 - Jewell
-  - 🇫🇷 法国 (France) 14 - Jewell
-  - 🇫🇷 法国 (France) 15 - Jewell
+  - 🇫🇷 法国 (France) 10 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -209,18 +147,13 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 04 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 05 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 03 R40 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
   - 🇫🇷 法国 (France) 06 - Jewell
   - 🇫🇷 法国 (France) 07 - Jewell
-  - 🇫🇷 法国 (France) 08 R40 - Jewell
+  - 🇫🇷 法国 (France) 08 R42 - Jewell
   - 🇫🇷 法国 (France) 09 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 10 R43 - Jewell
-  - 🇫🇷 法国 (France) 11 - Jewell
-  - 🇫🇷 法国 (France) 12 - Jewell
-  - 🇫🇷 法国 (France) 13 - Jewell
-  - 🇫🇷 法国 (France) 14 - Jewell
-  - 🇫🇷 法国 (France) 15 - Jewell
+  - 🇫🇷 法国 (France) 10 - Jewell
 rules:
 - MATCH,PROXIES

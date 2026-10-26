@@ -5,26 +5,75 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 R52 - Jewell
-  server: 68.183.227.236
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
   server: 68.183.235.122
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
-  server: 68.183.235.240
+- name: 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
+  server: 68.183.227.45
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
+  server: 68.183.227.4
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 04 - Jewell
+  server: sg003.zestapp778.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: sg003.zestapp778.com
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 05 R41 - Jewell
+  server: 139.162.27.96
+  udp: true
+  port: 2096
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  tls: true
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+  server: v2.drsachi.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tiktok.com
+- name: 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
+  server: 139.162.27.96
+  udp: true
+  port: 2096
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  tls: true
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +82,10 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 01 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R41 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +94,9 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 01 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R41 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,20 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 77.42.12.225
+  server: 2.27.13.152
   udp: true
-  port: 443
+  port: 8443
   type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
-    short-id: 09d0a94a1c6fc9d5
-  servername: 8fc752g.fi3.h1clayd.click
+    public-key: 14YyFG_j2yPEUu-gO_G9GqCqRiZ0DIUgzReV9CZvOAk
+    short-id: 0f47ff9aa15e3e30
+  servername: www.nokia.com
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: f345a414c040
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: fi17-node.rumedia-cdn.com
   udp: true
@@ -35,7 +33,7 @@ proxies:
     headers:
       Host: st4834a.rumedia-cdn.com
 - name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 65.109.212.193
+  server: hw3.divarkhaghazi.com
   udp: true
   port: 465
   type: vless
@@ -57,21 +55,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
-  server: 78.153.139.247
-  udp: true
-  port: 10443
-  type: vless
-  uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: XNfikFybWtjJjWU7-QBGrr-D9YUW0uSK_sR7mDDUmRU
-    short-id: 6ba85179
-  servername: stackoverflow.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -81,7 +64,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -91,6 +73,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,18 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇹 奥地利 (Austria) 01 - Jewell
-  server: 146.19.143.218
+  server: au6.pad-sservice.lat
   udp: true
-  port: 443
+  port: 8443
   type: vless
-  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-  flow: xtls-rprx-vision
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   tls: true
-  reality-opts:
-    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-    short-id: 4a7b1c8d
-  servername: tau1.freerunet.online
-  client-fingerprint: firefox
+  servername: au6.pad-sservice.lat
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /AU6W
 proxy-groups:
 - name: PROXIES
   type: select

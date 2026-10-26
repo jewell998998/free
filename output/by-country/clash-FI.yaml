@@ -5,6 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: 77.42.12.225
+  udp: true
+  port: 443
+  type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  reality-opts:
+    public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
+    short-id: 09d0a94a1c6fc9d5
+  servername: 8fc752g.fi3.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: f345a414c040
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 2.27.13.152
+  udp: true
+  port: 2096
+  type: vless
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  tls: true
+  servername: st4834a.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: st4834a.rumedia-cdn.com
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: hw3.divarkhaghazi.com
   udp: true
   port: 465
@@ -18,32 +48,6 @@ proxies:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: ss.90909.club
-  udp: true
-  port: 2096
-  type: vless
-  uuid: eeb96fef-4476-4ab0-915e-32e8f014c3b2
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: id.vk.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless-grpc-reality
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: finlandlanzarotte.live
-  udp: true
-  port: 443
-  type: vless
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6lZ5dkQN2sH9tYca374W4N1n9eCanD_F2FfghcksKSo
-  servername: finlandlanzarotte.live
-  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select

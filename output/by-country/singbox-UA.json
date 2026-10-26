@@ -4,25 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇻🇳 越南 (Vietnam) 01 - Jewell",
-      "server": "150.95.109.109",
-      "server_port": 2086,
-      "uuid": "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
+      "type": "shadowsocks",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01 - Jewell",
+      "server": "staging.lastilhame.monster",
+      "server_port": 49917,
+      "method": "chacha20-ietf-poly1305",
+      "password": "G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇻🇳 越南 (Vietnam) 01 - Jewell"
+        "🇺🇦 乌克兰 (Ukraine) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇻🇳 越南 (Vietnam) 01 - Jewell"
+        "🇺🇦 乌克兰 (Ukraine) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

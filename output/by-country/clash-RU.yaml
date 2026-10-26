@@ -5,6 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  server: 172.66.44.124
+  udp: true
+  port: 8443
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: randomized
+  network: ws
+  ws-opts:
+    path: /9BozNyvQ8VdRvsYX?ed=2560
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 104.21.3.133
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  tls: true
+  servername: FaNs.livErpoOl.qZZ.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZXlpMnFWRURmWkp5ZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: FaNs.livErpoOl.qZZ.io
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 5.83.129.236
+  udp: true
+  port: 443
+  type: vless
+  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  tls: true
+  servername: host-de-upscale.cdn.cachefleet.com
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: a9w9wmko0k2od14hv8v
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   server: 193.160.141.2
   udp: true
   port: 8443
@@ -15,8 +57,32 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  client-fingerprint: ''
+- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
+  server: 193.160.140.117
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 57c87188-1056-4bd5-92f8-c7ca1fd19147
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: apple.com
+  client-fingerprint: qq
+- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
+  server: 193.160.141.8
+  udp: true
+  port: 443
+  type: vless
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
   server: 193.160.140.119
   udp: true
   port: 443
@@ -28,19 +94,19 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
   client-fingerprint: ios
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 193.160.140.118
+- name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
+  server: 193.160.140.99
   udp: true
   port: 443
   type: vless
-  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
-  client-fingerprint: edge
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  client-fingerprint: ''
+- name: 🇷🇺 俄罗斯 (Russia) 09 - Jewell
   server: 193.160.140.115
   udp: true
   port: 443
@@ -52,50 +118,7 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 195.133.23.50
-  udp: true
-  port: 18443
-  type: ss
-  cipher: aes-256-gcm
-  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  server: 77.90.61.135
-  udp: true
-  port: 443
-  type: vless
-  uuid: 8815925b-c7b8-4f94-9c24-9dc864f63a29
-  tls: true
-  reality-opts:
-    public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
-    short-id: ce1dc482
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 147.45.47.89
-  udp: true
-  port: 443
-  type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  server: 147.45.46.157
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: apple.com
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 09 - Jewell
+- name: 🇷🇺 俄罗斯 (Russia) 10 - Jewell
   server: 193.160.141.27
   udp: true
   port: 443
@@ -106,8 +129,44 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: abuse.ozon.ru
+  client-fingerprint: ios
+- name: 🇷🇺 俄罗斯 (Russia) 11 - Jewell
+  server: 147.45.47.89
+  udp: true
+  port: 443
+  type: vless
+  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 12 - Jewell
+  server: 147.45.47.83
+  udp: true
+  port: 443
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: ''
+- name: 🇷🇺 俄罗斯 (Russia) 13 - Jewell
+  server: 45.151.71.164
+  udp: true
+  port: 443
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: abuse.ozon.ru
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 10 - Jewell
+- name: 🇷🇺 俄罗斯 (Russia) 14 - Jewell
   server: 193.233.253.180
   udp: true
   port: 8444
@@ -137,6 +196,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 10 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 11 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 12 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 13 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 14 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -152,5 +215,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 10 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 11 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 12 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 13 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 14 - Jewell
 rules:
 - MATCH,PROXIES

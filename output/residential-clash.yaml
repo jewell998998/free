@@ -4,25 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
-  server: svip.skycon808.com
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  server: bgp-1313122-228.834928.xyz
   udp: true
-  port: 47531
-  type: anytls
-  password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
-  sni: tw15.swiftrelay.cc
-  skip-cert-verify: false
+  port: 20511
+  type: ss
+  cipher: aes-256-gcm
+  password: 6rcBjQuF0jM6if5e
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
+  server: 218.237.185.234
+  udp: true
+  port: 4652
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

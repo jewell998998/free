@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 177.3.208.65
-  udp: true
-  port: 443
-  type: vless
-  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
-  tls: true
-  servername: tgmansion.site
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vless-tr
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 185.98.63.6
   udp: true
   port: 8443
@@ -27,7 +15,20 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  server: 177.3.208.65
+  udp: true
+  port: 443
+  type: vless
+  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
+  tls: true
+  servername: tgmansion.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vless-tr
 proxy-groups:
 - name: PROXIES
   type: select

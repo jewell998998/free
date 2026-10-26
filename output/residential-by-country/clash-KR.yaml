@@ -4,23 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇻🇳 越南 (Vietnam) 01 - Jewell
-  server: 150.95.109.109
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  server: 218.237.185.234
   udp: true
-  port: 2086
-  type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  port: 4652
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇻🇳 越南 (Vietnam) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

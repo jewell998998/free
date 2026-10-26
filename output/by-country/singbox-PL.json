@@ -4,15 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "191.217.211.128",
+      "server_port": 20270,
+      "password": "dd56bf58-4c37-42e1-9e75-4b6c67939ffd",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl1.song69.fun",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
       "server": "5.22.221.127",
       "server_port": 443,
       "uuid": "44dfa3a7-f648-4587-819b-e653c0823f28"
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
       "server": "82.118.22.161",
       "server_port": 443,
       "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
@@ -22,7 +34,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
@@ -33,38 +45,14 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
-      "server": "2.26.6.1",
-      "server_port": 2087,
-      "uuid": "b9fdc03f-389b-4cda-9be4-155b623bee15",
-      "tls": {
-        "enabled": true,
-        "server_name": "2.26.6.1",
-        "insecure": false
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
-      "server": "46.62.147.53",
-      "server_port": 147,
-      "method": "chacha20-ietf-poly1305",
-      "password": "5uDrCF_iLoxCiRkKku6f7A"
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
-      "server": "ru1.radiolumens.uk",
+      "tag": "🇵🇱 波兰 (Poland) 04 R40 - Jewell",
+      "server": "77.232.135.141",
       "server_port": 8445,
       "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
         "server_name": "ru1.radiolumens.uk",
         "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -77,21 +65,24 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 06 - Jewell",
-      "server": "bak.subaru-volga.com",
-      "server_port": 443,
-      "uuid": "6db6b948-655f-4f68-a9e7-865050e05b31",
+      "tag": "🇵🇱 波兰 (Poland) 05 - Jewell",
+      "server": "201.10.91.98",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
       "tls": {
         "enabled": true,
-        "server_name": "bak.subaru-volga.com",
+        "server_name": "pl3.pad-sservice.lat",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "HGQg7VrNlEhfOEjLR1LNeBZaVJg-J1f4DhxqOp-orjA",
-          "short_id": "6fda"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL3W",
+        "headers": {
+          "Host": "pl3.pad-service.com"
         }
       }
     },
@@ -103,9 +94,8 @@
         "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
         "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 06 - Jewell"
+        "🇵🇱 波兰 (Poland) 04 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ]
     },
     {
@@ -115,9 +105,8 @@
         "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
         "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 06 - Jewell"
+        "🇵🇱 波兰 (Poland) 04 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

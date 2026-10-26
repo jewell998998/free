@@ -4,55 +4,95 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
-      "server": "191.217.211.128",
-      "server_port": 20270,
-      "password": "dd56bf58-4c37-42e1-9e75-4b6c67939ffd",
+      "server": "pl3.pad-sservice.lat",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
       "tls": {
         "enabled": true,
-        "server_name": "pl1.song69.fun",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
-      "server": "5.22.221.127",
-      "server_port": 443,
-      "uuid": "44dfa3a7-f648-4587-819b-e653c0823f28"
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "pl3.pad-sservice.lat",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL3W",
+        "headers": {
+          "Host": "pl3.pad-service.com"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 04 R40 - Jewell",
-      "server": "77.232.135.141",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "pl2.pad-sservice.lat",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl2.pad-sservice.lat",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL2W",
+        "headers": {
+          "Host": "pl2.pad-service.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
+      "server": "site.teslamotor.site",
+      "server_port": 20001,
+      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
+      "server": "201.10.91.68",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl1.pad-sservice.lat",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL1W",
+        "headers": {
+          "Host": "pl1.pad-service.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
+      "server": "ru1.radiolumens.uk",
       "server_port": 8445,
       "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
         "server_name": "ru1.radiolumens.uk",
         "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -65,24 +105,17 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 05 - Jewell",
-      "server": "201.10.91.98",
-      "server_port": 8443,
-      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
+      "tag": "🇵🇱 波兰 (Poland) 06 - Jewell",
+      "server": "2.26.6.1",
+      "server_port": 2087,
+      "uuid": "b9fdc03f-389b-4cda-9be4-155b623bee15",
       "tls": {
         "enabled": true,
-        "server_name": "pl3.pad-sservice.lat",
+        "server_name": "2.26.6.1",
         "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/PL3W",
-        "headers": {
-          "Host": "pl3.pad-service.com"
         }
       }
     },
@@ -94,8 +127,9 @@
         "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
         "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 - Jewell"
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 06 - Jewell"
       ]
     },
     {
@@ -105,8 +139,9 @@
         "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
         "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 - Jewell"
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 06 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

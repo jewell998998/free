@@ -5,22 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
-      "server": "5.252.179.15",
-      "server_port": 443,
-      "uuid": "0ab273e4-cea6-41d0-bbab-41071d2fc455",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell",
+      "server": "13.143.239.69",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "ee4.pad-sservice.lat",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY",
-          "short_id": "296f27de82dad7ff"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/EE4W",
+        "headers": {
+          "Host": "ee4.pad-sservice.lat"
         }
       }
     },
@@ -29,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell"
+        "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell"
+        "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

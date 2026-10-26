@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell
-  server: 5.252.179.15
+- name: 🇦🇹 奥地利 (Austria) 01 - Jewell
+  server: 146.19.143.218
   udp: true
   port: 443
   type: vless
-  uuid: 0ab273e4-cea6-41d0-bbab-41071d2fc455
+  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
-    short-id: 296f27de82dad7ff
-  servername: www.bing.com
-  client-fingerprint: ''
+    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+    short-id: 4a7b1c8d
+  servername: tau1.freerunet.online
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell
+  - 🇦🇹 奥地利 (Austria) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell
+  - 🇦🇹 奥地利 (Austria) 01 - Jewell
 rules:
 - MATCH,PROXIES

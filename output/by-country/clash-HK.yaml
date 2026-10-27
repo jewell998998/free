@@ -5,28 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 192.65.217.123
+  server: 165.154.63.139
   udp: true
   port: 443
   type: vless
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
   tls: true
-  servername: notls.lukongtou.eu.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: Telegram-WangCai2
-    headers:
-      Host: notls.lukongtou.eu.org
+  reality-opts:
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  servername: www.amazon.com
+  client-fingerprint: random
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: zfd-hkv1.kunlun01dns.com
-  udp: true
-  port: 16113
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   server: 45.133.73.113
   udp: true
   port: 443
@@ -44,7 +35,6 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +42,5 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
 rules:
 - MATCH,PROXIES

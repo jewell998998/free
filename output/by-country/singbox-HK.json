@@ -6,35 +6,27 @@
     {
       "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "192.65.217.123",
+      "server": "165.154.63.139",
       "server_port": 443,
-      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
+      "uuid": "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "notls.lukongtou.eu.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "Telegram-WangCai2",
-        "headers": {
-          "Host": "notls.lukongtou.eu.org"
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
         },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        "reality": {
+          "enabled": true,
+          "public_key": "AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ",
+          "short_id": "ca4aedd4"
+        }
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-      "server": "zfd-hkv1.kunlun01dns.com",
-      "server_port": 16113,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
       "server": "45.133.73.113",
       "server_port": 443,
       "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78",
@@ -55,8 +47,7 @@
       "outbounds": [
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
       ]
     },
     {
@@ -64,8 +55,7 @@
       "tag": "auto",
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

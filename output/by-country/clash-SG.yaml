@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  server: 146.235.16.130
+  udp: true
+  port: 19825
+  type: vless
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  servername: sg2-8sb.6121999.dpdns.org
+  client-fingerprint: random
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
   server: 134.185.81.5
   udp: true
   port: 47881
@@ -16,8 +29,29 @@ proxies:
     public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
     short-id: 38d72071
   servername: www.tesla.com
-  client-fingerprint: ios
-- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  client-fingerprint: random
+- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
+  server: 68.183.227.4
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  server: 68.183.227.236
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  server: 128.199.172.224
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 06 - Jewell
   server: 45.77.40.28
   udp: true
   port: 443
@@ -26,22 +60,14 @@ proxies:
   tls: true
   servername: sg003.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
+- name: 🇸🇬 新加坡 (Singapore) 07 R52 - Jewell
   server: 68.183.227.45
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  server: 68.183.235.240
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
+- name: 🇸🇬 新加坡 (Singapore) 08 R55 - Jewell
   server: 172.237.88.103
   udp: true
   port: 443
@@ -54,7 +80,14 @@ proxies:
     short-id: 5a42dbd7e26a0415
   servername: zoom.us
   client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+- name: 🇸🇬 新加坡 (Singapore) 09 R55 - Jewell
+  server: 128.1.186.73
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 10 R56 - Jewell
   server: v2.drsachi.com
   udp: true
   port: 443
@@ -63,6 +96,26 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: 🇸🇬 新加坡 (Singapore) 11 R52 - Jewell
+  server: 68.183.235.122
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 12 R55 - Jewell
+  server: 172.237.88.103
+  udp: true
+  port: 447
+  type: vless
+  uuid: efd11a89-7506-44ce-95b6-6654859f155b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
+    short-id: 5a42dbd7e26a0415
+  servername: netflix.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,8 +125,14 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 08 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 09 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 10 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 11 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 12 R55 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,7 +142,13 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 08 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 09 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 10 R56 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 11 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 12 R55 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇹 意大利 (Italy) 01 - Jewell
+  server: 202.50.253.27
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 02 - Jewell
+  server: 202.50.253.63
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 03 - Jewell
   server: 202.50.253.72
   udp: true
   port: 19999
@@ -17,11 +31,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇹 意大利 (Italy) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 02 - Jewell
+  - 🇮🇹 意大利 (Italy) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇹 意大利 (Italy) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 02 - Jewell
+  - 🇮🇹 意大利 (Italy) 03 - Jewell
 rules:
 - MATCH,PROXIES

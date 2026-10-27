@@ -4,15 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 R63 - Jewell
-  server: 66.163.118.166
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: false
-- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
+- name: 🇪🇸 西班牙 (Spain) 01 - Jewell
   server: 156.252.229.11
   udp: true
   port: 8443
@@ -24,29 +16,27 @@ proxies:
     short-id: 974f7f8f
   servername: play.googleapis.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03 R63 - Jewell
-  server: 66.163.118.131
+- name: 🇪🇸 西班牙 (Spain) 02 R63 - Jewell
+  server: 66.163.118.166
   udp: true
   port: 443
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.discovergreatjobsandadvanceyourcareer.com
+  sni: learn.discovergreatjobsandadvanceyourcareer.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 R63 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇪🇸 西班牙 (Spain) 02 R63 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 R63 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇪🇸 西班牙 (Spain) 02 R63 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,30 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 R59 - Jewell
-  server: 195.123.245.241
+- name: 🇨🇿 捷克 (Czech) 01 - Jewell
+  server: 188.114.96.9
   udp: true
   port: 443
   type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  flow: xtls-rprx-vision
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
   tls: true
-  reality-opts:
-    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
-    short-id: 23d0950d60bc0d5b
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome
+    headers:
+      Host: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 R59 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 R59 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
 rules:
 - MATCH,PROXIES

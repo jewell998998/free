@@ -4,42 +4,48 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "vah4urdzl3jdx5r2.v.3dns.vip",
+      "server": "192.65.217.123",
       "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "security": "auto",
+      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
       "tls": {
         "enabled": true,
-        "server_name": "vah4urdzl3jdx5r2.v.3dns.vip",
+        "server_name": "notls.lukongtou.eu.org",
         "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/ws-vmess",
+        "path": "Telegram-WangCai2",
         "headers": {
-          "Host": "vah4urdzl3jdx5r2.v.3dns.vip"
-        }
+          "Host": "notls.lukongtou.eu.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
       "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-      "server": "8.217.254.88",
+      "server": "zfd-hkv1.kunlun01dns.com",
+      "server_port": 16113,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+      "server": "45.133.73.113",
       "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "security": "auto",
+      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "2b9hwy8ocx7q74nm.v.3dns.vip",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "Host": "2b9hwY8oCx7Q74NM.v.3dns.vip"
+        "server_name": "loudarch.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
@@ -49,7 +55,8 @@
       "outbounds": [
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
       ]
     },
     {
@@ -57,7 +64,8 @@
       "tag": "auto",
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,14 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 泰国 (Thailand) 01 - Jewell
-  server: th001.zestapp778.com
+- name: 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  server: mx001.zestapp778.com
   udp: true
-  port: 22222
+  port: 19167
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  servername: th001.zestapp778.com
+  servername: mx001.zestapp778.com
   skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
@@ -19,12 +19,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 泰国 (Thailand) 01 - Jewell
+  - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 泰国 (Thailand) 01 - Jewell
+  - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
 rules:
 - MATCH,PROXIES

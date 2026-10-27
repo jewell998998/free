@@ -4,38 +4,19 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R52 - Jewell",
-      "server": "168.222.43.53",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 01 - Jewell",
+      "server": "3.96.211.118",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
       "type": "vless",
       "tag": "🇨🇦 加拿大 (Canada) 02 - Jewell",
-      "server": "103.106.229.37",
-      "server_port": 21004,
-      "uuid": "41b1c169-5905-4d98-b6a6-56896c25737c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU",
-          "short_id": "2df2bd9d8366cef1"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 03 - Jewell",
-      "server": "213.152.165.205",
+      "server": "38.145.220.58",
       "server_port": 2093,
-      "uuid": "7965351e-758d-4b0c-a805-657ea60be54e",
+      "uuid": "0b418782-e023-447e-ba99-e66b84ff118d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -52,11 +33,27 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇨🇦 加拿大 (Canada) 03 - Jewell",
+      "server": "155.138.138.2",
+      "server_port": 443,
+      "password": "Trojan@82164024",
+      "tls": {
+        "enabled": true,
+        "server_name": "ca.tronsg.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R52 - Jewell",
+        "🇨🇦 加拿大 (Canada) 01 - Jewell",
         "🇨🇦 加拿大 (Canada) 02 - Jewell",
         "🇨🇦 加拿大 (Canada) 03 - Jewell"
       ]
@@ -65,7 +62,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R52 - Jewell",
+        "🇨🇦 加拿大 (Canada) 01 - Jewell",
         "🇨🇦 加拿大 (Canada) 02 - Jewell",
         "🇨🇦 加拿大 (Canada) 03 - Jewell"
       ],

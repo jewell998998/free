@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  server: 143.246.41.75
+  server: ee.h1cloud.net
   udp: true
   port: 25895
   type: vless
@@ -15,35 +15,18 @@ proxies:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
   servername: www.samsung.com
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
-  server: 212.87.190.131
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: ee1.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /EE1W
-    headers:
-      Host: ee1.pad-service.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
 rules:
 - MATCH,PROXIES

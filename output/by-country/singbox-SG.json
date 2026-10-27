@@ -4,90 +4,77 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇸🇬 新加坡 (Singapore) 01 - Jewell",
-      "server": "funagfrdfs.alixxplay.com",
-      "server_port": 46105,
-      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.lamer.com.sg",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik",
-          "short_id": "28f5c1f8f98a"
-        }
-      }
+      "server": "129.150.59.74",
+      "server_port": 14384,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA="
     },
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇸🇬 新加坡 (Singapore) 02 - Jewell",
-      "server": "wjofhsqteueywxeq.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "a9f4de8b-68f1-44b6-b6a2-1db60940503a",
-      "security": "auto",
+      "server": "107.191.53.86",
+      "server_port": 4798,
+      "uuid": "882b73fd-53fd-4956-a28b-2cb3ece9dc7c",
       "tls": {
         "enabled": true,
-        "server_name": "wjofhsqteueywxeq.v.3dns.vip",
-        "insecure": false
+        "server_name": "d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/ws-vmess",
+        "path": "/@Marisa_kristi",
         "headers": {
-          "Host": "wjofhsqteueywxeq.v.3dns.vip"
+          "Host": "d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇸🇬 新加坡 (Singapore) 03 - Jewell",
-      "server": "54.169.200.246",
-      "server_port": 41688,
-      "uuid": "49c0aac1-5e05-4f04-b624-248fc59e03c4",
+      "server": "43.156.89.197",
+      "server_port": 61000,
+      "uuid": "f5b93de5-b756-4f87-bb1c-7e5b622688fa",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.intel.com",
+        "server_name": "www.amd.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FivAz9qw86uYacvLo5qIMnw9gQ9uKT9KIdGzhxROTSE",
+          "short_id": "63dac514fdfdd11c"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 04 - Jewell",
+      "server": "134.185.81.5",
+      "server_port": 47881,
+      "uuid": "59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk",
-          "short_id": "7f342137c20387"
+          "public_key": "6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4",
+          "short_id": "38d72071"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 04 R52 - Jewell",
-      "server": "68.183.227.236",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 05 R55 - Jewell",
-      "server": "128.1.186.132",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 06 R52 - Jewell",
-      "server": "68.183.227.45",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "selector",
@@ -97,9 +84,7 @@
         "🇸🇬 新加坡 (Singapore) 01 - Jewell",
         "🇸🇬 新加坡 (Singapore) 02 - Jewell",
         "🇸🇬 新加坡 (Singapore) 03 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 04 R52 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 05 R55 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 06 R52 - Jewell"
+        "🇸🇬 新加坡 (Singapore) 04 - Jewell"
       ]
     },
     {
@@ -109,9 +94,7 @@
         "🇸🇬 新加坡 (Singapore) 01 - Jewell",
         "🇸🇬 新加坡 (Singapore) 02 - Jewell",
         "🇸🇬 新加坡 (Singapore) 03 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 04 R52 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 05 R55 - Jewell",
-        "🇸🇬 新加坡 (Singapore) 06 R52 - Jewell"
+        "🇸🇬 新加坡 (Singapore) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

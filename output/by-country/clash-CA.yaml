@@ -4,30 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R52 - Jewell
-  server: 168.222.43.53
+- name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 3.96.211.118
   udp: true
-  port: 8080
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 103.106.229.37
-  udp: true
-  port: 21004
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: 2df2bd9d8366cef1
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 213.152.165.205
+  server: 38.145.220.58
   udp: true
   port: 2093
   type: vless
-  uuid: 7965351e-758d-4b0c-a805-657ea60be54e
+  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -35,12 +24,20 @@ proxies:
     short-id: 8a9725533854a7e8
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
+  server: 155.138.138.2
+  udp: true
+  port: 443
+  type: trojan
+  password: Trojan@82164024
+  sni: ca.tronsg.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
 - name: AUTO
@@ -48,7 +45,7 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
 rules:

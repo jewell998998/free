@@ -5,17 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇹🇭 泰国 (Thailand) 01 - Jewell",
-      "server": "th001.zestapp778.com",
-      "server_port": 22222,
-      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 - Jewell",
+      "server": "152.32.167.33",
+      "server_port": 443,
+      "uuid": "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "th001.zestapp778.com",
-        "insecure": false,
+        "server_name": "www.amazon.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Q8QwBSGN6J-FqgDV1pYNm0VThS_xNRyQ3DPPa9YZ3j4",
+          "short_id": "cff998a4"
         }
       }
     },
@@ -24,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 (Thailand) 01 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇭 泰国 (Thailand) 01 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

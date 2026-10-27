@@ -5,22 +5,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 01 R59 - Jewell",
-      "server": "195.123.245.241",
+      "tag": "🇨🇿 捷克 (Czech) 01 - Jewell",
+      "server": "188.114.96.9",
       "server_port": 443,
-      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
-      "flow": "xtls-rprx-vision",
+      "uuid": "2e305ebe-f6e6-4689-b32f-cd04ab5ff541",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw",
-          "short_id": "23d0950d60bc0d5b"
+        "server_name": "IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome",
+        "headers": {
+          "Host": "IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV"
         }
       }
     },
@@ -29,14 +30,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 R59 - Jewell"
+        "🇨🇿 捷克 (Czech) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 R59 - Jewell"
+        "🇨🇿 捷克 (Czech) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

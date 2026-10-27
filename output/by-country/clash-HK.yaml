@@ -5,37 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: vah4urdzl3jdx5r2.v.3dns.vip
+  server: 192.65.217.123
   udp: true
   port: 443
-  type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
   tls: true
-  servername: vah4urdzl3jdx5r2.v.3dns.vip
+  servername: notls.lukongtou.eu.org
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: Telegram-WangCai2
     headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
+      Host: notls.lukongtou.eu.org
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 8.217.254.88
+  server: zfd-hkv1.kunlun01dns.com
   udp: true
-  port: 443
+  port: 16113
   type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
   alterId: 0
   cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 45.133.73.113
+  udp: true
+  port: 443
+  type: vless
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  flow: xtls-rprx-vision
   tls: true
-  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  servername: loudarch.net
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
 rules:
 - MATCH,PROXIES

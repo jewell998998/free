@@ -4,30 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇰 MK 01 - Jewell
-  server: 89.185.82.151
+- name: 🇮🇳 印度 (India) 01 - Jewell
+  server: 178.212.35.198
   udp: true
-  port: 10443
+  port: 443
   type: vless
-  uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
-  flow: xtls-rprx-vision
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
   tls: true
   reality-opts:
-    public-key: XNfikFybWtjJjWU7-QBGrr-D9YUW0uSK_sR7mDDUmRU
-    short-id: 6ba85179
-  servername: stackoverflow.com
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+    short-id: 6bdc8320
+  servername: www.cloudflare.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇰 MK 01 - Jewell
+  - 🇮🇳 印度 (India) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇰 MK 01 - Jewell
+  - 🇮🇳 印度 (India) 01 - Jewell
 rules:
 - MATCH,PROXIES

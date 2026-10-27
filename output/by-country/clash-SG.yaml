@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: 129.150.59.74
-  udp: true
-  port: 14384
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA=
-- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
   server: 134.185.81.5
   udp: true
   port: 47881
@@ -23,47 +16,35 @@ proxies:
     public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
     short-id: 38d72071
   servername: www.tesla.com
-  client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
-  server: 68.183.235.240
+  client-fingerprint: ios
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 45.77.40.28
   udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  port: 443
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: sg003.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   server: 68.183.227.45
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
-  server: 128.1.186.73
+- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  server: 68.183.235.240
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 06 R55 - Jewell
-  server: 139.162.27.96
-  udp: true
-  port: 2096
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
+- name: 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
   server: 172.237.88.103
   udp: true
-  port: 447
+  port: 443
   type: vless
   uuid: efd11a89-7506-44ce-95b6-6654859f155b
   flow: xtls-rprx-vision
@@ -71,8 +52,17 @@ proxies:
   reality-opts:
     public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
     short-id: 5a42dbd7e26a0415
-  servername: netflix.com
+  servername: zoom.us
   client-fingerprint: random
+- name: 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
+  server: v2.drsachi.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -83,8 +73,7 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -95,7 +84,6 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 05 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R56 - Jewell
 rules:
 - MATCH,PROXIES

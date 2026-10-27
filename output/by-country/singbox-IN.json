@@ -5,15 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 01 - Jewell",
-      "server": "softice.net",
+      "tag": "🇮🇳 印度 (India) 01 - Jewell",
+      "server": "178.212.35.198",
       "server_port": 443,
-      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78",
-      "flow": "xtls-rprx-vision",
+      "uuid": "6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
       "tls": {
         "enabled": true,
-        "server_name": "softice.net",
-        "insecure": false
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q",
+          "short_id": "6bdc8320"
+        }
       }
     },
     {
@@ -21,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 奥地利 (Austria) 01 - Jewell"
+        "🇮🇳 印度 (India) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 奥地利 (Austria) 01 - Jewell"
+        "🇮🇳 印度 (India) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

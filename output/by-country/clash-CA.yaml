@@ -5,7 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 38.145.220.58
+  server: 138.197.141.58
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
+  server: 3.99.147.49
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 03 R52 - Jewell
+  server: 155.117.5.208
+  udp: true
+  port: 8080
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
+  server: 50.7.245.204
   udp: true
   port: 2093
   type: vless
@@ -17,40 +37,37 @@ proxies:
     short-id: 8a9725533854a7e8
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 02 R52 - Jewell
-  server: 155.117.5.208
+- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
+  server: 511.150333.xyz
   udp: true
-  port: 8080
+  port: 21004
   type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: 🇨🇦 加拿大 (Canada) 03 R63 - Jewell
-  server: 92.246.138.161
-  udp: true
-  port: 443
-  type: vless
-  uuid: c9c219dc-50da-4135-8e5b-67020291f0ec
-  flow: xtls-rprx-vision
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
   tls: true
   reality-opts:
-    public-key: jFqwGpIrZSPqlvF4XglDWhsuHxljBLeiaMtESLsZsVk
-    short-id: 6ba85179e30d4fc2
-  servername: vpv5d3rgk1.imgshelf.sbs
-  client-fingerprint: firefox
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R52 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 R63 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R52 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 R63 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 rules:
 - MATCH,PROXIES

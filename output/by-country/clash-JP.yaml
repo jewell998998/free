@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 31.77.29.75
+  server: jap2.nexfile.net
   udp: true
   port: 4444
   type: hysteria2
@@ -20,64 +20,6 @@ proxies:
   password: 96ab5cd282733fd4c312a61f972f330a
   sni: vp3.yysyy.online
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 104.17.187.57
-  udp: true
-  port: 443
-  type: vless
-  uuid: bfe6190a-fee3-4e0d-b348-c55ae74ca001
-  tls: true
-  servername: db.abcai.online
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: db.abcai.online
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: 141.11.138.137
-  udp: true
-  port: 443
-  type: vmess
-  uuid: 284c8008-5a85-4451-a8d1-b79c62f74d32
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: gathered-fat-gsm-weekend.trycloudflare.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vmess-argo
-    headers:
-      Host: gathered-fat-gsm-weekend.trycloudflare.com
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 45.76.98.127
-  udp: true
-  port: 443
-  type: vless
-  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
-  tls: true
-  reality-opts:
-    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
-    short-id: 49fa0dad
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: 31.76.91.70
-  udp: true
-  port: 443
-  type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-    short-id: bd6f67b6b2152b45
-  servername: fuji.etherhub.cc
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -85,10 +27,6 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -96,9 +34,5 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
 rules:
 - MATCH,PROXIES

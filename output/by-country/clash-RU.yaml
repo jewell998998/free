@@ -5,17 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 193.160.140.159
+  server: 193.160.140.98
   udp: true
   port: 8443
   type: vless
-  uuid: d4353076-3ec7-47dc-88b0-f21eb59fbfb8
+  uuid: 6a33e818-0df7-4795-a978-54d1c24cc9c0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   server: 193.160.140.168
   udp: true
@@ -29,29 +29,29 @@ proxies:
   servername: apple.com
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 193.160.141.81
+  server: 193.160.140.159
   udp: true
   port: 8443
   type: vless
-  uuid: ee82f319-ab92-425d-8e04-28a29f33f670
+  uuid: d4353076-3ec7-47dc-88b0-f21eb59fbfb8
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  server: 147.45.46.157
+  server: 193.160.141.138
   udp: true
   port: 8443
   type: vless
-  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
+  uuid: b4a1200a-9765-4649-94f2-c26e0a37dffb
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   server: 193.233.253.180
   udp: true
@@ -66,6 +66,18 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
+  server: 147.45.46.157
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,6 +88,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -86,5 +99,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
 rules:
 - MATCH,PROXIES

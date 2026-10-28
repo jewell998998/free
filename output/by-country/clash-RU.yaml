@@ -5,22 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 185.147.27.183
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 379998c5-2a71-4202-9c74-522e0c3c5404
-  flow: xtls-rprx-vision
-  tls: true
-  servername: user-6a917f32.noooo.win
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   server: 193.160.141.81
   udp: true
   port: 8443
   type: vless
   uuid: ee82f319-ab92-425d-8e04-28a29f33f670
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: apple.com
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 193.160.140.168
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 5ce803ae-a81c-4276-b1f8-ee3b845c5c4b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -38,72 +39,7 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: apple.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  server: 193.160.140.168
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 5ce803ae-a81c-4276-b1f8-ee3b845c5c4b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 147.45.46.157
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: apple.com
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  server: 193.233.253.180
-  udp: true
-  port: 8444
-  type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 45.9.12.110
-  udp: true
-  port: 443
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: myIjvlXZS0rm1eg4q2w5WsQBuj80i2rBA0HpRGCUg1w
-    short-id: 86d1efde
-  servername: ru.letsconnectpoint.com
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  server: 195.133.5.107
-  udp: true
-  port: 18443
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 09 - Jewell
-  server: alb.rvpn.app
-  udp: true
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: hTTg7lwQMzpaF7KXpY3A8w
 proxy-groups:
 - name: PROXIES
   type: select
@@ -112,12 +48,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -126,11 +56,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
 rules:
 - MATCH,PROXIES

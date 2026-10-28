@@ -5,67 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: fi1.obxodvpn.us
-  udp: true
-  port: 4443
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 2.27.13.152
-  udp: true
-  port: 2096
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-  tls: true
-  servername: st4834a.rumedia-cdn.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: hw3.divarkhaghazi.com
-  udp: true
-  port: 465
-  type: vless
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
-  tls: true
-  servername: hw3.divarkhaghazi.com.
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
-  server: 209.206.51.236
-  udp: true
-  port: 2083
-  type: vless
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
-  tls: true
-  servername: vipfree.dr-ping.ir
-  skip-cert-verify: false
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vipfree.dr-ping.ir
-- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
-  server: 45.144.234.157
-  udp: true
-  port: 14430
-  type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 06 - Jewell
-  server: 196.196.204.174
+  server: 77.42.12.225
   udp: true
   port: 443
   type: vless
@@ -79,8 +19,16 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: f345a414c040
-- name: 🇫🇮 芬兰 (Finland) 07 - Jewell
-  server: fi17-node.rumedia-cdn.com
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: fi1.obxodvpn.us
+  udp: true
+  port: 4443
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 2.27.13.152
   udp: true
   port: 8443
   type: vless
@@ -89,8 +37,36 @@ proxies:
   tls: true
   reality-opts:
     public-key: 14YyFG_j2yPEUu-gO_G9GqCqRiZ0DIUgzReV9CZvOAk
+    short-id: 0f47ff9aa15e3e30
   servername: www.nokia.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: 2.27.13.152
+  udp: true
+  port: 2096
+  type: vless
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  tls: true
+  servername: st4834a.rumedia-cdn.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+  server: hw3.divarkhaghazi.com
+  udp: true
+  port: 465
+  type: vless
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  tls: true
+  servername: hw3.divarkhaghazi.com.
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw3.divarkhaghazi.com.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -101,8 +77,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
   - 🇫🇮 芬兰 (Finland) 05 - Jewell
-  - 🇫🇮 芬兰 (Finland) 06 - Jewell
-  - 🇫🇮 芬兰 (Finland) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -113,7 +87,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
   - 🇫🇮 芬兰 (Finland) 05 - Jewell
-  - 🇫🇮 芬兰 (Finland) 06 - Jewell
-  - 🇫🇮 芬兰 (Finland) 07 - Jewell
 rules:
 - MATCH,PROXIES

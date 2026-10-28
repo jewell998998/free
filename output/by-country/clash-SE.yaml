@@ -5,14 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 50.7.38.243
+  server: 31.76.81.191
+  udp: true
+  port: 4443
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  server: promo.betust.net
   udp: true
   port: 443
   type: hysteria2
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
   skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
   server: 136.148.211.243
   udp: true
   port: 443
@@ -23,20 +31,12 @@ proxies:
     public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
     short-id: 11d37dd92940329e
   servername: se1-cl3.vless-fiberstasis.top
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-se-3
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: swe2.obxodvpn.us
-  udp: true
-  port: 4443
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: false
 - name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  server: 191.44.114.154
+  server: 191.44.114.179
   udp: true
   port: 8443
   type: vless
@@ -44,23 +44,23 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ndQzAcG4g-2OhvFb8EjFnZyxJ2lhawiulTLJOZrK8lY
-    short-id: c4359f3827231250
+    public-key: WEHGKyXsOD5i2kNCJ3GrjeNZQBsrzH76OrPDJ7x2YwY
   servername: www.wikipedia.org
   client-fingerprint: firefox
 - name: 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  server: 191.44.114.154
+  server: 191.44.114.179
   udp: true
   port: 2096
   type: vless
   uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
   tls: true
-  servername: st5ff8a.rumedia-cdn.com
+  servername: st33614.rumedia-cdn.com
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /cdn/v3/live
+    headers:
+      Host: st33614.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select

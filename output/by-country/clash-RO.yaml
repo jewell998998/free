@@ -5,6 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  server: edge10.cyrionflare.com
+  udp: true
+  port: 2052
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
   server: 46.28.67.55
   udp: true
   port: 443
@@ -23,11 +29,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,30 +4,12 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 01 - Jewell",
-      "server": "199.232.78.160",
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 01 R40 - Jewell",
+      "server": "54.36.174.134",
       "server_port": 443,
-      "uuid": "XpnTeam-57",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "Appxdn.global.ssl.fastly.net"
-        }
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "6heexyz"
     },
     {
       "type": "trojan",
@@ -49,88 +31,49 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 03 - Jewell",
-      "server": "178.104.70.11",
-      "server_port": 443,
-      "uuid": "64726966-0000-4000-8000-740000000000",
-      "tls": {
-        "enabled": true,
-        "server_name": "parsa-panel-dy55x.railway1385-2a46.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "parsa-panel-dy55x.railway1385-2a46.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 04 R40 - Jewell",
-      "server": "54.36.174.140",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "6heexyz"
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 05 - Jewell",
-      "server": "161.97.66.16",
-      "server_port": 443,
-      "uuid": "086bf957-9cd0-4e55-8280-bbef10435b41",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc",
-          "short_id": "086bf957"
-        }
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 06 - Jewell",
-      "server": "172.67.162.58",
+      "tag": "🇫🇷 法国 (France) 03 - Jewell",
+      "server": "185.18.250.245",
       "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,
         "server_name": "www.calmlunch.com",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "//assignment",
+        "path": "/assignment",
         "headers": {
           "Host": "www.calmlunch.com"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 04 R42 - Jewell",
+      "server": "node11.botkeep.cloud",
+      "server_port": 53567,
+      "method": "aes-256-gcm",
+      "password": "SnOSRfo0h6mnWehTG_Xang"
+    },
+    {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 07 - Jewell",
-      "server": "213.152.165.197",
+      "tag": "🇫🇷 法国 (France) 05 - Jewell",
+      "server": "213.152.180.55",
       "server_port": 2092,
-      "uuid": "1c640e86-51fe-45f0-9afb-efa55c4d1997",
+      "uuid": "4d8cc1c2-2605-43c4-8e17-dcafa86d9757",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -140,30 +83,131 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 06 - Jewell",
+      "server": "89.150.34.41",
+      "server_port": 2053,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 07 R42 - Jewell",
+      "server": "51.75.118.151",
+      "server_port": 20255,
+      "uuid": "17f00e0c-034e-43c5-8ea3-f11725ca4292",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "51.75.118.151"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 08 R40 - Jewell",
+      "server": "pl140.vpnbook.com",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "6heexyz"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 09 - Jewell",
+      "server": "138.124.70.41",
+      "server_port": 14430,
+      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "138.124.70.41"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 10 - Jewell",
+      "server": "185.114.72.31",
+      "server_port": 2053,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 11 - Jewell",
+      "server": "185.255.179.166",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 法国 (France) 01 - Jewell",
+        "🇫🇷 法国 (France) 01 R40 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
         "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 R40 - Jewell",
+        "🇫🇷 法国 (France) 04 R42 - Jewell",
         "🇫🇷 法国 (France) 05 - Jewell",
         "🇫🇷 法国 (France) 06 - Jewell",
-        "🇫🇷 法国 (France) 07 - Jewell"
+        "🇫🇷 法国 (France) 07 R42 - Jewell",
+        "🇫🇷 法国 (France) 08 R40 - Jewell",
+        "🇫🇷 法国 (France) 09 - Jewell",
+        "🇫🇷 法国 (France) 10 - Jewell",
+        "🇫🇷 法国 (France) 11 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 法国 (France) 01 - Jewell",
+        "🇫🇷 法国 (France) 01 R40 - Jewell",
         "🇫🇷 法国 (France) 02 - Jewell",
         "🇫🇷 法国 (France) 03 - Jewell",
-        "🇫🇷 法国 (France) 04 R40 - Jewell",
+        "🇫🇷 法国 (France) 04 R42 - Jewell",
         "🇫🇷 法国 (France) 05 - Jewell",
         "🇫🇷 法国 (France) 06 - Jewell",
-        "🇫🇷 法国 (France) 07 - Jewell"
+        "🇫🇷 法国 (France) 07 R42 - Jewell",
+        "🇫🇷 法国 (France) 08 R40 - Jewell",
+        "🇫🇷 法国 (France) 09 - Jewell",
+        "🇫🇷 法国 (France) 10 - Jewell",
+        "🇫🇷 法国 (France) 11 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

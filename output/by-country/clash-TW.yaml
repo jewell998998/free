@@ -1,0 +1,48 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  server: 83.147.14.168
+  udp: true
+  port: 9443
+  type: vless
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+  server: 152.32.167.33
+  udp: true
+  port: 443
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Q8QwBSGN6J-FqgDV1pYNm0VThS_xNRyQ3DPPa9YZ3j4
+    short-id: cff998a4
+  servername: www.amazon.com
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+rules:
+- MATCH,PROXIES

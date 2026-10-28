@@ -5,42 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 77.42.12.225
-  udp: true
-  port: 443
-  type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  reality-opts:
-    public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
-    short-id: 09d0a94a1c6fc9d5
-  servername: 8fc752g.fi3.h1clayd.click
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: f345a414c040
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: fi1.obxodvpn.us
-  udp: true
-  port: 4443
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 2.27.13.152
-  udp: true
-  port: 8443
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 14YyFG_j2yPEUu-gO_G9GqCqRiZ0DIUgzReV9CZvOAk
-    short-id: 0f47ff9aa15e3e30
-  servername: www.nokia.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: 2.27.13.152
   udp: true
   port: 2096
@@ -52,8 +16,15 @@ proxies:
   network: ws
   ws-opts:
     path: /cdn/v3/live
-- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
-  server: hw3.divarkhaghazi.com
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 65.21.52.113
+  udp: true
+  port: 53731
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QoYjvkIZ7-bMIYfVI9IzRXUx5A1o3kj7
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 65.109.212.193
   udp: true
   port: 465
   type: vless
@@ -61,12 +32,22 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: 45.144.234.157
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,7 +57,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -86,6 +66,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
 rules:
 - MATCH,PROXIES

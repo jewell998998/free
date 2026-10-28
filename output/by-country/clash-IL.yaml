@@ -4,32 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
-  server: 188.114.97.3
+- name: 🇮🇱 以色列 (Israel) 01 - Jewell
+  server: saas.sin.fan
   udp: true
-  port: 2083
+  port: 443
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: 600b90fe-6ff5-4b17-8dac-5be55835d0af
   tls: true
-  servername: newwk1.f1w.de5.net
+  servername: ylsl.abcai.online
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: newwk1.f1w.de5.net
+      Host: ylsl.abcai.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 rules:
 - MATCH,PROXIES

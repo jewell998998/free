@@ -5,24 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
-      "server": "188.114.97.3",
-      "server_port": 2083,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 01 R70 - Jewell",
+      "server": "195.123.226.21",
+      "server_port": 443,
+      "uuid": "6589c320-db68-43cd-a273-b46299bab355",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "newwk1.f1w.de5.net",
-        "insecure": false,
+        "server_name": "gateway.icloud.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "newwk1.f1w.de5.net"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo",
+          "short_id": "77bb0d07bddbc832"
         }
       }
     },
@@ -31,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell"
+        "🇧🇬 保加利亚 (Bulgaria) 01 R70 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell"
+        "🇧🇬 保加利亚 (Bulgaria) 01 R70 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

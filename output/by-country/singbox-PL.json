@@ -5,59 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-      "server": "ru1.radiolumens.uk",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-pl"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
-      "server": "pl1.obxodvpn.us",
-      "server_port": 4443,
-      "password": "146d567c-6335-4e63-a8aa-7ec068642440",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl1.obxodvpn.us",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
-      "server": "2.26.6.1",
-      "server_port": 2087,
-      "uuid": "b9fdc03f-389b-4cda-9be4-155b623bee15",
-      "tls": {
-        "enabled": true,
-        "server_name": "2.26.6.1",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
       "server": "45.148.119.127",
       "server_port": 443,
       "uuid": "329e13e4-ee7c-4802-ac72-5fcab79c2402",
@@ -78,23 +26,29 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 05 - Jewell",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "168.222.43.53",
+      "server_port": 2052,
+      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03 R40 - Jewell",
+      "server": "77.232.135.141",
+      "server_port": 8445,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ru1.radiolumens.uk",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-pl"
       }
     },
     {
@@ -102,22 +56,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
-        "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 - Jewell"
+        "🇵🇱 波兰 (Poland) 03 R40 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
-        "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 - Jewell"
+        "🇵🇱 波兰 (Poland) 03 R40 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

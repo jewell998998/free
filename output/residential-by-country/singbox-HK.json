@@ -4,25 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell",
-      "server": "171.22.119.74",
-      "server_port": 8447,
-      "uuid": "6aed42ba-cd2d-4671-87d9-c949b6876888"
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21019,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -17,17 +17,27 @@ proxies:
     short-id: ca4aedd4
   servername: www.amazon.com
   client-fingerprint: random
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: dog-hk.kunlun01dns.com
+  udp: true
+  port: 21018
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 rules:
 - MATCH,PROXIES

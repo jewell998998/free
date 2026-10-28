@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 156.252.229.30
+  server: 156.252.229.136
   udp: true
   port: 8443
   type: vless
@@ -27,8 +27,20 @@ proxies:
     public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
     short-id: 974f7f8f
   servername: play.googleapis.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 03 - Jewell
+  server: 156.252.229.30
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  tls: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 04 - Jewell
   server: 46.28.71.247
   udp: true
   port: 443
@@ -40,19 +52,38 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇪🇸 西班牙 (Spain) 04 - Jewell
-  server: 156.252.229.11
+  client-fingerprint: ''
+- name: 🇪🇸 西班牙 (Spain) 05 R63 - Jewell
+  server: 66.163.118.251
   udp: true
-  port: 8443
-  type: vless
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: chrome
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.discovergreatjobsandadvanceyourcareer.com
+  skip-cert-verify: false
+- name: 🇪🇸 西班牙 (Spain) 06 R63 - Jewell
+  server: 66.163.118.166
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.discovergreatjobsandadvanceyourcareer.com
+  skip-cert-verify: false
+- name: 🇪🇸 西班牙 (Spain) 07 R63 - Jewell
+  server: 66.163.118.131
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.discovergreatjobsandadvanceyourcareer.com
+  skip-cert-verify: false
+- name: 🇪🇸 西班牙 (Spain) 08 - Jewell
+  server: dns22.m3hrzd.ir
+  udp: true
+  port: 1354
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
 proxy-groups:
 - name: PROXIES
   type: select
@@ -62,6 +93,10 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 02 - Jewell
   - 🇪🇸 西班牙 (Spain) 03 - Jewell
   - 🇪🇸 西班牙 (Spain) 04 - Jewell
+  - 🇪🇸 西班牙 (Spain) 05 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 06 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 07 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,5 +106,9 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 02 - Jewell
   - 🇪🇸 西班牙 (Spain) 03 - Jewell
   - 🇪🇸 西班牙 (Spain) 04 - Jewell
+  - 🇪🇸 西班牙 (Spain) 05 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 06 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 07 R63 - Jewell
+  - 🇪🇸 西班牙 (Spain) 08 - Jewell
 rules:
 - MATCH,PROXIES

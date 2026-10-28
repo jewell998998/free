@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  server: 83.217.9.230
+  udp: true
+  port: 43000
+  type: vless
+  uuid: 4f8493b1-9876-46c4-8ded-01cafb22cee0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U
+    short-id: 68d2eb23
+  servername: 83.217.9.230
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 177.3.208.65
   udp: true
   port: 443
@@ -17,7 +30,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-tr
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
+- name: 🇹🇷 土耳其 (Turkey) 03 - Jewell
   server: 78.135.73.47
   udp: true
   port: 443
@@ -29,7 +42,7 @@ proxies:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +50,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +58,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 03 - Jewell
 rules:
 - MATCH,PROXIES

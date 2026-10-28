@@ -5,34 +5,96 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 199.232.78.160
+  server: fr1.accessboy.com
   udp: true
   port: 443
   type: vless
-  uuid: XpnTeam-59
+  uuid: caf3d607-95c9-4ea0-98b5-864027056ba0
+  flow: xtls-rprx-vision
   tls: true
-  servername: ssl.fastly.com
+  reality-opts:
+    public-key: 1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4
+    short-id: 1c5869a95671bcb0
+  servername: fr1.accessboy.com
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 138.124.70.41
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 45.130.125.69
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: 31.185.105.12
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 1953e43b-605c-4262-83eb-41a80646b801
+  sni: fr.song69.fun
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 05 - Jewell
+  server: 5.253.189.238
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 06 R42 - Jewell
+  server: 104.21.90.61
+  udp: true
+  port: 443
+  type: vless
+  uuid: 72038860-a526-4385-8f69-b28a4d85fc10
+  tls: true
+  servername: ddd.abcai.online
+  skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 213.152.180.55
+      Host: ddd.abcai.online
+- name: 🇫🇷 法国 (France) 07 - Jewell
+  server: 89.150.34.41
   udp: true
-  port: 2092
-  type: vless
-  uuid: 4d8cc1c2-2605-43c4-8e17-dcafa86d9757
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
-    short-id: 716b7eba38125f3a
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 03 - Jewell
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 08 - Jewell
+  server: 194.147.149.54
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 09 - Jewell
   server: 185.220.100.168
   udp: true
   port: 443
@@ -43,6 +105,28 @@ proxies:
   network: ws
   ws-opts:
     path: //assignment
+- name: 🇫🇷 法国 (France) 10 - Jewell
+  server: 185.255.179.166
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 11 - Jewell
+  server: 62.60.152.14
+  udp: true
+  port: 8443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +135,14 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 06 R42 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
+  - 🇫🇷 法国 (France) 09 - Jewell
+  - 🇫🇷 法国 (France) 10 - Jewell
+  - 🇫🇷 法国 (France) 11 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +151,13 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 06 R42 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
+  - 🇫🇷 法国 (France) 09 - Jewell
+  - 🇫🇷 法国 (France) 10 - Jewell
+  - 🇫🇷 法国 (France) 11 - Jewell
 rules:
 - MATCH,PROXIES

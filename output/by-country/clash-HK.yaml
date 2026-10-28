@@ -5,24 +5,80 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 206.237.11.17
+  server: 45.39.198.144
   udp: true
-  port: 50376
+  port: 9443
+  type: vless
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 165.154.63.139
+  udp: true
+  port: 443
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  servername: www.amazon.com
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
+  udp: true
+  port: 443
   type: vmess
-  uuid: 9091fd64-7e8e-4b7a-8ae7-84474f234926
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
   cipher: auto
+  tls: true
+  servername: qtkdr8jxe3wefxjm.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: qTKDR8jXE3wEFxJM.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: 47.243.194.125
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,27 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 138.197.141.58
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 16.52.78.159
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 38.145.220.58
+- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
+  server: ca001.zestapp778.com
   udp: true
-  port: 2093
+  port: 32355
   type: vless
-  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
-  flow: xtls-rprx-vision
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  reality-opts:
-    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
-    short-id: 8a9725533854a7e8
-  servername: www.apple.com
+  servername: ca001.zestapp778.com
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 03 R52 - Jewell
-  server: milo.rubinaz.xyz
+- name: 🇨🇦 加拿大 (Canada) 04 R52 - Jewell
+  server: 155.117.5.208
   udp: true
   port: 8080
   type: vless
@@ -37,7 +41,8 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 R52 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -45,6 +50,7 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 R52 - Jewell
 rules:
 - MATCH,PROXIES

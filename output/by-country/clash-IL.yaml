@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇱 以色列 (Israel) 01 - Jewell
+  server: 104.19.152.130
+  udp: true
+  port: 443
+  type: vless
+  uuid: 600b90fe-6ff5-4b17-8dac-5be55835d0af
+  tls: true
+  servername: ylsl.abcai.online
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ylsl.abcai.online
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
+rules:
+- MATCH,PROXIES

@@ -20,6 +20,32 @@ proxies:
   password: 96ab5cd282733fd4c312a61f972f330a
   sni: vp3.yysyy.online
   skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 45.202.255.92
+  udp: true
+  port: 9443
+  type: vless
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 31.76.91.98
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
+    short-id: bd6f67b6b2152b45
+  servername: fuji.etherhub.cc
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -27,6 +53,8 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -34,5 +62,7 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
 rules:
 - MATCH,PROXIES

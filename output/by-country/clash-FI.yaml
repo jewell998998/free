@@ -5,6 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: fl.solomon-planet.ru
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 46c16b68-2553-4e5e-8176-f63d6bf6ec0c
+  sni: fl.solomon-planet.ru
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: p2real22.greewebservices.ir
+  udp: true
+  port: 1320
+  type: vless
+  uuid: a7e9fc98-25a2-4801-961c-7a6ed9d69328
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: ios
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: hw3.divarkhaghazi.com
   udp: true
   port: 465
@@ -13,28 +33,26 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: hw6.divarkhaghazi.com
-  udp: true
-  port: 465
-  type: vless
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
-  tls: true
-  servername: hw6.divarkhaghazi.com.
-  skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: hw6.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 77.42.12.225
+      Host: hw3.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: areal1.greewebservices.ir
+  udp: true
+  port: 2425
+  type: vless
+  uuid: a7e9fc98-25a2-4801-961c-7a6ed9d69328
+  tls: true
+  reality-opts:
+    public-key: MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: ios
+- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+  server: 8fc752g.fi3.h1clayd.click
   udp: true
   port: 443
   type: vless
@@ -44,23 +62,28 @@ proxies:
     public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
     short-id: 09d0a94a1c6fc9d5
   servername: 8fc752g.fi3.h1clayd.click
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: f345a414c040
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
-  server: 6.bmi.ir.asopardaz.ir
+- name: 🇫🇮 芬兰 (Finland) 06 - Jewell
+  server: 45.144.234.157
   udp: true
-  port: 8443
+  port: 14430
   type: vless
-  uuid: 2da85937-93d9-4509-8491-63b1921cf447
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
-    short-id: e915
-  servername: timeline.www.cloudflare.com
-  client-fingerprint: chrome
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 07 R48 - Jewell
+  server: dns22.m3hrzd.ir
+  udp: true
+  port: 1346
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
 proxy-groups:
 - name: PROXIES
   type: select
@@ -70,6 +93,9 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
+  - 🇫🇮 芬兰 (Finland) 06 - Jewell
+  - 🇫🇮 芬兰 (Finland) 07 R48 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,5 +105,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
+  - 🇫🇮 芬兰 (Finland) 06 - Jewell
+  - 🇫🇮 芬兰 (Finland) 07 R48 - Jewell
 rules:
 - MATCH,PROXIES

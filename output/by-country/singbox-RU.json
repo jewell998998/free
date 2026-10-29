@@ -15,7 +15,7 @@
         "server_name": "apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
@@ -27,9 +27,9 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
-      "server": "193.160.140.159",
+      "server": "193.160.141.138",
       "server_port": 8443,
-      "uuid": "d4353076-3ec7-47dc-88b0-f21eb59fbfb8",
+      "uuid": "b4a1200a-9765-4649-94f2-c26e0a37dffb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -48,6 +48,27 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
+      "server": "193.160.140.159",
+      "server_port": 8443,
+      "uuid": "d4353076-3ec7-47dc-88b0-f21eb59fbfb8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
       "server": "193.160.140.168",
       "server_port": 8443,
       "uuid": "5ce803ae-a81c-4276-b1f8-ee3b845c5c4b",
@@ -67,65 +88,31 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
-      "server": "147.45.46.157",
-      "server_port": 8443,
-      "uuid": "75985152-e16e-4a48-87ff-35c2615e0ab5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
-      "server": "193.233.253.180",
-      "server_port": 8444,
-      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
+      "tag": "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
       "server": "46.17.41.61",
       "server_port": 18443,
       "method": "aes-256-gcm",
       "password": "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 07 - Jewell",
-      "server": "alb.rvpn.app",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hTTg7lwQMzpaF7KXpY3A8w"
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
+      "server": "185.229.9.135",
+      "server_port": 443,
+      "uuid": "d9833bab-0a4d-4ebf-9d80-1f6ab04f3964",
+      "tls": {
+        "enabled": true,
+        "server_name": "app.lesotorg-kirov.ru",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/chws",
+        "headers": {
+          "Host": "app.lesotorg-kirov.ru"
+        }
+      }
     },
     {
       "type": "selector",
@@ -137,8 +124,7 @@
         "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 07 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 06 - Jewell"
       ]
     },
     {
@@ -150,8 +136,7 @@
         "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 07 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 06 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

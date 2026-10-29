@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰 (Ireland) 01 R41 - Jewell
-  server: dns22.m3hrzd.ir
+- name: 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  server: 108.129.179.156
   udp: true
-  port: 1347
+  port: 443
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
+  cipher: aes-256-cfb
+  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇪 爱尔兰 (Ireland) 01 R41 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01 R41 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
 rules:
 - MATCH,PROXIES

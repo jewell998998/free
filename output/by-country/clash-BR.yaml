@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇷 巴西 (Brazil) 01 - Jewell
-  server: 216.238.104.154
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
-  skip-cert-verify: false
-- name: 🇧🇷 巴西 (Brazil) 02 - Jewell
   server: br001.zestapp778.com
   udp: true
   port: 15040
@@ -28,13 +20,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇧🇷 巴西 (Brazil) 01 - Jewell
-  - 🇧🇷 巴西 (Brazil) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 巴西 (Brazil) 01 - Jewell
-  - 🇧🇷 巴西 (Brazil) 02 - Jewell
 rules:
 - MATCH,PROXIES

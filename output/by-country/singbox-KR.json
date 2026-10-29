@@ -4,26 +4,52 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "trojan",
       "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
-      "server": "218.237.185.234",
-      "server_port": 4652,
+      "server": "kr002.zestapp778.com",
+      "server_port": 48851,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "kr002.zestapp778.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 02 - Jewell",
+      "server": "49.254.204.133",
+      "server_port": 1774,
       "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
+      "password": "1234!@#$"
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 03 - Jewell",
+      "server": "152.69.226.63",
+      "server_port": 25555,
+      "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d",
+      "transport": {
+        "type": "ws"
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell",
+        "🇰🇷 韩国 (South Korea) 02 - Jewell",
+        "🇰🇷 韩国 (South Korea) 03 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇰🇷 韩国 (South Korea) 01 - Jewell",
+        "🇰🇷 韩国 (South Korea) 02 - Jewell",
+        "🇰🇷 韩国 (South Korea) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

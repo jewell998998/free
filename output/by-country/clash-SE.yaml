@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: promo.betust.net
+  server: 50.7.38.243
   udp: true
   port: 443
   type: hysteria2
@@ -13,30 +13,16 @@ proxies:
   sni: promo.betust.net
   skip-cert-verify: false
 - name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 191.44.114.179
+  server: 5.178.109.174
   udp: true
-  port: 8443
+  port: 14430
   type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WEHGKyXsOD5i2kNCJ3GrjeNZQBsrzH76OrPDJ7x2YwY
-    short-id: 9d48935b2c2b8011
-  servername: www.wikipedia.org
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 191.44.114.154
-  udp: true
-  port: 2096
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-  tls: true
-  servername: st5ff8a.rumedia-cdn.com
-  skip-cert-verify: false
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   network: ws
   ws-opts:
-    path: /cdn/v3/live
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +30,6 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +37,5 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 rules:
 - MATCH,PROXIES

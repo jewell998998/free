@@ -5,21 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 206.237.11.17
+  server: dog-hk.kunlun01dns.com
   udp: true
-  port: 50376
+  port: 21041
   type: vmess
-  uuid: 9091fd64-7e8e-4b7a-8ae7-84474f234926
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 111.246.47.26
+  server: 165.154.63.139
   udp: true
-  port: 2087
-  type: anytls
-  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  sni: hk2.gosthk.site
-  skip-cert-verify: false
+  port: 443
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  servername: www.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

@@ -14,13 +14,23 @@ proxies:
   ws-opts:
     path: /vless
 - name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  server: forshynewh.duckdns.org
+  server: 185.253.116.33
   udp: true
-  port: 443
-  type: hysteria2
-  password: 329e13e4-ee7c-4802-ac72-5fcab79c2402
-  sni: forshynewh.duckdns.org
-  skip-cert-verify: false
+  port: 14430
+  type: vless
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 185.253.116.33
+- name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
+  server: ams1.rvpn.app
+  udp: true
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: x2A6AsyZ-rAllz0wbKHzWA
 proxy-groups:
 - name: PROXIES
   type: select
@@ -28,6 +38,7 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -35,5 +46,6 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 rules:
 - MATCH,PROXIES

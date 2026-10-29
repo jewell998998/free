@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇺 匈牙利 (Hungary) 01 - Jewell
-  server: 172.67.131.125
+- name: 🇮🇱 以色列 (Israel) 01 - Jewell
+  server: www.shopify.com
   udp: true
-  port: 2083
+  port: 443
   type: vless
-  uuid: f418674e-f518-4318-8ff9-e10000000046
+  uuid: 600b90fe-6ff5-4b17-8dac-5be55835d0af
   tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
+  servername: ylsl.abcai.online
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /sync
+    path: /
     headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
+      Host: ylsl.abcai.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 rules:
 - MATCH,PROXIES

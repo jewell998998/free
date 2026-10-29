@@ -5,21 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell",
-      "server": "ee.h1cloud.net",
-      "server_port": 25895,
-      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
+      "tag": "🇮🇱 以色列 (Israel) 01 - Jewell",
+      "server": "www.shopify.com",
+      "server_port": 443,
+      "uuid": "600b90fe-6ff5-4b17-8dac-5be55835d0af",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "ylsl.abcai.online",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k",
-          "short_id": "a73f0410d728c823"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "ylsl.abcai.online"
         }
       }
     },
@@ -28,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell"
+        "🇮🇱 以色列 (Israel) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell"
+        "🇮🇱 以色列 (Israel) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

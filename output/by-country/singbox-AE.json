@@ -4,33 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-      "server": "185.253.116.33",
-      "server_port": 14430,
-      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 02 - Jewell",
-      "server": "185.253.116.33",
-      "server_port": 14430,
-      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "185.253.116.33"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇦🇪 阿联酋 (UAE) 03 - Jewell",
+      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
       "server": "ams1.rvpn.app",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
@@ -41,18 +16,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-        "🇦🇪 阿联酋 (UAE) 02 - Jewell",
-        "🇦🇪 阿联酋 (UAE) 03 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-        "🇦🇪 阿联酋 (UAE) 02 - Jewell",
-        "🇦🇪 阿联酋 (UAE) 03 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

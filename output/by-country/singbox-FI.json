@@ -4,20 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "91.103.140.6",
-      "server_port": 443,
-      "password": "46c16b68-2553-4e5e-8176-f63d6bf6ec0c",
-      "tls": {
-        "enabled": true,
-        "server_name": "fl.solomon-planet.ru",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
+      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
       "server": "hw3.divarkhaghazi.com",
       "server_port": 465,
       "uuid": "924e20da-fcad-4e7e-8113-c62d27a0d01e",
@@ -35,12 +23,42 @@
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
+      "server": "fl.solomon-planet.ru",
+      "server_port": 443,
+      "password": "46c16b68-2553-4e5e-8176-f63d6bf6ec0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fl.solomon-planet.ru",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
-      "server": "6.bmi.ir.asopardaz.ir",
-      "server_port": 35176,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "NjcyNmVjMTU1ZWU5NDA5ZDk0ODg1NWM1MzJjZTE3NDk=:MmRhODU5Mzc5M2Q5NDUwOTg0OTE2M2IxOTIxY2Y0NDc="
+      "server": "hw6.divarkhaghazi.com",
+      "server_port": 465,
+      "uuid": "09f30c46-3964-41ce-882a-72aee83ddd42",
+      "tls": {
+        "enabled": true,
+        "server_name": "hw6.divarkhaghazi.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "hw6.divarkhaghazi.com."
+        }
+      }
     },
     {
       "type": "selector",

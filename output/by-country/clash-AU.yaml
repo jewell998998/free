@@ -4,16 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
-  server: au001.zestapp778.com
-  udp: true
-  port: 35652
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: au001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇦🇺 澳大利亚 (Australia) 02 ⚠R - Jewell
+- name: 🇦🇺 澳大利亚 (Australia) 01 ⚠R - Jewell
   server: 45.63.30.142
   udp: true
   port: 443
@@ -26,14 +17,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
-  - 🇦🇺 澳大利亚 (Australia) 02 ⚠R - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 ⚠R - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
-  - 🇦🇺 澳大利亚 (Australia) 02 ⚠R - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 ⚠R - Jewell
 rules:
 - MATCH,PROXIES

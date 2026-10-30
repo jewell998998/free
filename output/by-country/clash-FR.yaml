@@ -4,36 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R40 - Jewell
-  server: 54.36.174.134
+- name: 🇫🇷 法国 (France) 01 ⚠R - Jewell
+  server: 172.67.221.77
   udp: true
   port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.ubuntuupdates.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
 - name: 🇫🇷 法国 (France) 02 R40 - Jewell
-  server: 54.36.174.140
+  server: pl140.vpnbook.com
   udp: true
   port: 443
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
 - name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 199.232.78.170
-  udp: true
-  port: 443
-  type: vless
-  uuid: XpnTeam-63
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 04 - Jewell
   server: 138.124.70.41
   udp: true
   port: 14430
@@ -44,8 +38,19 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: 185.114.72.31
+  udp: true
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 188.114.97.6
+  server: 194.147.149.54
   udp: true
   port: 443
   type: trojan
@@ -54,9 +59,57 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: //assignment
+    path: /assignment
 - name: 🇫🇷 法国 (France) 06 - Jewell
   server: 45.87.41.18
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 07 - Jewell
+  server: 89.150.34.41
+  udp: true
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 08 - Jewell
+  server: 91.245.225.79
+  udp: true
+  port: 2053
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 09 - Jewell
+  server: 149.104.79.85
+  udp: true
+  port: 443
+  type: vless
+  uuid: 218ae360-0e5f-4856-91f3-1823adfc9037
+  tls: true
+  servername: mrs.sepporated.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: mrs.sepporated.com
+- name: 🇫🇷 法国 (France) 10 - Jewell
+  server: 185.255.179.166
   udp: true
   port: 443
   type: trojan
@@ -71,22 +124,30 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R40 - Jewell
+  - 🇫🇷 法国 (France) 01 ⚠R - Jewell
   - 🇫🇷 法国 (France) 02 R40 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
   - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
+  - 🇫🇷 法国 (France) 09 - Jewell
+  - 🇫🇷 法国 (France) 10 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R40 - Jewell
+  - 🇫🇷 法国 (France) 01 ⚠R - Jewell
   - 🇫🇷 法国 (France) 02 R40 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
   - 🇫🇷 法国 (France) 04 - Jewell
   - 🇫🇷 法国 (France) 05 - Jewell
   - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
+  - 🇫🇷 法国 (France) 09 - Jewell
+  - 🇫🇷 法国 (France) 10 - Jewell
 rules:
 - MATCH,PROXIES

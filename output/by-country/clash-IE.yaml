@@ -1,0 +1,45 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  server: 34.246.183.99
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  server: 108.129.120.234
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
+  server: 54.246.53.144
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
+rules:
+- MATCH,PROXIES

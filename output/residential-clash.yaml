@@ -4,58 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
-  server: 104.19.150.163
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
-  tls: true
-  servername: vlesss.xttd.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=proxyip.fxxk.dedyn.io
-    headers:
-      Host: vlesss.xttd.eu.org
-- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
   server: 49.254.204.133
   udp: true
   port: 1774
   type: ss
   cipher: aes-256-cfb
   password: 1234!@#$
-- name: 🇩🇪 德国 (Germany) 03 (家宽) - Jewell
-  server: 209.38.238.229
-  udp: true
-  port: 20202
-  type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlZXSwcZUQABSgMNQRoaSVhfRhoOChkDDUs=
-    headers:
-      Host: wzs.echo.net.eu.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
-  - 🇩🇪 德国 (Germany) 03 (家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
-  - 🇩🇪 德国 (Germany) 03 (家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

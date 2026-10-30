@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 以色列 (Israel) 01 - Jewell
-  server: 64.176.163.182
+- name: 🇹🇭 泰国 (Thailand) 01 R43 - Jewell
+  server: th001.zestapp778.com
   udp: true
-  port: 443
+  port: 33079
   type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
+  password: 5t6i121em5lkmsmk
+  sni: th001.zestapp778.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 以色列 (Israel) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 R43 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 以色列 (Israel) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 R43 - Jewell
 rules:
 - MATCH,PROXIES

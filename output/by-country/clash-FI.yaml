@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: 65.109.211.81
+  udp: true
+  port: 465
+  type: vless
+  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
+  tls: true
+  servername: hw6.divarkhaghazi.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw6.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 153.76.194.118
   udp: true
   port: 8443
@@ -12,8 +27,8 @@ proxies:
   password: 7d43670b-6b08-45b9-8a24-8f3971abc132
   sni: finland.biznes.lol
   skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: hw3.divarkhaghazi.com
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 65.109.210.221
   udp: true
   port: 465
   type: vless
@@ -21,35 +36,21 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: hw6.divarkhaghazi.com
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: 45.144.234.157
   udp: true
-  port: 465
+  port: 14430
   type: vless
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
-  tls: true
-  servername: hw6.divarkhaghazi.com.
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: hw6.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
-  server: cd0.bmi.ir.kolman.com.de
-  udp: true
-  port: 80
-  type: vmess
-  uuid: 2da85937-93d9-4509-8491-63b1921cf447
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
+    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select

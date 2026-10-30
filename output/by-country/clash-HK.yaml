@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 172.66.47.45
-  udp: true
-  port: 2083
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: wk1.f1w.de5.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: wk1.f1w.de5.net
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   server: 165.154.63.139
   udp: true
   port: 443
@@ -31,8 +16,8 @@ proxies:
     public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
     short-id: ca4aedd4
   servername: www.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   server: forwarded.frnhk.xyz
   udp: true
   port: 2087
@@ -40,6 +25,17 @@ proxies:
   password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
   sni: hk2.gosthk.site
   skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 38.76.180.144
+  udp: true
+  port: 1443
+  type: vless
+  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
+  network: ws
+  ws-opts:
+    path: /vless-ws
+    headers:
+      Host: 38.76.180.144
 proxy-groups:
 - name: PROXIES
   type: select

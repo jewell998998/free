@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 50.7.38.243
+  server: promo.betust.net
   udp: true
   port: 443
   type: hysteria2
@@ -13,38 +13,27 @@ proxies:
   sni: promo.betust.net
   skip-cert-verify: false
 - name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 31.172.65.4
+  server: 5.178.109.174
   udp: true
-  port: 8443
+  port: 14430
   type: vless
-  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU
-    short-id: 0e7741edc378622f
-  servername: www.bing.com
-  client-fingerprint: chrome
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
 - name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 70.34.207.14
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  server: swidenafterlanzerotte.space
+  server: 171.25.158.163
   udp: true
   port: 443
   type: vless
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
-  servername: swidenafterlanzerotte.space
-  client-fingerprint: qq
+    public-key: Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM
+    short-id: ecb6f8fb31668176
+  servername: s9se1.newagetechnologies.live
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,7 +42,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -62,6 +50,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 rules:
 - MATCH,PROXIES

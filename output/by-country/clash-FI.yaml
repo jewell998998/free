@@ -5,44 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 65.109.211.81
-  udp: true
-  port: 465
-  type: vless
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
-  tls: true
-  servername: hw6.divarkhaghazi.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw6.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 153.76.194.118
-  udp: true
-  port: 8443
-  type: hysteria2
-  password: 7d43670b-6b08-45b9-8a24-8f3971abc132
-  sni: finland.biznes.lol
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 65.109.210.221
+  server: hw3.divarkhaghazi.com.
   udp: true
   port: 465
   type: vless
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   tls: true
-  servername: hw3.divarkhaghazi.com
+  servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 65.21.52.113
+  udp: true
+  port: 53731
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QoYjvkIZ7-bMIYfVI9IzRXUx5A1o3kj7
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: 45.144.234.157
   udp: true
   port: 14430
@@ -51,6 +33,30 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: 6.bmi.ir.asopardaz.ir
+  udp: true
+  port: 8443
+  type: vless
+  uuid: ee3be052-8950-44db-a765-9b688f1128ae
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
+    short-id: e915
+  servername: timeline.www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 05 R63 - Jewell
+  server: de.privatevip.ir
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7c730089-1791-4828-89b2-86e7e1663063
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play.google.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,6 +66,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 R63 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -69,5 +76,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 R63 - Jewell
 rules:
 - MATCH,PROXIES

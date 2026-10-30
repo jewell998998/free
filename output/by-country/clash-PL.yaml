@@ -5,12 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 155.117.5.208
+  server: 177.1.192.90
   udp: true
-  port: 20001
+  port: 443
   type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PA7rbht6SKwvUgysJka_ffHvVEzl4s4RPDO3uPeuLxc
+    short-id: e12ed4adc5aee929
+  servername: up6.uni-plan.com
+  client-fingerprint: qq
 - name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 177.1.192.117
+  udp: true
+  port: 443
+  type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Lt3gSdGmfQMx50yH-OOJaNBSg80vzIveaNVwUUWJwzQ
+    short-id: 3952a220c86628a8
+  servername: up7.uni-plan.com
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
   server: 70.34.252.255
   udp: true
   port: 443
@@ -18,12 +38,41 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: 168.222.43.53
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: 177.1.192.67
+  udp: true
+  port: 443
+  type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5QmUszafz1gigUjf3R2GwZ9RVsEwZT-polu0l8zfNgA
+    short-id: 830e615a39f4c811
+  servername: up4.uni-plan.com
+  client-fingerprint: ''
+- name: 🇵🇱 波兰 (Poland) 05 - Jewell
+  server: 31.59.143.147
+  udp: true
+  port: 443
+  type: vless
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
+    short-id: ae97223a8f799889
+  servername: pl2.waspnest.space
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 06 - Jewell
+  server: cdn-waw.edgeptr.org
   udp: true
   port: 2052
   type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  uuid: c365a38d-be89-4962-81c4-facfaadfa034
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +81,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
+  - 🇵🇱 波兰 (Poland) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -40,5 +92,8 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
+  - 🇵🇱 波兰 (Poland) 06 - Jewell
 rules:
 - MATCH,PROXIES

@@ -17,7 +17,20 @@ proxies:
     short-id: e90360ec7cc61b20
   servername: udemy.com
   client-fingerprint: firefox
-- name: 🇨🇿 捷克 (Czech) 02 R59 - Jewell
+- name: 🇨🇿 捷克 (Czech) 02 - Jewell
+  server: 195.123.245.241
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
+    short-id: 23d0950d60bc0d5b
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇨🇿 捷克 (Czech) 03 R59 - Jewell
   server: 195.123.245.241
   udp: true
   port: 443
@@ -36,13 +49,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 R59 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 03 R59 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 R59 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 03 R59 - Jewell
 rules:
 - MATCH,PROXIES

@@ -16,16 +16,8 @@ proxies:
     public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
     short-id: ca4aedd4
   servername: www.amazon.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: forwarded.frnhk.xyz
-  udp: true
-  port: 2087
-  type: anytls
-  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  sni: hk2.gosthk.site
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   server: 38.76.180.144
   udp: true
   port: 1443
@@ -34,8 +26,86 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-ws
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 8.217.254.88
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
     headers:
-      Host: 38.76.180.144
+      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: nycqg19zkwacpm1b.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: NYcQg19zkwaCPM1B.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: NYcQg19zkwaCPM1B.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  server: 8.217.186.60
+  udp: true
+  port: 443
+  type: vmess
+  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: euu1yalfmcqvljex.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: euu1yalfmcqvljex.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  server: vah4urdzl3jdx5r2.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: VAH4URdZL3jDX5r2.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: VAH4URdZL3jDX5r2.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: qtkdr8jxe3wefxjm.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: qtkdr8jxe3wefxjm.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,6 +114,10 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,5 +126,9 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
 rules:
 - MATCH,PROXIES

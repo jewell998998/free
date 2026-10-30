@@ -13,15 +13,29 @@ proxies:
   sni: promo.betust.net
   skip-cert-verify: false
 - name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 5.178.109.174
+  server: 31.172.65.4
   udp: true
-  port: 14430
+  port: 8443
   type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  network: ws
-  ws-opts:
-    path: /vless
+  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU
+    short-id: 0e7741edc378622f
+  servername: www.bing.com
+  client-fingerprint: qq
 - name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  server: 179.253.179.109
+  udp: true
+  port: 54083
+  type: vless
+  uuid: 0ef03752-c8bf-4482-8710-e563ca4808f9
+  tls: true
+  servername: 177.3.215.54
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
   server: 171.25.158.163
   udp: true
   port: 443
@@ -33,7 +47,18 @@ proxies:
     public-key: Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM
     short-id: ecb6f8fb31668176
   servername: s9se1.newagetechnologies.live
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 05 - Jewell
+  server: 5.178.109.174
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,6 +67,8 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +77,7 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
 rules:
 - MATCH,PROXIES

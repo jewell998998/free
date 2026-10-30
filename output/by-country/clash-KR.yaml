@@ -13,28 +13,10 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: 152.69.226.63
 - name: 🇰🇷 韩国 (South Korea) 02 - Jewell
-  server: 47.80.19.173
-  udp: true
-  port: 2053
-  type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
-    short-id: 3c4041d3
-  servername: gateway.icloud.com
-  client-fingerprint: random
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
-  server: 218.237.185.234
-  udp: true
-  port: 4652
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 04 - Jewell
-  server: kr002.zestapp778.com
+  server: 158.247.255.150
   udp: true
   port: 48851
   type: trojan
@@ -48,8 +30,6 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
-  - 🇰🇷 韩国 (South Korea) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,7 +37,5 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
-  - 🇰🇷 韩国 (South Korea) 04 - Jewell
 rules:
 - MATCH,PROXIES

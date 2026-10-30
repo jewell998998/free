@@ -5,17 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 91.196.33.157
+  server: 87.242.119.253
   udp: true
   port: 443
   type: vless
-  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
   tls: true
-  servername: b.us-1.bnc-gt.co.uk
+  servername: hvtlr-ru-47sb.fade.mom
   skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
+  client-fingerprint: edge
 - name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   server: 193.233.253.180
   udp: true
@@ -26,23 +24,10 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: ''
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 178.236.242.254
-  udp: true
-  port: 8443
-  type: vless
-  uuid: c05ec3c7-2784-da2b-aa98-a3c132860fcb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU
-    short-id: a1b2c3d4e5f6a7b8
-  servername: xnod13x.artemida.live
-  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,7 +35,6 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +42,5 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
 rules:
 - MATCH,PROXIES

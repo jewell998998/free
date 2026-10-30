@@ -15,18 +15,67 @@ proxies:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
   servername: www.samsung.com
-  client-fingerprint: safari
+  client-fingerprint: qq
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
+  server: 185.225.205.53
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
+    short-id: 2e82d7ac
+  servername: addons.mozilla.org
+  client-fingerprint: qq
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
+  server: 13.143.239.127
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - Jewell
+  server: 179.253.179.109
+  udp: true
+  port: 57443
+  type: vless
+  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
+  tls: true
+  servername: 87.121.86.24
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - Jewell
+  server: 179.253.179.109
+  udp: true
+  port: 57043
+  type: vless
+  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
+  tls: true
+  servername: 87.121.86.24
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 04 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 04 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 05 - Jewell
 rules:
 - MATCH,PROXIES

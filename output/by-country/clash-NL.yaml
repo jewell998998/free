@@ -5,20 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: 187.52.44.20
+  server: dns27.m3hrzd.ir
   udp: true
-  port: 47443
+  port: 8044
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: hNfeLCN3XzYgLFSAWo_fxOl4HC1gNw0V
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: 5.149.248.151
+  udp: true
+  port: 443
   type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-  flow: xtls-rprx-vision
+  uuid: 4fdf8c8f-4728-4437-a309-5ecfac2bf021
   tls: true
   reality-opts:
-    public-key: g5am2VhZkx_xH2TSKfUU8OYLxAzFrmcszNQg8AbOenE
-    short-id: ae97223a8f799872
-  servername: nl4.waspnest.space
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: sw.golangwikito.cfd
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  servername: nla.kosmosapp.net
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  server: 77.238.240.124
+  udp: true
+  port: 8443
+  type: vless
+  uuid: fa0010d9-7060-4abd-956a-76f15f067d0d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: alice.proxyplankton.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  server: 154.86.119.65
   udp: true
   port: 443
   type: vless
@@ -29,8 +49,44 @@ proxies:
     public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
     short-id: a1037b25dcef6aa7
   servername: sw.golangwikito.cfd
-  client-fingerprint: qq
-- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
+  client-fingerprint: ios
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  server: 51.15.16.68
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 7d0fd363-16d2-43ce-9d6d-ed2c15d2cb7c
+  tls: true
+  reality-opts:
+    public-key: Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc
+    short-id: 3c99c85cbb6b3b44
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  server: 57.128.183.108
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  server: 153.75.86.200
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 95fe46c3-6cfb-5116-beb7-459d4c7db0ad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JNp0hUDwHZQw9kbwd-D1WfIOdqCtdJeBv1WTNp37V0M
+    short-id: 7e7434c068cbef5a
+  servername: www.apple.com
+  client-fingerprint: edge
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
   server: 77.220.213.244
   udp: true
   port: 8444
@@ -45,20 +101,40 @@ proxies:
     path: /api/v1/devices/d63ac7ea89/telemetry
     headers:
       Host: nl11.meshbeat.online
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
-  server: 153.75.86.200
+- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+  server: 192.145.30.27
   udp: true
-  port: 8443
-  type: vless
-  uuid: 95fe46c3-6cfb-5116-beb7-459d4c7db0ad
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JNp0hUDwHZQw9kbwd-D1WfIOdqCtdJeBv1WTNp37V0M
-    short-id: 7e7434c068cbef5a
-  servername: www.apple.com
-  client-fingerprint: edge
-- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  server: 172.67.203.46
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.cordweave.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
+  server: 188.226.181.61
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 12 - Jewell
   server: 130.12.242.106
   udp: true
   port: 443
@@ -71,7 +147,7 @@ proxies:
     short-id: 15affa0af66dfc79
   servername: deepl.com
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 13 - Jewell
   server: 83.217.222.170
   udp: true
   port: 443
@@ -82,77 +158,50 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
-  server: alice.proxyplankton.ru
-  udp: true
-  port: 8443
-  type: vless
-  uuid: fa0010d9-7060-4abd-956a-76f15f067d0d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: alice.proxyplankton.ru
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  server: 172.67.203.46
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.cordweave.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 09 R56 - Jewell
-  server: nl.privatevip.ir
-  udp: true
-  port: 447
-  type: vless
-  uuid: 7c730089-1791-4828-89b2-86e7e1663063
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
-  server: 46.30.45.254
-  udp: true
-  port: 8444
-  type: vless
-  uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
-  tls: true
-  servername: nl12.meshbeat.online
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /api/v1/devices/7495606fef/telemetry
-    headers:
-      Host: nl12.meshbeat.online
-- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
-  server: 104.18.37.127
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.trusteeforward.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 12 - Jewell
-  server: 173.249.208.27
+- name: 🇳🇱 荷兰 (Netherlands) 14 R55 - Jewell
+  server: hiweb.my.id
   udp: true
   port: 443
   type: vless
-  uuid: 930d11dc-0c6f-9e1a-4d57-b8473c715465
+  uuid: 32413dda-504c-4906-b732-8ecaff901179
   tls: true
-  servername: ahbpanel-4134.shiprr.dev
+  servername: hiweb.my.id
   skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 15 - Jewell
+  server: 2.27.118.10
+  udp: true
+  port: 443
+  type: vless
+  uuid: d9fe2431-8351-41eb-b956-75d96dec5d4a
+  tls: true
+  reality-opts:
+    public-key: goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc
+    short-id: ecf1d9f7caa6ba67
+  servername: ph-nl-s3784.cybercat.network
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 16 - Jewell
+  server: 46.62.204.134
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws/930d11dc-0c6f-9e1a-4d57-b8473c715465
-    headers:
-      Host: ahbpanel-4134.shiprr.dev
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 17 R50 - Jewell
+  server: 45.38.3.25
+  udp: true
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -166,10 +215,15 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 09 R56 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 13 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 14 R55 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 15 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 16 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 17 R50 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -183,9 +237,14 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 09 R56 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 12 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 13 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 14 R55 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 15 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 16 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 17 R50 - Jewell
 rules:
 - MATCH,PROXIES

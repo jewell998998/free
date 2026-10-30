@@ -5,6 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  server: 155.117.5.208
+  udp: true
+  port: 2052
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
   server: 46.28.67.55
   udp: true
   port: 443
@@ -17,7 +23,20 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: random
-- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
+- name: 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
+  server: 82.117.255.174
+  udp: true
+  port: 443
+  type: vless
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0QDBHaCRO2dPeeSVy3B3R_U12ZOvbvWl1JTFW_ZcpD0
+    short-id: 31e91d43e553bf32
+  servername: gateway.icloud.com
+  client-fingerprint: firefox
+- name: 🇷🇴 罗马尼亚 (Romania) 04 - Jewell
   server: 82.117.255.174
   udp: true
   port: 443
@@ -30,12 +49,6 @@ proxies:
     short-id: 31e91d43e553bf32
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
-  server: 178.83.45.226
-  udp: true
-  port: 2052
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,6 +57,7 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
   - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
   - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,5 +66,6 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
   - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
   - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 04 - Jewell
 rules:
 - MATCH,PROXIES

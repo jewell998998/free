@@ -5,7 +5,45 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: hw3.divarkhaghazi.com.
+  server: 84.38.184.126
+  udp: true
+  port: 2089
+  type: vless
+  uuid: a628c583-24a8-4ce5-98ad-c6458abf1cc4
+  tls: true
+  reality-opts:
+    public-key: 4Ba7EKm90gUC57U-0WtkSVXgmeLzR9TG5Qw3dqgjbDQ
+    short-id: c1db0a1b
+  servername: s3.storage.selcloud.ru
+  client-fingerprint: qq
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cas-fi
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 153.76.194.118
+  udp: true
+  port: 8443
+  type: hysteria2
+  password: 7d43670b-6b08-45b9-8a24-8f3971abc132
+  sni: finland.biznes.lol
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 65.109.211.81
+  udp: true
+  port: 465
+  type: vless
+  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
+  tls: true
+  servername: hw6.divarkhaghazi.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw6.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: 65.109.210.221
   udp: true
   port: 465
   type: vless
@@ -13,50 +51,11 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 65.21.52.113
-  udp: true
-  port: 53731
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QoYjvkIZ7-bMIYfVI9IzRXUx5A1o3kj7
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 45.144.234.157
-  udp: true
-  port: 14430
-  type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
-  server: 6.bmi.ir.asopardaz.ir
-  udp: true
-  port: 8443
-  type: vless
-  uuid: ee3be052-8950-44db-a765-9b688f1128ae
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
-    short-id: e915
-  servername: timeline.www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 R63 - Jewell
-  server: de.privatevip.ir
-  udp: true
-  port: 443
-  type: vless
-  uuid: 7c730089-1791-4828-89b2-86e7e1663063
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: play.google.com
+      Host: hw3.divarkhaghazi.com.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,7 +65,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 R63 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,6 +74,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
   - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 R63 - Jewell
 rules:
 - MATCH,PROXIES

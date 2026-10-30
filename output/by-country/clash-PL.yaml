@@ -16,7 +16,7 @@ proxies:
     public-key: PA7rbht6SKwvUgysJka_ffHvVEzl4s4RPDO3uPeuLxc
     short-id: e12ed4adc5aee929
   servername: up6.uni-plan.com
-  client-fingerprint: qq
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 177.1.192.117
   udp: true
@@ -29,16 +29,34 @@ proxies:
     public-key: Lt3gSdGmfQMx50yH-OOJaNBSg80vzIveaNVwUUWJwzQ
     short-id: 3952a220c86628a8
   servername: up7.uni-plan.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: 70.34.252.255
+  server: 177.1.192.172
   udp: true
   port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: O-prl81hoCx8QH-WAtyhOWsz7O6Klc5KbZRUDfg0WVo
+    short-id: 91db3119
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: 177.1.192.84
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zW8sqVtk0BD03BKJj2UihUm_IgFfbJ-oPgR8xCTkgyU
+    short-id: 3ea64ca4
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 05 - Jewell
   server: 177.1.192.67
   udp: true
   port: 443
@@ -50,29 +68,63 @@ proxies:
     public-key: 5QmUszafz1gigUjf3R2GwZ9RVsEwZT-polu0l8zfNgA
     short-id: 830e615a39f4c811
   servername: up4.uni-plan.com
-  client-fingerprint: ''
-- name: 🇵🇱 波兰 (Poland) 05 - Jewell
-  server: 31.59.143.147
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 06 - Jewell
+  server: 82.118.22.161
   udp: true
   port: 443
   type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
-    short-id: ae97223a8f799889
-  servername: pl2.waspnest.space
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 06 - Jewell
-  server: cdn-waw.edgeptr.org
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇵🇱 波兰 (Poland) 07 - Jewell
+  server: 177.1.192.83
   udp: true
-  port: 2052
+  port: 443
   type: vless
-  uuid: c365a38d-be89-4962-81c4-facfaadfa034
-  network: ws
-  ws-opts:
-    path: /
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qpTl87QSiZJ6JTLo-qtZbz5tw4bhm2BlKSb3rWXj3U8
+    short-id: aea0b3b9
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 08 - Jewell
+  server: 70.34.252.255
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 09 - Jewell
+  server: 2.26.6.1
+  udp: true
+  port: 2087
+  type: vless
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  tls: true
+  servername: 2.26.6.1
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 10 - Jewell
+  server: 178.236.26.179
+  udp: true
+  port: 8475
+  type: vless
+  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: utnaPfWs-8DrJIP5p0gaQ9ix9VfRvUvoR1ZSE25uTWY
+    short-id: 10aff1a6
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -84,6 +136,10 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 04 - Jewell
   - 🇵🇱 波兰 (Poland) 05 - Jewell
   - 🇵🇱 波兰 (Poland) 06 - Jewell
+  - 🇵🇱 波兰 (Poland) 07 - Jewell
+  - 🇵🇱 波兰 (Poland) 08 - Jewell
+  - 🇵🇱 波兰 (Poland) 09 - Jewell
+  - 🇵🇱 波兰 (Poland) 10 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -95,5 +151,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 04 - Jewell
   - 🇵🇱 波兰 (Poland) 05 - Jewell
   - 🇵🇱 波兰 (Poland) 06 - Jewell
+  - 🇵🇱 波兰 (Poland) 07 - Jewell
+  - 🇵🇱 波兰 (Poland) 08 - Jewell
+  - 🇵🇱 波兰 (Poland) 09 - Jewell
+  - 🇵🇱 波兰 (Poland) 10 - Jewell
 rules:
 - MATCH,PROXIES

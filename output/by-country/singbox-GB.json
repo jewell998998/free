@@ -4,8 +4,49 @@
   },
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 ⚠R - Jewell",
+      "server": "www.ubuntuupdates.com",
+      "server_port": 443,
+      "uuid": "83b09a64-1eaf-4c4d-89ed-866d4b6b8115",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ubuntuupdates.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/truth",
+        "headers": {
+          "Host": "www.ubuntuupdates.com"
+        }
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "191.44.108.30",
+      "server_port": 443,
+      "uuid": "558b26f6-061b-4079-9b84-ca13b3e90ae3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "c8.qwyak.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE",
+          "short_id": "b2baf331493d3de1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
       "server": "191.44.108.31",
       "server_port": 443,
       "uuid": "558b26f6-061b-4079-9b84-ca13b3e90ae3",
@@ -15,7 +56,7 @@
         "server_name": "www.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -25,31 +66,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "98.98.142.161",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 R46 - Jewell",
-      "server": "98.98.207.163",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell",
-      "server": "connect.hondamotor.site",
-      "server_port": 10002,
-      "uuid": "c6362720-0931-4b91-b187-d8ecf3149734"
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
       "server": "146.19.143.218",
       "server_port": 443,
       "uuid": "ca14493b-b984-4ffb-bc0e-9cb5da969e15",
@@ -59,7 +77,7 @@
         "server_name": "tau1.freerunet.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -69,16 +87,29 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 06 - Jewell",
-      "server": "sql.popmintxo.cc",
-      "server_port": 43385,
-      "method": "chacha20-ietf-poly1305",
-      "password": "AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa"
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
+      "server": "193.163.203.170",
+      "server_port": 443,
+      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
+          "short_id": "b28db60d77c50b4f"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 07 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 06 - Jewell",
       "server": "138.124.125.193",
       "server_port": 10444,
       "uuid": "e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4",
@@ -88,7 +119,7 @@
         "server_name": "ads.x5.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -98,48 +129,38 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 08 ⚠R - Jewell",
-      "server": "51.38.71.147",
-      "server_port": 443,
-      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
-      "tls": {
-        "enabled": true,
-        "server_name": "uk1.connectsuite.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn-cgi/ws"
-      }
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 07 R46 - Jewell",
+      "server": "98.98.207.163",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 01 ⚠R - Jewell",
         "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 R46 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
         "🇬🇧 英国 (United Kingdom) 05 - Jewell",
         "🇬🇧 英国 (United Kingdom) 06 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 07 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 08 ⚠R - Jewell"
+        "🇬🇧 英国 (United Kingdom) 07 R46 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 01 ⚠R - Jewell",
         "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 R46 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
         "🇬🇧 英国 (United Kingdom) 05 - Jewell",
         "🇬🇧 英国 (United Kingdom) 06 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 07 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 08 ⚠R - Jewell"
+        "🇬🇧 英国 (United Kingdom) 07 R46 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

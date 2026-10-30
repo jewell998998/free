@@ -16,33 +16,8 @@ proxies:
     public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
     short-id: 38d72071
   servername: www.tesla.com
-  client-fingerprint: chrome
+  client-fingerprint: ios
 - name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
-  server: 178.94.25.73
-  udp: true
-  port: 14430
-  type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.94.25.73
-- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
-  server: 68.183.227.236
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  server: 68.183.235.122
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 - Jewell
   server: 149.28.130.108
   udp: true
   port: 443
@@ -50,53 +25,20 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: searchcreativejobsandshowcaseyourartistictalents.com
   skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  server: 68.183.227.45
+- name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
+  server: 68.183.235.122
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 07 R52 - Jewell
-  server: 68.183.235.240
+- name: 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
+  server: 128.199.172.224
   udp: true
   port: 8080
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 08 R55 - Jewell
-  server: 172.237.88.103
-  udp: true
-  port: 443
-  type: vless
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
-    short-id: 5a42dbd7e26a0415
-  servername: zoom.us
-  client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 09 R55 - Jewell
-  server: 128.1.186.73
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 10 R55 - Jewell
-  server: 172.237.88.103
-  udp: true
-  port: 447
-  type: vless
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
-    short-id: 5a42dbd7e26a0415
-  servername: netflix.com
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -106,12 +48,6 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 10 R55 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,11 +57,5 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 02 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 10 R55 - Jewell
 rules:
 - MATCH,PROXIES

@@ -11,48 +11,26 @@
       "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d",
       "transport": {
         "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 02 - Jewell",
-      "server": "47.80.19.173",
-      "server_port": 2053,
-      "uuid": "319d5ffb-57e8-4bbd-ac0c-5d55d0c253de",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gateway.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms",
-          "short_id": "3c4041d3"
+        "path": "/",
+        "headers": {
+          "Host": "152.69.226.63"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 03 - Jewell",
-      "server": "218.237.185.234",
-      "server_port": 4652,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
-    },
-    {
       "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 04 - Jewell",
-      "server": "kr002.zestapp778.com",
+      "tag": "🇰🇷 韩国 (South Korea) 02 - Jewell",
+      "server": "158.247.255.150",
       "server_port": 48851,
       "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
         "server_name": "kr002.zestapp778.com",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -61,9 +39,7 @@
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01 - Jewell",
-        "🇰🇷 韩国 (South Korea) 02 - Jewell",
-        "🇰🇷 韩国 (South Korea) 03 - Jewell",
-        "🇰🇷 韩国 (South Korea) 04 - Jewell"
+        "🇰🇷 韩国 (South Korea) 02 - Jewell"
       ]
     },
     {
@@ -71,9 +47,7 @@
       "tag": "auto",
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01 - Jewell",
-        "🇰🇷 韩国 (South Korea) 02 - Jewell",
-        "🇰🇷 韩国 (South Korea) 03 - Jewell",
-        "🇰🇷 韩国 (South Korea) 04 - Jewell"
+        "🇰🇷 韩国 (South Korea) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,35 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 138.197.141.58
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 16.52.78.159
-  udp: true
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 35.183.129.117
-  udp: true
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
-  server: 216.152.147.152
+  server: 155.138.138.2
   udp: true
   port: 443
   type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.connectingpeoplewithgreatjobs.com
+  password: Trojan@82164024
+  sni: ca.tronsg.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
+- name: 🇨🇦 加拿大 (Canada) 02 R61 - Jewell
   server: 216.152.147.201
   udp: true
   port: 443
@@ -41,45 +20,48 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: resources.connectingpeoplewithgreatjobs.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 06 - Jewell
-  server: 149.248.50.252
+- name: 🇨🇦 加拿大 (Canada) 03 R61 - Jewell
+  server: 216.152.147.89
   udp: true
-  port: 32355
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: ca001.zestapp778.com
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.connectingpeoplewithgreatjobs.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 07 R52 - Jewell
-  server: milo.networkforexir.site
+- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
+  server: ca001.zestapp778.com
+  udp: true
+  port: 46977
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: ca001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
+  server: 138.197.141.58
   udp: true
   port: 8080
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
-  - 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
-  - 🇨🇦 加拿大 (Canada) 06 - Jewell
-  - 🇨🇦 加拿大 (Canada) 07 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R61 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R61 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
-  - 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
-  - 🇨🇦 加拿大 (Canada) 06 - Jewell
-  - 🇨🇦 加拿大 (Canada) 07 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 R61 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R61 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,57 +4,38 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R56 - Jewell",
-      "server": "208.69.78.60",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.yourultimateprofessionalcareerhub.com",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 R59 - Jewell",
-      "server": "45.90.59.15",
-      "server_port": 443,
-      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+      "server": "156.229.163.237",
+      "server_port": 10238,
+      "uuid": "17f9b0bf-f8e5-4b6a-8c51-564ee29d0048",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY",
-          "short_id": "19253fae84102271"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 03 R59 - Jewell",
-      "server": "45.90.57.119",
-      "server_port": 8443,
-      "uuid": "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "twitch.tv",
+        "server_name": "9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI",
-          "short_id": "16036bbef04d0509"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 - Jewell",
+      "server": "149.33.15.213",
+      "server_port": 443,
+      "uuid": "054362fb-e485-4a3f-9568-4c5b0f60e074",
+      "tls": {
+        "enabled": true,
+        "server_name": "swz.proxyplankton.ru",
+        "insecure": false
       }
     },
     {
@@ -62,18 +43,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R56 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R59 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 03 R59 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R56 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R59 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 03 R59 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

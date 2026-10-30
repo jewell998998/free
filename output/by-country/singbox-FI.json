@@ -4,34 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
+      "server": "153.76.194.118",
+      "server_port": 8443,
+      "password": "7d43670b-6b08-45b9-8a24-8f3971abc132",
+      "tls": {
+        "enabled": true,
+        "server_name": "finland.biznes.lol",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
       "server": "hw3.divarkhaghazi.com",
       "server_port": 465,
       "uuid": "924e20da-fcad-4e7e-8113-c62d27a0d01e",
       "tls": {
         "enabled": true,
-        "server_name": "hw3.divarkhaghazi.com.",
+        "server_name": "hw3.divarkhaghazi.com",
         "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/",
         "headers": {
           "Host": "hw3.divarkhaghazi.com."
         }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "fl.solomon-planet.ru",
-      "server_port": 443,
-      "password": "46c16b68-2553-4e5e-8176-f63d6bf6ec0c",
-      "tls": {
-        "enabled": true,
-        "server_name": "fl.solomon-planet.ru",
-        "insecure": false
       }
     },
     {
@@ -42,11 +44,8 @@
       "uuid": "09f30c46-3964-41ce-882a-72aee83ddd42",
       "tls": {
         "enabled": true,
-        "server_name": "hw6.divarkhaghazi.com",
+        "server_name": "hw6.divarkhaghazi.com.",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -61,13 +60,27 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇫🇮 芬兰 (Finland) 04 - Jewell",
+      "server": "cd0.bmi.ir.kolman.com.de",
+      "server_port": 80,
+      "uuid": "2da85937-93d9-4509-8491-63b1921cf447",
+      "security": "auto",
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/f9bGbG7ZNy5L0tzXKZNxSX4q",
+        "host": "bmi.ir.draft.co.impossible.com.ir.bmi.ir.com.iran.ir6.ifilmino.com"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
         "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell"
+        "🇫🇮 芬兰 (Finland) 03 - Jewell",
+        "🇫🇮 芬兰 (Finland) 04 - Jewell"
       ]
     },
     {
@@ -76,7 +89,8 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
         "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell"
+        "🇫🇮 芬兰 (Finland) 03 - Jewell",
+        "🇫🇮 芬兰 (Finland) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

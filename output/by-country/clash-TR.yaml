@@ -5,32 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 78.135.73.47
+  server: 177.3.208.65
   udp: true
   port: 443
   type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  flow: xtls-rprx-vision
+  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
   tls: true
-  reality-opts:
-    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
-    short-id: f46cd3ea3d1eb72d
-  servername: www.datadoghq.com
+  servername: tgmansion.site
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vless-tr
 - name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  server: 62.133.63.45
+  server: free.ertebatgoostar.ir
   udp: true
-  port: 8444
-  type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
+  port: 443
+  type: vmess
+  uuid: 118b0abc-c8f6-476a-9777-bc73f6e2548b
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select

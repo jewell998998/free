@@ -5,7 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: ams1.rvpn.app
+  server: 185.253.116.33
+  udp: true
+  port: 14430
+  type: vless
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  server: 178.253.16.185
   udp: true
   port: 8388
   type: ss
@@ -17,11 +26,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 rules:
 - MATCH,PROXIES

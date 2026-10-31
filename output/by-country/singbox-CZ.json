@@ -6,6 +6,32 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - Jewell",
+      "server": "155.212.240.10",
+      "server_port": 443,
+      "uuid": "f27b6f65-6e59-4f89-b929-afa397ca587f",
+      "tls": {
+        "enabled": true,
+        "server_name": "n.bitpulse.me",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/019bcbad-3813-7cce-8786-3ac0e418f128",
+        "headers": {
+          "Host": "n.bitpulse.me"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - Jewell",
       "server": "212.102.38.25",
       "server_port": 443,
       "uuid": "b34a52cb-cd52-49a8-9362-b8e97c151d49",
@@ -15,7 +41,7 @@
         "server_name": "udemy.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,
@@ -29,14 +55,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - Jewell"
+        "🇨🇿 捷克 (Czech) 01 - Jewell",
+        "🇨🇿 捷克 (Czech) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - Jewell"
+        "🇨🇿 捷克 (Czech) 01 - Jewell",
+        "🇨🇿 捷克 (Czech) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

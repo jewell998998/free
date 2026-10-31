@@ -4,32 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
-      "server": "167.179.108.225",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "discoverparttimepositionsandsupplementyourincomeguide.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
-      "server": "45.32.10.7",
-      "server_port": 443,
-      "password": "96ab5cd282733fd4c312a61f972f330a",
-      "tls": {
-        "enabled": true,
-        "server_name": "vp3.yysyy.online",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
       "server": "45.76.98.127",
       "server_port": 443,
       "uuid": "18ce1302-4e37-4eac-bd4f-e3e0a983e589",
@@ -48,10 +24,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
+        "path": "/ws"
       }
     },
     {
@@ -59,18 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 - Jewell"
+        "🇯🇵 日本 (Japan) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 - Jewell"
+        "🇯🇵 日本 (Japan) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

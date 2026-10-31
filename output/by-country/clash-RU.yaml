@@ -14,21 +14,62 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 185.147.27.183
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 379998c5-2a71-4202-9c74-522e0c3c5404
+  flow: xtls-rprx-vision
+  tls: true
+  servername: user-6a917f32.noooo.win
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 185.147.27.164
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 3a90bf69-1ffe-4ebb-b9a7-ad9ba8e9f66f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: user-6a8d949a.noooo.win
+  skip-cert-verify: false
+  client-fingerprint: qq
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: 130.49.177.193
+  udp: true
+  port: 443
+  type: vless
+  uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc
+    short-id: 681fc2dd643bc2f3
+  servername: de-2.ffpn.pro
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
 rules:
 - MATCH,PROXIES

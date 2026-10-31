@@ -5,24 +5,32 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 01 R40 - Jewell",
+      "tag": "🇫🇷 法国 (France) 01 - Jewell",
+      "server": "45.92.218.120",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QqFA4xtnfv6GpaC5gy5LW27nCHh9U9qK"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 02 R42 - Jewell",
+      "server": "77.216.2.178",
+      "server_port": 30,
+      "method": "chacha20-ietf-poly1305",
+      "password": "BHxDn8Z67zuaoQsjHqSAMQQs8Dz1CGqJ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 03 R40 - Jewell",
       "server": "54.36.174.140",
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
       "password": "6heexyz"
     },
     {
-      "type": "vmess",
-      "tag": "🇫🇷 法国 (France) 02 - Jewell",
-      "server": "para.kiavoosh.online",
-      "server_port": 116,
-      "uuid": "78c8ab17-814e-4c10-a642-f616c9be979d",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 03 - Jewell",
-      "server": "161.97.66.16",
+      "tag": "🇫🇷 法国 (France) 04 - Jewell",
+      "server": "ai.smrtai.top",
       "server_port": 443,
       "uuid": "086bf957-9cd0-4e55-8280-bbef10435b41",
       "tls": {
@@ -30,7 +38,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -41,8 +49,8 @@
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 04 - Jewell",
-      "server": "104.16.7.70",
+      "tag": "🇫🇷 法国 (France) 05 - Jewell",
+      "server": "85.31.102.163",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -59,47 +67,52 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 05 - Jewell",
-      "server": "199.232.78.160",
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 06 - Jewell",
+      "server": "45.87.41.18",
       "server_port": 443,
-      "uuid": "XpnTeam-70",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "server_name": "www.calmlunch.com",
+        "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/assignment",
         "headers": {
-          "Host": "Appxdn.global.ssl.fastly.net"
+          "Host": "www.calmlunch.com"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 06 - Jewell",
-      "server": "138.124.70.41",
-      "server_port": 14430,
-      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
       }
     },
     {
       "type": "trojan",
       "tag": "🇫🇷 法国 (France) 07 - Jewell",
-      "server": "185.114.72.31",
-      "server_port": 2053,
+      "server": "194.147.149.54",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 08 - Jewell",
+      "server": "193.239.160.134",
+      "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,
@@ -111,6 +124,39 @@
         "path": "/assignment",
         "headers": {
           "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 09 - Jewell",
+      "server": "5.78.92.27",
+      "server_port": 8443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 10 - Jewell",
+      "server": "138.124.70.41",
+      "server_port": 14430,
+      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "138.124.70.41"
         }
       }
     },
@@ -119,26 +165,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 法国 (France) 01 R40 - Jewell",
-        "🇫🇷 法国 (France) 02 - Jewell",
-        "🇫🇷 法国 (France) 03 - Jewell",
+        "🇫🇷 法国 (France) 01 - Jewell",
+        "🇫🇷 法国 (France) 02 R42 - Jewell",
+        "🇫🇷 法国 (France) 03 R40 - Jewell",
         "🇫🇷 法国 (France) 04 - Jewell",
         "🇫🇷 法国 (France) 05 - Jewell",
         "🇫🇷 法国 (France) 06 - Jewell",
-        "🇫🇷 法国 (France) 07 - Jewell"
+        "🇫🇷 法国 (France) 07 - Jewell",
+        "🇫🇷 法国 (France) 08 - Jewell",
+        "🇫🇷 法国 (France) 09 - Jewell",
+        "🇫🇷 法国 (France) 10 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 法国 (France) 01 R40 - Jewell",
-        "🇫🇷 法国 (France) 02 - Jewell",
-        "🇫🇷 法国 (France) 03 - Jewell",
+        "🇫🇷 法国 (France) 01 - Jewell",
+        "🇫🇷 法国 (France) 02 R42 - Jewell",
+        "🇫🇷 法国 (France) 03 R40 - Jewell",
         "🇫🇷 法国 (France) 04 - Jewell",
         "🇫🇷 法国 (France) 05 - Jewell",
         "🇫🇷 法国 (France) 06 - Jewell",
-        "🇫🇷 法国 (France) 07 - Jewell"
+        "🇫🇷 法国 (France) 07 - Jewell",
+        "🇫🇷 法国 (France) 08 - Jewell",
+        "🇫🇷 法国 (France) 09 - Jewell",
+        "🇫🇷 法国 (France) 10 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

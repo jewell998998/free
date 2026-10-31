@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  server: 130.49.162.137
+  udp: true
+  port: 443
+  type: vless
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sk3.speedtestinternet.link
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
   server: 185.253.116.33
   udp: true
   port: 14430
@@ -13,15 +24,14 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 185.253.116.33
-- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  server: ams1.rvpn.app
+- name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
+  server: forshynewh.duckdns.org
   udp: true
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: x2A6AsyZ-rAllz0wbKHzWA
+  port: 443
+  type: hysteria2
+  password: 69e41e64-a832-471a-b740-94577ca85520
+  sni: forshynewh.duckdns.org
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -29,6 +39,7 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -36,5 +47,6 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
+  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 rules:
 - MATCH,PROXIES

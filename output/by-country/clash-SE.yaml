@@ -5,27 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: promo.betust.net
-  udp: true
-  port: 443
-  type: hysteria2
-  password: d4ca9415f0eac7897472e1e5b86d2e96
-  sni: promo.betust.net
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 171.25.158.163
-  udp: true
-  port: 443
-  type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM
-    short-id: ecb6f8fb31668176
-  servername: s9se1.newagetechnologies.live
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
   server: 5.178.109.174
   udp: true
   port: 14430
@@ -34,18 +13,25 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
-  server: 31.172.65.4
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  server: 50.7.38.243
   udp: true
-  port: 8443
+  port: 443
+  type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  server: swidenafterlanzerotte.space
+  udp: true
+  port: 443
   type: vless
-  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU
-    short-id: 0e7741edc378622f
-  servername: www.bing.com
+    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
+  servername: swidenafterlanzerotte.space
   client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
@@ -55,7 +41,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -64,6 +49,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 rules:
 - MATCH,PROXIES

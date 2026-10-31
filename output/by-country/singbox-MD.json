@@ -15,7 +15,7 @@
         "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +25,41 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇲🇩 摩尔多瓦 (Moldova) 02 R48 - Jewell",
+      "server": "5.181.158.100",
+      "server_port": 8481,
+      "uuid": "1c8f7130-8c1a-4949-831d-1d45b39c795b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "svoboda16.bystriynet.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-Ri2C7Y1tPrP8hQkgXOqVyR1Sqv5MdLZxAAu9M5kfn0",
+          "short_id": "44add17dbecb11ba"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell"
+        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+        "🇲🇩 摩尔多瓦 (Moldova) 02 R48 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell"
+        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+        "🇲🇩 摩尔多瓦 (Moldova) 02 R48 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

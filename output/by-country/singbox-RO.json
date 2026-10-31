@@ -6,30 +6,23 @@
     {
       "type": "vless",
       "tag": "🇷🇴 罗马尼亚 (Romania) 01 - Jewell",
-      "server": "155.117.5.208",
-      "server_port": 2052,
-      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+      "server": "103.169.142.30",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime38.workers.dev"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇷🇴 罗马尼亚 (Romania) 02 - Jewell",
-      "server": "46.28.67.55",
-      "server_port": 443,
-      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU",
-          "short_id": "d06d78e974491b6e"
-        }
-      }
+      "server": "155.117.5.208",
+      "server_port": 2052,
+      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
     },
     {
       "type": "vless",
@@ -53,35 +46,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 04 - Jewell",
-      "server": "82.117.255.174",
-      "server_port": 443,
-      "uuid": "679439c5-28f2-485e-af5f-60a5fcd9c36c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gateway.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "0QDBHaCRO2dPeeSVy3B3R_U12ZOvbvWl1JTFW_ZcpD0",
-          "short_id": "31e91d43e553bf32"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇷🇴 罗马尼亚 (Romania) 01 - Jewell",
         "🇷🇴 罗马尼亚 (Romania) 02 - Jewell",
-        "🇷🇴 罗马尼亚 (Romania) 03 - Jewell",
-        "🇷🇴 罗马尼亚 (Romania) 04 - Jewell"
+        "🇷🇴 罗马尼亚 (Romania) 03 - Jewell"
       ]
     },
     {
@@ -90,8 +61,7 @@
       "outbounds": [
         "🇷🇴 罗马尼亚 (Romania) 01 - Jewell",
         "🇷🇴 罗马尼亚 (Romania) 02 - Jewell",
-        "🇷🇴 罗马尼亚 (Romania) 03 - Jewell",
-        "🇷🇴 罗马尼亚 (Romania) 04 - Jewell"
+        "🇷🇴 罗马尼亚 (Romania) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

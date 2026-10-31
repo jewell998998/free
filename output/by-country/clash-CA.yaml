@@ -13,30 +13,22 @@ proxies:
   sni: ca001.zestapp778.com
   skip-cert-verify: false
 - name: 🇨🇦 加拿大 (Canada) 02 R61 - Jewell
-  server: 216.152.147.93
+  server: 216.152.147.48
   udp: true
   port: 443
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: connectingpeoplewithgreatjobs.com
+  sni: courses.connectingpeoplewithgreatjobs.com
   skip-cert-verify: false
 - name: 🇨🇦 加拿大 (Canada) 03 R61 - Jewell
-  server: 216.152.147.74
+  server: 216.152.147.85
   udp: true
   port: 443
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.connectingpeoplewithgreatjobs.com
+  sni: cdn.connectingpeoplewithgreatjobs.com
   skip-cert-verify: false
 - name: 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
-  server: 216.152.147.201
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
   server: 216.152.147.152
   udp: true
   port: 443
@@ -44,19 +36,22 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: learn.connectingpeoplewithgreatjobs.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 06 - Jewell
-  server: 138.197.141.58
+- name: 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
+  server: 216.152.147.93
   udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 07 R52 - Jewell
-  server: milo.rubinaz.xyz
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: connectingpeoplewithgreatjobs.com
+  skip-cert-verify: false
+- name: 🇨🇦 加拿大 (Canada) 06 R61 - Jewell
+  server: 216.152.147.201
   udp: true
-  port: 8080
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.connectingpeoplewithgreatjobs.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,8 +62,7 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 03 R61 - Jewell
   - 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
   - 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
-  - 🇨🇦 加拿大 (Canada) 06 - Jewell
-  - 🇨🇦 加拿大 (Canada) 07 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 06 R61 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,7 +73,6 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 03 R61 - Jewell
   - 🇨🇦 加拿大 (Canada) 04 R61 - Jewell
   - 🇨🇦 加拿大 (Canada) 05 R61 - Jewell
-  - 🇨🇦 加拿大 (Canada) 06 - Jewell
-  - 🇨🇦 加拿大 (Canada) 07 R52 - Jewell
+  - 🇨🇦 加拿大 (Canada) 06 R61 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,36 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  server: 185.253.116.33
+  udp: true
+  port: 14430
+  type: vless
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 185.253.116.33
+- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
   server: ams1.rvpn.app
   udp: true
   port: 8388
   type: ss
   cipher: chacha20-ietf-poly1305
   password: x2A6AsyZ-rAllz0wbKHzWA
-- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  server: 130.49.162.137
-  udp: true
-  port: 443
-  type: vless
-  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sk3.speedtestinternet.link
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 03 - Jewell
-  server: app-mi-26.spbstudentlife.com
-  udp: true
-  port: 443
-  type: vless
-  uuid: 07680ffb-0666-4836-b6ad-ec0de62bc38f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cYtAkO6yUCuRTxHvF8EH76bybk1yfS005KLls-at2yc
-    short-id: a7856800c2deb7b2
-  servername: assets-mi-26.spbstudentlife.com
-  client-fingerprint: randomized
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,7 +29,6 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,6 +36,5 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
   - 🇦🇪 阿联酋 (UAE) 02 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 03 - Jewell
 rules:
 - MATCH,PROXIES

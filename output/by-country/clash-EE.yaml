@@ -5,17 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  server: ee.h1cloud.net
+  server: 13.143.239.127
   udp: true
-  port: 25895
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  tls: true
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-  servername: www.samsung.com
-  client-fingerprint: qq
+  port: 443
+  type: hysteria2
+  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
   server: 185.225.205.53
   udp: true
@@ -28,35 +24,19 @@ proxies:
     public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
     short-id: 2e82d7ac
   servername: addons.mozilla.org
-  client-fingerprint: qq
+  client-fingerprint: firefox
 - name: 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
-  server: 13.143.239.127
+  server: ee.h1cloud.net
   udp: true
-  port: 443
-  type: hysteria2
-  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - Jewell
-  server: 179.253.179.109
-  udp: true
-  port: 57443
+  port: 25895
   type: vless
-  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   tls: true
-  servername: 87.121.86.24
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - Jewell
-  server: 179.253.179.109
-  udp: true
-  port: 57043
-  type: vless
-  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
-  tls: true
-  servername: 87.121.86.24
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: a73f0410d728c823
+  servername: www.samsung.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -65,8 +45,6 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -75,7 +53,5 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 05 - Jewell
 rules:
 - MATCH,PROXIES

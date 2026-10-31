@@ -13,39 +13,20 @@ proxies:
   tls: true
   servername: tgmansion.site
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vless-tr
-    headers:
-      Host: tgmansion.site
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  server: 62.133.63.45
-  udp: true
-  port: 8444
-  type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
 rules:
 - MATCH,PROXIES

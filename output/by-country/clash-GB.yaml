@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 104.239.12.81
-  udp: true
-  port: 43385
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: en001.zestapp778.com
-  udp: true
-  port: 29813
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: en001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 191.44.108.31
   udp: true
   port: 443
@@ -31,14 +16,62 @@ proxies:
     public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
     short-id: 3ba10d9ce34380c9
   servername: www.google.com
-  client-fingerprint: random
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  server: 191.44.108.6
+  udp: true
+  port: 443
+  type: vless
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: A0QL_j-ReX7AotEj1w8qX9rHRgN2WycTZ43gUvuvZ00
+    short-id: 3cf8d11aa0415d29
+  servername: c9.qwyak.ru
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 98.98.142.161
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
-  server: 168.222.43.53
+  server: 155.117.5.208
   udp: true
   port: 10002
   type: vless
   uuid: c6362720-0931-4b91-b187-d8ecf3149734
 - name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 146.19.143.218
+  udp: true
+  port: 443
+  type: vless
+  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+    short-id: 4a7b1c8d
+  servername: tau1.freerunet.online
+  client-fingerprint: ios
+- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  server: sql.popmintxo.cc
+  udp: true
+  port: 43385
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
+- name: 🇬🇧 英国 (United Kingdom) 07 R68 - Jewell
+  server: niroo.kiavoosh.online
+  udp: true
+  port: 1125
+  type: vmess
+  uuid: 78c8ab17-814e-4c10-a642-f616c9be979d
+  alterId: 0
+  cipher: auto
+- name: 🇬🇧 英国 (United Kingdom) 08 - Jewell
   server: 193.163.203.170
   udp: true
   port: 443
@@ -51,64 +84,6 @@ proxies:
     short-id: b28db60d77c50b4f
   servername: yandex.ru
   client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  server: 191.44.108.30
-  udp: true
-  port: 443
-  type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE
-    short-id: b2baf331493d3de1
-  servername: c8.qwyak.ru
-  client-fingerprint: ''
-- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
-  server: 138.124.125.193
-  udp: true
-  port: 10444
-  type: vless
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 08 - Jewell
-  server: 146.19.143.218
-  udp: true
-  port: 443
-  type: vless
-  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-    short-id: 4a7b1c8d
-  servername: tau1.freerunet.online
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 09 R46 - Jewell
-  server: 98.98.207.163
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 10 ⚠R - Jewell
-  server: uk1.connectsuite.org
-  udp: true
-  port: 443
-  type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
 proxy-groups:
 - name: PROXIES
   type: select
@@ -120,10 +95,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
   - 🇬🇧 英国 (United Kingdom) 05 - Jewell
   - 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 R68 - Jewell
   - 🇬🇧 英国 (United Kingdom) 08 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 09 R46 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 10 ⚠R - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -135,9 +108,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
   - 🇬🇧 英国 (United Kingdom) 05 - Jewell
   - 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 R68 - Jewell
   - 🇬🇧 英国 (United Kingdom) 08 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 09 R46 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 10 ⚠R - Jewell
 rules:
 - MATCH,PROXIES

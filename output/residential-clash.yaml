@@ -4,28 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR 01 - Jewell
-  server: 199.232.78.159
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  server: 112.169.175.199
   udp: true
-  port: 80
+  port: 31157
   type: vless
-  uuid: 8cbb2201-e7e4-428f-b7b8-83fd4eb447b7
-  network: ws
-  ws-opts:
-    path: /ws/
-    headers:
-      Host: rb24.ir
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇷 IR 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇷 IR 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: hw3.divarkhaghazi.com
+  server: fi1.obxodvpn.us
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: hw3.divarkhaghazi.com.
   udp: true
   port: 465
   type: vless
@@ -13,30 +21,19 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 45.144.234.157
-  udp: true
-  port: 14430
-  type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
 - name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: finland.biznes.lol
+  server: 6.bmi.ir.asopardaz.ir
   udp: true
-  port: 8443
-  type: hysteria2
-  password: 7d43670b-6b08-45b9-8a24-8f3971abc132
-  sni: finland.biznes.lol
-  skip-cert-verify: false
+  port: 35176
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: NjcyNmVjMTU1ZWU5NDA5ZDk0ODg1NWM1MzJjZTE3NDk=:YzYxMzAwMWNiMDYyNDFhZDhkYjdmNmEzZWIwNmY2MmM=
 proxy-groups:
 - name: PROXIES
   type: select

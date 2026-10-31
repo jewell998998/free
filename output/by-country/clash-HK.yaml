@@ -5,15 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 38.76.180.144
+  server: 8c09515a-tk7400-tlvq5w-1jcwu.pccw3.hyhuawei.com
   udp: true
-  port: 1443
-  type: vless
-  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
-  network: ws
-  ws-opts:
-    path: /vless-ws
+  port: 443
+  type: tuic
+  uuid: f93486ce-cc84-11ed-9e98-f23c913c8d2b
+  password: f93486ce-cc84-11ed-9e98-f23c913c8d2b
+  sni: 8c09515a-tk7400-tlvq5w-1jcwu.pccw3.hyhuawei.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: d6e1207c-f41a-11ef-9495-f23c91cfbbc9
+  sni: 05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   server: 165.154.63.139
   udp: true
   port: 443
@@ -25,7 +37,146 @@ proxies:
     public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
     short-id: ca4aedd4
   servername: www.amazon.com
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: zfd-hkv2.kunlun01dns.com
+  udp: true
+  port: 16112
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  server: vah4urdzl3jdx5r2.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vah4urdzl3jdx5r2.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  server: i2psm3knof5qjjix.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: I2PSm3Knof5qjjix.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: I2PSm3Knof5qjjix.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  server: 8.217.186.60
+  udp: true
+  port: 443
+  type: vmess
+  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: euu1yalfmcqvljex.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: euu1yalfmcqvljex.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - Jewell
+  server: 47.243.167.44
+  udp: true
+  port: 443
+  type: vmess
+  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: rhHiErkwRf6fHs2H.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: rhHiErkwRf6fHs2H.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 09 - Jewell
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: qtkdr8jxe3wefxjm.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: qTKDR8jXE3wEFxJM.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - Jewell
+  server: 47.243.194.125
+  udp: true
+  port: 443
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 11 - Jewell
+  server: 172.67.149.199
+  udp: true
+  port: 443
+  type: vless
+  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
+  tls: true
+  servername: px2.5ibtc.cn
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /326227e2-f2d1-4f43-8715-9da854f5f4c0
+    headers:
+      Host: px2.5ibtc.cn
+- name: 🇭🇰 中国香港 (Hong Kong) 12 - Jewell
+  server: a736eb68-tmb1c0-tpkh0c-1r7od.hk2.hyhuawei.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  tls: true
+  reality-opts:
+    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
+  servername: download.windowsupdate.com
+  client-fingerprint: random
+- name: 🇭🇰 中国香港 (Hong Kong) 13 - Jewell
+  server: 38.76.180.144
+  udp: true
+  port: 1443
+  type: vless
+  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
+  network: ws
+  ws-opts:
+    path: /vless-ws
+    headers:
+      Host: 38.76.180.144
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +184,17 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 08 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 09 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 10 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 11 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 12 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 13 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -40,5 +202,16 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 08 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 09 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 10 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 11 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 12 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 13 - Jewell
 rules:
 - MATCH,PROXIES

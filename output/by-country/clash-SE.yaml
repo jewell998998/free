@@ -5,6 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  server: promo.betust.net
+  udp: true
+  port: 443
+  type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  server: 31.76.81.137
+  udp: true
+  port: 1114
+  type: vmess
+  uuid: 78c8ab17-814e-4c10-a642-f616c9be979d
+  alterId: 0
+  cipher: auto
+- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
   server: 5.178.109.174
   udp: true
   port: 14430
@@ -13,26 +29,8 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 50.7.38.243
-  udp: true
-  port: 443
-  type: hysteria2
-  password: d4ca9415f0eac7897472e1e5b86d2e96
-  sni: promo.betust.net
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: swidenafterlanzerotte.space
-  udp: true
-  port: 443
-  type: vless
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
-  servername: swidenafterlanzerotte.space
-  client-fingerprint: qq
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select

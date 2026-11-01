@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇱 智利 (Chile) 01 - Jewell
-  server: 64.176.7.205
+- name: 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
+  server: us001.zestapp778.com
   udp: true
-  port: 443
+  port: 57277
   type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
+  password: 5t6i121em5lkmsmk
+  sni: us001.zestapp778.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇱 智利 (Chile) 01 - Jewell
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇱 智利 (Chile) 01 - Jewell
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
 rules:
 - MATCH,PROXIES

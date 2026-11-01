@@ -5,35 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 128.241.25.215
-  udp: true
-  port: 30036
-  type: vless
-  uuid: 87e7d0b2-faf6-4644-97ae-ad9bffca2c97
-  tls: true
-  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 152.69.195.67
-  udp: true
-  port: 47878
-  type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: r8f4n-g05.jp02-e3-vm0.entry.fr0528.art
-  udp: true
-  port: 11777
-  type: vmess
-  uuid: 8ee65c79-4487-32ff-b896-62c8dce05921
-  alterId: 1
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
   server: 167.179.108.225
   udp: true
   port: 443
@@ -41,47 +12,32 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: discoverparttimepositionsandsupplementyourincomeguide.com
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  udp: true
-  port: 28787
-  type: vmess
-  uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
-  alterId: 1
-  cipher: auto
-  tls: true
-  servername: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: 43.163.208.228
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: ga1data.xyy123.bid
   udp: true
   port: 443
   type: vless
-  uuid: ef857676-6b00-4c1b-8d98-712dd355230a
+  uuid: 81f686e2-0700-4e7d-b3aa-2f7fc544bcc3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dr63-MwSmvcVljij8PHNZasukHgBv0mHk-QKa7i4yyo
-    short-id: bff486649d0ae69e
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 07 - Jewell
-  server: 45.76.98.127
+    public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
+    short-id: 00b0389a
+  servername: www.amzn.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 18.183.215.124
   udp: true
-  port: 443
+  port: 28573
   type: vless
-  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
-    short-id: 49fa0dad
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -90,10 +46,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -102,9 +54,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
 rules:
 - MATCH,PROXIES

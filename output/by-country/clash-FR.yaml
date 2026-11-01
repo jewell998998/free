@@ -4,105 +4,42 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 161.97.66.16
+- name: 🇫🇷 法国 (France) 01 R42 - Jewell
+  server: 77.216.2.178
+  udp: true
+  port: 30
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: BHxDn8Z67zuaoQsjHqSAMQQs8Dz1CGqJ
+- name: 🇫🇷 法国 (France) 02 R40 - Jewell
+  server: pl140.vpnbook.com
   udp: true
   port: 443
-  type: vless
-  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
-  tls: true
-  reality-opts:
-    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
-    short-id: 086bf957
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 138.124.70.41
-  udp: true
-  port: 14430
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 5.253.189.238
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 03 R40 - Jewell
+  server: pl134.vpnbook.com
   udp: true
   port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 04 R42 - Jewell
-  server: 51.75.118.170
-  udp: true
-  port: 20191
-  type: vless
-  uuid: df140d6a-bf2c-7d24-e61d-b98f5a6f4ed8
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /upgrade
-    headers:
-      Host: ''
-- name: 🇫🇷 法国 (France) 05 - Jewell
-  server: 89.150.34.41
-  udp: true
-  port: 2053
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 193.239.160.134
-  udp: true
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07 - Jewell
-  server: 185.114.72.31
-  udp: true
-  port: 2053
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 R42 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
-  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 01 R42 - Jewell
+  - 🇫🇷 法国 (France) 02 R40 - Jewell
+  - 🇫🇷 法国 (France) 03 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 R42 - Jewell
-  - 🇫🇷 法国 (France) 05 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
-  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 01 R42 - Jewell
+  - 🇫🇷 法国 (France) 02 R40 - Jewell
+  - 🇫🇷 法国 (France) 03 R40 - Jewell
 rules:
 - MATCH,PROXIES

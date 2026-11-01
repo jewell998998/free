@@ -22,18 +22,7 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
-  server: 88.80.135.65
-  udp: true
-  port: 4127
-  type: vless
-  uuid: 33972eb3-3f57-4558-80ff-b6926480ff69
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /Telegram=@AmyraxVPN
-    headers:
-      Host: 88.80.135.65
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,7 +30,6 @@ proxy-groups:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
   - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +37,5 @@ proxy-groups:
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
   - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
 rules:
 - MATCH,PROXIES

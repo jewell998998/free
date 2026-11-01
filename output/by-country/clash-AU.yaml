@@ -1,0 +1,42 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇺 澳大利亚 (Australia) 01 R52 - Jewell
+  server: 134.199.144.135
+  udp: true
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇦🇺 澳大利亚 (Australia) 02 R52 - Jewell
+  server: 170.64.230.226
+  udp: true
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇺 澳大利亚 (Australia) 01 R52 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 02 R52 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇺 澳大利亚 (Australia) 01 R52 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 02 R52 - Jewell
+rules:
+- MATCH,PROXIES

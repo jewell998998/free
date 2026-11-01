@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇬 埃及 (Egypt) 01 - Jewell
-  server: 38.54.59.102
+- name: 🇦🇹 奥地利 (Austria) 01 - Jewell
+  server: 152.53.1.57
   udp: true
-  port: 443
+  port: 8388
   type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
+  cipher: chacha20-ietf-poly1305
+  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇬 埃及 (Egypt) 01 - Jewell
+  - 🇦🇹 奥地利 (Austria) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇬 埃及 (Egypt) 01 - Jewell
+  - 🇦🇹 奥地利 (Austria) 01 - Jewell
 rules:
 - MATCH,PROXIES

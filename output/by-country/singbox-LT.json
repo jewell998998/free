@@ -5,22 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - Jewell",
-      "server": "195.123.208.32",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 01 - Jewell",
+      "server": "185.178.208.167",
       "server_port": 443,
-      "uuid": "1ebcb694-875c-4be7-b6a2-d53c8208991b",
-      "flow": "xtls-rprx-vision",
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "lorettmay.top",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk",
-          "short_id": "757b9e1ef18e60f0"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/blog/posts",
+        "headers": {
+          "Host": "lorettmay.top"
         }
       }
     },
@@ -29,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 拉脱维亚 (Latvia) 01 - Jewell"
+        "🇱🇹 立陶宛 (Lithuania) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 拉脱维亚 (Latvia) 01 - Jewell"
+        "🇱🇹 立陶宛 (Lithuania) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

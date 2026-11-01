@@ -4,46 +4,38 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
+      "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "1fd0c4d5-tk7400-tlbcwm-1rfon.pccw3.hyhuawei.com",
+      "server": "0e05f970-tki800-traezq-1t5n1.hk2.hyhuawei.com",
       "server_port": 443,
-      "uuid": "aed1cc24-351d-11ef-ba52-f23c9164ca5d",
-      "password": "aed1cc24-351d-11ef-ba52-f23c9164ca5d",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
+      "uuid": "ea800f9e-ca6c-11ef-8e74-f23c913c8d2b",
       "tls": {
         "enabled": true,
-        "server_name": "",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "download.windowsupdate.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo",
+          "short_id": ""
+        }
       }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-      "server": "zfd-hkv1.kunlun01dns.com",
-      "server_port": 16115,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

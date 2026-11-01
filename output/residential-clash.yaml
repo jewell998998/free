@@ -1,0 +1,63 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  server: 58.152.81.104
+  udp: true
+  port: 443
+  type: tuic
+  uuid: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  password: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  sni: 46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇺🇸 美国 (United States) 02 (移动家宽) - Jewell
+  server: us001.zestapp778.com
+  udp: true
+  port: 57277
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: us001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell
+  server: bd452e87-tmm5c0-tv7dx2-py5w.hk3.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: ae5338ae-9a70-58c9-3d47-7d54a5675715
+  sni: bd452e87-tmm5c0-tv7dx2-py5w.hk3.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - Jewell
+  server: 0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 3bd247a8-993e-11ec-a8bf-f23c91cfbbc9
+  sni: 0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  - 🇺🇸 美国 (United States) 02 (移动家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  - 🇺🇸 美国 (United States) 02 (移动家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - Jewell
+rules:
+- MATCH,PROXIES

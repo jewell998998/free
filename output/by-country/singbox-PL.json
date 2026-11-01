@@ -5,7 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "tag": "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
+      "server": "ru1.radiolumens.uk",
+      "server_port": 8445,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.radiolumens.uk",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-pl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
       "server": "2.26.255.215",
       "server_port": 443,
       "uuid": "69e41e64-a832-471a-b740-94577ca85520",
@@ -25,38 +45,23 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
-      "server": "pl2.obxodvpn.us",
-      "server_port": 443,
-      "password": "2a0fc918-9c61-451b-a9ad-e8f796e70f52",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl1.obxodvpn.us",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
-      "server": "31.59.143.147",
-      "server_port": 443,
-      "uuid": "1fe01c8a-ab37-4e95-bbfc-95d4a608931e",
+      "server": "217.60.33.67",
+      "server_port": 8443,
+      "uuid": "dc413f44-7dce-4cc4-b2c7-878ef70ce464",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl2.waspnest.space",
+        "server_name": "go-obsh-auto-drun.keno.su",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk",
-          "short_id": "ae97223a8f799889"
+          "public_key": "-r5xcA3iTzAf63kkb0VIILrLHH1VUq550pFZ-M74Jlc",
+          "short_id": "de"
         }
       }
     },
@@ -69,11 +74,7 @@
       "tls": {
         "enabled": true,
         "server_name": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "insecure": false
       }
     },
     {
@@ -98,87 +99,26 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 06 - Jewell",
-      "server": "144.31.1.18",
-      "server_port": 446,
-      "uuid": "ce4a72e6-a281-4923-b62c-8d2285bf7f40",
-      "tls": {
-        "enabled": true,
-        "server_name": "144.31.1.18",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc446"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 07 - Jewell",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 08 - Jewell",
-      "server": "cdn-waw.edgeptr.org",
-      "server_port": 8080,
-      "uuid": "15037bec-5f7a-4514-870f-004516129efd",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
         "🇵🇱 波兰 (Poland) 03 - Jewell",
         "🇵🇱 波兰 (Poland) 04 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 - Jewell",
-        "🇵🇱 波兰 (Poland) 06 - Jewell",
-        "🇵🇱 波兰 (Poland) 07 - Jewell",
-        "🇵🇱 波兰 (Poland) 08 - Jewell"
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
         "🇵🇱 波兰 (Poland) 03 - Jewell",
         "🇵🇱 波兰 (Poland) 04 - Jewell",
-        "🇵🇱 波兰 (Poland) 05 - Jewell",
-        "🇵🇱 波兰 (Poland) 06 - Jewell",
-        "🇵🇱 波兰 (Poland) 07 - Jewell",
-        "🇵🇱 波兰 (Poland) 08 - Jewell"
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

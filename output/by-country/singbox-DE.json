@@ -4,9 +4,42 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇩🇪 德国 (Germany) 01 - Jewell",
-      "server": "153.52.85.32",
+      "server": "91.107.179.0",
+      "server_port": 10105,
+      "uuid": "ad3f4a0a-a89f-498e-9869-a93c8fa185b1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es",
+          "short_id": "12e321badd07906e"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 02 R65 - Jewell",
+      "server": "193.108.119.29",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.iloverussia2026.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 03 - Jewell",
+      "server": "steel7.hadsvpn.com",
       "server_port": 443,
       "password": "23c82941-70f4-4381-90db-bd28e9a902e9",
       "tls": {
@@ -16,150 +49,9 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 02 - Jewell",
-      "server": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev",
-      "server_port": 443,
-      "uuid": "b2f2f9f2-1864-48ea-839b-22815faff1f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 03 - Jewell",
-      "server": "172.66.44.124",
-      "server_port": 443,
-      "uuid": "b2f2f9f2-1864-48ea-839b-22815faff1f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev"
-        }
-      }
-    },
-    {
-      "type": "trojan",
+      "type": "hysteria2",
       "tag": "🇩🇪 德国 (Germany) 04 - Jewell",
-      "server": "188.114.96.3",
-      "server_port": 2096,
-      "password": "vP!XvZBNdw.e*ddSgmH!",
-      "tls": {
-        "enabled": true,
-        "server_name": "n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tr/ZFttmjSqvda5ohOQ?ed=2560",
-        "headers": {
-          "Host": "n0q4xprj2d4x4prcq29l8jkczd0.pages.dev"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 05 - Jewell",
-      "server": "188.114.96.0",
-      "server_port": 2096,
-      "password": "vP!XvZBNdw.e*ddSgmH!",
-      "tls": {
-        "enabled": true,
-        "server_name": "N0Q4xprJ2d4X4pRCQ29l8JkcZd0.paGES.DeV",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tr/lqCTAonDgcErIZylZuNyy?ed=2560",
-        "headers": {
-          "Host": "n0q4xprj2d4x4prcq29l8jkczd0.pages.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 06 - Jewell",
-      "server": "188.114.96.9",
-      "server_port": 443,
-      "uuid": "2e305ebe-f6e6-4689-b32f-cd04ab5ff541",
-      "tls": {
-        "enabled": true,
-        "server_name": "IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome",
-        "headers": {
-          "Host": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 07 - Jewell",
-      "server": "144.31.157.54",
-      "server_port": 443,
-      "password": "2a0fc918-9c61-451b-a9ad-e8f796e70f52",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl1.obxodvpn.us",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 德国 (Germany) 08 R62 - Jewell",
-      "server": "185.176.204.18",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 09 - Jewell",
-      "server": "45.88.12.26",
-      "server_port": 443,
-      "password": "e5ec2586-59b3-40fa-91b7-bb37a2f7744e",
-      "tls": {
-        "enabled": true,
-        "server_name": "crt.onecloudstream.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 10 - Jewell",
-      "server": "151.243.169.164",
+      "server": "derfderf.ru",
       "server_port": 12824,
       "password": "d62s7ghfehm742us",
       "tls": {
@@ -169,49 +61,8 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 11 - Jewell",
-      "server": "150.241.79.124",
-      "server_port": 443,
-      "uuid": "1fe01c8a-ab37-4e95-bbfc-95d4a608931e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "de1.waspnest.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "dlhvkjq7Sj-TT__FLwUJzFLMDCk8bgi85Uz4qDU-5FM",
-          "short_id": "5212dad2aa9723d7"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 12 - Jewell",
-      "server": "193.148.253.194",
-      "server_port": 25362,
-      "uuid": "36fb6650-8a50-42b5-9f66-06538806f32c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.chip.de",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA",
-          "short_id": "23732d14a527990d"
-        }
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "🇩🇪 德国 (Germany) 13 - Jewell",
+      "tag": "🇩🇪 德国 (Germany) 05 - Jewell",
       "server": "91.107.168.142",
       "server_port": 80,
       "uuid": "161c6846-7fee-40a8-abf9-b3d48c5d8b8f",
@@ -224,7 +75,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 14 - Jewell",
+      "tag": "🇩🇪 德国 (Germany) 06 - Jewell",
       "server": "144.31.140.125",
       "server_port": 8443,
       "uuid": "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
@@ -245,53 +96,29 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 15 - Jewell",
-      "server": "91.107.179.0",
-      "server_port": 10105,
-      "uuid": "ad3f4a0a-a89f-498e-9869-a93c8fa185b1",
+      "tag": "🇩🇪 德国 (Germany) 07 - Jewell",
+      "server": "150.241.79.124",
+      "server_port": 443,
+      "uuid": "1fe01c8a-ab37-4e95-bbfc-95d4a608931e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es",
-          "short_id": "12e321badd07906e"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 16 - Jewell",
-      "server": "de001.zestapp778.com",
-      "server_port": 51520,
-      "password": "5t6i121em5lkmsmk",
-      "tls": {
-        "enabled": true,
-        "server_name": "de001.zestapp778.com",
-        "insecure": false,
+        "server_name": "de1.waspnest.space",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dlhvkjq7Sj-TT__FLwUJzFLMDCk8bgi85Uz4qDU-5FM",
+          "short_id": "5212dad2aa9723d7"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 德国 (Germany) 17 - Jewell",
-      "server": "dns23.m3hrzd.ir",
-      "server_port": 8044,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hNfeLCN3XzYgLFSAWo_fxOl4HC1gNw0V"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 18 - Jewell",
-      "server": "blogs.blog-forme.ru",
+      "tag": "🇩🇪 德国 (Germany) 08 - Jewell",
+      "server": "163.245.41.48",
       "server_port": 443,
       "password": "6da2c981-8c77-4340-bda3-93399b7aea26",
       "tls": {
@@ -301,153 +128,27 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 19 R65 - Jewell",
-      "server": "193.108.119.78",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.iloverussia2026.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 20 - Jewell",
+      "tag": "🇩🇪 德国 (Germany) 09 - Jewell",
       "server": "91.107.247.173",
       "server_port": 2083,
       "uuid": "7858128a-6b5e-4f86-9bff-52c1f1e6439d",
       "tls": {
         "enabled": true,
         "server_name": "sino.bestsellers1.site",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 21 R65 - Jewell",
-      "server": "193.108.119.96",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.iloverussia2026.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 22 R65 - Jewell",
-      "server": "193.108.119.96",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.iloverussia2026.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 23 R65 - Jewell",
-      "server": "193.108.119.29",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "blog.iloverussia2026.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 24 R65 - Jewell",
-      "server": "193.108.119.193",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "resources.iloverussia2026.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 25 - Jewell",
-      "server": "157.90.175.178",
-      "server_port": 1222,
-      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE",
-          "short_id": "a25d0f"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 26 - Jewell",
-      "server": "91.107.180.176",
-      "server_port": 465,
-      "uuid": "d0d3d49c-56e8-40e1-9e83-793d03f83d93",
-      "tls": {
-        "enabled": true,
-        "server_name": "hw7.divarkhaghazi.com",
         "insecure": false
       },
       "transport": {
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "hw7.divarkhaghazi.com."
+          "Host": "sino.bestsellers1.site"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 27 - Jewell",
-      "server": "2.27.254.79",
-      "server_port": 2083,
-      "uuid": "75b517db-1f97-4bda-a479-863d988c31a0",
-      "tls": {
-        "enabled": true,
-        "server_name": "speedtestmark.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vless-ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 28 - Jewell",
+      "tag": "🇩🇪 德国 (Germany) 10 - Jewell",
       "server": "mci.amir12.ir",
       "server_port": 2112,
       "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
@@ -467,58 +168,172 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 29 ⚠R - Jewell",
-      "server": "46.28.69.123",
-      "server_port": 443,
-      "uuid": "b945f9aa-1b45-4912-aa7e-248509472bad",
+      "tag": "🇩🇪 德国 (Germany) 11 - Jewell",
+      "server": "91.107.179.0",
+      "server_port": 10105,
+      "uuid": "ad3f4a0a-a89f-498e-9869-a93c8fa185b1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "play.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "7KnJYp2-sE3o35mnbSZzX3fNg-ns9n8xyNfkRSHCD3E",
-          "short_id": "238e23c5150f02e4"
+          "public_key": "PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es",
+          "short_id": "12e321badd07906e"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 30 - Jewell",
-      "server": "91.107.188.129",
-      "server_port": 2083,
-      "uuid": "36592d47-b9f5-4e8f-949e-45ac05472aab",
+      "tag": "🇩🇪 德国 (Germany) 12 - Jewell",
+      "server": "157.90.175.178",
+      "server_port": 1222,
+      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
       "tls": {
         "enabled": true,
-        "server_name": "site.check-looks.space",
-        "insecure": false
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE",
+          "short_id": "a25d0f"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 13 - Jewell",
+      "server": "vless.herogoing.top",
+      "server_port": 443,
+      "password": "bpb-trojan",
+      "tls": {
+        "enabled": true,
+        "server_name": "vless.herogoing.top",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/"
+        "path": "/tr?ed=2560"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇩🇪 德国 (Germany) 14 R50 - Jewell",
+      "server": "91.107.169.224",
+      "server_port": 80,
+      "uuid": "d4b69108-f756-48af-a331-e8356bc95eb4",
+      "security": "auto",
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/",
+        "host": "google.whatsapp.snapp.torob.basalam.dns-look.space."
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 31 - Jewell",
-      "server": "bigshagy.zqpm.ir",
-      "server_port": 5780,
-      "uuid": "996f6fed-a94e-4e9d-b876-82bc4ad02847",
+      "tag": "🇩🇪 德国 (Germany) 15 - Jewell",
+      "server": "875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network",
+      "server_port": 20065,
+      "uuid": "2446e2e2-1ce3-4502-9050-1dd32bacc68c",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yahoo.com",
+        "server_name": "875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇩🇪 德国 (Germany) 16 R45 - Jewell",
+      "server": "www.gptcloudai.com",
+      "server_port": 443,
+      "uuid": "e70a5b70-f63c-4450-af8b-94990cdf80c0",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gptcloudai.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/truth"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 17 R65 - Jewell",
+      "server": "193.108.119.29",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.iloverussia2026.com",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PF8LdirtBEOQ_w9-1-i3mhgeFYbIQ1iOu1FPCfxUHQo",
-          "short_id": "2efbb0033df59520"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 18 - Jewell",
+      "server": "45.88.12.26",
+      "server_port": 443,
+      "password": "e5ec2586-59b3-40fa-91b7-bb37a2f7744e",
+      "tls": {
+        "enabled": true,
+        "server_name": "crt.onecloudstream.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 19 R65 - Jewell",
+      "server": "193.108.119.15",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "courses.iloverussia2026.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 20 R45 - Jewell",
+      "server": "104.17.70.206",
+      "server_port": 8443,
+      "uuid": "5f704d93-7e7f-45b5-81f5-08db4a946220",
+      "tls": {
+        "enabled": true,
+        "server_name": "free.sahanwickramasinghe.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "free.sahanwickramasinghe.com"
         }
       }
     },
@@ -528,36 +343,25 @@
       "outbounds": [
         "auto",
         "🇩🇪 德国 (Germany) 01 - Jewell",
-        "🇩🇪 德国 (Germany) 02 - Jewell",
+        "🇩🇪 德国 (Germany) 02 R65 - Jewell",
         "🇩🇪 德国 (Germany) 03 - Jewell",
         "🇩🇪 德国 (Germany) 04 - Jewell",
         "🇩🇪 德国 (Germany) 05 - Jewell",
         "🇩🇪 德国 (Germany) 06 - Jewell",
         "🇩🇪 德国 (Germany) 07 - Jewell",
-        "🇩🇪 德国 (Germany) 08 R62 - Jewell",
+        "🇩🇪 德国 (Germany) 08 - Jewell",
         "🇩🇪 德国 (Germany) 09 - Jewell",
         "🇩🇪 德国 (Germany) 10 - Jewell",
         "🇩🇪 德国 (Germany) 11 - Jewell",
         "🇩🇪 德国 (Germany) 12 - Jewell",
         "🇩🇪 德国 (Germany) 13 - Jewell",
-        "🇩🇪 德国 (Germany) 14 - Jewell",
+        "🇩🇪 德国 (Germany) 14 R50 - Jewell",
         "🇩🇪 德国 (Germany) 15 - Jewell",
-        "🇩🇪 德国 (Germany) 16 - Jewell",
-        "🇩🇪 德国 (Germany) 17 - Jewell",
+        "🇩🇪 德国 (Germany) 16 R45 - Jewell",
+        "🇩🇪 德国 (Germany) 17 R65 - Jewell",
         "🇩🇪 德国 (Germany) 18 - Jewell",
         "🇩🇪 德国 (Germany) 19 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 20 - Jewell",
-        "🇩🇪 德国 (Germany) 21 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 22 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 23 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 24 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 25 - Jewell",
-        "🇩🇪 德国 (Germany) 26 - Jewell",
-        "🇩🇪 德国 (Germany) 27 - Jewell",
-        "🇩🇪 德国 (Germany) 28 - Jewell",
-        "🇩🇪 德国 (Germany) 29 ⚠R - Jewell",
-        "🇩🇪 德国 (Germany) 30 - Jewell",
-        "🇩🇪 德国 (Germany) 31 - Jewell"
+        "🇩🇪 德国 (Germany) 20 R45 - Jewell"
       ]
     },
     {
@@ -565,36 +369,25 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇪 德国 (Germany) 01 - Jewell",
-        "🇩🇪 德国 (Germany) 02 - Jewell",
+        "🇩🇪 德国 (Germany) 02 R65 - Jewell",
         "🇩🇪 德国 (Germany) 03 - Jewell",
         "🇩🇪 德国 (Germany) 04 - Jewell",
         "🇩🇪 德国 (Germany) 05 - Jewell",
         "🇩🇪 德国 (Germany) 06 - Jewell",
         "🇩🇪 德国 (Germany) 07 - Jewell",
-        "🇩🇪 德国 (Germany) 08 R62 - Jewell",
+        "🇩🇪 德国 (Germany) 08 - Jewell",
         "🇩🇪 德国 (Germany) 09 - Jewell",
         "🇩🇪 德国 (Germany) 10 - Jewell",
         "🇩🇪 德国 (Germany) 11 - Jewell",
         "🇩🇪 德国 (Germany) 12 - Jewell",
         "🇩🇪 德国 (Germany) 13 - Jewell",
-        "🇩🇪 德国 (Germany) 14 - Jewell",
+        "🇩🇪 德国 (Germany) 14 R50 - Jewell",
         "🇩🇪 德国 (Germany) 15 - Jewell",
-        "🇩🇪 德国 (Germany) 16 - Jewell",
-        "🇩🇪 德国 (Germany) 17 - Jewell",
+        "🇩🇪 德国 (Germany) 16 R45 - Jewell",
+        "🇩🇪 德国 (Germany) 17 R65 - Jewell",
         "🇩🇪 德国 (Germany) 18 - Jewell",
         "🇩🇪 德国 (Germany) 19 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 20 - Jewell",
-        "🇩🇪 德国 (Germany) 21 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 22 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 23 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 24 R65 - Jewell",
-        "🇩🇪 德国 (Germany) 25 - Jewell",
-        "🇩🇪 德国 (Germany) 26 - Jewell",
-        "🇩🇪 德国 (Germany) 27 - Jewell",
-        "🇩🇪 德国 (Germany) 28 - Jewell",
-        "🇩🇪 德国 (Germany) 29 ⚠R - Jewell",
-        "🇩🇪 德国 (Germany) 30 - Jewell",
-        "🇩🇪 德国 (Germany) 31 - Jewell"
+        "🇩🇪 德国 (Germany) 20 R45 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

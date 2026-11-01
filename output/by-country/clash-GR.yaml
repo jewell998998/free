@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇱 AL 01 - Jewell
-  server: 151.123.187.198
+- name: 🇬🇷 希腊 (Greece) 01 - Jewell
+  server: 85.90.197.220
   udp: true
   port: 443
   type: vless
-  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
+  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
-    short-id: 8718c58d3d51db59
-  servername: al2.magazinnarubeva.ru
+    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
+    short-id: 94acb54627612d43
+  servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇱 AL 01 - Jewell
+  - 🇬🇷 希腊 (Greece) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱 AL 01 - Jewell
+  - 🇬🇷 希腊 (Greece) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,31 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-      "server": "forshynewh.duckdns.org",
+      "server": "uae.purchasebot.net",
       "server_port": 443,
-      "password": "69e41e64-a832-471a-b740-94577ca85520",
+      "uuid": "0d607d84-0ae0-4b9c-a4f3-1766ab456e02",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "forshynewh.duckdns.org",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 02 - Jewell",
-      "server": "185.253.116.33",
-      "server_port": 14430,
-      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "185.253.116.33"
+        "server_name": "bunny.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM",
+          "short_id": "e7c5f2a9"
         }
       }
     },
@@ -37,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

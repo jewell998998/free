@@ -5,42 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 156.252.229.11
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
-  server: 156.252.229.11
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: random
-- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
-  server: 156.252.229.159
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 04 - Jewell
   server: 156.252.229.30
   udp: true
   port: 8443
@@ -51,8 +15,8 @@ proxies:
     public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
     short-id: 974f7f8f
   servername: play.googleapis.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 05 - Jewell
+  client-fingerprint: ''
+- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
   server: 156.252.229.136
   udp: true
   port: 8443
@@ -63,19 +27,7 @@ proxies:
     public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
     short-id: 974f7f8f
   servername: play.googleapis.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 06 - Jewell
-  server: 45.198.55.200
-  udp: true
-  port: 25150
-  type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  reality-opts:
-    public-key: Qvn7tV54mdqxJ40LmmoI1PRM1QKXEbfFOZS-omPKhGY
-    short-id: 4301a484cc762aa6
-  servername: www.samsung.com
-  client-fingerprint: firefox
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -83,10 +35,6 @@ proxy-groups:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
   - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
-  - 🇪🇸 西班牙 (Spain) 04 - Jewell
-  - 🇪🇸 西班牙 (Spain) 05 - Jewell
-  - 🇪🇸 西班牙 (Spain) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -94,9 +42,5 @@ proxy-groups:
   proxies:
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
   - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
-  - 🇪🇸 西班牙 (Spain) 04 - Jewell
-  - 🇪🇸 西班牙 (Spain) 05 - Jewell
-  - 🇪🇸 西班牙 (Spain) 06 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,22 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com
+  server: 8c09515a-tk7400-tlvq5w-1jcwu.pccw3.hyhuawei.com
+  udp: true
+  port: 443
+  type: tuic
+  uuid: f93486ce-cc84-11ed-9e98-f23c913c8d2b
+  password: f93486ce-cc84-11ed-9e98-f23c913c8d2b
+  sni: 8c09515a-tk7400-tlvq5w-1jcwu.pccw3.hyhuawei.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com
   udp: true
   port: 443
   type: hysteria2
-  password: d6e1207c-f41a-11ef-9495-f23c91cfbbc9
-  sni: 05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com
+  password: 3bd247a8-993e-11ec-a8bf-f23c91cfbbc9
+  sni: 0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com
   skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 38.76.180.144
-  udp: true
-  port: 1443
-  type: vless
-  uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
-  network: ws
-  ws-opts:
-    path: /vless-ws
 proxy-groups:
 - name: PROXIES
   type: select

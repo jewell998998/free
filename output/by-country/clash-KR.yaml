@@ -5,54 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 168.110.119.243
+  server: 104.16.154.175
   udp: true
-  port: 20039
-  type: trojan
-  password: dc9e33c7a6df4164
-  sni: ikr100a.zxom.eu.org
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
-  server: 218.237.185.234
-  udp: true
-  port: 4652
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
-  server: kr002.zestapp778.com
-  udp: true
-  port: 48851
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: kr002.zestapp778.com
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 04 - Jewell
-  server: 152.69.226.63
-  udp: true
-  port: 25555
+  port: 443
   type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  uuid: 9ca218c0-e97b-4a8a-a345-af005a0ae3e5
+  tls: true
+  servername: v.poker2025.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: v.poker2025.dpdns.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
-  - 🇰🇷 韩国 (South Korea) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
-  - 🇰🇷 韩国 (South Korea) 04 - Jewell
 rules:
 - MATCH,PROXIES

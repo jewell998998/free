@@ -4,14 +4,78 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
-      "server": "5.178.109.174",
-      "server_port": 14430,
-      "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
+      "server": "70.34.207.14",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "searchhealthcarejobsandbuildmedicalcareerpathway.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+      "server": "132.243.231.21",
+      "server_port": 443,
+      "uuid": "b310e287-79fa-45e3-887f-9564c0e390f7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "se.frgcdn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q",
+          "short_id": "2d6d073dc88f22a8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+      "server": "89.125.37.6",
+      "server_port": 443,
+      "uuid": "b310e287-79fa-45e3-887f-9564c0e390f7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "se.frgcdn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q",
+          "short_id": "2d6d073dc88f22a8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+      "server": "132.243.231.71",
+      "server_port": 443,
+      "uuid": "b310e287-79fa-45e3-887f-9564c0e390f7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "se.frgcdn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q",
+          "short_id": "2d6d073dc88f22a8"
+        }
       }
     },
     {
@@ -19,14 +83,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

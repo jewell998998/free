@@ -4,30 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇲🇽 墨西哥 (Mexico) 01 - Jewell",
-      "server": "149.104.87.33",
-      "server_port": 15083,
-      "password": "5t6i121em5lkmsmk",
-      "tls": {
-        "enabled": true,
-        "server_name": "mx001.zestapp778.com",
-        "insecure": false
-      }
+      "type": "shadowsocks",
+      "tag": "🇦🇹 奥地利 (Austria) 01 - Jewell",
+      "server": "152.53.1.57",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "AdawffFMHymlasRb0VOP3HFf7sTG5sJx"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇽 墨西哥 (Mexico) 01 - Jewell"
+        "🇦🇹 奥地利 (Austria) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇽 墨西哥 (Mexico) 01 - Jewell"
+        "🇦🇹 奥地利 (Austria) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

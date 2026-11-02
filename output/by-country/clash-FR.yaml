@@ -4,108 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R42 - Jewell
-  server: 77.216.2.178
-  udp: true
-  port: 30
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: BHxDn8Z67zuaoQsjHqSAMQQs8Dz1CGqJ
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 199.232.78.160
-  udp: true
-  port: 443
-  type: vless
-  uuid: XpnTeam-76
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 03 R40 - Jewell
+- name: 🇫🇷 法国 (France) 01 R40 - Jewell
   server: pl134.vpnbook.com
   udp: true
   port: 443
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 161.97.160.224
+- name: 🇫🇷 法国 (France) 02 R40 - Jewell
+  server: pl140.vpnbook.com
   udp: true
   port: 443
-  type: vless
-  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
-    short-id: e6
-  servername: passport.yandex.ru
-  client-fingerprint: ''
-- name: 🇫🇷 法国 (France) 05 R42 - Jewell
-  server: www.windowssearchtools.com
-  udp: true
-  port: 443
-  type: vmess
-  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: www.windowssearchtools.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.windowssearchtools.com
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 108.61.177.57
-  udp: true
-  port: 16778
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: fr001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 07 ⚠R - Jewell
-  server: ru3.radiolumens.uk
-  udp: true
-  port: 8444
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru3.radiolumens.uk
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-uk
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R42 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 R40 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 R42 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
-  - 🇫🇷 法国 (France) 07 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 01 R40 - Jewell
+  - 🇫🇷 法国 (France) 02 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R42 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 R40 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
-  - 🇫🇷 法国 (France) 05 R42 - Jewell
-  - 🇫🇷 法国 (France) 06 - Jewell
-  - 🇫🇷 法国 (France) 07 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 01 R40 - Jewell
+  - 🇫🇷 法国 (France) 02 R40 - Jewell
 rules:
 - MATCH,PROXIES

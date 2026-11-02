@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
-  server: 49.254.204.133
+- name: 🇮🇳 印度 (India) 01 R53 - Jewell
+  server: 172.105.39.124
   udp: true
-  port: 1774
+  port: 7002
   type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇮🇳 印度 (India) 01 R53 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇮🇳 印度 (India) 01 R53 - Jewell
 rules:
 - MATCH,PROXIES

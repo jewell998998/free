@@ -5,23 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-      "server": "77.232.135.141",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
-        "insecure": false
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-pl"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
       "server": "2.26.255.215",
       "server_port": 443,
       "uuid": "69e41e64-a832-471a-b740-94577ca85520",
@@ -31,7 +15,7 @@
         "server_name": "cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -42,44 +26,24 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
-      "server": "188.225.83.133",
-      "server_port": 443,
-      "uuid": "5f1c2e83-d4aa-4f10-81e9-e0ccc018974c",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "145.63.143.205",
+      "server_port": 8444,
+      "uuid": "35c9f200-7520-4005-b78e-f8a2fb9f68f7",
       "tls": {
         "enabled": true,
-        "server_name": "xnodtwx.artemida.live",
+        "server_name": "pl1.meshbeat.online",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "JqmkP6Fys7jN2Fu1iDJuWKVNPhlgHfy_pj1DHFVKVhw",
-          "short_id": "a1b2c3d4e5f6a7b8"
         }
       },
       "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
-      "server": "pl1.h1cloud.net",
-      "server_port": 27591,
-      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM",
-          "short_id": "6c5c7900406a1ae7"
+        "type": "ws",
+        "path": "/api/v1/devices/10be32b380/telemetry",
+        "headers": {
+          "Host": "pl1.meshbeat.online"
         }
       }
     },
@@ -88,20 +52,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 - Jewell",
-        "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 - Jewell",
-        "🇵🇱 波兰 (Poland) 03 - Jewell",
-        "🇵🇱 波兰 (Poland) 04 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

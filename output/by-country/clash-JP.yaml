@@ -18,6 +18,14 @@ proxies:
   alpn:
   - h3
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 167.179.108.225
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: discoverparttimepositionsandsupplementyourincomeguide.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: ga1data.xyy123.bid
   udp: true
   port: 443
@@ -37,6 +45,7 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 R55 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +53,6 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 R55 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
 rules:
 - MATCH,PROXIES

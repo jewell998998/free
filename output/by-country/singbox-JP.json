@@ -4,19 +4,21 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
-      "server": "167.179.108.225",
+      "type": "tuic",
+      "tag": "🇯🇵 日本 (Japan) 01 R55 - Jewell",
+      "server": "de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "uuid": "cd1b0ae0-4010-11ee-953a-f23c9164ca5d",
+      "password": "cd1b0ae0-4010-11ee-953a-f23c9164ca5d",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
       "tls": {
         "enabled": true,
-        "server_name": "discoverparttimepositionsandsupplementyourincomeguide.com",
+        "server_name": "de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com",
         "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
@@ -41,43 +43,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
-      "server": "18.183.215.124",
-      "server_port": 28573,
-      "uuid": "871bfce7-8440-4394-8d82-56b51f20fdad",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.sony.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg",
-          "short_id": "03653bc03be10c97"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 - Jewell"
+        "🇯🇵 日本 (Japan) 01 R55 - Jewell",
+        "🇯🇵 日本 (Japan) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 - Jewell"
+        "🇯🇵 日本 (Japan) 01 R55 - Jewell",
+        "🇯🇵 日本 (Japan) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

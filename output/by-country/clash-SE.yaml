@@ -1,0 +1,63 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  server: 132.243.231.21
+  udp: true
+  port: 443
+  type: vless
+  uuid: b310e287-79fa-45e3-887f-9564c0e390f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: se.frgcdn.xyz
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  server: 132.243.231.71
+  udp: true
+  port: 443
+  type: vless
+  uuid: b310e287-79fa-45e3-887f-9564c0e390f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: se.frgcdn.xyz
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  server: 89.125.37.1
+  udp: true
+  port: 443
+  type: vless
+  uuid: b310e287-79fa-45e3-887f-9564c0e390f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: se.frgcdn.xyz
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+rules:
+- MATCH,PROXIES

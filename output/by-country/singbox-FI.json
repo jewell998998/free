@@ -4,18 +4,28 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇻🇳 越南 (Vietnam) 01 - Jewell",
-      "server": "109.110.162.40",
-      "server_port": 23005,
-      "password": "fac593ac-d6aa-4523-bea9-b3eb2a2b3da3",
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
+      "server": "hw6.divarkhaghazi.com",
+      "server_port": 465,
+      "uuid": "09f30c46-3964-41ce-882a-72aee83ddd42",
       "tls": {
         "enabled": true,
-        "server_name": "82.yuanul.com",
+        "server_name": "hw6.divarkhaghazi.com",
         "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "hw6.divarkhaghazi.com."
         }
       }
     },
@@ -24,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇻🇳 越南 (Vietnam) 01 - Jewell"
+        "🇫🇮 芬兰 (Finland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇻🇳 越南 (Vietnam) 01 - Jewell"
+        "🇫🇮 芬兰 (Finland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

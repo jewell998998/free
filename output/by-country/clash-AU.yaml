@@ -15,7 +15,17 @@ proxies:
     host: []
     path: /
 - name: 🇦🇺 澳大利亚 (Australia) 02 R52 - Jewell
-  server: 170.64.230.226
+  server: 170.64.192.221
+  udp: true
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇦🇺 澳大利亚 (Australia) 03 R52 - Jewell
+  server: 170.64.195.132
   udp: true
   port: 443
   type: vless
@@ -31,6 +41,7 @@ proxy-groups:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 R52 - Jewell
   - 🇦🇺 澳大利亚 (Australia) 02 R52 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 03 R52 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +49,6 @@ proxy-groups:
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 R52 - Jewell
   - 🇦🇺 澳大利亚 (Australia) 02 R52 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 03 R52 - Jewell
 rules:
 - MATCH,PROXIES

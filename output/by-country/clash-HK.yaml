@@ -5,27 +5,67 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 0e05f970-tki800-traezq-1t5n1.hk2.hyhuawei.com
+  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
   udp: true
   port: 443
-  type: vless
-  uuid: ea800f9e-ca6c-11ef-8e74-f23c913c8d2b
-  tls: true
-  reality-opts:
-    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
-  servername: download.windowsupdate.com
-  client-fingerprint: chrome
+  type: tuic
+  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: d6e1207c-f41a-11ef-9495-f23c91cfbbc9
+  sni: 05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 38861941-tmm5c0-tvb36r-1qwom.nw4.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 8d0ec7cc-eefa-11ee-9b59-f23c91cfbbc9
+  sni: 38861941-tmm5c0-tvb36r-1qwom.nw4.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: bgp-1313122-228.834928.xyz
+  udp: true
+  port: 20511
+  type: ss
+  cipher: aes-256-gcm
+  password: 6rcBjQuF0jM6if5e
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  server: 45.144.174.24
+  udp: true
+  port: 8388
+  type: ss
+  cipher: aes-256-gcm
+  password: kDGQHTLfTdgpwUyL
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
 rules:
 - MATCH,PROXIES

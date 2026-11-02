@@ -4,78 +4,44 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-      "server": "58.152.81.104",
-      "server_port": 443,
-      "uuid": "f02ee2b4-d760-11ec-bd7c-f23c913c8d2b",
-      "password": "f02ee2b4-d760-11ec-bd7c-f23c913c8d2b",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 02 (移动家宽) - Jewell",
-      "server": "us001.zestapp778.com",
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+      "server": "130.94.19.95",
       "server_port": 57277,
       "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
         "server_name": "us001.zestapp778.com",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
-      "server": "bd452e87-tmm5c0-tv7dx2-py5w.hk3.hyhuawei.com",
-      "server_port": 443,
-      "password": "ae5338ae-9a70-58c9-3d47-7d54a5675715",
-      "tls": {
-        "enabled": true,
-        "server_name": "bd452e87-tmm5c0-tv7dx2-py5w.hk3.hyhuawei.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - Jewell",
-      "server": "0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com",
-      "server_port": 443,
-      "password": "3bd247a8-993e-11ec-a8bf-f23c91cfbbc9",
-      "tls": {
-        "enabled": true,
-        "server_name": "0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com",
-        "insecure": false
-      }
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell",
+      "server": "49.254.204.133",
+      "server_port": 1774,
+      "method": "aes-256-cfb",
+      "password": "1234!@#$"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-        "🇺🇸 美国 (United States) 02 (移动家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - Jewell"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+        "🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-        "🇺🇸 美国 (United States) 02 (移动家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - Jewell"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+        "🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

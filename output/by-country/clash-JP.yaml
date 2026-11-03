@@ -4,20 +4,52 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01 R55 - Jewell
-  server: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
+- name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: 128.241.25.72
   udp: true
-  port: 443
-  type: tuic
-  uuid: cd1b0ae0-4010-11ee-953a-f23c9164ca5d
-  password: cd1b0ae0-4010-11ee-953a-f23c9164ca5d
-  sni: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
+  port: 30021
+  type: vless
+  uuid: af66ba44-ce34-4118-861a-e7a7d54302b9
+  tls: true
+  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
   skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: native
-  alpn:
-  - h3
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 128.241.25.11
+  udp: true
+  port: 30021
+  type: vless
+  uuid: 339cda3d-79a5-4d37-8ad8-eddc130c992a
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 128.241.25.11
+  udp: true
+  port: 30021
+  type: vless
+  uuid: c03bbba1-93ab-4781-8e8e-089cd257193f
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
   server: 167.179.108.225
   udp: true
   port: 443
@@ -25,34 +57,40 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: discoverparttimepositionsandsupplementyourincomeguide.com
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: ga1data.xyy123.bid
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: 203.137.165.164
   udp: true
-  port: 443
+  port: 57554
   type: vless
-  uuid: 81f686e2-0700-4e7d-b3aa-2f7fc544bcc3
-  flow: xtls-rprx-vision
+  uuid: 91cf01c5-62c1-44cd-80e0-df6310025dab
   tls: true
-  reality-opts:
-    public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
-    short-id: 00b0389a
-  servername: www.amzn.com
+  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01 R55 - Jewell
+  - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01 R55 - Jewell
+  - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
 rules:
 - MATCH,PROXIES

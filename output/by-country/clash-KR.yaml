@@ -5,12 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 3.34.91.121
+  server: 168.110.119.243
   udp: true
-  port: 12308
+  port: 20039
   type: trojan
-  password: 3637190e-4ce3-41cd-9425-f5676345b38c
-  sni: kr02.ulifeai.com
+  password: dc9e33c7a6df4164
+  sni: ikr100a.zxom.eu.org
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
+  server: 158.247.255.150
+  udp: true
+  port: 48851
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: kr002.zestapp778.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -18,11 +26,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 - Jewell
 rules:
 - MATCH,PROXIES

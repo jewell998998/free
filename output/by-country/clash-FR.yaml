@@ -4,33 +4,165 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R40 - Jewell
-  server: pl134.vpnbook.com
+- name: 🇫🇷 法国 (France) 01 R41 - Jewell
+  server: 79.137.99.183
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 02 - Jewell
+  server: 45.77.62.132
+  udp: true
+  port: 22357
+  type: hysteria2
+  password: dq6rfcyex30h1b6z
+  sni: ll5xoe8j.easyiran.org
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: qkdqum5rllpyup7h
+- name: 🇫🇷 法国 (France) 03 - Jewell
+  server: 199.232.78.160
   udp: true
   port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 02 R40 - Jewell
-  server: pl140.vpnbook.com
+  type: vless
+  uuid: XpnTeam-80
+  tls: true
+  servername: default.ssl.fastly.net
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 04 - Jewell
+  server: fr001.zestapp778.com
+  udp: true
+  port: 16778
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: fr001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 05 - Jewell
+  server: ai.smrtai.top
   udp: true
   port: 443
+  type: vless
+  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  tls: true
+  reality-opts:
+    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
+    short-id: 086bf957
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 06 R46 - Jewell
+  server: 57.129.83.85
+  udp: true
+  port: 19999
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 07 R41 - Jewell
+  server: 162.19.82.57
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 08 R41 - Jewell
+  server: 46.105.222.157
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 09 R41 - Jewell
+  server: 46.105.222.155
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 10 R41 - Jewell
+  server: 79.137.99.183
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 11 R46 - Jewell
+  server: 57.129.76.233
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 12 R42 - Jewell
+  server: 104.21.15.251
+  udp: true
+  port: 443
+  type: vmess
+  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.windowssearchtools.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.windowssearchtools.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R40 - Jewell
-  - 🇫🇷 法国 (France) 02 R40 - Jewell
+  - 🇫🇷 法国 (France) 01 R41 - Jewell
+  - 🇫🇷 法国 (France) 02 - Jewell
+  - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 06 R46 - Jewell
+  - 🇫🇷 法国 (France) 07 R41 - Jewell
+  - 🇫🇷 法国 (France) 08 R41 - Jewell
+  - 🇫🇷 法国 (France) 09 R41 - Jewell
+  - 🇫🇷 法国 (France) 10 R41 - Jewell
+  - 🇫🇷 法国 (France) 11 R46 - Jewell
+  - 🇫🇷 法国 (France) 12 R42 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R40 - Jewell
-  - 🇫🇷 法国 (France) 02 R40 - Jewell
+  - 🇫🇷 法国 (France) 01 R41 - Jewell
+  - 🇫🇷 法国 (France) 02 - Jewell
+  - 🇫🇷 法国 (France) 03 - Jewell
+  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
+  - 🇫🇷 法国 (France) 06 R46 - Jewell
+  - 🇫🇷 法国 (France) 07 R41 - Jewell
+  - 🇫🇷 法国 (France) 08 R41 - Jewell
+  - 🇫🇷 法国 (France) 09 R41 - Jewell
+  - 🇫🇷 法国 (France) 10 R41 - Jewell
+  - 🇫🇷 法国 (France) 11 R46 - Jewell
+  - 🇫🇷 法国 (France) 12 R42 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,25 +4,39 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
-  server: 130.94.19.95
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  server: 49.254.204.133
   udp: true
-  port: 57277
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: us001.zestapp778.com
-  skip-cert-verify: false
+  port: 1774
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - Jewell
+  server: 206.1.99.201
+  udp: true
+  port: 25021
+  type: vless
+  uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg
+    short-id: 17fa3af0924c88b3
+  servername: www.samsung.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (移动家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - Jewell
 rules:
 - MATCH,PROXIES

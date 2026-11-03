@@ -5,22 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: pl140.vpnbook.com
-  udp: true
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: fr001.zestapp778.com
+  server: 108.61.177.57
   udp: true
   port: 16778
   type: trojan
   password: 5t6i121em5lkmsmk
   sni: fr001.zestapp778.com
   skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 02 R46 - Jewell
+  server: 57.129.83.85
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇫🇷 法国 (France) 03 R41 - Jewell
-  server: 79.137.99.183
+  server: 46.105.222.157
   udp: true
   port: 1270
   type: vmess
@@ -31,7 +31,7 @@ proxies:
   servername: xmfhlpy.com
   skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 04 R41 - Jewell
-  server: 46.105.222.155
+  server: 79.137.99.183
   udp: true
   port: 1270
   type: vmess
@@ -41,32 +41,73 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 05 R46 - Jewell
-  server: 57.129.83.85
+- name: 🇫🇷 法国 (France) 05 ⚠R - Jewell
+  server: 198.244.201.129
   udp: true
   port: 19999
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 06 - Jewell
+  server: pl140.vpnbook.com
+  udp: true
+  port: 443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 07 R46 - Jewell
+  server: 57.129.76.233
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 08 - Jewell
+  server: 54.36.174.134
+  udp: true
+  port: 443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 09 - Jewell
+  server: ai.smrtai.top
+  udp: true
+  port: 443
+  type: vless
+  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  tls: true
+  reality-opts:
+    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
+    short-id: 086bf957
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
+  - 🇫🇷 法国 (France) 02 R46 - Jewell
   - 🇫🇷 法国 (France) 03 R41 - Jewell
   - 🇫🇷 法国 (France) 04 R41 - Jewell
-  - 🇫🇷 法国 (France) 05 R46 - Jewell
+  - 🇫🇷 法国 (France) 05 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 07 R46 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
+  - 🇫🇷 法国 (France) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
+  - 🇫🇷 法国 (France) 02 R46 - Jewell
   - 🇫🇷 法国 (France) 03 R41 - Jewell
   - 🇫🇷 法国 (France) 04 R41 - Jewell
-  - 🇫🇷 法国 (France) 05 R46 - Jewell
+  - 🇫🇷 法国 (France) 05 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 06 - Jewell
+  - 🇫🇷 法国 (France) 07 R46 - Jewell
+  - 🇫🇷 法国 (France) 08 - Jewell
+  - 🇫🇷 法国 (France) 09 - Jewell
 rules:
 - MATCH,PROXIES

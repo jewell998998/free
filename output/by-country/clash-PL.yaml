@@ -16,7 +16,7 @@ proxies:
     public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
     short-id: '50'
   servername: cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 82.118.22.161
   udp: true
@@ -29,8 +29,84 @@ proxies:
     public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
     short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: 217.60.33.67
+  udp: true
+  port: 8443
+  type: vless
+  uuid: dc413f44-7dce-4cc4-b2c7-878ef70ce464
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -r5xcA3iTzAf63kkb0VIILrLHH1VUq550pFZ-M74Jlc
+    short-id: de
+  servername: go-obsh-auto-drun.keno.su
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: 54.37.131.126
+  udp: true
+  port: 80
+  type: vmess
+  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: 🇵🇱 波兰 (Poland) 05 - Jewell
+  server: 45.144.48.35
+  udp: true
+  port: 443
+  type: vless
+  uuid: 5fb552a8-9c41-4031-86f5-ca10fc802da5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pont2.vethilis.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 06 - Jewell
+  server: 84.23.52.120
+  udp: true
+  port: 28449
+  type: vless
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lovelive
+- name: 🇵🇱 波兰 (Poland) 07 - Jewell
+  server: 84.23.52.120
+  udp: true
+  port: 28453
+  type: vless
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lovelive
+- name: 🇵🇱 波兰 (Poland) 08 - Jewell
+  server: 84.23.52.120
+  udp: true
+  port: 28447
+  type: vless
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /lovelive
+- name: 🇵🇱 波兰 (Poland) 09 - Jewell
   server: 179.198.49.218
   udp: true
   port: 443
@@ -42,7 +118,20 @@ proxies:
     public-key: 9CKMhiYPXEIfQh_XFbbN1GoBxeLxJkaar2wg9FZKfBo
     short-id: 75fe71d16ccae610
   servername: assets-44.topp-con.xyz
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 10 - Jewell
+  server: 84.23.52.120
+  udp: true
+  port: 28447
+  type: vless
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /lovelive
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +140,13 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
+  - 🇵🇱 波兰 (Poland) 06 - Jewell
+  - 🇵🇱 波兰 (Poland) 07 - Jewell
+  - 🇵🇱 波兰 (Poland) 08 - Jewell
+  - 🇵🇱 波兰 (Poland) 09 - Jewell
+  - 🇵🇱 波兰 (Poland) 10 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +155,12 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
+  - 🇵🇱 波兰 (Poland) 06 - Jewell
+  - 🇵🇱 波兰 (Poland) 07 - Jewell
+  - 🇵🇱 波兰 (Poland) 08 - Jewell
+  - 🇵🇱 波兰 (Poland) 09 - Jewell
+  - 🇵🇱 波兰 (Poland) 10 - Jewell
 rules:
 - MATCH,PROXIES

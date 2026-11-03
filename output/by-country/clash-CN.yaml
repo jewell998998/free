@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇳 CN 01 - Jewell
-  server: vpn.cintaku.qzz.io
+  server: 188.114.98.0
   udp: true
   port: 443
   type: vless
@@ -13,11 +13,14 @@ proxies:
   tls: true
   servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vlessws
+    headers:
+      Host: vpn.cintaku.qzz.io
 - name: 🇨🇳 CN 02 - Jewell
-  server: 104.17.11.191
+  server: 188.114.98.0
   udp: true
   port: 443
   type: vless
@@ -25,14 +28,14 @@ proxies:
   tls: true
   servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /vlessws
     headers:
       Host: vpn.cintaku.qzz.io
 - name: 🇨🇳 CN 03 - Jewell
-  server: 104.21.91.49
+  server: 104.17.108.213
   udp: true
   port: 443
   type: vless
@@ -40,7 +43,6 @@ proxies:
   tls: true
   servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /vlessws

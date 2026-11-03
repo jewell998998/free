@@ -5,14 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 93.190.9.2
+  server: 185.95.164.150
   udp: true
-  port: 3090
+  port: 443
   type: vless
-  uuid: 9992be65-f201-44ca-a177-2ca95aaa7ad4
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 53154bc7-0409-4f8c-9873-29adad85fab5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: LnisQq4C_Z-c2atyogsViBwBntRXH7LZhxC1RccGXH4
+    short-id: 1db18aa1
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

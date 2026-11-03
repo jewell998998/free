@@ -4,12 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 152.69.195.67
+- name: 🇯🇵 日本 (Japan) 01 R56 - Jewell
+  server: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
   udp: true
-  port: 47878
-  type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+  port: 443
+  type: tuic
+  uuid: cd1b0ae0-4010-11ee-953a-f23c9164ca5d
+  password: cd1b0ae0-4010-11ee-953a-f23c9164ca5d
+  sni: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: 167.179.108.225
   udp: true
@@ -31,21 +38,36 @@ proxies:
     short-id: 00b0389a
   servername: www.amzn.com
   client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 18.183.215.124
+  udp: true
+  port: 28573
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 01 R56 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 01 R56 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,17 +4,9 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 01 - Jewell",
-      "server": "pl140.vpnbook.com",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "6heexyz"
-    },
-    {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 02 - Jewell",
-      "server": "fr001.zestapp778.com",
+      "tag": "🇫🇷 法国 (France) 01 - Jewell",
+      "server": "108.61.177.57",
       "server_port": 16778,
       "password": "5t6i121em5lkmsmk",
       "tls": {
@@ -23,14 +15,22 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 02 R46 - Jewell",
+      "server": "57.129.83.85",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
       "type": "vmess",
       "tag": "🇫🇷 法国 (France) 03 R41 - Jewell",
-      "server": "79.137.99.183",
+      "server": "46.105.222.157",
       "server_port": 1270,
       "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
       "security": "auto",
@@ -43,7 +43,7 @@
     {
       "type": "vmess",
       "tag": "🇫🇷 法国 (France) 04 R41 - Jewell",
-      "server": "46.105.222.155",
+      "server": "79.137.99.183",
       "server_port": 1270,
       "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
       "security": "auto",
@@ -55,11 +55,55 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 05 R46 - Jewell",
-      "server": "57.129.83.85",
+      "tag": "🇫🇷 法国 (France) 05 ⚠R - Jewell",
+      "server": "198.244.201.129",
       "server_port": 19999,
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 06 - Jewell",
+      "server": "pl140.vpnbook.com",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "6heexyz"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 07 R46 - Jewell",
+      "server": "57.129.76.233",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 08 - Jewell",
+      "server": "54.36.174.134",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "6heexyz"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 09 - Jewell",
+      "server": "ai.smrtai.top",
+      "server_port": 443,
+      "uuid": "086bf957-9cd0-4e55-8280-bbef10435b41",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc",
+          "short_id": "086bf957"
+        }
+      }
     },
     {
       "type": "selector",
@@ -67,10 +111,14 @@
       "outbounds": [
         "auto",
         "🇫🇷 法国 (France) 01 - Jewell",
-        "🇫🇷 法国 (France) 02 - Jewell",
+        "🇫🇷 法国 (France) 02 R46 - Jewell",
         "🇫🇷 法国 (France) 03 R41 - Jewell",
         "🇫🇷 法国 (France) 04 R41 - Jewell",
-        "🇫🇷 法国 (France) 05 R46 - Jewell"
+        "🇫🇷 法国 (France) 05 ⚠R - Jewell",
+        "🇫🇷 法国 (France) 06 - Jewell",
+        "🇫🇷 法国 (France) 07 R46 - Jewell",
+        "🇫🇷 法国 (France) 08 - Jewell",
+        "🇫🇷 法国 (France) 09 - Jewell"
       ]
     },
     {
@@ -78,10 +126,14 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇷 法国 (France) 01 - Jewell",
-        "🇫🇷 法国 (France) 02 - Jewell",
+        "🇫🇷 法国 (France) 02 R46 - Jewell",
         "🇫🇷 法国 (France) 03 R41 - Jewell",
         "🇫🇷 法国 (France) 04 R41 - Jewell",
-        "🇫🇷 法国 (France) 05 R46 - Jewell"
+        "🇫🇷 法国 (France) 05 ⚠R - Jewell",
+        "🇫🇷 法国 (France) 06 - Jewell",
+        "🇫🇷 法国 (France) 07 R46 - Jewell",
+        "🇫🇷 法国 (France) 08 - Jewell",
+        "🇫🇷 法国 (France) 09 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

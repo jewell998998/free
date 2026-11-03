@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 99.79.33.254
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
+  server: 15.222.60.168
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
   server: ca001.zestapp778.com
   udp: true
   port: 46977
@@ -12,33 +26,78 @@ proxies:
   password: 5t6i121em5lkmsmk
   sni: ca001.zestapp778.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: panel.frojbrpibj124.workers.dev
+- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
+  server: 103.106.229.37
   udp: true
-  port: 443
+  port: 21003
   type: vless
-  uuid: 230ca1c7-75ab-4837-8bdd-c8d935b31753
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
   tls: true
-  servername: panel.frojbrpibj124.workers.dev
-  skip-cert-verify: false
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: bab49aa4c2a88d27
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: panel.frojbrpibj124.workers.dev
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: xstack.mahanfixe.workers.dev
+- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
+  server: 510.150333.xyz
   udp: true
-  port: 443
+  port: 21003
   type: vless
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  uuid: 67952583-8572-42e1-943d-0602794f885b
   tls: true
-  servername: xstack.mahanfixe.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /xiron
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: f3602a3a1cf928b7
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 06 - Jewell
+  server: 103.106.229.177
+  udp: true
+  port: 21004
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: 4e0418d648f86141
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 07 - Jewell
+  server: 103.106.229.177
+  udp: true
+  port: 21002
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: d9a6b52e98121db2
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 08 - Jewell
+  server: 103.106.229.37
+  udp: true
+  port: 21004
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇨🇦 加拿大 (Canada) 09 - Jewell
+  server: 103.106.229.37
+  udp: true
+  port: 21001
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: ab39fc68ab3dee81
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,6 +106,12 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
+  - 🇨🇦 加拿大 (Canada) 06 - Jewell
+  - 🇨🇦 加拿大 (Canada) 07 - Jewell
+  - 🇨🇦 加拿大 (Canada) 08 - Jewell
+  - 🇨🇦 加拿大 (Canada) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -55,5 +120,11 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
+  - 🇨🇦 加拿大 (Canada) 06 - Jewell
+  - 🇨🇦 加拿大 (Canada) 07 - Jewell
+  - 🇨🇦 加拿大 (Canada) 08 - Jewell
+  - 🇨🇦 加拿大 (Canada) 09 - Jewell
 rules:
 - MATCH,PROXIES

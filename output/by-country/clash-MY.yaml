@@ -1,0 +1,32 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇲🇾 马来西亚 (Malaysia) 01 ⚠R - Jewell
+  server: cmcc2.shanshan.uk
+  udp: true
+  port: 50002
+  type: vless
+  uuid: 8be92a7a-be68-36ee-9f1b-e07fbdcdb76e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM
+  servername: www.amd.com
+  client-fingerprint: random
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇲🇾 马来西亚 (Malaysia) 01 ⚠R - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇲🇾 马来西亚 (Malaysia) 01 ⚠R - Jewell
+rules:
+- MATCH,PROXIES

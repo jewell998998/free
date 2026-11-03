@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
-  server: 104.17.148.22
-  udp: true
-  port: 2083
-  type: trojan
-  password: uFepQ5r4JSusbY
-  sni: floral-grass-aa1e.dianawpewpek1.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-- name: 🇧🇬 保加利亚 (Bulgaria) 02 - Jewell
   server: 195.123.226.21
   udp: true
   port: 443
@@ -34,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
-  - 🇧🇬 保加利亚 (Bulgaria) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
-  - 🇧🇬 保加利亚 (Bulgaria) 02 - Jewell
 rules:
 - MATCH,PROXIES

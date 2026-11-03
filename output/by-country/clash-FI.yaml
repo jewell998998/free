@@ -4,20 +4,8 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: areal1.greewebservices.ir
-  udp: true
-  port: 2425
-  type: vless
-  uuid: dfb070bf-0b53-43eb-be2b-4b34f7e1644d
-  tls: true
-  reality-opts:
-    public-key: MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o
-    short-id: 9b60d3
-  servername: play.googleapis.com
-  client-fingerprint: ios
-- name: 🇫🇮 芬兰 (Finland) 02 R48 - Jewell
-  server: dns22.m3hrzd.ir
+- name: 🇫🇮 芬兰 (Finland) 01 R49 - Jewell
+  server: 185.4.115.149
   udp: true
   port: 1346
   type: ss
@@ -28,14 +16,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇮 芬兰 (Finland) 01 - Jewell
-  - 🇫🇮 芬兰 (Finland) 02 R48 - Jewell
+  - 🇫🇮 芬兰 (Finland) 01 R49 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮 芬兰 (Finland) 01 - Jewell
-  - 🇫🇮 芬兰 (Finland) 02 R48 - Jewell
+  - 🇫🇮 芬兰 (Finland) 01 R49 - Jewell
 rules:
 - MATCH,PROXIES

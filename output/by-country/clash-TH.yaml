@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 巴西 (Brazil) 01 - Jewell
-  server: br001.zestapp778.com
+- name: 🇹🇭 泰国 (Thailand) 01 - Jewell
+  server: 119.46.51.45
   udp: true
-  port: 39533
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: br001.zestapp778.com
-  skip-cert-verify: false
+  port: 37515
+  type: vmess
+  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 巴西 (Brazil) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 巴西 (Brazil) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 rules:
 - MATCH,PROXIES

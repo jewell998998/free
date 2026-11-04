@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 132.243.207.154
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: tVx2o1LD0BI7CCoXfFSv-Rr_etGde9XpQ-iNA9P3338
+    short-id: 59d2296aa6320c76
+  servername: get-37.topp-con.xyz
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
   server: promo2.betust.net
   udp: true
   port: 443
@@ -12,27 +25,31 @@ proxies:
   password: 2bc6428196efb899f544d750bea0c06d
   sni: promo2.betust.net
   skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 23.81.36.148
-  udp: true
-  port: 8080
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  network: ws
-  ws-opts:
-    path: /
 - name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 23.81.36.148
+  server: 191.44.109.182
   udp: true
-  port: 1222
+  port: 443
   type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  uuid: 7bbd4350-1ed8-42e5-8a31-c30bb81887d1
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  servername: play.google.com
-  client-fingerprint: ''
+    public-key: duP4YUdCodVF7wvLlCBd5zYFzatViPJ6r2OF2gQXOHA
+  servername: booking.com
+  client-fingerprint: edge
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 193.163.203.170
+  udp: true
+  port: 443
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,6 +58,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,5 +67,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
 rules:
 - MATCH,PROXIES

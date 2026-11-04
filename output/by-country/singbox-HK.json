@@ -6,27 +6,39 @@
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "95358662-tmm5c0-tphvvu-gacy.hk3.hyhuawei.com",
+      "server": "d158cca3-tmm5c0-tr9h64-1f1f1.hk3.hyhuawei.com",
       "server_port": 443,
-      "password": "20f87b02-0eaa-11eb-8684-f23c913c8d2b",
+      "password": "61c4be90-6235-11ec-a8bf-f23c91cfbbc9",
       "tls": {
         "enabled": true,
-        "server_name": "95358662-tmm5c0-tphvvu-gacy.hk3.hyhuawei.com",
+        "server_name": "d158cca3-tmm5c0-tr9h64-1f1f1.hk3.hyhuawei.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+      "server": "ddfd0b64-tmm5c0-u0aht1-1rz5s.nw4.hyhuawei.com",
+      "server_port": 443,
+      "password": "40e084d6-0316-11f0-90e2-f23c913c8d2b",
+      "tls": {
+        "enabled": true,
+        "server_name": "ddfd0b64-tmm5c0-u0aht1-1rz5s.nw4.hyhuawei.com",
         "insecure": false
       }
     },
     {
       "type": "tuic",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-      "server": "1fd0c4d5-tk7400-tlbcwm-1rfon.pccw3.hyhuawei.com",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+      "server": "46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com",
       "server_port": 443,
-      "uuid": "aed1cc24-351d-11ef-ba52-f23c9164ca5d",
-      "password": "aed1cc24-351d-11ef-ba52-f23c9164ca5d",
+      "uuid": "f02ee2b4-d760-11ec-bd7c-f23c913c8d2b",
+      "password": "f02ee2b4-d760-11ec-bd7c-f23c913c8d2b",
       "congestion_control": "bbr",
       "udp_relay_mode": "native",
       "tls": {
         "enabled": true,
-        "server_name": "",
+        "server_name": "46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com",
         "insecure": false,
         "alpn": [
           "h3"
@@ -34,15 +46,51 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
-      "server": "283aa14b-tmm5c0-tzkd63-1jr1u.nw4.hyhuawei.com",
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - Jewell",
+      "server": "47.243.167.44",
       "server_port": 443,
-      "password": "2c01eae6-0b6a-11ee-a058-f23c91369f2d",
+      "uuid": "78b3f149-f037-465d-b2fb-11adb6f73ff8",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "283aa14b-tmm5c0-tzkd63-1jr1u.nw4.hyhuawei.com",
+        "server_name": "rhHiErkwRf6fHs2H.v.3dns.vip",
         "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "Host": "rhHiErkwRf6fHs2H.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - Jewell",
+      "server": "23.175.201.177",
+      "server_port": 63691,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "d1rPFOP0VHkK296iGDM/eg=="
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 - Jewell",
+      "server": "210.0.244.157",
+      "server_port": 443,
+      "uuid": "f3ff9bac-2904-4f38-bae1-54ab1a72891b",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "T239VP3HbJ2KJCur7hDHJtrs6eKmKQfU_X1Xg6NmPgI",
+          "short_id": ""
+        }
       }
     },
     {
@@ -52,7 +100,10 @@
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
         "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 04 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 05 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 06 - Jewell"
       ]
     },
     {
@@ -61,7 +112,10 @@
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
         "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 04 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 05 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 06 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

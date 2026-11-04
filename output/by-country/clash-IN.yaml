@@ -15,17 +15,27 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- name: 🇮🇳 印度 (India) 02 - Jewell
+  server: in002.zestapp778.com
+  udp: true
+  port: 42733
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: in002.zestapp778.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01 - Jewell
+  - 🇮🇳 印度 (India) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01 - Jewell
+  - 🇮🇳 印度 (India) 02 - Jewell
 rules:
 - MATCH,PROXIES

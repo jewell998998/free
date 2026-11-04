@@ -5,22 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell",
-      "server": "pah1.vethilis.ru",
-      "server_port": 443,
-      "uuid": "5fb552a8-9c41-4031-86f5-ca10fc802da5",
+      "tag": "🇸🇮 斯洛文尼亚 (Slovenia) 01 - Jewell",
+      "server": "92.42.201.65",
+      "server_port": 4443,
+      "uuid": "e0134f1c-8b74-4733-9c34-50cb251480c2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pah1.vethilis.ru",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "node-slo03.rkitman.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CTiiN_SriTUj-eBv0047HpCWgLtAzWzq-gwvIWN9KUI",
+          "short_id": "7f0275a4db6068fb"
         }
       }
     },
@@ -29,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell"
+        "🇸🇮 斯洛文尼亚 (Slovenia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell"
+        "🇸🇮 斯洛文尼亚 (Slovenia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

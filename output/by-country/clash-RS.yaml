@@ -4,15 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell
-  server: pah1.vethilis.ru
+- name: 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
+  server: 185.72.11.43
   udp: true
   port: 443
   type: vless
-  uuid: 5fb552a8-9c41-4031-86f5-ca10fc802da5
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
   flow: xtls-rprx-vision
   tls: true
-  servername: pah1.vethilis.ru
+  servername: rs8.speedtestinternet.link
   skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
@@ -20,12 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -6,6 +6,25 @@
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+      "server": "188.114.96.9",
+      "server_port": 443,
+      "uuid": "2e305ebe-f6e6-4689-b32f-cd04ab5ff541",
+      "tls": {
+        "enabled": true,
+        "server_name": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/9yvcoldzdoxluyfh7r5gwjhu1chrj",
+        "headers": {
+          "Host": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
       "server": "132.243.207.154",
       "server_port": 443,
       "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
@@ -15,7 +34,7 @@
         "server_name": "get-37.topp-con.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -25,52 +44,19 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 R61 - Jewell",
-      "server": "185.4.115.146",
-      "server_port": 1353,
-      "method": "chacha20-ietf-poly1305",
-      "password": "v1c-i5SSFXP8n4g1Wbc0L9gX82x5O2Qa"
-    },
-    {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-      "server": "promo2.betust.net",
-      "server_port": 443,
-      "password": "2bc6428196efb899f544d750bea0c06d",
-      "tls": {
-        "enabled": true,
-        "server_name": "promo2.betust.net",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+      "server": "23.81.36.148",
+      "server_port": 8080,
+      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-      "server": "pah3.vethilis.ru",
-      "server_port": 443,
-      "uuid": "5fb552a8-9c41-4031-86f5-ca10fc802da5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pah3.vethilis.ru",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
       "server": "23.81.36.148",
       "server_port": 1222,
       "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
@@ -90,7 +76,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 06 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
       "server": "193.188.21.253",
       "server_port": 14430,
       "uuid": "57f7772d-f5d6-4d8f-992d-5fa5e0d6da55",
@@ -104,7 +90,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 07 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 06 - Jewell",
       "server": "193.163.203.170",
       "server_port": 443,
       "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
@@ -114,7 +100,7 @@
         "server_name": "yandex.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -124,12 +110,33 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 07 - Jewell",
+      "server": "193.188.21.253",
+      "server_port": 10444,
+      "uuid": "57f7772d-f5d6-4d8f-992d-5fa5e0d6da55",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "video.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 R61 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
         "🇬🇧 英国 (United Kingdom) 03 - Jewell",
         "🇬🇧 英国 (United Kingdom) 04 - Jewell",
         "🇬🇧 英国 (United Kingdom) 05 - Jewell",
@@ -142,7 +149,7 @@
       "tag": "auto",
       "outbounds": [
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 R61 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
         "🇬🇧 英国 (United Kingdom) 03 - Jewell",
         "🇬🇧 英国 (United Kingdom) 04 - Jewell",
         "🇬🇧 英国 (United Kingdom) 05 - Jewell",

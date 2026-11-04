@@ -5,29 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 185.95.164.150
+  server: 93.190.9.2
   udp: true
-  port: 443
+  port: 3090
   type: vless
-  uuid: 53154bc7-0409-4f8c-9873-29adad85fab5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: LnisQq4C_Z-c2atyogsViBwBntRXH7LZhxC1RccGXH4
-    short-id: 1db18aa1
-  servername: www.apple.com
-  client-fingerprint: chrome
+  uuid: 9992be65-f201-44ca-a177-2ca95aaa7ad4
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  server: me17.msjia8844.site
+  udp: true
+  port: 7443
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
 rules:
 - MATCH,PROXIES

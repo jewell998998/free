@@ -5,22 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell",
-      "server": "185.225.205.53",
-      "server_port": 443,
-      "uuid": "3d526c7f-059c-4e2b-b09a-8569b268935b",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇭🇺 匈牙利 (Hungary) 01 - Jewell",
+      "server": "172.67.131.125",
+      "server_port": 2083,
+      "uuid": "f418674e-f518-4318-8ff9-e10000000046",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
+        "server_name": "smart-edge-424.arti98399-1905.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8",
-          "short_id": "2e82d7ac"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/sync",
+        "headers": {
+          "Host": "smart-edge-424.arti98399-1905.workers.dev"
         }
       }
     },
@@ -29,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell"
+        "🇭🇺 匈牙利 (Hungary) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell"
+        "🇭🇺 匈牙利 (Hungary) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

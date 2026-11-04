@@ -4,14 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
-  server: 49.254.204.133
-  udp: true
-  port: 1774
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
-- name: 🇬🇧 英国 (United Kingdom) 02 (移动家宽) - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell
   server: pah1.vethilis.ru
   udp: true
   port: 443
@@ -22,31 +15,17 @@ proxies:
   servername: pah1.vethilis.ru
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - Jewell
-  server: 206.1.96.108
-  udp: true
-  port: 7443
-  type: hysteria2
-  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
-  sni: me17.msjia8844.site
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 (移动家宽) - Jewell
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 (移动家宽) - Jewell
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 (移动家宽) - Jewell
 rules:
 - MATCH,PROXIES

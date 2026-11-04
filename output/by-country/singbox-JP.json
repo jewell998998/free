@@ -4,26 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
-      "tag": "🇯🇵 日本 (Japan) 01 R56 - Jewell",
-      "server": "de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com",
-      "server_port": 443,
-      "uuid": "cd1b0ae0-4010-11ee-953a-f23c9164ca5d",
-      "password": "cd1b0ae0-4010-11ee-953a-f23c9164ca5d",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
       "server": "167.179.108.225",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -35,7 +17,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
       "server": "ga1data.xyy123.bid",
       "server_port": 443,
       "uuid": "81f686e2-0700-4e7d-b3aa-2f7fc544bcc3",
@@ -56,22 +38,47 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
-      "server": "18.183.215.124",
-      "server_port": 28573,
-      "uuid": "871bfce7-8440-4394-8d82-56b51f20fdad",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "server": "203.137.165.164",
+      "server_port": 57554,
+      "uuid": "9c7501fb-4e23-44d8-9a9e-973807ae4f35",
       "tls": {
         "enabled": true,
-        "server_name": "www.sony.com",
+        "server_name": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
+      "server": "154.31.112.237",
+      "server_port": 26418,
+      "uuid": "4a98013d-7ccb-477b-b613-39a3cff12144",
+      "tls": {
+        "enabled": true,
+        "server_name": "o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev",
+        "insecure": false,
+        "utls": {
           "enabled": true,
-          "public_key": "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg",
-          "short_id": "03653bc03be10c97"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev"
         }
       }
     },
@@ -80,7 +87,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01 R56 - Jewell",
+        "🇯🇵 日本 (Japan) 01 - Jewell",
         "🇯🇵 日本 (Japan) 02 - Jewell",
         "🇯🇵 日本 (Japan) 03 - Jewell",
         "🇯🇵 日本 (Japan) 04 - Jewell"
@@ -90,7 +97,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01 R56 - Jewell",
+        "🇯🇵 日本 (Japan) 01 - Jewell",
         "🇯🇵 日本 (Japan) 02 - Jewell",
         "🇯🇵 日本 (Japan) 03 - Jewell",
         "🇯🇵 日本 (Japan) 04 - Jewell"

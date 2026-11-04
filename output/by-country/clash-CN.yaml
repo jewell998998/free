@@ -13,7 +13,7 @@ proxies:
   tls: true
   servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /vlessws
@@ -28,21 +28,7 @@ proxies:
   tls: true
   servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /vlessws
-    headers:
-      Host: vpn.cintaku.qzz.io
-- name: 🇨🇳 CN 03 - Jewell
-  server: 104.17.108.213
-  udp: true
-  port: 443
-  type: vless
-  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-  tls: true
-  servername: vpn.cintaku.qzz.io
-  skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vlessws
@@ -55,7 +41,6 @@ proxy-groups:
   - AUTO
   - 🇨🇳 CN 01 - Jewell
   - 🇨🇳 CN 02 - Jewell
-  - 🇨🇳 CN 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,6 +48,5 @@ proxy-groups:
   proxies:
   - 🇨🇳 CN 01 - Jewell
   - 🇨🇳 CN 02 - Jewell
-  - 🇨🇳 CN 03 - Jewell
 rules:
 - MATCH,PROXIES

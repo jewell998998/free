@@ -5,62 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  server: dc5d989c-tmm5c0-tzxeoy-hns7.nw4.hyhuawei.com
   udp: true
   port: 443
   type: hysteria2
-  password: 3be8cba8-b721-11ec-8b04-f23c91cfbbc9
-  sni: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  password: 6857f1bc-f27b-11ea-87ad-f23c913c8d2b
+  sni: dc5d989c-tmm5c0-tzxeoy-hns7.nw4.hyhuawei.com
   skip-cert-verify: false
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
+  server: 95691df5-tmm5c0-trpvht-1ey07.hk3.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 203d1d64-3313-11ed-bb74-f23c9164ca5d
+  sni: 95691df5-tmm5c0-trpvht-1ey07.hk3.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com
   udp: true
   port: 443
   type: tuic
-  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
+  uuid: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  password: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  sni: 46b61821-tki800-tlwmty-1gevg.pccw3.hyhuawei.com
   skip-cert-verify: false
   congestion-controller: bbr
   udp-relay-mode: native
   alpn:
   - h3
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
-  sni: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
-  skip-cert-verify: false
 - name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  server: zfd-hkv2.kunlun01dns.com
-  udp: true
-  port: 16115
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  server: forwarded.frnhk.xyz
-  udp: true
-  port: 2087
-  type: anytls
-  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  sni: hk2.gosthk.site
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  server: 210.0.244.157
-  udp: true
-  port: 443
-  type: vless
-  uuid: f3ff9bac-2904-4f38-bae1-54ab1a72891b
-  tls: true
-  reality-opts:
-    public-key: T239VP3HbJ2KJCur7hDHJtrs6eKmKQfU_X1Xg6NmPgI
-  servername: cloudflare.com
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
   server: 210.0.244.227
   udp: true
   port: 443
@@ -80,9 +53,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,8 +62,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
 rules:
 - MATCH,PROXIES

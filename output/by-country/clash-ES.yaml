@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 156.252.229.159
+  server: 156.252.229.11
   udp: true
   port: 8443
   type: vless
@@ -17,6 +17,18 @@ proxies:
   servername: play.googleapis.com
   client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 02 - Jewell
+  server: 156.252.229.11
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  tls: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
+  client-fingerprint: random
+- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
   server: 156.252.229.30
   udp: true
   port: 8443
@@ -27,21 +39,9 @@ proxies:
     public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
     short-id: 974f7f8f
   servername: play.googleapis.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
-  server: 156.252.229.11
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇪🇸 西班牙 (Spain) 04 - Jewell
-  server: 156.252.229.11
+  server: 156.252.229.136
   udp: true
   port: 8443
   type: vless
@@ -51,9 +51,9 @@ proxies:
     public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
     short-id: 974f7f8f
   servername: play.googleapis.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 05 - Jewell
-  server: 156.252.229.50
+  server: 156.252.229.30
   udp: true
   port: 8443
   type: vless
@@ -63,7 +63,7 @@ proxies:
     public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
     short-id: 974f7f8f
   servername: play.googleapis.com
-  client-fingerprint: firefox
+  client-fingerprint: ''
 - name: 🇪🇸 西班牙 (Spain) 06 - Jewell
   server: 156.252.229.136
   udp: true
@@ -77,26 +77,12 @@ proxies:
   servername: play.googleapis.com
   client-fingerprint: ''
 - name: 🇪🇸 西班牙 (Spain) 07 - Jewell
-  server: 46.28.71.247
+  server: dns27.m3hrzd.ir
   udp: true
-  port: 443
-  type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 08 - Jewell
-  server: 2.27.27.56
-  udp: true
-  port: 443
-  type: trojan
-  password: FK2sTEXzZ1KwLBVtxS7vbKSnXAVpgrxd
-  sni: 2.27.27.56
-  skip-cert-verify: false
+  port: 1354
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: v1c-i5SSFXP8n4g1Wbc0L9gX82x5O2Qa
 proxy-groups:
 - name: PROXIES
   type: select
@@ -109,7 +95,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - Jewell
   - 🇪🇸 西班牙 (Spain) 06 - Jewell
   - 🇪🇸 西班牙 (Spain) 07 - Jewell
-  - 🇪🇸 西班牙 (Spain) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -122,6 +107,5 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - Jewell
   - 🇪🇸 西班牙 (Spain) 06 - Jewell
   - 🇪🇸 西班牙 (Spain) 07 - Jewell
-  - 🇪🇸 西班牙 (Spain) 08 - Jewell
 rules:
 - MATCH,PROXIES

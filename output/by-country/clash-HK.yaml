@@ -5,99 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 24f1571a-tmm5c0-tug19l-1go3q.hk3.hyhuawei.com
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 19dd9c70-e4a5-11ed-8347-f23c9164ca5d
-  sni: 24f1571a-tmm5c0-tug19l-1go3q.hk3.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 112.120.123.140
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 3f514ea2-4662-11ed-a8bf-f23c91cfbbc9
-  sni: 9fc34650-tmm5c0-tmj4pk-1kcpe.nw4.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  udp: true
-  port: 443
-  type: tuic
-  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: native
-  alpn:
-  - h3
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  server: 104.21.87.127
-  udp: true
-  port: 2095
-  type: vmess
-  uuid: bca8c159-df05-4bb6-9b75-92aabc2be45f
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: dash.mobiza.ir
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  server: forwarded.frnhk.xyz
-  udp: true
-  port: 2087
-  type: anytls
-  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  sni: hk2.gosthk.site
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  server: zfd-hkv1.kunlun01dns.com
-  udp: true
-  port: 16115
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
-  server: 103.204.174.80
+  server: 85.155.149.190
   udp: true
   port: 443
   type: vless
-  uuid: 91a538f2-e8d6-4fd1-b00a-d39522f20c35
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: c8xReeCgCTOZ2snvR7I4sPtSYAJquSC-_pAIuZG3rVQ
-    short-id: 9b1813e63f474741
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
+    public-key: pGCqNljaUIUVC7xpHa9nFnu6vsQ0OX3QyfvYMhLZuWY
+    short-id: bee10b047804c637
+  servername: hk1.japancase.site
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
 rules:
 - MATCH,PROXIES

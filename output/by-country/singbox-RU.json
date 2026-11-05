@@ -4,25 +4,59 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-      "server": "bot.vudfaro.ir",
-      "server_port": 844,
-      "uuid": "7df4f23f-b361-412a-883a-54dfdb5b8c8f"
+      "server": "185.22.153.192",
+      "server_port": 18443,
+      "method": "aes-256-gcm",
+      "password": "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+      "server": "steel7.hadsvpn.com",
+      "server_port": 443,
+      "password": "23c82941-70f4-4381-90db-bd28e9a902e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "steel7.hadsvpn.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
+      "server": "rus.noooo.win",
+      "server_port": 8443,
+      "uuid": "53de05e9-8de3-48ae-9036-dcb203d4925c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "id-6aeb73b7.adhil.uk",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 俄罗斯 (Russia) 01 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

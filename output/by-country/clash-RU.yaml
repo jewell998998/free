@@ -5,22 +5,46 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: bot.vudfaro.ir
+  server: 185.22.153.192
   udp: true
-  port: 844
+  port: 18443
+  type: ss
+  cipher: aes-256-gcm
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: steel7.hadsvpn.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: rus.noooo.win
+  udp: true
+  port: 8443
   type: vless
-  uuid: 7df4f23f-b361-412a-883a-54dfdb5b8c8f
+  uuid: 53de05e9-8de3-48ae-9036-dcb203d4925c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: id-6aeb73b7.adhil.uk
+  skip-cert-verify: false
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
 rules:
 - MATCH,PROXIES

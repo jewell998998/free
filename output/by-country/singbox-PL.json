@@ -6,17 +6,22 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
-      "server": "77.232.135.141",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "server": "31.77.59.61",
+      "server_port": 443,
+      "uuid": "3d7813c8-fbfb-47a3-95a6-d491db4eda93",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
-        "insecure": false
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-pl"
+        "server_name": "vid.oculon.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI",
+          "short_id": "16e0f049"
+        }
       }
     },
     {
@@ -43,23 +48,57 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
-      "server": "145.63.143.205",
-      "server_port": 8444,
-      "uuid": "35c9f200-7520-4005-b78e-f8a2fb9f68f7",
+      "server": "7194a9t.pl9.h1clayd.click",
+      "server_port": 443,
+      "uuid": "f45d3da3-e488-44f8-b554-94131130e2f6",
       "tls": {
         "enabled": true,
-        "server_name": "pl1.meshbeat.online",
-        "insecure": false,
+        "server_name": "7194a9t.pl9.h1clayd.click",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Nx_8qS7F8ovEMk_3rb9gjFF2x1vOhfgMTa1NVsIweTw",
+          "short_id": "6bbddc360b1d6f51"
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
+      "server": "77.232.135.141",
+      "server_port": 8445,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.radiolumens.uk",
+        "insecure": false
       },
       "transport": {
-        "type": "ws",
-        "path": "/api/v1/devices/10be32b380/telemetry",
-        "headers": {
-          "Host": "pl1.meshbeat.online"
+        "type": "grpc",
+        "service_name": "beru-pl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 05 - Jewell",
+      "server": "82.118.22.161",
+      "server_port": 443,
+      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
+          "short_id": "fa3ea655619a3e78"
         }
       }
     },
@@ -70,7 +109,9 @@
         "auto",
         "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
-        "🇵🇱 波兰 (Poland) 03 - Jewell"
+        "🇵🇱 波兰 (Poland) 03 - Jewell",
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ]
     },
     {
@@ -79,7 +120,9 @@
       "outbounds": [
         "🇵🇱 波兰 (Poland) 01 - Jewell",
         "🇵🇱 波兰 (Poland) 02 - Jewell",
-        "🇵🇱 波兰 (Poland) 03 - Jewell"
+        "🇵🇱 波兰 (Poland) 03 - Jewell",
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

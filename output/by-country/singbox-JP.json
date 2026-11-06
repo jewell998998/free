@@ -4,20 +4,70 @@
   },
   "outbounds": [
     {
+      "type": "tuic",
+      "tag": "🇯🇵 日本 (Japan) 01 R57 - Jewell",
+      "server": "de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "cd1b0ae0-4010-11ee-953a-f23c9164ca5d",
+      "password": "cd1b0ae0-4010-11ee-953a-f23c9164ca5d",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "server": "152.69.195.67",
+      "server_port": 47878,
+      "uuid": "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
+    },
+    {
       "type": "trojan",
-      "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
       "server": "167.179.108.225",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
         "server_name": "discoverparttimepositionsandsupplementyourincomeguide.com",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
+      "server": "66.42.40.136",
+      "server_port": 443,
+      "uuid": "bb9f102d-f023-4d66-8ae3-2245e2904960",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "YSklMc171NEC2B6m8INRbVpRCPIZbO9ekgx53IgyXAs",
+          "short_id": "19a26f04a348e35b"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
       "server": "ga1data.xyy123.bid",
       "server_port": 443,
       "uuid": "81f686e2-0700-4e7d-b3aa-2f7fc544bcc3",
@@ -37,20 +87,41 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 06 - Jewell",
+      "server": "23.27.11.86",
+      "server_port": 443,
+      "uuid": "e8a346c2-e14c-4f82-876f-367dc19ee541",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp.burmy.xyz",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 01 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell",
+        "🇯🇵 日本 (Japan) 06 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 01 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell",
+        "🇯🇵 日本 (Japan) 06 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

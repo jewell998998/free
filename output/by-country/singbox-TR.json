@@ -6,28 +6,18 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-      "server": "185.95.164.150",
-      "server_port": 443,
-      "uuid": "53154bc7-0409-4f8c-9873-29adad85fab5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "LnisQq4C_Z-c2atyogsViBwBntRXH7LZhxC1RccGXH4",
-          "short_id": "1db18aa1"
-        }
+      "server": "93.190.9.194",
+      "server_port": 3090,
+      "uuid": "1589e19a-4ff8-4064-b58a-97f8bfd91b3f",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
-      "server": "198.105.123.224",
+      "server": "tr1.japancase.site",
       "server_port": 443,
       "uuid": "db80088c-32a1-4cb8-a907-0f3cb7844152",
       "flow": "xtls-rprx-vision",
@@ -36,7 +26,7 @@
         "server_name": "tr1.japancase.site",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -46,12 +36,27 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - Jewell",
+      "server": "game.celvixo.ir",
+      "server_port": 2087,
+      "uuid": "43e7030d-fb92-428a-7ef3-6bf89b6d343e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "cp.xelzano.ir"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 02 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 03 - Jewell"
       ]
     },
     {
@@ -59,7 +64,8 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 02 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

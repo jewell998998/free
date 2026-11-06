@@ -5,20 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 185.95.164.150
+  server: 93.190.9.194
   udp: true
-  port: 443
+  port: 3090
   type: vless
-  uuid: 53154bc7-0409-4f8c-9873-29adad85fab5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: LnisQq4C_Z-c2atyogsViBwBntRXH7LZhxC1RccGXH4
-    short-id: 1db18aa1
-  servername: www.apple.com
-  client-fingerprint: chrome
+  uuid: 1589e19a-4ff8-4064-b58a-97f8bfd91b3f
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
 - name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  server: 198.105.123.224
+  server: tr1.japancase.site
   udp: true
   port: 443
   type: vless
@@ -29,7 +25,18 @@ proxies:
     public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
     short-id: 41ae8e266bc3346f
   servername: tr1.japancase.site
-  client-fingerprint: ''
+  client-fingerprint: qq
+- name: 🇹🇷 土耳其 (Turkey) 03 - Jewell
+  server: game.celvixo.ir
+  udp: true
+  port: 2087
+  type: vless
+  uuid: 43e7030d-fb92-428a-7ef3-6bf89b6d343e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cp.xelzano.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  - 🇹🇷 土耳其 (Turkey) 03 - Jewell
 rules:
 - MATCH,PROXIES

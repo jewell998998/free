@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: ru1.radiolumens.uk
-  udp: true
-  port: 8445
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 2.26.255.215
   udp: true
   port: 443
@@ -29,7 +16,45 @@ proxies:
     public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
     short-id: '50'
   servername: cloudflare.com
+  client-fingerprint: ''
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 169.40.37.109
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 1ad0a152-fd07-49af-89bb-09fa1fe8e9b1
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 169.40.37.109
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: 144.31.248.71
+  udp: true
+  port: 443
+  type: vless
+  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
+  tls: true
+  servername: nl2-edge.gacvpn.site
+  skip-cert-verify: false
   client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /static/js/vendor.8a967130.js
+    headers:
+      Host: nl2-edge.gacvpn.site
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: ru1.radiolumens.uk
+  udp: true
+  port: 8445
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +62,8 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +71,7 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
 rules:
 - MATCH,PROXIES

@@ -13,29 +13,87 @@ proxies:
   sni: promo2.betust.net
   skip-cert-verify: false
 - name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 178.214.109.1
+  server: engnode.barnikle1.me
   udp: true
-  port: 443
+  port: 1412
   type: vless
-  uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
+  uuid: 109852f2-4591-498c-9a96-f1d9206ce804
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc
-    short-id: 1cfa55abe4d2dc7a
-  servername: promo-digital.wb.ru
-  client-fingerprint: edge
+    public-key: bNpg56GtTArrVyrnonNlMA-3JyYIAFATdgsH_wn0gmc
+    short-id: 4ea6a183
+  servername: www.dhl.de
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 213.176.92.168
   udp: true
-  port: 14430
+  port: 10444
   type: vless
   uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 82.148.255.201
+  udp: true
+  port: 8444
+  type: vless
+  uuid: 49fdd350-6ffb-4343-b467-14e269bb95de
+  tls: true
+  reality-opts:
+    public-key: DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ
+    short-id: 2bf10fc0a85601e5
+  servername: 360.yandex.ru
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-reality
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 82.148.225.244
+  udp: true
+  port: 8445
+  type: vless
+  uuid: 0fdb1df7-b3b6-4d29-9fd6-2b92fc80b852
+  tls: true
+  reality-opts:
+    public-key: ndIKnA3ySMv5vBJ-OfP8IhFWVu7mtK0nzhgSil1NaVg
+    short-id: 00f7359d92c884cc
+  servername: sw2.cloudvienta.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-reality
+- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  server: 82.148.225.244
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 0fdb1df7-b3b6-4d29-9fd6-2b92fc80b852
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ndIKnA3ySMv5vBJ-OfP8IhFWVu7mtK0nzhgSil1NaVg
+    short-id: 00f7359d92c884cc
+  servername: sw2.cloudvienta.com
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
+  server: 132.243.167.147
+  udp: true
+  port: 443
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nIXZmF729Mzn5hq8aWSxsv8wBDawVYmFNzwBytwYfm0
+    short-id: aafcd65859993991
+  servername: ch1.japancase.site
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,6 +102,10 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,5 +114,9 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
 rules:
 - MATCH,PROXIES

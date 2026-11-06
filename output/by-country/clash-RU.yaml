@@ -1,0 +1,57 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  server: 38.60.223.125
+  udp: true
+  port: 13108
+  type: ss
+  cipher: aes-128-gcm
+  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: ee.subv.ru
+  udp: true
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: dvizhok.su
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 03 R40 - Jewell
+  server: 193.233.252.43
+  udp: true
+  port: 443
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: 41ae8e266bc3346f
+  servername: se1.japancase.site
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 R40 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  - 🇷🇺 俄罗斯 (Russia) 03 R40 - Jewell
+rules:
+- MATCH,PROXIES

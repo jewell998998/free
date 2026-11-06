@@ -5,29 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 95358662-tmm5c0-tphvvu-gacy.hk3.hyhuawei.com
+  server: bd452e87-tmm5c0-tv7dx2-py5w.hk3.hyhuawei.com
   udp: true
   port: 443
   type: hysteria2
-  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
-  sni: 95358662-tmm5c0-tphvvu-gacy.hk3.hyhuawei.com
+  password: ae5338ae-9a70-58c9-3d47-7d54a5675715
+  sni: bd452e87-tmm5c0-tv7dx2-py5w.hk3.hyhuawei.com
   skip-cert-verify: false
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 0499fc3f-tmkao0-tnnrly-g43g.nw4.hyhuawei.com
+  server: ae410052-tmm5c0-tsdg75-tlhh.nw4.hyhuawei.com
   udp: true
   port: 443
   type: hysteria2
-  password: 6ddb6a68-d5f5-ca30-3943-cf0c9876d50c
-  sni: 0499fc3f-tmkao0-tnnrly-g43g.nw4.hyhuawei.com
+  password: bdf3e15e-c64c-11ea-82ef-f23c9164ca5d
+  sni: ae410052-tmm5c0-tsdg75-tlhh.nw4.hyhuawei.com
   skip-cert-verify: false
 - name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: 8c09515a-tk7400-tlvq5w-1jcwu.pccw3.hyhuawei.com
+  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
   udp: true
   port: 443
   type: tuic
-  uuid: f93486ce-cc84-11ed-9e98-f23c913c8d2b
-  password: f93486ce-cc84-11ed-9e98-f23c913c8d2b
-  sni: 8c09515a-tk7400-tlvq5w-1jcwu.pccw3.hyhuawei.com
+  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
   skip-cert-verify: false
   congestion-controller: bbr
   udp-relay-mode: native
@@ -47,17 +47,13 @@ proxies:
   servername: hk1.japancase.site
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  server: 112.120.54.238
+  server: forwarded.frnhk.xyz
   udp: true
-  port: 39471
-  type: vless
-  uuid: 35bf718e-d929-457c-804a-2e9035d541c4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 79kBx_jBo5cqkQ-9Hlm5s-1i_DnddFx9rJ8NBaXY-GQ
-  servername: www.byu.edu
-  client-fingerprint: firefox
+  port: 2087
+  type: anytls
+  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  sni: hk2.gosthk.site
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select

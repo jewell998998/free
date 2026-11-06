@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: ru1.radiolumens.uk
+  udp: true
+  port: 8445
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 2.26.255.215
   udp: true
   port: 443
@@ -16,18 +29,6 @@ proxies:
     public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
     short-id: '50'
   servername: cloudflare.com
-  client-fingerprint: ''
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 7194a9t.pl9.h1clayd.click
-  udp: true
-  port: 443
-  type: vless
-  uuid: f45d3da3-e488-44f8-b554-94131130e2f6
-  tls: true
-  reality-opts:
-    public-key: Nx_8qS7F8ovEMk_3rb9gjFF2x1vOhfgMTa1NVsIweTw
-    short-id: 6bbddc360b1d6f51
-  servername: 7194a9t.pl9.h1clayd.click
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES

@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - Jewell",
+      "server": "185.95.164.150",
+      "server_port": 443,
+      "uuid": "53154bc7-0409-4f8c-9873-29adad85fab5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LnisQq4C_Z-c2atyogsViBwBntRXH7LZhxC1RccGXH4",
+          "short_id": "1db18aa1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
       "server": "198.105.123.224",
       "server_port": 443,
       "uuid": "db80088c-32a1-4cb8-a907-0f3cb7844152",
@@ -29,14 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 01 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 01 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

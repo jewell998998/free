@@ -12,27 +12,17 @@ proxies:
   uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
   alterId: 0
   cipher: auto
-- name: 🇹🇭 泰国 (Thailand) 02 - Jewell
-  server: th001.zestapp778.com
-  udp: true
-  port: 33079
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: th001.zestapp778.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇭 泰国 (Thailand) 01 - Jewell
-  - 🇹🇭 泰国 (Thailand) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 泰国 (Thailand) 01 - Jewell
-  - 🇹🇭 泰国 (Thailand) 02 - Jewell
 rules:
 - MATCH,PROXIES

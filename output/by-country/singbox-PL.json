@@ -6,6 +6,30 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "ru1.radiolumens.uk",
+      "server_port": 8445,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.radiolumens.uk",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-pl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
       "server": "2.26.255.215",
       "server_port": 443,
       "uuid": "69e41e64-a832-471a-b740-94577ca85520",
@@ -15,32 +39,12 @@
         "server_name": "cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
           "public_key": "pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI",
           "short_id": "50"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
-      "server": "7194a9t.pl9.h1clayd.click",
-      "server_port": 443,
-      "uuid": "f45d3da3-e488-44f8-b554-94131130e2f6",
-      "tls": {
-        "enabled": true,
-        "server_name": "7194a9t.pl9.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Nx_8qS7F8ovEMk_3rb9gjFF2x1vOhfgMTa1NVsIweTw",
-          "short_id": "6bbddc360b1d6f51"
         }
       }
     },

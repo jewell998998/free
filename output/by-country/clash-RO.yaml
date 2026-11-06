@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  server: 82.152.132.211
-  udp: true
-  port: 8044
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
-- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
   server: 46.28.67.55
   udp: true
   port: 443
@@ -30,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
 rules:
 - MATCH,PROXIES

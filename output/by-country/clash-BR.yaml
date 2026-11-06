@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
-  server: 49.254.204.133
+- name: 🇧🇷 巴西 (Brazil) 01 - Jewell
+  server: br001.zestapp778.com
   udp: true
-  port: 1774
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
+  port: 39533
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: br001.zestapp778.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇧🇷 巴西 (Brazil) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  - 🇧🇷 巴西 (Brazil) 01 - Jewell
 rules:
 - MATCH,PROXIES

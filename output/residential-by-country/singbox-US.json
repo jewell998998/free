@@ -5,14 +5,18 @@
   "outbounds": [
     {
       "type": "trojan",
-      "tag": "🇧🇷 巴西 (Brazil) 01 - Jewell",
-      "server": "br001.zestapp778.com",
-      "server_port": 39533,
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+      "server": "130.94.19.95",
+      "server_port": 57277,
       "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
-        "server_name": "br001.zestapp778.com",
-        "insecure": false
+        "server_name": "us001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -20,14 +24,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01 - Jewell"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01 - Jewell"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

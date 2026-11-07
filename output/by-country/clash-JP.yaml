@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 R57 - Jewell
-  server: de0bc027-teisg0-thtg7i-1lkt0.jp5.hyhuawei.com
+  server: 104.105.139.38
   udp: true
   port: 443
   type: tuic
@@ -17,17 +17,74 @@ proxies:
   udp-relay-mode: native
   alpn:
   - h3
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 64.110.100.50
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 226279dd-28b2-4b61-96be-a2a0b1afd522
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Uj6mzD2Qjr9PN0nfBCR2-4KyWm-8vddROou39LN6BXM
+    short-id: d7953572
+  servername: www.developer.nvidia.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 207.148.110.255
+  udp: true
+  port: 1080
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 9AUVPZfOeSHmVCMyLvIvrl1wVLvZf7Jv
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 203.137.165.164
+  udp: true
+  port: 57554
+  type: vless
+  uuid: fb4c1c39-2204-43bb-853c-f8579a77feb4
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: 203.137.165.164
+  udp: true
+  port: 57554
+  type: vless
+  uuid: a2336cca-3fd0-45cb-8ac5-1de6d17692b2
+  tls: true
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
 rules:
 - MATCH,PROXIES

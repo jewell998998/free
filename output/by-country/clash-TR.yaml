@@ -25,18 +25,20 @@ proxies:
     public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
     short-id: 41ae8e266bc3346f
   servername: tr1.japancase.site
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 03 - Jewell
-  server: game.celvixo.ir
+  server: 129.101.100.4
   udp: true
-  port: 2087
+  port: 443
   type: vless
-  uuid: 43e7030d-fb92-428a-7ef3-6bf89b6d343e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cp.xelzano.ir
+  uuid: 8fb19a9e-ca2b-433a-8469-e4c7796033b2
+  tls: true
+  servername: falmero.store
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de1.v1
 proxy-groups:
 - name: PROXIES
   type: select

@@ -26,41 +26,29 @@ proxies:
   sni: resources.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 - name: 🇨🇭 瑞士 (Switzerland) 03 R49 - Jewell
-  server: 208.69.78.29
+  server: 208.69.78.19
   udp: true
   port: 443
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
+  sni: www.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 04 - Jewell
-  server: 176.65.144.221
+- name: 🇨🇭 瑞士 (Switzerland) 04 R49 - Jewell
+  server: 208.69.78.222
   udp: true
-  port: 8445
-  type: vless
-  uuid: 89564b16-7ced-465d-a8f3-61389547e96e
-  tls: true
-  reality-opts:
-    public-key: KcFNW-Yq9YucHEGiEe2ZEnIbxEuCmyO3S6yTglZR7ws
-    short-id: 7ea8737c31629437
-  servername: sw.cloudvienta.com
-  client-fingerprint: ios
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-reality
-- name: 🇨🇭 瑞士 (Switzerland) 05 - Jewell
-  server: 176.65.144.221
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 05 R49 - Jewell
+  server: 208.69.78.222
   udp: true
-  port: 8443
-  type: vless
-  uuid: 89564b16-7ced-465d-a8f3-61389547e96e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KcFNW-Yq9YucHEGiEe2ZEnIbxEuCmyO3S6yTglZR7ws
-    short-id: 7ea8737c31629437
-  servername: sw.cloudvienta.com
-  client-fingerprint: firefox
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -69,8 +57,8 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01 R54 - Jewell
   - 🇨🇭 瑞士 (Switzerland) 02 R49 - Jewell
   - 🇨🇭 瑞士 (Switzerland) 03 R49 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 04 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 05 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 04 R49 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 05 R49 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,7 +67,7 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01 R54 - Jewell
   - 🇨🇭 瑞士 (Switzerland) 02 R49 - Jewell
   - 🇨🇭 瑞士 (Switzerland) 03 R49 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 04 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 05 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 04 R49 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 05 R49 - Jewell
 rules:
 - MATCH,PROXIES

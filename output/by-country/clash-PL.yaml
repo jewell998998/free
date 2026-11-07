@@ -5,45 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 2.26.255.215
-  udp: true
-  port: 443
-  type: vless
-  uuid: 69e41e64-a832-471a-b740-94577ca85520
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
-    short-id: '50'
-  servername: cloudflare.com
-  client-fingerprint: ''
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 169.40.37.109
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 1ad0a152-fd07-49af-89bb-09fa1fe8e9b1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 169.40.37.109
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: 144.31.248.71
-  udp: true
-  port: 443
-  type: vless
-  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
-  tls: true
-  servername: nl2-edge.gacvpn.site
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /static/js/vendor.8a967130.js
-    headers:
-      Host: nl2-edge.gacvpn.site
-- name: 🇵🇱 波兰 (Poland) 04 - Jewell
-  server: ru1.radiolumens.uk
+  server: 77.232.135.141
   udp: true
   port: 8445
   type: vless
@@ -51,10 +13,16 @@ proxies:
   tls: true
   servername: ru1.radiolumens.uk
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: beru-pl
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 54.37.235.208
+  udp: true
+  port: 11169
+  type: ss
+  cipher: aes-128-gcm
+  password: 122e6f90890e2691f3da63eddf951495
 proxy-groups:
 - name: PROXIES
   type: select
@@ -62,8 +30,6 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
-  - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,7 +37,5 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
-  - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 - Jewell
 rules:
 - MATCH,PROXIES

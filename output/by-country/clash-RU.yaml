@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: fduknew.titun.su
-  udp: true
-  port: 443
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: bizorg.su
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   server: novonl.subv.ru
   udp: true
   port: 443
@@ -30,8 +17,8 @@ proxies:
     short-id: 428ef87fd47a3a32
   servername: golos.mail.ru
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 179.43.166.190
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 89.105.218.138
   udp: true
   port: 443
   type: vless
@@ -41,17 +28,36 @@ proxies:
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
-  servername: perevodchiki.su
+  servername: golos.mail.ru
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  server: 38.60.223.125
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: fduknew.titun.su
   udp: true
-  port: 13108
-  type: ss
-  cipher: aes-128-gcm
-  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: bizorg.su
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: 50.7.227.77
+  udp: true
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: bizorg.su
+  client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 185.215.184.53
+  server: 185.215.184.85
   udp: true
   port: 443
   type: vless
@@ -64,62 +70,38 @@ proxies:
   servername: dvizhok.su
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  server: 92.243.66.79
+  server: 185.215.184.85
   udp: true
   port: 443
   type: vless
-  uuid: c5f59ef3-9540-49fa-bd1e-c6c2f79df49a
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o
-    short-id: 8d03c10b6a874a9c
-  servername: ru-mow.probe.geomyip.com
-  client-fingerprint: safari
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: dvizhok.su
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 194.26.229.214
+  server: 38.60.223.125
   udp: true
-  port: 4100
-  type: vless
-  uuid: a9f07ec1-bd8a-4c95-a281-3de7f0b76853
-  network: ws
-  ws-opts:
-    path: /v1
+  port: 13108
+  type: ss
+  cipher: aes-128-gcm
+  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
 - name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  server: 194.26.229.207
+  server: 147.45.104.86
   udp: true
-  port: 4100
+  port: 7443
   type: vless
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-- name: 🇷🇺 俄罗斯 (Russia) 09 - Jewell
-  server: 194.26.229.207
-  udp: true
-  port: 2200
-  type: vless
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-- name: 🇷🇺 俄罗斯 (Russia) 10 R40 - Jewell
-  server: 193.233.252.43
-  udp: true
-  port: 443
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  uuid: af185070-7170-46a8-b1e9-d61a035f4691
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
-    short-id: 41ae8e266bc3346f
-  servername: se1.japancase.site
-  client-fingerprint: firefox
+    public-key: KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho
+    short-id: a7eb8a4e
+  servername: max.ru
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -133,8 +115,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 10 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -148,7 +128,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 10 R40 - Jewell
 rules:
 - MATCH,PROXIES

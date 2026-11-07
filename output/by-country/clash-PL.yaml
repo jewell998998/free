@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 77.232.135.141
-  udp: true
-  port: 8445
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 54.37.235.208
   udp: true
   port: 11169
@@ -29,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
 rules:
 - MATCH,PROXIES

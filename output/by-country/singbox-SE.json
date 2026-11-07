@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+      "server": "138.199.55.243",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
       "server": "sw.golangwikito.cfd",
       "server_port": 443,
       "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
@@ -15,7 +23,7 @@
         "server_name": "sw.golangwikito.cfd",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -25,29 +33,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-      "server": "swdnode.barnikle1.me",
-      "server_port": 1432,
-      "uuid": "109852f2-4591-498c-9a96-f1d9206ce804",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 R50 - Jewell",
+      "server": "95.143.196.97",
+      "server_port": 443,
+      "password": "769f34f0-1500-488f-b414-03bc90666502",
       "tls": {
         "enabled": true,
-        "server_name": "www.dhl.de",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bNpg56GtTArrVyrnonNlMA-3JyYIAFATdgsH_wn0gmc",
-          "short_id": "4ea6a183"
-        }
+        "server_name": "se.mimowhat.online",
+        "insecure": false
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - Jewell",
       "server": "se3.shtil.io",
       "server_port": 443,
       "uuid": "6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6",
@@ -62,56 +61,14 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇸🇪 瑞典 (Sweden) 04 R50 - Jewell",
-      "server": "95.143.196.97",
-      "server_port": 443,
-      "password": "769f34f0-1500-488f-b414-03bc90666502",
-      "tls": {
-        "enabled": true,
-        "server_name": "se.mimowhat.online",
-        "insecure": false
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 05 - Jewell",
-      "server": "138.199.55.243",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 06 - Jewell",
-      "server": "13.51.251.17",
-      "server_port": 443,
-      "uuid": "9c9d857a-5008-4ae7-843b-d1d15d1c012c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "t9S4iPLQk1ixWi1QDCxhr1eVpIRdF38goAf_5gYZRGQ",
-          "short_id": "ba35"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇸🇪 瑞典 (Sweden) 01 - Jewell",
         "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 04 R50 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 05 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 06 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 03 R50 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell"
       ]
     },
     {
@@ -120,10 +77,8 @@
       "outbounds": [
         "🇸🇪 瑞典 (Sweden) 01 - Jewell",
         "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 04 R50 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 05 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 06 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 03 R50 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

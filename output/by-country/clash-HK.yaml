@@ -5,22 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 95358662-tmm5c0-tphvvu-gacy.hk3.hyhuawei.com
+  server: 156.224.79.252
   udp: true
   port: 443
-  type: hysteria2
-  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
-  sni: 95358662-tmm5c0-tphvvu-gacy.hk3.hyhuawei.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 117249fa-7127-4195-b595-b62e5d51cab6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qCSVZBxyltu-gYujtcaX2Vt1GL2t4PJ8teFhr6rF114
+    short-id: 43da6bfeacad5692
+  servername: www.apple.com.cn
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: dc5d989c-tmm5c0-tzxeoy-hns7.nw4.hyhuawei.com
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 6857f1bc-f27b-11ea-87ad-f23c913c8d2b
-  sni: dc5d989c-tmm5c0-tzxeoy-hns7.nw4.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   server: 209.33.160.122
   udp: true
   port: 39098
@@ -31,35 +28,7 @@ proxies:
   reality-opts:
     public-key: DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg
   servername: dash.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  server: hk1.japancase.site
-  udp: true
-  port: 443
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pGCqNljaUIUVC7xpHa9nFnu6vsQ0OX3QyfvYMhLZuWY
-    short-id: bee10b047804c637
-  servername: hk1.japancase.site
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  server: zfd-hkv2.kunlun01dns.com
-  udp: true
-  port: 16115
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  server: bgp-1313122-228.834928.xyz
-  udp: true
-  port: 20511
-  type: ss
-  cipher: aes-256-gcm
-  password: 6rcBjQuF0jM6if5e
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,10 +36,6 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,9 +43,5 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
 rules:
 - MATCH,PROXIES

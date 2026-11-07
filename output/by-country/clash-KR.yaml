@@ -9,29 +9,23 @@ proxies:
   udp: true
   port: 443
   type: vless
-  uuid: 6dd58a09-430e-4ecf-81eb-95ca94f8b765
+  uuid: f877d913-9f87-45dd-bfe8-d95043081184
   tls: true
   reality-opts:
     public-key: jSvhKKNVMhMQOCERpOyPwfNkzMnHQExIua0oWRdbuB8
   servername: cloudflare.com
   client-fingerprint: firefox
 - name: 🇰🇷 韩国 (South Korea) 02 - Jewell
-  server: 158.247.255.150
+  server: 43.108.85.54
   udp: true
-  port: 48851
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: kr002.zestapp778.com
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
-  server: 158.247.220.26
-  udp: true
-  port: 37095
+  port: 443
   type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  uuid: e15db5c2-2dca-49fc-857b-aa37a7ba1c79
   tls: true
-  servername: kr002.zestapp778.com
-  skip-cert-verify: false
+  reality-opts:
+    public-key: v5HjgwMvPEsrpqwtgEytMQ3xs-1Cdv2gOCiGMZ2vimc
+    short-id: 68307e
+  servername: cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -40,7 +34,6 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,6 +41,5 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 rules:
 - MATCH,PROXIES

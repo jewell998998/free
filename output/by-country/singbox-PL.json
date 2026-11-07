@@ -4,24 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
-      "server": "77.232.135.141",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
-        "insecure": false
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-pl"
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
       "server": "54.37.235.208",
       "server_port": 11169,
       "method": "aes-128-gcm",
@@ -32,16 +16,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

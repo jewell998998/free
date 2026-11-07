@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  server: 138.199.55.243
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
   server: sw.golangwikito.cfd
   udp: true
   port: 443
@@ -16,21 +23,16 @@ proxies:
     public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
     short-id: a1037b25dcef6aa7
   servername: sw.golangwikito.cfd
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: swdnode.barnikle1.me
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 03 R50 - Jewell
+  server: 95.143.196.97
   udp: true
-  port: 1432
-  type: vless
-  uuid: 109852f2-4591-498c-9a96-f1d9206ce804
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: bNpg56GtTArrVyrnonNlMA-3JyYIAFATdgsH_wn0gmc
-    short-id: 4ea6a183
-  servername: www.dhl.de
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  port: 443
+  type: hysteria2
+  password: 769f34f0-1500-488f-b414-03bc90666502
+  sni: se.mimowhat.online
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
   server: se3.shtil.io
   udp: true
   port: 443
@@ -40,33 +42,6 @@ proxies:
   servername: se3.shtil.io
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 04 R50 - Jewell
-  server: 95.143.196.97
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 769f34f0-1500-488f-b414-03bc90666502
-  sni: se.mimowhat.online
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  server: 138.199.55.243
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪 瑞典 (Sweden) 06 - Jewell
-  server: 13.51.251.17
-  udp: true
-  port: 443
-  type: vless
-  uuid: 9c9d857a-5008-4ae7-843b-d1d15d1c012c
-  tls: true
-  reality-opts:
-    public-key: t9S4iPLQk1ixWi1QDCxhr1eVpIRdF38goAf_5gYZRGQ
-    short-id: ba35
-  servername: www.yahoo.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -74,10 +49,8 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 R50 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 06 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 R50 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,9 +58,7 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 04 R50 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 06 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 R50 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 rules:
 - MATCH,PROXIES

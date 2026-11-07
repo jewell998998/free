@@ -5,6 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
+  server: 230b29t.es8.h1clayd.click
+  udp: true
+  port: 443
+  type: vless
+  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
+  tls: true
+  reality-opts:
+    public-key: JvnTbjxkV9nXKoDRA_tmeY6aeOTnJXSBU3yNp9ZUnH0
+    short-id: 91313fc9f7571857
+  servername: 230b29t.es8.h1clayd.click
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
+  server: 156.252.229.203
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
+  tls: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
   server: 46.28.71.247
   udp: true
   port: 443
@@ -16,18 +40,22 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇪🇸 西班牙 (Spain) 02 - Jewell
+  - 🇪🇸 西班牙 (Spain) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
+  - 🇪🇸 西班牙 (Spain) 02 - Jewell
+  - 🇪🇸 西班牙 (Spain) 03 - Jewell
 rules:
 - MATCH,PROXIES

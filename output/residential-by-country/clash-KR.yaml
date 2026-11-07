@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 151.241.19.29
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
+  server: 49.254.204.133
   udp: true
-  port: 19999
+  port: 1774
   type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-cfb
+  password: 1234!@#$
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

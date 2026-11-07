@@ -20,8 +20,49 @@
       }
     },
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "server": "150.230.217.160",
+      "server_port": 27777,
+      "password": "e79bb958-2a79-4eea-87a3-7e73d0059ebf",
+      "tls": {
+        "enabled": true,
+        "server_name": "ol1.ssn571.top",
+        "insecure": false
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "server": "catnet-jp.kunlun04dns.com",
+      "server_port": 28012,
+      "method": "aes-128-gcm",
+      "password": "b61ca706-e2e9-4f6b-bd1e-0f0534a2fc41"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
+      "server": "74.113.233.192",
+      "server_port": 443,
+      "uuid": "db80088c-32a1-4cb8-a907-0f3cb7844152",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp1.japancase.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "vR15JQvAL78o2FzRCftXVm1LTz-xdU31wBB2ohHFD0g",
+          "short_id": "47b225059e19aa39"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
       "server": "jp01.cf.sh-cloudflare.sbs",
       "server_port": 2096,
       "uuid": "792ba6a8-b887-42bd-9480-4eb19b0a9b2b",
@@ -48,7 +89,10 @@
       "outbounds": [
         "auto",
         "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell"
       ]
     },
     {
@@ -56,7 +100,10 @@
       "tag": "auto",
       "outbounds": [
         "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

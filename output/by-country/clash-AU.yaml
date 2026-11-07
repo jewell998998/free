@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  server: au001.zestapp778.com
+  udp: true
+  port: 54374
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: au001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇦🇺 澳大利亚 (Australia) 02 - Jewell
   server: au.tronsg.com
   udp: true
   port: 443
@@ -18,11 +26,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 02 - Jewell
 rules:
 - MATCH,PROXIES

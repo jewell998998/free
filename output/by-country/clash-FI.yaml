@@ -5,16 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 104.24.0.1
+  server: static.117.242.109.65.clients.your-server.de
   udp: true
-  port: 2053
-  type: trojan
-  password: gHQP0D7D15
-  sni: marvdasht.phonecomparisonblog.org
+  port: 443
+  type: vless
+  uuid: 320536e8-b0d3-4afa-a5ec-de93356ce562
+  flow: xtls-rprx-vision
+  tls: true
+  servername: static.0.72.42.77.clients.your-server.de
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

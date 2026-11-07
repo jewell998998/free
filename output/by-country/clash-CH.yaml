@@ -4,7 +4,22 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 R54 - Jewell
+- name: 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  server: 159.60.146.82
+  udp: true
+  port: 443
+  type: vless
+  uuid: 0ff37a1b-ef27-403d-9eec-34e6c7d356ac
+  tls: true
+  servername: app-base-njw3ky.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws?ip=159.60.146.82:443
+    headers:
+      Host: app-base-njw3ky.pages.dev
+- name: 🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell
   server: 45.90.59.15
   udp: true
   port: 443
@@ -16,18 +31,54 @@ proxies:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
     short-id: 19253fae84102271
   servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 03 - Jewell
+  server: 94.26.35.217
+  udp: true
+  port: 443
+  type: vless
+  uuid: 54066259-28a1-47dc-b0f7-e7715f27918e
+  tls: true
+  reality-opts:
+    public-key: LHkKUZNBp93VjTHD9fpoj44-4WB-TQbDpa5A929nSwE
+    short-id: e368a430524df0fa
+  servername: 537df6t.ch5.h1clayd.click
   client-fingerprint: firefox
+- name: 🇨🇭 瑞士 (Switzerland) 04 R49 - Jewell
+  server: 208.69.78.60
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 05 R49 - Jewell
+  server: 208.69.78.33
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 R54 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 03 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 04 R49 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 05 R49 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 R54 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 03 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 04 R49 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 05 R49 - Jewell
 rules:
 - MATCH,PROXIES

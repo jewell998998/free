@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 35.182.118.175
+  server: 99.79.32.21
   udp: true
   port: 443
   type: ss
@@ -19,19 +19,6 @@ proxies:
   password: 5t6i121em5lkmsmk
   sni: ca001.zestapp778.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: ca1.japancase.site
-  udp: true
-  port: 443
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zN5buqMK95hn0mv3vKlfoOAi99ehuvP73cUuyNbZNWc
-    short-id: dbd6b473c7038dd5
-  servername: ca1.japancase.site
-  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,7 +26,6 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -47,6 +33,5 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
 rules:
 - MATCH,PROXIES

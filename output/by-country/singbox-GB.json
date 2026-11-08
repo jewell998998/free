@@ -4,89 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "promo2.betust.net",
-      "server_port": 443,
-      "password": "2bc6428196efb899f544d750bea0c06d",
-      "tls": {
-        "enabled": true,
-        "server_name": "promo2.betust.net",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "82.148.255.201",
-      "server_port": 8444,
-      "uuid": "49fdd350-6ffb-4343-b467-14e269bb95de",
-      "tls": {
-        "enabled": true,
-        "server_name": "360.yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ",
-          "short_id": "2bf10fc0a85601e5"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-      "server": "82.148.255.201",
-      "server_port": 8443,
-      "uuid": "49fdd350-6ffb-4343-b467-14e269bb95de",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "360.yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ",
-          "short_id": "2bf10fc0a85601e5"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-      "server": "132.243.167.147",
-      "server_port": 443,
-      "uuid": "db80088c-32a1-4cb8-a907-0f3cb7844152",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ch1.japancase.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "nIXZmF729Mzn5hq8aWSxsv8wBDawVYmFNzwBytwYfm0",
-          "short_id": "aafcd65859993991"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
       "server": "213.176.92.168",
       "server_port": 14430,
       "uuid": "ba52cc43-700d-4040-9444-29214c98e6e0",
@@ -100,7 +19,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 06 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
       "server": "193.163.203.170",
       "server_port": 443,
       "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
@@ -110,7 +29,7 @@
         "server_name": "yandex.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -121,25 +40,33 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 07 ⚠R - Jewell",
-      "server": "uk1.connectsuite.org",
-      "server_port": 443,
-      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 ⚠R - Jewell",
+      "server": "static.66.192.105.178.clients.your-server.de.SavFasF.Ir",
+      "server_port": 41432,
+      "uuid": "08dd424e-8211-4963-b9a1-58976a27fa2d"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
+      "server": "82.148.255.201",
+      "server_port": 8444,
+      "uuid": "49fdd350-6ffb-4343-b467-14e269bb95de",
       "tls": {
         "enabled": true,
-        "server_name": "uk1.connectsuite.org",
-        "insecure": false,
+        "server_name": "360.yandex.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ",
+          "short_id": "2bf10fc0a85601e5"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/cdn-cgi/ws",
-        "headers": {
-          "Host": "uk1.connectsuite.org"
-        }
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
@@ -149,11 +76,8 @@
         "auto",
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
         "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 05 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 06 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 07 ⚠R - Jewell"
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
       ]
     },
     {
@@ -162,11 +86,8 @@
       "outbounds": [
         "🇬🇧 英国 (United Kingdom) 01 - Jewell",
         "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 05 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 06 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 07 ⚠R - Jewell"
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

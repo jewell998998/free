@@ -5,45 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 50.7.227.77
-  udp: true
-  port: 443
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: bizorg.su
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 66.90.106.28
-  udp: true
-  port: 443
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: banket-restoran.su
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 185.215.184.78
-  udp: true
-  port: 443
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: dvizhok.su
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   server: fdat.titun.su
   udp: true
   port: 443
@@ -56,8 +17,47 @@ proxies:
     short-id: 428ef87fd47a3a32
   servername: banket-restoran.su
   client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: fdat.titun.su
+  udp: true
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: banket-restoran.su
+  client-fingerprint: ios
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 89.105.218.143
+  udp: true
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: golos.mail.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: novonl.subv.ru
+  udp: true
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: golos.mail.ru
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 179.43.166.190
+  server: prvtch.titun.su
   udp: true
   port: 443
   type: vless
@@ -68,33 +68,7 @@ proxies:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
   servername: perevodchiki.su
-  client-fingerprint: ''
-- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  server: 179.43.166.190
-  udp: true
-  port: 443
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: perevodchiki.su
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 147.45.104.86
-  udp: true
-  port: 7443
-  type: vless
-  uuid: 5d978525-bfa5-4b1e-b807-c4e2ac2db56d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho
-    short-id: a7eb8a4e
-  servername: max.ru
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -105,8 +79,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -117,7 +89,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
 rules:
 - MATCH,PROXIES

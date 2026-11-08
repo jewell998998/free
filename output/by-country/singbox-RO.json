@@ -4,19 +4,24 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇷🇴 罗马尼亚 (Romania) 01 - Jewell",
-      "server": "162.249.125.133",
+      "server": "cdn-rum-keno-prsv.keno.su",
       "server_port": 443,
-      "password": "QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s",
+      "uuid": "dc95c1dd-2cd3-414c-8cf1-71ae86dad666",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "hy2-new.aspidnet.xyz",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "c1b4086fea89914496c7e10967a419216566"
+        "server_name": "cdn-rum-keno-prsv.keno.su",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Cw04nkURk7InPCPZl-0PovP44rh5o74dMHBUFOsjFig",
+          "short_id": "a1b2c3d4e5f60718"
+        }
       }
     },
     {
@@ -31,7 +36,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,

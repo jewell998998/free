@@ -17,7 +17,33 @@ proxies:
     short-id: 23d0950d60bc0d5b
   servername: gateway.icloud.com
   client-fingerprint: firefox
-- name: 🇨🇿 捷克 (Czech) 02 R45 - Jewell
+- name: 🇨🇿 捷克 (Czech) 02 - Jewell
+  server: lkg8445q7lb7.apruxdomain.online
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7592ca5c-b352-4562-8856-a9c936a3331b
+  tls: true
+  servername: qomn0f3sw8f2w.hat.onl
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: grpc
+  grpc-opts:
+    grpc-service-name: hls-vod.tyl8fr6dporp.segment-177-v1-a1.ts
+- name: 🇨🇿 捷克 (Czech) 03 - Jewell
+  server: 89.125.96.17
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7592ca5c-b352-4562-8856-a9c936a3331b
+  tls: true
+  servername: qomn0f3sw8f2w.hat.onl
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: hls-vod.tyl8fr6dporp.segment-177-v1-a1.ts
+- name: 🇨🇿 捷克 (Czech) 04 R40 - Jewell
   server: 212.102.38.25
   udp: true
   port: 443
@@ -36,13 +62,17 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 R45 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 03 - Jewell
+  - 🇨🇿 捷克 (Czech) 04 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 R45 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 03 - Jewell
+  - 🇨🇿 捷克 (Czech) 04 R40 - Jewell
 rules:
 - MATCH,PROXIES

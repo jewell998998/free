@@ -5,29 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 57d89862-2f3e-4b36-bf20-bf5d302eeaa6.69290827-acbd-4035-94cd-4d1fa0997bb8.byteprivatelink.com
+  server: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
   udp: true
   port: 443
-  type: vless
-  uuid: 7f6ee01e-c243-4c84-9cf2-7d8ecc0da202
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rV6kc94WuI-e8k94iQ8l8SHTvTynTjtd8io7LDByEnc
-    short-id: e5b9c61d
-  servername: tva1.sinaimg.cn
-  client-fingerprint: ios
+  type: hysteria2
+  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
+  sni: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 78bc7982-tmm5c0-u0aht1-1rz5s.hk3.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 40e084d6-0316-11f0-90e2-f23c913c8d2b
+  sni: 78bc7982-tmm5c0-u0aht1-1rz5s.hk3.hyhuawei.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 rules:
 - MATCH,PROXIES

@@ -17,17 +17,57 @@ proxies:
     short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
   client-fingerprint: random
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 177.202.68.217
+  udp: true
+  port: 443
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg
+    short-id: 986ede37bf6925ae
+  servername: pl-b1.golangwikito.cfd
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: cdn-waw.edgeptr.org
+  udp: true
+  port: 8080
+  type: vless
+  uuid: 7ac84115-6107-47ff-a9f1-e4a9275cfaa0
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: msk9.gacvpn.site
+  udp: true
+  port: 443
+  type: vless
+  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZrIwTVGx75Dkh7b7eKnczKFkkADOfSnVgeqYXTlUhUI
+  servername: nl2-edge.gacvpn.site
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,24 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "57d89862-2f3e-4b36-bf20-bf5d302eeaa6.69290827-acbd-4035-94cd-4d1fa0997bb8.byteprivatelink.com",
+      "server": "8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com",
       "server_port": 443,
-      "uuid": "7f6ee01e-c243-4c84-9cf2-7d8ecc0da202",
-      "flow": "xtls-rprx-vision",
+      "password": "a305ac08-d136-11ee-b6db-f23c91cfbbc9",
       "tls": {
         "enabled": true,
-        "server_name": "tva1.sinaimg.cn",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "rV6kc94WuI-e8k94iQ8l8SHTvTynTjtd8io7LDByEnc",
-          "short_id": "e5b9c61d"
-        }
+        "server_name": "8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+      "server": "78bc7982-tmm5c0-u0aht1-1rz5s.hk3.hyhuawei.com",
+      "server_port": 443,
+      "password": "40e084d6-0316-11f0-90e2-f23c913c8d2b",
+      "tls": {
+        "enabled": true,
+        "server_name": "78bc7982-tmm5c0-u0aht1-1rz5s.hk3.hyhuawei.com",
+        "insecure": false
       }
     },
     {
@@ -29,14 +32,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

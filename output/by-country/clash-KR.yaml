@@ -5,23 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 49.254.204.133
+  server: 129.154.61.196
   udp: true
-  port: 1774
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
+  port: 800
+  type: vmess
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
+  alterId: 0
+  cipher: auto
 - name: 🇰🇷 韩国 (South Korea) 02 - Jewell
-  server: 158.247.220.26
-  udp: true
-  port: 37095
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: kr002.zestapp778.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
   server: kr002.zestapp778.com
   udp: true
   port: 48851
@@ -36,7 +27,6 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,6 +34,5 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 rules:
 - MATCH,PROXIES

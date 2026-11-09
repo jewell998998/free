@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇷 希腊 (Greece) 01 - Jewell
-  server: 85.90.197.220
+- name: 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
+  server: 2.27.105.13
   udp: true
-  port: 443
+  port: 31238
   type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
+  uuid: 9c05ffa3-cc8f-4d44-9ce0-015a7465e786
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
-    short-id: 94acb54627612d43
-  servername: www.cloudflare.com
+    public-key: 1KhMuUHbT2C7FKp0DHT1MNE-NHiQhy5yiOqqstvthlQ
+    short-id: a9d8f11690e70dd8
+  servername: rbc.ru
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇷 希腊 (Greece) 01 - Jewell
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇷 希腊 (Greece) 01 - Jewell
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
 rules:
 - MATCH,PROXIES

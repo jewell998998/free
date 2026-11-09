@@ -5,88 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 58.152.81.104
-  udp: true
-  port: 443
-  type: tuic
-  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  skip-cert-verify: false
-  congestion-controller: cubic
-  udp-relay-mode: native
-  alpn:
-  - h3
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: e4e8e68f-tmm5c0-tny186-4lg6.nw4.hyhuawei.com
-  udp: true
-  port: 443
-  type: hysteria2
-  password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
-  sni: e4e8e68f-tmm5c0-tny186-4lg6.nw4.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: 7b0450c8-tmm5c0-trg4wh-z65w.hk3.hyhuawei.com
-  udp: true
-  port: 443
-  type: hysteria2
-  password: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
-  sni: 7b0450c8-tmm5c0-trg4wh-z65w.hk3.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  server: forwarded.frnhk.xyz
-  udp: true
-  port: 2087
-  type: anytls
-  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  sni: hk2.gosthk.site
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  server: ad6ea328-ace0-45e1-8b69-e698536fa709.67dc6e59-0fd8-4ca5-ba29-26a8817e203b.byteprivatelink.com
+  server: 57d89862-2f3e-4b36-bf20-bf5d302eeaa6.69290827-acbd-4035-94cd-4d1fa0997bb8.byteprivatelink.com
   udp: true
   port: 443
   type: vless
-  uuid: 2a778078-9f4f-4203-a204-6fb94547b707
+  uuid: 7f6ee01e-c243-4c84-9cf2-7d8ecc0da202
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: xBBebAa3_FmRJAzPnEP9seJneZtPiIZVLHo23pHxRxc
-    short-id: a0134868
-  servername: live.douyin.com
+    public-key: rV6kc94WuI-e8k94iQ8l8SHTvTynTjtd8io7LDByEnc
+    short-id: e5b9c61d
+  servername: tva1.sinaimg.cn
   client-fingerprint: ios
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
-  server: 209.33.160.122
-  udp: true
-  port: 39098
-  type: vless
-  uuid: 7852e4df-db54-4f75-a35e-3b8fbe89e56d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg
-  servername: dash.cloudflare.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
 rules:
 - MATCH,PROXIES

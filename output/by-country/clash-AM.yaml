@@ -4,25 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
-  server: au.tronsg.com
+- name: 🇦🇲 亚美尼亚 (Armenia) 01 - Jewell
+  server: 208.103.161.16
   udp: true
-  port: 443
+  port: 2096
   type: trojan
-  password: Trojan@82164024
-  sni: au.tronsg.com
+  password: hWsj5AwIRPF8
+  sni: rayAnconfIg3-Bhl0ai7j-t2.raYan-coNfig-3.woRKers.dEV
   skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇦🇲 亚美尼亚 (Armenia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇦🇲 亚美尼亚 (Armenia) 01 - Jewell
 rules:
 - MATCH,PROXIES

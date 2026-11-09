@@ -15,18 +15,33 @@ proxies:
   reality-opts:
     public-key: _MeP-WwmolUvi6wMXNoSs_zo6miG_OW7xk4ibzADiHY
   servername: esso-music-coroborito.keno.su
+  client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
+  server: sport.herumhas.shop
+  udp: true
+  port: 443
+  type: vless
+  uuid: 68a67906-5b37-4779-a6cc-58a1655f18b4
+  tls: true
+  servername: sport.herumhas.shop
+  skip-cert-verify: false
   client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api/v2/checkout/poll
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
 rules:
 - MATCH,PROXIES

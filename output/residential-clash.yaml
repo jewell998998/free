@@ -1,0 +1,48 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  server: e4e8e68f-tmm5c0-tny186-4lg6.nw4.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
+  sni: e4e8e68f-tmm5c0-tny186-4lg6.nw4.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell
+  server: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 2e42c1ee-aaaa-11ec-bb74-f23c9164ca5d
+  sni: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 03 (家宽) - Jewell
+  server: 195.133.135.238
+  udp: true
+  port: 10086
+  type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 (家宽) - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 (家宽) - Jewell
+rules:
+- MATCH,PROXIES

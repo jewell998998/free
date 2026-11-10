@@ -5,14 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 177.202.75.56
+  server: 65.108.240.210
+  udp: true
+  port: 39018
+  type: vmess
+  uuid: 45dc10c6-04c8-4c70-a06a-d396254a6c0b
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: fi1.obxodvpn.us
   udp: true
   port: 443
   type: hysteria2
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   sni: fi1.obxodvpn.us
   skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 217.144.188.185
+  udp: true
+  port: 443
+  type: vless
+  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
+  servername: www.nordea.fi
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: 146.103.118.189
   udp: true
   port: 443
@@ -21,7 +41,7 @@ proxies:
   tls: true
   servername: nl2.574ck.xyz
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /574ck-finland
@@ -34,6 +54,8 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +63,7 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 rules:
 - MATCH,PROXIES

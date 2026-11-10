@@ -4,18 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 01 - Jewell",
-      "server": "kr002.zestapp778.com",
-      "server_port": 48851,
-      "password": "5t6i121em5lkmsmk",
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 01 - Jewell",
+      "server": "vena.xvanta.online",
+      "server_port": 443,
+      "uuid": "b3e8320f-dbf6-423f-8f86-c3c5d663467f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "kr002.zestapp778.com",
-        "insecure": false,
+        "server_name": "vena.xvanta.online",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "4vN6lpdXLv0wGwYmcrC58O0updFdEBGtrsat0XVRSiY",
+          "short_id": "7330f22a41fb280a"
         }
       }
     },
@@ -24,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇦🇹 奥地利 (Austria) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 - Jewell"
+        "🇦🇹 奥地利 (Austria) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

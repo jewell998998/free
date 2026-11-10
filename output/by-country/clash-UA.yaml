@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 巴西 (Brazil) 01 R48 - Jewell
-  server: 109.104.155.131
+- name: 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
+  server: nl4.japancase.site
   udp: true
-  port: 2053
+  port: 443
   type: vless
-  uuid: bb3723d7-462e-442c-9472-496750476f45
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: MwJoFytMWCLdwCCt0cSTM8L6ZzYKxlZbFMML_3nnJms
-    short-id: 508118120e886b5a
-  servername: dir-br1.filesapp.org
+    public-key: lXCVb-MY5dJqMUw6xvkuPbi0idyfF-OkSY_6GpOovVI
+    short-id: 9f05c35b73b47d53
+  servername: nl4.japancase.site
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 巴西 (Brazil) 01 R48 - Jewell
+  - 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 巴西 (Brazil) 01 R48 - Jewell
+  - 🇺🇦 乌克兰 (Ukraine) 01 - Jewell
 rules:
 - MATCH,PROXIES

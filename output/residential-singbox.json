@@ -4,8 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "tuic",
+      "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
+      "server": "3ccb74ed-tmm5c0-ttyjoe-ieln.nw4.hyhuawei.com",
+      "server_port": 443,
+      "password": "f5c0eda2-4b97-11ed-bd7c-f23c913c8d2b",
+      "tls": {
+        "enabled": true,
+        "server_name": "3ccb74ed-tmm5c0-ttyjoe-ieln.nw4.hyhuawei.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell",
       "server": "58.152.81.104",
       "server_port": 443,
       "uuid": "73bfcc1c-5814-5f2a-b43a-3ef6af011db8",
@@ -22,18 +34,34 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
+      "server": "203.218.217.94",
+      "server_port": 443,
+      "password": "f7d95364-607b-11ee-93af-f23c91369f2d",
+      "tls": {
+        "enabled": true,
+        "server_name": "e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

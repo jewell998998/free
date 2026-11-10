@@ -5,34 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 99.79.32.21
-  udp: true
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 35.182.118.175
-  udp: true
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 149.56.209.48
-  udp: true
-  port: 443
-  type: vless
-  uuid: 39826f32-f5ca-42a5-ab33-188f7d199478
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rV2Qmjr31w2nxtnMcbwHJNY2wxJynjmxwbKPlfSgET4
-    short-id: 1c72fb25098b8807
-  servername: www.apple.com
-  client-fingerprint: ''
-- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
-  server: ca001.zestapp778.com
+  server: 216.128.185.90
   udp: true
   port: 46977
   type: trojan
@@ -45,17 +18,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 - Jewell
 rules:
 - MATCH,PROXIES

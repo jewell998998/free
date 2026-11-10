@@ -4,20 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-      "server": "3ccb74ed-tmm5c0-ttyjoe-ieln.nw4.hyhuawei.com",
-      "server_port": 443,
-      "password": "f5c0eda2-4b97-11ed-bd7c-f23c913c8d2b",
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+      "server": "us001.zestapp778.com",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
-        "server_name": "3ccb74ed-tmm5c0-ttyjoe-ieln.nw4.hyhuawei.com",
+        "server_name": "us001.zestapp778.com",
         "insecure": false
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 02 (移动家宽) - Jewell",
+      "server": "130.94.19.95",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "us001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "type": "tuic",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
       "server": "58.152.81.104",
       "server_port": 443,
       "uuid": "73bfcc1c-5814-5f2a-b43a-3ef6af011db8",
@@ -34,15 +50,24 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
-      "server": "203.218.217.94",
-      "server_port": 443,
-      "password": "f7d95364-607b-11ee-93af-f23c91369f2d",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 04 (家宽) - Jewell",
+      "server": "23.95.72.244",
+      "server_port": 5461,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com",
-        "insecure": false
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tm0HMw__h6gfIxujioVLds50pGoQAhaIryqJsapBGXU",
+          "short_id": "9847a4468a"
+        }
       }
     },
     {
@@ -50,18 +75,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+        "🇺🇸 美国 (United States) 02 (移动家宽) - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
+        "🇺🇸 美国 (United States) 04 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - Jewell",
+        "🇺🇸 美国 (United States) 02 (移动家宽) - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell",
+        "🇺🇸 美国 (United States) 04 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

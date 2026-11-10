@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
-  server: 3ccb74ed-tmm5c0-ttyjoe-ieln.nw4.hyhuawei.com
-  udp: true
-  port: 443
-  type: hysteria2
-  password: f5c0eda2-4b97-11ed-bd7c-f23c913c8d2b
-  sni: 3ccb74ed-tmm5c0-ttyjoe-ieln.nw4.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell
   server: 58.152.81.104
   udp: true
   port: 443
@@ -25,29 +17,17 @@ proxies:
   udp-relay-mode: native
   alpn:
   - h3
-- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell
-  server: 203.218.217.94
-  udp: true
-  port: 443
-  type: hysteria2
-  password: f7d95364-607b-11ee-93af-f23c91369f2d
-  sni: e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

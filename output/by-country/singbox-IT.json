@@ -4,12 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇮🇹 意大利 (Italy) 01 - Jewell",
-      "server": "202.50.253.27",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "server": "82.118.16.189",
+      "server_port": 443,
+      "uuid": "29f178f7-f96f-46ba-8fc0-bbcd690ba788",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4",
+          "short_id": "1e9a49dd374c1191"
+        }
+      }
     },
     {
       "type": "vless",
@@ -33,8 +46,16 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇮🇹 意大利 (Italy) 03 - Jewell",
+      "server": "202.50.253.27",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 03 R63 - Jewell",
+      "tag": "🇮🇹 意大利 (Italy) 04 R63 - Jewell",
       "server": "216.106.191.201",
       "server_port": 443,
       "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69",
@@ -60,7 +81,8 @@
         "auto",
         "🇮🇹 意大利 (Italy) 01 - Jewell",
         "🇮🇹 意大利 (Italy) 02 - Jewell",
-        "🇮🇹 意大利 (Italy) 03 R63 - Jewell"
+        "🇮🇹 意大利 (Italy) 03 - Jewell",
+        "🇮🇹 意大利 (Italy) 04 R63 - Jewell"
       ]
     },
     {
@@ -69,7 +91,8 @@
       "outbounds": [
         "🇮🇹 意大利 (Italy) 01 - Jewell",
         "🇮🇹 意大利 (Italy) 02 - Jewell",
-        "🇮🇹 意大利 (Italy) 03 R63 - Jewell"
+        "🇮🇹 意大利 (Italy) 03 - Jewell",
+        "🇮🇹 意大利 (Italy) 04 R63 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

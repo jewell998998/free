@@ -4,32 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇮🇳 印度 (India) 01 - Jewell",
-      "server": "13.140.56.100",
-      "server_port": 14430,
-      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "13.140.56.100"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 01 - Jewell",
+      "server": "18.202.232.173",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "KoJrr14BKAiBUHEoWHFsAVrNzbNVzjKN"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇳 印度 (India) 01 - Jewell"
+        "🇮🇪 爱尔兰 (Ireland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇳 印度 (India) 01 - Jewell"
+        "🇮🇪 爱尔兰 (Ireland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

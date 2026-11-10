@@ -1,0 +1,66 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: 31.76.91.168
+  udp: true
+  port: 8443
+  type: hysteria2
+  password: 1794466637:db57c865-2318-4fd2-8aea-e8ba58ec696d:Sjcl0gc4tJZu1HqNgL502Y4uLCJSzLg9X3R0zYjQ6MQ
+  sni: jp.lumacache.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 152.69.195.67
+  udp: true
+  port: 47878
+  type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 23.95.72.244
+  udp: true
+  port: 10443
+  type: vless
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jfovzfzTWrXvEA5q6T48LN_x958wijkRCAtpYSxoSio
+    short-id: f0cce225780a02dc
+  servername: music.amazon.com.au
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 23.95.72.244
+  udp: true
+  port: 7443
+  type: vless
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CXt1liJyAb-5vgsD_VROhs7kXwOz9DFjvFtM_r_QL28
+    short-id: b5f8108aacdd2b6f
+  servername: business.amazon.com.au
+  client-fingerprint: safari
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇯🇵 日本 (Japan) 01 - Jewell
+  - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+rules:
+- MATCH,PROXIES

@@ -5,49 +5,57 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
+  server: 58.152.81.104
   udp: true
   port: 443
-  type: hysteria2
-  password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
-  sni: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
+  type: tuic
+  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
   skip-cert-verify: false
+  congestion-controller: cubic
+  udp-relay-mode: native
+  alpn:
+  - h3
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: bd8d18d7-tmm5c0-tny186-4lg6.hk3.hyhuawei.com
+  server: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
   udp: true
   port: 443
   type: hysteria2
-  password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
-  sni: bd8d18d7-tmm5c0-tny186-4lg6.hk3.hyhuawei.com
+  password: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
+  sni: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
   skip-cert-verify: false
 - name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: f7f87486-tmm5c0-ts3rye-mrtr.nw4.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
+  sni: f7f87486-tmm5c0-ts3rye-mrtr.nw4.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: zfd-hkv1.kunlun01dns.com
+  udp: true
+  port: 16115
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
   server: 23.95.72.244
   udp: true
-  port: 9443
+  port: 2087
   type: vless
   uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: hY7qJ-wCkHHGHgsWYPxVX67YkyNgAexTG3kyWhifpy0
-    short-id: e1b7e52b41b7c0a7
-  servername: www.eero.com
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+    public-key: ALHje8E3d2TkkY2XnWRsZyw5nCptpdjHj1Yzs7_i_E8
+    short-id: 7b1602ae8a72ed0a
+  servername: repost.aws
+  client-fingerprint: qq
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
   server: 39.109.111.23
-  udp: true
-  port: 39675
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VW9b1Lj_TPfa52PVrmLypSxQjRiV06sgG96uEd6oBRM
-    short-id: 551a216445
-  servername: www.lamer.com.hk
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
-  server: doghkzf.zalolink.com
   udp: true
   port: 28675
   type: vless
@@ -59,6 +67,32 @@ proxies:
     short-id: 9a79807253c040
   servername: www.lamer.com.hk
   client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  server: dogyhkv2.zalolink.com
+  udp: true
+  port: 39675
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VW9b1Lj_TPfa52PVrmLypSxQjRiV06sgG96uEd6oBRM
+    short-id: 551a216445
+  servername: www.lamer.com.hk
+  client-fingerprint: ios
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - Jewell
+  server: 23.95.72.244
+  udp: true
+  port: 58715
+  type: vless
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xhQQ393yiOwgfp2JzIu0Qfg-5oG3M5Y71mBmI0WM9kU
+    short-id: eab17137bf1d2bad
+  servername: api.adidas.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -69,6 +103,9 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,5 +116,8 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 05 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 06 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 07 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 08 - Jewell
 rules:
 - MATCH,PROXIES

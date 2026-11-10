@@ -4,14 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
-      "server": "104.143.223.236",
-      "server_port": 2085,
-      "uuid": "6538f5c3-5b01-4956-a8e6-47688c01c42e",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+      "type": "anytls",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell",
+      "server": "forwarded2.frnhk.xyz",
+      "server_port": 8443,
+      "password": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk.gosthk.site",
+        "insecure": false
       }
     },
     {
@@ -19,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇸🇨 塞舌尔 (Seychelles) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

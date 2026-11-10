@@ -5,24 +5,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇱🇹 立陶宛 (Lithuania) 01 - Jewell",
-      "server": "45.81.252.143",
-      "server_port": 2053,
-      "uuid": "53555197-bf0a-49e6-bea1-211fcfc1d962",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - Jewell",
+      "server": "23.95.72.244",
+      "server_port": 55568,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "germany3.banovano.space",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "api.adidas.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TVLsDTqLqNaI50rscB-dvDnCBK8xvXsFhqgB9y0BEzQ",
+          "short_id": "8e46ebc92990"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
@@ -30,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 立陶宛 (Lithuania) 01 - Jewell"
+        "🇯🇵 日本 (Japan) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 立陶宛 (Lithuania) 01 - Jewell"
+        "🇯🇵 日本 (Japan) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

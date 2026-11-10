@@ -6,12 +6,32 @@
     {
       "type": "vless",
       "tag": "🇪🇸 西班牙 (Spain) 01 - Jewell",
-      "server": "77.81.182.7",
+      "server": "156.252.229.203",
       "server_port": 8443,
       "uuid": "585a421d-d782-4420-912e-dd58ff5966d7",
       "tls": {
         "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
+        "server_name": "play.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A",
+          "short_id": "974f7f8f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 02 - Jewell",
+      "server": "156.252.229.203",
+      "server_port": 8443,
+      "uuid": "585a421d-d782-4420-912e-dd58ff5966d7",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.googleapis.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -24,18 +44,43 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 03 R48 - Jewell",
+      "server": "23.95.72.244",
+      "server_port": 50119,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "OecTdVhZmf_1KohFt8cYOMMqf45t8dqvNniqe-Yevlw",
+          "short_id": "823473a176f25e"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01 - Jewell"
+        "🇪🇸 西班牙 (Spain) 01 - Jewell",
+        "🇪🇸 西班牙 (Spain) 02 - Jewell",
+        "🇪🇸 西班牙 (Spain) 03 R48 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01 - Jewell"
+        "🇪🇸 西班牙 (Spain) 01 - Jewell",
+        "🇪🇸 西班牙 (Spain) 02 - Jewell",
+        "🇪🇸 西班牙 (Spain) 03 R48 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

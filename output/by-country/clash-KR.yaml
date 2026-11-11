@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 8.220.241.33
-  udp: true
-  port: 443
-  type: vless
-  uuid: f877d913-9f87-45dd-bfe8-d95043081184
-  tls: true
-  reality-opts:
-    public-key: jSvhKKNVMhMQOCERpOyPwfNkzMnHQExIua0oWRdbuB8
-  servername: cloudflare.com
-  client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
   server: 158.247.253.243
   udp: true
   port: 443
@@ -23,29 +12,17 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
-  server: 158.247.255.150
-  udp: true
-  port: 48851
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: kr002.zestapp778.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 16.60.30.137
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  server: 67.159.56.79
+  udp: true
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ~4HT,}bC@heiRai
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 199.47.240.33
   udp: true
   port: 8443
@@ -12,29 +26,15 @@ proxies:
   password: 1794466637:db57c865-2318-4fd2-8aea-e8ba58ec696d:JWnXCUB_7HUqJAARJBCT0cIeRY_mWvYGaSUiSBVoKGM
   sni: gb3.lumacache.com
   skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 104.222.183.180
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: promo2.betust.net
   udp: true
-  port: 47195
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 34.39.80.57
-  udp: true
-  port: 50818
-  type: vless
-  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
-  tls: true
-  servername: yingguo.rymaker.cn
+  port: 443
+  type: hysteria2
+  password: 2bc6428196efb899f544d750bea0c06d
+  sni: promo2.betust.net
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /GunService
-    headers:
-      Host: yingguo.rymaker.cn
-- name: 🇬🇧 英国 (United Kingdom) 04 R63 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 05 R63 - Jewell
   server: 136.176.68.34
   udp: true
   port: 443
@@ -46,56 +46,19 @@ proxies:
     public-key: Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo
     short-id: a6040129ad7f4b74
   servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  server: promo2.betust.net
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 2bc6428196efb899f544d750bea0c06d
-  sni: promo2.betust.net
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 06 ⚠R - Jewell
-  server: uk1.connectsuite.org
-  udp: true
-  port: 443
-  type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-    headers:
-      Host: uk1.connectsuite.org
-- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
-  server: 212.41.9.190
-  udp: true
-  port: 2089
-  type: vless
-  uuid: db57c865-2318-4fd2-8aea-e8ba58ec696d
-  tls: true
-  reality-opts:
-    public-key: y2gMlmdCUGqkF8lh5AaQzmOs7BhaWkOgjqfzea5oxD0
-    short-id: 668d298a
-  servername: s3.storage.selcloud.ru
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cas-gb
-- name: 🇬🇧 英国 (United Kingdom) 08 - Jewell
-  server: 193.188.21.253
+  client-fingerprint: ''
+- name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
+  server: 213.176.92.168
   udp: true
   port: 14430
   type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
   network: ws
   ws-opts:
     path: /vless
     headers:
-      Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 09 - Jewell
+      Host: 213.176.92.168
+- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
   server: 193.163.203.170
   udp: true
   port: 443
@@ -116,12 +79,10 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 R63 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 06 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 R63 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
   - 🇬🇧 英国 (United Kingdom) 07 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 08 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -130,11 +91,9 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 R63 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 06 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 R63 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 06 - Jewell
   - 🇬🇧 英国 (United Kingdom) 07 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 08 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 09 - Jewell
 rules:
 - MATCH,PROXIES

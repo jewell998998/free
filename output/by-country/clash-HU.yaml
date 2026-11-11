@@ -5,31 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇺 匈牙利 (Hungary) 01 - Jewell
-  server: 172.67.131.125
+  server: 84.38.184.87
   udp: true
-  port: 2083
+  port: 11443
   type: vless
-  uuid: f418674e-f518-4318-8ff9-e10000000046
+  uuid: a628c583-24a8-4ce5-98ad-c6458abf1cc4
   tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
-  skip-cert-verify: false
+  reality-opts:
+    public-key: 4HG_QcSHTdYtSbcTQczOW4JAHQfjc37UCLKHSps_t3w
+    short-id: 39cdc017
+  servername: s3.storage.selcloud.ru
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cas-hu
+- name: 🇭🇺 匈牙利 (Hungary) 02 - Jewell
+  server: 212.41.9.190
+  udp: true
+  port: 2092
+  type: vless
+  uuid: db57c865-2318-4fd2-8aea-e8ba58ec696d
+  tls: true
+  reality-opts:
+    public-key: NpMdrqPyU_2aCYH0ZgkWV80iwX50McteLYXzpgZbrjw
+    short-id: 8e3ba54f
+  servername: s3.storage.selcloud.ru
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cas-hu
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+  - 🇭🇺 匈牙利 (Hungary) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+  - 🇭🇺 匈牙利 (Hungary) 02 - Jewell
 rules:
 - MATCH,PROXIES

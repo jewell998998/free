@@ -5,6 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: 152.69.195.67
+  udp: true
+  port: 47878
+  type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: 31.76.91.168
   udp: true
   port: 8443
@@ -12,7 +18,7 @@ proxies:
   password: 1794466637:db57c865-2318-4fd2-8aea-e8ba58ec696d:Sjcl0gc4tJZu1HqNgL502Y4uLCJSzLg9X3R0zYjQ6MQ
   sni: jp.lumacache.com
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: jp004.421421.xyz
   udp: true
   port: 20230
@@ -27,19 +33,44 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: tj
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 168-110-32-255.sslip.io
+  udp: true
+  port: 443
+  type: vless
+  uuid: 9e9e7dee-684e-4065-afc2-1f139faaa6b0
+  tls: true
+  servername: 168-110-32-255.sslip.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ray
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: 168.110.48.252
+  udp: true
+  port: 10018
+  type: vless
+  uuid: d8fc873b-860d-4490-b2f0-300d6ae3c2d3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YxoFVB0NhCx4BJCgq5Ey5jdteRU2H2toGa-ZKW5XV3c
+  servername: www.ebay.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
   server: 23.95.72.244
   udp: true
-  port: 7443
+  port: 10443
   type: vless
   uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: CXt1liJyAb-5vgsD_VROhs7kXwOz9DFjvFtM_r_QL28
-    short-id: b5f8108aacdd2b6f
-  servername: business.amazon.com.au
-  client-fingerprint: safari
+    public-key: jfovzfzTWrXvEA5q6T48LN_x958wijkRCAtpYSxoSio
+    short-id: f0cce225780a02dc
+  servername: music.amazon.com.au
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -48,6 +79,9 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -56,5 +90,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
+  - 🇯🇵 日本 (Japan) 04 - Jewell
+  - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
 rules:
 - MATCH,PROXIES

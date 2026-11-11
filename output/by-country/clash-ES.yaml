@@ -5,102 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 68.221.177.135
-  udp: true
-  port: 2083
-  type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
-  server: 156.252.229.203
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: ''
-- name: 🇪🇸 西班牙 (Spain) 03 - Jewell
-  server: 77.81.182.7
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 04 - Jewell
-  server: 156.252.229.203
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 05 - Jewell
   server: 196.196.149.80
   udp: true
   port: 443
   type: vless
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30
-    short-id: e7cffac9f8cfb434
-  servername: b3cd32g.es1.h1clayd.click
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: 42426c882c5fcd41
+  servername: 7aa271t.es1.h1clayd.click
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇪🇸 西班牙 (Spain) 06 - Jewell
-  server: 156.252.229.77
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
-  - 🇪🇸 西班牙 (Spain) 04 - Jewell
-  - 🇪🇸 西班牙 (Spain) 05 - Jewell
-  - 🇪🇸 西班牙 (Spain) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 - Jewell
-  - 🇪🇸 西班牙 (Spain) 03 - Jewell
-  - 🇪🇸 西班牙 (Spain) 04 - Jewell
-  - 🇪🇸 西班牙 (Spain) 05 - Jewell
-  - 🇪🇸 西班牙 (Spain) 06 - Jewell
 rules:
 - MATCH,PROXIES

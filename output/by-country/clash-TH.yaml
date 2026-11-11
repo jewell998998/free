@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 151.241.19.29
+- name: 🇹🇭 泰国 (Thailand) 01 - Jewell
+  server: 8.213.209.1
   udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 18918
+  type: vmess
+  uuid: 6d64789a-4d5e-4ef7-c9ac-0fc543b4e635
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 rules:
 - MATCH,PROXIES

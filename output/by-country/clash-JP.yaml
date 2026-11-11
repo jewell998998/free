@@ -13,25 +13,21 @@ proxies:
   sni: jp.lumacache.com
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 152.69.195.67
+  server: jp004.421421.xyz
   udp: true
-  port: 47878
+  port: 20230
   type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 23.95.72.244
-  udp: true
-  port: 10443
-  type: vless
-  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
-  flow: xtls-rprx-vision
+  uuid: 0400697c-b581-4575-9d2f-0bbd4659312d
   tls: true
   reality-opts:
-    public-key: jfovzfzTWrXvEA5q6T48LN_x958wijkRCAtpYSxoSio
-    short-id: f0cce225780a02dc
-  servername: music.amazon.com.au
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
+    public-key: lbOfuIKCBPcQH4AEnwnPw1LNxWrl-Bul6KU99H240Fc
+    short-id: abae4722
+  servername: www.nvidia.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: tj
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: 23.95.72.244
   udp: true
   port: 7443
@@ -52,7 +48,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,6 +56,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
 rules:
 - MATCH,PROXIES

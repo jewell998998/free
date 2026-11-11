@@ -5,23 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇷 希腊 (Greece) 01 - Jewell",
-      "server": "85.90.197.220",
-      "server_port": 443,
-      "uuid": "8f704ed6-9a1a-4d04-94dd-1bff501716de",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇿🇦 南非 (South Africa) 01 - Jewell",
+      "server": "212.41.9.190",
+      "server_port": 8443,
+      "uuid": "db57c865-2318-4fd2-8aea-e8ba58ec696d",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "s3.storage.selcloud.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4",
-          "short_id": "94acb54627612d43"
+          "public_key": "_h_4Tmkb2bq5yNs_TkzHm4g_dJTZLeKiNGAN9tuP22Y",
+          "short_id": "c42a4d4d"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cas-za"
       }
     },
     {
@@ -29,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇷 希腊 (Greece) 01 - Jewell"
+        "🇿🇦 南非 (South Africa) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇷 希腊 (Greece) 01 - Jewell"
+        "🇿🇦 南非 (South Africa) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

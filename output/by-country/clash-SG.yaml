@@ -4,7 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 01 R57 - Jewell
+- name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  server: 172.66.47.45
+  udp: true
+  port: 443
+  type: vless
+  uuid: e56059f1-5a1a-4d0a-a2d0-58ecb4eb2f3f
+  tls: true
+  servername: ezaccess-project-f62c30.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZWlPODVjTnhnaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ezaccess-project-f62c30.pages.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 R57 - Jewell
+  server: 0c8a39e2-tmkao0-tqsp0c-1imi4.sg7.hyhuawei.com
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9
+  sni: 0c8a39e2-tmkao0-tqsp0c-1imi4.sg7.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 03 R57 - Jewell
   server: support.zoom.us
   udp: true
   port: 8080
@@ -15,129 +38,21 @@ proxies:
     path: /cs
     headers:
       Host: asia.csmaster.pp.ua
-- name: 🇸🇬 新加坡 (Singapore) 02 R41 - Jewell
-  server: 15.235.164.133
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬 新加坡 (Singapore) 03 R41 - Jewell
-  server: 51.79.228.131
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  server: sg003.zestapp778.com
-  udp: true
-  port: 443
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: sg003.zestapp778.com
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 05 R47 - Jewell
-  server: 149.88.106.74
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  server: 68.183.235.122
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 07 - Jewell
-  server: 23.95.72.244
-  udp: true
-  port: 15671
-  type: vless
-  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZJFE8ADmle161t4Tn5X6wqvP4RDPKfeMxENt8h594zk
-    short-id: 706030ef0be31d4b
-  servername: www.amazon.com.be
-  client-fingerprint: qq
-- name: 🇸🇬 新加坡 (Singapore) 08 - Jewell
-  server: 54.169.200.246
-  udp: true
-  port: 41688
-  type: vless
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
-  servername: www.intel.com
-  client-fingerprint: qq
-- name: 🇸🇬 新加坡 (Singapore) 09 R52 - Jewell
-  server: 68.183.227.45
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 10 R55 - Jewell
-  server: 128.1.186.73
-  udp: true
-  port: 8080
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 11 R57 - Jewell
-  server: 139.162.27.96
-  udp: true
-  port: 2096
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 (Singapore) 01 R57 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R41 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 R41 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R47 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 10 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 11 R57 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 R57 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 R57 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 01 R57 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R41 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 03 R41 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 04 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R47 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 06 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 07 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 08 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 09 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 10 R55 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 11 R57 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 R57 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 R57 - Jewell
 rules:
 - MATCH,PROXIES

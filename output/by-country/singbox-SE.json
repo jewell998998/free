@@ -4,8 +4,35 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+      "server": "16.171.159.75",
+      "server_port": 8080,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "SWePBmNSadMUzbm7GigoCTrCXr1vG/zUfYbBDaxk/VU=:jXzFNqqClbUWdzc1f4DSolu9VfjohvSJ+vP/Sj5eK0U="
+    },
+    {
+      "type": "vmess",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+      "server": "16.171.159.75",
+      "server_port": 80,
+      "uuid": "5b2e2e5f-1302-4d65-ab39-27f6f0ca5562",
+      "security": "auto",
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+      "server": "62.182.193.228",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2e555e46dbc421452416834962fd014f"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - Jewell",
       "server": "16.171.159.75",
       "server_port": 16751,
       "uuid": "5b2e2e5f-1302-4d65-ab39-27f6f0ca5562",
@@ -16,19 +43,15 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-      "server": "138.124.86.230",
-      "server_port": 48115,
-      "uuid": "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
+      "type": "trojan",
+      "tag": "🇸🇪 瑞典 (Sweden) 05 - Jewell",
+      "server": "95.143.196.97",
+      "server_port": 443,
+      "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF",
       "tls": {
         "enabled": true,
-        "server_name": "138-124-86-230.sslip.io",
+        "server_name": "connect-se.mimowhat.online",
         "insecure": false
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "138-124-86-230-sslip-io"
       }
     },
     {
@@ -37,7 +60,10 @@
       "outbounds": [
         "auto",
         "🇸🇪 瑞典 (Sweden) 01 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 02 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 05 - Jewell"
       ]
     },
     {
@@ -45,7 +71,10 @@
       "tag": "auto",
       "outbounds": [
         "🇸🇪 瑞典 (Sweden) 01 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 02 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 03 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 04 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

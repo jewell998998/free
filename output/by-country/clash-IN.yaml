@@ -5,6 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - Jewell
+  server: 13.140.56.100
+  udp: true
+  port: 14430
+  type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇮🇳 印度 (India) 02 - Jewell
+  server: 13.140.253.35
+  udp: true
+  port: 443
+  type: vless
+  uuid: f1a7e2c8-b140-50d1-8acf-e62090f96599
+  tls: true
+  servername: xray-bprkdwje-clever-comet-4.cloady.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /27dbf143acdd7bca
+    headers:
+      Host: xray-bprkdwje-clever-comet-4.cloady.io
+- name: 🇮🇳 印度 (India) 03 - Jewell
   server: 122.176.216.52
   udp: true
   port: 443
@@ -13,6 +37,7 @@ proxies:
   tls: true
   servername: app-6ada5023.deploy.meerasolution.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
@@ -24,11 +49,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01 - Jewell
+  - 🇮🇳 印度 (India) 02 - Jewell
+  - 🇮🇳 印度 (India) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01 - Jewell
+  - 🇮🇳 印度 (India) 02 - Jewell
+  - 🇮🇳 印度 (India) 03 - Jewell
 rules:
 - MATCH,PROXIES

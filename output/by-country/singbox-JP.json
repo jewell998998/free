@@ -4,8 +4,54 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
+      "server": "168.138.205.100",
+      "server_port": 53758,
+      "method": "aes-128-gcm",
+      "password": "Bwlqh7GcFB"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "server": "155.248.175.201",
+      "server_port": 23169,
+      "uuid": "9da605d3-f5f7-4135-f806-450f036f9351",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "djj.zjlo.top",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "server": "158.101.151.157",
+      "server_port": 443,
+      "uuid": "66171cbe-0b4b-4b24-99f6-d5a822f4dc9a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8",
+          "short_id": "684c7531e599dec0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
       "server": "168.110.45.41",
       "server_port": 23444,
       "uuid": "ee2112e4-1e58-4f77-b162-5ef869358df9",
@@ -25,16 +71,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
-      "server": "jpa.123069.xyz",
-      "server_port": 53758,
-      "method": "aes-128-gcm",
-      "password": "Bwlqh7GcFB"
-    },
-    {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
       "server": "jpgajma.xyy123.date",
       "server_port": 443,
       "uuid": "a4fa57a2-d4df-482b-afec-aa38a824a23a",
@@ -60,7 +98,9 @@
         "auto",
         "🇯🇵 日本 (Japan) 01 - Jewell",
         "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 - Jewell"
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell"
       ]
     },
     {
@@ -69,7 +109,9 @@
       "outbounds": [
         "🇯🇵 日本 (Japan) 01 - Jewell",
         "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 - Jewell"
+        "🇯🇵 日本 (Japan) 03 - Jewell",
+        "🇯🇵 日本 (Japan) 04 - Jewell",
+        "🇯🇵 日本 (Japan) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -12,18 +12,46 @@
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - Jewell",
+      "server": "bhjolq0d0l.flowersgood.top",
+      "server_port": 443,
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "tls": {
+        "enabled": true,
+        "server_name": "bhjolq0d0l.flowersgood.top",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/service/telemetry/045d381f1166/",
+        "headers": {
+          "Host": "bhjolq0d0l.flowersgood.top"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

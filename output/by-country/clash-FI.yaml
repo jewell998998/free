@@ -5,24 +5,64 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: fi1.obxodvpn.us
+  server: 94.183.164.119
+  udp: true
+  port: 24433
+  type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: lakes.blog-forme.ru
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 65.109.208.183
   udp: true
   port: 443
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: fi1.obxodvpn.us
+  type: vless
+  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
+  tls: true
+  servername: free.for.member.iiproxy.com
   skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: free.for.member.iiproxy.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
+  tls: true
+  servername: free.for.member.iiproxy.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: 146.103.118.189
+  udp: true
+  port: 443
+  type: vless
+  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
+  tls: true
+  servername: nl2.574ck.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /574ck-finland
+    headers:
+      Host: nl2.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 rules:
 - MATCH,PROXIES

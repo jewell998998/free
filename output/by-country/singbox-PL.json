@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "81.90.24.154",
+      "server_port": 443,
+      "uuid": "6c8e3705-809e-4ca8-ae10-fe2ae2fa9859",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl3.soshelper.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9UG9zvrDpiPgY_J0dvB-n10ygEw3FzJ2qT8PFtITUBE",
+          "short_id": "e06e30590f288e0f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
       "server": "82.118.22.161",
       "server_port": 443,
       "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
@@ -15,7 +36,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +46,83 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
+      "server": "20.215.66.17",
+      "server_port": 2083,
+      "uuid": "52a5a29f-c162-411a-8a37-a3f11b0dc537",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4",
+          "short_id": "0123456789abcdef"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 04 - Jewell",
+      "server": "54.37.131.126",
+      "server_port": 80,
+      "uuid": "1e55beca-3c69-4fa7-fb1f-15c1b767435f",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 05 - Jewell",
+      "server": "pl1-mgmt.soshelper.space",
+      "server_port": 443,
+      "uuid": "3a7849e7-8ef6-492f-860d-54dd6aae400a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl1.soshelper.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mEo4kHPpRns7efJfVW1G-gDEsPag0jELFQK-HIwrvjY",
+          "short_id": "6562cf617728186e"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell",
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell",
+        "🇵🇱 波兰 (Poland) 04 - Jewell",
+        "🇵🇱 波兰 (Poland) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

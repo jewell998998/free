@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
+      "server": "65.108.240.210",
+      "server_port": 39018,
+      "uuid": "fa15684a-81e6-4ba7-bc4b-f601c0d998e9",
+      "security": "auto"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
       "server": "177.202.75.56",
       "server_port": 443,
       "password": "146d567c-6335-4e63-a8aa-7ec068642440",
@@ -13,29 +21,6 @@
         "enabled": true,
         "server_name": "fi1.obxodvpn.us",
         "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "146.103.118.189",
-      "server_port": 443,
-      "uuid": "ce698f0c-a8ec-474a-b5d8-3be8032deeb8",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl2.574ck.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/574ck-finland",
-        "headers": {
-          "Host": "nl2.574ck.xyz"
-        }
       }
     },
     {

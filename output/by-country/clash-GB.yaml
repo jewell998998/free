@@ -5,72 +5,62 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 34.39.80.57
+  udp: true
+  port: 50818
+  type: vless
+  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  tls: true
+  servername: yingguo.rymaker.cn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /GunService
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  server: 172.66.44.124
+  udp: true
+  port: 2096
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: randomized
+  network: ws
+  ws-opts:
+    path: /9BozNyvQ8VdRvsYX?ed=2560
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
   server: 16.60.30.137
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 67.159.56.79
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
+  server: 104.222.183.180
   udp: true
-  port: 8388
+  port: 47195
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: ~4HT,}bC@heiRai
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 199.47.240.33
-  udp: true
-  port: 8443
-  type: hysteria2
-  password: 1794466637:db57c865-2318-4fd2-8aea-e8ba58ec696d:JWnXCUB_7HUqJAARJBCT0cIeRY_mWvYGaSUiSBVoKGM
-  sni: gb3.lumacache.com
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  server: promo2.betust.net
+  password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 50.7.193.146
   udp: true
   port: 443
   type: hysteria2
   password: 2bc6428196efb899f544d750bea0c06d
   sni: promo2.betust.net
   skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 05 R63 - Jewell
-  server: 136.176.68.34
-  udp: true
-  port: 443
-  type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo
-    short-id: a6040129ad7f4b74
-  servername: www.apple.com
-  client-fingerprint: ''
 - name: 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  server: 213.176.92.168
+  server: 67.159.56.79
   udp: true
-  port: 14430
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
-- name: 🇬🇧 英国 (United Kingdom) 07 - Jewell
-  server: 193.163.203.170
-  udp: true
-  port: 443
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: safari
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ~4HT,}bC@heiRai
 proxy-groups:
 - name: PROXIES
   type: select
@@ -80,9 +70,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 R63 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
   - 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,8 +81,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
   - 🇬🇧 英国 (United Kingdom) 03 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 05 R63 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 05 - Jewell
   - 🇬🇧 英国 (United Kingdom) 06 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 07 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,35 +5,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
-      "server": "45.90.59.15",
-      "server_port": 443,
-      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
+      "server": "154.31.112.237",
+      "server_port": 26418,
+      "uuid": "bb7ece87-1ef1-4d49-8847-7e8736bb77a8",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY",
-          "short_id": "19253fae84102271"
         }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell",
-      "server": "208.69.78.19",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yourultimateprofessionalcareerhub.com",
-        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev"
+        }
       }
     },
     {
@@ -41,16 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

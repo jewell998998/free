@@ -1,0 +1,89 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "213.21.232.4",
+      "server_port": 443,
+      "password": "4b13c29ebe735e47",
+      "tls": {
+        "enabled": true,
+        "server_name": "mytubeproxy10.duckdns.org",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "20.215.66.17",
+      "server_port": 2083,
+      "uuid": "52a5a29f-c162-411a-8a37-a3f11b0dc537",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4",
+          "short_id": "0123456789abcdef"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
+      "server": "2.26.224.174",
+      "server_port": 8445,
+      "uuid": "a4e5f910-23f4-470f-82a7-ed9d7be71dec",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.ncknms.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc",
+          "short_id": "10983e6c816181c2"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

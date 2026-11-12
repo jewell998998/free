@@ -1,0 +1,58 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: 213.21.232.4
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 4b13c29ebe735e47
+  sni: mytubeproxy10.duckdns.org
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 20.215.66.17
+  udp: true
+  port: 2083
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: 2.26.224.174
+  udp: true
+  port: 8445
+  type: vless
+  uuid: a4e5f910-23f4-470f-82a7-ed9d7be71dec
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc
+    short-id: 10983e6c816181c2
+  servername: blog.ncknms.com
+  client-fingerprint: edge
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+rules:
+- MATCH,PROXIES

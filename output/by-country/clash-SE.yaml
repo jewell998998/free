@@ -5,42 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 138.199.55.243
+  server: fans.liverpool.qzz.io
   udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 62.182.193.228
-  udp: true
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 2e555e46dbc421452416834962fd014f
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 95.143.196.32
-  udp: true
-  port: 443
-  type: trojan
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  sni: connect-se.mimowhat.online
+  port: 2083
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  tls: true
+  servername: fans.liverpool.qzz.io
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY0Y0cENQUmxsNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: fans.liverpool.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 rules:
 - MATCH,PROXIES

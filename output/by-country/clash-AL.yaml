@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇱 AL 01 - Jewell
+  server: 212.41.9.190
+  udp: true
+  port: 2087
+  type: vless
+  uuid: db57c865-2318-4fd2-8aea-e8ba58ec696d
+  tls: true
+  reality-opts:
+    public-key: YhkmKAgHTooOB7pfAPXt63-4WY6X1f4kVe1USOjYd2M
+    short-id: 045cb3a9
+  servername: s3.storage.selcloud.ru
+  client-fingerprint: ios
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cas-al
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇱 AL 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇱 AL 01 - Jewell
+rules:
+- MATCH,PROXIES

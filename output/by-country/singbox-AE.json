@@ -4,8 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+      "server": "151.245.163.246",
+      "server_port": 443,
+      "uuid": "e9e44c8f-44e1-450f-806d-f0dca6d7dc95",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "us-mia2.probe.geomyip.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "yXdCcOXX-Q4ygs18Wa9AYXi69RwZvAvrTaS5zq9CKzY",
+          "short_id": "8f24b4b6d3d46fa2"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - Jewell",
       "server": "151.241.19.29",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -16,14 +37,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01 - Jewell"
+        "🇦🇪 阿联酋 (UAE) 01 - Jewell",
+        "🇦🇪 阿联酋 (UAE) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

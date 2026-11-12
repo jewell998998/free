@@ -12,47 +12,17 @@ proxies:
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   sni: nlll.obxodvpn.us
   skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
-  server: 31.56.187.235
-  udp: true
-  port: 443
-  type: vless
-  uuid: 7e60e8d6-ed73-4db2-a474-e70794cdf418
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: XmvhirU6V5lOl__xGziMlYSTmYef6cY52xNM8_N-Dns
-    short-id: b9d8c8addd2e5f70
-  servername: estonia.izzzyvpn.space
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
-  server: 38.244.155.67
-  udp: true
-  port: 443
-  type: vless
-  uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: NLXltMEkWIxv9bL2J4XkPGb4oVwGbCkITCTXF-jVxAE
-    short-id: 2976f793571fb671
-  servername: node-eu-1.nztpro.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - Jewell
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - Jewell
 rules:
 - MATCH,PROXIES

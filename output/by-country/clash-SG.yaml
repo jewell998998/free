@@ -5,23 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: xjpp.zjlo.top
+  server: 140.245.62.225
   udp: true
   port: 36442
   type: vless
-  uuid: 2633cbab-e901-4f5a-9a0f-18ff319d0d70
+  uuid: 5269e0b4-0dff-4f97-e0c7-83130bacb009
   flow: xtls-rprx-vision
   tls: true
   servername: xjpp.zjlo.top
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 02 R41 - Jewell
-  server: 15.235.182.183
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
+  server: 68.183.227.236
   udp: true
-  port: 19999
+  port: 8080
   type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   server: 68.183.235.240
   udp: true
@@ -36,8 +36,22 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
-  server: 68.183.227.236
+- name: 🇸🇬 新加坡 (Singapore) 05 R47 - Jewell
+  server: 149.88.106.73
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇸🇬 新加坡 (Singapore) 06 R55 - Jewell
+  server: 128.1.186.132
+  udp: true
+  port: 8080
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
+  server: 128.1.186.73
   udp: true
   port: 8080
   type: ss
@@ -49,19 +63,23 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R41 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R47 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 02 R41 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 03 R52 - Jewell
   - 🇸🇬 新加坡 (Singapore) 04 R52 - Jewell
-  - 🇸🇬 新加坡 (Singapore) 05 R52 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 05 R47 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 06 R55 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 07 R55 - Jewell
 rules:
 - MATCH,PROXIES

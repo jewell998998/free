@@ -5,14 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - Jewell
-  server: 13.140.56.100
+  server: 122.176.216.52
   udp: true
-  port: 14430
+  port: 443
   type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  tls: true
+  servername: app-6ada5023.deploy.meerasolution.com
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /vless
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 212.41.9.190
-  udp: true
-  port: 10443
-  type: vless
-  uuid: db57c865-2318-4fd2-8aea-e8ba58ec696d
-  tls: true
-  reality-opts:
-    public-key: 8_nRAlcICkHpdasp0BvKiikAwJ0NSdboULleT2iiuEM
-    short-id: f4316f4e
-  servername: s3.storage.selcloud.ru
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cas-tr
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 185.246.155.91
   udp: true
   port: 10103
@@ -32,6 +17,17 @@ proxies:
     short-id: 6859f5b59e55aa30
   servername: www.apple.com
   client-fingerprint: ''
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  server: game.celvixo.ir
+  udp: true
+  port: 2087
+  type: vless
+  uuid: 2b2581ed-99ac-4ec2-f807-0d4f203c8919
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cp.xelzano.ir
 proxy-groups:
 - name: PROXIES
   type: select

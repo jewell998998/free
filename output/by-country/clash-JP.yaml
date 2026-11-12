@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 31.76.91.168
-  udp: true
-  port: 8443
-  type: hysteria2
-  password: 1794466637:db57c865-2318-4fd2-8aea-e8ba58ec696d:Sjcl0gc4tJZu1HqNgL502Y4uLCJSzLg9X3R0zYjQ6MQ
-  sni: jp.lumacache.com
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 168.138.205.100
-  udp: true
-  port: 53758
-  type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: 168.110.45.41
   udp: true
   port: 23444
@@ -31,7 +16,27 @@ proxies:
     public-key: zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c
     short-id: 119c9e68498f5900
   servername: www.microsoft.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: jpa.123069.xyz
+  udp: true
+  port: 53758
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: jpgajma.xyy123.date
+  udp: true
+  port: 443
+  type: vless
+  uuid: a4fa57a2-d4df-482b-afec-aa38a824a23a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
+    short-id: 2c92d6
+  servername: home.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

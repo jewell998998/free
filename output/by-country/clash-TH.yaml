@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01 - Jewell
-  server: mx001.zestapp778.com
+- name: 🇹🇭 泰国 (Thailand) 01 - Jewell
+  server: 119.46.51.45
   udp: true
-  port: 15083
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: mx001.zestapp778.com
-  skip-cert-verify: false
+  port: 37515
+  type: vmess
+  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  - 🇹🇭 泰国 (Thailand) 01 - Jewell
 rules:
 - MATCH,PROXIES

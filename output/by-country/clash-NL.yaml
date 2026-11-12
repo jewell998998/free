@@ -4,53 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 - Jewell
-  server: radar.cloudflare.com
-  udp: true
-  port: 8080
-  type: vless
-  uuid: cfa71937-73d5-4eb8-9b25-eadecd944803
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sh-harand.shcharand00.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
-  server: 172.67.155.222
+- name: 🇳🇱 荷兰 (Netherlands) 01 R63 - Jewell
+  server: 66.163.127.155
   udp: true
   port: 443
-  type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
-  tls: true
-  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: indyourperfectremotetechjobfromthecomfortofhome.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  server: 79.182.39.135
+- name: 🇳🇱 荷兰 (Netherlands) 02 - Jewell
+  server: 89.105.195.151
   udp: true
   port: 443
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
   tls: true
-  reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: 50a749f0eccb628c
-  servername: 15b171g.nl7.h1clayd.click
-  client-fingerprint: chrome
+  servername: edge.mediacorphub.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
-    grpc-service-name: 5b79e8a94241
-- name: 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+    grpc-service-name: hub.v1.ObjectService
+- name: 🇳🇱 荷兰 (Netherlands) 03 - Jewell
   server: 188.116.27.6
   udp: true
   port: 443
   type: vless
-  uuid: 45c02942-9e3a-4dfd-8042-4f6f83207824
+  uuid: bcf7f0af-dc39-423b-9ceb-046a8d8fe358
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -58,22 +38,7 @@ proxies:
     short-id: '1174'
   servername: www.sony.co.uk
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  server: 717252g.nl8.h1clayd.click
-  udp: true
-  port: 443
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
-    short-id: d3bd772514c87d28
-  servername: 717252g.nl8.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 204adda7e3da
-- name: 🇳🇱 荷兰 (Netherlands) 06 R52 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 04 R52 - Jewell
   server: 188.166.81.135
   udp: true
   port: 1270
@@ -84,28 +49,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 07 R63 - Jewell
-  server: 66.163.127.154
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  server: 195.206.235.215
-  udp: true
-  port: 443
-  type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
-    short-id: 8d0d0679f42ffd98
-  servername: 8a2e72t.nl11.h1clayd.click
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 09 - Jewell
+- name: 🇳🇱 荷兰 (Netherlands) 05 - Jewell
   server: 130.12.242.106
   udp: true
   port: 443
@@ -117,69 +61,8 @@ proxies:
     public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
     short-id: 15affa0af66dfc79
   servername: deepl.com
-  client-fingerprint: ''
-- name: 🇳🇱 荷兰 (Netherlands) 10 R63 - Jewell
-  server: 66.163.127.44
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 11 - Jewell
-  server: 212.113.116.181
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
-  tls: true
-  servername: de.oncloudvpn.com
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇳🇱 荷兰 (Netherlands) 12 R63 - Jewell
-  server: 66.163.127.225
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 13 - Jewell
-  server: 176.65.151.175
-  udp: true
-  port: 11674
-  type: vmess
-  uuid: a98a98cb-ae86-43ae-b695-cf0dbcad3fc2
-  alterId: 0
-  cipher: auto
-- name: 🇳🇱 荷兰 (Netherlands) 14 - Jewell
-  server: assets.mediacorphub.org
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  tls: true
-  servername: assets.mediacorphub.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: hub.v1.ObjectService
-- name: 🇳🇱 荷兰 (Netherlands) 15 - Jewell
-  server: f0d7aft.nl13.h1clayd.click
-  udp: true
-  port: 443
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
-    short-id: 8956c57cb4c4f8d2
-  servername: f0d7aft.nl13.h1clayd.click
-  client-fingerprint: ''
-- name: 🇳🇱 荷兰 (Netherlands) 16 - Jewell
+  client-fingerprint: random
+- name: 🇳🇱 荷兰 (Netherlands) 06 - Jewell
   server: ams2.shtil.io
   udp: true
   port: 444
@@ -189,73 +72,78 @@ proxies:
   tls: true
   servername: ams2.shtil.io
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 17 - Jewell
-  server: 9.163.235.73
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 07 - Jewell
+  server: 94.183.164.176
   udp: true
-  port: 2083
+  port: 7443
   type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  uuid: d00d7150-d897-4c3e-83b2-a92bc2e7cf49
+  tls: true
+  reality-opts:
+    public-key: unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE
+  servername: optim.tildacdn.pub
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ebl
+- name: 🇳🇱 荷兰 (Netherlands) 08 - Jewell
+  server: 153.56.229.84
+  udp: true
+  port: 8090
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: xMfen2bSpUYyP3GjXHP_kqLA19L9r1cj
+- name: 🇳🇱 荷兰 (Netherlands) 09 R63 - Jewell
+  server: 66.163.127.107
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.indyourperfectremotetechjobfromthecomfortofhome.com
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 10 - Jewell
+  server: 168.100.9.41
+  udp: true
+  port: 16386
+  type: vless
+  uuid: e4346f8c-631a-46ee-9caf-09a69c08bff3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  servername: www.apple.com
+    public-key: pCe1K8kz-ux6Gv_8nma15hPTBR3PZ4IiVAPSQqUbawY
+    short-id: 2d2db70fbd
+  servername: www.oracle.com
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 18 - Jewell
-  server: 212.34.137.105
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: shorts.blog-forme.ru
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 01 R63 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 R52 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 06 R52 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 07 R63 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 10 R63 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 12 R63 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 13 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 14 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 15 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 16 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 17 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 18 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 R63 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 01 R63 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 02 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 03 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 04 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 04 R52 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 05 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 06 R52 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 07 R63 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 06 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 07 - Jewell
   - 🇳🇱 荷兰 (Netherlands) 08 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 09 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 10 R63 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 11 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 12 R63 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 13 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 14 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 15 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 16 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 17 - Jewell
-  - 🇳🇱 荷兰 (Netherlands) 18 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 09 R63 - Jewell
+  - 🇳🇱 荷兰 (Netherlands) 10 - Jewell
 rules:
 - MATCH,PROXIES

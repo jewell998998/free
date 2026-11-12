@@ -4,79 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "65.109.208.183",
+      "server": "fi1.obxodvpn.us",
       "server_port": 443,
-      "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
+      "password": "146d567c-6335-4e63-a8aa-7ec068642440",
       "tls": {
         "enabled": true,
-        "server_name": "free.for.member.iiproxy.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 R47 - Jewell",
-      "server": "178.214.125.1",
-      "server_port": 443,
-      "uuid": "3f3160a0-747d-4fed-bf3d-4d884bfa964d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "conf.emaar.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY",
-          "short_id": "6172ba9cffe9c22f"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
-      "server": "free.for.member.iiproxy.com",
-      "server_port": 443,
-      "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
-      "tls": {
-        "enabled": true,
-        "server_name": "free.for.member.iiproxy.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 04 - Jewell",
-      "server": "146.103.118.189",
-      "server_port": 443,
-      "uuid": "ce698f0c-a8ec-474a-b5d8-3be8032deeb8",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl2.574ck.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/574ck-finland",
-        "headers": {
-          "Host": "nl2.574ck.xyz"
-        }
+        "server_name": "fi1.obxodvpn.us",
+        "insecure": false
       }
     },
     {
@@ -84,20 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 R47 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell",
-        "🇫🇮 芬兰 (Finland) 04 - Jewell"
+        "🇫🇮 芬兰 (Finland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 R47 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell",
-        "🇫🇮 芬兰 (Finland) 04 - Jewell"
+        "🇫🇮 芬兰 (Finland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

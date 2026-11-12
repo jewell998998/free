@@ -5,128 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 138.124.242.46
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  tls: true
-  servername: pl2-edge.gacvpn.site
-  skip-cert-verify: false
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: connect-pl
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 20.215.66.17
-  udp: true
-  port: 2083
-  type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: 213.21.232.4
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 4b13c29ebe735e47
-  sni: mytubeproxy10.duckdns.org
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 04 - Jewell
-  server: 191.101.184.15
+  server: 82.118.22.161
   udp: true
   port: 443
   type: vless
-  uuid: e9e44c8f-44e1-450f-806d-f0dca6d7dc95
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: pwi1X4tYLhx5O7ppPJJ2BrxaHv9coKX2wrocw-2deGg
-    short-id: 2089c4369197cd65
-  servername: pl-gdn3.probe.geomyip.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 05 - Jewell
-  server: 2.26.224.174
-  udp: true
-  port: 8445
-  type: vless
-  uuid: a4e5f910-23f4-470f-82a7-ed9d7be71dec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc
-    short-id: 10983e6c816181c2
-  servername: blog.ncknms.com
-  client-fingerprint: edge
-- name: 🇵🇱 波兰 (Poland) 06 - Jewell
-  server: 2.26.224.174
-  udp: true
-  port: 8443
-  type: vless
-  uuid: a4e5f910-23f4-470f-82a7-ed9d7be71dec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc
-    short-id: 10983e6c816181c2
-  servername: teamdocs.su
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 07 - Jewell
-  server: 201.58.139.66
-  udp: true
-  port: 443
-  type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  reality-opts:
-    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
-    short-id: 6c5c7900406a1ae7
-  servername: 57aac2t.pl7.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 08 - Jewell
-  server: 54.37.131.126
-  udp: true
-  port: 80
-  type: vmess
-  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
-  - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 - Jewell
-  - 🇵🇱 波兰 (Poland) 05 - Jewell
-  - 🇵🇱 波兰 (Poland) 06 - Jewell
-  - 🇵🇱 波兰 (Poland) 07 - Jewell
-  - 🇵🇱 波兰 (Poland) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
-  - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 - Jewell
-  - 🇵🇱 波兰 (Poland) 05 - Jewell
-  - 🇵🇱 波兰 (Poland) 06 - Jewell
-  - 🇵🇱 波兰 (Poland) 07 - Jewell
-  - 🇵🇱 波兰 (Poland) 08 - Jewell
 rules:
 - MATCH,PROXIES

@@ -16,18 +16,35 @@ proxies:
     public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
     short-id: 5c256336e3b673fa
   servername: www.cloudflare.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
+- name: 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
+  server: 31.56.177.27
+  udp: true
+  port: 443
+  type: vless
+  uuid: e5be613e-0b23-4c08-88fb-6b4a82055365
+  tls: true
+  servername: oslo.zovip2.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v3/pulse
+    headers:
+      Host: oslo.zovip2.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
+  - 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
+  - 🇱🇻 拉脱维亚 (Latvia) 02 - Jewell
 rules:
 - MATCH,PROXIES

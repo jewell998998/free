@@ -5,21 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 95.143.196.97
+  server: 16.171.159.75
   udp: true
-  port: 443
-  type: hysteria2
-  password: 769f34f0-1500-488f-b414-03bc90666502
-  sni: se.mimowhat.online
-  skip-cert-verify: false
+  port: 16751
+  type: vmess
+  uuid: 5b2e2e5f-1302-4d65-ab39-27f6f0ca5562
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
 - name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 138.199.55.243
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
   server: 138.124.86.230
   udp: true
   port: 48115
@@ -28,7 +22,6 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
@@ -39,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -47,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 rules:
 - MATCH,PROXIES

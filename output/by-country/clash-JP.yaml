@@ -12,43 +12,6 @@ proxies:
   cipher: aes-128-gcm
   password: Bwlqh7GcFB
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 155.248.175.201
-  udp: true
-  port: 23169
-  type: vless
-  uuid: 9da605d3-f5f7-4135-f806-450f036f9351
-  flow: xtls-rprx-vision
-  tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 158.101.151.157
-  udp: true
-  port: 443
-  type: vless
-  uuid: 66171cbe-0b4b-4b24-99f6-d5a822f4dc9a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
-    short-id: 684c7531e599dec0
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: 168.110.45.41
-  udp: true
-  port: 23444
-  type: vless
-  uuid: ee2112e4-1e58-4f77-b162-5ef869358df9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c
-    short-id: 119c9e68498f5900
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
   server: jpgajma.xyy123.date
   udp: true
   port: 443
@@ -68,9 +31,6 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,8 +38,5 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
-  - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
 rules:
 - MATCH,PROXIES

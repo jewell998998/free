@@ -5,28 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
-      "server": "74.161.152.237",
-      "server_port": 2083,
-      "uuid": "52a5a29f-c162-411a-8a37-a3f11b0dc537",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4",
-          "short_id": "0123456789abcdef"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 R53 - Jewell",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
       "server": "45.90.59.15",
       "server_port": 443,
       "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
@@ -36,7 +15,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -46,73 +25,46 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 03 - Jewell",
-      "server": "guide.blog-forme.ru",
+      "type": "trojan",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell",
+      "server": "208.69.78.158",
       "server_port": 443,
-      "password": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "guide.blog-forme.ru",
+        "server_name": "api.yourultimateprofessionalcareerhub.com",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇭 瑞士 (Switzerland) 03 R54 - Jewell",
+      "server": "208.69.78.19",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yourultimateprofessionalcareerhub.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "type": "trojan",
       "tag": "🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell",
-      "server": "208.69.78.29",
+      "server": "208.69.78.19",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "learn.yourultimateprofessionalcareerhub.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 05 R54 - Jewell",
-      "server": "208.69.78.208",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "resources.yourultimateprofessionalcareerhub.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 06 R54 - Jewell",
-      "server": "208.69.78.222",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "yourultimateprofessionalcareerhub.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 07 R54 - Jewell",
-      "server": "208.69.78.29",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.yourultimateprofessionalcareerhub.com",
+        "server_name": "www.yourultimateprofessionalcareerhub.com",
         "insecure": false
       }
     },
@@ -121,26 +73,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R53 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 03 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 05 R54 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 06 R54 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 07 R54 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 03 R54 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R53 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 03 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 05 R54 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 06 R54 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 07 R54 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 R54 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 03 R54 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

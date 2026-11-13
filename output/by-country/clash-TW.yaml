@@ -1,0 +1,27 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  server: 35.236.180.222
+  udp: true
+  port: 14514
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: b7I6g7l7fJhBaMInJ+zkzw==
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+rules:
+- MATCH,PROXIES

@@ -4,7 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 R40 - Jewell
+- name: 🇨🇿 捷克 (Czech) 01 - Jewell
+  server: 195.123.245.241
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
+    short-id: 23d0950d60bc0d5b
+  servername: gateway.icloud.com
+  client-fingerprint: random
+- name: 🇨🇿 捷克 (Czech) 02 - Jewell
+  server: 153.52.69.249
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WVfpQqoeOrTtCq052_IOxvMv7RCWfLlAOxEfsH1aa2U
+    short-id: d5492c7a39515c65
+  servername: cache-78.topp-con.xyz
+  client-fingerprint: firefox
+- name: 🇨🇿 捷克 (Czech) 03 R40 - Jewell
   server: 212.102.38.25
   udp: true
   port: 443
@@ -22,12 +48,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 R40 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 03 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 R40 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 03 R40 - Jewell
 rules:
 - MATCH,PROXIES

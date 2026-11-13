@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇴 挪威 (Norway) 01 - Jewell
-  server: 144.31.130.208
+- name: 🇲🇽 墨西哥 (Mexico) 01 - Jewell
+  server: mx001.zestapp778.com
   udp: true
-  port: 443
+  port: 15083
   type: trojan
-  password: Ef7SP_TxQ1V-SpFV1JWHX1RU2s-fJyf8
-  sni: 144.31.130.208
+  password: 5t6i121em5lkmsmk
+  sni: mx001.zestapp778.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇴 挪威 (Norway) 01 - Jewell
+  - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇴 挪威 (Norway) 01 - Jewell
+  - 🇲🇽 墨西哥 (Mexico) 01 - Jewell
 rules:
 - MATCH,PROXIES

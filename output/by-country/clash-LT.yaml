@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇹 立陶宛 (Lithuania) 01 - Jewell
+  server: lt.t1n2.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: a94d8907-6bbb-4570-80d3-dfdc314c1e7a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: awc2TGvraH8xMqfsAnNQ7JMQ_uUF8gW5auvU2gQfjR0
+    short-id: b31de5bead2ebf3c
+  servername: lt.t1n2.com
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇱🇹 立陶宛 (Lithuania) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇱🇹 立陶宛 (Lithuania) 01 - Jewell
+rules:
+- MATCH,PROXIES

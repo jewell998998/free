@@ -4,21 +4,21 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (移动家宽) R56 - Jewell
-  server: wells.aisb.dpdns.org
+- name: 🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell
+  server: 18.175.123.65
   udp: true
   port: 443
-  type: vless
-  uuid: 3a6ca9e9-79fa-4dc5-9da3-2fe7681575f4
-  tls: true
-  servername: wells.aisb.dpdns.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /dac11c16a4b1
-    headers:
-      Host: wells.aisb.dpdns.org
-- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
+- name: 🇩🇪 德国 (Germany) 02 (移动家宽) - Jewell
+  server: 47.254.143.251
+  udp: true
+  port: 443
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: 🇰🇷 韩国 (South Korea) 03 (家宽) - Jewell
   server: 49.254.204.133
   udp: true
   port: 1774
@@ -30,14 +30,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (移动家宽) R56 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell
+  - 🇩🇪 德国 (Germany) 02 (移动家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 (家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (移动家宽) R56 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - Jewell
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell
+  - 🇩🇪 德国 (Germany) 02 (移动家宽) - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 (家宽) - Jewell
 rules:
 - MATCH,PROXIES

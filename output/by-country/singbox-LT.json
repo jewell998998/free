@@ -1,0 +1,52 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 01 - Jewell",
+      "server": "lt.t1n2.com",
+      "server_port": 443,
+      "uuid": "a94d8907-6bbb-4570-80d3-dfdc314c1e7a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt.t1n2.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "awc2TGvraH8xMqfsAnNQ7JMQ_uUF8gW5auvU2gQfjR0",
+          "short_id": "b31de5bead2ebf3c"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇱🇹 立陶宛 (Lithuania) 01 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇱🇹 立陶宛 (Lithuania) 01 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

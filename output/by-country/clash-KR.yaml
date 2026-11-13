@@ -13,30 +13,6 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇰🇷 韩国 (South Korea) 02 - Jewell
-  server: 43.155.182.152
-  udp: true
-  port: 8443
-  type: vmess
-  uuid: 3567660e-d2a7-4a8a-b379-2ff61e7f52ba
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
-  server: 43.155.182.152
-  udp: true
-  port: 443
-  type: vless
-  uuid: 3567660e-d2a7-4a8a-b379-2ff61e7f52ba
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1HazPAvhO7sdmIloNjQEDXtjVP8i-Gn59doTSRVuiGY
-    short-id: a905935ed2d659fe
-  servername: live.douyin.com
-  client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 04 - Jewell
   server: 158.247.253.243
   udp: true
   port: 443
@@ -51,8 +27,6 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
-  - 🇰🇷 韩国 (South Korea) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,7 +34,5 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
   - 🇰🇷 韩国 (South Korea) 02 - Jewell
-  - 🇰🇷 韩国 (South Korea) 03 - Jewell
-  - 🇰🇷 韩国 (South Korea) 04 - Jewell
 rules:
 - MATCH,PROXIES

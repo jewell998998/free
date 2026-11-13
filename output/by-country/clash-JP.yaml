@@ -5,13 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 168.138.205.100
+  server: 155.248.175.201
   udp: true
-  port: 53758
-  type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
+  port: 23169
+  type: vless
+  uuid: 7318caa1-93d1-4a9d-c481-504599902700
+  flow: xtls-rprx-vision
+  tls: true
+  servername: djj.zjlo.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 168.110.45.41
+  udp: true
+  port: 23444
+  type: vless
+  uuid: ee2112e4-1e58-4f77-b162-5ef869358df9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c
+    short-id: 119c9e68498f5900
+  servername: www.microsoft.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: jpgajma.xyy123.date
   udp: true
   port: 443
@@ -31,6 +48,7 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +56,6 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
+  - 🇯🇵 日本 (Japan) 03 - Jewell
 rules:
 - MATCH,PROXIES

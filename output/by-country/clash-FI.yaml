@@ -5,38 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 188.225.46.162
-  udp: true
-  port: 443
-  type: vless
-  uuid: 7d718630-7a1a-4af8-9332-aa0610634e8a
-  tls: true
-  servername: filnex.baby
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: lalibobi.tw.de1.Connect
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 65.109.208.183
-  udp: true
-  port: 443
-  type: vless
-  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
-  tls: true
-  servername: free.for.member.iiproxy.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: free.for.member.iiproxy.com
-  udp: true
-  port: 443
-  type: vless
-  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
-  tls: true
-  servername: free.for.member.iiproxy.com
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: 94.183.164.119
   udp: true
   port: 24433
@@ -44,7 +12,20 @@ proxies:
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
   sni: lakes.blog-forme.ru
   skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+- name: 🇫🇮 芬兰 (Finland) 02 R47 - Jewell
+  server: 178.214.125.1
+  udp: true
+  port: 443
+  type: vless
+  uuid: 3f3160a0-747d-4fed-bf3d-4d884bfa964d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY
+    short-id: 6172ba9cffe9c22f
+  servername: conf.emaar.ru
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: 146.103.118.189
   udp: true
   port: 443
@@ -58,40 +39,21 @@ proxies:
     path: /574ck-finland
     headers:
       Host: nl2.574ck.xyz
-- name: 🇫🇮 芬兰 (Finland) 06 R47 - Jewell
-  server: 178.214.125.1
-  udp: true
-  port: 443
-  type: vless
-  uuid: 3f3160a0-747d-4fed-bf3d-4d884bfa964d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY
-    short-id: 6172ba9cffe9c22f
-  servername: conf.emaar.ru
-  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
-  - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 R47 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
-  - 🇫🇮 芬兰 (Finland) 06 R47 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
-  - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 R47 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
-  - 🇫🇮 芬兰 (Finland) 06 R47 - Jewell
 rules:
 - MATCH,PROXIES

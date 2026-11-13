@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  server: 94.247.142.1
-  udp: true
-  port: 443
-  type: vless
-  uuid: fd62968a-2e97-41ea-9aa0-aa61aed78955
-  tls: true
-  servername: simIlarcaTerpillarPvet-j5H6x4-1.simIlar-caterPillar-pVet.worKers.deV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: simIlarcaTerpillarPvet-j5H6x4-1.simIlar-caterPillar-pVet.worKers.deV
-- name: 🇦🇪 阿联酋 (UAE) 02 - Jewell
   server: 151.241.19.29
   udp: true
   port: 19999
@@ -32,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - Jewell
-  - 🇦🇪 阿联酋 (UAE) 02 - Jewell
 rules:
 - MATCH,PROXIES

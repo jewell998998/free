@@ -4,9 +4,44 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-      "server": "sclass-b1.catcat321.com",
+      "server": "185.246.155.91",
+      "server_port": 10103,
+      "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko",
+          "short_id": "6859f5b59e55aa30"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
+      "server": "game.celvixo.ir",
+      "server_port": 2087,
+      "uuid": "06590410-10cf-4352-1221-97f286886e4f",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "cp.xelzano.ir"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - Jewell",
+      "server": "157.254.38.210",
       "server_port": 20027,
       "password": "d7563108-615c-4338-a7bd-77f359869a4a",
       "tls": {
@@ -17,22 +52,22 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
-      "server": "193.151.152.30",
-      "server_port": 2085,
-      "uuid": "5191d3d6-56d0-46a1-ae79-ddf2b2460559",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 - Jewell",
+      "server": "45.141.148.45",
+      "server_port": 443,
+      "uuid": "fa081e9f-7574-4e18-8928-31aa5ac923c7",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "tr1-b.sbcweb.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "BF26WqOIARMEEiD5I3qkq_QFCRIeYAjf99_WS6kXeiE",
-          "short_id": ""
+          "public_key": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "short_id": "868419504747f6de"
         }
       }
     },
@@ -42,7 +77,9 @@
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 02 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 03 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 04 - Jewell"
       ]
     },
     {
@@ -50,7 +87,9 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 02 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 03 - Jewell",
+        "🇹🇷 土耳其 (Turkey) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

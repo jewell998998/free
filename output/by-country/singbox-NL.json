@@ -4,8 +4,21 @@
   },
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "🇳🇱 荷兰 (Netherlands) 01 R52 - Jewell",
+      "server": "188.166.81.135",
+      "server_port": 1270,
+      "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "xmfhlpy.com",
+        "insecure": false
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+      "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
       "server": "77.246.98.208",
       "server_port": 24480,
       "uuid": "5d87eda7-c3d5-406c-9648-49b975888f98",
@@ -14,7 +27,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -25,77 +38,28 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
-      "server": "188.116.27.6",
-      "server_port": 443,
-      "uuid": "c5166628-47a8-4b6c-9b57-4c8cfb60a6d3",
+      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
+      "server": "ams2.shtil.io",
+      "server_port": 444,
+      "uuid": "254f28cb-d0c1-41e9-a06b-f2155213ff04",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.sony.co.uk",
+        "server_name": "ams2.shtil.io",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc",
-          "short_id": "1174"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
-      "server": "9.163.235.73",
-      "server_port": 2083,
-      "uuid": "52a5a29f-c162-411a-8a37-a3f11b0dc537",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4",
-          "short_id": "0123456789abcdef"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇳🇱 荷兰 (Netherlands) 04 R63 - Jewell",
-      "server": "66.163.127.225",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.indyourperfectremotetechjobfromthecomfortofhome.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇳🇱 荷兰 (Netherlands) 05 R63 - Jewell",
-      "server": "66.163.127.9",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "resources.indyourperfectremotetechjobfromthecomfortofhome.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
+      "tag": "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
       "server": "130.12.242.106",
       "server_port": 443,
       "uuid": "bc058e69-0444-4c7b-98da-bd67f0b143da",
@@ -105,7 +69,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -115,60 +79,32 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇳🇱 荷兰 (Netherlands) 07 R63 - Jewell",
-      "server": "66.163.127.215",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "courses.indyourperfectremotetechjobfromthecomfortofhome.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇳🇱 荷兰 (Netherlands) 08 R63 - Jewell",
-      "server": "66.163.127.155",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "indyourperfectremotetechjobfromthecomfortofhome.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
-      "server": "79.182.70.232",
+      "tag": "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
+      "server": "196.196.148.63",
       "server_port": 443,
       "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
       "tls": {
         "enabled": true,
-        "server_name": "5d0319t.nl7.h1clayd.click",
+        "server_name": "717252g.nl8.h1clayd.click",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
-          "short_id": "361d0dd59c70516f"
+          "public_key": "PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU",
+          "short_id": "d3bd772514c87d28"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "204adda7e3da"
       }
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 10 - Jewell",
+      "tag": "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
       "server": "168.100.9.41",
       "server_port": 53171,
       "uuid": "2c0e6f91-6547-497a-9086-43899ce4f5c8",
@@ -177,7 +113,7 @@
         "server_name": "www.nvidia.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -191,126 +127,75 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 11 - Jewell",
-      "server": "8a2e72t.nl11.h1clayd.click",
-      "server_port": 443,
-      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "8a2e72t.nl11.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA",
-          "short_id": "8d0d0679f42ffd98"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 12 - Jewell",
-      "server": "ams2.shtil.io",
-      "server_port": 444,
-      "uuid": "254f28cb-d0c1-41e9-a06b-f2155213ff04",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ams2.shtil.io",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 13 - Jewell",
-      "server": "93.123.85.59",
+      "tag": "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+      "server": "196.245.153.104",
       "server_port": 443,
       "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
       "tls": {
         "enabled": true,
-        "server_name": "961ec0g.nl17.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA",
-          "short_id": "6d289ff0f47c0aac"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "7d5abcd7d8a1"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 荷兰 (Netherlands) 14 - Jewell",
-      "server": "168.100.9.41",
-      "server_port": 16386,
-      "uuid": "e4346f8c-631a-46ee-9caf-09a69c08bff3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.oracle.com",
+        "server_name": "5d0319t.nl7.h1clayd.click",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "pCe1K8kz-ux6Gv_8nma15hPTBR3PZ4IiVAPSQqUbawY",
-          "short_id": "2d2db70fbd"
+          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+          "short_id": "361d0dd59c70516f"
         }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+      "server": "72.56.247.153",
+      "server_port": 8080,
+      "uuid": "FastKey_277376",
+      "transport": {
+        "type": "ws",
+        "path": "/api",
+        "headers": {
+          "Host": "google.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
+      "server": "176.65.151.175",
+      "server_port": 11674,
+      "uuid": "a98a98cb-ae86-43ae-b695-cf0dbcad3fc2",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 01 R52 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 04 R63 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 05 R63 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 07 R63 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 08 R63 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 10 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 11 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 12 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 13 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 14 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 09 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 荷兰 (Netherlands) 01 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 01 R52 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 02 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 03 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 04 R63 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 05 R63 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 04 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 05 - Jewell",
         "🇳🇱 荷兰 (Netherlands) 06 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 07 R63 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 08 R63 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 09 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 10 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 11 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 12 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 13 - Jewell",
-        "🇳🇱 荷兰 (Netherlands) 14 - Jewell"
+        "🇳🇱 荷兰 (Netherlands) 07 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 08 - Jewell",
+        "🇳🇱 荷兰 (Netherlands) 09 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

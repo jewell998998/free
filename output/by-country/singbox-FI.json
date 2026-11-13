@@ -4,59 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "188.225.46.162",
-      "server_port": 443,
-      "uuid": "7d718630-7a1a-4af8-9332-aa0610634e8a",
-      "tls": {
-        "enabled": true,
-        "server_name": "filnex.baby",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "lalibobi.tw.de1.Connect"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "65.109.208.183",
-      "server_port": 443,
-      "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
-      "tls": {
-        "enabled": true,
-        "server_name": "free.for.member.iiproxy.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
-      "server": "free.for.member.iiproxy.com",
-      "server_port": 443,
-      "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
-      "tls": {
-        "enabled": true,
-        "server_name": "free.for.member.iiproxy.com",
-        "insecure": false
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇫🇮 芬兰 (Finland) 04 - Jewell",
+      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
       "server": "94.183.164.119",
       "server_port": 24433,
       "password": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
@@ -68,7 +17,28 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 05 - Jewell",
+      "tag": "🇫🇮 芬兰 (Finland) 02 R47 - Jewell",
+      "server": "178.214.125.1",
+      "server_port": 443,
+      "uuid": "3f3160a0-747d-4fed-bf3d-4d884bfa964d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "conf.emaar.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY",
+          "short_id": "6172ba9cffe9c22f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
       "server": "146.103.118.189",
       "server_port": 443,
       "uuid": "ce698f0c-a8ec-474a-b5d8-3be8032deeb8",
@@ -86,37 +56,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 06 R47 - Jewell",
-      "server": "178.214.125.1",
-      "server_port": 443,
-      "uuid": "3f3160a0-747d-4fed-bf3d-4d884bfa964d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "conf.emaar.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY",
-          "short_id": "6172ba9cffe9c22f"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell",
-        "🇫🇮 芬兰 (Finland) 04 - Jewell",
-        "🇫🇮 芬兰 (Finland) 05 - Jewell",
-        "🇫🇮 芬兰 (Finland) 06 R47 - Jewell"
+        "🇫🇮 芬兰 (Finland) 02 R47 - Jewell",
+        "🇫🇮 芬兰 (Finland) 03 - Jewell"
       ]
     },
     {
@@ -124,11 +70,8 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell",
-        "🇫🇮 芬兰 (Finland) 04 - Jewell",
-        "🇫🇮 芬兰 (Finland) 05 - Jewell",
-        "🇫🇮 芬兰 (Finland) 06 R47 - Jewell"
+        "🇫🇮 芬兰 (Finland) 02 R47 - Jewell",
+        "🇫🇮 芬兰 (Finland) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

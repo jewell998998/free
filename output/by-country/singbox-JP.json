@@ -4,16 +4,46 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
-      "server": "168.138.205.100",
-      "server_port": 53758,
-      "method": "aes-128-gcm",
-      "password": "Bwlqh7GcFB"
+      "server": "155.248.175.201",
+      "server_port": 23169,
+      "uuid": "7318caa1-93d1-4a9d-c481-504599902700",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "djj.zjlo.top",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "server": "168.110.45.41",
+      "server_port": 23444,
+      "uuid": "ee2112e4-1e58-4f77-b162-5ef869358df9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c",
+          "short_id": "119c9e68498f5900"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
       "server": "jpgajma.xyy123.date",
       "server_port": 443,
       "uuid": "a4fa57a2-d4df-482b-afec-aa38a824a23a",
@@ -38,7 +68,8 @@
       "outbounds": [
         "auto",
         "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell"
       ]
     },
     {
@@ -46,7 +77,8 @@
       "tag": "auto",
       "outbounds": [
         "🇯🇵 日本 (Japan) 01 - Jewell",
-        "🇯🇵 日本 (Japan) 02 - Jewell"
+        "🇯🇵 日本 (Japan) 02 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -26,7 +26,6 @@ proxies:
   tls: true
   servername: f2hbck5x3c0g8pl7.cdn.cachefleet.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: qi8ws15c7jv5q2fa
@@ -55,9 +54,9 @@ proxies:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
   servername: bizorg.su
-  client-fingerprint: edge
+  client-fingerprint: ios
 - name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: prvtch.titun.su
+  server: fdat.titun.su
   udp: true
   port: 443
   type: vless
@@ -67,30 +66,23 @@ proxies:
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
-  servername: perevodchiki.su
-  client-fingerprint: random
+  servername: banket-restoran.su
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  server: ee.subv.ru
+  server: 95.213.184.193
   udp: true
   port: 443
   type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  uuid: fa081e9f-7574-4e18-8928-31aa5ac923c7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: dvizhok.su
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: 868419504747f6de
+  servername: rs6.lazeroe.com
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 185.22.153.117
-  udp: true
-  port: 18443
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  server: mbr.rkn-pediki.site
+  server: 185.178.208.167
   udp: true
   port: 443
   type: vless
@@ -98,7 +90,7 @@ proxies:
   tls: true
   servername: mbr.rkn-pediki.site
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /session
@@ -116,7 +108,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -129,6 +120,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
 rules:
 - MATCH,PROXIES

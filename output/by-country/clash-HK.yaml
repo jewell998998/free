@@ -5,24 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: bd8d18d7-tmm5c0-tny186-4lg6.hk3.hyhuawei.com
+  server: 112.120.123.140
   udp: true
   port: 443
   type: hysteria2
-  password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
-  sni: bd8d18d7-tmm5c0-tny186-4lg6.hk3.hyhuawei.com
+  password: c11ff50c-f582-11ee-94df-f23c9164ca5d
+  sni: 11158b9a-tmm5c0-u3xqxa-1q91p.nw4.hyhuawei.com
   skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: dog-hk.kunlun01dns.com
+  udp: true
+  port: 21041
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
 rules:
 - MATCH,PROXIES

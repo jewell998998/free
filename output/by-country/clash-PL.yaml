@@ -19,33 +19,39 @@ proxies:
   grpc-opts:
     grpc-service-name: ''
 - name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 13e1cfg.plp1.h1cloud.net
+  server: 82.118.22.161
   udp: true
   port: 443
   type: vless
-  uuid: 3ede439b-410f-4eae-b449-4e15064c0706
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: cWC6AGVZ9ke_eCTWXEB-eLdf670CuoP9zP-1k8DrPxo
-    short-id: 8ae9cc8c9447c95a
-  servername: 13e1cfg.plp1.h1cloud.net
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: d5d6142b8b66
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: 54.37.131.126
+  server: n38.neproxy.net
   udp: true
-  port: 80
-  type: vmess
-  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  port: 9443
+  type: hysteria2
+  password: lvu_1f46c9c7e44bef3f9974936d87ee4f44_1f900674c11bcad65b09ef1f77502ea5:np2.1.z9PBCLlUfCKIMqYEuafOnTLQIjz8lGsSRofhhXAlFdc
+  sni: n34.neproxy.net
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: 20.215.66.17
+  udp: true
+  port: 2083
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  servername: www.apple.com
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,6 +60,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -62,5 +69,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
 rules:
 - MATCH,PROXIES

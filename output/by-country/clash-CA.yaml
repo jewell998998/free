@@ -18,6 +18,13 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 3h3hb2gptqz6suyt
+- name: 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
+  server: 15.235.121.109
+  udp: true
+  port: 8080
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 575hiopq2h28yao6
 proxy-groups:
 - name: PROXIES
   type: select
@@ -25,6 +32,7 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -32,5 +40,6 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
 rules:
 - MATCH,PROXIES

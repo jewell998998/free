@@ -5,73 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 166.0.22.237
+  server: jpa.123069.xyz
   udp: true
-  port: 2053
-  type: vless
-  uuid: d7067561-10b3-4aba-8834-6baedd2adfb5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: jp6.netease.uz
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  port: 53758
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 166.0.22.246
+  server: 43.130.234.128
   udp: true
-  port: 2053
-  type: vless
-  uuid: 9dc3aaa8-4330-4e0d-9363-b19cf6d9fc62
-  flow: xtls-rprx-vision
-  tls: true
-  servername: jp4.netease.uz
+  port: 8443
+  type: hysteria2
+  password: Yuike2026cat
+  sni: 43-130-234-128.sslip.io
   skip-cert-verify: false
-  client-fingerprint: firefox
 - name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: 166.0.22.245
+  server: djj.zjlo.top
   udp: true
-  port: 2053
+  port: 23169
   type: vless
-  uuid: 5a90143c-dc79-491d-a4e0-0e9ec6345d1d
+  uuid: 3eb053cb-d6f8-4b31-8180-222e1cc6f8ff
   flow: xtls-rprx-vision
   tls: true
-  servername: jp9.netease.uz
+  servername: djj.zjlo.top
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: 168.110.63.247
+  server: 155.248.175.201
   udp: true
-  port: 8081
-  type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 168.110.45.41
-  udp: true
-  port: 23444
+  port: 23169
   type: vless
-  uuid: ee2112e4-1e58-4f77-b162-5ef869358df9
+  uuid: 9da605d3-f5f7-4135-f806-450f036f9351
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c
-    short-id: 119c9e68498f5900
-  servername: www.microsoft.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: 166.0.22.243
-  udp: true
-  port: 2053
-  type: vless
-  uuid: ad65ebef-654b-4b5f-afa7-200f12b2ef40
-  flow: xtls-rprx-vision
-  tls: true
-  servername: jp3.netease.uz
+  servername: djj.zjlo.top
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -81,8 +50,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
   - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,7 +59,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
   - 🇯🇵 日本 (Japan) 04 - Jewell
-  - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
 rules:
 - MATCH,PROXIES

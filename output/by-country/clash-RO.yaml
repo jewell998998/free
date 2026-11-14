@@ -5,52 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  server: hy2-new.aspidnet.xyz
-  udp: true
-  port: 443
-  type: hysteria2
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
-  server: 82.152.132.211
-  udp: true
-  port: 8044
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
-- name: 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
-  server: 46.28.67.211
+  server: 46.28.67.55
   udp: true
   port: 443
   type: vless
-  uuid: f8cb3c89-32af-4255-bebc-d90aad175069
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
-    short-id: 27350908de933e09
-  servername: roa.kosmosapp.net
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+  servername: www.cloudflare.com
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: neurex
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
-  - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
 rules:
 - MATCH,PROXIES

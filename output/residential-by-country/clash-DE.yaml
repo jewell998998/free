@@ -5,14 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell
-  server: 18.175.123.65
-  udp: true
-  port: 443
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
-- name: 🇩🇪 德国 (Germany) 02 (移动家宽) - Jewell
-  server: 47.254.143.251
+  server: 8.211.38.49
   udp: true
   port: 443
   type: ss
@@ -24,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell
-  - 🇩🇪 德国 (Germany) 02 (移动家宽) - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell
-  - 🇩🇪 德国 (Germany) 02 (移动家宽) - Jewell
 rules:
 - MATCH,PROXIES

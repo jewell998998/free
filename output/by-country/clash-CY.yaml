@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
-  server: 50.6.54.163
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell
+  server: 5.253.30.168
   udp: true
   port: 443
   type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  uuid: b0a6163d-a8a4-432c-91de-cf1ee6a91027
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 2vd1kmOeZpjjDpgN75FMhwFRzPjNfzvLoUM5LlLrm2U
-    short-id: 26b26357bfcd59a1
-  servername: www.apple.com
+    public-key: pzL-sRds-39y5dcuMOSouVqiXSzOLWV36fBr1o8bYUA
+    short-id: c9e51a7f34
+  servername: www.ikea.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+  server: 212.41.9.190
+  udp: true
+  port: 36109
+  type: hysteria2
+  password: 1794613669:ead4a562-edf2-40cf-ad33-13ae98546226:w6rqI78K6gfxJcFQhWRiJ1E9algZc0n57ZAqMSmYlwA
+  sni: hu.lumacache.com
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇭🇺 匈牙利 (Hungary) 01 - Jewell
+rules:
+- MATCH,PROXIES

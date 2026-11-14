@@ -4,39 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇪🇸 西班牙 (Spain) 01 - Jewell",
-      "server": "2.27.27.56",
-      "server_port": 443,
-      "password": "FK2sTEXzZ1KwLBVtxS7vbKSnXAVpgrxd",
-      "tls": {
-        "enabled": true,
-        "server_name": "2.27.27.56",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 02 - Jewell",
-      "server": "46.28.71.247",
-      "server_port": 443,
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
+      "tag": "🇪🇸 西班牙 (Spain) 01 - Jewell",
+      "server": "68.221.177.135",
+      "server_port": 2083,
+      "uuid": "52a5a29f-c162-411a-8a37-a3f11b0dc537",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
+          "public_key": "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4",
+          "short_id": "0123456789abcdef"
         }
       }
     },
@@ -45,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01 - Jewell",
-        "🇪🇸 西班牙 (Spain) 02 - Jewell"
+        "🇪🇸 西班牙 (Spain) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01 - Jewell",
-        "🇪🇸 西班牙 (Spain) 02 - Jewell"
+        "🇪🇸 西班牙 (Spain) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

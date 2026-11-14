@@ -5,19 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 168.110.21.56
-  udp: true
-  port: 18453
-  type: vless
-  uuid: 1751bebc-1bf1-420c-8b9d-97157aad179b
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: jpa.123069.xyz
   udp: true
   port: 53758
   type: ss
   cipher: aes-128-gcm
   password: Bwlqh7GcFB
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: 168.110.45.41
   udp: true
   port: 23444
@@ -29,8 +23,34 @@ proxies:
     public-key: zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c
     short-id: 119c9e68498f5900
   servername: www.microsoft.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: rrnmbzgsnmbkdbdzdm.jiedddym.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: dee59b19-a32f-4d35-b1ee-3708e7d06efc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SIkoghKAHypuKD6uVc-dwMt5vR-lNxcbpHHsVf4lmzY
+    short-id: 16c7a9b3c7ee83f9
+  servername: fastcdn.hoyoverse.com
+  client-fingerprint: ios
 - name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: rbgnbyglpdsjddlsnmb.jiedddym.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: dee59b19-a32f-4d35-b1ee-3708e7d06efc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VNH8Q2mvF_LMPryghvH7Qx6eGf3MxZeyAkKGFKcUQDA
+    short-id: 18dcb2a6b0fbd3ef
+  servername: fastcdn.hoyoverse.com
+  client-fingerprint: ios
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
   server: 158.101.151.157
   udp: true
   port: 443
@@ -42,34 +62,7 @@ proxies:
     public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
     short-id: 684c7531e599dec0
   servername: www.microsoft.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 155.248.175.201
-  udp: true
-  port: 23169
-  type: vless
-  uuid: 9da605d3-f5f7-4135-f806-450f036f9351
-  flow: xtls-rprx-vision
-  tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: dog-jp.kunlun01dns.com
-  udp: true
-  port: 21016
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 07 - Jewell
-  server: dog-jp.kunlun01dns.com
-  udp: true
-  port: 21014
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -80,8 +73,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - Jewell
   - 🇯🇵 日本 (Japan) 04 - Jewell
   - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,7 +83,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - Jewell
   - 🇯🇵 日本 (Japan) 04 - Jewell
   - 🇯🇵 日本 (Japan) 05 - Jewell
-  - 🇯🇵 日本 (Japan) 06 - Jewell
-  - 🇯🇵 日本 (Japan) 07 - Jewell
 rules:
 - MATCH,PROXIES

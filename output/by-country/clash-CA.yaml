@@ -5,40 +5,41 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
+  server: 99.79.32.21
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 15.156.192.45
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
+- name: 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
   server: 15.235.57.6
   udp: true
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
   password: kxhnt5jtykd328cg
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 15.156.199.163
-  udp: true
-  port: 80
-  type: vless
-  uuid: 6daa0b95-9210-4f29-be40-8c6db00bc5bb
 - name: 🇨🇦 加拿大 (Canada) 04 R50 - Jewell
-  server: 54.39.96.233
+  server: 15.235.121.109
   udp: true
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: 2cvhpvdg4x7mvbps
+  password: 575hiopq2h28yao6
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
   - 🇨🇦 加拿大 (Canada) 04 R50 - Jewell
 - name: AUTO
   type: url-test
@@ -46,8 +47,8 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
-  - 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 02 - Jewell
+  - 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
   - 🇨🇦 加拿大 (Canada) 04 R50 - Jewell
 rules:
 - MATCH,PROXIES

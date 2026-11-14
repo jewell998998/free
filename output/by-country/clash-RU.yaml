@@ -18,26 +18,13 @@ proxies:
   grpc-opts:
     grpc-service-name: qi8ws15c7jv5q2fa
 - name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 200.102.183.50
-  udp: true
-  port: 443
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-  tls: true
-  servername: f2hbck5x3c0g8pl7.cdn.cachefleet.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: qi8ws15c7jv5q2fa
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   server: 185.22.153.117
   udp: true
   port: 18443
   type: ss
   cipher: aes-256-gcm
   password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   server: 185.39.204.117
   udp: true
   port: 10002
@@ -46,9 +33,12 @@ proxies:
   tls: true
   servername: tr2.vpnjantit.com
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vpnjantit
+    headers:
+      Host: tr2.vpnjantit.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -57,7 +47,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -66,6 +55,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
 rules:
 - MATCH,PROXIES

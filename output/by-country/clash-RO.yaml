@@ -5,6 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  server: 82.152.132.211
+  udp: true
+  port: 8044
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
+- name: 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
+  server: hy2-new.aspidnet.xyz
+  udp: true
+  port: 443
+  type: hysteria2
+  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
+  sni: hy2-new.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: c1b4086fea89914496c7e10967a419216566
+- name: 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
   server: 46.28.67.55
   udp: true
   port: 443
@@ -16,18 +33,22 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 02 - Jewell
+  - 🇷🇴 罗马尼亚 (Romania) 03 - Jewell
 rules:
 - MATCH,PROXIES

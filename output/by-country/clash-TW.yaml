@@ -5,25 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
-  server: amasoid.ddns.net
+  server: 35.236.180.222
   udp: true
   port: 14514
   type: ss
   cipher: 2022-blake3-aes-128-gcm
   password: b7I6g7l7fJhBaMInJ+zkzw==
 - name: 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
-  server: twntxbnczyhgd.jiedddym.com
+  server: dog-tw.kunlun01dns.com
   udp: true
-  port: 443
-  type: vless
-  uuid: dee59b19-a32f-4d35-b1ee-3708e7d06efc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: fGRViNlqExmn0EvkfZmptnn4a9zei819zpLoMRDpRTw
-    short-id: 8fe3fe59c02a29
-  servername: fastcdn.hoyoverse.com
-  client-fingerprint: ios
+  port: 21034
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select

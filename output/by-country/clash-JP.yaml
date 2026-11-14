@@ -5,13 +5,50 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: jpa.123069.xyz
+  server: 166.0.22.237
   udp: true
-  port: 53758
-  type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
+  port: 2053
+  type: vless
+  uuid: d7067561-10b3-4aba-8834-6baedd2adfb5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jp6.netease.uz
+  skip-cert-verify: false
+  client-fingerprint: firefox
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
+  server: 166.0.22.246
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 9dc3aaa8-4330-4e0d-9363-b19cf6d9fc62
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jp4.netease.uz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03 - Jewell
+  server: 166.0.22.245
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 5a90143c-dc79-491d-a4e0-0e9ec6345d1d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jp9.netease.uz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 168.110.63.247
+  udp: true
+  port: 8081
+  type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
   server: 168.110.45.41
   udp: true
   port: 23444
@@ -24,45 +61,17 @@ proxies:
     short-id: 119c9e68498f5900
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: rrnmbzgsnmbkdbdzdm.jiedddym.com
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  server: 166.0.22.243
   udp: true
-  port: 443
+  port: 2053
   type: vless
-  uuid: dee59b19-a32f-4d35-b1ee-3708e7d06efc
+  uuid: ad65ebef-654b-4b5f-afa7-200f12b2ef40
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: SIkoghKAHypuKD6uVc-dwMt5vR-lNxcbpHHsVf4lmzY
-    short-id: 16c7a9b3c7ee83f9
-  servername: fastcdn.hoyoverse.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: rbgnbyglpdsjddlsnmb.jiedddym.com
-  udp: true
-  port: 443
-  type: vless
-  uuid: dee59b19-a32f-4d35-b1ee-3708e7d06efc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VNH8Q2mvF_LMPryghvH7Qx6eGf3MxZeyAkKGFKcUQDA
-    short-id: 18dcb2a6b0fbd3ef
-  servername: fastcdn.hoyoverse.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: 158.101.151.157
-  udp: true
-  port: 443
-  type: vless
-  uuid: 66171cbe-0b4b-4b24-99f6-d5a822f4dc9a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
-    short-id: 684c7531e599dec0
-  servername: www.microsoft.com
-  client-fingerprint: chrome
+  servername: jp3.netease.uz
+  skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,6 +82,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - Jewell
   - 🇯🇵 日本 (Japan) 04 - Jewell
   - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,5 +93,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - Jewell
   - 🇯🇵 日本 (Japan) 04 - Jewell
   - 🇯🇵 日本 (Japan) 05 - Jewell
+  - 🇯🇵 日本 (Japan) 06 - Jewell
 rules:
 - MATCH,PROXIES

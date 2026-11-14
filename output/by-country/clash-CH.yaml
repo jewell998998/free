@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  server: guide.blog-forme.ru
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: guide.blog-forme.ru
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 02 - Jewell
   server: 74.161.152.237
   udp: true
   port: 2083
@@ -17,7 +25,7 @@ proxies:
     short-id: 0123456789abcdef
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 02 R53 - Jewell
+- name: 🇨🇭 瑞士 (Switzerland) 03 R53 - Jewell
   server: 45.90.59.15
   udp: true
   port: 443
@@ -30,69 +38,21 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 03 - Jewell
-  server: guide.blog-forme.ru
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: guide.blog-forme.ru
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell
-  server: 208.69.78.29
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 05 R54 - Jewell
-  server: 208.69.78.29
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 06 R54 - Jewell
-  server: 208.69.78.19
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 07 R54 - Jewell
-  server: 208.69.78.158
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 02 R53 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 03 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 05 R54 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 06 R54 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 07 R54 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 03 R53 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 02 R53 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 03 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 04 R54 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 05 R54 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 06 R54 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 07 R54 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 03 R53 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,27 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 94.183.164.119
-  udp: true
-  port: 24433
-  type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: lakes.blog-forme.ru
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: s19161.h1cloud.net
-  udp: true
-  port: 25749
-  type: vless
-  uuid: e460e79d-5dd9-451d-8d1a-a84c8b70c9a7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nmjOhfpVZtk9W-3GZk5JY0B-OvCFkjP2RvTVBNZO7lE
-    short-id: f6b3841eabafff9a
-  servername: 80aa2br.fi4.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: fi1.obxodvpn.us
   udp: true
   port: 443
@@ -33,21 +12,14 @@ proxies:
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   sni: fi1.obxodvpn.us
   skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 04 R66 - Jewell
-  server: 5674-4.seenode.app
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 94.183.164.119
   udp: true
-  port: 443
-  type: vless
-  uuid: 510e8bc2-020c-412a-9caa-b036031268e8
-  tls: true
-  servername: 5674-4.seenode.app
+  port: 24433
+  type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: lakes.blog-forme.ru
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/v1/live
-    headers:
-      Host: 5674-4.seenode.app
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,8 +27,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 R66 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -64,7 +34,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 R66 - Jewell
 rules:
 - MATCH,PROXIES

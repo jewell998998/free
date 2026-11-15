@@ -12,18 +12,40 @@
       "password": "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y="
     },
     {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 (家宽) - Jewell",
+      "server": "185.86.145.55",
+      "server_port": 10470,
+      "uuid": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "wn-pl4.static-s3.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "wn-adaptcloud"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell"
+        "🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell",
+        "🇵🇱 波兰 (Poland) 02 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell"
+        "🇩🇪 德国 (Germany) 01 (移动家宽) - Jewell",
+        "🇵🇱 波兰 (Poland) 02 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,42 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
+  server: 168.110.21.56
+  udp: true
+  port: 18453
+  type: vless
+  uuid: 1751bebc-1bf1-420c-8b9d-97157aad179b
+- name: 🇯🇵 日本 (Japan) 02 - Jewell
   server: jpa.123069.xyz
   udp: true
   port: 53758
   type: ss
   cipher: aes-128-gcm
   password: Bwlqh7GcFB
-- name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 43.130.234.128
-  udp: true
-  port: 8443
-  type: hysteria2
-  password: Yuike2026cat
-  sni: 43-130-234-128.sslip.io
-  skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 03 - Jewell
-  server: djj.zjlo.top
+  server: 158.101.151.157
   udp: true
-  port: 23169
+  port: 443
   type: vless
-  uuid: 3eb053cb-d6f8-4b31-8180-222e1cc6f8ff
+  uuid: 66171cbe-0b4b-4b24-99f6-d5a822f4dc9a
   flow: xtls-rprx-vision
   tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 04 - Jewell
-  server: 155.248.175.201
-  udp: true
-  port: 23169
-  type: vless
-  uuid: 9da605d3-f5f7-4135-f806-450f036f9351
-  flow: xtls-rprx-vision
-  tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  reality-opts:
+    public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
+    short-id: 684c7531e599dec0
+  servername: www.microsoft.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,7 +38,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +46,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01 - Jewell
   - 🇯🇵 日本 (Japan) 02 - Jewell
   - 🇯🇵 日本 (Japan) 03 - Jewell
-  - 🇯🇵 日本 (Japan) 04 - Jewell
 rules:
 - MATCH,PROXIES

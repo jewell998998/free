@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 94.183.164.119
+  server: fi4.h1cloud.net
   udp: true
-  port: 24433
-  type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: lakes.blog-forme.ru
-  skip-cert-verify: false
+  port: 25749
+  type: vless
+  uuid: e460e79d-5dd9-451d-8d1a-a84c8b70c9a7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nmjOhfpVZtk9W-3GZk5JY0B-OvCFkjP2RvTVBNZO7lE
+    short-id: f6b3841eabafff9a
+  servername: 80aa2br.fi4.h1clayd.click
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 177.202.75.56
   udp: true
@@ -20,6 +25,14 @@ proxies:
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   sni: fi1.obxodvpn.us
   skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 94.183.164.119
+  udp: true
+  port: 24433
+  type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: lakes.blog-forme.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -27,6 +40,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -34,5 +48,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 rules:
 - MATCH,PROXIES

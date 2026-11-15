@@ -4,18 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇿🇦 南非 (South Africa) 01 - Jewell",
-      "server": "139.84.231.142",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "type": "vless",
+      "tag": "🇭🇺 匈牙利 (Hungary) 01 - Jewell",
+      "server": "172.67.131.125",
+      "server_port": 2083,
+      "uuid": "f418674e-f518-4318-8ff9-e10000000046",
       "tls": {
         "enabled": true,
-        "server_name": "explorecareerpathsandunlockprofessionalsuccesstoday.com",
+        "server_name": "smart-edge-424.arti98399-1905.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/sync",
+        "headers": {
+          "Host": "smart-edge-424.arti98399-1905.workers.dev"
         }
       }
     },
@@ -24,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇿🇦 南非 (South Africa) 01 - Jewell"
+        "🇭🇺 匈牙利 (Hungary) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇿🇦 南非 (South Africa) 01 - Jewell"
+        "🇭🇺 匈牙利 (Hungary) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

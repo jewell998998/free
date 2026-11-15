@@ -20,15 +20,16 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
 - name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 362c1eg.se1.h1clayd.click
+  server: 195.206.235.19
   udp: true
   port: 443
   type: vless
-  uuid: 632cd343-1e8f-4bf6-a9a2-20ada1f6970f
+  uuid: c82031be-e90f-4b15-ab4f-7ccef236d3ca
   tls: true
   reality-opts:
     public-key: BLhS7fE4Yh6kAADw7yRIn2PzKun-JDagJHJNOePYRSY
@@ -38,6 +39,14 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
+- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  server: 95.143.196.97
+  udp: true
+  port: 443
+  type: trojan
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,6 +55,7 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,5 +64,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 rules:
 - MATCH,PROXIES

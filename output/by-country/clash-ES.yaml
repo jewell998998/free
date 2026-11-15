@@ -5,43 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: 153.56.229.39
+  server: 68.221.177.135
   udp: true
-  port: 443
+  port: 2083
   type: vless
-  uuid: b082567f-6291-4abf-be72-acdda82d4351
-  tls: true
-  reality-opts:
-    public-key: cxyrz3HGwHEptrO2fvz6EiikFoEDgTl0SQkrNyj5yRc
-    short-id: 74f848c51d8139d1
-  servername: b6d267t.es10.h1clayd.shop
-  client-fingerprint: ios
-- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
-  server: 46.28.71.247
-  udp: true
-  port: 443
-  type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: random
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01 - Jewell
-  - 🇪🇸 西班牙 (Spain) 02 - Jewell
 rules:
 - MATCH,PROXIES

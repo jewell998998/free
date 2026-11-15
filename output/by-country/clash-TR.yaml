@@ -5,43 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 185.39.204.117
+  server: game.celvixo.ir
   udp: true
-  port: 10002
+  port: 2087
   type: vless
-  uuid: facb802c-de2e-11f1-9a22-a3404e852f3b
-  tls: true
-  servername: tr2.vpnjantit.com
-  skip-cert-verify: false
+  uuid: ae83debb-df5c-41c1-2138-c2595421d4bd
   network: ws
   ws-opts:
-    path: /vpnjantit
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  server: 185.246.155.91
-  udp: true
-  port: 10103
-  type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko
-    short-id: 6859f5b59e55aa30
-  servername: www.apple.com
-  client-fingerprint: chrome
+    path: /
+    headers:
+      Host: cp.xelzano.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  - 🇹🇷 土耳其 (Turkey) 02 - Jewell
 rules:
 - MATCH,PROXIES

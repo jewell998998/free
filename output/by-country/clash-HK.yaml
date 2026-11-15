@@ -5,21 +5,54 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: dog-hk.kunlun01dns.com
+  server: 2.26.204.46
   udp: true
-  port: 21021
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
+  port: 31001
+  type: vless
+  uuid: 12a4f736-2238-49ee-831f-5516f15cc951
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY
+    short-id: 39793bc4708abbbb
+  servername: mensura.cdn-apple.com
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: dog-hk.kunlun01dns.com
+  server: 91.213.186.45
   udp: true
-  port: 21019
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
+  port: 46986
+  type: vless
+  uuid: 71327a90-b9c4-4385-b850-4d3c5832d9cc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5Uk63lFOn1Z3gmImXWrXbvQ0b9gXTOiY_VWuI898Vmk
+  servername: www.paypal.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 45.192.194.104
+  udp: true
+  port: 35600
+  type: vless
+  uuid: d34c4e7c-3eac-4a26-adb9-9004b6981ad8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zHmC_LkSMSrRHcetzsRJZvu6irqviiG3vf9VuXRL6FE
+  servername: www.iij.ad.jp
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: 45.192.193.54
+  udp: true
+  port: 35600
+  type: vless
+  uuid: 8614bde7-34cf-4413-8360-e96f1b960528
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fJwbUNPAxu-CcoWnzWrvtDkX7QMDvJwFGWzJ3lDcFC4
+  servername: www.iij.ad.jp
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -27,6 +60,8 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -34,5 +69,7 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 rules:
 - MATCH,PROXIES

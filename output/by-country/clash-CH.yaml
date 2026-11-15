@@ -16,18 +16,42 @@ proxies:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
     short-id: 19253fae84102271
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 02 - Jewell
+  server: a813d5t.ch5.h1clayd.click
+  udp: true
+  port: 443
+  type: vless
+  uuid: 963f72cf-8465-46f5-996c-df45500b57a3
+  tls: true
+  reality-opts:
+    public-key: syYaWsZJOf114XAoEcIQodriOW8pyCjP5x_KEq38ozs
+    short-id: 7ded0da1ef58b7e2
+  servername: a813d5t.ch5.h1clayd.click
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 03 R54 - Jewell
+  server: 208.69.78.208
+  udp: true
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 03 R54 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 02 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 03 R54 - Jewell
 rules:
 - MATCH,PROXIES

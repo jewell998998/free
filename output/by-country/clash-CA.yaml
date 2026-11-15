@@ -19,19 +19,48 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
-  server: 15.235.121.109
-  udp: true
-  port: 8080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 575hiopq2h28yao6
-- name: 🇨🇦 加拿大 (Canada) 04 R50 - Jewell
   server: 198.100.154.175
   udp: true
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 3h3hb2gptqz6suyt
+- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
+  server: 511.150333.xyz
+  udp: true
+  port: 21004
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
+  server: 103.106.229.37
+  udp: true
+  port: 21001
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: ab39fc68ab3dee81
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 06 - Jewell
+  server: 103.106.229.37
+  udp: true
+  port: 21002
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 3ab8d93dd9b1a5be
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -40,7 +69,9 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 R50 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
+  - 🇨🇦 加拿大 (Canada) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +80,8 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 R50 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 R50 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
+  - 🇨🇦 加拿大 (Canada) 06 - Jewell
 rules:
 - MATCH,PROXIES

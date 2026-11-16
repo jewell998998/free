@@ -5,26 +5,51 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 R50 - Jewell
-  server: 15.235.121.109
+  server: 198.100.154.175
   udp: true
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: 575hiopq2h28yao6
+  password: 3h3hb2gptqz6suyt
 - name: 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
-  server: 15.235.57.6
+  server: 54.39.96.233
   udp: true
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: kxhnt5jtykd328cg
+  password: 2cvhpvdg4x7mvbps
 - name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 99.79.32.21
+  server: 15.156.192.45
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
+  server: 23.155.44.105
+  udp: true
+  port: 443
+  type: vless
+  uuid: 128ce9ab-63bc-48dc-92ca-1b5426a9eb46
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HE1CGzI0QBqhMRUsHqq_9v4Mj3M5dkluFmfyMBH_7kM
+    short-id: 70f75668dc5914b3
+  servername: app.flyprotect.ca
+  client-fingerprint: firefox
+- name: 🇨🇦 加拿大 (Canada) 05 - Jewell
+  server: 103.106.229.177
+  udp: true
+  port: 21001
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: a51c3ccb2320024a
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +58,8 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 R50 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +68,7 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 01 R50 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 R50 - Jewell
   - 🇨🇦 加拿大 (Canada) 03 - Jewell
+  - 🇨🇦 加拿大 (Canada) 04 - Jewell
+  - 🇨🇦 加拿大 (Canada) 05 - Jewell
 rules:
 - MATCH,PROXIES

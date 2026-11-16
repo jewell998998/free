@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
-  server: 157.254.38.210
-  udp: true
-  port: 20027
-  type: trojan
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-  skip-cert-verify: false
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 185.246.155.91
   udp: true
   port: 10103
@@ -25,19 +17,14 @@ proxies:
     short-id: 6859f5b59e55aa30
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 03 R44 - Jewell
-  server: trn37.mobileemdad.top
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
+  server: sclass-b1.catcat321.com
   udp: true
-  port: 443
-  type: vless
-  uuid: 17930566-4faa-43bc-9ebb-ad63356abd10
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    short-id: 377d
-  servername: delivery.mp.microsoft.com
-  client-fingerprint: ios
+  port: 20027
+  type: trojan
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  sni: hk.catxstar.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  - 🇹🇷 土耳其 (Turkey) 03 R44 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - Jewell
   - 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  - 🇹🇷 土耳其 (Turkey) 03 R44 - Jewell
 rules:
 - MATCH,PROXIES

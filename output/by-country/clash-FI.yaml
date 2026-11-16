@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: fi1.obxodvpn.us
+  server: 177.202.75.56
   udp: true
   port: 443
   type: hysteria2
@@ -13,6 +13,30 @@ proxies:
   sni: fi1.obxodvpn.us
   skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 157.180.98.124
+  udp: true
+  port: 49659
+  type: vless
+  uuid: 88a558b1-9645-42f3-89e5-341570d8486d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
+    short-id: 81959fce
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 104.171.133.213
+  udp: true
+  port: 443
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mirror-75.topp-con.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: 129.101.100.219
   udp: true
   port: 443
@@ -21,17 +45,6 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: db-28.topp-con.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 135.181.187.44
-  udp: true
-  port: 443
-  type: vless
-  uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sizipe.hagrid-connected.com
   skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
@@ -42,6 +55,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +64,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 rules:
 - MATCH,PROXIES

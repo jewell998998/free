@@ -5,33 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - Jewell
-  server: 15.236.134.147
+  server: 13.38.60.238
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 15.188.27.50
+  server: 35.181.169.46
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇫🇷 法国 (France) 03 - Jewell
-  server: 13.38.12.246
+  server: 35.180.65.183
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 04 - Jewell
-  server: 13.38.102.82
+- name: 🇫🇷 法国 (France) 04 ⚠R - Jewell
+  server: 198.244.202.215
   udp: true
-  port: 443
+  port: 19999
   type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇫🇷 法国 (France) 05 ⚠R - Jewell
   server: 198.244.201.129
   udp: true
@@ -46,40 +46,46 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 07 - Jewell
-  server: 13.38.60.238
+- name: 🇫🇷 法国 (France) 07 R40 - Jewell
+  server: 79.137.99.183
   udp: true
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 08 R40 - Jewell
-  server: 51.77.144.182
-  udp: true
-  port: 8080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: x19py0a8ipglqkbe
-- name: 🇫🇷 法国 (France) 09 - Jewell
-  server: 20.19.83.143
-  udp: true
-  port: 2083
-  type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  flow: xtls-rprx-vision
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   tls: true
-  reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 10 R46 - Jewell
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 08 R46 - Jewell
   server: 57.129.76.233
   udp: true
   port: 19999
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 09 R40 - Jewell
+  server: 162.19.82.57
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 10 R40 - Jewell
+  server: 91.134.35.72
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 11 R40 - Jewell
   server: 46.105.222.157
   udp: true
@@ -91,15 +97,8 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 12 - Jewell
-  server: 54.36.174.134
-  udp: true
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eetk7pw
-- name: 🇫🇷 法国 (France) 13 R40 - Jewell
-  server: 79.137.99.183
+- name: 🇫🇷 法国 (France) 12 R40 - Jewell
+  server: 46.105.222.155
   udp: true
   port: 1270
   type: vmess
@@ -109,18 +108,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 14 R40 - Jewell
-  server: 162.19.82.57
-  udp: true
-  port: 1270
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 15 - Jewell
+- name: 🇫🇷 法国 (France) 13 - Jewell
   server: ai.smrtai.top
   udp: true
   port: 443
@@ -131,35 +119,8 @@ proxies:
     public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
     short-id: 086bf957
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 16 - Jewell
-  server: 57.131.4.13
-  udp: true
-  port: 8080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mx81glqbtlwuhcjo
-- name: 🇫🇷 法国 (France) 17 - Jewell
-  server: cdn-nl.vpnserverhub.com
-  udp: true
-  port: 8080
-  type: vless
-  uuid: d52531f2-3b44-47a0-b60f-de7b1297d5e8
-  network: ws
-  ws-opts:
-    path: /vpn-secure-cdn
-- name: 🇫🇷 法国 (France) 18 - Jewell
-  server: suh.cryptofront.uk
-  udp: true
-  port: 80
-  type: vless
-  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: suh.cryptofront.uk
-- name: 🇫🇷 法国 (France) 19 - Jewell
+  client-fingerprint: random
+- name: 🇫🇷 法国 (France) 14 - Jewell
   server: 141.227.170.220
   udp: true
   port: 8443
@@ -171,7 +132,33 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: 6ba85179e30d4fc2
   servername: apple.com
-  client-fingerprint: firefox
+  client-fingerprint: ''
+- name: 🇫🇷 法国 (France) 15 - Jewell
+  server: suh.cryptofront.uk
+  udp: true
+  port: 80
+  type: vless
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: suh.cryptofront.uk
+- name: 🇫🇷 法国 (France) 16 - Jewell
+  server: fr-free.fastestrelay.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: 364D2D52-E61E-4E52-80EC-2BC6BDF15349
+  tls: true
+  servername: fr-free.fastestrelay.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /700gvl
+    headers:
+      Host: fr-free.fastestrelay.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -180,22 +167,19 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 04 ⚠R - Jewell
   - 🇫🇷 法国 (France) 05 ⚠R - Jewell
   - 🇫🇷 法国 (France) 06 R40 - Jewell
-  - 🇫🇷 法国 (France) 07 - Jewell
-  - 🇫🇷 法国 (France) 08 R40 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 R46 - Jewell
+  - 🇫🇷 法国 (France) 07 R40 - Jewell
+  - 🇫🇷 法国 (France) 08 R46 - Jewell
+  - 🇫🇷 法国 (France) 09 R40 - Jewell
+  - 🇫🇷 法国 (France) 10 R40 - Jewell
   - 🇫🇷 法国 (France) 11 R40 - Jewell
-  - 🇫🇷 法国 (France) 12 - Jewell
-  - 🇫🇷 法国 (France) 13 R40 - Jewell
-  - 🇫🇷 法国 (France) 14 R40 - Jewell
+  - 🇫🇷 法国 (France) 12 R40 - Jewell
+  - 🇫🇷 法国 (France) 13 - Jewell
+  - 🇫🇷 法国 (France) 14 - Jewell
   - 🇫🇷 法国 (France) 15 - Jewell
   - 🇫🇷 法国 (France) 16 - Jewell
-  - 🇫🇷 法国 (France) 17 - Jewell
-  - 🇫🇷 法国 (France) 18 - Jewell
-  - 🇫🇷 法国 (France) 19 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -204,21 +188,18 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 - Jewell
   - 🇫🇷 法国 (France) 02 - Jewell
   - 🇫🇷 法国 (France) 03 - Jewell
-  - 🇫🇷 法国 (France) 04 - Jewell
+  - 🇫🇷 法国 (France) 04 ⚠R - Jewell
   - 🇫🇷 法国 (France) 05 ⚠R - Jewell
   - 🇫🇷 法国 (France) 06 R40 - Jewell
-  - 🇫🇷 法国 (France) 07 - Jewell
-  - 🇫🇷 法国 (France) 08 R40 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 R46 - Jewell
+  - 🇫🇷 法国 (France) 07 R40 - Jewell
+  - 🇫🇷 法国 (France) 08 R46 - Jewell
+  - 🇫🇷 法国 (France) 09 R40 - Jewell
+  - 🇫🇷 法国 (France) 10 R40 - Jewell
   - 🇫🇷 法国 (France) 11 R40 - Jewell
-  - 🇫🇷 法国 (France) 12 - Jewell
-  - 🇫🇷 法国 (France) 13 R40 - Jewell
-  - 🇫🇷 法国 (France) 14 R40 - Jewell
+  - 🇫🇷 法国 (France) 12 R40 - Jewell
+  - 🇫🇷 法国 (France) 13 - Jewell
+  - 🇫🇷 法国 (France) 14 - Jewell
   - 🇫🇷 法国 (France) 15 - Jewell
   - 🇫🇷 法国 (France) 16 - Jewell
-  - 🇫🇷 法国 (France) 17 - Jewell
-  - 🇫🇷 法国 (France) 18 - Jewell
-  - 🇫🇷 法国 (France) 19 - Jewell
 rules:
 - MATCH,PROXIES

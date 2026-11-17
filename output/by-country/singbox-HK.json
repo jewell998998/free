@@ -1,0 +1,84 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+      "server": "2.26.204.46",
+      "server_port": 31001,
+      "uuid": "12a4f736-2238-49ee-831f-5516f15cc951",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY",
+          "short_id": "39793bc4708abbbb"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21041,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+      "server": "3ae7b69c-toq2o0-tpolhi-1rgxu.hk2.hyhuawei.com",
+      "server_port": 443,
+      "uuid": "ea93064c-176c-11f0-885d-f23c91cfbbc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "download.windowsupdate.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

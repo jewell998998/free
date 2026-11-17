@@ -5,30 +5,59 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - Jewell
-  server: www.buydomains.com
+  server: xjpp.zjlo.top
+  udp: true
+  port: 36442
+  type: vless
+  uuid: c6624b96-e346-490b-9145-74c2543a9483
+  flow: xtls-rprx-vision
+  tls: true
+  servername: xjpp.zjlo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  server: 172.255.210.24
   udp: true
   port: 443
   type: vless
-  uuid: 4d945644-69ab-47e0-98b3-d43a6313135d
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   tls: true
-  servername: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vl/SaXqikbSPA3ImtmZKAFin?ed=2560fp=chrome
-    headers:
-      Host: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: 868419504747f6de
+  servername: net-cfg-api.galioncc.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 03 R40 - Jewell
+  server: 51.79.228.131
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇸🇬 新加坡 (Singapore) 04 R47 - Jewell
+  server: 149.88.106.73
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 R40 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 R47 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 02 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 03 R40 - Jewell
+  - 🇸🇬 新加坡 (Singapore) 04 R47 - Jewell
 rules:
 - MATCH,PROXIES

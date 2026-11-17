@@ -4,23 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "65.108.240.210",
-      "server_port": 39018,
-      "uuid": "8ca123a8-720b-47c5-bd0c-637431418b09",
-      "security": "auto"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "177.202.75.56",
+      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
+      "server": "fi1.obxodvpn.us",
       "server_port": 443,
       "password": "146d567c-6335-4e63-a8aa-7ec068642440",
       "tls": {
         "enabled": true,
         "server_name": "fi1.obxodvpn.us",
         "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
+      "server": "157.180.98.124",
+      "server_port": 49659,
+      "uuid": "88a558b1-9645-42f3-89e5-341570d8486d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs",
+          "short_id": "81959fce"
+        }
       }
     },
     {

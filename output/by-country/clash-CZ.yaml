@@ -5,24 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - Jewell
-  server: 194.87.233.93
-  udp: true
-  port: 46190
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 2Ef8X21WALqK7H6N8A78j5WYtzZ999PP8rF8DaLsb5LLyDLQpf5dGVAjdA3mj1wudigKXTt5heYU9jmaBbfxXBJJAqhPHkxe
-- name: 🇨🇿 捷克 (Czech) 02 - Jewell
-  server: 153.52.69.249
+  server: 195.123.245.241
   udp: true
   port: 443
   type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: WVfpQqoeOrTtCq052_IOxvMv7RCWfLlAOxEfsH1aa2U
-    short-id: d5492c7a39515c65
-  servername: cache-78.topp-con.xyz
+    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
+    short-id: 23d0950d60bc0d5b
+  servername: gateway.icloud.com
+  client-fingerprint: random
+- name: 🇨🇿 捷克 (Czech) 02 R42 - Jewell
+  server: 212.102.38.25
+  udp: true
+  port: 443
+  type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE
+    short-id: e90360ec7cc61b20
+  servername: udemy.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -30,13 +36,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 R42 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 - Jewell
+  - 🇨🇿 捷克 (Czech) 02 R42 - Jewell
 rules:
 - MATCH,PROXIES

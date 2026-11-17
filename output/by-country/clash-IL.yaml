@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 马来西亚 (Malaysia) 01 - Jewell
-  server: 45.249.91.115
+- name: 🇮🇱 以色列 (Israel) 01 - Jewell
+  server: 193.202.11.67
   udp: true
   port: 443
   type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  uuid: 076b9961-51c7-407f-92b8-a8f2c6d42a7f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: xE5R41I9u0Ro2Ru4TUDVqA0a1GRyS5K6zh1DJcJLEUw
-    short-id: 4af284210d
-  servername: my1.gofizz.in
-  client-fingerprint: edge
+    public-key: CnC08-EGzr6smaBZbQXW7y2mjH4uHcJly0ROcqtv0Gk
+    short-id: 09e501600e39ed57
+  servername: us-1.vpezid.net
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇾 马来西亚 (Malaysia) 01 - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01 - Jewell
+  - 🇮🇱 以色列 (Israel) 01 - Jewell
 rules:
 - MATCH,PROXIES

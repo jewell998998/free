@@ -4,25 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 - Jewell
-  server: guide.blog-forme.ru
+- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  server: 159.13.55.48
   udp: true
-  port: 443
   type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: guide.blog-forme.ru
+  password: b42d90fa667942aebc734d60
+  sni: hy2-au2.whuiy.xyz
   skip-cert-verify: false
+  obfs: salamander
+  obfs-password: b42d90fa667942aebc734d60
+  ports: 20000-30000
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 - Jewell
+  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
 rules:
 - MATCH,PROXIES

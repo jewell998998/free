@@ -4,22 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "trojan",
       "tag": "🇦🇺 澳大利亚 (Australia) 01 - Jewell",
-      "server": "159.13.55.48",
-      "password": "b42d90fa667942aebc734d60",
+      "server": "185.18.250.252",
+      "server_port": 443,
+      "password": "74480619-b6a8-4ab8-94e1-1132fc18b2fa",
       "tls": {
         "enabled": true,
-        "server_name": "hy2-au2.whuiy.xyz",
+        "server_name": "unnes.ac.id.r3xxe.eu.cc",
         "insecure": false
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "b42d90fa667942aebc734d60"
-      },
-      "server_ports": [
-        "20000:30000"
-      ]
+      "transport": {
+        "type": "ws",
+        "path": "/au-mt",
+        "headers": {
+          "Host": "unnes.ac.id.r3xxe.eu.cc"
+        }
+      }
     },
     {
       "type": "selector",

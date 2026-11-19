@@ -4,19 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 - Jewell
-  server: 95.85.231.28
-  udp: true
-  port: 443
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dSUceIeRRCE33JdDdXik0dQfU60cEc6P1FUqdTVh5FQ
-  servername: gshhb.wey-land.net
-  client-fingerprint: firefox
-- name: 🇨🇿 捷克 (Czech) 02 R42 - Jewell
+- name: 🇨🇿 捷克 (Czech) 01 R42 - Jewell
   server: 212.102.38.25
   udp: true
   port: 443
@@ -34,14 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 R42 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 R42 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - Jewell
-  - 🇨🇿 捷克 (Czech) 02 R42 - Jewell
+  - 🇨🇿 捷克 (Czech) 01 R42 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇱 智利 (Chile) 01 - Jewell
-  server: 147.224.235.131
+- name: 🇨🇭 瑞士 (Switzerland) 01 R50 - Jewell
+  server: 45.90.59.15
   udp: true
-  port: 60246
+  port: 443
   type: vless
-  uuid: 556bc1b7-a083-4188-bacf-2e5753a23609
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU
-    short-id: 1f2519bb96e5589c
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇱 智利 (Chile) 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 R50 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇱 智利 (Chile) 01 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 R50 - Jewell
 rules:
 - MATCH,PROXIES

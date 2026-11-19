@@ -5,58 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "104.21.3.133",
-      "server_port": 2053,
-      "uuid": "2b8738de-1af5-4267-b101-c05707769ed4",
-      "tls": {
-        "enabled": true,
-        "server_name": "FaNs.livErpoOl.qZZ.io",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiZXlpMnFWRURmWkp5ZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "fans.liverpool.qzz.io"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-      "server": "104.21.77.142",
-      "server_port": 2096,
-      "uuid": "b9ede7a5-5b4b-4aee-ac37-2c307e587e47",
-      "tls": {
-        "enabled": true,
-        "server_name": "courses.mftplus.qzz.io",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "courses.mftplus.qzz.io"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 R63 - Jewell",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 R63 - Jewell",
       "server": "136.176.68.34",
       "server_port": 443,
       "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69",
@@ -77,25 +26,74 @@
     },
     {
       "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "193.188.21.253",
+      "server_port": 14430,
+      "uuid": "57f7772d-f5d6-4d8f-992d-5fa5e0d6da55",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "193.188.21.253"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+      "server": "213.176.92.168",
+      "server_port": 14430,
+      "uuid": "ba52cc43-700d-4040-9444-29214c98e6e0",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "213.176.92.168"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-      "server": "13.143.185.27",
-      "server_port": 8443,
-      "uuid": "12910384-1ef8-40a3-818a-57277063ea66",
+      "server": "172.67.160.188",
+      "server_port": 443,
+      "uuid": "443b1e88-41fa-43bb-ff6c-982544254b74",
       "tls": {
         "enabled": true,
-        "server_name": "kk-50cd74.testkknegr.online",
+        "server_name": "wandering-river-cd33.mramezanian1375.workers.dev",
         "insecure": false,
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vlgrpc"
+        "type": "ws",
+        "path": "/87fab74555d6e093",
+        "headers": {
+          "Host": "wandering-river-cd33.mramezanian1375.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 05 - Jewell",
+      "server": "213.176.92.168",
+      "server_port": 10444,
+      "uuid": "ba52cc43-700d-4040-9444-29214c98e6e0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "video.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
+        }
       }
     },
     {
@@ -103,20 +101,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 01 R63 - Jewell",
         "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 R63 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 05 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 01 R63 - Jewell",
         "🇬🇧 英国 (United Kingdom) 02 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 R63 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell"
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 05 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

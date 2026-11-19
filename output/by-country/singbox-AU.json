@@ -4,37 +4,57 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "hysteria2",
       "tag": "🇦🇺 澳大利亚 (Australia) 01 - Jewell",
-      "server": "185.18.250.252",
-      "server_port": 443,
-      "password": "74480619-b6a8-4ab8-94e1-1132fc18b2fa",
+      "server": "159.13.55.48",
+      "password": "b42d90fa667942aebc734d60",
       "tls": {
         "enabled": true,
-        "server_name": "unnes.ac.id.r3xxe.eu.cc",
+        "server_name": "hy2-au2.whuiy.xyz",
         "insecure": false
       },
-      "transport": {
-        "type": "ws",
-        "path": "/au-mt",
-        "headers": {
-          "Host": "unnes.ac.id.r3xxe.eu.cc"
-        }
-      }
+      "obfs": {
+        "type": "salamander",
+        "password": "b42d90fa667942aebc734d60"
+      },
+      "server_ports": [
+        "20000:30000",
+        "20000:20000"
+      ]
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02 - Jewell",
+      "server": "159.13.55.48",
+      "password": "b42d90fa667942aebc734d60",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2-au2.whuiy.xyz",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "b42d90fa667942aebc734d60"
+      },
+      "server_ports": [
+        "20000:30000"
+      ]
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01 - Jewell"
+        "🇦🇺 澳大利亚 (Australia) 01 - Jewell",
+        "🇦🇺 澳大利亚 (Australia) 02 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01 - Jewell"
+        "🇦🇺 澳大利亚 (Australia) 01 - Jewell",
+        "🇦🇺 澳大利亚 (Australia) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

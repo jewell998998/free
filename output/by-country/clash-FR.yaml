@@ -4,91 +4,35 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 ⚠R - Jewell
+- name: 🇫🇷 法国 (France) 01 - Jewell
+  server: 107.161.160.28
+  udp: true
+  port: 8388
+  type: ss
+  cipher: aes-256-gcm
+  password: itzvpn@321
+- name: 🇫🇷 法国 (France) 02 ⚠R - Jewell
   server: 198.244.202.215
   udp: true
   port: 19999
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 02 - Jewell
-  server: 57.131.4.13
+- name: 🇫🇷 法国 (France) 03 ⚠R - Jewell
+  server: 198.244.201.129
   udp: true
-  port: 8080
+  port: 19999
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mx81glqbtlwuhcjo
-- name: 🇫🇷 法国 (France) 03 R40 - Jewell
-  server: 162.19.82.57
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 04 R46 - Jewell
+  server: 57.129.83.85
   udp: true
-  port: 1270
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 04 R40 - Jewell
-  server: 46.105.222.157
-  udp: true
-  port: 1270
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 05 R40 - Jewell
-  server: 91.134.35.72
-  udp: true
-  port: 1270
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 06 - Jewell
-  server: 138.124.251.98
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
-    short-id: 8f3c6e2a1b5d4f09
-  servername: tradingview.com
-  client-fingerprint: ''
-- name: 🇫🇷 法国 (France) 07 - Jewell
-  server: 141.227.170.220
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 6c077993-952c-4318-9e93-89056a207a9b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: apple.com
-  client-fingerprint: ''
-- name: 🇫🇷 法国 (France) 08 R40 - Jewell
-  server: 46.105.222.155
-  udp: true
-  port: 1270
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 09 - Jewell
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 05 - Jewell
   server: ai.smrtai.top
   udp: true
   port: 443
@@ -99,60 +43,88 @@ proxies:
     public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
     short-id: 086bf957
   servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 06 - Jewell
+  server: netherlands.vpnserverhub.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: db32322f-4940-4eea-8f90-f4912dedc3b7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: y8-hfUvs9-MScp_tjMFi5LKuULGmnodHbI5Q_sTk_A0
+  servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 10 ⚠R - Jewell
-  server: 57.129.138.142
+- name: 🇫🇷 法国 (France) 07 R40 - Jewell
+  server: 51.83.61.102
   udp: true
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: fwxkzn0tmurzsvrw
-- name: 🇫🇷 法国 (France) 11 - Jewell
-  server: 178.104.70.11
+  password: 29irqk0paakcx19v
+- name: 🇫🇷 法国 (France) 08 R40 - Jewell
+  server: 162.19.82.57
   udp: true
-  port: 443
-  type: vless
-  uuid: 64726966-0000-4000-8000-740000000000
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
+  servername: xmfhlpy.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+- name: 🇫🇷 法国 (France) 09 R40 - Jewell
+  server: 46.105.222.155
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 10 R40 - Jewell
+  server: 46.105.222.157
+  udp: true
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 R40 - Jewell
-  - 🇫🇷 法国 (France) 04 R40 - Jewell
-  - 🇫🇷 法国 (France) 05 R40 - Jewell
+  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇫🇷 法国 (France) 02 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 03 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 04 R46 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
   - 🇫🇷 法国 (France) 06 - Jewell
-  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 07 R40 - Jewell
   - 🇫🇷 法国 (France) 08 R40 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 11 - Jewell
+  - 🇫🇷 法国 (France) 09 R40 - Jewell
+  - 🇫🇷 法国 (France) 10 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 02 - Jewell
-  - 🇫🇷 法国 (France) 03 R40 - Jewell
-  - 🇫🇷 法国 (France) 04 R40 - Jewell
-  - 🇫🇷 法国 (France) 05 R40 - Jewell
+  - 🇫🇷 法国 (France) 01 - Jewell
+  - 🇫🇷 法国 (France) 02 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 03 ⚠R - Jewell
+  - 🇫🇷 法国 (France) 04 R46 - Jewell
+  - 🇫🇷 法国 (France) 05 - Jewell
   - 🇫🇷 法国 (France) 06 - Jewell
-  - 🇫🇷 法国 (France) 07 - Jewell
+  - 🇫🇷 法国 (France) 07 R40 - Jewell
   - 🇫🇷 法国 (France) 08 R40 - Jewell
-  - 🇫🇷 法国 (France) 09 - Jewell
-  - 🇫🇷 法国 (France) 10 ⚠R - Jewell
-  - 🇫🇷 法国 (France) 11 - Jewell
+  - 🇫🇷 法国 (France) 09 R40 - Jewell
+  - 🇫🇷 法国 (France) 10 R40 - Jewell
 rules:
 - MATCH,PROXIES

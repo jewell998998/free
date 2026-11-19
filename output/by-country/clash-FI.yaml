@@ -5,30 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 45.144.53.119
-  udp: true
-  port: 443
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nwWxKBQS8QaH3RIAqNXJoocBNWatkh7inO-LkkiMR1Y
-  servername: gmsddfgsgfb.wey-land.net
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 45.144.53.18
-  udp: true
-  port: 443
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: yC04w5WKddcvv6EPSHnqv8uHLaSNK8JFCuRtIJhL1Xc
-  servername: gsdfmb.wey-land.net
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: 157.180.98.124
   udp: true
   port: 49659
@@ -41,32 +17,7 @@ proxies:
     short-id: 81959fce
   servername: apple.com
   client-fingerprint: ''
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
-  server: 157.180.98.124
-  udp: true
-  port: 49659
-  type: vless
-  uuid: 88a558b1-9645-42f3-89e5-341570d8486d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
-    short-id: 81959fce
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
-  server: 45.144.52.252
-  udp: true
-  port: 443
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -GuGq2rg6lgl4LcxHBFhBZCKKEtES2EGeD2qwXilrXI
-  servername: wergmb.wey-land.net
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 06 - Jewell
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 138.124.80.29
   udp: true
   port: 443
@@ -77,22 +28,7 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: fin1-r.bankai.party
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 07 - Jewell
-  server: 209.206.51.236
-  udp: true
-  port: 2083
-  type: vless
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
-  tls: true
-  servername: vipfree.dr-ping.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vipfree.dr-ping.ir
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -100,11 +36,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
-  - 🇫🇮 芬兰 (Finland) 06 - Jewell
-  - 🇫🇮 芬兰 (Finland) 07 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -112,10 +43,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
-  - 🇫🇮 芬兰 (Finland) 05 - Jewell
-  - 🇫🇮 芬兰 (Finland) 06 - Jewell
-  - 🇫🇮 芬兰 (Finland) 07 - Jewell
 rules:
 - MATCH,PROXIES

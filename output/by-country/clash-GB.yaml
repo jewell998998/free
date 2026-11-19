@@ -4,7 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R63 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 129.151.64.238
+  udp: true
+  port: 61312
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: hzPKazC8uUQLrBEBDGaFYX2m8kEKf/04N6NrA6EtLgk=
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  server: 193.188.21.253
+  udp: true
+  port: 10444
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- name: 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
   server: 136.176.68.34
   udp: true
   port: 443
@@ -17,7 +37,7 @@ proxies:
     short-id: a6040129ad7f4b74
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
   server: 193.188.21.253
   udp: true
   port: 14430
@@ -28,53 +48,27 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
-  server: 213.176.92.168
-  udp: true
-  port: 14430
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
-- name: 🇬🇧 英国 (United Kingdom) 04 - Jewell
-  server: 172.67.160.188
+- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
+  server: 193.163.203.170
   udp: true
   port: 443
   type: vless
-  uuid: 443b1e88-41fa-43bb-ff6c-982544254b74
-  tls: true
-  servername: wandering-river-cd33.mramezanian1375.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /87fab74555d6e093
-    headers:
-      Host: wandering-river-cd33.mramezanian1375.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 05 - Jewell
-  server: 213.176.92.168
-  udp: true
-  port: 10444
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R63 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
   - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 - name: AUTO
@@ -82,9 +76,9 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R63 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
   - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
   - 🇬🇧 英国 (United Kingdom) 04 - Jewell
   - 🇬🇧 英国 (United Kingdom) 05 - Jewell
 rules:

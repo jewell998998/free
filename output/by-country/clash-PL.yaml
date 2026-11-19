@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 45.198.0.228
+  server: 31.76.32.122
   udp: true
-  port: 1443
-  type: hysteria2
-  password: bc60e93b-1c62-45fc-9c1d-c26285b29e7e
-  sni: infra-core.cvedcdigital.vip
-  skip-cert-verify: false
+  port: 443
+  type: vless
+  uuid: 71b566cb-78c4-48e4-af5b-720e4f7884f2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: O35Np_ugrc3mUDIEO4UnViEwRobM2r9kqQCdcdCHjEI
+    short-id: cb33163cf9c03ab1
+  servername: p1.xvanta.online
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 02 - Jewell
   server: 80.47.10.106
   udp: true
@@ -25,41 +30,17 @@ proxies:
   servername: pl8.galioncc.com
   client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 03 - Jewell
-  server: 144.31.0.101
+  server: poland.vpnserverhub.com
   udp: true
   port: 443
   type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  uuid: f089ccec-83d2-4316-bcb8-a3001b651eee
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1eEtiZY5qDDosntp-9_xFnOIvOBzHy4d3-eA7v11qx0
-  servername: gmtrtb.wey-land.net
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 04 - Jewell
-  server: rsk3.betust.net
-  udp: true
-  port: 443
-  type: vless
-  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  flow: xtls-rprx-vision
-  tls: true
-  servername: rsk3.betust.net
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 05 - Jewell
-  server: 54.37.131.126
-  udp: true
-  port: 80
-  type: vmess
-  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    public-key: 5vNAgd2gzZUUJAU-njR7Sz542IJHdLdea9TtgwBttl4
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -68,8 +49,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 - Jewell
-  - 🇵🇱 波兰 (Poland) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,7 +57,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
   - 🇵🇱 波兰 (Poland) 02 - Jewell
   - 🇵🇱 波兰 (Poland) 03 - Jewell
-  - 🇵🇱 波兰 (Poland) 04 - Jewell
-  - 🇵🇱 波兰 (Poland) 05 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: f0f0bet.fi2.h1clayd.click
+  udp: true
+  port: 443
+  type: vless
+  uuid: 537d8ade-134d-4ec2-905c-0187e7e1e22e
+  tls: true
+  reality-opts:
+    public-key: _oCg5rCW6XTxriBPzbd_AX0os6QhenVYO9cbrsDSyRY
+    short-id: cf2a731a5f2dc451
+  servername: f0f0bet.fi2.h1clayd.click
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 162.159.160.117
+  udp: true
+  port: 2083
+  type: vless
+  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  tls: true
+  servername: vipfree.dr-ping.ir
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vipfree.dr-ping.ir
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: 157.180.98.124
   udp: true
   port: 49659
@@ -17,18 +47,6 @@ proxies:
     short-id: 81959fce
   servername: apple.com
   client-fingerprint: ''
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 138.124.80.29
-  udp: true
-  port: 443
-  type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: fin1-r.bankai.party
-  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +54,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +62,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 rules:
 - MATCH,PROXIES

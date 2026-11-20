@@ -1,0 +1,67 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇹 意大利 (Italy) 01 - Jewell
+  server: 202.50.253.36
+  udp: true
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 02 - Jewell
+  server: 45.137.201.211
+  udp: true
+  port: 443
+  type: hysteria2
+  password: ca60984f-b1f0-4073-bd33-4c75168f749a
+  sni: wwe.fantoff.online
+  skip-cert-verify: false
+- name: 🇮🇹 意大利 (Italy) 03 - Jewell
+  server: 82.118.16.189
+  udp: true
+  port: 443
+  type: vless
+  uuid: 29f178f7-f96f-46ba-8fc0-bbcd690ba788
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4
+    short-id: 1e9a49dd374c1191
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇮🇹 意大利 (Italy) 04 - Jewell
+  server: 82.118.16.187
+  udp: true
+  port: 443
+  type: vless
+  uuid: dc2259c4-388e-4285-ba18-df619b6672b6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU
+    short-id: cd6065902eea7a02
+  servername: www.cloudflare.com
+  client-fingerprint: random
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇹 意大利 (Italy) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 02 - Jewell
+  - 🇮🇹 意大利 (Italy) 03 - Jewell
+  - 🇮🇹 意大利 (Italy) 04 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇹 意大利 (Italy) 01 - Jewell
+  - 🇮🇹 意大利 (Italy) 02 - Jewell
+  - 🇮🇹 意大利 (Italy) 03 - Jewell
+  - 🇮🇹 意大利 (Italy) 04 - Jewell
+rules:
+- MATCH,PROXIES

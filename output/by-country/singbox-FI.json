@@ -4,54 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "f0f0bet.fi2.h1clayd.click",
-      "server_port": 443,
-      "uuid": "537d8ade-134d-4ec2-905c-0187e7e1e22e",
-      "tls": {
-        "enabled": true,
-        "server_name": "f0f0bet.fi2.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "_oCg5rCW6XTxriBPzbd_AX0os6QhenVYO9cbrsDSyRY",
-          "short_id": "cf2a731a5f2dc451"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
+      "server": "static.28.210.29.2.clients.your-server.de",
+      "server_port": 25565,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc"
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "162.159.160.117",
-      "server_port": 2083,
-      "uuid": "a6ad7987-f17e-41fa-a752-72db9a725eb2",
-      "tls": {
-        "enabled": true,
-        "server_name": "vipfree.dr-ping.ir",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vipfree.dr-ping.ir"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
       "server": "157.180.98.124",
       "server_port": 49659,
       "uuid": "88a558b1-9645-42f3-89e5-341570d8486d",
@@ -61,7 +23,7 @@
         "server_name": "apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -76,8 +38,7 @@
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell"
+        "🇫🇮 芬兰 (Finland) 02 - Jewell"
       ]
     },
     {
@@ -85,8 +46,7 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01 - Jewell",
-        "🇫🇮 芬兰 (Finland) 02 - Jewell",
-        "🇫🇮 芬兰 (Finland) 03 - Jewell"
+        "🇫🇮 芬兰 (Finland) 02 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

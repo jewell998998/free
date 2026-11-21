@@ -5,31 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 44.240.99.186
-  udp: true
-  port: 443
-  type: trojan
-  password: b95ed9ae-517c-4905-b051-b8873c99a1b6
-  sni: jszzlanand.pages.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 201.24.121.243
-  udp: true
-  port: 443
-  type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-  tls: true
-  servername: kk-ru24a1.testkknegr.online
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vlgrpc
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: vps3.nemnogogo.com
+  server: 200.169.179.233
   udp: true
   port: 443
   type: vless
@@ -37,32 +13,38 @@ proxies:
   tls: true
   servername: vps3.nemnogogo.com
   skip-cert-verify: false
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  server: 168.113.254.183
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 274cf8bb-ff99-0001-81b0-17273a3b7692
-  sni: xykmh-ru-70sb.my-fade.cloud
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 95.129.234.108
-  udp: true
-  port: 8443
-  type: vless
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-  tls: true
-  servername: rowan-quay.cdn.cachefleet.com
-  skip-cert-verify: false
   client-fingerprint: chrome
   network: grpc
   grpc-opts:
-    grpc-service-name: 01ef4cdceb3b3439
-- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
+    grpc-service-name: mobile.api.Event
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 195.133.5.196
+  udp: true
+  port: 18443
+  type: ss
+  cipher: aes-256-gcm
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 48.103.218.77
+  udp: true
+  port: 18443
+  type: ss
+  cipher: aes-256-gcm
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: 147.45.47.101
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 27f26dee-9cf1-4cca-93f8-9ac23d311408
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: apple.com
+  client-fingerprint: ''
+- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   server: 48.103.133.47
   udp: true
   port: 8443
@@ -75,14 +57,7 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 195.133.5.196
-  udp: true
-  port: 18443
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
+- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
   server: 37.235.247.81
   udp: true
   port: 8443
@@ -94,7 +69,7 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: 6ba85179e30d4fc2
   servername: apple.com
-  client-fingerprint: ''
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -106,8 +81,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -119,7 +92,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
 rules:
 - MATCH,PROXIES

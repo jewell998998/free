@@ -5,18 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 138.124.86.230
+  server: sonau.yaremonta.loc.cc
   udp: true
-  port: 48115
-  type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-  tls: true
-  servername: 138-124-86-230.sslip.io
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 138-124-86-230-sslip-io
+  port: 1080
+  type: ss
+  cipher: aes-256-gcm
+  password: og85o9QeVVvtMD2sxPjO
 proxy-groups:
 - name: PROXIES
   type: select

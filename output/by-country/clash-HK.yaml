@@ -5,15 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  server: 206.237.11.17
-  udp: true
-  port: 50376
-  type: vmess
-  uuid: 9091fd64-7e8e-4b7a-8ae7-84474f234926
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 2.26.204.46
+  server: leviko-hk4795.shopingggg.ir
   udp: true
   port: 31001
   type: vless
@@ -25,22 +17,17 @@ proxies:
     short-id: 39793bc4708abbbb
   servername: mensura.cdn-apple.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: zfd-hkv1.kunlun01dns.com
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 62.60.232.226
   udp: true
-  port: 16115
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
-  server: dog-hk.kunlun01dns.com
-  udp: true
-  port: 21020
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
+  port: 2096
+  type: vless
+  uuid: 3d409814-b663-411e-8f54-a112ecba7ddd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nova-house.justext.space
+  skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -48,8 +35,6 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,7 +42,5 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
   - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
 rules:
 - MATCH,PROXIES

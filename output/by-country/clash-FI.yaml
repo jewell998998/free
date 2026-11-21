@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: 4f070970.con.metricdraft.tech
+  udp: true
+  port: 443
+  type: hysteria2
+  password: 030e421e-9317-4cb8-8fbe-a07a565ad3db
+  sni: 4f070970.con.metricdraft.tech
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: static.28.210.29.2.clients.your-server.de
+  udp: true
+  port: 25565
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
   server: 157.180.98.124
   udp: true
   port: 49659
@@ -17,17 +32,6 @@ proxies:
     short-id: 81959fce
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: 65.109.252.58
-  udp: true
-  port: 443
-  type: vless
-  uuid: 2b696acb-1311-4ab7-b832-b376d29dca27
-  flow: xtls-rprx-vision
-  tls: true
-  servername: static.170.55.238.62.clients.your-server.de
-  skip-cert-verify: false
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -35,6 +39,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -42,5 +47,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
 rules:
 - MATCH,PROXIES

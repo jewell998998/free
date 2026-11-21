@@ -4,15 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "anytls",
-      "tag": "🇲🇾 马来西亚 (Malaysia) 01 R47 - Jewell",
-      "server": "api.frnhk.xyz",
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell",
+      "server": "terutrrj.ghmkdty.top",
       "server_port": 443,
-      "password": "235e318a-8bcb-4480-b256-7b65cc5d0b0a",
+      "uuid": "42a7cb20-e771-442c-b04e-70bb079d780e",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "api.frnhk.xyz",
+        "server_name": "terutrrj.ghmkdty.top",
         "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "terutrrj.ghmkdty.top"
+        }
       }
     },
     {
@@ -20,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇾 马来西亚 (Malaysia) 01 R47 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇾 马来西亚 (Malaysia) 01 R47 - Jewell"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

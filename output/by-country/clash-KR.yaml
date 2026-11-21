@@ -5,16 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 193.122.106.29
-  udp: true
-  type: hysteria2
-  password: C0DD7bgChaltqnh/T2az6ijM
-  sni: hy2-kr.whuiy.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: C0DD7bgChaltqnh/T2az6ijM
-  ports: 20000-30000
-- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
   server: 158.247.253.243
   udp: true
   port: 443
@@ -28,13 +18,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
-  - 🇰🇷 韩国 (South Korea) 02 - Jewell
 rules:
 - MATCH,PROXIES

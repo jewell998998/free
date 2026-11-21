@@ -4,9 +4,17 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
-      "server": "leviko-hk4795.shopingggg.ir",
+      "server": "206.237.11.17",
+      "server_port": 50376,
+      "uuid": "9091fd64-7e8e-4b7a-8ae7-84474f234926",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+      "server": "2.26.204.46",
       "server_port": 31001,
       "uuid": "12a4f736-2238-49ee-831f-5516f15cc951",
       "flow": "xtls-rprx-vision",
@@ -25,18 +33,40 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+      "server": "zfd-hkv1.kunlun01dns.com",
+      "server_port": 16115,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - Jewell",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21020,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 04 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell"
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 04 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

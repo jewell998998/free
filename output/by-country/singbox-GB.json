@@ -4,83 +4,65 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-      "server": "129.151.65.189",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "d0uBjF2Nd6Qeuyh05dSVSV7MS6JoPmR6+/QmF6FArqk="
-    },
-    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 R53 - Jewell",
-      "server": "161.35.37.106",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 R63 - Jewell",
+      "server": "136.176.68.34",
       "server_port": 443,
-      "uuid": "40992c2a-513e-4837-9594-23411fd42afd",
-      "transport": {
-        "type": "http"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-      "server": "31.76.246.54",
-      "server_port": 706,
-      "uuid": "9780207b-d02a-493a-9bf1-ebc1a4486b34",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amd.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6ABNRK-j4hVgo-DwsX3zxMSjMOuudrVZRxLde3XB530",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-      "server": "13.143.187.220",
-      "server_port": 443,
-      "uuid": "66c78912-4e2d-41dc-8742-aaae2590804e",
+      "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "fi-s1.kadrhub.tech",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "eDzVz3bxkv3IoN3BUCa_aA-RicoeG7ACylYSnmS2Pgg",
-          "short_id": ""
+          "public_key": "Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo",
+          "short_id": "a6040129ad7f4b74"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 ⚠R - Jewell",
-      "server": "uk1.connectsuite.org",
-      "server_port": 443,
-      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+      "server": "213.176.92.168",
+      "server_port": 10444,
+      "uuid": "ba52cc43-700d-4040-9444-29214c98e6e0",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "uk1.connectsuite.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn-cgi/ws",
-        "headers": {
-          "Host": "uk1.connectsuite.org"
+        "server_name": "video.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - Jewell",
+      "server": "45.80.230.231",
+      "server_port": 443,
+      "uuid": "1011b03e-b5e7-4f7f-af17-1d8f9e727700",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.1177.se",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wD713tU37fU02OUusCfKXQ5nDsfjjgWIB6ArIO8sjCc",
+          "short_id": "a928e81b"
         }
       }
     },
@@ -89,22 +71,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 R53 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 05 ⚠R - Jewell"
+        "🇬🇧 英国 (United Kingdom) 01 R63 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 02 R53 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 03 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 04 - Jewell",
-        "🇬🇧 英国 (United Kingdom) 05 ⚠R - Jewell"
+        "🇬🇧 英国 (United Kingdom) 01 R63 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 02 - Jewell",
+        "🇬🇧 英国 (United Kingdom) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

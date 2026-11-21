@@ -4,23 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇷🇺 俄罗斯 (Russia) 01 - Jewell",
-      "server": "147.45.47.101",
-      "server_port": 8443,
-      "uuid": "27f26dee-9cf1-4cca-93f8-9ac23d311408",
-      "flow": "xtls-rprx-vision",
+      "server": "44.240.99.186",
+      "server_port": 443,
+      "password": "b95ed9ae-517c-4905-b051-b8873c99a1b6",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "jszzlanand.pages.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048",
+        "headers": {
+          "Host": "jszzlanand.pages.dev"
         }
       }
     },
@@ -48,21 +50,9 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
-      "server": "srv-17e124.21freedom.net",
-      "server_port": 11592,
-      "password": "41edb44c8e",
-      "tls": {
-        "enabled": true,
-        "server_name": "srv-17e124.21freedom.net",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
-      "server": "201.51.12.98",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
+      "server": "vps3.nemnogogo.com",
       "server_port": 443,
       "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
@@ -74,7 +64,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -83,23 +73,84 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
+      "server": "168.113.254.183",
+      "server_port": 443,
+      "password": "274cf8bb-ff99-0001-81b0-17273a3b7692",
+      "tls": {
+        "enabled": true,
+        "server_name": "xykmh-ru-70sb.my-fade.cloud",
+        "insecure": false
+      }
+    },
+    {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
-      "server": "193.233.199.30",
-      "server_port": 443,
-      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "95.129.234.108",
+      "server_port": 8443,
+      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984",
+      "tls": {
+        "enabled": true,
+        "server_name": "rowan-quay.cdn.cachefleet.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "01ef4cdceb3b3439"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
+      "server": "48.103.133.47",
+      "server_port": 8443,
+      "uuid": "2ed34e7c-45c5-4e0e-bcab-42fe99a7bd25",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "fin3-r.bankai.party",
+        "server_name": "apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": ""
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 07 - Jewell",
+      "server": "195.133.5.196",
+      "server_port": 18443,
+      "method": "aes-256-gcm",
+      "password": "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 08 - Jewell",
+      "server": "37.235.247.81",
+      "server_port": 8443,
+      "uuid": "2ae0670d-0bdf-409e-9a55-4e970252d378",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
         }
       }
     },
@@ -112,7 +163,10 @@
         "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 05 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 07 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 08 - Jewell"
       ]
     },
     {
@@ -123,7 +177,10 @@
         "🇷🇺 俄罗斯 (Russia) 02 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 03 - Jewell",
         "🇷🇺 俄罗斯 (Russia) 04 - Jewell",
-        "🇷🇺 俄罗斯 (Russia) 05 - Jewell"
+        "🇷🇺 俄罗斯 (Russia) 05 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 06 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 07 - Jewell",
+        "🇷🇺 俄罗斯 (Russia) 08 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

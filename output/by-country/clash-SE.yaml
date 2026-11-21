@@ -4,19 +4,13 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 138.124.86.230
+- name: 🇸🇪 瑞典 (Sweden) 01 R40 - Jewell
+  server: 138.199.55.243
   udp: true
-  port: 48115
-  type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-  tls: true
-  servername: 138-124-86-230.sslip.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 138-124-86-230-sslip-io
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
   server: 88.216.214.159
   udp: true
@@ -28,30 +22,50 @@ proxies:
     public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
     short-id: a7c92e4b10d6f835
   servername: api-svc-mgr.galioncc.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: 95.143.196.97
+  server: 81.90.21.200
   udp: true
-  port: 443
-  type: trojan
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  sni: connect-se.mimowhat.online
+  port: 2053
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 81.90.21.200
   skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  server: 2.27.14.247
+  udp: true
+  port: 2096
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  tls: true
+  servername: st2a695.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: st2a695.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 01 R40 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 01 R40 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
   - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
 rules:
 - MATCH,PROXIES

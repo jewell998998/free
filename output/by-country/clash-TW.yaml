@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇿🇦 南非 (South Africa) 01 - Jewell
-  server: 139.84.231.142
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  server: theme.lovehk.xyz
   udp: true
   port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: explorecareerpathsandunlockprofessionalsuccesstoday.com
+  type: anytls
+  password: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
+  sni: theme.lovehk.xyz
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇿🇦 南非 (South Africa) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇿🇦 南非 (South Africa) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
 rules:
 - MATCH,PROXIES

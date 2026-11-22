@@ -12,63 +12,18 @@
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-      "server": "158.179.203.218",
-      "server_port": 64346,
-      "uuid": "ce4bcb13-0fff-4c50-a05e-3e75e59ac9b1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU",
-          "short_id": "1f2519bb96e5589c"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 03 - Jewell",
-      "server": "138.124.86.230",
-      "server_port": 48115,
-      "uuid": "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
-      "tls": {
-        "enabled": true,
-        "server_name": "138-124-86-230.sslip.io",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "138-124-86-230-sslip-io"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 03 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 02 - Jewell",
-        "🇸🇪 瑞典 (Sweden) 03 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -25,40 +25,18 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
-      "server": "188.225.78.178",
-      "server_port": 443,
-      "uuid": "a4740bee-81ad-4a58-99c9-eca576ecb6e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "cadrin.wtf",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cache.sync.v1"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 - Jewell",
-        "🇹🇷 土耳其 (Turkey) 02 - Jewell"
+        "🇹🇷 土耳其 (Turkey) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

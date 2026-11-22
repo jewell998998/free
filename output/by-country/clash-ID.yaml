@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
-  server: 195.123.213.28
+- name: 🇮🇩 印尼 (Indonesia) 01 - Jewell
+  server: 147.139.197.200
   udp: true
   port: 443
   type: vless
-  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
+  uuid: a197af05-7048-478e-8d99-c3151adb4064
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
-    short-id: 5c256336e3b673fa
-  servername: www.cloudflare.com
+    public-key: ulPGCwIg38AVGww0FBfCNROmu_0N1hykbHbhcAFgcl0
+    short-id: 6135361d11cc2b31
+  servername: www.ebay.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
+  - 🇮🇩 印尼 (Indonesia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 拉脱维亚 (Latvia) 01 - Jewell
+  - 🇮🇩 印尼 (Indonesia) 01 - Jewell
 rules:
 - MATCH,PROXIES

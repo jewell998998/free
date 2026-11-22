@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 213.176.92.168
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell
+  server: 132.243.242.246
   udp: true
-  port: 10444
+  port: 9543
   type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: 123abcdf
+  servername: storage.yandexcloud.net
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - Jewell
 rules:
 - MATCH,PROXIES

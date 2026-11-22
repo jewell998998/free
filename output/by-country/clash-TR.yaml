@@ -18,11 +18,18 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  server: 87.76.154.28
+  server: 188.225.78.178
   udp: true
-  port: 57231
+  port: 443
   type: vless
-  uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
+  uuid: a4740bee-81ad-4a58-99c9-eca576ecb6e6
+  tls: true
+  servername: cadrin.wtf
+  skip-cert-verify: false
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cache.sync.v1
 proxy-groups:
 - name: PROXIES
   type: select

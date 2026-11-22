@@ -5,33 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 4f070970.con.metricdraft.tech
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 030e421e-9317-4cb8-8fbe-a07a565ad3db
-  sni: 4f070970.con.metricdraft.tech
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: static.28.210.29.2.clients.your-server.de
   udp: true
   port: 25565
   type: ss
   cipher: chacha20-ietf-poly1305
   password: C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 157.180.98.124
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: 2.29.125.167
   udp: true
-  port: 49659
+  port: 8443
   type: vless
-  uuid: 88a558b1-9645-42f3-89e5-341570d8486d
+  uuid: b2505fa2-f7c4-40d2-8c4a-1f6336bd37f1
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
-    short-id: 81959fce
-  servername: apple.com
-  client-fingerprint: chrome
+  servername: static.162.97.119.168.clients.your-server.de
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: 94.183.164.119
+  udp: true
+  port: 24433
+  type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: lakes.blog-forme.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select

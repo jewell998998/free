@@ -4,40 +4,42 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R50 - Jewell",
-      "server": "45.90.59.15",
-      "server_port": 443,
-      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
+      "server": "212.102.227.131",
+      "server_port": 10443,
+      "password": "lvu_fb79ddb9bbda86f657cf34ee5dbe40bd_cf1aff9abf2b3945664fd63a07229839:np2.1.Q6bg95HDIqzwSQwdlbeS4-tGJpT8yFUcNQd7KGxqbXU",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY",
-          "short_id": "19253fae84102271"
-        }
+        "server_name": "n32.neproxy.net",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 R56 - Jewell",
-      "server": "208.69.78.222",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 R50 - Jewell",
+      "server": "193.233.89.130",
+      "server_port": 8443,
+      "uuid": "7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe",
       "tls": {
         "enabled": true,
-        "server_name": "yourultimateprofessionalcareerhub.com",
-        "insecure": false,
+        "server_name": "g.play2go.gay",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c",
+          "short_id": ""
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
@@ -45,16 +47,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R50 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R56 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 R50 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R50 - Jewell",
-        "🇨🇭 瑞士 (Switzerland) 02 R56 - Jewell"
+        "🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell",
+        "🇨🇭 瑞士 (Switzerland) 02 R50 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

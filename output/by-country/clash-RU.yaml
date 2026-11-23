@@ -21,21 +21,34 @@ proxies:
   tls: true
   servername: vps3.nemnogogo.com
   skip-cert-verify: false
-  client-fingerprint: qq
+  client-fingerprint: edge
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
 - name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 176.109.108.17
+  server: 168.113.252.11
   udp: true
   port: 443
   type: vless
-  uuid: 440c34ed-de29-0001-a467-153c5816a42b
+  uuid: 8973e4a5-1c15-0001-abc7-60fb180063ea
   tls: true
-  servername: wrdgkmglxsfcfazlsf.fcloudservices.site
+  servername: jkawq-ru-45sb.fade.mom
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: 48.103.133.47
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 2ed34e7c-45c5-4e0e-bcab-42fe99a7bd25
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: apple.com
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
   server: 147.45.97.130
   udp: true
   port: 2066
@@ -48,19 +61,6 @@ proxies:
     short-id: 1b2a3f
   servername: google.com
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 48.103.133.47
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 2ed34e7c-45c5-4e0e-bcab-42fe99a7bd25
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: apple.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

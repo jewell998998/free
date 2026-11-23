@@ -5,22 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - Jewell
-  server: 168.138.205.100
+  server: jpa.123069.xyz
   udp: true
   port: 53758
   type: ss
   cipher: aes-128-gcm
   password: Bwlqh7GcFB
 - name: 🇯🇵 日本 (Japan) 02 - Jewell
-  server: 64.118.146.147
+  server: 172.238.18.103
   udp: true
   port: 443
-  type: hysteria2
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  sni: nb5rb.hikigo.com
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: yhlbhcysaba0wtn1
+  type: vless
+  uuid: f4a4498a-c02f-4862-93ae-8f495c9cd2c0
+  tls: true
+  reality-opts:
+    public-key: BDt3yJpYIovC6b1iJF2h8qH4LfQAoSC0u3iVa0cFeSM
+    short-id: 6ff775ae
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
 - name: 🇯🇵 日本 (Japan) 03 - Jewell
   server: 172.237.14.205
   udp: true
@@ -39,6 +46,39 @@ proxies:
     headers:
       Host: itunes.apple.com
 - name: 🇯🇵 日本 (Japan) 04 - Jewell
+  server: 161.33.20.255
+  udp: true
+  port: 8880
+  type: vmess
+  uuid: e0856508-d693-450a-a099-455091dc4f25
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /e0856508-d693-450a-a099-455091dc4f25-vm
+- name: 🇯🇵 日本 (Japan) 05 - Jewell
+  server: 168.110.63.247
+  udp: true
+  port: 8081
+  type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇯🇵 日本 (Japan) 06 - Jewell
+  server: 155.248.175.201
+  udp: true
+  port: 23169
+  type: vless
+  uuid: 3eb053cb-d6f8-4b31-8180-222e1cc6f8ff
+  flow: xtls-rprx-vision
+  tls: true
+  servername: djj.zjlo.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 07 - Jewell
   server: 158.101.151.157
   udp: true
   port: 443
@@ -51,21 +91,27 @@ proxies:
     short-id: 684c7531e599dec0
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05 - Jewell
-  server: jp2static.jumpernode.site
+- name: 🇯🇵 日本 (Japan) 08 - Jewell
+  server: 155.248.175.201
   udp: true
-  port: 443
+  port: 23169
   type: vless
-  uuid: f325fb7d-cad5-4ac8-8888-3f39b4b9d1ca
+  uuid: 7318caa1-93d1-4a9d-c481-504599902700
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: GeKuYNeAqQQkTN9OMJxXA9I-rXs7IiGh4Sl82crCITc
-    short-id: 6281f3ef81187ad8
-  servername: www.amzn.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 06 - Jewell
-  server: 151.242.164.51
+  servername: djj.zjlo.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 09 - Jewell
+  server: xinbulongdong.com
+  udp: true
+  port: 443
+  type: trojan
+  password: +vuY9gGdZ/h7Yk4Q
+  sni: xinbulongdong.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 10 - Jewell
+  server: jpg1api.jumpernode.site
   udp: true
   port: 443
   type: vless
@@ -77,16 +123,16 @@ proxies:
     short-id: 2c92d6
   servername: buybox.amazon.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 07 - Jewell
-  server: 45.77.8.233
+- name: 🇯🇵 日本 (Japan) 11 - Jewell
+  server: 45.76.106.69
   udp: true
   port: 443
   type: vless
-  uuid: 242212a6-200b-4c09-b2e5-86a8dd490331
+  uuid: db102c51-5f7f-4283-b9c1-942c5c6e2616
   tls: true
   reality-opts:
-    public-key: JSC_NT5_PEEbNCQIJjSSlpwkWWF94o0XAP3iboF6nlY
-    short-id: de193635
+    public-key: nZzY--8K_-mm8x4JDzkUFt1be1SQzriGIOmYkbpq1C8
+    short-id: 034f5d5a
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -94,26 +140,16 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 08 R46 - Jewell
-  server: kuruish.org
+- name: 🇯🇵 日本 (Japan) 12 - Jewell
+  server: 45.76.222.108
   udp: true
   port: 443
   type: vless
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  tls: true
-  servername: kuruish.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 09 R51 - Jewell
-  server: 172.105.212.91
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1f08d52f-126e-46e3-929a-4b6a58e21168
+  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
   tls: true
   reality-opts:
-    public-key: jb8kqeM_3z0NW3huxWLD0ma2eUCFRsiwapF9I_O3Ei8
-    short-id: '17676229'
+    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
+    short-id: b5c85d2d
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -121,7 +157,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 10 R51 - Jewell
+- name: 🇯🇵 日本 (Japan) 13 R51 - Jewell
   server: 172.105.197.24
   udp: true
   port: 443
@@ -138,16 +174,16 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 11 R51 - Jewell
-  server: 172.104.86.181
+- name: 🇯🇵 日本 (Japan) 14 R51 - Jewell
+  server: 172.105.212.91
   udp: true
   port: 443
   type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  uuid: 1f08d52f-126e-46e3-929a-4b6a58e21168
   tls: true
   reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: c8559ca1
+    public-key: jb8kqeM_3z0NW3huxWLD0ma2eUCFRsiwapF9I_O3Ei8
+    short-id: '17676229'
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -155,7 +191,58 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 12 R57 - Jewell
+- name: 🇯🇵 日本 (Japan) 15 - Jewell
+  server: 149.28.29.156
+  udp: true
+  port: 443
+  type: vless
+  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  tls: true
+  reality-opts:
+    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+    short-id: e535df57
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 16 R57 - Jewell
+  server: 139.162.91.200
+  udp: true
+  port: 443
+  type: vless
+  uuid: 847bdd83-9e2f-4708-81ed-729a2ca6eeec
+  tls: true
+  reality-opts:
+    public-key: -g20lzrrmgQb5wbq0vJ2OkZo_-j4KcFq_JDGVp5n_TQ
+    short-id: 7bae4b22
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 17 R57 - Jewell
+  server: 139.162.91.182
+  udp: true
+  port: 443
+  type: vless
+  uuid: b4ec7f6b-b41e-4018-9f76-19204e138db9
+  tls: true
+  reality-opts:
+    public-key: k0o_QkU2gSE5m1a6tWbkkZ-Z28GTj30UHW8cHWCulzU
+    short-id: db1a5f5e
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 18 R57 - Jewell
   server: 139.162.91.224
   udp: true
   port: 443
@@ -172,58 +259,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 13 R51 - Jewell
-  server: 172.105.203.15
-  udp: true
-  port: 443
-  type: vless
-  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
-  tls: true
-  reality-opts:
-    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
-    short-id: 0784b134
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 14 R57 - Jewell
-  server: 139.162.91.232
-  udp: true
-  port: 443
-  type: vless
-  uuid: ea2e7ce8-60c3-4fab-945c-6ae3e0066c3b
-  tls: true
-  reality-opts:
-    public-key: bApi9lB94L-fIb5WoLVR_0WPknU6tICCFoiiWgD_73c
-    short-id: dee2fdee
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 15 R57 - Jewell
-  server: 139.162.101.74
-  udp: true
-  port: 443
-  type: vless
-  uuid: 1e709d98-d4c3-45c1-bdcc-4268cf83eff8
-  tls: true
-  reality-opts:
-    public-key: jd8UNLpim43LVV-iEzIXlUgTVuvi9Pf7E0kgQb3o0CI
-    short-id: 7e1e09f4
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 16 R57 - Jewell
+- name: 🇯🇵 日本 (Japan) 19 R57 - Jewell
   server: 139.162.91.247
   udp: true
   port: 443
@@ -240,23 +276,13 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 17 - Jewell
-  server: djj.zjlo.top
-  udp: true
-  port: 23169
-  type: vless
-  uuid: 7318caa1-93d1-4a9d-c481-504599902700
-  flow: xtls-rprx-vision
-  tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 18 - Jewell
-  server: jpk.wentibuxiaobuda.xyz
+- name: 🇯🇵 日本 (Japan) 20 - Jewell
+  server: im.frnhk.xyz
   udp: true
   port: 443
-  type: hysteria2
-  password: 36187bef1c708c82fd4099b9d70116ffd8c0f1f5bfd19cbb319eeb67899714f6
-  sni: jpk.wentibuxiaobuda.xyz
+  type: anytls
+  password: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
+  sni: im.frnhk.xyz
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -270,17 +296,19 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05 - Jewell
   - 🇯🇵 日本 (Japan) 06 - Jewell
   - 🇯🇵 日本 (Japan) 07 - Jewell
-  - 🇯🇵 日本 (Japan) 08 R46 - Jewell
-  - 🇯🇵 日本 (Japan) 09 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 10 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 11 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 12 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 08 - Jewell
+  - 🇯🇵 日本 (Japan) 09 - Jewell
+  - 🇯🇵 日本 (Japan) 10 - Jewell
+  - 🇯🇵 日本 (Japan) 11 - Jewell
+  - 🇯🇵 日本 (Japan) 12 - Jewell
   - 🇯🇵 日本 (Japan) 13 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 14 R57 - Jewell
-  - 🇯🇵 日本 (Japan) 15 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 14 R51 - Jewell
+  - 🇯🇵 日本 (Japan) 15 - Jewell
   - 🇯🇵 日本 (Japan) 16 R57 - Jewell
-  - 🇯🇵 日本 (Japan) 17 - Jewell
-  - 🇯🇵 日本 (Japan) 18 - Jewell
+  - 🇯🇵 日本 (Japan) 17 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 18 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 19 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 20 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -293,16 +321,18 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05 - Jewell
   - 🇯🇵 日本 (Japan) 06 - Jewell
   - 🇯🇵 日本 (Japan) 07 - Jewell
-  - 🇯🇵 日本 (Japan) 08 R46 - Jewell
-  - 🇯🇵 日本 (Japan) 09 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 10 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 11 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 12 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 08 - Jewell
+  - 🇯🇵 日本 (Japan) 09 - Jewell
+  - 🇯🇵 日本 (Japan) 10 - Jewell
+  - 🇯🇵 日本 (Japan) 11 - Jewell
+  - 🇯🇵 日本 (Japan) 12 - Jewell
   - 🇯🇵 日本 (Japan) 13 R51 - Jewell
-  - 🇯🇵 日本 (Japan) 14 R57 - Jewell
-  - 🇯🇵 日本 (Japan) 15 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 14 R51 - Jewell
+  - 🇯🇵 日本 (Japan) 15 - Jewell
   - 🇯🇵 日本 (Japan) 16 R57 - Jewell
-  - 🇯🇵 日本 (Japan) 17 - Jewell
-  - 🇯🇵 日本 (Japan) 18 - Jewell
+  - 🇯🇵 日本 (Japan) 17 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 18 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 19 R57 - Jewell
+  - 🇯🇵 日本 (Japan) 20 - Jewell
 rules:
 - MATCH,PROXIES

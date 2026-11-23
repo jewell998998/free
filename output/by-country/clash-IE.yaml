@@ -5,13 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
-  server: 34.243.204.20
+  server: 3.248.201.197
   udp: true
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  server: 34.240.199.66
+  udp: true
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
   server: 52.214.218.15
   udp: true
   port: 443
@@ -25,6 +32,7 @@ proxy-groups:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
   - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -32,5 +40,6 @@ proxy-groups:
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01 - Jewell
   - 🇮🇪 爱尔兰 (Ireland) 02 - Jewell
+  - 🇮🇪 爱尔兰 (Ireland) 03 - Jewell
 rules:
 - MATCH,PROXIES

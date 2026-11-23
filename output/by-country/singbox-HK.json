@@ -1,0 +1,108 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16116,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+      "server": "2.26.204.46",
+      "server_port": 31001,
+      "uuid": "12a4f736-2238-49ee-831f-5516f15cc951",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY",
+          "short_id": "39793bc4708abbbb"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+      "server": "8.217.1.203",
+      "server_port": 8443,
+      "uuid": "8b17beac-b143-447d-aa68-14cbb121a602",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38",
+          "short_id": "0bf55f64"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - Jewell",
+      "server": "free.fugui.lol",
+      "server_port": 47396,
+      "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "swdist.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
+          "short_id": "fa514b83"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 04 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇭🇰 中国香港 (Hong Kong) 01 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 02 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 03 - Jewell",
+        "🇭🇰 中国香港 (Hong Kong) 04 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

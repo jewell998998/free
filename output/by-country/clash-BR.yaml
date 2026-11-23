@@ -5,16 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇷 巴西 (Brazil) 01 - Jewell
-  server: 150.230.229.100
-  udp: true
-  port: 20000
-  type: hysteria2
-  password: CyG0RFxMjzs41uQD4OLuHQ==
-  sni: hy2-br2.whuiy.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: CyG0RFxMjzs41uQD4OLuHQ==
-- name: 🇧🇷 巴西 (Brazil) 02 - Jewell
   server: 137.131.177.121
   udp: true
   type: hysteria2
@@ -24,6 +14,13 @@ proxies:
   obfs: salamander
   obfs-password: z/yIxn3sBV03PkAxbnX8rg==
   ports: 20000-30000
+- name: 🇧🇷 巴西 (Brazil) 02 - Jewell
+  server: 144.22.168.108
+  udp: true
+  port: 59319
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: JlYWfyPGeC3bYDcl2hJCsgODec36rua5YToLCxcgrEM=
 proxy-groups:
 - name: PROXIES
   type: select

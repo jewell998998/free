@@ -1,0 +1,73 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  server: zfd-hkv2.kunlun01dns.com
+  udp: true
+  port: 16116
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  server: 2.26.204.46
+  udp: true
+  port: 31001
+  type: vless
+  uuid: 12a4f736-2238-49ee-831f-5516f15cc951
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY
+    short-id: 39793bc4708abbbb
+  servername: mensura.cdn-apple.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: 8.217.1.203
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
+    short-id: 0bf55f64
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+  server: free.fugui.lol
+  udp: true
+  port: 47396
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: fa514b83
+  servername: swdist.apple.com
+  client-fingerprint: ios
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  - 🇭🇰 中国香港 (Hong Kong) 04 - Jewell
+rules:
+- MATCH,PROXIES

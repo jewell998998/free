@@ -4,7 +4,18 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 瑞典 (Sweden) 01 R40 - Jewell
+- name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  server: 13.60.56.123
+  udp: true
+  port: 443
+  type: vless
+  uuid: cffa0e31-7cce-4541-8a2e-4e115873090b
+  network: ws
+  ws-opts:
+    path: /@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe
+    headers:
+      Host: sajed.kdns.fr
+- name: 🇸🇪 瑞典 (Sweden) 02 R40 - Jewell
   server: 138.199.55.243
   udp: true
   port: 19999
@@ -16,12 +27,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 (Sweden) 01 R40 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 R40 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01 R40 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 01 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 02 R40 - Jewell
 rules:
 - MATCH,PROXIES

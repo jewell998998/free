@@ -4,8 +4,22 @@
   },
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+      "server": "13.60.56.123",
+      "server_port": 443,
+      "uuid": "cffa0e31-7cce-4541-8a2e-4e115873090b",
+      "transport": {
+        "type": "ws",
+        "path": "/@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe",
+        "headers": {
+          "Host": "sajed.kdns.fr"
+        }
+      }
+    },
+    {
       "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 R40 - Jewell",
       "server": "138.199.55.243",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -16,14 +30,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 R40 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01 R40 - Jewell"
+        "🇸🇪 瑞典 (Sweden) 01 - Jewell",
+        "🇸🇪 瑞典 (Sweden) 02 R40 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

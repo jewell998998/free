@@ -4,8 +4,59 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01 - Jewell",
+      "server": "168.138.205.100",
+      "server_port": 53758,
+      "method": "aes-128-gcm",
+      "password": "Bwlqh7GcFB"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
+      "server": "64.118.146.147",
+      "server_port": 443,
+      "password": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "tls": {
+        "enabled": true,
+        "server_name": "nb5rb.hikigo.com",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "yhlbhcysaba0wtn1"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 - Jewell",
+      "server": "172.237.14.205",
+      "server_port": 443,
+      "uuid": "4796e022-f377-4a97-bc03-fbf525d7913c",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dllB1KTn7oiEqa6OlmZl-j2kF5GN9bAQeoBinYV2cUQ",
+          "short_id": "da26e5a2"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
       "server": "158.101.151.157",
       "server_port": 443,
       "uuid": "66171cbe-0b4b-4b24-99f6-d5a822f4dc9a",
@@ -15,7 +66,7 @@
         "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,29 +76,30 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 02 - Jewell",
-      "server": "jpa.123069.xyz",
-      "server_port": 53758,
-      "method": "aes-128-gcm",
-      "password": "Bwlqh7GcFB"
-    },
-    {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 R46 - Jewell",
-      "server": "94.177.131.113",
+      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
+      "server": "jp2static.jumpernode.site",
       "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "uuid": "f325fb7d-cad5-4ac8-8888-3f39b4b9d1ca",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "kuruish.org",
-        "insecure": false
+        "server_name": "www.amzn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GeKuYNeAqQQkTN9OMJxXA9I-rXs7IiGh4Sl82crCITc",
+          "short_id": "6281f3ef81187ad8"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 04 - Jewell",
-      "server": "jpg1api.jumpernode.site",
+      "tag": "🇯🇵 日本 (Japan) 06 - Jewell",
+      "server": "151.242.164.51",
       "server_port": 443,
       "uuid": "d508df52-3acb-483f-85d2-3fd5f6a76808",
       "flow": "xtls-rprx-vision",
@@ -62,60 +114,6 @@
           "enabled": true,
           "public_key": "dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I",
           "short_id": "2c92d6"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 05 - Jewell",
-      "server": "172.238.18.103",
-      "server_port": 443,
-      "uuid": "f4a4498a-c02f-4862-93ae-8f495c9cd2c0",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "BDt3yJpYIovC6b1iJF2h8qH4LfQAoSC0u3iVa0cFeSM",
-          "short_id": "6ff775ae"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 06 - Jewell",
-      "server": "198.13.53.39",
-      "server_port": 443,
-      "uuid": "8f21c635-ef0a-4b05-8356-f44d463b6e34",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k",
-          "short_id": "7a7cc838"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
         }
       }
     },
@@ -148,61 +146,23 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 08 - Jewell",
-      "server": "45.76.222.108",
+      "tag": "🇯🇵 日本 (Japan) 08 R46 - Jewell",
+      "server": "kuruish.org",
       "server_port": 443,
-      "uuid": "bd95a04e-e3e1-460e-b89d-e9a693d393e0",
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
-        "server_name": "itunes.apple.com",
+        "server_name": "kuruish.org",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "-_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE",
-          "short_id": "b5c85d2d"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 09 - Jewell",
-      "server": "45.76.106.69",
-      "server_port": 443,
-      "uuid": "db102c51-5f7f-4283-b9c1-942c5c6e2616",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "nZzY--8K_-mm8x4JDzkUFt1be1SQzriGIOmYkbpq1C8",
-          "short_id": "034f5d5a"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 10 R51 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 09 R51 - Jewell",
       "server": "172.105.212.91",
       "server_port": 443,
       "uuid": "1f08d52f-126e-46e3-929a-4b6a58e21168",
@@ -229,10 +189,10 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 11 - Jewell",
-      "server": "149.28.29.156",
+      "tag": "🇯🇵 日本 (Japan) 10 R51 - Jewell",
+      "server": "172.105.197.24",
       "server_port": 443,
-      "uuid": "aa1a9052-720f-4bb0-92be-21b6baf9f386",
+      "uuid": "81f4e114-5a60-41b5-9038-8d742380c84f",
       "tls": {
         "enabled": true,
         "server_name": "itunes.apple.com",
@@ -242,8 +202,8 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0",
-          "short_id": "e535df57"
+          "public_key": "EfNOl6-YAuW-WSg7Op-1YOqKZV9emIuLwH8YPhzc7ms",
+          "short_id": "772bef67"
         }
       },
       "transport": {
@@ -256,10 +216,10 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 12 R51 - Jewell",
-      "server": "172.104.105.212",
+      "tag": "🇯🇵 日本 (Japan) 11 R51 - Jewell",
+      "server": "172.104.86.181",
       "server_port": 443,
-      "uuid": "e8212bb6-b962-4c68-83e6-c2dbc81829a0",
+      "uuid": "010431f3-04f6-4404-a801-b93bf2e3c2b2",
       "tls": {
         "enabled": true,
         "server_name": "itunes.apple.com",
@@ -269,8 +229,8 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "kiBL725AePA3-FPNDKwUgMrolmGl_P8YBRAwFj-_yzM",
-          "short_id": "cdfc4883"
+          "public_key": "ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk",
+          "short_id": "c8559ca1"
         }
       },
       "transport": {
@@ -283,7 +243,88 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 13 R57 - Jewell",
+      "tag": "🇯🇵 日本 (Japan) 12 R57 - Jewell",
+      "server": "139.162.91.224",
+      "server_port": 443,
+      "uuid": "ff3038b1-a2f5-428f-89cd-5d5e4efba8e7",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wmbc3kcjbG9-A9Fi7zaHuRVPH7A7UQkKNNvqyqJtMEk",
+          "short_id": "e5b03494"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 13 R51 - Jewell",
+      "server": "172.105.203.15",
+      "server_port": 443,
+      "uuid": "c8c9b995-b4b9-4915-9c7d-dee94aa733ba",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA",
+          "short_id": "0784b134"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 14 R57 - Jewell",
+      "server": "139.162.91.232",
+      "server_port": 443,
+      "uuid": "ea2e7ce8-60c3-4fab-945c-6ae3e0066c3b",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bApi9lB94L-fIb5WoLVR_0WPknU6tICCFoiiWgD_73c",
+          "short_id": "dee2fdee"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 15 R57 - Jewell",
       "server": "139.162.101.74",
       "server_port": 443,
       "uuid": "1e709d98-d4c3-45c1-bdcc-4268cf83eff8",
@@ -310,10 +351,10 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 14 R51 - Jewell",
-      "server": "172.105.197.24",
+      "tag": "🇯🇵 日本 (Japan) 16 R57 - Jewell",
+      "server": "139.162.91.247",
       "server_port": 443,
-      "uuid": "81f4e114-5a60-41b5-9038-8d742380c84f",
+      "uuid": "8cfdacf8-e781-42f0-9872-8d1d22469de5",
       "tls": {
         "enabled": true,
         "server_name": "itunes.apple.com",
@@ -323,8 +364,8 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "EfNOl6-YAuW-WSg7Op-1YOqKZV9emIuLwH8YPhzc7ms",
-          "short_id": "772bef67"
+          "public_key": "_gFFckW3h8hFfllawgec9U2PDBeLJeCK_Jgk1S5tgC8",
+          "short_id": "536d7739"
         }
       },
       "transport": {
@@ -336,24 +377,53 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 17 - Jewell",
+      "server": "djj.zjlo.top",
+      "server_port": 23169,
+      "uuid": "7318caa1-93d1-4a9d-c481-504599902700",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "djj.zjlo.top",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 18 - Jewell",
+      "server": "jpk.wentibuxiaobuda.xyz",
+      "server_port": 443,
+      "password": "36187bef1c708c82fd4099b9d70116ffd8c0f1f5bfd19cbb319eeb67899714f6",
+      "tls": {
+        "enabled": true,
+        "server_name": "jpk.wentibuxiaobuda.xyz",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇯🇵 日本 (Japan) 01 - Jewell",
         "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 R46 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
         "🇯🇵 日本 (Japan) 04 - Jewell",
         "🇯🇵 日本 (Japan) 05 - Jewell",
         "🇯🇵 日本 (Japan) 06 - Jewell",
         "🇯🇵 日本 (Japan) 07 - Jewell",
-        "🇯🇵 日本 (Japan) 08 - Jewell",
-        "🇯🇵 日本 (Japan) 09 - Jewell",
+        "🇯🇵 日本 (Japan) 08 R46 - Jewell",
+        "🇯🇵 日本 (Japan) 09 R51 - Jewell",
         "🇯🇵 日本 (Japan) 10 R51 - Jewell",
-        "🇯🇵 日本 (Japan) 11 - Jewell",
-        "🇯🇵 日本 (Japan) 12 R51 - Jewell",
-        "🇯🇵 日本 (Japan) 13 R57 - Jewell",
-        "🇯🇵 日本 (Japan) 14 R51 - Jewell"
+        "🇯🇵 日本 (Japan) 11 R51 - Jewell",
+        "🇯🇵 日本 (Japan) 12 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 13 R51 - Jewell",
+        "🇯🇵 日本 (Japan) 14 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 15 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 16 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 17 - Jewell",
+        "🇯🇵 日本 (Japan) 18 - Jewell"
       ]
     },
     {
@@ -362,18 +432,22 @@
       "outbounds": [
         "🇯🇵 日本 (Japan) 01 - Jewell",
         "🇯🇵 日本 (Japan) 02 - Jewell",
-        "🇯🇵 日本 (Japan) 03 R46 - Jewell",
+        "🇯🇵 日本 (Japan) 03 - Jewell",
         "🇯🇵 日本 (Japan) 04 - Jewell",
         "🇯🇵 日本 (Japan) 05 - Jewell",
         "🇯🇵 日本 (Japan) 06 - Jewell",
         "🇯🇵 日本 (Japan) 07 - Jewell",
-        "🇯🇵 日本 (Japan) 08 - Jewell",
-        "🇯🇵 日本 (Japan) 09 - Jewell",
+        "🇯🇵 日本 (Japan) 08 R46 - Jewell",
+        "🇯🇵 日本 (Japan) 09 R51 - Jewell",
         "🇯🇵 日本 (Japan) 10 R51 - Jewell",
-        "🇯🇵 日本 (Japan) 11 - Jewell",
-        "🇯🇵 日本 (Japan) 12 R51 - Jewell",
-        "🇯🇵 日本 (Japan) 13 R57 - Jewell",
-        "🇯🇵 日本 (Japan) 14 R51 - Jewell"
+        "🇯🇵 日本 (Japan) 11 R51 - Jewell",
+        "🇯🇵 日本 (Japan) 12 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 13 R51 - Jewell",
+        "🇯🇵 日本 (Japan) 14 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 15 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 16 R57 - Jewell",
+        "🇯🇵 日本 (Japan) 17 - Jewell",
+        "🇯🇵 日本 (Japan) 18 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

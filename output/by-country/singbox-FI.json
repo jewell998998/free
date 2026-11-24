@@ -4,39 +4,52 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "hysteria2",
       "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
-      "server": "65.108.240.210",
-      "server_port": 39018,
-      "uuid": "45dc10c6-04c8-4c70-a06a-d396254a6c0b",
-      "security": "auto"
+      "server": "94.183.164.119",
+      "server_port": 24433,
+      "password": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
+      "tls": {
+        "enabled": true,
+        "server_name": "lakes.blog-forme.ru",
+        "insecure": false
+      }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
-      "server": "2.29.210.28",
-      "server_port": 25565,
-      "method": "chacha20-ietf-poly1305",
-      "password": "C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc"
+      "server": "188.225.46.6",
+      "server_port": 443,
+      "uuid": "a077dc9a-712f-48ea-b75c-d94af64011ec",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "spb.b2ai.top",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
-      "server": "static.47.247.21.65.clients.your-server.de",
+      "server": "196.196.208.22",
       "server_port": 443,
-      "uuid": "fd419342-f50f-49b7-9074-d694b7d09508",
+      "uuid": "cae99415-10a6-4317-81bd-19a4586b5d76",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "static.47.247.21.65.clients.your-server.de",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "8a0f3at.fi-p1b.h1clayd.click",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3Ya7Erk_G6wlvuy6ekUzCW7zxnaDivdUzkkJXTFXcWs",
+          "short_id": "96f94f6200195aae"
         }
       }
     },

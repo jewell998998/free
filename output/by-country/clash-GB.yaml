@@ -4,30 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R52 - Jewell
-  server: 167.99.203.0
-  udp: true
-  port: 443
-  type: vless
-  uuid: 40992c2a-513e-4837-9594-23411fd42afd
-  network: h2
-  h2-opts:
-    host: []
-    path: /
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 213.176.92.168
-  udp: true
-  port: 10444
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
+- name: 🇬🇧 英国 (United Kingdom) 01 R63 - Jewell
   server: 136.176.68.34
   udp: true
   port: 443
@@ -40,38 +17,17 @@ proxies:
     short-id: a6040129ad7f4b74
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
-  server: uk1.connectsuite.org
-  udp: true
-  port: 443
-  type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-    headers:
-      Host: uk1.connectsuite.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R52 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 R63 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R52 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
+  - 🇬🇧 英国 (United Kingdom) 01 R63 - Jewell
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,43 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  server: 116.213.43.43
+  udp: true
+  port: 11102
+  type: vless
+  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: oW6HMjniDmBJdjGKwhBAIS2zMS1VvHORubh9vdazqQ0
+    short-id: ed571d022f7bc3bf
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+  server: theme.lovehk.xyz
+  udp: true
+  port: 443
+  type: anytls
+  password: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
+  sni: theme.lovehk.xyz
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇹🇼 中国台湾 (Taiwan) 01 - Jewell
+  - 🇹🇼 中国台湾 (Taiwan) 02 - Jewell
+rules:
+- MATCH,PROXIES

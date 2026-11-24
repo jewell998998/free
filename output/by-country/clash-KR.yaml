@@ -5,24 +5,51 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - Jewell
-  server: 168.107.51.32
+  server: 193.122.106.29
+  udp: true
+  port: 20000
+  type: hysteria2
+  password: C0DD7bgChaltqnh/T2az6ijM
+  sni: hy2-kr.whuiy.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: C0DD7bgChaltqnh/T2az6ijM
+- name: 🇰🇷 韩国 (South Korea) 02 - Jewell
+  server: ikr200.zxom.eu.org
   udp: true
   port: 20045
   type: trojan
   password: 463f7453753f4d47
   sni: ikr200.zxom.eu.org
   skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 03 - Jewell
+  server: dddz-4-z.473221.xyz
+  udp: true
+  port: 43118
+  type: vless
+  uuid: 5807f1c4-b50e-4ec0-8d01-274045da0da5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: p0crO-ZNRjb07T_GGy9JdkXTjei3-D9f6s2ZzCo2gx8
+    short-id: 1a70fe8d4b05
+  servername: v1-dy.ixigua.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 - Jewell
+  - 🇰🇷 韩国 (South Korea) 02 - Jewell
+  - 🇰🇷 韩国 (South Korea) 03 - Jewell
 rules:
 - MATCH,PROXIES

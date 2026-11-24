@@ -16,28 +16,36 @@ proxies:
     public-key: lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY
     short-id: 39793bc4708abbbb
   servername: mensura.cdn-apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: zfd-hkv2.kunlun01dns.com
+  server: 116.213.43.43
   udp: true
-  port: 16115
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: 8.217.1.203
-  udp: true
-  port: 8443
+  port: 11107
   type: vless
-  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
+  uuid: 08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
-    short-id: 0bf55f64
+    public-key: 6GRzkPbs12fKBdBBFzs5dmtmbSHCXMngUCBKLrXYm3U
+    short-id: e2ccd8eedcbee2ce
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
+  server: bYWXdhIRqKJj8XAZ.v.3dns.vip
+  udp: true
+  port: 443
+  type: vmess
+  uuid: 234a80412b4d44a3a8d8523cbfd58dc4
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: bYWXdhIRqKJj8XAZ.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: bYWXdhIRqKJj8XAZ.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select

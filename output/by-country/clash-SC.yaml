@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇨 塞舌尔 (Seychelles) 01 - Jewell
+  server: 9929-dubiously9-caboose9.403x404.org
+  udp: true
+  port: 32328
+  type: vless
+  uuid: 5fc82aea-2a53-4e45-a822-d1779beb7121
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zZI7ClN4bmwLS1XqXJDoFxLUf9Zvl8IxL5QmvavF_BY
+    short-id: bb3633c8
+  servername: amp.shazam.com
+  client-fingerprint: safari
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇨 塞舌尔 (Seychelles) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇨 塞舌尔 (Seychelles) 01 - Jewell
+rules:
+- MATCH,PROXIES

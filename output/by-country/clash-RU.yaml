@@ -5,15 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 103.88.243.142
-  udp: true
-  port: 11592
-  type: hysteria2
-  password: 41edb44c8e
-  sni: srv-17e124.21freedom.net
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: 200.169.179.233
+  server: leviko-ru4448.shopingggg.ir
   udp: true
   port: 443
   type: vless
@@ -21,20 +13,31 @@ proxies:
   tls: true
   servername: vps3.nemnogogo.com
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
-  server: 136.148.83.70
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
+  server: 136.148.83.69
   udp: true
   port: 443
   type: vless
-  uuid: 00000000-0000-0001-0000-000000000000
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
   tls: true
-  servername: aszbk-ru-78dc.my-fade.cloud
+  servername: szqbx-ru-77dc.my-fade.cloud
   skip-cert-verify: false
   client-fingerprint: qq
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 194.26.229.207
+  udp: true
+  port: 2200
+  type: vless
+  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
+  network: ws
+  ws-opts:
+    path: /v1
+    headers:
+      Host: rzd.ru
 proxy-groups:
 - name: PROXIES
   type: select

@@ -12,7 +12,19 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: sajed.kdns.fr
+  server: 88.216.60.73
+  udp: true
+  port: 443
+  type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  tls: true
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: a7c92e4b10d6f835
+  servername: ns-api-gw.galioncc.com
+  client-fingerprint: ios
+- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  server: 13.60.56.123
   udp: true
   port: 443
   type: vless
@@ -20,8 +32,41 @@ proxies:
   network: ws
   ws-opts:
     path: /@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe
-    headers:
-      Host: sajed.kdns.fr
+- name: 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  server: leviko-se6979.shopingggg.ir
+  udp: true
+  port: 48115
+  type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
+- name: 🇸🇪 瑞典 (Sweden) 05 - Jewell
+  server: ba0648t.se1.h1clayd.click
+  udp: true
+  port: 443
+  type: vless
+  uuid: 57a3fb3c-5788-4777-933e-882dd22f5b82
+  tls: true
+  reality-opts:
+    public-key: _c33IsYcvvy4t95zq8ydgtQ3pXpOK7eLdQqK3O7c2Ao
+    short-id: b684dc4aaba4a911
+  servername: ba0648t.se1.h1clayd.click
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 06 - Jewell
+  server: 92.63.189.39
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 7aa77858-f235-0003-9434-7ab060848b17
+  flow: xtls-rprx-vision
+  tls: true
+  servername: avelon.onl
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -29,6 +74,10 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -36,5 +85,9 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 04 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 05 - Jewell
+  - 🇸🇪 瑞典 (Sweden) 06 - Jewell
 rules:
 - MATCH,PROXIES

@@ -5,16 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - Jewell
-  server: 65.21.247.47
+  server: 65.108.240.210
   udp: true
-  port: 443
-  type: vless
-  uuid: ca74ad0f-c384-4362-96bb-0123b852b346
-  flow: xtls-rprx-vision
-  tls: true
-  servername: static.47.247.21.65.clients.your-server.de
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  port: 39018
+  type: vmess
+  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
+  alterId: 0
+  cipher: auto
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
   server: 157.180.98.124
   udp: true
@@ -29,18 +26,63 @@ proxies:
   servername: apple.com
   client-fingerprint: ''
 - name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 196.196.208.22
+  server: 157.180.98.124
   udp: true
-  port: 443
+  port: 49659
   type: vless
-  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
+  uuid: 88a558b1-9645-42f3-89e5-341570d8486d
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 3Ya7Erk_G6wlvuy6ekUzCW7zxnaDivdUzkkJXTFXcWs
-    short-id: 96f94f6200195aae
-  servername: 8a0f3at.fi-p1b.h1clayd.click
+    public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
+    short-id: 81959fce
+  servername: apple.com
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
+  server: origin5.pd-service.shop
+  udp: true
+  port: 2298
+  type: vless
+  uuid: cdfc923e-8d34-4b44-ac72-ab41ec560ba8
+  tls: true
+  reality-opts:
+    public-key: YVW5HyhXOqVIDLzngOhCHWXdSkVNrRBS029UK3Fl3mM
+    short-id: 729bef613f43e925
+  servername: vimeo.com
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ads.x5.ru
+- name: 🇫🇮 芬兰 (Finland) 05 - Jewell
+  server: Ip3.ipspanel.ir
+  udp: true
+  port: 8443
+  type: vless
+  uuid: 37df2d23-a4d0-40ca-9dd0-c791d1ff94be
+  tls: true
+  servername: T.panel001.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@TurboVpn10
+    headers:
+      Host: T.panel001.ir
+- name: 🇫🇮 芬兰 (Finland) 06 - Jewell
+  server: Ip4.ipspanel.ir
+  udp: true
+  port: 2053
+  type: vless
+  uuid: 37df2d23-a4d0-40ca-9dd0-c791d1ff94be
+  tls: true
+  servername: T.panel001.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@TurboVpn10
+    headers:
+      Host: T.panel001.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,6 +91,9 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
+  - 🇫🇮 芬兰 (Finland) 06 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,5 +102,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
   - 🇫🇮 芬兰 (Finland) 03 - Jewell
+  - 🇫🇮 芬兰 (Finland) 04 - Jewell
+  - 🇫🇮 芬兰 (Finland) 05 - Jewell
+  - 🇫🇮 芬兰 (Finland) 06 - Jewell
 rules:
 - MATCH,PROXIES

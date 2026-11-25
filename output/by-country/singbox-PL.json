@@ -6,13 +6,34 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
-      "server": "45.194.66.177",
+      "server": "82.118.22.161",
       "server_port": 443,
-      "uuid": "352a250d-080b-47b5-b7db-f9f8fa31c551",
+      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "31tawwo0.virtual-network.lol",
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
+          "short_id": "fa3ea655619a3e78"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
+      "server": "92.63.189.39",
+      "server_port": 8443,
+      "uuid": "7aa77858-f235-0002-9434-7ab060848b17",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "avelon.onl",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -21,18 +42,48 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03 - Jewell",
+      "server": "e2.cdnwh.icu",
+      "server_port": 443,
+      "uuid": "b432a23a-acff-425c-bf69-70480cd6ed09",
+      "tls": {
+        "enabled": true,
+        "server_name": "e2.cdnwh.icu",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/segment/3078a41dd7eb/",
+        "headers": {
+          "Host": "e2.cdnwh.icu"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell",
+        "🇵🇱 波兰 (Poland) 02 - Jewell",
+        "🇵🇱 波兰 (Poland) 03 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

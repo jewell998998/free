@@ -17,50 +17,17 @@ proxies:
     short-id: 39793bc4708abbbb
   servername: mensura.cdn-apple.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  server: 116.213.43.43
-  udp: true
-  port: 11107
-  type: vless
-  uuid: 08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6GRzkPbs12fKBdBBFzs5dmtmbSHCXMngUCBKLrXYm3U
-    short-id: e2ccd8eedcbee2ce
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
-  server: bYWXdhIRqKJj8XAZ.v.3dns.vip
-  udp: true
-  port: 443
-  type: vmess
-  uuid: 234a80412b4d44a3a8d8523cbfd58dc4
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: bYWXdhIRqKJj8XAZ.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: bYWXdhIRqKJj8XAZ.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 02 - Jewell
-  - 🇭🇰 中国香港 (Hong Kong) 03 - Jewell
 rules:
 - MATCH,PROXIES

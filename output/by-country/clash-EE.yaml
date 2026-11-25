@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
-  server: bg-meteo-grid.keno.su
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
+  server: 143.246.41.232
   udp: true
   port: 443
   type: vless
-  uuid: a9d963bc-81a1-42b5-b62d-104af19a0f5c
+  uuid: 7d31a423-4bb6-4c16-91b8-c08901a37780
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ZWPgFvU3iu9HRQ6Zd8WEdN0Zk8yHZQCEyE15LjOxGRU
-    short-id: 788a109a349ed9cf
-  servername: bg-meteo-grid.keno.su
+    public-key: lI2vfdzBaAKrDxAdkAW8IHp9pkpQV6INmJrYriC_lyE
+    short-id: 9ef8ebef9638b9c7
+  servername: e0ddd1x.ee2.h1clayd.click
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 (Bulgaria) 01 - Jewell
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - Jewell
 rules:
 - MATCH,PROXIES

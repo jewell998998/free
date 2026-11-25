@@ -5,61 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  server: 129.151.82.249
+  server: 193.188.21.253
   udp: true
-  port: 61312
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: L35ZoQjjihDmVI3YcDK0UMgcjpoxdMtVDStV2NH74xw=
-- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  server: 129.151.80.5
-  udp: true
-  port: 61312
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: ugBIPSjGck0sdySAu9HA0jr2mLQaZvVVLZ40V5vOUZE=
-- name: 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
-  server: 136.176.68.34
-  udp: true
-  port: 443
+  port: 14430
   type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo
-    short-id: a6040129ad7f4b74
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
-  server: uk1.connectsuite.org
-  udp: true
-  port: 443
-  type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
   network: ws
   ws-opts:
-    path: /cdn-cgi/ws
+    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 03 R63 - Jewell
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R - Jewell
 rules:
 - MATCH,PROXIES

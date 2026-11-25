@@ -4,42 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 R56 - Jewell
-  server: 208.69.78.208
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 02 R56 - Jewell
-  server: 208.69.78.222
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 03 R56 - Jewell
-  server: 208.69.78.19
-  udp: true
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 04 - Jewell
-  server: 92.63.189.39
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 7aa77858-f235-0004-9434-7ab060848b17
-  flow: xtls-rprx-vision
-  tls: true
-  servername: avelon.onl
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 05 R53 - Jewell
+- name: 🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell
   server: 193.233.89.130
   udp: true
   port: 8443
@@ -49,42 +14,21 @@ proxies:
   reality-opts:
     public-key: xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c
   servername: g.play2go.gay
-  client-fingerprint: random
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: 🇨🇭 瑞士 (Switzerland) 06 - Jewell
-  server: mcicloudnnnn.belzema.ir
-  udp: true
-  port: 10005
-  type: vless
-  uuid: 20486037-c2ae-4c07-a459-f58ca83cf08a
-  tls: true
-  reality-opts:
-    public-key: 7aICTN0hv6bhd8bYOjNZniDYSXgD20LunZ3BW6_Zyk4
-  servername: play.googleapis.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 R56 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 02 R56 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 03 R56 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 04 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 05 R53 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 06 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 R56 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 02 R56 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 03 R56 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 04 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 05 R53 - Jewell
-  - 🇨🇭 瑞士 (Switzerland) 06 - Jewell
+  - 🇨🇭 瑞士 (Switzerland) 01 R53 - Jewell
 rules:
 - MATCH,PROXIES

@@ -13,34 +13,6 @@ proxies:
   sni: lakes.blog-forme.ru
   skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02 - Jewell
-  server: origin5.pd-service.shop
-  udp: true
-  port: 2298
-  type: vless
-  uuid: cdfc923e-8d34-4b44-ac72-ab41ec560ba8
-  tls: true
-  reality-opts:
-    public-key: YVW5HyhXOqVIDLzngOhCHWXdSkVNrRBS029UK3Fl3mM
-    short-id: 729bef613f43e925
-  servername: vimeo.com
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ads.x5.ru
-- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
-  server: 157.180.98.124
-  udp: true
-  port: 49659
-  type: vless
-  uuid: 88a558b1-9645-42f3-89e5-341570d8486d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
-    short-id: 81959fce
-  servername: apple.com
-  client-fingerprint: ''
-- name: 🇫🇮 芬兰 (Finland) 04 - Jewell
   server: 31.76.77.231
   udp: true
   port: 443
@@ -60,8 +32,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -69,7 +39,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - Jewell
   - 🇫🇮 芬兰 (Finland) 02 - Jewell
-  - 🇫🇮 芬兰 (Finland) 03 - Jewell
-  - 🇫🇮 芬兰 (Finland) 04 - Jewell
 rules:
 - MATCH,PROXIES

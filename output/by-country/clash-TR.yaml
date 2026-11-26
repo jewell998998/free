@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - Jewell
+  server: 38.180.104.37
+  udp: true
+  port: 19084
+  type: ss
+  cipher: aes-128-gcm
+  password: ff4d354078394558933d699be149ad69
+- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
   server: 143.246.136.128
   udp: true
   port: 50738
@@ -14,17 +21,6 @@ proxies:
   servername: turkey-ip1.mmdaqaorg.xyz
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02 - Jewell
-  server: game.celvixo.ir
-  udp: true
-  port: 2087
-  type: vless
-  uuid: 5e3c4bce-aa57-4a5c-0e95-134772a19e0c
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cp.xelzano.ir
 proxy-groups:
 - name: PROXIES
   type: select

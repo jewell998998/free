@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - Jewell",
+      "server": "38.180.104.37",
+      "server_port": 19084,
+      "method": "aes-128-gcm",
+      "password": "ff4d354078394558933d699be149ad69"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
       "server": "143.246.136.128",
       "server_port": 50738,
       "uuid": "56665684-5ac0-4ba9-9d49-8b258fb57974",
@@ -20,20 +28,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - Jewell",
-      "server": "game.celvixo.ir",
-      "server_port": 2087,
-      "uuid": "5e3c4bce-aa57-4a5c-0e95-134772a19e0c",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "cp.xelzano.ir"
         }
       }
     },

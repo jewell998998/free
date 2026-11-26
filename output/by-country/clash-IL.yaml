@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01 - Jewell
-  server: 195.206.235.74
+  server: 196.245.153.156
   udp: true
   port: 443
   type: vless
@@ -14,13 +14,13 @@ proxies:
   reality-opts:
     public-key: xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA
     short-id: 6d289ff0f47c0aac
-  servername: 961ec0g.nl13.h1clayd.click
-  client-fingerprint: chrome
+  servername: 961ec0g.nl17.h1clayd.click
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: 7d5abcd7d8a1
 - name: 🇮🇱 以色列 (Israel) 02 - Jewell
-  server: 153.56.229.218
+  server: 71b840t.de7.h1clayd.click
   udp: true
   port: 443
   type: vless
@@ -30,7 +30,20 @@ proxies:
     public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
     short-id: e572b6579ea525d4
   servername: 71b840t.de7.h1clayd.click
-  client-fingerprint: firefox
+  client-fingerprint: edge
+- name: 🇮🇱 以色列 (Israel) 03 - Jewell
+  server: 4935e4t.de25.h1clayd.click
+  udp: true
+  port: 443
+  type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: 6976d670818644cc
+  servername: 4935e4t.de25.h1clayd.click
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -38,6 +51,7 @@ proxy-groups:
   - AUTO
   - 🇮🇱 以色列 (Israel) 01 - Jewell
   - 🇮🇱 以色列 (Israel) 02 - Jewell
+  - 🇮🇱 以色列 (Israel) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -45,5 +59,6 @@ proxy-groups:
   proxies:
   - 🇮🇱 以色列 (Israel) 01 - Jewell
   - 🇮🇱 以色列 (Israel) 02 - Jewell
+  - 🇮🇱 以色列 (Israel) 03 - Jewell
 rules:
 - MATCH,PROXIES

@@ -4,27 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚 (Australia) 01 - Jewell
-  server: 159.13.55.48
+- name: 🇱🇹 立陶宛 (Lithuania) 01 - Jewell
+  server: 88.119.176.49
   udp: true
-  port: 20000
+  port: 443
   type: hysteria2
-  password: b42d90fa667942aebc734d60
-  sni: hy2-au2.whuiy.xyz
+  password: c0742f77-5495-43bf-b007-88d368774d7c
+  sni: litual3.harcho.shop
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: b42d90fa667942aebc734d60
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇱🇹 立陶宛 (Lithuania) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺 澳大利亚 (Australia) 01 - Jewell
+  - 🇱🇹 立陶宛 (Lithuania) 01 - Jewell
 rules:
 - MATCH,PROXIES

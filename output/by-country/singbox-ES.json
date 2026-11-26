@@ -4,55 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "anytls",
       "tag": "🇪🇸 西班牙 (Spain) 01 - Jewell",
-      "server": "46.28.71.247",
+      "server": "photo.lovehk.xyz",
       "server_port": 443,
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
-      "flow": "xtls-rprx-vision",
+      "password": "235e318a-8bcb-4480-b256-7b65cc5d0b0a",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 02 - Jewell",
-      "server": "S23.fusetea.ir",
-      "server_port": 2089,
-      "method": "chacha20-ietf-poly1305",
-      "password": "R02KmzzSD7PeZ_DosF87xZ7zIn8jLtyP"
-    },
-    {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 03 - Jewell",
-      "server": "196.196.149.81",
-      "server_port": 443,
-      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-      "tls": {
-        "enabled": true,
-        "server_name": "b3cd32g.es1.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30",
-          "short_id": "e7cffac9f8cfb434"
-        }
-      },
-      "transport": {
-        "type": "grpc"
+        "server_name": "photo.lovehk.xyz",
+        "insecure": false
       }
     },
     {
@@ -60,18 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01 - Jewell",
-        "🇪🇸 西班牙 (Spain) 02 - Jewell",
-        "🇪🇸 西班牙 (Spain) 03 - Jewell"
+        "🇪🇸 西班牙 (Spain) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01 - Jewell",
-        "🇪🇸 西班牙 (Spain) 02 - Jewell",
-        "🇪🇸 西班牙 (Spain) 03 - Jewell"
+        "🇪🇸 西班牙 (Spain) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,37 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-      "server": "54.37.235.208",
-      "server_port": 11169,
-      "method": "aes-128-gcm",
-      "password": "122e6f90890e2691f3da63eddf951495"
-    },
-    {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 - Jewell",
-      "server": "46.243.232.149",
+      "tag": "🇵🇱 波兰 (Poland) 01 - Jewell",
+      "server": "45.194.66.177",
       "server_port": 443,
-      "uuid": "b432a23a-acff-425c-bf69-70480cd6ed09",
+      "uuid": "352a250d-080b-47b5-b7db-f9f8fa31c551",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "e3.cdnwh.icu",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/edge/chunk/b2265efffa29/",
-        "headers": {
-          "Host": "e3.cdnwh.icu"
-        }
+        "server_name": "31tawwo0.virtual-network.lol",
+        "insecure": false
       }
     },
     {
@@ -42,16 +21,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01 R40 - Jewell",
-        "🇵🇱 波兰 (Poland) 02 - Jewell"
+        "🇵🇱 波兰 (Poland) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

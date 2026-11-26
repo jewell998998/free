@@ -5,34 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - Jewell
-  server: 45.158.197.237
-  udp: true
-  port: 8443
-  type: vless
-  uuid: 18baf01c-99b2-4675-997c-1ec73e3eadff
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: apple.com
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
-  server: xinnusvpn.duckdns.org
-  udp: true
-  port: 8443
-  type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  tls: true
-  servername: xinnusvpn.duckdns.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wsnl
-    headers:
-      Host: xinnusvpn.duckdns.org
-- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   server: 147.45.221.225
   udp: true
   port: 443
@@ -41,31 +13,11 @@ proxies:
   tls: true
   servername: nl.lucheeebezlimitnoekino.stream
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /media/ws/
-- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
-  server: vps3.nemnogogo.com
-  udp: true
-  port: 443
-  type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  tls: true
-  servername: vps3.nemnogogo.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  server: 136.148.83.69
-  udp: true
-  port: 443
-  type: hysteria2
-  password: 87bb2ac4-b7a1-0001-b11d-2107709ea6cb
-  sni: szqbx-ru-77dc.my-fade.cloud
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 06 - Jewell
+- name: 🇷🇺 俄罗斯 (Russia) 02 - Jewell
   server: 103.88.243.142
   udp: true
   port: 11592
@@ -73,37 +25,41 @@ proxies:
   password: 41edb44c8e
   sni: srv-17e124.21freedom.net
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  server: 91.206.92.158
+- name: 🇷🇺 俄罗斯 (Russia) 03 - Jewell
+  server: 201.51.12.98
   udp: true
-  port: 18443
-  type: ss
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-- name: 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  server: 194.26.229.207
-  udp: true
-  port: 2200
+  port: 443
   type: vless
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: 🇷🇺 俄罗斯 (Russia) 04 - Jewell
+  server: 136.148.83.69
+  udp: true
+  port: 443
+  type: vless
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+  tls: true
+  servername: szqbx-ru-77dc.my-fade.cloud
+  skip-cert-verify: false
+  client-fingerprint: qq
+- name: 🇷🇺 俄罗斯 (Russia) 05 - Jewell
+  server: smartcdn.top
+  udp: true
+  port: 443
+  type: vless
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+  tls: true
+  servername: smartcdn.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-- name: 🇷🇺 俄罗斯 (Russia) 09 - Jewell
-  server: 31.58.191.52
-  udp: true
-  port: 3099
-  type: vless
-  uuid: cdfc923e-8d34-4b44-ac72-ab41ec560ba8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: R6XO56Bp8-HW5dW3oOu5WC-bYVBD9ed8KR_mx6oU6Ew
-    short-id: 5701ece7005006b8
-  servername: vimeo.com
-  client-fingerprint: firefox
+    path: /useraction/collect/8a64b355ef0c/
 proxy-groups:
 - name: PROXIES
   type: select
@@ -114,10 +70,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -128,9 +80,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 04 - Jewell
   - 🇷🇺 俄罗斯 (Russia) 05 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 06 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 07 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 08 - Jewell
-  - 🇷🇺 俄罗斯 (Russia) 09 - Jewell
 rules:
 - MATCH,PROXIES

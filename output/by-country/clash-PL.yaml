@@ -4,41 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰 (Poland) 01 R40 - Jewell
-  server: 54.37.235.208
-  udp: true
-  port: 11169
-  type: ss
-  cipher: aes-128-gcm
-  password: 122e6f90890e2691f3da63eddf951495
-- name: 🇵🇱 波兰 (Poland) 02 - Jewell
-  server: 46.243.232.149
+- name: 🇵🇱 波兰 (Poland) 01 - Jewell
+  server: 45.194.66.177
   udp: true
   port: 443
   type: vless
-  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
+  flow: xtls-rprx-vision
   tls: true
-  servername: e3.cdnwh.icu
+  servername: 31tawwo0.virtual-network.lol
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /edge/chunk/b2265efffa29/
-    headers:
-      Host: e3.cdnwh.icu
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 波兰 (Poland) 01 R40 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 波兰 (Poland) 01 R40 - Jewell
-  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 01 - Jewell
 rules:
 - MATCH,PROXIES

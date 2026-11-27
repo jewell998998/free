@@ -5,32 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - Jewell
-  server: 184.107.106.78
-  udp: true
-  port: 8388
-  type: ss
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 184.107.106.77
   udp: true
   port: 8388
   type: ss
   cipher: aes-256-gcm
   password: itzvpn@321
-- name: 🇨🇦 加拿大 (Canada) 03 - Jewell
-  server: 510.150333.xyz
-  udp: true
-  port: 21003
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: f3602a3a1cf928b7
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇨🇦 加拿大 (Canada) 04 - Jewell
+- name: 🇨🇦 加拿大 (Canada) 02 - Jewell
   server: 103.106.229.177
   udp: true
   port: 21004
@@ -41,7 +22,7 @@ proxies:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
     short-id: 4e0418d648f86141
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,8 +30,6 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,7 +37,5 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 - Jewell
   - 🇨🇦 加拿大 (Canada) 02 - Jewell
-  - 🇨🇦 加拿大 (Canada) 03 - Jewell
-  - 🇨🇦 加拿大 (Canada) 04 - Jewell
 rules:
 - MATCH,PROXIES

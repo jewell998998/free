@@ -4,30 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 - Jewell",
-      "server": "theme.lovehk.xyz",
-      "server_port": 443,
-      "password": "235e318a-8bcb-4480-b256-7b65cc5d0b0a",
-      "tls": {
-        "enabled": true,
-        "server_name": "theme.lovehk.xyz",
-        "insecure": false
-      }
+      "type": "vmess",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 01 - Jewell",
+      "server": "zfd-boardv2.kunlun01dns.com",
+      "server_port": 16317,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell"
+        "🇲🇾 马来西亚 (Malaysia) 01 - Jewell"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 - Jewell"
+        "🇲🇾 马来西亚 (Malaysia) 01 - Jewell"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

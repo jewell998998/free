@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  server: 144.31.75.168
+  udp: true
+  port: 443
+  type: vless
+  uuid: b0fd9db4-24b8-45d0-88e1-c709c97646e6
+  tls: true
+  reality-opts:
+    public-key: _OxeyvQDpHcak4ou_pmWb5GmhWcG1j7A8LOIqYXghxg
+    short-id: 2177a83232995047
+  servername: www.fortum.com
+  client-fingerprint: edge
+- name: 🇬🇧 英国 (United Kingdom) 02 - Jewell
   server: 193.188.21.253
   udp: true
   port: 14430
@@ -15,17 +27,47 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
+- name: 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  server: 213.176.92.168
+  udp: true
+  port: 14430
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
+- name: 🇬🇧 英国 (United Kingdom) 04 R63 - Jewell
+  server: 136.176.68.34
+  udp: true
+  port: 443
+  type: vless
+  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo
+    short-id: a6040129ad7f4b74
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 R63 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 02 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 03 - Jewell
+  - 🇬🇧 英国 (United Kingdom) 04 R63 - Jewell
 rules:
 - MATCH,PROXIES

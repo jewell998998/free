@@ -5,31 +5,86 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - Jewell
-  server: 188.225.56.100
+  server: 45.194.66.177
   udp: true
   port: 443
   type: vless
-  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
+  flow: xtls-rprx-vision
   tls: true
-  servername: e2.cdnwh.icu
+  servername: 31tawwo0.virtual-network.lol
   skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 02 - Jewell
+  server: 82.118.22.161
+  udp: true
+  port: 443
+  type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
   client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /stream/segment/3078a41dd7eb/
-    headers:
-      Host: e2.cdnwh.icu
+- name: 🇵🇱 波兰 (Poland) 03 - Jewell
+  server: 177.202.76.30
+  udp: true
+  port: 443
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: G465rpA3czwxSTrjkcl0KK6HohO5G8do2MxjcRbULSA
+    short-id: d52f9a703c9bf2d9
+  servername: lesson14.schoolpizorbz.xyz
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 04 - Jewell
+  server: lesson2.schoolpizorbz.xyz
+  udp: true
+  port: 443
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: S8sWDQftwzUiNredawkRmbDxar70w2uX3y1EJISvQBo
+    short-id: fd417540c0fab072
+  servername: lesson2.schoolpizorbz.xyz
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 05 - Jewell
+  server: 201.58.178.236
+  udp: true
+  port: 443
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AdOl7XVxVk4Yb_tBxjrG-FP5elV_V2MeI_6WVC4H41s
+    short-id: d14566fcec627162
+  servername: lesson1.schoolpizorbz.xyz
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - Jewell
+  - 🇵🇱 波兰 (Poland) 02 - Jewell
+  - 🇵🇱 波兰 (Poland) 03 - Jewell
+  - 🇵🇱 波兰 (Poland) 04 - Jewell
+  - 🇵🇱 波兰 (Poland) 05 - Jewell
 rules:
 - MATCH,PROXIES

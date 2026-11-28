@@ -1,0 +1,69 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+      "server": "217.156.123.25",
+      "server_port": 443,
+      "uuid": "ba373a70-295f-482d-a471-8bc17b54e23b",
+      "tls": {
+        "enabled": true,
+        "server_name": "farlantern.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ",
+          "short_id": "27350908de933e09"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell",
+      "server": "seriesseller.ratethatrestaurant.org",
+      "server_port": 443,
+      "password": "b1490307-d693-4392-8f32-a3f7cc139202",
+      "tls": {
+        "enabled": true,
+        "server_name": "seriesseller.ratethatrestaurant.org",
+        "insecure": false
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+        "🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇲🇩 摩尔多瓦 (Moldova) 01 - Jewell",
+        "🇲🇩 摩尔多瓦 (Moldova) 02 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

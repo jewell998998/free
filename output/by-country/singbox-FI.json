@@ -1,0 +1,90 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 01 - Jewell",
+      "server": "lesson11.schoolpizorbz.xyz",
+      "server_port": 443,
+      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lesson11.schoolpizorbz.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bkgMxOi6NnagiY8Cc8PzW9skQSk9LDKmFtjGfqrlXHE",
+          "short_id": "a16c828fc2b70207"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - Jewell",
+      "server": "lesson13.schoolpizorbz.xyz",
+      "server_port": 443,
+      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lesson13.schoolpizorbz.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "luf3doVXhkblZF7R3E5m1hc_e6dYmEn2rrgoGBvQaEU",
+          "short_id": "68bf8009e520f8da"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03 - Jewell",
+      "server": "mail1.besttotaldns.com",
+      "server_port": 443,
+      "uuid": "da14e323-6af7-406f-a5c2-1eb7975ada8b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mail1.besttotaldns.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇫🇮 芬兰 (Finland) 01 - Jewell",
+        "🇫🇮 芬兰 (Finland) 02 - Jewell",
+        "🇫🇮 芬兰 (Finland) 03 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇫🇮 芬兰 (Finland) 01 - Jewell",
+        "🇫🇮 芬兰 (Finland) 02 - Jewell",
+        "🇫🇮 芬兰 (Finland) 03 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

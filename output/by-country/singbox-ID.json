@@ -1,0 +1,54 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇩 印尼 (Indonesia) 01 - Jewell",
+      "server": "kozel.cc.cd",
+      "server_port": 443,
+      "uuid": "3b01a777-55e7-49f6-8637-d94ee69607c6",
+      "tls": {
+        "enabled": true,
+        "server_name": "kozel.cc.cd",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/118.151.222.66=17317",
+        "headers": {
+          "Host": "kozel.cc.cd"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇩 印尼 (Indonesia) 01 - Jewell"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇩 印尼 (Indonesia) 01 - Jewell"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

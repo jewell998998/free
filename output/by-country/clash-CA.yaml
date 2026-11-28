@@ -12,17 +12,20 @@ proxies:
   cipher: aes-256-gcm
   password: itzvpn@321
 - name: 🇨🇦 加拿大 (Canada) 02 - Jewell
-  server: 103.106.229.177
+  server: 79.141.166.81
   udp: true
-  port: 21004
+  port: 443
   type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
+  uuid: ba373a70-295f-482d-a471-8bc17b54e23b
   tls: true
   reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: 4e0418d648f86141
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  servername: hazelforge.xyz
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
 proxy-groups:
 - name: PROXIES
   type: select

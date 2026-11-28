@@ -1,0 +1,60 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇫🇮 芬兰 (Finland) 01 - Jewell
+  server: lesson11.schoolpizorbz.xyz
+  udp: true
+  port: 443
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bkgMxOi6NnagiY8Cc8PzW9skQSk9LDKmFtjGfqrlXHE
+    short-id: a16c828fc2b70207
+  servername: lesson11.schoolpizorbz.xyz
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 02 - Jewell
+  server: lesson13.schoolpizorbz.xyz
+  udp: true
+  port: 443
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: luf3doVXhkblZF7R3E5m1hc_e6dYmEn2rrgoGBvQaEU
+    short-id: 68bf8009e520f8da
+  servername: lesson13.schoolpizorbz.xyz
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03 - Jewell
+  server: mail1.besttotaldns.com
+  udp: true
+  port: 443
+  type: vless
+  uuid: da14e323-6af7-406f-a5c2-1eb7975ada8b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mail1.besttotaldns.com
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇫🇮 芬兰 (Finland) 01 - Jewell
+  - 🇫🇮 芬兰 (Finland) 02 - Jewell
+  - 🇫🇮 芬兰 (Finland) 03 - Jewell
+rules:
+- MATCH,PROXIES

@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇩 印尼 (Indonesia) 01 - Jewell
+  server: kozel.cc.cd
+  udp: true
+  port: 443
+  type: vless
+  uuid: 3b01a777-55e7-49f6-8637-d94ee69607c6
+  tls: true
+  servername: kozel.cc.cd
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /118.151.222.66=17317
+    headers:
+      Host: kozel.cc.cd
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇩 印尼 (Indonesia) 01 - Jewell
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇩 印尼 (Indonesia) 01 - Jewell
+rules:
+- MATCH,PROXIES

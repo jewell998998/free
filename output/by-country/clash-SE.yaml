@@ -5,36 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - Jewell
-  server: 138.199.55.243
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  server: 188.225.77.71
+  server: 2.26.124.209
   udp: true
   port: 443
   type: vless
-  uuid: faf6b8af-e741-4ef5-b1e2-25a3f413cc8e
+  uuid: 848951d4-c5a5-484c-897d-d777929bcdc2
   flow: xtls-rprx-vision
   tls: true
-  servername: spb2.b2ai.top
-  skip-cert-verify: false
+  reality-opts:
+    public-key: aykMwW19tGa685HLa9yI8FDTH567ovT4KipCSUHEySk
+    short-id: '54325343'
+  servername: gateway.icloud.com
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 03 - Jewell
-  server: ws.dhafhdtjdti.site
+- name: 🇸🇪 瑞典 (Sweden) 02 - Jewell
+  server: 138.124.86.230
   udp: true
-  port: 2053
+  port: 48115
   type: vless
-  uuid: 9f749472-c636-4c5a-af51-7f8feefaac81
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
   tls: true
-  servername: ws.dhafhdtjdti.site
+  servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - Jewell
   - 🇸🇪 瑞典 (Sweden) 02 - Jewell
-  - 🇸🇪 瑞典 (Sweden) 03 - Jewell
 rules:
 - MATCH,PROXIES

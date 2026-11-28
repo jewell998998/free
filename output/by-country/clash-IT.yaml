@@ -5,33 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇹 意大利 (Italy) 01 - Jewell
-  server: 202.50.253.36
+  server: 194.180.207.155
   udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 443
+  type: vless
+  uuid: ba373a70-295f-482d-a471-8bc17b54e23b
+  tls: true
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  servername: duskbrook.xyz
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
 - name: 🇮🇹 意大利 (Italy) 02 - Jewell
-  server: 202.50.253.27
+  server: 82.118.16.189
   udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 03 - Jewell
-  server: 202.50.253.18
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 04 ⚠R - Jewell
-  server: 202.50.253.45
-  udp: true
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 443
+  type: vless
+  uuid: 29f178f7-f96f-46ba-8fc0-bbcd690ba788
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4
+    short-id: 1e9a49dd374c1191
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,8 +39,6 @@ proxy-groups:
   - AUTO
   - 🇮🇹 意大利 (Italy) 01 - Jewell
   - 🇮🇹 意大利 (Italy) 02 - Jewell
-  - 🇮🇹 意大利 (Italy) 03 - Jewell
-  - 🇮🇹 意大利 (Italy) 04 ⚠R - Jewell
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,7 +46,5 @@ proxy-groups:
   proxies:
   - 🇮🇹 意大利 (Italy) 01 - Jewell
   - 🇮🇹 意大利 (Italy) 02 - Jewell
-  - 🇮🇹 意大利 (Italy) 03 - Jewell
-  - 🇮🇹 意大利 (Italy) 04 ⚠R - Jewell
 rules:
 - MATCH,PROXIES

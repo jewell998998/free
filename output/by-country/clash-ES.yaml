@@ -5,20 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - Jewell
-  server: s23.fusetea.ir
-  udp: true
-  port: 2089
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: R02KmzzSD7PeZ_DosF87xZ7zIn8jLtyP
-- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
-  server: photo.lovehk.xyz
+  server: 46.28.71.247
   udp: true
   port: 443
-  type: anytls
-  password: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
-  sni: photo.lovehk.xyz
-  skip-cert-verify: false
+  type: vless
+  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
+    short-id: 0dfc23fe80778c00
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 02 - Jewell
+  server: 194.58.60.228
+  udp: true
+  port: 443
+  type: vless
+  uuid: bbbee51e-021e-4e65-ba03-bf7de175116f
+  tls: true
+  reality-opts:
+    public-key: PVlnR_I9tZ8hKhOHW6ySpSofhsaShcBQ_JV2-0TePVA
+    short-id: c5548af15927b698
+  servername: node43.lmdscdn.ru
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: livestreamcontent
 proxy-groups:
 - name: PROXIES
   type: select
